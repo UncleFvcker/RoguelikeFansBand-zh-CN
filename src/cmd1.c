@@ -5246,8 +5246,7 @@ void move_player(int dir, bool do_pickup, bool break_trap)
             /* Wall (or secret door) */
             else
             {
-                msg_format("你感觉到%s%s挡住了你的去路。",
-                    is_a_vowel(name[0]) ? "an" : "a", name);
+                msg_format("你感觉到%s挡住了你的去路。", name);
 
                 c_ptr->info |= (CAVE_MARK | CAVE_AWARE);
                 lite_spot(y, x);
@@ -5305,8 +5304,7 @@ void move_player(int dir, bool do_pickup, bool break_trap)
                 }
 #endif /* ALLOW_EASY_OPEN */
 
-                msg_format("有%s%s挡住了你的去路。",
-                    is_a_vowel(name[0]) ? "an" : "a", name);
+                msg_format("有%s挡住了你的去路。", name);
 
                 /*
                  * Well, it makes sense that you lose time bumping into

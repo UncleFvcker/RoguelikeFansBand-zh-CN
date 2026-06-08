@@ -925,7 +925,7 @@ static void _doc_process_var(doc_ptr doc, cptr name)
 {
     if (strcmp(name, "version") == 0)
     {
-        string_ptr s = string_alloc_format("%d.%d.%s", VER_MAJOR, VER_MINOR, VER_PATCH);
+        string_ptr s = string_alloc_format("%s", VERSION_STRING);
         if (coffee_break == SPEED_COFFEE) string_append_s(s, "<color:U> (茶歇)</color>");
         if (coffee_break == SPEED_INSTA_COFFEE) string_append_s(s, "<color:U> (速溶)</color>");
         if (thrall_mode) string_append_s(s, "<color:R> (奴役)</color>");

@@ -27,8 +27,8 @@ static void _help_file(cptr name, _file_fn fn)
     }
 
     fn(fp);
-    fprintf(fp, "\n\n<color:s>自动生成于 FrogComposband %d.%d.%s。</color>\n",
-            VER_MAJOR, VER_MINOR, VER_PATCH);
+    fprintf(fp, "\n\n<color:s>自动生成于 FrogComposband %s。</color>\n",
+            VERSION_STRING);
 
     my_fclose(fp);
     if (character_dungeon) msg_format("已创建 %s", buf);

@@ -1538,12 +1538,7 @@ static char *versio_nimi(int tavu, int keski)
 
 extern byte versio_sovitus(void)
 {
-	int i;
-	for (i = 0; i < 10; i++)
-	{
-		if (streq(VER_PATCH, versio_nimi(i, VER_MINOR))) return i;
-	}
-	return 4;
+	return VER_PATCH_ID;
 }
 
 /*
@@ -1576,6 +1571,7 @@ bool load_player(void)
     errr    err = 0;
 
     byte    vvv[4];
+    byte    savefile_patch = 0;
 
 #ifdef VERIFY_TIMESTAMP
     struct stat     statbuf;
@@ -1700,6 +1696,7 @@ bool load_player(void)
         /* Extract version */
         z_major = vvv[0];
         z_minor = vvv[1];
+        savefile_patch = vvv[2];
         strcpy(z_patch, versio_nimi(vvv[2], z_minor));
         sf_extra = vvv[3];
 
@@ -1751,10 +1748,11 @@ bool load_player(void)
         /* Give a conversion warning */
         if ((VER_MAJOR != z_major) ||
             (VER_MINOR != z_minor) ||
-            (!streq(VER_PATCH, z_patch)))
+            (versio_sovitus() != savefile_patch) ||
+            (VER_EXTRA != sf_extra))
         {
-            msg_format("转换了一个 %d.%d.%s 版本的存档文件。",
-                (z_major > 9) ? z_major-10 : z_major , z_minor, z_patch);
+            msg_format("转换了一个 %d.%d.%s.%d 版本的存档文件。",
+                (z_major > 9) ? z_major-10 : z_major , z_minor, z_patch, sf_extra);
             msg_print(NULL);
         }
 

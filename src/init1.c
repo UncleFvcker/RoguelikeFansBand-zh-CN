@@ -5174,11 +5174,11 @@ static cptr process_dungeon_file_expr(char **sp, char *fp)
             /* Quest status */
             else if (prefix(b+1, "QUEST"))
             {
-                cptr _status[] = { "未接取", "已接受", "进行中", "已达成", "已结束", "失败", "失败且结束" };
+                cptr _status[] = { "Untaken", "Taken", "InProgress", "Completed", "Finished", "Failed", "FailedDone" };
                 int  which = atoi(b+6);
                 quest_ptr q = quests_get(which);
                 if (q) sprintf(tmp, "%s", _status[q->status]);
-                else sprintf(tmp, "未知");
+                else sprintf(tmp, "Unknown");
                 v = tmp;
             }
 
@@ -5187,8 +5187,8 @@ static cptr process_dungeon_file_expr(char **sp, char *fp)
             {
                 int  which = atoi(b+8);
                 if ((which >= max_d_idx) || (d_info[which].flags1 & DF1_SUPPRESSED))
-                    sprintf(tmp, "被抑制");
-                else sprintf(tmp, "激活");
+                    sprintf(tmp, "Suppressed");
+                else sprintf(tmp, "Active");
                 v = tmp;
             }
 

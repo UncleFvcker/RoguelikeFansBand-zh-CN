@@ -1034,7 +1034,7 @@ static void crash_report_write_common(FILE *fp, cptr kind, cptr reason)
     fprintf(fp, "Reason: %s\n", reason ? reason : "(none)");
     fprintf(fp, "Time: %04d-%02d-%02d %02d:%02d:%02d\n",
         st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond);
-    fprintf(fp, "Version: %d.%d.%s.%d\n", VER_MAJOR, VER_MINOR, VER_PATCH, VER_EXTRA);
+    fprintf(fp, "Version: %s.%d\n", VERSION_STRING, VER_EXTRA);
     fprintf(fp, "Process: pid=%lu tid=%lu\n",
         (unsigned long)GetCurrentProcessId(), (unsigned long)GetCurrentThreadId());
     fprintf(fp, "Executable: %s\n", module);

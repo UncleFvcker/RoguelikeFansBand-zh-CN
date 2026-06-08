@@ -468,6 +468,97 @@ static char *object_desc_num(char *t, uint n)
     return (t);
 }
 
+static bool _is_zh_object_measure(cptr s)
+{
+    static cptr measures[] =
+    {
+        "个", "把", "件", "瓶", "卷", "本", "根", "支", "枚", "颗",
+        "条", "双", "顶", "面", "块", "套", "副", "份", "团", "品脱",
+        "对", "只", "张", "罐", "具", "盏", "朵", NULL
+    };
+    int i;
+
+    for (i = 0; measures[i]; i++)
+    {
+        size_t len = strlen(measures[i]);
+        if (strlen(s) >= len && strcmp(s + strlen(s) - len, measures[i]) == 0)
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
+static bool _has_non_ascii(cptr s)
+{
+    while (*s)
+    {
+        if ((byte)*s >= 0x80) return TRUE;
+        s++;
+    }
+
+    return FALSE;
+}
+
+static char *_strip_zh_object_measure(char *start, char *t)
+{
+    static cptr measures[] =
+    {
+        "个", "把", "件", "瓶", "卷", "本", "根", "支", "枚", "颗",
+        "条", "双", "顶", "面", "块", "套", "副", "份", "团", "品脱",
+        "对", "只", "张", "罐", "具", "盏", "朵", NULL
+    };
+    int i;
+
+    for (i = 0; measures[i]; i++)
+    {
+        size_t len = strlen(measures[i]);
+        if (t - start >= (ptrdiff_t)len && memcmp(t - len, measures[i], len) == 0)
+            return t - len;
+    }
+
+    return t;
+}
+
+static bool _ends_with(cptr s, cptr suffix)
+{
+    size_t s_len = strlen(s);
+    size_t suffix_len = strlen(suffix);
+
+    return s_len >= suffix_len && strcmp(s + s_len - suffix_len, suffix) == 0;
+}
+
+static bool _zh_ego_prefix(cptr ego, char *prefix, size_t max)
+{
+    size_t len = strlen(ego);
+
+    if (!_has_non_ascii(ego) || ego[0] == '&') return FALSE;
+
+    if (len >= 2 && ego[0] == '(' && ego[len - 1] == ')')
+    {
+        char inner[MAX_NLEN];
+
+        if (len - 2 >= sizeof(inner)) return FALSE;
+        memcpy(inner, ego + 1, len - 2);
+        inner[len - 2] = '\0';
+
+        if (_ends_with(inner, "的"))
+        {
+            strncpy(prefix, inner, max - 1);
+            prefix[max - 1] = '\0';
+            return TRUE;
+        }
+    }
+
+    if (_ends_with(ego, "之") || _ends_with(ego, "的"))
+    {
+        strncpy(prefix, ego, max - 1);
+        prefix[max - 1] = '\0';
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 
 
 
@@ -1219,7 +1310,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
 
                     if (!(r_ptr->flags1 & RF1_UNIQUE))
                     {
-                        sprintf(tmp_val2, " (%s%s)", (is_a_vowel(*t) ? "an " : "a "), t);
+                        sprintf(tmp_val2, " (%s)", t);
 
                         modstr = tmp_val2;
                     }
@@ -1244,7 +1335,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
 
             if (!(r_ptr->flags1 & RF1_UNIQUE))
             {
-                sprintf(tmp_val2, "%s%s", (is_a_vowel(*t) ? "an " : "a "), t);
+                sprintf(tmp_val2, "%s", t);
 
                 modstr = tmp_val2;
             }
@@ -1393,9 +1484,9 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
             /* Color the object */
             modstr = kind_flavor_display_name(k_ptr->flavor);
 
-            if (!flavor)    basenm = "& %卷轴~";
-            else if (aware) basenm = "& 标题为“#”的%卷轴~";
-            else            basenm = "& 标题为“#”的卷轴~";
+            if (!flavor)    basenm = "& 卷~%卷轴";
+            else if (aware) basenm = "& 卷~标题为“#”的%卷轴";
+            else            basenm = "& 卷~标题为“#”的卷轴";
 
             break;
         }
@@ -1405,9 +1496,9 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
             /* Color the object */
             modstr = kind_flavor_display_name(k_ptr->flavor);
 
-            if (!flavor)    basenm = "& %药水~";
-            else if (aware) basenm = "& %的#药水~";
-            else            basenm = "& #药水~";
+            if (!flavor)    basenm = "& 瓶~%药水";
+            else if (aware) basenm = "& 瓶~%的#药水";
+            else            basenm = "& 瓶~#药水";
             break;
         }
 
@@ -1419,9 +1510,9 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
             /* Color the object */
             modstr = kind_flavor_display_name(k_ptr->flavor);
 
-            if (!flavor)    basenm = "& %蘑菇~";
-            else if (aware) basenm = "& %的#蘑菇~";
-            else            basenm = "& #蘑菇~";
+            if (!flavor)    basenm = "& 朵~%蘑菇";
+            else if (aware) basenm = "& 朵~%的#蘑菇";
+            else            basenm = "& 朵~#蘑菇";
             break;
         }
 
@@ -1647,31 +1738,13 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
                  ((o_ptr->tval == TV_CORPSE) &&
                   (r_info[o_ptr->pval].flags1 & RF1_UNIQUE)))
         {
-            if (o_ptr->name1 != ART_MOM) t = object_desc_str(t, "The ");
+            /* Chinese item names do not take English definite articles. */
         }
 
         /* A single one */
         else
         {
-            bool vowel;
-
-            switch (*s)
-            {
-            case '#': vowel = is_a_vowel(modstr[0]); break;
-            case '%': vowel = is_a_vowel(*kindname); break;
-            default:  vowel = is_a_vowel(*s); break;
-            }
-
-            if (vowel)
-            {
-                /* A single one, with a vowel */
-                t = object_desc_str(t, "an ");
-            }
-            else
-            {
-                /* A single one, without a vowel */
-                t = object_desc_str(t, "a ");
-            }
+            /* Chinese item names do not take English indefinite articles. */
         }
     }
 
@@ -1703,7 +1776,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         /* Hack -- The only one of its kind */
         else if (known && object_is_artifact(o_ptr))
         {
-            if (o_ptr->name1 != ART_MOM) t = object_desc_str(t, "The ");
+            /* Chinese item names do not take English definite articles. */
         }
 
         /* Hack -- single items get no prefix */
@@ -1746,18 +1819,25 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         /* Pluralizer */
         else if (*s == '~')
         {
-            /* Add a plural if needed */
-            if (!(mode & OD_NO_PLURAL) && ((number != 1) || (have_flag(o_ptr->flags, OF_PLURAL))))
+            if (number == 1)
             {
-                char k = t[-1];
+                t = _strip_zh_object_measure(tmp_val, t);
+            }
+            else if (!_is_zh_object_measure(tmp_val) && !_has_non_ascii(tmp_val))
+            {
+                /* Add a plural if needed */
+                if (!(mode & OD_NO_PLURAL) && ((number != 1) || (have_flag(o_ptr->flags, OF_PLURAL))))
+                {
+                    char k = t[-1];
 
-                /* XXX XXX XXX Mega-Hack */
+                    /* XXX XXX XXX Mega-Hack */
 
-                /* Hack -- "Cutlass-es" and "Torch-es", but "Photograph-s" */
-                if ((k == 's') || ((k == 'h') && (o_ptr->tval != TV_STATUE))) *t++ = 'e';
+                    /* Hack -- "Cutlass-es" and "Torch-es", but "Photograph-s" */
+                    if ((k == 's') || ((k == 'h') && (o_ptr->tval != TV_STATUE))) *t++ = 'e';
 
-                /* Add an 's' */
-                *t++ = 's';
+                    /* Add an 's' */
+                    *t++ = 's';
+                }
             }
             s++;
         }
@@ -1799,8 +1879,22 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         /* Grab any artifact name */
         else if (object_is_fixed_artifact(o_ptr))
         {
-            t = object_desc_chr(t, ' ');
-            t = object_desc_str(t, artifact_display_name(o_ptr->name1));
+            cptr art_name = artifact_display_name(o_ptr->name1);
+            char art_prefix[MAX_NLEN];
+
+            if (_zh_ego_prefix(art_name, art_prefix, sizeof(art_prefix)))
+            {
+                char base_name[MAX_NLEN+160];
+
+                strcpy(base_name, tmp_val);
+                strnfmt(tmp_val, sizeof(tmp_val), "%s%s", art_prefix, base_name);
+                t = tmp_val + strlen(tmp_val);
+            }
+            else
+            {
+                t = object_desc_chr(t, ' ');
+                t = object_desc_str(t, art_name);
+            }
         }
 
         /* Grab any ego-item name */
@@ -1808,8 +1902,22 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         {
             if (object_is_ego(o_ptr))
             {
-                t = object_desc_chr(t, ' ');
-                t = object_desc_str(t, ego_display_name(o_ptr->name2));
+                cptr ego_name = ego_display_name(o_ptr->name2);
+                char ego_prefix[MAX_NLEN];
+
+                if (_zh_ego_prefix(ego_name, ego_prefix, sizeof(ego_prefix)))
+                {
+                    char base_name[MAX_NLEN+160];
+
+                    strcpy(base_name, tmp_val);
+                    strnfmt(tmp_val, sizeof(tmp_val), "%s%s", ego_prefix, base_name);
+                    t = tmp_val + strlen(tmp_val);
+                }
+                else
+                {
+                    t = object_desc_chr(t, ' ');
+                    t = object_desc_str(t, ego_name);
+                }
             }
 
             if (o_ptr->inscription && my_strchr(quark_str(o_ptr->inscription), '#'))

@@ -17,9 +17,11 @@
 
 
 #define VER_MAJOR 7
-#define VER_MINOR 2
-#define VER_PATCH "salmiak"
-#define VER_EXTRA 1
+#define VER_MINOR 4
+#define VER_PATCH "0"
+#define VER_PATCH_ID 0
+#define VER_EXTRA 0
+#define VERSION_STRING "7.4"
 #define VERSION_IS_DEVELOPMENT (TRUE)
 
 #define GAME_MODE_BEGINNER  0
