@@ -1,5 +1,5 @@
 --- zh-CN分支介绍 ---
-在大刘哥1iuh的frognet版本（https://github.com/1iuh/frogcomposbandnet）基础上增加了一系列改动。
+在大刘哥1iuh的frognet版本基础上增加了一系列改动。https://github.com/1iuh/frogcomposbandnet
 改动如下：
 使用Mingw64位编译了64位的frogcomposband版本。
 支持UTF-8编码
