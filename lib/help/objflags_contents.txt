@@ -1,28 +1,27 @@
-<style:title>Equipment Properties</style>
+<style:title>装备属性 (Equipment Properties)</style>
 
-<style:note><color:G>This help file should be considered reference material. There is no need to read it before starting play, and it may contain spoilers about items you have not seen.</color></style>
+<style:note><color:G>本帮助文件应被视为参考资料。在开始游玩之前没有必要阅读它，并且它可能包含有关你尚未见过的物品的剧透。</color></style>
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    <link:objflags.txt> Overview of Equipment Properties
-    <link:objflags.txt#Basic> Basic Properties
-      <link:objflags.txt#DamageDice> Damage Dice
-      <link:objflags.txt#DamageMultiplier> Damage Multiplier
-      <link:objflags.txt#CombatBonuses> Combat Bonuses
-      <link:objflags.txt#ArmorClass> Armor Class
-      <link:objflags.txt#Pval> Pval
-      <link:objflags.txt#Weight> Weight
-      <link:objflags.txt#Activation> Activations
-    <link:objflags.txt#Flags> Flag Attributes
-      <link:objflags.txt#Bonuses> Bonuses and Penalties
-      <link:objflags.txt#Resistances> Resistances, Immunities and Vulnerabilities
-      <link:objflags.txt#Abilities> Miscellaneous Abilities
-      <link:objflags.txt#Auras> Auras and Shells
-      <link:objflags.txt#Slays> Slays and Brands
-      <link:objflags.txt#Telepathy> Telepathies
-      <link:objflags.txt#Sustains> Sustains
-      <link:objflags.txt#Inspection> Attributes Visible on Inspection
-    <link:objflags.txt#Curses> Equipment Curses
+    <link:objflags.txt> 装备属性概述
+    <link:objflags.txt#Basic> 基本属性
+      <link:objflags.txt#DamageDice> 伤害骰
+      <link:objflags.txt#DamageMultiplier> 伤害倍率
+      <link:objflags.txt#CombatBonuses> 战斗加成
+      <link:objflags.txt#ArmorClass> 护甲等级
+      <link:objflags.txt#Pval> Pval (属性修正值)
+      <link:objflags.txt#Weight> 重量
+      <link:objflags.txt#Activation> 主动激活
+    <link:objflags.txt#Flags> 标志属性
+      <link:objflags.txt#Bonuses> 加成与惩罚
+      <link:objflags.txt#Resistances> 抗性、免疫与易伤
+      <link:objflags.txt#Abilities> 杂项能力
+      <link:objflags.txt#Auras> 光环与护盾
+      <link:objflags.txt#Slays> 屠杀与烙印
+      <link:objflags.txt#Telepathy> 心灵感应
+      <link:objflags.txt#Sustains> 属性维持
+      <link:objflags.txt#Inspection> 检查时可见的属性
+    <link:objflags.txt#Curses> 装备诅咒
 
-    <color:y>(?) Help System Commands</color>
-
+    <color:y>(?) 帮助系统命令</color>

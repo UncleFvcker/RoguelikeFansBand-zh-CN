@@ -1030,6 +1030,7 @@ extern errr     effect_parse(char *line, effect_t *effect);
 extern int      effect_parse_type(cptr type);
 extern bool     effect_is_known(int type);
 extern bool     effect_learn(int type);
+extern cptr     effect_internal_name(int type);
 extern int      effect_value(effect_t *effect);
 extern byte     effect_color(effect_t *effect);
 extern cptr     do_effect(effect_t *effect_ptr, int mode, int boost);

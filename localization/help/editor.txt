@@ -1,0 +1,657 @@
+<style:title>物品自动处理系统 (The Mogaminator)</style>
+
+<color:keyword>The Mogaminator (莫加米纳特 / 物品自动处理系统)</color> 是一个基于规则的物品自动处理系统，你可以使用 <color:keypress>_</color> 命令来激活或修改它。通过这个系统，你可以决定哪些物品被拾取、哪些被销毁、哪些自动鉴定，以及哪些在物品列表中显示为<color:keyword>需要的 (wanted)</color>。你可以根据自己的喜好自动为物品铭刻，甚至可以输入条件语句来处理不同种族和职业的偏好。或者，你也可以只保留默认的 Mogaminator 规则，它已经做到了以上所有的事情！
+
+本文档以教程的方式介绍这个系统，假设你对它一无所知。详细的参考资料将在本文档的底部提供（如果你实在等不及了，请参阅 <link:editor.txt#Reference>！）。
+
+该系统以其原作者，Hengband 开发者 Mogami 的名字命名。
+
+<topic:Review><style:heading>物品知识回顾</style>
+毫无疑问：游戏会生成海量的物品。有些很有价值，有些一文不值，而有些只在特定情况下有用……莫加米系统将帮你理清那堆积如山的战利品。
+
+首先，快速回顾一下 <link:objects.txt#Knowledge> 中详细解释的内容。当你找到一件物品时，它通常是<color:keyword>未鉴定的 (unidentified)</color>，但你可能拥有（或很快会收到）对该物品品质的粗略<color:keyword>感知 (sense)</color>，这被称为<color:keyword>物品感知 (object feeling)</color>或<color:keyword>伪鉴定 (pseudo-ID)</color>。如果该物品看起来很有前途，你可能想<color:keyword>鉴定 (identify)</color>它以揭示其基本属性，或者甚至进行<color:keyword>全面鉴定 (*Identify*)</color>来揭示其特殊属性。
+
+因此，你对某件物品的认知处于以下状态之一：
+  [1] 未感知 (Unsensed)
+  [2] 已感知 / 伪鉴定 (Sensed / pseudo-identified)
+  [3] 已鉴定 (Identified)
+  [4] 全面鉴定 (*Identified*)
+
+对于蘑菇、药水和卷轴来说，情况略有不同；这些物品具有<color:keyword>风味 (flavors)</color>，一旦你了解了其风味（鉴定出它到底是什么），你就会立即认出未来出现的所有该种物品。事实上，该物品的所有实例都完全相同，因此对于这类物品的鉴定过程，就是发现并了解该物品的第一个实例，然后通过你的拾取和销毁偏好，决定如何处理该类型物品的后续实例。
+
+<topic:ManagingObjects><style:heading>管理物品</style>
+
+管理物品有三种方法：手动管理，使用简易销毁器（参见下文的 <link:editor.txt#EasyDestroyer>），以及使用莫加米系统 (The Mogaminator)。莫加米系统比简易销毁器强大得多，后者只是简单地销毁物品（通常是垃圾）。<color:y>只有当你开启了 </color><color:keyword>always_pickup (自动拾取)</color> <color:y>选项时，莫加米系统和简易销毁器才应该同时使用。</color>
+
+什么是<color:keyword>莫加米系统 (The Mogaminator)</color>？基本上，它是一个基于规则的系统，每当你遇到某种类型的物品时，都会采取给定的行动。默认行动是<color:keyword>拾取 (pick up)</color>，当你不指定其他替代行动时，就会使用这个操作；但莫加米系统也能为你销毁垃圾，并自动鉴定和铭刻物品。让我们来讨论一下基本知识。
+
+<topic:BasicUsage><style:heading>基本用法</style>
+
+按下 <color:keypress>_</color> 可以激活莫加米系统，这也会呼出一个游戏内的编辑器，你可以在这里管理你的偏好。它看起来可能像这样：
+<style:screenshot> <indent>
+<color:B>(^Q:退出, ^W:保存退出, ESC:菜单, 其它:输入文本)</color>          (0,0)               
+<color:G>#########################################</color>                                       
+<color:G># Consumables</color>                                                                   
+<color:G>#########################################</color>                                       
+mushroom of restoring<color:U>#!E</color>                                                        
+~mushroom of hallucination                                                      
+                                                                                
+<color:v>?:[EQU $RACE Snotling Doppelganger]</color>                                             
+<color:D>~mushroom</color>                                                                       
+<color:v>?:1</color>                                                                             
+                                                                                
+<color:v>?:[LEQ $LEVEL 35]</color>                                                               
+<color:R>potions</color>:resist heat and cold<color:U>#!kq</color>                                                
+<color:v>?:1</color>                                                                             
+<color:R>potions</color>:resistance<color:U>#!kq</color>                                                          
+<color:R>potions</color>:stone skin<color:U>#!k</color>                                                           
+<color:R>potions</color>:heroism                                                                 
+<color:R>potions</color>:speed<color:U>#!kq</color>                                                               
+<color:R>potions</color>:giant strength<color:U>#!k</color>                                                       
+                                                                                
+<color:R>potions</color>:enlightenment                                                           
+                                                                                
+<color:R>potions</color>:of strength<color:U>#!k</color>                                                          
+<color:B>-------------------------------------------------------------------------------</color>
+This line is a comment. (这一行是一条注释。)
+</indent></style>
+如果你是新手，你可能想尽快逃离这种复杂性。请注意屏幕的顶行，它告诉你如何退出：<color:keypress>^Q</color>（你也可以通过 <color:keypress>ESC</color> 菜单退出）。想立刻退出的心情是可以理解的，事实上这<color:G>完全没问题：只需按下</color> <color:keypress>_</color> <color:G>就能打开莫加米系统，并用默认的偏好初始化它</color>，因此即使你不再做任何乱动，它也能很好地完成工作。（如果你非常懒，你可以在这里停止阅读，并在接下来的游戏中愉快地使用默认偏好玩耍！）
+
+<topic:WhatHappened><color:U>那么发生了什么？</color>
+
+随着莫加米系统现在开启，你会发现你遇到的大部分垃圾都被自动销毁了。例如，当你在地下城中劈砍杀戮时留下的所有尸体和骨架……除了那些你<color:keyword>需要的悬赏尸体 (wanted corpses)</color>，它们会被自动拾取！
+
+这是一个良好的开端；但你可能仍然会遇到你认为无用的物品。例如，假设你在杂货店买了一盏提灯；现在你就不再真正关心火把了。使用 <color:keypress>k</color> 销毁命令（或在 Roguelike 键位中使用 <color:keypress>^D</color>），你会得到如下提示：
+  真的要销毁 <color:y>木火把 {未鉴定}</color> 吗? <color:y>[y/n/A(自动)]</color>
+
+注意那个 <color:keypress>A</color>uto (自动) 选项。选择它，你会收到一条物品已被销毁的消息，并且“你不喜欢火把”这一事实会被系统记住。下一次你的角色移动到火把上面时，它会被自动销毁。
+
+这就是莫加米系统的一种简单用法：在遇到物品时不断将其注册为自动销毁，战利品山就会变得更容易管理；但我们稍后会看到，<color:keyword>自动拾取</color>比自动销毁更好。
+
+<topic:CorrectingMistakes><style:heading>糟糕，我把速度戒指自动销毁了！</style>
+
+哎呀！好吧，不要惊慌。你可以很容易地解决这个问题；但这样做需要你返回偏好文件编辑器。按下 <color:keypress>_</color>，然后按 <color:keypress>END</color> 键移动到文档的末尾。这里是游戏记录你自动注册销毁的任何物品的地方。你的屏幕看起来可能像这样：
+<style:screenshot> <indent>
+<color:B>(^Q:退出, ^W:保存退出, ESC:菜单, 其它:输入文本)</color>        <color:y>*</color> (0,268)             
+                                                                                
+<color:v>?:[EQU $CLASS Tourist]</color>                                                          
+<color:D>~photograph</color>                                                                     
+<color:v>?:1</color>                                                                             
+                                                                                
+~<color:G>special </color><color:R>items</color>                                                                  
+!<color:G>worthless </color><color:R>items</color>                                                                
+<color:G>#!unusable items</color>                                                                
+<color:R>?:$AUTOREGISTER</color>                                                                 
+<color:R># *Warning!* The lines below will be deleted later.</color>                             
+<color:R># Keep them by cut & paste if you need them for future characters.</color>              
+<color:R>(!nameless lights:^wooden torch$</color>                                                
+<color:B>-------------------------------------------------------------------------------</color>
+销毁所有名称以 "wooden torch$" 开头，且既不是 ego 物品也不是神器的光源。
+不在小地图显示。这一行稍后将被删除。
+</indent></style>
+你无法从上图中看出来，但我把光标放在了文件的最后一行；在我的例子中，就是我注册火把进行销毁的那一行。请注意，在屏幕的最底部，游戏会准确地告诉你给定规则的含义；如果你好奇，可以在默认的偏好文件中移动光标，真正地了解很多关于该系统运作方式的信息。如果你想简单地删除这条（或任何其它）规则，只需删除相应的行，然后用 <color:keypress>^W</color> 退出以保存并应用你的更改。
+
+<topic:WantedObjects><style:heading>那我想要的东西呢？</style>
+
+你不想要什么只讲了一半；还有些物品是你非常喜欢的。这两者很好地结合在一起，因为<color:keyword>有趣的物品</color>会出现在 <color:keypress>]</color> 物品列表的顶部。这让你即使在垃圾还没有被销毁的情况下，也能轻松追踪到有趣的东西！
+
+假设你想要治疗重伤药水 (potions of Cure Critical Wounds)（这是一个默认不被设置为拾取的物品的随机合理示例）。如果这些药水能被自动拾取，并显示在物品列表顶部附近，那岂不是很棒？这可以通过在偏好文件的<color:keyword>顶部</color>添加以下行来实现：
+<style:screenshot> <indent>
+<color:B>(^Q:退出, ^W:保存退出, ESC:菜单, 其它:输入文本)</color>        <color:y>*</color> (0,0)               
+<color:y>cure critical wounds</color>
+<color:G>#########################################</color>                                       
+<color:G># Consumables</color>                                                                   
+<color:G>#########################################</color>                                       
+mushroom of restoring<color:U>#!E</color>                                                        
+~mushroom of hallucination                                                      
+                                                                                
+<color:v>?:[EQU $RACE Snotling Doppelganger]</color>                                             
+<color:D>~mushroom</color>                                                                       
+<color:v>?:1</color>                                                                             
+<color:B>--------------------------------------------------------------------------------</color>
+拾取名称中包含 "cure critical wounds" 的所有物品。
+在物品列表中将这些物品显示为需要的 (wanted)。
+</indent></style>
+我在截图中把新行涂成了<color:y>黄色</color>使其引人注目。注意屏幕底部：听起来这会起作用，对吧？我必须将新行放在顶部的原因是，<color:G>规则是按照从上到下的优先级顺序处理的</color>；所以如果我把新规则放在底部，它可能会被前面的规则所覆盖。
+
+现在，让我们按下 <color:keypress>]</color> 激活物品列表——这一层有我想要的东西吗？
+<style:screenshot>
+这里有 4 件你需要的物品：                                           LEVEL <color:G>     1</color>
+ <color:r>!</color> <color:B>4 治疗重伤药水                      </color> S  4 E 16                   EXP <color:G>       3</color>
+                                                                    AU  <color:G>     747</color>
+这里有 4 件其他的物品：                                             <color:W>|</color><color:d>      </color><color:y>!</color><color:U>(</color><color:d>   </color>
+ <color:u>~</color> <color:y>4 木火把 {未鉴定}                   </color> N  3 E 17                   STR : <color:G>    16</color>
+   <color:B>[按 ESC 退出。按 ? 获取帮助。]</color>                                   INT : <color:G>    18</color>
+><color:s>.....</color>#<color:U>+</color>#<color:s>.</color>%%                                                        WIS : <color:G>     9</color>
+%%%%<color:s>.</color>%<color:s>%.</color>#<color:s>.</color>%                         ##<color:s>..</color>                            DEX : <color:G> 18/40</color>
+   <color:s>%</color><color:U>'</color>%<color:s>....</color>#                        #<color:s>%....</color>                           CON : <color:G>    17</color>
+  <color:s>%</color>%<color:s>......</color>%                       <color:s>%%.</color><color:u>~</color><color:s>..%</color>                           CHR : <color:G>    12</color>
+ #<color:s>%......</color><color:U>+</color>%         <color:s>%%</color>%          <color:s>%</color>#<color:s>....%%..</color>                         AC     <color:G>    6</color>
+%#........%<color:s>%</color>%%%<color:s>%</color>%%<color:s>%</color>#<color:s>%</color>.%<color:s>%</color>        ##<color:s>..........</color>                        HP <color:G>  37</color>/<color:G>  37</color>
+%.........<color:U>'</color><color:s>.</color><color:U>'</color><color:s>....</color>...<color:y>@</color>..#<color:s>%</color>      #<color:s>%..........</color>#                        SP <color:G>  14</color>/<color:G>  14</color>
+%<color:s>%</color>%......%%%%%%<color:s>%%%%%</color>#<color:o>*</color><color:U>'</color>.###<color:s>%</color>% #<color:s>%....</color>##<color:s>....</color><color:o>*</color>                                     
+<color:s>..</color><color:U>'</color><color:s>.......</color>#       %<color:s>.......%..</color>#<color:s>%....%%....</color>#<color:s>%</color>                                     
+%<color:s>%</color>##<color:s>......%</color>       <color:s>%........%%%....</color>##<color:s>....</color>##                                      
+   <color:s>%.....%</color>#       %<color:s>.......</color><color:u>'</color><color:s>......</color>#<color:s>%.</color><color:r>!</color><color:s>..%%</color>                                       
+   <color:s>%.</color>#<color:s>...%</color>        #<color:s>.......</color>#<color:s>%%</color>###########                                        
+   <color:s>%%%</color>%#%%        #<color:s>.......</color>#                                                     
+</style>
+宾果！你甚至可以通过在物品列表中按下 <color:keypress>J</color> 来<color:keyword>自动寻路</color>前往那些美味的药水。还有比这更容易的吗？
+
+概括地说，添加 "cure critical wounds" 这一行告诉莫加米系统拾取任何名称中包含 "cure critical wounds" 的物品。你不必打这么多字——打 "crit" 也许同样有效——但你打的字越少，你的新规则就越有可能匹配到其它物品。例如，"cure" 会匹配轻伤治疗药水 (Cure Light Wounds)、严重治疗药水 (Cure Serious Wounds) 以及重伤治疗药水 (Cure Critical Wounds)，甚至包括治疗伤患法杖 (Staves of Cure Wounds)。有时这没问题，但在其它情况下，最好多打几个字。
+
+<topic:IntroRulesEvents><style:heading>规则与事件简介</style>
+
+那么这一切是如何运作的呢？基本上，偏好文件是一个有序的规则列表。每当发生某个事件（比如移动到物品上）时，系统会<color:v>从上到下</color>扫描规则，并应用第一个匹配的规则（如果有的话）。每条规则都有一个关联的动作，决定了如果规则匹配时该做什么。
+
+每条规则是文件中的单行；但并不是每一行都是规则。有些行是空行，有些是注释，还有些是条件语句，告诉游戏何时忽略规则。
+
+每当发生特定事件时，就会根据规则测试物品；通常是在玩家 (1) 移动到物品上时、(2) 获得新的物品感知时（参见 <link:option.txt#destroy_feeling>）或 (3) 鉴定了一件物品时（参见 <link:option.txt#destroy_identify>）。
+
+<topic:Rules><style:heading>规则 (Rules)</style>
+
+规则是单行文本，由要执行的动作、用于测试匹配的谓词以及可选的铭刻文本组成。让我们依次讨论这些。
+
+  <indent><color:o>动作 (Actions)</color>
+
+首先，将某物拾取是默认动作，只要你没有指定替代方案就会推断为拾取。那么替代方案有哪些呢？
+
+<color:keypress>!</color>  销毁 (Destroy)
+<color:keypress>;</color>  拾取提示 (Prompt to pick up)
+<color:keypress>~</color>  留在地板上 (Leave on the floor)
+
+这些是主要动作。如果规则不以 <color:keypress>!</color>、<color:keypress>;</color> 或 <color:keypress>~</color> 开头，则默认执行拾取动作。请注意，如果开启了 <color:keyword>always_pickup (自动拾取)</color> 选项，那么 <color:keypress>;</color> 和 <color:keypress>~</color> 将被覆盖；除非同时也开启了 <color:keyword>leave_mogaminator (保留莫加米纳特)</color> 选项，否则甚至连 <color:keypress>!</color> 都会被覆盖。
+
+此外，还有以下附加的动作字母以增强主要动作：
+
+<color:keypress>(</color>  不要在 <color:keypress>M</color> 小地图上显示该物品
+<color:keypress>?</color>  自动鉴定此物品
+
+第一个选项并不常用，因为 <color:keypress>M</color> 地图物品显示已经完全被改进后的物品列表所淘汰。第二个选项 (<color:keypress>?</color>) 却非常有用，因为它能自动鉴定匹配的物品。这非常节省时间，但前提是你必须携带鉴定卷轴或鉴定法杖。
+
+所有动作字母必须在该规则行的<color:keyword>最开头</color>指定，只有一个例外。<color:keypress>#</color> 字母表示你希望为匹配的物品自动添加铭刻，它必须出现在规则的<color:keyword>末尾</color>，后面只能跟铭文文本本身。例如，在规则末尾加上 <color:U>#@ad!sdk</color>，将自动为匹配该规则的任何物品铭刻 <color:R>@ad!sdk</color>。（参见 <link:objects.txt#Inscriptions> 获取该铭文的解释！）
+</indent>
+  <indent><color:o>匹配 (Matching) (注意：匹配关键字必须使用英文输入！)</color>
+我们在上文中看到，匹配是通过与物品名称进行字符串比较来进行的，但如果你愿意，你可以更加具体。要做到这一点，使用以下的<color:keyword>英文关键字 (keywords)</color> 来构建一个谓词，用于测试物品。匹配的关键字部分由零个或多个形容词 (adjectives) 组成，这些形容词修饰一个名词 (noun)，该名词表示要考虑的广泛物品类别。此外，你可以通过附加 <color:keypress>:</color> 以及要搜索的文本，来指定格式自由的文本字符串比较。我们将在下面的示例部分将所有这些结合起来。
+
+让我们先从名词开始。本文档末尾提供了完整列表，但以下是一些常见的名词，可以让我们入门：
+
+<color:R>Items</color>     <indent>适用所有物品。这对于非常通用的规则很有用，比如 ~?<color:G>unidentified</color> <color:R>items</color> 意为“自动鉴定所有未鉴定物品，但把它们留在地上”；甚至可以直接用 <color:keyword>items</color> 来拾取一切！</indent>
+<color:R>Weapons</color>   <indent>适用所有近战武器，但不适用远程武器。</indent>
+<color:R>Shooters</color>  <indent>适用所有投射武器，包括弓、投石索和十字弓。</indent>
+<color:R>Armors</color>    <indent>适用所有形式的护甲，包括盾牌、头盔、披风以及身甲。</indent>
+<color:R>Wands</color>     适用魔法装置中的魔杖 (wands)
+<color:R>Staves</color>    适用魔法装置中的法杖 (staves)
+<color:R>Rods</color>      适用魔法装置中的魔棒 (rods)
+<color:R>Potions</color>   适用药水 (potions)
+<color:R>Scrolls</color>   适用卷轴 (scrolls)
+
+如果你使用关键字来构建匹配谓词，那么你必须指定恰好一个名词，但你可以使用任意数量的形容词。下面 <link:editor.txt#Adjectives> 中给出了完整的形容词列表，但这里列出了一些较常见的：
+
+<color:G>Unaware</color>      <indent>适用于其风味（flavor）尚未被鉴定的物品。</indent>
+<color:G>Unidentified</color> <indent>适用于尚未被鉴定的任何物品。</indent>
+<color:G>Unsensed</color>     <indent>适用于尚未被全面鉴定或伪鉴定的物品。</indent>
+<color:G>Ego</color>          <indent>适用于所有 ego (优秀) 物品。</indent>
+<color:G>Nameless</color>     <indent>适用于所有非 ego、非神器的物品。</indent>
+<color:G>Wanted</color>       <indent>适用于悬赏怪物的尸体和骨架。这些可以交给赏金猎人办公室换取奖励。</indent>
+
+作为使用多个形容词的示例，词组 ?<color:G>unidentified ego</color> <color:R>weapons</color> 适用于所有既是 ego 品质又尚未被鉴定的近战武器。当然，这意味着你必须事先对该物品进行了伪鉴定，才能知道它是 ego 物品。
+
+最后，使用搜索字符串来进一步细化匹配。如果你不使用任何形容词或名词关键字，那么你的规则的全部文本（从任何动作字母之后开始，包含直到 <color:keypress>#</color> 铭刻字符之前的所有文本）将用作搜索字符串。如果你使用关键字，请用 <color:keypress>:</color> 分隔符标记关键字部分的结尾。具体示例将在下面讨论。
+</indent>
+  <indent><color:o>示例 (Examples) (以下规则语句皆为英文)</color>
+
+!<color:R>potions</color>:apple juice
+  <indent>销毁苹果汁药水（不管它们看起来有多提神！）。它使用 <color:keypress>!</color> 动作字母表示销毁，使用 <color:keyword>potions</color> 关键字表示应用于整个药水类别的物品，使用 <color:keypress>:</color> 分隔符键，以及使用文本字段来对物品名称进行字符串匹配。</indent>
+
+?<color:G>unaware </color><color:R>items</color>
+  <indent>拾取并自动鉴定具有风味且未鉴定的物品（例如，一瓶你以前没见过的药水）。请注意，由于没有指示任何其它主要动作，因此隐含了拾取动作，即便它包含了一个次要动作（自动鉴定）。此命令使用形容词 <color:G>unaware</color> 修饰名词 <color:R>items</color>。你可以通过使用更具体的名词（如 <color:R>scrolls</color> 或 <color:R>potions</color>）来缩小此规则的适用范围。</indent>
+
+<color:G>wanted </color><color:R>corpses</color><color:U>#Wanted!kkk</color>
+  <indent>拾取悬赏的尸体，并自动为其铭刻 <color:U>Wanted!kkk</color>。这个铭文可能会让人觉得该怪物是因为种族主义而被通缉，但它实际上只是意味着：如果你不小心试图销毁该尸体，系统会反复提示你确认。（有关铭文如何工作的更多信息，请参见 <link:objects.txt#Inscriptions>。）</indent>
+
+?<color:R>staves</color>:destruction<color:U>#@ud!sdk</color>
+  <indent>拾取并自动鉴定所有名称包含 "destruction(毁灭)" 字符串的法杖。并为这些物品铭刻 <color:U>@ud!sdk</color>。</indent>
+</indent>
+
+<topic:Scenarios><style:heading>示例场景</style>
+
+经过上一节的学习，你应该已经完全掌握了单条规则的用法。现在，是时候提升一个层次，应用多条规则来完成常见任务了。准备好了吗？
+
+  <indent><color:B>场景 #1</color>：处理装备流
+
+在这个场景中，你希望以最有效的方式处理大量的物品。让我们从以下规则开始：
+  <color:G>unsensed </color><color:R>armors</color>
+  <color:G>unsensed </color><color:R>weapons</color>
+
+这些规则表示拾取所有尚未被感知或鉴定的护甲和武器。虽然它漏掉了诸如药水和卷轴之类的许多种物品，但至少武器和护甲是可以被感知的物品。既然物品需要放在你的背包里才能被感知（我们知道刚才由于物品匹配了 <color:G>unsensed</color> 形容词，所以直接放在地板上并没有立即触发伪鉴定！），那么将它们拾取起来是最方便的。
+
+现在，让我们添加以下规则：
+  !<color:G>average common </color><color:R>weapons</color>
+  !<color:G>average common </color><color:R>armors</color>
+
+你可能实际上并不想这样做；但目前，假设你的角色已经足够强大，视普通的平凡 (average common) 装备为垃圾。一旦伪鉴定生效，揭示出武器和护甲只是平凡 (average) 品质，这些规则就会触发并销毁它们。<color:G>common (普通)</color> 这一形容词防止这些规则应用于罕见的平凡物品，比如龙鳞甲 (dragon scale mail) 或混沌之刃 (blades of chaos)。
+
+所以，现在我们的角色正在愉快地拾取所有装备，一旦伪鉴定生效，就会自动销毁平庸的装备。我们还能做更多吗？嗯，尝试添加：
+  ?<color:G>unidentified ego </color><color:R>items</color>
+
+现在，当伪鉴定发现它是 ego(优秀) 物品时，它也会被自动鉴定。相当贴心！但也许你在一段时间后对某些类型的 ego 感到厌倦了，并想把它们注册为销毁对象：
+
+  !<color:G>common ego </color><color:R>cloaks</color>:of protection
+  !<color:G>common ego </color><color:R>weapons</color>:of sharpness
+
+现在，即使是那些无聊的优秀物品也会自动为你销毁，而无需你按任何键；但是，有时锋锐之剑 (swords of sharpness) 会拥有极高的骰子增强，也许它并不是那么无聊。你可以用以下规则保护它们：
+  <color:G>dice boosted </color><color:R>weapons</color>
+或者甚至可以用：
+  <color:R>weapons</color><color:o> more dice than 30</color>
+尽管最后那个是一个进阶技巧。
+
+总之，你的规则的完整顺序可能是：
+  <color:R>weapons</color><color:o> more dice than 30</color>
+  ?<color:G>unidentified ego </color><color:R>items</color>
+
+  !<color:G>average common </color><color:R>weapons</color>
+  !<color:G>average common </color><color:R>armors</color>
+
+  <color:G>unidentified </color><color:R>armors</color>
+  <color:G>unidentified </color><color:R>weapons</color>
+
+  !<color:G>common ego </color><color:R>cloaks</color>:of protection
+  !<color:G>common ego </color><color:R>weapons</color>:of sharpness
+
+新的护甲和武器掉落下来，当你的角色踩到它们时会命中规则 5 或 6，所以它们被自动放入你的背包。最终伪鉴定生效，如果是平庸的，就会被规则 3 或 4 销毁；如果是优秀的，就会被规则 2 处理并自动鉴定，然后重新扫描规则。如果它是保护披风，会被规则 7 销毁；如果是锋锐之剑，会被规则 8 销毁——除非它碰巧是被极大增强了伤害骰子的，那种情况下它会被优先级最高的规则 1 保护。很简单，对吧？现在你只需要担心 {劣质(bad)}、{良好(good)} 和 {神器(special)} 装备了……
+</indent>
+  <indent><color:B>场景 #2</color>：风味物品 (药水卷轴等)
+这个比较简单，我先给出全套规则：
+  <color:R>potions</color>:healing<color:U>#!kq</color>
+  <color:R>potions</color>:of strength<color:U>#!k</color>
+  <color:R>potions</color>:of intelligence<color:U>#!k</color>
+  <color:R>potions</color>:of wisdom<color:U>#!k</color>
+  <color:R>potions</color>:of dexterity<color:U>#!k</color>
+  <color:R>potions</color>:of constitution<color:U>#!k</color>
+  <color:R>potions</color>:of charisma<color:U>#!k</color>
+  <color:R>potions</color>:augmentation<color:U>#!k</color>
+
+  <color:R>scrolls</color>:artifact creation<color:U>#!*</color>
+  ...
+
+  ?<color:G>unaware </color><color:R>items</color>
+
+  <color:G>collecting </color><color:R>potions</color>
+  <color:G>collecting </color><color:R>scrolls</color>
+
+  <color:R>?:$AUTOREGISTER</color>
+  ...
+  (!<color:R>potions</color>:^potion of restore charisma$
+  (!<color:R>scrolls</color>:^scroll of treasure detection$
+  ... <下面会有很多自动注册为销毁的垃圾风味物品> ...
+
+现在，模式变成了：你需要的风味物品位于顶部供自动拾取（和铭刻），不需要的风味物品位于底部供自动销毁（这些是在你每次销毁某物品时按下 <color:keypress>A</color> 自动添加到文件中的），而用于收集同类和鉴定未知物品的规则位于中间。未察觉的物品会被自动鉴定，此时可能会有某条拾取或销毁规则开始起作用。至于那些 <color:G>collecting</color> 规则，只要你的背包里有与地上相同风味的另一件物品就会触发。也许你正带着治疗重伤药水，但并没有专门针对这种风味的规则；在这种情况下，collecting (收集同类) 规则会为你自动拾取其他治疗重伤药水。
+</indent>
+  <indent><color:B>场景 #3</color>：法术书
+好吧，这是最后一个了。看看你是否能先搞懂它：
+  <color:G>first realm's fourth </color><color:R>spellbooks</color><color:U>#@md!sdk</color>
+  <color:G>first realm's third </color><color:R>spellbooks</color><color:U>#@mc!sdk</color>
+  ~<color:G>first realm's second </color><color:R>spellbooks</color><color:U>#@mb!k</color>
+  ~<color:G>first realm's first </color><color:R>spellbooks</color><color:U>#@ma!k</color>
+  <color:G>second realm's fourth </color><color:R>spellbooks</color><color:U>#@mh!sdk</color>
+  <color:G>second realm's third </color><color:R>spellbooks</color><color:U>#@mg!sdk</color>
+  ~<color:G>second realm's second </color><color:R>spellbooks</color><color:U>#@mf!k</color>
+  ~<color:G>second realm's first </color><color:R>spellbooks</color><color:U>#@me!k</color>
+  !<color:G>first </color><color:R>spellbooks</color>
+  !<color:G>second </color><color:R>spellbooks</color>
+  !<color:G>third </color><color:R>spellbooks</color>:major arcana
+  !<color:G>fourth </color><color:R>spellbooks</color>:manual of mastery
+  <color:G>third </color><color:R>spellbooks</color>
+  <color:G>fourth </color><color:R>spellbooks</color>
+你弄明白了吗？这个场景会拾取你的角色所学魔法领域的高级法术书，把属于你领域的低级法术书留在地上，销毁所有其它领域的低级法术书，销毁所有奥秘 (Arcane) 魔法法术书，但拾取其它领域的高级法术书（大概是为了卖金币）。属于你领域的法术书会被自动铭刻，以保持书籍标签的一致性。在这里，和其它地方一样，顺序非常重要：针对角色自身法术领域的规则，必须放在针对销毁低级法术书的通用规则之前。（顺带一提，如果使用 <color:G>unreadable (不可读的)</color> 这一形容词，可以让这里的处理更安全且不那么依赖顺序。）
+</indent>
+<topic:WhichRule><style:heading>现在用的是哪条规则？</style>
+
+如果你对在特定情况下应用了哪条规则感到不确定，可以开启 <color:keyword>destroy_debug (销毁_调试)</color> 选项（参见 <link:option.txt#destroy_debug>）。有了这个选项，你可以使用 <color:keypress>I</color>nspect (检查) 命令获取更多信息。例如：
+<style:screenshot>
+  <color:u>盗贼指南 [飞贼手册]</color>
+
+    <color:r>Autopick(自动拾取处理结果):</color> (!<color:G>unreadable first </color><color:R>spellbooks</color>
+</style>
+我可能喜欢也可能不喜欢这种行为，如果不喜欢，我现在知道该去修改哪一行了！
+
+此外，在开启调试后，当采取行动时，消息日志会打印所使用的规则，这样你就能清楚地看到物品被销毁、拾取、留在地上或自动鉴定的确切原因。例如：
+<style:screenshot>
+  <indent>你还有 26 发充能。 <color:B>(AutoID(自动鉴定)</color><color:B>:</color>~?<color:G>unidentified </color><color:R>rods</color><color:B>)</color> 你看到 <color:v>一根 </color>
+<color:v>魔棒: </color><color:W>冰霜球</color><color:v> (</color><color:y>1/3 充能</color><color:v>)</color>。 <color:B>(Destroy(销毁):</color>(!<color:R>rods</color>:frost ball$<color:B>)</color>
+自动销毁中。</indent>
+</style>
+由于这属于消息刷屏，你大概不想永久开启 <color:keyword>destroy_debug</color> 选项。
+
+<topic:Conditionals><style:heading>条件语句 (Conditionals)</style>
+
+这是一个高级话题，但基本原理很简单。你所认为的“有用”或“垃圾”可能取决于你的种族、职业、角色等级或其它类似的细节；而<color:keyword>条件语句 (conditionals)</color> 帮助你仅在合适的时候应用规则。每个条件语句要么计算为<color:keyword>真 (TRUE)</color> (1)，要么计算为<color:keyword>假 (FALSE)</color> (0)；如果遇到计算结果为 FALSE 的条件语句，则忽略它之后的所有规则，直到系统读取到下一个结果为 TRUE 的条件语句。
+
+条件行总是以字符 <color:keyword>?:</color> 开头，后跟游戏将要计算的一个（看起来相当隐晦的）表达式。
+
+让我们看一个例子。还记得上面我们在<color:B>场景 #1</color> 中添加了销毁平庸装备的规则吗？我说过，除非你的角色足够强大，否则你可能并不想这样做。假设你认为等级 20 就算足够强大了？
+  <color:v>?:[GEQ $LEVEL 20]</color>
+  !<color:G>average common </color><color:R>weapons</color>
+  !<color:G>average common </color><color:R>armors</color>
+  <color:v>?:1</color>
+
+注意有两行涂有<color:v>紫色</color>的文本，每行都以 <color:keyword>?:</color> 开头。这就是条件语句；第一个包含一个看起来很有趣的表达式，而第二个简单得多，只有 <color:v>?:1</color>。
+
+第一个条件可能计算为 TRUE 也可能不为 TRUE；这取决于 $LEVEL（你大概猜到了，这是你当前的角色等级）的值是否大于或等于 20。GEQ 代表<color:keyword>大于或等于 (greater than or equal to)</color>，而 20 只是一个数字。之所以写成 [GEQ $LEVEL 20] 而不是比如 $LEVEL GEQ 20 或 $LEVEL >= 20，是因为 GEQ 是这个表达式的<color:keyword>函数 (function)</color>，而 $LEVEL 和 20 是它的参数。
+
+相比之下，<color:v>?:1</color> 就很容易了。它的计算结果就是……1！正如我们已经指出的，1 意味着 TRUE；所以 <color:v>?:1</color> 把“忽略规则”这个开关重新拨回到了 OFF，从而有效地标记了上一个条件语句适用范围的终点。
+
+这里是另一个例子：
+<style:wide>  <color:v>?:[OR [EQU $CLASS Mage High-Mage Sorcerer] [EQU $RACE Beholder Lich] ]</color>
+  wizardstaff
+  <color:v>?:1</color></style>
+
+这是一个更复杂的表达式，但你大概能弄明白：如果你的职业是法师 (Mage)、高等法师 (High-Mage) 或咒术师 (Sorcerer) 之一；<color:v>或者</color> 如果你的种族是邪眼 (Beholder) 或巫妖 (Lich) 之一，则计算为 TRUE。
+
+所以，我们有了由函数（如 GEQ 和 OR）、变量（如 $RACE 和 $LEVEL）、字面量（如 Mage 和 Sorcerer）以及方括号组成的表达式。我们能使用哪些函数和变量呢？（注意：这些代码必须以英文输入系统才认！）
+
+<color:G>函数        解释</color>
+  <color:keyword>IOR</color>       <indent>包含或 (Inclusive Or)：如果子表达式 a, b, c, ... 中有<color:o>任何一个</color>的值为 TRUE，那么 [IOR a b c ...] 即为 TRUE。</indent>
+  <color:keyword>OR</color>        <indent>与 IOR 相同。（如果你是程序员或数学家，你可能期望有一个 XOR 异或函数，但并没有！）</indent>
+  <color:keyword>AND</color>       <indent>逻辑与 (Logical And)：如果子表达式 a, b, c, ... 中<color:o>所有</color>的值均为 TRUE，那么 [AND a b c ...] 即为 TRUE。</indent>
+  <color:keyword>NOT</color>       <indent>如果 a 为 FALSE，则 [NOT a] 为 TRUE，反之亦然。当你希望在某事<color:o>不</color>成立时采取动作，请使用它。</indent>
+  <color:keyword>EQU</color>       <indent>如果 v 的值等于 a, b, c, ... 中的<color:o>任意一个</color>，那么 [EQU v a b c ...] 即为 TRUE。该比较基于字符串。通常，你将 v 设置为一个内置的变量表达式，如 <color:keyword>$CLASS</color>（见下文），其余参数设为要测试的字符串，如 <color:keyword>Mage</color> 或 <color:keyword>Sorcerer</color>。注意，字符串字面量不用加引号，因此不得包含空格。如果必须的话，请用连字符连接带有空格的名称（用 <color:keyword>Filthy-Rag</color> 而不是 <color:keyword>Filthy Rag</color>）。</indent>
+  <color:keyword>LEQ</color>       <indent>当 v 的整数值<color:o>小于或等于</color> a 的整数值时，[LEQ v a] 即为 TRUE。注意，EQU 将其参数视为字符串，而 LEQ 将其参数视为数字。</indent>
+  <color:keyword>GEQ</color>       <indent>当 v 的整数值<color:o>大于或等于</color> a 的整数值时，[GEQ v a] 即为 TRUE。注意，EQU 将其参数视为字符串，而 GEQ 将其参数视为数字。</indent>
+
+<color:G>变量        解释</color>
+<color:keyword>$RACE</color>       <indent>返回你种族的名称；例如，<color:keyword>Snotling</color> 或 <color:keyword>High-Elf</color>。</indent>
+<color:keyword>$CLASS</color>      <indent>返回你职业的名称；例如，<color:keyword>Warrior-Mage</color> 或 <color:keyword>Mindcrafter</color>。注意，如果你在玩<color:r>怪物 (Monster)</color>模式，那么此变量总是返回 <color:keyword>Monster</color>，而 $RACE 会返回你实际扮演的怪物种族，如 <color:keyword>Lich</color> 或 <color:keyword>Dragon</color>。</indent>
+<color:keyword>$SUBCLASS</color>   <indent>返回你子职业（如有）的名称。比如，门徒 (Disciple) 的子职业 <color:keyword>Yeqrezh</color> 或灰法师 (Gray-Mage) 的 <color:keyword>Evil Bias</color>。</indent>
+<color:keyword>$SPECIALITY</color> <indent>返回你的专精名称，例如武器大师 (Weaponmaster) 的 <color:keyword>Axes (斧)</color> 或魔装使 (Devicemaster) 的 <color:keyword>Potions (药水)</color>。除这两个职业外的所有职业都返回 <color:keyword>none</color>。</indent>
+<color:keyword>$REALM1</color>     <indent>返回你的第一魔法领域的名称（如有）；例如，<color:keyword>Chaos (混沌)</color> 或 <color:keyword>Sorcery (咒术)</color>。如果玩家没有第一领域，则此变量返回 <color:keyword>none</color>。</indent>
+<color:keyword>$REALM2</color>     <indent>返回你的第二魔法领域的名称（如有）；例如，<color:keyword>Life (生命)</color> 或 <color:keyword>Death (死亡)</color>。如果玩家没有第二领域，则此变量返回 <color:keyword>none</color>。</indent>
+<color:keyword>$LEVEL</color>      <indent>返回你当前的等级。通常，你将它与 GEQ 或 LEQ 结合使用，以对照阈值测试等级，如 <color:v>[LEQ $LEVEL 34]</color>。</indent>
+<color:keyword>$SELLING</color>    <indent>如果你开启了 <color:keyword>no_selling (无交易)</color> 选项，则返回 <color:keyword>Off</color>，否则返回 <color:keyword>On</color>。</indent>
+<color:keyword>$MONEY</color>      <indent>返回玩家拥有的金币数量。与 $LEVEL 一样，可以结合 GEQ 或 LEQ 使用它，来测试你的玩家是富还是穷。</indent>
+
+所有的变量都以 <color:keypress>$</color> 字符开头，以区分它们与字符串字面量。
+
+<color:G>字面量      解释</color>
+<color:keyword>数字</color>        <indent>数字就如 <color:keyword>105</color> 或 <color:keyword>32</color> 那样书写。</indent>
+<color:keyword>字符串</color>      <indent>字符串就如 <color:keyword>High-Mage</color> 或 <color:keyword>Beholder</color> 那样书写，且不可包含空格。</indent>
+
+<topic:Editor><style:heading>使用编辑器</style>
+
+编辑器的使用不应该太难，你大概能自己摸索出来。就像任何文本编辑器一样，你用方向键移动光标，然后在定位到正确位置后进行输入。进阶操作（以及容易忘记的简单操作）可以通过按下 <color:keypress>ESC</color> 打开菜单来完成：
+<style:screenshot> <indent>
+<color:B>(a-j) 命令:</color>                                                                  
+<color:G>#####</color><color:b>+---------------------------+</color><color:G>#######</color>                                       
+<color:G># Con</color><color:b>|</color><color:B> a) 帮助(Help)           </color><color:b>|</color>                                              
+<color:G>#####</color><color:b>|</color><color:B> b) 不保存退出(Quit)  ^Q </color><color:b>|</color><color:G>#######</color>                                       
+mushr<color:b>|</color><color:B> c) 保</color><color:b>+----------------------------------+</color>                                
+~mush<color:b>|</color><color:B> d) 恢</color><color:b>|</color><color:B> a) 左移(Left)                 ^B </color><color:b>|</color>                                
+     <color:b>|</color><color:B> e) 载</color><color:b>|</color><color:B> b) 下移(Down)                 ^N </color><color:b>|</color>                                
+<color:v>?:[EQ</color><color:b>|</color><color:B> f) 编</color><color:b>|</color><color:B> c) 上移(Up)                   ^P </color><color:b>|</color>                                
+<color:D>~mush</color><color:b>|</color><color:B> g) 搜</color><color:b>|</color><color:B> d) 右移(Right)                ^F </color><color:b>|</color>                                
+<color:v>?:1</color>  <color:b>|</color><color:B> h) 移</color><color:b>|</color><color:B> e) 移至行首                   ^A </color><color:b>|</color>                                
+     <color:b>|</color><color:B> i) 插</color><color:b>|</color><color:B> f) 移至行尾                   ^E </color><color:b>|</color>                                
+<color:v>?:[LE</color><color:b>|</color><color:B> j) 附</color><color:b>|</color><color:B> g) 上翻页(PageUp)             ^O </color><color:b>|</color>                                
+<color:D>potio</color><color:b>|</color><color:B> k) 删</color><color:b>|</color><color:B> h) 下翻页(PageDown)           ^L </color><color:b>|</color>                                
+<color:v>?:1</color>  <color:b>|</color><color:B> l) 键</color><color:b>|</color><color:B> i) 文件顶部(Home)             ^T </color><color:b>|</color>                                
+<color:R>potio</color><color:b>|</color><color:B> m) 命</color><color:b>|</color><color:B> j) 文件底部(End)              ^U </color><color:b>|</color>                                
+<color:R>potio</color><color:b>+------+----------------------------------+</color>                                
+<color:R>potions</color>:heroism                                                                 
+<color:R>potions</color>:speed<color:U>#!kq</color>                                                               
+<color:R>potions</color>:giant strength<color:U>#!k</color>                                                       
+                                                                                
+<color:R>potions</color>:enlightenment                                                           
+                                                                                
+<color:R>potions</color>:of strength<color:U>#!k</color>                                                          
+<color:B>--------------------------------------------------------------------------------</color>
+This line is a comment.                                                         
+</indent></style>
+在这里，你可以清楚地看到使用哪些命令来移动光标，以及那些在像方向键这样的常规键出现故障时使用的备用快捷键。
+
+请注意，编辑器会根据表达式的语法自动为每行规则着色。有时显示的文本与你实际输入的规则并不完全相同（例如，形容词可能被重新排序）；但含义将是相同的。为避免混淆，光标所在的行永远不会进行语法着色，并且总是准确显示你输入的内容。
+
+<topic:EasyDestroyer><style:heading>简易销毁器 (The Easy Destroyer)</style>
+
+如果读完了上面的所有内容后，你决定觉得莫加米系统对你来说太难处理了，你可以转而使用一个更简单的系统来管理物品：<color:keyword>简易销毁器 (Easy Destroyer)</color>。此系统通过游戏选项配置（参见 <link:option.txt#AutoDestroyer>）；选项 <color:keyword>destroy_items</color> 可以开启或关闭简易销毁器。<color:v>当且仅当</color>你开启了 <color:keyword>always_pickup (自动拾取)</color> 选项时，才推荐将莫加米系统和简易销毁器同时使用。
+
+如果你开启了莫加米系统但却不喜欢它的行为方式，你可以使用 <color:keyword>no_mogaminator</color> 选项来完全关闭它，或者使用 <color:keyword>leave_mogaminator (保留莫加米纳特)</color> 选项将物品销毁限制在纯粹的垃圾上。开启 <color:keyword>always_pickup (自动拾取)</color> 选项也会禁用莫加米系统的物品销毁功能，但仍允许简易销毁器工作。
+
+<topic:Reference><style:heading>参考表格</style>
+
+本节将给出关于莫加米系统所有关键语法细节。（请注意：要在系统中起效，你必须使用**英文**的规则关键字进行编写！）但首先，那些偏好文件究竟存放在哪里呢？默认的全局偏好是由 `lib/pref/pickpref.prf` 初始化的；因此如果你想为所有角色编辑默认偏好，就去编辑这个文件。你也可以在 `/lib/user/pickpref-UserDefault.prf` 创建你自己的个人默认偏好；这样的好处是你无需覆盖原始的全局默认值，并且如果你开始讨厌你的更改，也可以轻松地恢复。（使用个人默认偏好的另一个优点是，你可以在游戏内设置并编辑它们，而对于全局偏好这是做不到的。）
+
+一旦你激活了莫加米系统，你的偏好会存储在一个系统特定的独立文件中。在 Windows 系统上，它们将存储在 `lib/user/pickpref-<color:o>NAME</color>.prf`；而在 Linux 系统上，它们可能会被转移到 `~/.angband/FrogComposband/pickpref-<color:o>NAME</color>.prf`（在游戏目录结构之外）。这里，`<color:o>NAME</color>` 处会被替换为你玩家当前的名字。所以，如果你想使用外部文本编辑器编辑你角色的偏好设置，这就是你需要更改的文件。通常，直接使用游戏内的编辑器会更简单；但如果你在游玩期间用外部编辑器编辑了偏好文件，一定要确保使用 <color:keypress>$</color> 命令强迫游戏重新加载偏好文件。
+
+承诺过的参考表格就在下面……享受吧！
+
+<topic:LineTypes><color:B>表 I：编辑器中的行类型</color>
+  <indent><color:G>类型        解释</color>
+<color:keyword>注释</color>        <indent>这些行以 <color:keypress>#</color> 开头，会被系统忽略。</indent>
+
+<color:keyword>条件语句</color>    <indent>这些行会把全局处理开关来回拨动在 ON (开) 和 OFF (关) 之间。如果表达式计算为 TRUE，则开关设为 ON，且包含它后续的任何规则。如果表达式计算为 FALSE，则开关设为 OFF，且忽略后续的所有规则，直到读取到下一个结果为 TRUE 的条件语句。更多详细信息参见上面的 <link:editor.txt#Conditionals>。</indent>
+
+<color:keyword>规则</color>        <indent>除了空行之外的其他每一行，都是规则。规则的语法在接下来的 5 个表中进行了描述。</indent>
+</indent>
+<topic:RuleSyntax><color:B>表 II：规则：语法</color>
+  <indent>规则具有以下两种句法形式之一：
+<style:wide><style:indent><color:y>[</color>动作 Actions<color:y>]</color> <color:G>形容词 Adjectives</color><color:y>*</color> <color:R>名词 Noun</color> <color:o>特殊子句 Special-Clauses</color><color:y>*</color> <color:y>[</color><color:keypress>:</color>搜索字符串 Search-String<color:y>]</color> <color:y>[</color><color:U>#铭刻字符串 Inscription-String</color><color:y>]</color></style></style>
+
+<color:y>[</color>动作 Actions<color:y>]</color> 搜索字符串 Search-String <color:y>[</color><color:U>#铭刻字符串 Inscription-String</color><color:y>]</color>
+
+方括号表示可选的句法元素。<color:y>*</color> 是克林星号，表示可以指定 0 个或多个前面的句法元素。所有的规则都必须写在偏好文件的单行上。
+
+<color:G>句法元素           解释</color>
+动作 (Actions)     <indent>“如果匹配该规则该做什么”部分。使用下一个表中描述的一个或多个动作字母。如果省略此元素，则动作默认为<color:keyword>拾取 (pick up)</color>。</indent>
+
+<color:G>形容词 (Adjectives)</color>
+                   <indent>修饰名词，进一步缩小将匹配该规则的物品集合范围。</indent>
+
+<color:R>名词 (Noun)</color>      <indent>在第一种句法形式中总是指定一个名词，它指示该规则将适用的宽泛物品类别。</indent>
+
+<color:o>特殊子句 (Special Clauses)</color>
+                   <indent>进一步细化匹配，在下文 (<link:editor.txt#SpecialClauses>) 讨论。它们类似于修饰名词的形容词，但与形容词不同的是，它们涉及物品属性的数值比较。而且它们总是放在名词之后，而形容词放在名词之前。</indent>
+
+搜索字符串 (Search String)
+                   <indent>这是一个格式自由的文本值，用于与物品名称进行比对。这种比较基于字符串且不区分大小写。有两个特殊字符：<color:keypress>^</color> 和 <color:keypress>$</color>，分别表示匹配字符串必须位于物品名称的开头或结尾；例如，<color:keyword>^foo</color> 仅匹配以 <color:keyword>foo</color> 开头的物品名称，所以 <color:keyword>foobar</color> 能匹配但 <color:keyword>barfoo</color> 则不能。类似地，<color:keyword>bar$</color> 仅匹配名称以 <color:keyword>bar</color> 为结尾的物品。最后，请注意，物品名称通常是单数；因此，例如，使用 <color:keyword>Seeker Bolt</color> 可以匹配成功，但使用 <color:keyword>Seeker Bolts</color> 总是会失败。</indent>
+
+<color:U>铭刻字符串 (Inscription String)</color>
+                   <indent>这是一个格式自由的文本值，将会被自动铭刻在任何匹配此规则的物品上。</indent>
+
+如果这看起来很复杂，请研究一下默认偏好，你很快就会明白的。
+</indent>
+<topic:CommandLetters><color:B>表 III：规则：动作字母</color>
+  <indent><color:G>字母    类型        解释</color>
+  <color:keypress>!</color>     主要 (Pri.) 销毁
+  <color:keypress>;</color>     主要        拾取提示
+  <color:keypress>~</color>     主要        留在地板上
+        主要        <indent>拾取——如果你未能提供替代的主要动作字母，则假定为拾取。没有任何字母用于该动作，除非被覆盖，否则它就是默认的。</indent>
+  <color:keypress>(</color>     次要 (Sec.) <indent>隐藏在 <color:keypress>M</color> 地图中</indent>
+  <color:keypress>?</color>     次要        <indent>自动鉴定此物品（只要你拥有鉴定卷轴或法杖即可起效）。</indent>
+  <color:keypress>#</color>     末尾 (Ter.) <indent>自动为匹配的物品铭刻此键后面的文本。请注意，主要和次要动作字母必须放在规则行的<color:keyword>最开头</color>，而末尾动作字母必须放在规则行的<color:keyword>最末尾</color>。</indent>
+
+每条规则必须有一个主要动作（如果没有指定其它动作，则假定为拾取）。它可以有 0 个或多个次要动作，唯一的末尾动作也是可选的。
+</indent>
+<topic:Nouns><color:B>表 IV：规则：名词关键字 (写入规则时必须用英文！)</color>
+  <indent><color:G>名词关键字      解释</color>
+<color:R>Items</color>           <indent>适用所有物品。这对于非常通用的规则很有用，比如 ~?<color:G>unidentified</color> <color:R>items</color> 意为“自动鉴定所有未鉴定物品，但把它们留在地上”；甚至可以直接用 <color:keyword>items</color> 来拾取一切！如果没有指定其它名词，则隐式假定名词为 <color:keyword>items</color>。</indent>
+
+<color:R>Weapons</color>         <indent>适用所有近战武器（包括挖掘工具），但不包括投射武器。</indent>
+
+<color:R>Favorite Weapons</color>
+                <indent>适用所有武器，包括投射武器，只要它是你的职业所喜好的。例如，武器大师专注于某种特定类型的武器，比如斧子或十字弓；无论他们的专精是什么，这个“名词”将适用于这些首选物品。请注意，系统将 <color:keyword>favorite weapons</color> 视为一个名词，而不是“形容词 + 名词”。</indent>
+
+<color:R>Hafted Weapons</color>
+                <indent>适用所有有柄武器，如权杖 (Maces)、连枷 (Flails) 和战锤 (War Hammers)；这些是牧师喜欢的武器。与上面的 <color:R>Favorite Weapons</color> 一样，系统将其视为单个名词，而不是“形容词 + 名词”。</indent>
+
+<color:R>Diggers</color>         <indent>适用所有挖掘工具，如铲子、鹤嘴锄和镐。</indent>
+
+<color:R>Shooters</color>        <indent>适用所有能放进远程武器栏的物品，包括投石索、弓、十字弓、竖琴和枪械。</indent>
+
+<color:R>Ammo</color>            <indent>适用所有用于远程武器的弹药：箭矢、石子、弹丸和弩箭。</indent>
+
+<color:R>Armors</color>          <indent>适用所有形式的护甲（更具体的名词请见下文）：</indent>
+<color:R>Suits</color>           适用身甲。
+<color:R>Shields</color>         适用盾牌。
+<color:R>Cloaks</color>          适用披风。
+<color:R>Helms</color>           适用头盔和王冠。
+<color:R>Gloves</color>          适用手套。
+<color:R>Boots</color>           适用靴子。
+
+<color:R>Wands</color>           适用魔杖。
+
+<color:R>Staves</color>          <indent>适用法杖（魔法装置那种法杖，而不是可以当作武器装备的木棍/长棍！）。例如，尝试使用 <color:R>staves</color>:healing 或 <color:R>staves</color>:speed。</indent>
+
+<color:R>Rods</color>            适用魔棒。
+
+<color:R>Potions</color>         <indent>适用药水。（小心——许多药水的名字，比如力量药水 (Potion of Strength) 和恢复力量药水 (Potion of Restore Strength) 存在彼此的部分匹配。）</indent>
+
+<color:R>Scrolls</color>         适用卷轴。
+
+<color:R>Rings</color>           适用戒指。
+
+<color:R>Amulets</color>         适用护身符。
+
+<color:R>Lights</color>          适用任何能放进光源栏的物品。
+
+<color:R>Spellbooks</color>      <indent>适用所有法术书。如果你是非施法者（并且开启了不交易选项），你可以肆无忌惮地指定 !<color:G>spellbooks</color>，但作为一名依赖法术书的施法者，你大概想把它与形容词结合使用。</indent>
+
+<color:R>Junk</color>            <indent>适用纯粹的垃圾，像断木棍。也包括雕像（它有可能是可以卖钱的）；使用 !<color:G>worthless</color> <color:R>junk</color> 可以将雕像排除在销毁之外。</indent>
+
+<color:R>Corpses</color>         <indent>适用尸体，尸体在很多情况下是有用的；附身者 (Possessors) 可以附身它们，伊戈尔 (Igors) 可以切割它们，一些恶魔吃人形怪的尸体，还有<color:G>悬赏的尸体 (wanted corpses)</color> 可以拿到赏金办公室换钱。</indent>
+
+<color:R>Skeletons</color>       <indent>和尸体一样，你可以把<color:G>悬赏的骨架 (wanted skeletons)</color> 拿到赏金办公室。弓箭手也可以用骨架来制作箭矢和弩箭。</indent>
+
+如果你使用关键字来构建匹配谓词，那么你必须指定恰好一个名词，但你可以使用任意数量的形容词。
+</indent>
+<topic:Adjectives><color:B>表 V：规则：形容词关键字 (写入规则时必须用英文！)</color>
+  <indent>因为形容词太多了，所以在这里按种类进行分组。</indent>
+
+<color:o>物品知识 (Object Knowledge)</color>
+<color:G>Unsensed</color>     <indent>适用于尚未被鉴定或伪鉴定的物品。</indent>
+
+<color:G>Unidentified</color> <indent>适用于尚未被鉴定的物品（例如使用 ?<color:G>unidentified</color> <color:R>items</color> 来自动鉴定一切）。</indent>
+
+<color:G>Unaware</color>      <indent>适用于其风味尚未被鉴定的物品。</indent>
+
+<color:G>Identified</color>   <indent>适用于所有已被鉴定的物品。</indent>
+
+<color:G>*Identified*</color> <indent>适用于已被全面鉴定的物品，很少使用。</indent>
+
+<color:o>物品质量 (Object Quality)</color>
+<color:G>Average</color>      <indent>适用于所有平凡 (average) 的物品。有些玩家喜欢在游戏早期就把它和 <color:keypress>!</color> 动作字母结合起来；但如果你正在寻找某些底材以进行重铸 (reforge) 时，这可能会带来不便。</indent>
+
+<color:G>Good</color>         <indent>适用于所有良好 (good) 物品。</indent>
+
+<color:G>Ego</color>          <indent>适用于所有优秀 (ego) 物品。更多信息参见 <link:objects.txt#EgoItems>。</indent>
+
+<color:G>Artifact</color>     <indent>适用于所有神器 (artifacts)。更多信息参见 <link:objects.txt#SpecialItems>。</indent>
+
+<color:G>Cursed</color>       <indent>适用于所有被诅咒的物品。需谨慎使用；被诅咒的物品也可能是好东西，而且 !<color:G>worthless</color> <color:R>items</color> 规则已经足够捕捉真正的垃圾了。</indent>
+
+<color:G>Nameless</color>     <indent>适用于所有既不是神器也不是 ego 物品的无名物品。</indent>
+
+<color:G>Rare</color>         <indent>适用于硬编码列表中特定对象类型的所有物品；例如，混沌之刃 (Blades of Chaos) 和粉碎之锤 (Maces of Disruption) 是罕见的 (<color:G>rare</color>)，所有的龙鳞装备包括龙鳞甲也是。</indent>
+
+<color:G>Common</color>       <indent>适用于所有<color:v>不属于</color> <color:G>rare (罕见)</color> 的物品；所以一把长剑是常见的 (common)，但混沌之刃不是。</indent>
+
+<color:G>Worthless</color>    <indent>任何价值为 0 的物品都被认为是<color:G>一文不值的 (worthless)</color>。但是要注意一点：例如尸体也是“一文不值”的，但你仍然想保留一部分。默认偏好把 !<color:G>worthless</color> <color:R>items</color> 放在了最下面，位于那些保护无价值但有用的物品的规则之后。</indent>
+
+<color:G>Icky</color>         <indent>Icky 物品是不适合你职业的物品；它们可能是某种职业禁止使用的武器 (Icky Wield)，或会导致其他针对该职业的惩罚的装备。</indent>
+
+<color:o>物品属性 (Object Attributes)</color>
+<color:G>Dice Boosted</color> <indent>当和 <color:R>weapons</color> 或 <color:R>shooters</color> 一起使用时，该形容词表示该物品的伤害骰子或伤害倍数高于该物品的常见种类。</indent>
+
+参见下文的 <color:o>特殊子句 (Special Clauses)</color> 了解有关匹配物品属性的更多信息。
+
+<color:o>法术书形容词 (Spellbook Adjectives)</color>
+<color:G>Unreadable</color>     <indent>这将匹配你无法使用的法术书，要么是因为你所玩的职业没有法术领域，要么是因为该书不属于你选择的领域。</indent>
+
+<color:G>First Realm's</color>  <indent>适用于你的第一魔法领域（如有）的书籍。</indent>
+
+<color:G>Second Realm's</color> <indent>适用于你的第二魔法领域（如有）的书籍。</indent>
+
+<color:G>First</color>
+<color:G>Second</color>
+<color:G>Third</color>
+<color:G>Fourth</color>         <indent>每个魔法领域都有 4 本法术书；这些形容词按编号对应这 4 本书。通常，第 1 本和第 2 本是廉价书，而第 3 本和第 4 本是贵重书。</indent>
+
+<color:o>尸体形容词 (Corpse Adjectives)</color>
+<color:G>Wanted</color>       <indent>与 <color:R>corpses</color> 或 <color:R>skeletons</color> 结合使用，表示它是被悬赏通缉的怪物的残骸。</indent>
+
+<color:G>Unique</color>       <indent>与 <color:R>corpses</color> 或 <color:R>skeletons</color> 结合使用，表示它是 Unique 怪物的残骸。（也许你是个收藏家？）</indent>
+
+<color:G>Human</color>        <indent>一些角色会把人形怪尸体当作食物，或者作为召唤强大恶魔盟友的仪式的一部分。对于这些情况，在你的偏好中添加像 ~<color:G>human</color> <color:R>corpses</color> 这样的规则，尽管 ~<color:G>special</color> <color:R>items</color> 同样也会起效。</indent>
+
+<color:o>杂项 (Miscellaneous)</color>
+<color:G>Collecting</color>   <indent><color:G>Collecting</color> <color:R>items</color> 会匹配与你背包中已有物品完全相同且可堆叠的物品。</indent>
+
+<color:G>Special</color>      <indent><color:G>Special</color> <color:R>items</color> 是你的种族或职业所需要的特殊物品；通常在默认情况下被认为是垃圾。例如，有些角色无法从普通食物中获得足够的饱腹感，所以必须食用人形怪尸体（美味！）。恶魔施法者利用尸体来施放某些法术。弓箭手使用骨架来制作他们自己的弹药。驯兽师和骑兵非常享受怪物加速魔杖 (wands of Haste Monster)。这种特殊情况都可以用这个形容词来处理。<color:y>请注意，这与代表“神器”的物品预感 {special} 完全是两码事。</color></indent>
+
+<color:G>Unusable</color>     <indent>适用于你当前没有合适装备栏位的可穿戴物品。在怪物 (Monster) 模式下特别方便——不过还是要谨慎使用，以防你随着时间推移长出新的装备槽位……</color>
+</indent>
+<topic:SpecialClauses><color:B>表 VI：规则：特殊子句关键字 (写入规则时必须用英文！)</color>
+  <indent>在以下的子句中，N 代表一位数字 (0-9)；序列 NN 意味着你可以输入一位或两位数字，因此可以输入 0 到 99 之间的任何数字。以此类推，NNNNNN 允许输入 0 到 999999 之间的数字。如果你输入了过多的数字，解析器将无法识别你的特殊子句，你的规则也将得不到满意的结果。
+
+<color:G>特殊子句关键字          解释</color>
+<color:o>More Dice Than NN</color>       <indent>此子句仅适用于 <color:R>weapons (近战武器)</color>，只要最大可能伤害超过你输入的数字时即为真。例如一把 (2d5) 的武器将会匹配 <color:o>more dice than 9</color>，但无法匹配 <color:o>more dice than 10</color>。</indent>
+
+<color:o>More Bonus Than NN</color>      <indent>这里某件物品的“加成”是指它 pval，命中 (to-hit)，伤害 (to-dam) 和护甲 (to-AC) 当中最大的一个值。例如，<color:R>rings</color> <color:o>more bonus than 9</color>:speed 将会拾取速度 (+10) 甚至更好的速度戒指，但不会匹配其他更慢的速度戒指；而 <color:R>suits</color> <color:o>more bonus than 19</color>:power dragon 意味着你确实想要一件力量龙鳞甲 (Power Dragon Scale Mail)，但前提是它的护甲加成达到 +20 或更好！</indent>
+
+<color:o>More Level Than NN</color>      <indent>此子句通常用于 <color:R>corpses (尸体)</color>，以便让附身者 (Possessor) 可以管理他们创造出的堆积如山的尸体。你也可以将其与其他物品一起使用，在那种情况下，它对应的是该物品本身的等级，或者是其 ego 类型的等级。对于魔法装置，它匹配设备的能量强度等级。</indent>
+
+<color:o>More Charges Than NN</color>    <indent>专为魔法装置设计；也许你已经拥有了一把剩余 20 发充能的治疗伤患法杖 (Staff of Cure Wounds)，并认为任何比它容量更小的法杖都是垃圾。</indent>
+
+<color:o>More Weight Than NN</color>     <indent>某些职业对护甲有重量限制，如武僧、斥候和忍者。而有些职业如重锤使，则更喜欢非常重的武器。该子句匹配该物品的重量（以磅 lbs 为单位）；所以 <color:R>weapons</color> <color:o>more weight than 39</color> 将匹配重量至少为 39.1 磅的武器。</indent>
+
+<color:o>More Value Than NNNNNN</color>  <indent>该子句匹配物品已知的价值 (value)。使用需谨慎，因为未知，或者甚至未进行“全面鉴定”的物品，其“已知”价值可能低于它的实际价值。</indent>
+</indent>
+<topic:CondiSyntax><color:B>表 VII：条件语句：语法</color>
+  <indent>条件语句的格式如下：
+
+?:<color:B>表达式 (Expression)</color>
+
+条件表达式使用以下（部分的）语法：
+
+<color:B>表达式 (Expression)</color> <color:y>:=</color> <indent><style:indent><color:r>字面量 (Literal)</color> <color:y>|</color> <color:v>变量 (Variable)</color> <color:y>|</color> [<color:R>函数 (Function)</color> <color:B>表达式 (Expression)</color><color:y>*</color>]</style></indent>
+<color:R>函数 (Function)</color>     <color:y>:=</color> <indent><style:indent>IOR <color:y>|</color> OR <color:y>|</color> AND <color:y>|</color> NOT <color:y>|</color> EQU <color:y>|</color> LEQ <color:y>|</color> GEQ</style></indent>
+<color:v>变量 (Variable)</color>     <color:y>:=</color> <indent><style:indent>$RACE <color:y>|</color> $CLASS <color:y>|</color> $REALM1 <color:y>|</color> $LEVEL <color:y>|</color> $MONEY <color:y>|</color> ...</style></indent>
+<color:r>字面量 (Literal)</color>    <color:y>:=</color> <indent><style:indent>23 <color:y>|</color> 52 <color:y>|</color> Rage-Mage <color:y>|</color> High-Elf <color:y>|</color> ... </style></indent>
+
+请注意，与上文不同，在此处的方括号是表达式语法的组成部分，而<color:v>不是</color>表示这是可以省略的元素。也就是说，所有的函数计算表达式都必须用方括号包围。
+
+当条件行上的表达式结果为 FALSE 或 0 时，将忽略随后遇到的任何规则。当表达式结果为 TRUE 或非零值时，将应用随后的所有规则。详情请参阅上面的 <link:editor.txt#Conditionals> 章节。
+</indent>
+<topic:CondiFuncs><color:B>表 VIII：条件语句：函数</color>
+  <indent><color:G>函数        解释</color>
+  <color:keyword>IOR</color>       <indent>包含或 (Inclusive Or)：如果子表达式 a, b, c, ... 中有<color:o>任何一个</color>的值为 TRUE，那么 [IOR a b c ...] 即为 TRUE。</indent>
+  <color:keyword>OR</color>        <indent>与 IOR 相同。</indent>
+  <color:keyword>AND</color>       <indent>逻辑与 (Logical And)：如果子表达式 a, b, c, ... 中<color:o>所有</color>的值均为 TRUE，那么 [AND a b c ...] 即为 TRUE。</indent>
+  <color:keyword>NOT</color>       <indent>如果 a 为 FALSE，则 [NOT a] 为 TRUE，反之亦然。当你希望在某事<color:o>不</color>成立时采取动作，请使用它。</indent>
+  <color:keyword>EQU</color>       <indent>如果 v 的值等于 a, b, c, ... 中的<color:o>任意一个</color>，那么 [EQU v a b c ...] 即为 TRUE。该比较基于字符串。通常，你将 v 设置为一个内置的变量表达式，如 <color:keyword>$CLASS</color>（见下文），其余参数设为要测试的字符串，如 <color:keyword>Mage</color> 或 <color:keyword>Sorcerer</color>。注意，字符串字面量不用加引号，因此不得包含空格。</indent>
+  <color:keyword>LEQ</color>       <indent>当 v 的整数值<color:o>小于或等于</color> a 的整数值时，[LEQ v a] 即为 TRUE。注意，EQU 将其参数视为字符串，而 LEQ 将其参数视为数字。</indent>
+  <color:keyword>GEQ</color>       <indent>当 v 的整数值<color:o>大于或等于</color> a 的整数值时，[GEQ v a] 即为 TRUE。注意，EQU 将其参数视为字符串，而 GEQ 将其参数视为数字。</indent>
+</indent>
+<topic:CondiVars><color:B>表 IX：条件语句：变量</color>
+  <indent><color:G>变量        解释</color>
+<color:keyword>$RACE</color>       <indent>返回你种族的名称；例如，<color:keyword>Snotling</color> 或 <color:keyword>High-Elf</color>。</indent>
+<color:keyword>$CLASS</color>      <indent>返回你职业的名称；例如，<color:keyword>Warrior-Mage</color> 或 <color:keyword>Mindcrafter</color>。注意，如果你在玩<color:r>怪物 (Monster)</color>模式，那么此变量总是返回 <color:keyword>Monster</color>，而 $RACE 会返回你实际扮演的怪物种族，如 <color:keyword>Lich</color> 或 <color:keyword>Dragon</color>。</indent>
+<color:keyword>$SUBCLASS</color>   <indent>返回你子职业（如有）的名称。比如，门徒 (Disciple) 的子职业 <color:keyword>Yeqrezh</color> 或灰法师 (Gray-Mage) 的 <color:keyword>Evil Bias</color>。</indent>
+<color:keyword>$SPECIALITY</color> <indent>返回你的专精名称，例如武器大师 (Weaponmaster) 的 <color:keyword>Axes (斧)</color> 或魔装使 (Devicemaster) 的 <color:keyword>Potions (药水)</color>。除这两个职业外的所有职业都返回 <color:keyword>none</color>。</indent>
+<color:keyword>$REALM1</color>     <indent>返回你的第一魔法领域的名称（如有）；例如，<color:keyword>Chaos (混沌)</color> 或 <color:keyword>Sorcery (咒术)</color>。如果玩家没有第一领域，则此变量返回 <color:keyword>none</color>。</indent>
+<color:keyword>$REALM2</color>     <indent>返回你的第二魔法领域的名称（如有）；例如，<color:keyword>Life (生命)</color> 或 <color:keyword>Death (死亡)</color>。如果玩家没有第二领域，则此变量返回 <color:keyword>none</color>。</indent>
+<color:keyword>$LEVEL</color>      <indent>返回你当前的等级。通常，你将它与 GEQ 或 LEQ 结合使用，以对照阈值测试等级，如 <color:v>[LEQ $LEVEL 34]</color>。</indent>
+<color:keyword>$SELLING</color>    <indent>如果你开启了 <color:keyword>no_selling (无交易)</color> 选项，则返回 <color:keyword>Off</color>，否则返回 <color:keyword>On</color>。</indent>
+<color:keyword>$MONEY</color>      <indent>返回玩家拥有的金币数量。与 $LEVEL 一样，可以结合 GEQ 或 LEQ 使用它，来测试你的玩家是富还是穷。</indent>
+
+所有的变量都以 <color:keypress>$</color> 字符开头，以区分它们与字符串字面量。请注意，系统编辑器允许使用的某些系统变量不在这里记录，而一些记录在此的（比如 $SYS 和 $KEYBOARD）因为极少用得上，所以未予记录。
+</indent>
+<topic:CondiLits><color:B>表 X：条件语句：字面量</color>
+  <indent><color:G>字面量      解释</color>
+<color:keyword>数字</color>        <indent>数字就如 <color:keyword>105</color> 或 <color:keyword>32</color> 那样书写。</indent>
+<color:keyword>字符串</color>      <indent>字符串就如 <color:keyword>High-Mage</color> 或 <color:keyword>Beholder</color> 那样书写。请注意，字符串字面量不用加引号，因此不得包含空格。如果必须的话，请用连字符连接（用 <color:keyword>Filthy-Rag</color> 表示 Filthy Rag / 污布种族）。</indent>
+</indent><color:D>
+--
+原版       : PosChengband 4.0.0
+更新       : FrogComposband 7.1.liquorice
+</color>

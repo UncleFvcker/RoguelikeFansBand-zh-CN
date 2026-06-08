@@ -1,30 +1,30 @@
-<style:title>Welcome to the Online Help System</style>
+<style:title>欢迎使用在线帮助系统 (Welcome to the Online Help System)</style>
 
-    <color:R>Getting Started:</color>
-    <link:general_contents.txt> General Information
-    <link:birth_contents.txt> Creating a Character    
-    <link:command_contents.txt> Commands
-    <link:faq.txt> Frequently Asked Questions
-    <link:avoid.txt> Common Mistakes to Avoid
+    <color:R>游戏入门 (Getting Started):</color>
+    <link:general_contents.txt> 基础信息 (General Information)
+    <link:birth_contents.txt> 创建角色 (Creating a Character)    
+    <link:command_contents.txt> 游戏命令 (Commands)
+    <link:faq.txt> 常见问题解答 (Frequently Asked Questions)
+    <link:avoid.txt> 避免常见错误 (Common Mistakes to Avoid)
 
-    <color:R>Core Concepts:</color>
-    <link:raceclass_contents.txt> Races, Classes and Personalities
-    <link:town_contents.txt> The Towns and Wilderness
-    <link:dungeon_contents.txt> The Dungeons
-    <link:objects_contents.txt> Objects
-    <link:monster_contents.txt> Monsters and Pets
-    <link:attack_contents.txt> Attacking and Weapons
-    <link:defend_contents.txt> Defending and Armor
-    <link:magic_contents.txt> Spellcasting
-    <link:status_contents.txt> Status Effects
-    <link:glossary.txt> Glossary/List of Concepts
+    <color:R>核心概念 (Core Concepts):</color>
+    <link:raceclass_contents.txt> 种族、职业与性格 (Races, Classes and Personalities)
+    <link:town_contents.txt> 城镇与荒野 (The Towns and Wilderness)
+    <link:dungeon_contents.txt> 地下城 (The Dungeons)
+    <link:objects_contents.txt> 物品 (Objects)
+    <link:monster_contents.txt> 怪物与宠物 (Monsters and Pets)
+    <link:attack_contents.txt> 攻击与武器 (Attacking and Weapons)
+    <link:defend_contents.txt> 防御与护甲 (Defending and Armor)
+    <link:magic_contents.txt> 施法 (Spellcasting)
+    <link:status_contents.txt> 状态效果 (Status Effects)
+    <link:glossary.txt> 术语表与概念列表 (Glossary/List of Concepts)
 
-    <color:R>Advanced Topics:</color>
-    <link:option_contents.txt> Options
-    <link:pref_contents.txt> User Preference Files
-    <link:speedsys_contents.txt> The Speed System
-    <link:prof_contents.txt> The Proficiency System
-    <link:editor_contents.txt> The Mogaminator
-    <link:subwin.txt> Subwindows
+    <color:R>进阶主题 (Advanced Topics):</color>
+    <link:option_contents.txt> 游戏选项 (Options)
+    <link:pref_contents.txt> 用户偏好设定文件 (User Preference Files)
+    <link:speedsys_contents.txt> 速度系统 (The Speed System)
+    <link:prof_contents.txt> 熟练度系统 (The Proficiency System)
+    <link:editor_contents.txt> 莫加米编辑器 (The Mogaminator)
+    <link:subwin.txt> 子窗口 (Subwindows)
 
-    <color:y>(?) Help System Commands</color>
+    <color:y>(?) 帮助系统命令 (Help System Commands)</color>

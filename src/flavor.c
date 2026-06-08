@@ -111,6 +111,41 @@ cptr monster_race_display_name(int r_idx)
     return "";
 }
 
+static cptr _artifact_desc_name(int a_idx, u32b mode)
+{
+    if ((mode & OD_INTERNAL_NAME) && a_idx > 0 && a_idx < max_a_idx && a_info[a_idx].name)
+        return a_name + a_info[a_idx].name;
+    return artifact_display_name(a_idx);
+}
+
+static cptr _ego_desc_name(int e_idx, u32b mode)
+{
+    if ((mode & OD_INTERNAL_NAME) && e_idx > 0 && e_idx < max_e_idx && e_info[e_idx].name)
+        return e_name + e_info[e_idx].name;
+    return ego_display_name(e_idx);
+}
+
+static cptr _kind_desc_name(int k_idx, u32b mode)
+{
+    if ((mode & OD_INTERNAL_NAME) && k_idx > 0 && k_idx < max_k_idx && k_info[k_idx].name)
+        return k_name + k_info[k_idx].name;
+    return kind_display_name(k_idx);
+}
+
+static cptr _kind_flavor_desc_name(int k_idx, u32b mode)
+{
+    if ((mode & OD_INTERNAL_NAME) && k_idx > 0 && k_idx < max_k_idx && k_info[k_idx].flavor_name)
+        return k_name + k_info[k_idx].flavor_name;
+    return kind_flavor_display_name(k_idx);
+}
+
+static cptr _monster_race_desc_name(int r_idx, u32b mode)
+{
+    if ((mode & OD_INTERNAL_NAME) && r_idx > 0 && r_idx < max_r_idx && r_info[r_idx].name)
+        return r_name + r_info[r_idx].name;
+    return monster_race_display_name(r_idx);
+}
+
 /*
  * Certain items, if aware, are known instantly
  * This function is used only by "flavor_init()"
@@ -1199,11 +1234,10 @@ char tval_to_attr_char(int tval)
  */
 void object_desc(char *buf, object_type *o_ptr, u32b mode)
 {
-    /* Extract object kind name */
-    cptr            kindname = kind_display_name(o_ptr->k_idx);
+    cptr            kindname;
 
     /* Extract default "base" string */
-    cptr            basenm = kindname;
+    cptr            basenm;
 
     /* Assume no "modifier" string */
     cptr            modstr = "";
@@ -1236,6 +1270,8 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
     int             number;
 
     mode |= (od_xtra_context);
+    kindname = _kind_desc_name(o_ptr->k_idx, mode);
+    basenm = kindname;
     number = (mode & OD_SINGULAR) ? 1 : o_ptr->number;
 
     /* Extract some flags */
@@ -1306,7 +1342,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
                 }
                 else
                 {
-                    cptr t = monster_race_display_name(o_ptr->pval);
+                    cptr t = _monster_race_desc_name(o_ptr->pval, mode);
 
                     if (!(r_ptr->flags1 & RF1_UNIQUE))
                     {
@@ -1331,7 +1367,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         {
             monster_race *r_ptr = &r_info[o_ptr->pval];
 
-            cptr t = monster_race_display_name(o_ptr->pval);
+            cptr t = _monster_race_desc_name(o_ptr->pval, mode);
 
             if (!(r_ptr->flags1 & RF1_UNIQUE))
             {
@@ -1359,41 +1395,42 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
                     {
                         if (r_ptr->flags1 & RF1_UNIQUE)
                         {
-                            modstr = monster_race_display_name(luku);
-                            basenm = "#的%";
+                            modstr = _monster_race_desc_name(luku, mode);
+                            basenm = (mode & OD_INTERNAL_NAME) ? "% of #" : "#的%";
                         }
                         else
                         {
-                            modstr = monster_race_display_name(luku);
-                            if (is_a_vowel(modstr[0])) basenm = "#的%";
+                            modstr = _monster_race_desc_name(luku, mode);
+                            if (mode & OD_INTERNAL_NAME) basenm = "% of #";
+                            else if (is_a_vowel(modstr[0])) basenm = "#的%";
                             else basenm = "#的%";
                         }
                     }
                     else
                     {
                         modstr = "一个软件漏洞";
-                        basenm = "#的%";
+                        basenm = (mode & OD_INTERNAL_NAME) ? "% of a software bug" : "#的%";
                     }
                 }
                 else
                 {
                     modstr = "一个伊戈尔";
-                    basenm = "#的%";
+                    basenm = (mode & OD_INTERNAL_NAME) ? "% of an Igor" : "#的%";
                 }
                 /* Body parts cannot be piled, so it's usually safe to use the
                  * article "the"... but it is possible to have 0 of them */
-                if ((!number) || (mode & OD_OMIT_PREFIX)) basenm += 4;
+                if (!(mode & OD_INTERNAL_NAME) && ((!number) || (mode & OD_OMIT_PREFIX))) basenm += 4;
             }
             else
             {
                 monster_race *r_ptr = &r_info[o_ptr->pval];
 
-                modstr = monster_race_display_name(o_ptr->pval);
+                modstr = _monster_race_desc_name(o_ptr->pval, mode);
 
                 if (r_ptr->flags1 & RF1_UNIQUE)
-                    basenm = "& #的%";
+                    basenm = (mode & OD_INTERNAL_NAME) ? "& %~ of #" : "& #的%";
                 else
-                    basenm = "& # %";
+                    basenm = (mode & OD_INTERNAL_NAME) ? "& # %" : "& # %";
             }
             break;
         }
@@ -1434,10 +1471,10 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         {
             if (o_ptr->name1 == ART_HAND_OF_VECNA)
             {
-                modstr = kind_flavor_display_name(k_ptr->flavor);
-                if (!flavor)    basenm = "& %的断手~";
+                modstr = _kind_flavor_desc_name(k_ptr->flavor, mode);
+                if (!flavor)    basenm = (mode & OD_INTERNAL_NAME) ? "& Hand~ of %" : "& %的断手~";
                 else if (aware) break;
-                else            basenm = "& #的断手~";
+                else            basenm = (mode & OD_INTERNAL_NAME) ? "& Hand~ of #" : "& #的断手~";
             }
             else
                 show_armour = TRUE;
@@ -1449,10 +1486,10 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         {
             if (o_ptr->name1 == ART_EYE_OF_VECNA)
             {
-                modstr = kind_flavor_display_name(k_ptr->flavor);
-                if (!flavor)    basenm = "& %的眼球~";
+                modstr = _kind_flavor_desc_name(k_ptr->flavor, mode);
+                if (!flavor)    basenm = (mode & OD_INTERNAL_NAME) ? "& Eye~ of %" : "& %的眼球~";
                 else if (aware) break;
-                else            basenm = "& #的眼球~";
+                else            basenm = (mode & OD_INTERNAL_NAME) ? "& Eye~ of #" : "& #的眼球~";
             }
             break;
         }
@@ -1482,11 +1519,20 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         case TV_SCROLL:
         {
             /* Color the object */
-            modstr = kind_flavor_display_name(k_ptr->flavor);
+            modstr = _kind_flavor_desc_name(k_ptr->flavor, mode);
 
-            if (!flavor)    basenm = "& 卷~%卷轴";
-            else if (aware) basenm = "& 卷~标题为“#”的%卷轴";
-            else            basenm = "& 卷~标题为“#”的卷轴";
+            if (mode & OD_INTERNAL_NAME)
+            {
+                if (!flavor)    basenm = "& Scroll~ of %";
+                else if (aware) basenm = "& Scroll~ titled \"#\" of %";
+                else            basenm = "& Scroll~ titled \"#\"";
+            }
+            else
+            {
+                if (!flavor)    basenm = "& 卷~%卷轴";
+                else if (aware) basenm = "& 卷~标题为“#”的%卷轴";
+                else            basenm = "& 卷~标题为“#”的卷轴";
+            }
 
             break;
         }
@@ -1494,11 +1540,20 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         case TV_POTION:
         {
             /* Color the object */
-            modstr = kind_flavor_display_name(k_ptr->flavor);
+            modstr = _kind_flavor_desc_name(k_ptr->flavor, mode);
 
-            if (!flavor)    basenm = "& 瓶~%药水";
-            else if (aware) basenm = "& 瓶~%的#药水";
-            else            basenm = "& 瓶~#药水";
+            if (mode & OD_INTERNAL_NAME)
+            {
+                if (!flavor)    basenm = "& Potion~ of %";
+                else if (aware) basenm = "& # Potion~ of %";
+                else            basenm = "& # Potion~";
+            }
+            else
+            {
+                if (!flavor)    basenm = "& 瓶~%药水";
+                else if (aware) basenm = "& 瓶~%的#药水";
+                else            basenm = "& 瓶~#药水";
+            }
             break;
         }
 
@@ -1508,17 +1563,26 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
             if (!k_ptr->flavor_name) break;
 
             /* Color the object */
-            modstr = kind_flavor_display_name(k_ptr->flavor);
+            modstr = _kind_flavor_desc_name(k_ptr->flavor, mode);
 
-            if (!flavor)    basenm = "& 朵~%蘑菇";
-            else if (aware) basenm = "& 朵~%的#蘑菇";
-            else            basenm = "& 朵~#蘑菇";
+            if (mode & OD_INTERNAL_NAME)
+            {
+                if (!flavor)    basenm = "& Mushroom~ of %";
+                else if (aware) basenm = "& # Mushroom~ of %";
+                else            basenm = "& # Mushroom~";
+            }
+            else
+            {
+                if (!flavor)    basenm = "& 朵~%蘑菇";
+                else if (aware) basenm = "& 朵~%的#蘑菇";
+                else            basenm = "& 朵~#蘑菇";
+            }
             break;
         }
 
         case TV_PARCHMENT:
         {
-            basenm = "& 羊皮纸~ - %";
+            basenm = (mode & OD_INTERNAL_NAME) ? "& Parchment~ - %" : "& 羊皮纸~ - %";
             break;
         }
 
@@ -1526,142 +1590,142 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         case TV_LIFE_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 生命魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Life Magic %" : "& 生命魔法书~ %";
             else
-                basenm = "& 生命法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Life Spellbook~ %" : "& 生命法术书~ %";
             break;
         }
 
         case TV_SORCERY_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 咒术魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Sorcery %" : "& 咒术魔法书~ %";
             else
-                basenm = "& 咒术法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Sorcery Spellbook~ %" : "& 咒术法术书~ %";
             break;
         }
 
         case TV_NATURE_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 自然魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Nature Magic %" : "& 自然魔法书~ %";
             else
-                basenm = "& 自然法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Nature Spellbook~ %" : "& 自然法术书~ %";
             break;
         }
 
         case TV_CHAOS_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 混沌魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Chaos Magic %" : "& 混沌魔法书~ %";
             else
-                basenm = "& 混沌法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Chaos Spellbook~ %" : "& 混沌法术书~ %";
             break;
         }
 
         case TV_DEATH_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 死亡魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Death Magic %" : "& 死亡魔法书~ %";
             else
-                basenm = "& 死亡法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Death Spellbook~ %" : "& 死亡法术书~ %";
             break;
         }
 
         case TV_TRUMP_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 王牌魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Trump Magic %" : "& 王牌魔法书~ %";
             else
-                basenm = "& 王牌法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Trump Spellbook~ %" : "& 王牌法术书~ %";
             break;
         }
 
         case TV_ARCANE_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 奥秘魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Arcane Magic %" : "& 奥秘魔法书~ %";
             else
-                basenm = "& 奥秘法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Arcane Spellbook~ %" : "& 奥秘法术书~ %";
             break;
         }
 
         case TV_CRAFT_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 工匠魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Craft Magic %" : "& 工匠魔法书~ %";
             else
-                basenm = "& 工匠法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Craft Spellbook~ %" : "& 工匠法术书~ %";
             break;
         }
 
         case TV_DAEMON_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 恶魔魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Daemon Magic %" : "& 恶魔魔法书~ %";
             else
-                basenm = "& 恶魔法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Daemon Spellbook~ %" : "& 恶魔法术书~ %";
             break;
         }
 
         case TV_CRUSADE_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 圣战魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Crusade Magic %" : "& 圣战魔法书~ %";
             else
-                basenm = "& 圣战法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Crusade Spellbook~ %" : "& 圣战法术书~ %";
             break;
         }
 
         case TV_LAW_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 法律诡计书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Legal Tricks %" : "& 法律诡计书~ %";
             else
-                basenm = "& 律法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Law Book~ %" : "& 律法书~ %";
             break;
         }
 
         case TV_NECROMANCY_BOOK:
         {
-            basenm = "& 死灵法术书~ %";
+            basenm = (mode & OD_INTERNAL_NAME) ? "& Necromancy Spellbook~ %" : "& 死灵法术书~ %";
             break;
         }
 
         case TV_RAGE_BOOK:
         {
-            basenm = "& 狂怒法术书~ %";
+            basenm = (mode & OD_INTERNAL_NAME) ? "& Rage Spellbook~ %" : "& 狂怒法术书~ %";
             break;
         }
 
         case TV_BURGLARY_BOOK:
         {
-            basenm = "& 盗贼指南~ %";
+            basenm = (mode & OD_INTERNAL_NAME) ? "& Thieves' Guide~ %" : "& 盗贼指南~ %";
             break;
         }
 
         case TV_ARMAGEDDON_BOOK:
-            basenm = "& 毁灭法术书~ %";
+            basenm = (mode & OD_INTERNAL_NAME) ? "& Armageddon Spellbook~ %" : "& 毁灭法术书~ %";
             break;
 
         case TV_MUSIC_BOOK:
         {
-            basenm = "& 乐谱~ %";
+            basenm = (mode & OD_INTERNAL_NAME) ? "& Song Book~ %" : "& 乐谱~ %";
             break;
         }
 
         case TV_HISSATSU_BOOK:
         {
-            basenm = "剑道指南~ %";
+            basenm = (mode & OD_INTERNAL_NAME) ? "Book~ of Kendo %" : "剑道指南~ %";
             break;
         }
 
         case TV_HEX_BOOK:
         {
             if (mp_ptr->spell_book == TV_LIFE_BOOK)
-                basenm = "& 诅咒魔法书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Book~ of Hex Magic %" : "& 诅咒魔法书~ %";
             else
-                basenm = "& 诅咒法术书~ %";
+                basenm = (mode & OD_INTERNAL_NAME) ? "& Hex Spellbook~ %" : "& 诅咒法术书~ %";
             break;
         }
 
@@ -1686,8 +1750,8 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
     /* Use full name from k_info or a_info */
     if (aware && have_flag(flgs, OF_FULL_NAME))
     {
-        if (known && o_ptr->name1) basenm = artifact_display_name(o_ptr->name1);
-        else if (known && o_ptr->name2) basenm = ego_display_name(o_ptr->name2);
+        if (known && o_ptr->name1) basenm = _artifact_desc_name(o_ptr->name1, mode);
+        else if (known && o_ptr->name2) basenm = _ego_desc_name(o_ptr->name2, mode);
         else basenm = kindname;
     }
 
@@ -1879,7 +1943,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         /* Grab any artifact name */
         else if (object_is_fixed_artifact(o_ptr))
         {
-            cptr art_name = artifact_display_name(o_ptr->name1);
+            cptr art_name = _artifact_desc_name(o_ptr->name1, mode);
             char art_prefix[MAX_NLEN];
 
             if (_zh_ego_prefix(art_name, art_prefix, sizeof(art_prefix)))
@@ -1902,7 +1966,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         {
             if (object_is_ego(o_ptr))
             {
-                cptr ego_name = ego_display_name(o_ptr->name2);
+                cptr ego_name = _ego_desc_name(o_ptr->name2, mode);
                 char ego_prefix[MAX_NLEN];
 
                 if (_zh_ego_prefix(ego_name, ego_prefix, sizeof(ego_prefix)))
@@ -1937,16 +2001,17 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         if (o_ptr->activation.type)
         {
             char buf[255];
+            cptr effect_name = (mode & OD_INTERNAL_NAME) ? effect_internal_name(o_ptr->activation.type) : do_effect(&o_ptr->activation, SPELL_NAME, 0);
             if (mode & OD_COLOR_CODED)
             {
                 byte color = effect_color(&o_ptr->activation);
                 sprintf(buf, ": <color:%c>%s</color>",
                         attr_to_attr_char(color),
-                        do_effect(&o_ptr->activation, SPELL_NAME, 0));
+                        effect_name);
             }
             else
             {
-                sprintf(buf, ": %s", do_effect(&o_ptr->activation, SPELL_NAME, 0));
+                sprintf(buf, ": %s", effect_name);
             }
             t = object_desc_str(t, buf);
         }
@@ -2436,11 +2501,12 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
                 sprintf(buf, "A:释放宠物");
         }
         else
-        {            
+        {
+            cptr effect_name = (mode & OD_INTERNAL_NAME) ? effect_internal_name(e.type) : do_effect(&e, SPELL_NAME, 0);
             if (mode & OD_COLOR_CODED)
-                sprintf(buf, "<color:B>A:%s</color>", do_effect(&e, SPELL_NAME, 0));
+                sprintf(buf, "<color:B>A:%s</color>", effect_name);
             else
-                sprintf(buf, "A:%s", do_effect(&e, SPELL_NAME, 0));
+                sprintf(buf, "A:%s", effect_name);
         }
         strcat(tmp_val2, buf);
     }
@@ -2481,7 +2547,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
 
     if (o_ptr->name3 && object_is_known(o_ptr) && abbrev_all)
     {
-        cptr  t = artifact_display_name(o_ptr->name3);
+        cptr  t = _artifact_desc_name(o_ptr->name3, mode);
         if ((strlen(t) > 2) && (t[0] == '&')) t += 2;
 
         if (!o_ptr->art_name || !strpos(t, quark_str(o_ptr->art_name)))

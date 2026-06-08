@@ -1,29 +1,29 @@
-<style:title>Selecting Objects</style>
+<style:title>选择物品 (Selecting Objects)</style>
 
-Objects are a big part of playing <color:keyword>FrogComposband</color>. Many commands (such as quaffing potions or reading scrolls) require you to select an object to use. Other commands allow you to view and inspect the objects you are carrying or using. This helpfile explains the user interface for viewing and selecting objects.
+物品是游玩 <color:keyword>FrogComposband</color> 的重要组成部分。许多命令（例如喝下药水或阅读卷轴）都需要你选择一件要使用的物品。其他命令则允许你查看和检视你正在携带或使用的物品。本帮助文件解释了用于查看和选择物品的用户界面。
 
-<topic:Sample><style:heading>An Example</style>
+<topic:Sample><style:heading>一个例子</style>
 
-To view your gear, you press <color:keypress>i</color> for inventory or <color:keypress>e</color> for equipment. Both keys bring up the same dialog but select the appropriate tab for you:
+要查看你的装备，你可以按 <color:keypress>i</color> 查看物品栏，或按 <color:keypress>e</color> 查看装备栏。这两个按键都会调出同一个对话框，但会自动为你选中相应的选项卡：
 <style:screenshot>
-<color:D>Inventory</color> <color:b>|</color> <color:G>Equipment</color> <color:b>|</color> <color:D>Quiver</color>                                                  
- a) Right Hand: a Broad Sword (2d6) (+0,+0)                 15.0 lb LEVEL <color:G>     1</color>
- b) Left Hand : <color:U>a Small Leather Shield [3,+0]</color>                5.0 lb EXP <color:G>      10</color>
- c) Shooting  : <color:u>a Short Bow (x2.50) (+0,+0)</color>                  3.0 lb AU  <color:G>   5.31k</color>
- d) Quiver    : <color:U>a Quiver [25 of 100]</color>                         1.0 lb <color:W>|</color><color:U>)}~</color><color:d>   </color><color:u>~</color><color:s>[</color><color:g>(</color><color:s>]</color><color:U>]</color>
- e) Right Ring:                                                     STR : <color:G> 18/30</color>
- f) Left Ring :                                                     INT : <color:G>     6</color>
- g) Neck      :                                                     WIS : <color:G>     6</color>
- h) Light     : <color:y>a Wooden Torch (with 2436 turns of light)</color>    3.0 lb DEX : <color:G> 18/10</color>
- i) Body      : <color:s>Chain Mail (-2) [14,+0]</color>                     22.0 lb CON : <color:G>    17</color>
- j) Cloak     : <color:U>a Cloak [1,+0]</color>                               1.0 lb CHR : <color:G>    10</color>
- k) Head      : <color:U>a Metal Cap [3,+0]</color>                           2.0 lb AC     <color:G>   28</color>
- l) Hands     : <color:U>a Set of Gauntlets [2,+0]</color>                    2.5 lb HP <color:G>  56</color>/<color:G>  56</color>
- m) Feet      : <color:U>a Pair of Hard Leather Boots [3,+0]</color>          4.0 lb             
+<color:D>物品栏</color> <color:b>|</color> <color:G>装备栏</color> <color:b>|</color> <color:D>箭袋</color>                                                          
+ a) 右手      : 一把阔剑 (2d6) (+0,+0)                      15.0 lb LEVEL <color:G>     1</color>
+ b) 左手      : <color:U>一面小皮盾 [3,+0]            </color>                5.0 lb EXP <color:G>      10</color>
+ c) 射击      : <color:u>一把短弓 (x2.50) (+0,+0)   </color>                  3.0 lb AU  <color:G>   5.31k</color>
+ d) 箭袋      : <color:U>一个箭袋 [25/100]  </color>                         1.0 lb <color:W>|</color><color:U>)}~</color><color:d>   </color><color:u>~</color><color:s>[</color><color:g>(</color><color:s>]</color><color:U>]</color>
+ e) 右手戒指  :                                                     STR : <color:G> 18/30</color>
+ f) 左手戒指  :                                                     INT : <color:G>     6</color>
+ g) 颈部      :                                                     WIS : <color:G>     6</color>
+ h) 光源      : <color:y>一根木火把 (剩余 2436 回合光照)          </color>    3.0 lb DEX : <color:G> 18/10</color>
+ i) 身体      : <color:s>锁子甲 (-2) [14,+0]   </color>                     22.0 lb CON : <color:G>    17</color>
+ j) 披风      : <color:U>一件斗篷 [1,+0]</color>                              1.0 lb CHR : <color:G>    10</color>
+ k) 头部      : <color:U>一顶金属帽 [3,+0] </color>                           2.0 lb AC     <color:G>   28</color>
+ l) 手部      : <color:U>一副铁护手 [2,+0]        </color>                    2.5 lb HP <color:G>  56</color>/<color:G>  56</color>
+ m) 脚部      : <color:U>一双硬皮靴 [3,+0]                  </color>          4.0 lb             
                                                           <color:R>  58.5 lb</color>             
-Carrying 113.9 pounds (<color:G>81%</color> capacity).                                           
+负重 113.9 磅 (达到 <color:G>81%</color> 容量)。                                                
                                                                                 
-<color:y>Examine which item </color>(<color:o>Esc</color> to exit)<color:y>?</color>                                               
+<color:y>检视哪件物品 </color>(按 <color:o>Esc</color> 退出)<color:y>?</color>                                                     
                                                                                 
 <color:U>####</color>.........<color:U>###</color><color:v>+</color><color:U>###</color>..<color:U>####</color>+<color:U>####</color>...<color:U>####</color><color:B>+</color><color:U>####</color>..<color:U>#######</color>.........<color:U>######</color>             
 <color:U>#####</color>.......................................................<color:U>#######</color>             
@@ -31,14 +31,14 @@ Carrying 113.9 pounds (<color:G>81%</color> capacity).
 <color:U>#####</color>.......................................................<color:U>#######</color>             
 Outpost                                                                         
 </style>
-The first thing you should notice is that your objects are grouped into tabs depending on their location. The top line shows the available tabs (Inventory, Equipment and Quiver in this case) and the active tab is displayed in <color:G>color</color> while the inactive tabs are <color:D>grayed out</color>. You can switch tabs by pressing <color:keypress>/</color>.
+你首先应该注意的是，你的物品会根据其位置被分到不同的选项卡中。顶行显示了可用的选项卡（在这个例子中是物品栏、装备栏和箭袋），当前激活的选项卡以<color:G>彩色</color>显示，而未激活的选项卡则呈<color:D>灰色</color>。你可以按 <color:keypress>/</color> 来切换选项卡。
 <style:screenshot>
-<color:D>Inventory</color> <color:b>|</color> <color:D>Equipment</color> <color:b>|</color> <color:G>Quiver</color>                                                  
- a) <color:U>25 Arrows (3d4) (+0,+0)</color>                                  5.0 lb LEVEL <color:G>     1</color>
+<color:D>物品栏</color> <color:b>|</color> <color:D>装备栏</color> <color:b>|</color> <color:G>箭袋</color>                                                          
+ a) <color:U>25 支箭 (3d4) (+0,+0)  </color>                                  5.0 lb LEVEL <color:G>     1</color>
                                                           <color:R>   5.0 lb</color> EXP <color:G>      10</color>
-Carrying 113.9 pounds (<color:G>81%</color> capacity).                               AU  <color:G>   5.31k</color>
+负重 113.9 磅 (达到 <color:G>81%</color> 容量)。                                     AU  <color:G>   5.31k</color>
                                                                     <color:W>|</color><color:U>)}~</color><color:d>   </color><color:u>~</color><color:s>[</color><color:g>(</color><color:s>]</color><color:U>]</color>
-<color:y>Examine which item </color>(<color:o>Esc</color> to exit)<color:y>?</color>                                   STR : <color:G> 18/30</color>
+<color:y>检视哪件物品 </color>(按 <color:o>Esc</color> 退出)<color:y>?</color>                                         STR : <color:G> 18/30</color>
                                                                     INT : <color:G>     6</color>
 ......<color:U>#####</color>..<color:U>#######</color>..<color:U>#########</color>...<color:U>#########</color>..<color:U>#######</color>..<color:U>#####</color>......<color:U>##</color> WIS : <color:G>     6</color>
 ......<color:U>##+##</color>..<color:U>###</color><color:o>9</color><color:U>###</color>..<color:U>####</color>3<color:U>####</color>...<color:U>####</color><color:r>6</color><color:U>####</color>..<color:U>###</color><color:g>4</color><color:U>###</color>..<color:U>##+##</color>......<color:U>##</color> DEX : <color:G> 18/10</color>
@@ -59,42 +59,42 @@ Carrying 113.9 pounds (<color:G>81%</color> capacity).                          
 Outpost                                                                         
 </style>
 
-To choose an object, simply press the indicated letter. What happens next depends on the context of the object prompt and is indicated by the bottom line on the dialog. In this case, you are simply browsing your gear, so what could be more useful than letting you inspect individual objects?
+要选择一件物品，只需按下指示的字母。接下来会发生什么取决于物品提示的上下文，并在对话框的底行给出指示。在这个例子中，你只是在浏览你的装备，所以还有什么比让你检视单件物品更有用的呢？
 <style:screenshot>
-<color:U>25 Arrows (3d4) (+0,+0)</color>                                                         
-  A standard clothyard arrow, straight and cleanly fletched.        LEVEL <color:G>     1</color>
+<color:U>25 支箭 (3d4) (+0,+0)</color>                                                         
+  一根标准的码长箭，笔直且羽毛修剪得整整齐齐。                        LEVEL <color:G>     1</color>
                                                                     EXP <color:G>      10</color>
-  <color:B>Score:</color> <color:D>2</color>                                                          AU  <color:G>   5.31k</color>
+  <color:B>评分 :</color> <color:D>2</color>                                                          AU  <color:G>   5.31k</color>
                                                                     <color:W>|</color><color:U>)}~</color><color:d>   </color><color:u>~</color><color:s>[</color><color:g>(</color><color:s>]</color><color:U>]</color>
-<color:B>[Press </color><color:y>Any Key</color><color:B> to Continue]</color>                                         STR : <color:G> 18/30</color>
+<color:B>[按 </color><color:y>任意键</color><color:B> 继续]</color>                                                       STR : <color:G> 18/30</color>
                                                                     INT : <color:G>     6</color>
 </style>
 
-You'll notice that selecting an object in this case did not dismiss the dialog. This is both unusual and useful, since you might want to inspect multiple objects before you are done. A few other game commands behave this way, such as Inscribing (<color:keypress>{</color>) objects, but most dialogs are dismissed after a selection is made.
+你会注意到，在这种情况下选择一件物品并没有关闭对话框。这既不寻常又很有用，因为在完成操作之前，你可能想要检视多件不同的物品。其他几个游戏命令也有类似的行为，例如为物品铭刻 (<color:keypress>{</color>)，但大多数对话框在做出选择后就会自动关闭。
 
-<topic:QuickRef><style:heading>Quick Reference</style>
+<topic:QuickRef><style:heading>快捷参考 (Quick Reference)</style>
   <indent>
-<color:G>Selection</color>
-<color:keypress>a-z</color>       Select Indicated Object
-<color:keypress>A-Z</color>       Inspect Indicated Object
-<color:keypress>Page Up</color>   Scroll Through Long Object Lists
+<color:G>选择操作</color>
+<color:keypress>a-z</color>       选择指示的物品
+<color:keypress>A-Z</color>       检视指示的物品
+<color:keypress>Page Up</color>   滚动浏览长长的物品列表
 <color:keypress>Page Down</color>
 <color:keypress>Space</color>
-<color:keypress>Esc</color>       Cancel the Prompt
+<color:keypress>Esc</color>       取消提示并退出
 
-<color:G>Tab Navigation</color>
-<color:keypress>/</color>         Next Tab
-<color:keypress>\</color>         Previous Tab
-<color:keypress>^P</color>        Switch to Pack (Inventory) Tab
-<color:keypress>^E</color>        Switch to Equipment Tab
-<color:keypress>^Q</color>        Switch to Quiver Tab
-<color:keypress>^F</color>        Switch to Floor Tab
-<color:keypress>- </color>        <indent>Switch to Floor Tab. Select Floor Object if there is only one.</indent>
+<color:G>选项卡导航</color>
+<color:keypress>/</color>         下一个选项卡
+<color:keypress>\</color>         上一个选项卡
+<color:keypress>^P</color>        切换到背包 (物品栏) 选项卡
+<color:keypress>^E</color>        切换到装备选项卡
+<color:keypress>^Q</color>        切换到箭袋选项卡
+<color:keypress>^F</color>        切换到地面选项卡
+<color:keypress>- </color>        <indent>切换到地面选项卡。如果地面上只有一件物品，则自动选择它。</indent>
 
-<color:G>Display Options</color>
-<color:keypress>^W</color>        Toggle Weights (see <link:option.txt#show_weights>)
-<color:keypress>^G</color>        Toggle Graphics (see <link:option.txt#show_item_graph>)
-<color:keypress>^D</color>        Toggle Slot Descriptions (see <link:option.txt#describe_slots>)
-<color:keypress>@</color>         Toggle Inscription Label Overrides (Default On)
+<color:G>显示选项</color>
+<color:keypress>^W</color>        切换重量显示 (参阅 <link:option.txt#show_weights>)
+<color:keypress>^G</color>        切换图形显示 (参阅 <link:option.txt#show_item_graph>)
+<color:keypress>^D</color>        切换槽位描述 (参阅 <link:option.txt#describe_slots>)
+<color:keypress>@</color>         切换铭刻标签覆盖 (默认开启)
 
 </indent>

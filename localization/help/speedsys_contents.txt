@@ -1,0 +1,18 @@
+<style:title>速度系统 (The Speed System)</style>
+
+请选择以下帮助主题之一：
+
+    <link:speedsys.txt> 速度系统 (The Speed System)
+    <link:speedsys.txt#TLDR> 新手快速概述 (Quick Overview for Newbies)
+    <link:speedsys.txt#UglyDetails> 技术性解释 (Technical Explanation)
+    <link:speedsys.txt#Table> 速度/能量转换表 (Speed/Energy Conversion Table)
+    <link:speedsys.txt#EnergyRandomness> 能量的随机性 (Energy Randomness)
+    <link:speedsys.txt#EnergyCost> 行动的能量成本 (Energy Cost of Actions)
+    <link:speedsys.txt#StatusEffects> 临时加速与减速 (Temporary Haste and Slowness)
+    <link:speedsys.txt#MonsterSpeed> 怪物速度 (Monster Speed)
+    <link:speedsys.txt#WhereGet> 我从哪里获取更多速度？ (Where Do I Get More Speed?)
+    <link:speedsys.txt#Burden> 负重超载 (Overburdening)
+    <link:speedsys.txt#Indicator> 速度显示 (Speed Display)
+    <link:speedsys.txt#Timers> 计时效果的持续时间 (Duration of Timed Effects)
+
+    <color:y>(?) 帮助系统命令 (Help System Commands)</color>

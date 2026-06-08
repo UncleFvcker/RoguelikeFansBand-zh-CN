@@ -1,0 +1,85 @@
+<style:title>常见错误与避坑指南</style>
+
+在游戏中可能犯的错误和糟糕战术的数量基本上是无限的，玩家们总是在不断寻找各种花式作死的新方法。然而，有一些特别普遍的错误，新玩家应该学着去避免……而老玩家也应该时刻铭记在心。
+
+<topic:Early-Game Mistakes><style:heading>游戏前期/新手错误与需求</style>
+
+<color:G>务必</color>携带某种形式的治疗物品——在游戏前期，<color:B>治疗重伤药水 (Potions of Cure Serious Wounds)</color>或<color:B>治疗致命伤药水 (Potions of Cure Critical Wounds)</color>是最常见的选择。如果你开始耗尽治疗药水，<color:r>不要</color>太迟才使用回城 (recalling)——输掉一场战斗或错失战利品总比死掉要好。
+
+<color:G>务必</color>有某种逃离危险情况的方法；在游戏前期，这通常意味着一大叠的相位之门卷轴 (Scrolls of Phase Door) 或传送卷轴 (Scrolls of Teleportation)，或者（最好是）两者兼备。<color:o>游戏前期的角色如果进入荒野，极有可能需要传送。</color> 在游戏前期，唯一不应该携带相位之门和传送卷轴的角色大概只有狂战士，因为他们不能读卷轴。
+
+<color:r>不要</color>忽视城镇建筑提供的任务。它们是相当快速（且有趣）的升级方式，并且往往能提供相对较好的战利品。许多角色（包括几乎所有近战职业角色）从角色等级 1 级开始就可以进行“盗贼藏身处 (Thieves' Hideout)”任务。
+
+<color:r>不要</color>在没有应对<color:U>混乱 (confusion)</color>手段的情况下深入地下城。早在地下城第 10 层，你就应该<color:o>始终随身携带</color><color:U>治疗混乱蘑菇 (Mushrooms of Cure Confusion)</color>和/或<color:B>治愈药水 (Potions of Curing)</color>或<color:B>清明药水 (Potions of Clarity)</color>。即便如此，那些能在近战中造成混乱的怪物仍然高度危险，因为它们可能会在你刚刚解除混乱时立刻再次让你混乱，让你根本没有机会逃跑。如果你找到了任何<color:B>速度药水 (Potions of Speed)</color>，为了应对这种紧急情况，请务必随身携带至少一瓶（最好更多）。到了后来，除非你玩的是狂战士，否则<color:U>传送法杖 (Staves of Teleport)</color>将允许你在混乱状态下传送逃走。
+
+<color:r>不要</color>太过于担心陷阱，除非在某些你确切知道会遇到陷阱的情况下（比如在“盗贼藏身处”和“兽人营地 Orc Camp”任务中，或者因为怪物刚刚施放了制造陷阱的法术）。游戏前期的陷阱只是一种小麻烦，并不致命，在极少数你被陷阱杀死的运气极差的情况下，那多半也是一个你还没有投入太多心血的新建角色。因此，如果你没有探测陷阱的手段，那也没什么大不了的。即使你有一根探测陷阱魔棒 (Rod of Detect Traps)，如果那个物品栏槽位有其他用处，也不要吝啬把它丢掉。只有当你获得第一根<color:v>探测魔棒 (Rod of Detection)</color>时，才开始定期探测陷阱；即便如此，你也应该更关注怪物和物品，而不是陷阱。
+
+<color:r>不要</color>费心去挖掘矿脉赚钱，至少如果你开启了物品出售 (selling) 功能的话——有更快更高效的发财方法。挖掘金钱在<color:U>无买卖模式 (no-selling games)</color>的游戏前期可能会有用（在这种模式下，金币掉落增加，而通过其他方式赚钱的机会受限），特别是如果你有某种使挖掘变得异常容易的物品或能力（比如<color:g>化石为泥魔杖 Wand of Stone to Mud</color>、廉价的挖掘法术或一把 +5 锋利属性的武器）时。
+
+对于长途旅行，<color:r>不要</color>忘记打包足够的食物和灯油。
+
+<color:r>不要</color>低估造成混乱的物品，即使是卑微的<color:g>混乱怪物魔杖 (Wand of Confuse Monster)</color>。它们能让许多战斗变得极其安全和轻松。投掷<color:B>烈酒药水 (Potions of Booze)</color>也能混乱怪物！
+
+如果你开始生命值 (HP) 偏低，逃跑或治疗的速度<color:r>不要</color>太慢。如果你逃跑得太晚，装置使用失败 (device-fail) 或者一次不幸的传送到另一个危险区域就可能会要了你的命。（这个错误绝对不仅仅局限于新手或游戏前期，但最好早点戒掉这个坏习惯！）
+
+如果怪物拥有高度危险（或烦人）的近战攻击但没有远程伤害你的手段，<color:r>不要</color>与它们进行近战。
+
+<color:y>尽量</color>以最安全的方式前往新的城镇和地下城——沿着道路走，尽量减少在危险区域逗留的时间，并通过大地图 (overworld) 而不是原始荒野 (raw wilderness) 旅行。你在大地图上不仅更不容易迷路，而且旅行也更安全——尽管你仍然应该为伏击做好准备！
+
+
+<topic:Middle-Game Mistakes><style:heading>游戏中期错误与需求</style>
+
+<color:G>务必</color>定期进行探测。确保你知道怪物都在哪里。
+
+<color:G>务必</color>拥有至少一级的<color:r>行动自由 (Free Action)</color>，最好是两级（在游戏末期甚至三级）。行动自由在游戏前期不是绝对必需的，但在游戏中期就变得必不可少了。如果没有行动自由，<color:r>不要</color>进入“旧兵营 (Old Barracks)”任务或“老柳头 (Old Man Willow)”任务。
+
+<color:G>务必</color>拥有识破隐形 (See Invisible) 或心灵感应 (Telepathy) 的来源。
+
+<color:G>务必</color>携带一根<color:g>传送他人魔杖 (Wand of Teleport Other)</color>（除非你是狂战士）。把敌人传送走比传送你自己更安全，因为你可能会落入另一个麻烦之地——另外，少数敌人可以跟随你的传送！不过请注意，有些怪物可以<color:o>抵抗传送</color>，甚至完全<color:o>免疫</color>传送。
+
+在进入任务之前，<color:G>务必</color>做好充分的准备。<color:o>任务是导致角色死亡的首要原因。</color> 带入任务中的治疗重伤/治疗药水数量应该比带入地下城时更多。
+
+当你准备进入一场你明知会很危险的战斗或任务时，<color:G>务必</color>给自己加速 (haste)。如果你觉得这会让你消耗太多速度药水，那就干脆避开那些需要加速才能安全取胜的战斗，直到你拥有更多速度药水或其他自我加速的手段。
+
+把你大部分的<color:B>治疗药水 (Potions of Healing)</color>和<color:B>*治疗*药水 (Potions of *Healing*)</color><color:y>存放</color>在家里——你以后会比现在更需要它们。尽管如此，还是<color:G>务必随身携带</color>至少*一些*治疗药水以备不时之需；到了游戏末期，也要开始携带一瓶或更多的*治疗*药水。
+
+<color:r>不要</color>把你所有的属性提升 (stat-ups) 都投入到一个属性上。没有哪个角色是完全靠单一属性生存的——近战角色需要力量、敏捷和体质；纯施法者非常依赖他们的施法属性，但仍然需要一些力量来携带物品，以及一些体质来保持存活，即使他们完全不参与近战。连续几个属性提升都投入到单一核心属性并不一定是个坏主意，但当接近属性上限（在 18/70 到 18/130 之间）时，收益会迅速递减。当一个属性的基础值接近 18 时，投入的收益是最大的。
+
+<color:r>不要</color>完全忽视在特定小众情况下有用的物品，尤其是当你明确知道这些情况会发生时。你可能不会一直带着<color:B>抵抗冷热药水 (Potions of Resist Heat and Cold)</color>，但在去打史矛革 (Smaug) 和乌特加德-洛基 (Utgard-Loke) 时带上一些仍然是个好主意。同样，<color:B>活力药水 (Potions of Vigor)</color>在 Micro$oft 任务中将极其珍贵，而<color:U>星光法杖 (Staves of Starlight)</color>在旧瞭望塔 (Old Watchtower) 中会派上大用场。
+
+<color:r>不要</color>低估蘑菇，特别是<color:U>治疗毒素蘑菇 (Mushrooms of Cure Poison)</color>（游戏中中和毒素最有效的手段）以及总是很方便的<color:U>快速恢复蘑菇 (Mushrooms of Fast Recovery)</color>。
+
+<color:r>仍然不要</color>低估能造成混乱的物品。在游戏中期，这通常意味着一根<color:U>混乱怪物法杖 (Staff of Confuse Monsters)</color>，当然，如果你运气足够好，可能会在早期找到一根<color:U>混乱之光法杖 (Staff of Confusing Lights)</color>！
+
+比起只能用来卖钱的战利品，<color:y>优先选择</color>你将来某天可能会穿戴（或以其他方式使用）的战利品，即使后者的名义价值更高。如果物品能满足你的需求，<color:r>不要</color>忽视它们，即使它们的名义价值很低。
+
+<color:y>记住</color>，<color:r>战斗戒指 (Ring of Combat)</color>上的近战加成仅适用于你戴着它的那只手；如果你那只手没有拿武器，加成就会丢失。
+
+<color:G>务必在家中</color>为你可能被毁坏的关键装置保留备份。
+
+
+<topic:Late-Game Mistakes><style:heading>游戏末期错误与需求</style>
+
+<color:G>务必</color>拥有足够的速度，并在遭遇危险敌人时给自己加速。怪物的连动 (Double-moves) 是导致游戏末期死亡的首要原因，而低速会使这种情况更有可能发生。
+
+<color:G>务必</color>选择合适的逃生手段。应对危险局面的最佳方法可能是相位之门、传送、传送楼层、传送他人、毁灭或任意门（或者干脆就是磕治疗或*治疗*药水），具体取决于当时的具体情况；不要过于依赖任何一种单一方法。
+
+<color:r>不要</color>忘记重铸 (reforging)。<color:r>不要</color>使用中等级别、价值 5 万金币 (50K) 的武器或盔甲作为重铸源物品。（只要你是在往价值较低的槽位进行重铸，一把价值 4 万金币的弓、一双 3 万金币的手套，甚至一盏 2.5 万金币的灯，都能以更低的成本带来更好的结果。）
+
+<color:r>不要</color>在许多危险的高等级怪物同时能看到你的开阔区域逗留，除非有理由让你确信那里是安全的（例如，怪物是被安全混乱的赛博恶魔 Cyberdemons，且很长一段时间内不太可能恢复）。
+
+当你找到第一根<color:U>治疗法杖 (Staff of Healing)</color>时，<color:r>不要</color>就不再携带<color:B>治疗药水 (Potions of Healing)</color>了。治疗法杖很棒，但紧急情况下仍然需要药水。同时，尽量把这类紧急情况降到最低。
+
+在进入任务之前，<color:y>记住</color>要放下<color:U>毁灭法杖 (Staves of Destruction)</color>、<color:U>灭绝法杖 (Staves of Genocide)</color>和<color:g>湮灭魔杖 (Wands of Annihilation)</color>。它们都是极其有用的物品，但它们在任务中不起作用。（同样的规则也适用于毁灭、灭绝、群体灭绝和传送楼层卷轴，以及具有相同效果的法术。）
+
+<color:r>不要</color>低估高等级怪物，特别是 Unique 怪物。尤其是<color:o>诺登斯 (Nodens)</color>，他杀人的速度甚至比混沌之蛇 (Serpent of Chaos) 还要快。一看到诺登斯就把他传送走或用毁灭卷轴清掉他——除非你真的、真的非常确定你想和他打……
+
+<color:r>不要</color>低估高等级任务，特别是“产卵坑 (Spawning Pits)”。
+
+<color:r>不要</color>意外地对混沌之蛇（或者你正在战斗的其他任务首领，比如奥伯龙 Oberon）使用毁灭效果——那会使他们恢复全部生命值。
+
+<color:r>不要</color>在胃处于饱食状态（或接近饱食）时进入与混沌之蛇的战斗，除非你知道你能速战速决，或者有办法清空你的胃。在一场漫长的打蛇战斗中，你可能需要吃很多蘑菇和药水，这可能会让你进入过饱 (gorged) 状态，从而损失至关重要的速度。
+
+最重要的是……
+
+<color:R>绝对不要过度自信</color>。对于一个看似无敌的角色，很容易产生自满的情绪，但没有任何角色强大到死不了的地步。

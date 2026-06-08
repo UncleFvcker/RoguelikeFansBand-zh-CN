@@ -1,0 +1,190 @@
+<style:title>攻击与武器</style>
+ 
+<color:keyword>近战</color>攻击怪物很简单：如果你移动到一个生物身上，你就会攻击它，前提是你有什么可以用来攻击的东西。通常“用来攻击的东西”指的是装备着<color:keyword>近战武器</color>，但这并不是绝对的要求：一些职业可以使用<color:keyword>武术</color>赤手空拳地攻击；专精盾牌的武器大师可以使用<color:keyword>盾牌</color>猛击；而狼人、熊人以及许多怪物模式种族通常依赖爪子或牙齿等<color:keyword>天生攻击</color>。
+
+<color:keyword>远程战斗</color>（射击）要求你装备投石索、弓或十字弓，并且拥有相应的弹药，你可以使用 <color:keypress>f</color> 命令（在 roguelike 键位中是 <color:keypress>t</color>）发射。理想情况下，你会希望拥有一个可以装备并存放弹药的<color:keyword>箭袋</color>，但这并不是硬性要求；它只是一种为了节省宝贵物品栏空间的便利设计。可以使用 <color:keypress>v</color> 命令向怪物投掷物品，但这通常效果不佳，除非是像忍者（或忍者律师）投掷铁蒺藜这种特殊情况。
+
+最后，你可以使用<color:keyword>魔法</color>来伤害怪物：除了狂战士，所有角色都可以使用<color:keyword>魔法装置</color>进行攻击，而施法者还可以使用<color:keyword>攻击性法术</color>。
+
+许多角色都足够全能，能够有效地使用大多数或所有这些攻击方式。在这种情况下，<color:G>近战通常是每回合造成最高伤害的攻击方式</color>；但由于它只对相邻的怪物有效，你可能会遭到大量的反击，因此<color:G>近战也会让你每回合承受最多的伤害</color>。这是否是一个划算的交易，取决于你自己！
+
+通常你会并用所有这些攻击方式，而不是仅依赖一种。弓和近战武器不占用相同的装备槽，因此你可以同时装备它们。
+
+<topic:DistanceAttack><style:heading>远距离攻击</style>
+
+非近战攻击总是需要瞄准。无论你是使用发射器、魔法装置、法术进行攻击，还是投掷物品，你都必须为你的攻击选择一个目标。这可以通过向八个罗盘方向之一开火，或者使用 <color:keypress>*</color> 选择更具体的目标来完成。
+
+例如，如果你想从箭袋中发射（<color:keypress>f</color>/<color:keypress>t</color>）第二种弹药（<color:keypress>b</color>），你可以输入 <color:keypress>fb9</color> 向东北方向射击；或者输入 <color:keypress>fb*</color> 瞄准特定的怪物或格子，然后在选定满意目标后按下 <color:keypress>5</color>。关于 <color:keypress>*</color> 瞄准命令的更多细节，请参阅 <link:commdesc.txt#Targetting>。
+
+通常，在这种类型的攻击之后，你可以使用 <color:keypress>n</color> 命令（在 roguelike 键位中是 <color:keypress>X</color>）来加快速度，以同样的方式再次攻击同一个怪物。但请注意，有时这会产生意想不到的结果；例如，如果你的原始弹药耗尽，新的弹药将移动到 <color:keypress>b</color> 箭袋槽，系统就会转而使用新弹药。此外，只有当你瞄准的是怪物时，<color:keypress>n</color> 才会追踪移动目标；如果你的目标是一个罗盘方向或格子，即使怪物从那里离开，<color:keypress>n</color> 也将继续向该方向开火。
+
+<topic:MeleeWeapons><style:heading>近战武器</style>
+
+把武器放在背包里对你没有任何好处；你必须使用 <color:keypress>w</color> 命令装备武器，然后才能在战斗中使用它。大多数角色在游戏开始时就已经装备了初始武器。
+
+近战武器有三个主要的战斗属性：它们的<color:keyword>伤害骰</color>、<color:keyword>命中加成</color>（to-hit）和<color:keyword>伤害加成</color>（to-dam）。一把长剑可能显示为 <color:B>a Long Sword (2d6) (+3,+4)</color>；其中 <color:B>2d6</color> 是伤害骰（掷出两个六面骰子，每次命中造成 2 到 12 点伤害），<color:B>+3</color> 是命中加成（提高你成功击中怪物的几率），而 <color:B>+4</color> 是伤害加成（将加在 2d6 的掷骰结果上）。对于新发现的物品，这些数字只有在你鉴定了武器之后才会变得可见。（有关武器上可能出现的其他数字的解释，请参阅 <link:objects.txt#WeirdNumbers>。）
+
+具有最高伤害骰和伤害加成的武器并不一定是你造成伤害最高的武器；重型武器通常具有更高的伤害骰，但你的力量和敏捷可能允许使用较轻的武器获得每回合更多的攻击次数。要查看你当前武器的平均伤害（以及命中），可以输入 <color:keypress>Cm</color>（<color:keypress>C</color>haracter Sheet，角色面板的 <color:keypress>m</color>elee 近战部分）或 <color:keypress>~W</color>（知识菜单，Weapon 武器部分）；两者显示的信息相同，因此只需使用你觉得更方便的一个即可。
+
+<topic:MissileLaunch><style:heading>远程武器</style>
+
+投石索、弓和十字弓与近战武器的区别在于，它们具有<color:keyword>伤害倍率</color>而不是伤害骰。例如，一把短弓可能显示为 <color:B>a Short Bow (x2.50) (+4,+7)</color>，其中 <color:B>x2.50</color> 是倍率，而 (<color:B>+4,+7</color>) 是命中和伤害的加成。
+
+射击的完整伤害计算从弹药的伤害骰（可能是 <color:B>an Arrow (3d4) (+2,+5)</color>）开始，然后应用弹药的伤害加成，接着计算杀戮和烙印（见下文 <link:attack.txt#Slays>），再计算幸运暴击的增伤，然后应用倍率，最后加上发射器以及可能来自其他来源的伤害加成。由于杀戮、暴击和倍率都是在计算过程中较晚应用的（在弹药的伤害加成之后），因此单次命中的总伤害可能会非常高。
+
+各种远程武器都有其自身的优缺点；有些具有更高的倍率，但每回合射击次数较少。请注意，下表中的每回合射击次数是<color:keyword>相对值</color>，不应字面理解，因为你的射击速度不仅取决于武器，还取决于你的箭术技能。
+<style:table>
+<color:U>                 每回合射击次数    倍率          弹药</color>
+投石索                1.40             2         圆石, 铁弹
+短弓                  1.12             2.50      箭
+长弓                  1.00             3         箭
+轻型十字弓            0.83             3.50      弩箭
+重型十字弓            0.75             4         弩箭
+</style>
+射击的最大射程取决于倍率，因此弓和十字弓通常比投石索射得更远。
+
+要查看你当前发射器和弹药的平均伤害（以及命中、射程、射击速度等），可以输入 <color:keypress>Cs</color>（<color:keypress>C</color>haracter Sheet，角色面板的 <color:keypress>s</color>hooting 射击部分）或 <color:keypress>~S</color>（知识菜单，Shooter 发射器部分）；两者显示相同的信息。
+
+<topic:EgoArtifact><style:heading>ego武器与神器</style>
+
+游戏中最好的武器蕴含着强大的魔法力量，大致分为两类：(1) <color:keyword>神器 (artifacts)</color> 和 (2) <color:keyword>ego物品</color>。这些类别在其他地方有更详细的解释（<link:objects.txt#EgoItems> 和 <link:objects.txt#SpecialItems>）；它们之间的主要区别在于，在一局游戏中每件神器只能被找到一次，而一种 ego 物品类型则可以有无数件。
+
+神器和 ego 物品都可能非常有价值，并可能对某些怪物造成额外的伤害、提升你的属性或速度、提供元素抗性以及其他好东西。通常，一旦你度过了游戏前期，你装备的武器将永远是神器或 ego 物品。
+
+如果列出所有神器和 ego 类型，以及它们提供的所有加成，那不仅是剧透，而且会极其冗长；所以去玩游戏，自己去发现都有什么吧 :)
+
+<topic:Slays><style:heading>杀戮与烙印</style>
+
+杀戮 (Slays) 和烙印 (Brands) 是武器属性，能让你对特定怪物造成额外伤害。<color:keyword>杀戮</color>增加你对特定类型怪物（如兽人、恶魔或不死生物）的伤害，而<color:keyword>烙印</color>则是元素属性，会对所有不抵抗该元素的怪物造成额外伤害。杀戮和烙印在功能上完全是一回事，唯一的区别在于术语。
+
+近战武器通常带有杀戮或烙印，并且可能会从杀戮手套 (Gloves of Slaying) 等来源获得额外的<color:keyword>非武器来源杀戮 (off-weapon slays)</color>（或烙印）。近战杀戮的作用方式是乘以武器的伤害骰结果；例如，<color:G>Viper's Fang (毒蛇之牙)</color>（毒性烙印）会在受到攻击的怪物不抵抗毒素时，将伤害骰结果乘以 2.4。因此，杀戮和烙印在具有高伤害骰的武器（如 <color:B>4d10</color> 的重型长枪）上要比在伤害微小但其他属性有竞争力的 <color:B>1d5</color> 匕首上有价值得多。不同杀戮的倍率各不相同，从最低的 1.9 倍（杀戮邪恶，由于适用范围广，它仍然是最好的杀戮之一！）到某些超级杀戮（如击杀恶魔 Kill Demon）的高达 4.5 倍。
+
+箭术的杀戮和烙印的作用方式略有不同：它们同时乘以弹药的伤害骰和弹药的伤害加成。箭术杀戮使用的倍率低于近战杀戮，但由于其倍率同时应用于弹药的伤害加成，这足以弥补倍率的不足。非武器来源的箭术杀戮和烙印几乎闻所未闻，甚至弓本身也很少有杀戮；最常见的情况是，箭术的杀戮直接来自弹药本身。
+
+<color:keyword>杀戮（和烙印）绝不叠加</color>；如果针对同一怪物有多个杀戮可用，则只应用最强的那个杀戮。这主要有两个例外：一个是<color:v>混沌印记 (Mark of Chaos)</color>，它本质上是每次攻击重新投骰决定的随机杀戮或烙印。如果这个随机烙印与现有的烙印重合，它可以使该烙印略微增强。另一个是<color:B>原力烙印 (Force Brand)</color>（或 <color:B>法力烙印 (Mana Brand)</color>），这是一种非常强大的烙印，会消耗你的法力；它可以与其他杀戮和烙印完全结合叠加，但只有在你拥有法力时才有效。
+
+少数职业，如武士 (Samurai) 和专精剑的武器大师，可以使用只有他们自己才能使用的特殊烙印。这些可能非常强大（例如武士的特殊版<color:b>闪电烙印</color>的倍率高于任何普通的烙印或杀戮），并且有时可以与普通烙印结合叠加：同时拥有一把带有普通闪电烙印的武器会让武士的特殊烙印变得更强。
+
+武器上的杀戮和烙印仅适用于该武器本身；它们对天生攻击或另一把武器的攻击没有影响。非武器来源的杀戮和烙印也绝不会应用于天生攻击或徒手格斗，除非是针对武术有特殊设定的六种特定烙印（酸、电、火、冷、毒和法力）。
+
+<topic:Criticals><style:heading>暴击 (Critical Hits)</style>
+
+偶尔，你会运气爆棚，打出 <color:y>好 (good)</color> 的一击，甚至 <color:v>*极佳* (*SUPERB*)</color> 的一击。这些特殊的攻击被称为<color:keyword>暴击 (critical hits)</color>或简称为<color:keyword>暴击 (criticals)</color>，它们的运作方式与杀戮和烙印相同：它们会乘以伤害骰的结果，而箭术暴击还会乘以弹药的伤害加成。暴击独立于杀戮和烙印，并且与它们完全叠加。
+
+打出暴击的概率取决于你的命中、你的角色等级以及你武器（或弹药）的重量；重型武器最容易打出暴击。暴击的质量也取决于武器的重量；越重的武器越有可能提供高倍率。
+
+在适当的时机出现幸运暴击可以为你的伤害输出提供显著的一次性提升；但对大多数角色来说，由于暴击比较罕见，其整体影响相对较小。当你输入 <color:o>Cm</color> 或 <color:o>~W</color> 显示的平均伤害已经完全计算了暴击带来的额外伤害；因此，完全没有必要去搞懂背后深奥复杂的计算过程。
+
+<topic:Sharpness><color:v>锋利 (Sharp)</color>和<color:v>*极其锋利* (*Sharp*)</color>的武器有机会打出额外的、特殊的暴击，有时被称为<color:keyword>锋锐暴击 (sharp criticals)</color>或<color:keyword>斩首暴击 (vorpal criticals)</color>。斩首暴击是深深切入怪物的攻击；你可能会收到提示说你对怪物造成了<color:U>划伤 (gouged)</color>、<color:y>残废 (maimed)</color>、<color:R>割裂 (carved)</color>或<color:v>撕碎 (shredded)</color>，甚至<color:v>将你的敌人劈成两半 (cut your enemy in half)</color>。（劈成两半仅仅表示你用斩首一击杀死了敌人，并不意味着有其他特殊效果。）
+
+斩首暴击与普通暴击的不同之处在于，其质量和概率完全是随机的；你的等级、命中以及武器重量对它们没有影响。同样与普通暴击不同的是，斩首暴击使用无上限的随机倍率；理论上，斩首暴击的伤害可以是任意高的，尽管在实践中，其提升往往相当小，与普通暴击相当。斩首暴击与杀戮、烙印和常规暴击完全叠加；并且像其他暴击一样，它们也完全包含在显示的平均伤害中。
+
+<topic:Choices><style:heading>选择合适的武器</style>
+
+在游戏前期，在找到第一把像样的 ego 武器之前，你可能只需要选择一把能让你造成最大伤害的武器。（如上所述，你可以输入 <color:keypress>Cm</color> 或 <color:keypress>~W</color> 来查看你每回合的伤害输出。）一旦你开始发现优秀的 ego 武器或神器，事情就会变得更加复杂；一把武器可能伤害更高，但另一把武器却有你想要的加成或抗性。你需要做出妥协：确保你获得了需要的抗性，但也要保证你能造成足够的伤害！（新玩家经常面临的一个困境是，他们找到了神器剑“刺针 (Sting)”，但不确定是否要装备它，因为他们以前的武器每回合伤害略高一点点。这个困境的一般解决方案是 <color:v>刺针完胜</color>，你应该换上它。）
+
+在比较武器伤害时，不仅要注意原始伤害数值，还要注意你对怪物的命中率：如果实战中总是未命中，理论伤害再高也没用！但请注意，使用新武器时命中率较低可能是因为你缺乏使用该武器的经验：你的<color:keyword>熟练度 (proficiency)</color>较低，而随着你获得熟练度，你的命中率将会提高。有关武器熟练度运作原理的更多详细信息，请参阅 <link:prof.txt#Weapon>。
+
+另外，还要记住你的<color:keyword>速度 (speed)</color>：每回合伤害是一个很好的一般性衡量标准，但速度加成意味着你可以获得更多的回合。
+
+<topic:AttackWalls><style:heading>攻击墙内的怪物</style>
+
+一些生物（如幽灵）具有穿墙的能力。你可以尝试移动到包含怪物的墙壁网格中，以近战方式攻击相邻墙壁中的怪物；如果该生物对你是隐形的，这要求你向墙壁挖掘（<color:keypress>+</color>）。
+
+射线法术（以及弹药）对墙内的怪物造成全额伤害，但球形法术会被阻挡并在墙壁正前方爆炸，只造成一半的伤害。（反之，如果你设法变成了幽灵形态，你在墙壁内受到球形和吐息攻击的伤害也会降低。）
+
+<topic:AttackPets><style:heading>攻击宠物或友方怪物</style>
+
+只要你的角色头脑清醒，游戏通常会认为你并不真的想攻击自己这边的盟友。尝试进行近战攻击要么没有效果，要么只是导致你和怪物交换位置，而瞄准菜单也会跳过宠物。
+
+但有时，你可能确实<color:keyword>想</color>伤害宠物或友方怪物。（最经典的例子是为了贪一件便宜的物品而杀掉农夫马戈特 Farmer Maggot……）要实现这一点，请使用 <color:keypress>+</color>“改变相邻网格 (alter adjacent grid)”命令进行近战；在瞄准菜单中，<color:keypress>p</color> 允许你选择任何格子或怪物作为目标。
+
+请注意，攻击友方怪物会使其变得充满敌意。
+
+<topic:MonkAttacks><style:heading>武术</style>
+
+武僧 (Monks)、秘术师 (Mystics) 和原力武士 (Force-Trainers) 更喜欢徒手战斗；他们只能熟练使用少数几种武器，即便如此，通常也是赤手空拳更有效。随着这些职业获得经验，他们会学习新的、更强大的攻击技巧；高级攻击甚至可以击晕或减速对手。大多数其他职业无法学习武术；唯一的例外是技能大师 (Skillmasters)，他们可以将技能点投入到徒手格斗中。
+
+修习武术的角色可以通过常用的方式查看他们的攻击列表和每回合平均伤害：输入 <color:keypress>Cm</color> 或 <color:keypress>~W</color>。
+
+<topic:BothHands><style:heading>双手握持</style>
+
+大多数角色一手持武器，另一手持盾牌；但从伤害的角度来看，最好的选择几乎总是放弃盾牌，用双手握持武器。用双手握持单把武器可以提高你的伤害和命中率；而且除非你的每回合攻击次数已经达到上限，否则你还能获得更多的攻击次数。（巨人之手套 Gloves of the Giant 会放大对攻击次数的奖励。）
+
+缺点是你实际上少了一个装备槽：你失去了盾牌（或第二把武器）在这个槽位本应提供的 AC（护甲等级）、属性加成、抗性和其他好东西。这是否是一笔划算的交易取决于你的角色；但一个非常典型的做法是双手握持武器，直到你找到一面优秀的 ego 盾牌，然后再换掉。
+
+许多轻型武器（具体来说，重量小于 10 磅且不是长柄武器的）不能双手握持，并且应该始终与盾牌或第二把武器一起使用。另一方面，（相对于你的力量而言）非常重的武器只能用双手正确握持。
+
+<topic:DualWielding><style:heading>双持</style>
+
+右手挥舞一把武器，左手挥舞另一把武器，这被称为<color:keyword>双持 (dual-wielding)</color>。与几乎所有角色都可以做的双手握持不同，双持最适合特定的职业：那些拥有极高<color:keyword>双持熟练度上限</color>的职业（有关双持熟练度的更多详细信息，请参阅 <link:prof.txt#Dual-Wielding>）。双持与双手握持的根本区别还在于，双手握持最适合重型武器，而双持最适合非常轻的武器。
+
+最适合双持的两个职业是<color:keyword>忍者 (Ninjas)</color>和<color:keyword>狂战士 (Berserkers)</color>；不仅两者都能达到大师 (Master) 级熟练度（可能的最高级别），而且它在其他方面也符合他们的技能设置。如果没有特殊的源氏护手 (Genji gloves)，双持通常会受到伤害惩罚，但狂战士豁免此惩罚，而忍者则强烈偏好轻型武器，并且如果装备盾牌会受到惩罚。双持在其他近战职业上可能同样效果不错，但你应始终检查你的熟练度上限。
+
+有一个让人有些惊讶的职业可能喜欢双持，尽管其熟练度上限极低：<color:keyword>咒术师 (sorcerers)</color>。作为终极法系职业，咒术师从不真正参与近战……所以他们不太需要 AC 或近战命中率，而武器通常提供比盾牌更好的加成属性。
+
+<topic:MagicalAids><style:heading>物理战斗的魔法辅助</style>
+
+有几种方法可以通过魔法来提高你的物理战斗能力。最常见的是<color:B>英雄药水 (Potions of Heroism)</color>和<color:B>狂暴力量药水 (Potions of Berserk Strength)</color>，它们能暂时提高你的命中率和 HP（生命值）上限，并提供恐惧免疫。祝福卷轴 (Scrolls of Blessing)、神圣赞美诗 (Holy Chant) 和神圣祈祷 (Holy Prayer) 也可用于暂时提高你的 AC 和命中率；这些加成可以与药水叠加。
+
+一些角色（如三相神门徒 Troika Disciples、工匠 Craft 领域的法系职业以及许多武器大师）可以在他们的武器上附加临时的杀戮或烙印。
+
+<topic:ImproveOdds><style:heading>增加胜算</style>
+
+使用魔法让自己在战斗中变得更强固然不错；但使用魔法让你的对手威胁变小往往更加有效。在实践中，这意味着使用法术或魔法装置来使敌人<color:u>混乱 (confuse)</color>或<color:W>减速 (slow)</color>。
+
+<color:keyword>混乱</color>尤其是一个极其强大的工具。一根<color:g>混乱怪物魔杖 (Wand of Confuse Monster)</color>、一根<color:U>混乱怪物法杖 (Staff of Confuse Monsters)</color>，甚至投掷一瓶<color:B>烈酒药水 (Potion of Booze)</color>造成的溅射伤害，都能让怪物向随机方向跌跌撞撞，因为无法可靠瞄准而无法使用其法术或吐息攻击。混乱的怪物只能在近战中伤害你，而且还要碰巧找到正确的方向才行。并非所有怪物都能被混乱，但许多都可以，包括相当多 Unique。
+
+<color:keyword>减速</color>稍微没那么戏剧性，但仍然非常有价值。在游戏前期，<color:y>速度 -10</color> 往往意味着怪物的速度减半或更多，不用说这绝对是一个巨大的优势；对于速度更快的怪物，效果虽然不那么显著，但你的行动回合仍然会更加频繁，并且遭遇致命连动 (double-move) 的危险会大大降低。所有 Unique 都免疫减速，但大多数非 Unique 怪物都可以被减速。
+
+<topic:OffensiveDevices><style:heading>使用魔法装置攻击</style>
+
+许多魔法装置可用于直接攻击怪物。几乎所有角色（除了狂战士）都在至少某种程度上使用攻击性的<color:keyword>魔杖 (wands)</color>和<color:keyword>魔棒 (rods)</color>，通常作为辅助角色，但有时也会作为他们的主要攻击手段。
+
+每个装置在使用时都会产生特定的效果。对于攻击性装置，这些通常是<color:keyword>射线 (bolts)</color>，会伤害单个怪物；<color:keyword>球形 (balls)</color>，会伤害球体震中指定半径内的所有怪物；<color:keyword>光束 (beams)</color>，会伤害光束路径上的所有怪物；或者<color:keyword>吐息 (breaths)</color>，爆炸成球体的锥形效果。这些射线、光束、球体或吐息都带有<color:keyword>元素属性</color>，这意味着它们的伤害依赖于特定的伤害类型（如酸、电、火、冷或时空节点 nexus），且抵抗该元素的怪物不会受到全额伤害。
+
+射线装置通常是最不让人兴奋的，但它们在游戏前期也是最常见的，因此很可能成为你的第一个攻击性装置。早期的一根<color:g>冰霜射线魔杖 (Wand of Frost Bolts)</color>可以切实帮助一个攻击手段有限的角色，因此一些角色只要负担得起，就会立即从魔法商店购买一根。
+
+除了极少数例外，攻击性魔法装置始终瞄准一个目标或方向，因此最好在远距离使用。有关魔法装置的更多信息，请参阅 <link:objects.txt#Devices>，关于远距离攻击的更多信息，请参阅上文的 <link:attack.txt#DistanceAttack>。
+
+<topic:OffensiveSpells><style:heading>使用法术攻击</style>
+
+法术和类法术的特殊能力是许多角色重要的攻击手段。咒术师 (Sorcerers)、法师 (Mages) 和其他类似法系职业通常依赖它们作为主要攻击手段，尽管这取决于构建以及（对于读书的职业）所选的法术领域；某些领域（如<color:keyword>毁灭 Armageddon</color>）充满了攻击法术，而其他领域（如<color:keyword>咒术 Sorcery</color>）则为战术和辅助提供了很棒的选择，但没有任何能直接伤害怪物的法术。虽然法师不一定需要攻击法术——他们能比大多数职业更有效地使用高级魔杖和魔棒，甚至在紧要关头他们的近战和箭术也能派上用场——但法术攻击是最典型的法系形象，而且往往也是最强的。
+
+依靠法术进攻的缺点是它们会非常迅速地耗尽施法者的法力 (mana)。因此，专攻魔法战斗的角色倾向于在施法属性上投入过高的资源，并且极其重视增加法力池或减少法术法力消耗的物品。像<color:keyword>魔法飞弹 (Magic Missile)</color>这样的早期攻击法术有时会在很长一段时间内保持作用，仅仅是因为它们太便宜了；虽然伤害相对较低，但法力消耗也很低。
+
+攻击性法术类似于攻击性装置；它们中的大多数同样是某种元素的射线、光束、球体或吐息。
+
+关于魔法和施法的更多信息，请参阅 <link:magic.txt>。
+
+<topic:MeleeTactics><style:heading>基础战术</style>
+
+<color:U>绕柱战术 (Pillardancing)</color>
+
+由于怪物的移动速度不规律，所以不推荐使用。怪物还会用范围法术 (area-of-effect spells)、诅咒或召唤“溅射”你，所以这个战术可能是你最不想尝试的东西。这里提到它，是因为它在原版 Angband 中是一种流行的战术。
+
+<color:U>边打边退 (Shoot'n Scoot)</color>
+
+需要一个大房间、相位之门 (Phase Door) 和某种类型的远程武器。站在房间的一端，你的敌人在另一端。朝它开火直到它靠近，使用相位之门闪现拉开距离，重复这个过程直到怪物死亡。如果你比怪物快得多，或者怪物被混乱了，可能就不需要使用相位之门；如果怪物靠得太近，你直接后退就行。
+
+<color:U>打完就跑 (Wail'n Bail)</color>
+
+需要传送 (Teleport) 物品。和怪物战斗直到你濒死，传送逃走（或者把怪物传送走），然后再找到它，恢复战斗。要小心——你的传送可能会让你落在某个不友好的家伙旁边，它会直接把你干掉。此外，这种战术依赖于你从伤害中恢复的速度比怪物快；通常情况下确实如此，但你不能总是指望它。
+
+<color:U>防召唤走廊 (Anti-Summoning Corridor)</color>
+
+需要一点时间来设置，但几乎可以在任何有非永久性墙壁的地方进行。在岩石中挖掘一条弯曲的走廊，并将自己驻扎在走廊深处。大多数会召唤的怪物对这种战术都很聪明，如果它们发现你使用这种战术，就会拒绝靠近；但如果你速度足够快，你可以冲向它们，仍然在半封闭的空间内进行战斗。这种战术对付大群非召唤系怪物（例如龙类）也很有用。
+
+<color:U>卡视野逃课 (Line-of-Sight Cheese)</color>
+
+需要远程攻击。你可以利用当地地形为你创造优势，当敌人看不到你时向他们射击，因为不在视线范围内，他们无法还击。就像绕柱战术一样，这种战术在这里的用处远不如在 Angband 中那么大；通常的结果是惹怒怪物，然后用双倍的召唤物把你淹没。然而，对于某些特定怪物，如手之德鲁伊 (hand drujs)，它仍然效果很好。
+
+<color:D>
+Original   : (??) Chris Weisiger and Leon Marrick
+Updated    : (??)
+Updated    : Zangband DevTeam
+Updated    : Hengband 1.5.2
+Updated    : PosChengband 1.0.0
+Updated    : PosChengband 4.0.0
+Updated    : FrogComposband 7.1.liquorice
+</color>

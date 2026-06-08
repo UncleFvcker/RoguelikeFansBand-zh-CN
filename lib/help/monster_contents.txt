@@ -1,21 +1,21 @@
-<style:title>Monsters</style>
+<style:title>怪物</style>
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    <link:monster.txt> Overview
-    <link:monster.txt#MonsterSymbols> Monster Symbols
-    <link:monster.txt#Assessment> Assessing a Monster
-    <link:monster.txt#Uniques> Unique Monsters
-    <link:monster.txt#MonsterList> Listing All Monsters in View
-    <link:monster.txt#MonsterColors> Monster Color
-    <link:monster.txt#EldritchHorror> Eldritch Horrors
-    <link:monster.txt#Pets> Pets and Riding
-    <link:monster.txt#Friendly> Friendly Monsters
-    <link:monster.txt#Mimics> Mimics and Shadowers
-    <link:monster.txt#Breeders> Breeding Monsters
-    <link:monster.txt#MonsterMemory> Monster Knowledge
-    <link:monster.txt#Resistances> It Resists...
-    <link:monster.txt#Genocide> Genocide
-    <link:monster.txt#HealthBar> Health Bar Colors
+    <link:monster.txt> 概述
+    <link:monster.txt#MonsterSymbols> 怪物符号
+    <link:monster.txt#Assessment> 评估怪物
+    <link:monster.txt#Uniques> 唯一怪物
+    <link:monster.txt#MonsterList> 列出视线内的所有怪物
+    <link:monster.txt#MonsterColors> 怪物颜色
+    <link:monster.txt#EldritchHorror> 远古恐惧
+    <link:monster.txt#Pets> 宠物与骑乘
+    <link:monster.txt#Friendly> 友善怪物
+    <link:monster.txt#Mimics> 模仿者与暗影者
+    <link:monster.txt#Breeders> 繁殖怪
+    <link:monster.txt#MonsterMemory> 怪物知识
+    <link:monster.txt#Resistances> 抗性与免疫
+    <link:monster.txt#Genocide> 灭绝术
+    <link:monster.txt#HealthBar> 健康条颜色
 
-    <color:y>(?) Help System Commands</color>
+    <color:y>(?) 帮助系统命令</color>

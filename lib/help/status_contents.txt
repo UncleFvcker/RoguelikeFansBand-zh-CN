@@ -1,19 +1,19 @@
-<style:title>Painful Status Effects</style>
+<style:title>痛苦的状态效果 (Painful Status Effects)</style>
 
-Please choose one of the following help sections:
+请选择以下帮助小节之一：
 
-    <link:status.txt> Overview of Painful Status Effects
-    <link:status.txt#Confusion> Confusion
-    <link:status.txt#Paralysis> Paralysis
-    <link:status.txt#Stunning> Stunning
-    <link:status.txt#Fear> Fear
-    <link:status.txt#Blindness> Blindness
-    <link:status.txt#Slowness> Slowness
-    <link:status.txt#Cuts> Cuts/Wounds
-    <link:status.txt#Poisoning> Poisoning
-    <link:status.txt#Unwellness> Unwellness
-    <link:status.txt#Hallucination> Hallucination
-    <link:status.txt#Polymorph> Polymorph
-    <link:status.txt#Resisting> Resisting Status Effects
+    <link:status.txt> 痛苦的状态效果概述 (Overview of Painful Status Effects)
+    <link:status.txt#Confusion> 混乱 (Confusion)
+    <link:status.txt#Paralysis> 麻痹 (Paralysis)
+    <link:status.txt#Stunning> 眩晕 (Stunning)
+    <link:status.txt#Fear> 恐惧 (Fear)
+    <link:status.txt#Blindness> 盲目 (Blindness)
+    <link:status.txt#Slowness> 缓慢 (Slowness)
+    <link:status.txt#Cuts> 割伤/创伤 (Cuts/Wounds)
+    <link:status.txt#Poisoning> 中毒 (Poisoning)
+    <link:status.txt#Unwellness> 不适 (Unwellness)
+    <link:status.txt#Hallucination> 幻觉 (Hallucination)
+    <link:status.txt#Polymorph> 变形 (Polymorph)
+    <link:status.txt#Resisting> 抵抗状态效果 (Resisting Status Effects)
 
-    <color:y>(?) Help System Commands</color>
+    <color:y>(?) 帮助系统命令 (Help System Commands)</color>

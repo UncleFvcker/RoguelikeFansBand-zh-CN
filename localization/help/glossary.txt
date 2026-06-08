@@ -1,0 +1,467 @@
+<style:title>FrogComposband 术语表 (Glossary)</style>
+
+在游玩 FrogComposband、与其他玩家讨论，或者仅仅是阅读帮助文件时，你很可能会遇到许多深奥的游戏概念、神秘的缩写，或是游戏中具有特定含义的词汇。对于新玩家来说，绝对没有必要在开始游戏前阅读此文件——大多数玩家完全可以（且确实是）在游玩过程中自行摸索，而且该术语表除了基础知识外还包含了许多进阶主题，所有重要的概念在帮助文件的其他地方也有涵盖。但如果你对某个特定词汇或游戏概念拿捏不准，你可以把这个列表当作快速作弊纸参考，或者纯粹为了消遣读完整个文件 :)
+
+物品属性缩写请参见 <link:objects.txt#InscriptionAbbrev>。
+
+<topic:CommonWords><style:heading>常用词汇、缩写及游戏概念</style>
+
+<color:keyword>AC</color>: Armor Class (护甲等级)；衡量你或怪物有多难被命中的指标；也会直接减少你受到某些类型近战攻击时的伤害。
+
+<color:keyword>aggravation</color>: 1) 激怒（物品标签）：唤醒并激怒附近所有怪物；也是一种具有相同效果的可移除诅咒。2) 激怒（卷轴和尖啸效果）：唤醒附近怪物，使它们免疫魅惑，并使视线内所有怪物暂时获得加速。
+
+<color:keyword>ambush</color>: 伏击；一种迫使你离开大地图的随机突发情况。伏击通常会让你被大量敌对怪物包围。
+
+<color:keyword>Arena</color>: 1) 竞技场迷宫：一个 50 至 80 级的地下城，以金属巴布尔 (Metal Babble) 为底层守卫，其特征是独特的蜿蜒走廊和气泡状房间，每个房间包含一只高级怪物。2) 竞技场建筑：位于塔罗斯 (Thalos) 和简易镇 (Lite-Town) 的特殊建筑，你可以在此与怪物单挑，直到你落败为止。3) 怪物竞技场：你可以对两只互相厮杀的克隆怪物下注的建筑。4) 竞技场楼层：对一种房间与开阔空间相连的地下城楼层结构的描述。
+
+<color:keyword>artifact</color>: 神器；在单局游戏中只能找到一次的特殊物品。包括每次游戏属性保持一致或基本一致的<color:o>标准神器 (standard artifacts)</color>，以及属性不可预测的<color:o>随机神器 (random artifacts)</color>。
+
+<color:keyword>aura</color>: 光环；1) 怪物周身的元素护套，当怪物在近战中被击中时造成少量元素伤害；或玩家周身类似的元素护套，对怪物造成伤害。2) 对白光环 (White Aura) 和黑光环 (Black Aura) 突变的描述，分别提供好运和厄运。
+
+<color:keyword>auto-destroyer</color>: 自动销毁器；自动销毁物品的系统；包括 Mogaminator (自动捡拾销毁系统) 或简易自动销毁器。
+
+<color:keyword>average object</color>: 一般物品；没有任何魔法附魔或诅咒的物品。
+
+<color:keyword>awful</color>: 糟糕的；对被诅咒的词缀 (ego) 物品的伪鉴定感觉描述。
+
+<color:keyword>ball</color>: 球状法术；以特定网格为中心，影响该网格给定半径内所有方格和怪物（除非被墙壁阻挡）的效果。0 半径球 (Radius-0 ball)：仅影响一个网格的球，但与矢状射线不同的是，它不能被反射，并且即使施法源与目标之间有怪物也能命中目标。
+
+<color:keyword>base element</color>: 基础元素；四种最常见的元素之一：酸、冷、火或电；有时引申用于包含毒素。
+
+<color:keyword>beam</color>: 光束法术；影响其路径上所有网格和怪物的效果，不会在击中第一只怪物时停止，并且不能被反射。与 bolt、ball 相对。
+
+<color:keyword>berserk strength</color>: 狂暴力量；也叫 <color:keyword>berserk rage (狂怒)</color>, <color:keyword>super-heroism (超级英雄气概)</color>；一把双刃剑效果。给予 +30 最大生命值，近战命中加成（通常 +24 命中），随等级提升的近战伤害加成（50级时最高 +13 伤害），以及完全免疫恐惧；但也会降低所有非近战技能，带来少量的 AC 惩罚，阻止玩家施放书本法术，并阻挡大多数其他类法术能力。对于狂战士 (Berserker) 和变为熊形态的换形人 (Beorning) 是永久的，否则是暂时的。大多数魔法治疗或治愈效果会移除狂暴力量。与 <color:keyword>heroism (英雄气概)</color> 相对。
+
+<color:keyword>blessed</color>: 1) 受祝的（物品属性）；使物品对被诅咒具有一定的抵抗力，如果是武器，允许牧师使用它且不受惩罚。2) 祝福 (Blessing)：一种法术和卷轴效果，暂时提高玩家的 AC 和命中。
+
+<color:keyword>blink</color>: 闪烁；短距离传送；相位之门 (Phase Door)。
+
+<color:keyword>body type</color>: 体型 / 身体模板；取决于种族的装备槽位及可接受物品类型的列表。最常见的体型是类人型 (humanoid)，几乎所有正常玩家种族共享，但怪物模式 (Monster Mode) 种族往往有独特的体型。
+
+<color:keyword>bolt</color>: 矢状/投射法术；仅击中其路径上第一只怪物的效果，并且可以被具有反射 (Reflection) 能力的怪物（或玩家）反射。与 beam、ball 相对。
+
+<color:keyword>bottom guardian</color>: 底层守卫；也称作 <color:keyword>final guardian (最终守卫)</color>, <color:keyword>dungeon guardian (地下城守卫)</color>, <color:keyword>dungeon keeper (地下城首领)</color>, <color:keyword>dungeon boss (地下城 Boss)</color>。在特定地下城最底层发现的强大唯一怪物。除了反魔法洞穴和反近战洞穴外，所有固定地下城都有底层守卫。杀死底层守卫会免费获得一次属性提升，通常还会给一件固定物品。与 entrance guardian (入口守卫) 相对。
+
+<color:keyword>brand</color>: 元素烙印；对武器伤害骰子的元素乘数，仅当被攻击的怪物不抵抗该元素时适用。本质上与杀戮 (slay) 相同，只是基于元素而不是怪物类型。与 slay 相对。
+
+<color:keyword>building</color>: 建筑；1) 镇上提供任务或服务的地方；一种特殊建筑物。2) 任何城镇结构，包括商店、博物馆、任务建筑和玩家的家。
+
+<color:keyword>burden</color>: 负重；所携带的所有装备、弹药和库存物品的总重量。<color:o>Overburdening (超载/超重)</color>：携带超过力量允许舒适度的物品的状态，会减慢你的速度，并导致你在没有悬浮能力的情况下进入深水时受到溺水伤害。
+
+<color:keyword>chaos patron</color>: 混沌守护神 / 混沌主顾；一位对你的角色产生特殊兴趣的混沌领主，随着你的升级，会赐予你礼物或惩罚。每个守护神发放的礼物和惩罚都略有不同。
+
+<color:keyword>character dump</color>: 角色档案导出；包含角色面板属性的 HTML 文件。
+
+<color:keyword>character level</color>: 角色等级 (CL)；角色进度的指示器。角色等级取决于经验，并影响你的技能、法术和种族能力的解锁、法术和种族能力的失败率、法力值和生命值池，以及许多法术效果和豁免检定的威力；它还会触发属性提升、半神天赋和玩家怪物的进化，并且根据你的性格、职业和种族，可能会提供额外的加成或效果。
+
+<color:keyword>character sheet</color>: 角色面板；关于你角色重要一切的详细描述，可通过当前角色的 'C' 命令访问。可以用 '|' 命令导出档案。
+
+<color:keyword>CL</color>: 角色等级 (Character level)。
+
+<color:keyword>class</color>: 职业；游玩的角色类型；本质上是角色的职业，在角色创建时选择，在游戏期间不可更改。职业选择是出生过程中最重要的一步。
+
+<color:keyword>coffee-break mode</color>: 茶歇模式；加速游戏节奏并关闭大地图的出生选项。如果选择了新手模式，则会自动开启。
+
+<color:keyword>confusion</color>: 困惑/混乱；1) 一种状态效果，影响玩家和怪物。参见 <link:status.txt#Confusion>。2) 一种元素伤害，如果不被抵抗就会引起混乱状态。
+
+<color:keyword>critical hit</color>: 暴击/致命一击；极具破坏力的击中；武器或弹药的伤害骰子翻倍。
+
+<color:keyword>curse</color>: 诅咒；1) 物品诅咒；一种负面的、通常可移除的物品属性，在被诅咒期间会阻止你脱下该物品。2) 一种怪物或玩家怪物的法术攻击，特别是那种允许进行豁免检定、造成非元素伤害且可能引起物品被诅咒的法术；包括创伤诅咒、邪恶诅咒、强效诅咒、死亡诅咒或毁灭之手。3) 许多与物品诅咒相似的特殊效果之一，比如安珀人血统诅咒。
+
+<color:keyword>dazed</color>: 昏沉；即 Stunned (眩晕)；遭受眩晕状态效果的影响。
+
+<color:keyword>demigod powers</color>: 半神力量 / 半神天赋；半神、人类和一些类人种族可用的特殊永久突变。参见 <link:Demigods.txt#Powers>。
+
+<color:keyword>depth</color>: 深度；理论上指示一个地下城楼层距离地表有多远，实际上指示该楼层生成的怪物预期会有多危险；以层 (levels) 或英尺 (feet) 表示。1 层等于 50 英尺。
+
+<color:keyword>device</color>: 魔法装置；带有特定效果、可自我充能的魔法物品：魔杖 (wand)、魔棒 (rod) 或法杖 (staff)；有时引申用于包含卷轴，偶尔甚至包括药水。<color:o>Device skill (使用魔法装置技能)</color>：决定你使用魔杖、魔棒、法杖和卷轴失败率的主要技能。
+
+<color:keyword>disarming</color>: 解除陷阱；1) 移除或尝试移除地板或宝箱陷阱的动作。2) 解除陷阱技能；影响你安全移除陷阱能力的技能。
+
+<color:keyword>disenchantment</color>: 祛魔/解除魔法；1) 一种元素名称。2) 因该元素引起的，装备物品上命中、伤害和护甲加成的降低（极少数情况下也会降低 pval 修正值）。
+
+<color:keyword>DL</color>: 地下城等级 (Dungeon level)；深度的指示器。“拆解者 (Unmakers) 原生于 DL 77”。更危险的怪物和更有价值的物品会出现在更高的地下城等级。引申为危险等级 (danger level)；通常这与地下城等级相同，但荒野区域有危险等级却没有地下城深度等级。
+
+<color:keyword>double move</color>: 连动；怪物连续攻击你两次而你期间没有机会做出反应的情况，要么是因为怪物比你快，要么是因为你在能量随机性中运气不佳。同时，玩家对怪物连续行动也是同样的情况。
+
+<color:keyword>dual-wielding</color>: 双持；同时挥舞两把武器。双持熟练度 (Dual-wielding proficiency)：减少双持带来精度惩罚的后天技能。
+
+<color:keyword>dungeon</color>: 地下城；由相互连接、随机生成的非永久楼层构成，并通常被视为在地下区域；除城镇、城镇任务和荒野之外的任何游戏地点，或所有这些地点的统称。通过进入 Angband 地下城，达到地下城 100 层并击败混沌之龙即可通关游戏。
+
+<color:keyword>dungeon book</color>: 地下城法术书；高级法术书，通常不会在城镇商店生成，因此需要在地下城中获取。
+
+<color:keyword>dungeon level</color>: 1) 地下城楼层；在地下城中生成的特定随机楼层。2) DL；特定的深度。
+
+<color:keyword>ego</color>: 词缀物品 / 名牌物品 (ego item)；也称 <color:keyword>优秀物品 (excellent item)</color>；一种带有非凡属性但不是神器的物品，或此类非凡物品的类型。“防护 (Protection) 是早期常见的词缀。”
+
+<color:keyword>eldritch horror</color>: 远古骇物；摧毁理智的怪物。参见 <link:monster.txt#EldritchHorror>。
+
+<color:keyword>element</color>: 元素；1) 一种伤害类型，如火、酸、混沌、祛魔或枢纽 (nexus)。2) 狭义指代基础元素之一：火、冷、酸、电或毒。元素防护 (Elemental protection)：对元素的暂时抗性。
+
+<color:keyword>elemental</color>: 1) 基于元素或与元素有关的。2) 元素生物；字母符号为 E 的怪物；每只元素生物都与单一元素强烈相关。在怪物模式中可作为玩家怪物种族，具有几个亚种。
+
+<color:keyword>energy</color>: 能量；1) 能量决定玩家（或怪物）多久能行动一次。速度较快的玩家和怪物积攒能量更快，因此能更频繁地获得回合。<color:o>Energy randomness (能量随机性)</color>：玩家或怪物在获得下一个回合前需要积攒多少能量的有限随机性。<color:o>Energy cost (能量消耗)</color>：一次行动所消耗的能量。2) 对某些吐息闪电怪物的风味描述：能量猎犬、能量漩涡。
+
+<color:keyword>entrance guardian</color>: 入口守卫；守卫特定地下城入口的怪物，必须杀死或避开它才能进入该地下城。只有部分（主要是高等级）地下城有入口守卫。“水晶城堡的入口守卫是一只以太巨龙，所以要小心。” 与 bottom guardian (底层守卫) 相对。
+
+<color:keyword>equipment</color>: 装备；1) 你角色当前穿着或挥舞的物品，在角色面板或通过 'e' 命令可见。2) 可以被装备的物品。
+
+<color:keyword>ESP</color>: 极度感知 / 心灵感应；完全或部分的感知能力。
+
+<color:keyword>evolution</color>: 进化；1) 怪物获得足够 XP 后变成更强怪物的过程。见于玩家的宠物，以及从玩家吸取经验的不死怪物。有时也可由时间 (Time) 元素引起。2) 玩家怪物进化；怪物模式中的玩家角色通常在升够等级后会进化成更强的亚种。这可能会赋予新的属性加成、抗性、能力、攻击方式或装备槽。
+
+<color:keyword>EXP</color>: 也作 <color:keyword>XP</color>: 经验值 (experience)。游戏中计分的最基本方式，经验值决定了你的角色等级。<color:o>Monster experience (怪物经验)</color>：由怪物（通常是宠物）收集的经验。
+
+<color:keyword>FA</color>: 自由行动 (Free Action)；防止麻痹的物品属性。
+
+<color:keyword>fail rate</color>: 失败率；施放法术或使用特定物品失败的概率，通常以百分比表示。
+
+<color:keyword>fame</color>: 声望；衡量你的角色完成了多少难忘壮举的指标。击杀唯一怪物、完成任务和在竞技场战斗中获胜会增加你的声望；任务失败或输掉竞技场战斗会降低声望。商店定价和重铸能力受声望影响。
+
+<color:keyword>fear</color>: 恐惧；一种状态效果。可以阻止某些行动，或者在极度恐惧的情况下，消耗一个回合或部分回合而无法采取任何行动。恐惧抗性 (Fear resistance)：提高你避免恐惧负面影响几率的抗性。
+
+<color:keyword>feeling</color>: 感觉；1) 楼层感觉 (Level feeling)。“一种特殊的感觉意味着这层楼里有神器。” 参见 <link:dungeon.txt#Feelings>。2) 物品感觉 (Object feeling)；伪鉴定指示的物品质量。
+
+<color:keyword>flag</color>: 标志/标签属性；指示物品、玩家或怪物属性是否存在。装备和玩家标签显示在角色面板上。
+
+<color:keyword>friendly monster</color>: 友方怪物；不敌对的怪物，特别是指同时不是宠物的怪物；这种怪物可能会在战斗中帮助你，但你无法命令它们。
+
+<color:keyword>frost</color>: 冰霜；元素冷 (cold) 的同义词，用来让它听起来更酷。需与冰 (Ice) 区分开，后者是独立（尽管相关）的元素。类似于闪电 (Lightning) 作为电的同义词。
+
+<color:keyword>fuzzy telepathy</color>: 模糊心灵感应；将所有本来看不见的怪物显示为白色的心电感应，无论其通常颜色如何；这是游戏对心灵感应工作方式的默认选项。
+
+<color:keyword>genocide</color>: 灭绝；试图从地下城楼层中移除一个怪物物种（所有共享相同字母图标的怪物）。不影响唯一怪物。参见 <link:monster.txt#Genocide>。
+
+<color:keyword>global map</color>: 全球地图；也称作 <color:keyword>overworld map (大地图)</color>；FrogComposband 世界的比例地图，可在城镇和荒野中通过 '<' 命令进入，通常用于从城镇前往地下城或在地下城之间旅行。
+
+<color:keyword>good object</color>: 良好物品；带有某些魔法附魔，但不是神器或词缀物品的物品。
+
+<color:keyword>haste</color>: 加速；给玩家或怪物速度提供 +10 的暂时加成。
+
+<color:keyword>health bar</color>: 血条；也作 <color:keyword>status bar (状态条)</color>；屏幕右侧的一个条，显示正在交战怪物的生命值和状态；或者可选的玩家类似状态条。参见 <link:monster.txt#HealthBar>。
+
+<color:keyword>heavy curse</color>: 重度诅咒；无法通过普通的解除诅咒术移除的物品诅咒，但可以通过 *解除诅咒* 卷轴移除。
+
+<color:keyword>heroism</color>: 英雄气概；一种正面效果，给予 +10 最大生命值，+12 命中（近战和远程均有），以及一级对恐惧的抗性。通常是暂时的，但玩家怪物可以通过杀死他们的种族 Boss 来永久获得。
+
+<color:keyword>high resist</color>: 高级抗性；对基础元素和毒素以外元素的抗性。
+
+<color:keyword>hostile monster</color>: 敌对怪物；任何既非友方又非宠物的怪物。遇到的绝大多数怪物都是敌对的。
+
+<color:keyword>HP</color>: 生命值 (Hit points)。角色或怪物生命值降至 0 以下就会死亡。
+
+<color:keyword>icky floor</color>: 黏性地板/反制地板；具有特定属性的区域，无论地形、陷阱或占据的怪物如何，都不能作为有效传送目的地。反制网格还会阻止使用心灵传动抓取其上的任何物品。通常无法传送到特殊金库 (vault) 里，因为其内部区域具有反制属性，尽管地震或其他改变地形的效果可能会导致该属性丢失。
+
+<color:keyword>icky wield</color>: 不合手装备 / 犯忌挥舞；装备不适合该职业的物品，在装备该违忌物品期间会带来取决于职业的惩罚。
+
+<color:keyword>ID</color>: 鉴定 (Identify)。<color:o>*ID*</color>: *Identify*，对物品的完全鉴定。
+
+<color:keyword>immunity</color>: 免疫；100% 的抗性；完全抵消元素的任何伤害和副作用的属性。Genocide immunity (免疫灭绝)：后天获得的对灭绝的免疫。Destruction immunity (免疫毁灭)：后天获得的对毁灭效果的免疫。
+
+<color:keyword>infravision</color>: 红外视力；能看到附近隐形但并非无形或冷血怪物的能力。
+
+<color:keyword>innate attack</color>: 天生攻击；不基于装备武器或武术的玩家近战攻击。许多怪物模式的玩家种族没有近战武器槽，依靠撕咬或爪击等天生攻击在近战中伤害敌人，但大多数正常玩家种族也可以通过突变获得天生攻击。
+
+<color:keyword>inscription</color>: 铭刻；1) 由玩家或 Mogaminator (自动捡拾器) 自动附加到物品描述上的文本，它可以纯粹是风味描述，也可以给游戏提供关于如何处理该物品的指令。参见 <link:objects.txt#Inscriptions>。2) 附加到物品描述后的任何内容，包括标准的物品属性缩写。
+
+<color:keyword>inventory</color>: 背包/物品栏；1) 背包内的物品栏，你角色目前携带的物品列表，通过 'i' 命令访问；引申为背包本身。2) 任何类似物品列表：商店库存、家里库存。
+
+<color:keyword>invulnerability</color>: 无敌 / 刀枪不入；暂时的玩家或怪物状态。在受到任何特定攻击时，有 12/13 的几率受到零点伤害。无敌怪物的血条中有白星 (<color:R>p</color>[********-])。某些特殊的伤害来源（尤其是精神长矛 Psycho-Spears）可以无视无敌。
+
+<color:keyword>item score</color>: 物品分数；物品的货币价值或估值，通常越高代表物品越强大。
+
+<color:keyword>jump</color>: 跳跃；一种怪物攻击方式，怪物会闪烁并在其闪烁前的位置生成一个以其为中心的大型元素球。
+
+<color:keyword>keymap</color>: 按键映射；将特定按键重映射为代表底层命令集中的另一个按键命令或命令组合。与宏 (macro) 相对。
+
+<color:keyword>kin</color>: 同类；与给定怪物共享物种（字母符号）的怪物，如 Boldor 的同类是 yeek；大多用于召唤语境。对于玩家而言：字母符号与玩家种族相关的怪物。
+
+<color:keyword>level</color>: 1) Character level (CL，角色等级)。“一个 46 级的角色。” 2) Dungeon level (地下城楼层/深度)，分为“可探索区域”含义（“你对这一层有种不好的预感”）或“深度”含义（“拆解者原生于 77 层”）。3) 城镇任务或荒野区域的危险等级。“产卵坑是一个 80 级任务。” 4) 怪物等级；怪物原生栖息的深度。5) 法术等级；法术变得可用的角色等级。6) 装置等级；衡量魔法装置使用难度的指标，由装置效果和威力决定。
+
+<color:keyword>level guardian</color>: 楼层守卫；Angband 地下城中的随机任务怪；引申指代任何绑定在特定地下城特定深度的怪物，包括奥伯龙 (Oberon)、混沌之龙，有时也指地下城首领。
+
+<color:keyword>levitation</color>: 悬浮；漂浮的能力。悬浮允许你进入黑暗的坑洞和荒野的山区，允许你避开某些陷阱，消除树林和雪地的移动速度惩罚，并减少站在危险地形中或其上方受到的伤害。参见 <link:faq.txt#Levitation>。
+
+<color:keyword>life points</color>: 生命点数；衡量你对生命依恋程度的指标，耗尽时以 0% 到 99% 的范围显示。失去生命点数会降低有效最大 HP；如果生命点数降至 0 以下，角色将转化为不死种族，如果不可行则直接死亡。参见 <link:faq.txt#LifePoints>。
+
+<color:keyword>life rating</color>: 1) 随机生命评级；在 0 到 76 的范围内，衡量你在当前生命周期随机生命值获取掷骰中运气的指标；通过自我了解法术 (Self Knowledge) 揭示。参见 <link:faq.txt#LifeRating>。2) 生命乘数；基于你的种族、职业或性格的固定非随机 HP 乘数，与随机生命评级不直接相关。3) +Life 和 -Life；修改基于体质的 HP 乘数的物品属性。
+
+<color:keyword>lightning</color>: 闪电；元素电 (electricity) 的同义词。
+
+<color:keyword>lite-town</color>: 简易镇；前哨镇 (Outpost) 在无大地图游戏模式中出现的样子。
+
+<color:keyword>living</color>: 活物；对怪物的描述：非不死生物、非恶魔或非无生命怪物。严格来说不是 <color:o>无生命 (nonliving)</color> 的反义词，因为恶魔和不死生物既非活物也非无生命。
+
+<color:keyword>logrus</color>: 罗格鲁斯；元素混沌 (chaos) 的同义词（安珀志梗），常用于特别强大的混沌效果。
+
+<color:keyword>macro</color>: 宏；将按键映射为代表一个或多个其他按键的行为，例如将通常需要多个动作的法术用一次按键来施放。与按键映射 (keymap) 不同之处在于，宏接受稍微更广泛的输入范围，宏序列中的键可以触发按键映射，并且宏在某些适用场景（如提示和菜单）中会被执行，而按键映射则不会。参见 <link:pref.txt#Macros>。
+
+<color:keyword>mana</color>: 法力值；玩家或魔法装置的法术点数 (spell points)。
+
+<color:keyword>Mark of Chaos</color>: 混沌印记；一种随机的杀戮或烙印效果，每次攻击重新掷骰。这是仅有的两种通常能与另一种烙印叠加的烙印之一。
+
+<color:keyword>melee</color>: 近战；武装或徒手的近身格斗。Melee skill (近战技能)：你在这类战斗中的天赋。Melee weapon (近战武器)：近战中使用的武器。
+
+<color:keyword>Mogaminator</color>: Mogami自动捡拾器；一个基于你的拾取偏好设置自动拾取、销毁、鉴定、铭刻或将特定物品留在地上的系统。通过 '_' 命令编辑。以其最初的作者，Hengband 开发者 Mogami 命名。
+
+<color:keyword>monster</color>: 怪物；游戏中遇到的任何生物，敌对或友方。
+
+<color:keyword>monster list</color>: 怪物列表；所有当前可见怪物的列表，作为子窗口或通过 'Y' 和 '[' 命令查看。
+
+<color:keyword>monster mode</color>: 怪物模式；一种游玩模式，在角色创建时选择，你的角色获得怪物种族的特征，而不是正常的种族和职业选择。
+
+<color:keyword>monster race</color>: 怪物种族；1) 怪物类别，例如肮脏的街头顽童，或小狗头人。2) 玩家怪物种族；在怪物模式角色创建时选择的种族。
+
+<color:keyword>mount</color>: 坐骑；你当前正在骑乘的宠物；适合骑乘的怪物。
+
+<color:keyword>mutation</color>: 突变；列在角色面板“突变”部分的玩家属性，无论是正面还是负面。<color:o>可移除 (Removable)</color> 或 <color:o>未锁定突变 (unlocked mutations)</color>：在游戏过程中获得，可通过各种方式移除，并且与角色的种族、职业、性格或装备无关。<color:o>永久 (Permanent)</color> 或 <color:o>锁定突变 (locked mutations)</color>：半神天赋、其他种族天赋以及职业或性格保证的突变，例如“幸运 (Lucky)”性格带来的白光环。
+
+<color:keyword>nameless</color>: 无名物品；Mogaminator (自动捡拾器) 的关键词，指代一件没有武器匠 (Weaponsmith) 精华，且不是词缀或神器的物品。
+
+<color:keyword>nexus</color>: 枢纽/时空碎裂；一种元素伤害，很少致命，但因为其副作用（打乱属性/随机传送）通常非常惹人厌。
+
+<color:keyword>nice</color>: 乖巧状态；怪物的一种状态；乖巧的怪物不会使用吐息或法术攻击，且受到极高近战伤害时会被减伤。乖巧怪物也从不抵抗毁灭效果。几乎所有高级怪物在最初被召唤时都是乖巧的；主要例外是奥林匹斯神，以及在噩梦模式下游玩。当玩家有机会对怪物的存在做出反应时，乖巧状态结束。
+
+<color:keyword>non-ego</color>: 非词缀物品；既非词缀也非神器的物品；无名物品。“重铸、工艺和神器创造仅适用于非词缀物品。”
+
+<color:keyword>object list</color>: 物品列表；当前地下城楼层上所有已知物品的列表，作为子窗口或通过 ']' 和 'O' 命令访问。可用于旅行/自动寻路并显示其他特征，如楼梯。
+
+<color:keyword>out of depth</color>: 跨越深度 (OOD)；出现在意外的较浅深度的现象；用于指代原本原生于更深层数的怪物和物品。一只原生于 DL 80 的怪物如果在 DL 60 遇到，就称为跨了 20 级深度。
+
+<color:keyword>overworld map</color>: 大地图；见 <color:keyword>global map (全球地图)</color>。
+
+<color:keyword>pack</color>: 背包/怪物群；1) 玩家的背包；物品栏。2) 一起行动的一群相似怪物。
+
+<color:keyword>parent monster</color>: 母体怪物；怪物的母体是召唤它的怪物，或是它所属护卫群的主人。并非所有怪物都有母体。有活体母体的怪物对母体有一定忠诚度，因此成为不佳的宠物和不可靠的坐骑。宠物召唤的宠物如果其母体死亡或消失，往往会离开楼层。
+
+<color:keyword>permanent curse</color>: 永久诅咒；只能通过平凡化 (Mundanity) 移除的物品诅咒。带有永久诅咒的物品上的其他诅咒仍然可能被移除。
+
+<color:keyword>personality</color>: 性格；角色属性，在角色创建时选择，游戏期间不可改变。每种性格给角色提供自己的一套加成和减益，许多性格还有特殊效果，比如混沌 (Chaotic) 性格的混沌主顾或性感 (Sexy) 性格的激怒 (aggravation) 效果。
+
+<color:keyword>pet</color>: 宠物；你可以给它下命令的友方怪物。
+
+<color:keyword>pet upkeep</color>: 宠物维护费；控制所有宠物并保持它们开心所需的成本；如果超过 100% 会消耗法力值 (SP)，如果你没有剩余法力值，将迫使你遣散宠物。极高的维护费（大约高于 500%）可能导致宠物变回敌对。
+
+<color:keyword>polymorph</color>: 变形；1) 临时种族变形；由于怪物或玩家法术导致玩家角色暂时属于另一个玩家种族的状态。在红色的方括号中指示 (如 <color:r>[Cyclops独眼巨人]</color>)，一段时间后会消退。2) 永久种族变形；玩家永久变成另一个种族。怪物法术永远不会触发这种情况，但可以通过混沌主顾（Chardros 和 Hionhurn 除外）、物品激活的变形效果、变异能力、耗尽生命点数等条件触发，极少数情况下未能抵抗的怪物有毒废物攻击也能触发。可作为出生选项被禁用。3) 怪物变形；怪物变成不同的怪物，或者导致这种情况发生的行为。这是一种魔杖效果，以及偶尔的混沌元素效果。4) 变形药水 (Potion of Polymorph)；随机给予或治疗突变的药水。这不会触发种族变形。
+
+<color:keyword>primary stat</color>: 施法主属性；即施法属性，与其他属性相对；见 <color:keyword>spellcasting stat</color>。
+
+<color:keyword>proficiency</color>: 熟练度；你对特定任务或物品的掌握程度。Weapon proficiency (武器熟练度)：来自使用特定武器经验的准确度加成。Spell proficiency (法术熟练度)：来自施放法术经验的法力消耗和失败率加成。还有骑乘熟练度、双持熟练度和武术熟练度。
+
+<color:keyword>pseudo-ID</color>: 伪鉴定 (Pseudo-identify)；给予物品感觉的系统；或者指其所给出的物品感觉。“在 20 级时，Mogaminator 会开始自动销毁所有伪鉴定为 {一般/average} 的近战和远程武器。”
+
+<color:keyword>pval</color>: pval 加成/修正值 (Bonus size value)。物品上任何属性、技能和能力加成（或惩罚）大小的指示器；例如，一顶提供速度、力量、敏捷、体质各 +3 并使智力 -3 的力量铁盔，其 pval 为 3。
+
+<color:keyword>quest</color>: 任务；游戏内的一个任务，完成后有奖励。游戏通关的任务是杀死混沌之龙。<color:o>城镇任务 (Town quest)</color>：城镇中某些建筑提供并奖励的任何任务，特别是任务楼层本身也可以从城镇进入的。<color:o>Angband 任务 (Angband quest)</color>：在 Angband 地下城中出现的十个随机楼层守卫之中的任意一个。
+
+<color:keyword>race</color>: 种族；1) 玩家种族，出生时选择，通常期望在整个游戏过程中保持不变（但不保证，参见 polymorph）。种族选择从根本上影响一个角色。2) 怪物种族；怪物的种类，例如肮脏的街头顽童。
+
+<color:keyword>racial power</color>: 种族能力/种族力量；因种族赋予你的类法术能力，通过 'U' 命令（在使用 roguelike 键位时是 'O'）使用；例如比翁人和霍比特人的制造食物。引申指通过 'U'/'O' 命令使用的任何能力，无论其起源。
+
+<color:keyword>random teleportation</color>: 随机传送；1) 导致玩家不可预测地传送的物品诅咒或突变效果。2) 允许玩家追随传送的怪物，并导致玩家不可预测地传送（但允许选择不传送）的正面物品属性。
+
+<color:keyword>ranged combat</color>: 远程战斗；基于向怪物射击或投掷投射物的战斗；引申指任何非近战战斗。
+
+<color:keyword>ranged weapon</color>: 远程武器；适合远程战斗的武器；射击器 (shooter)；投石索、弓或弩。
+
+<color:keyword>realm</color>: 魔法派系 / 魔法领域；基于一套特定四本法术书的魔法流派；例如奥秘 (Arcane) 领域，混沌 (Chaos) 领域。
+
+<color:keyword>recall</color>: 归城 / 回忆；1) 最常指归城 (Word of Recall) 法术或装置效果，带你从地表前往地下城，或从地下城（或任务）返回地表。“从城镇任务中归城会判定任务失败，但可能会救你一命。” 2) 较少见的是指怪物回忆 (monster recall)；即查阅怪物知识。“按 '*' 观察怪物，然后按 'r' 调出(recall) 关于它的信息。”
+
+<color:keyword>reflection</color>: 反射；能够反弹 75% 射来的射线/投射法术的能力，玩家和怪物均可获得。
+
+<color:keyword>reforging</color>: 重铸；将一件神器变成新神器，使用一件良好或一般的目标物品作为新神器的基底。这是在莫里凡特 (Morivant) 和简易镇的战士公会提供的城镇服务。参见 <link:faq.txt#Reforging>。
+
+<color:keyword>regeneration</color>: 再生；随着时间推移恢复失去 HP 和 SP 的能力；也指怪物随时间恢复失去 HP 的能力。
+
+<color:keyword>resist</color>/<color:keyword>resistance</color>: 抗性；玩家和怪物都拥有的属性，可减少伤害并阻挡或减轻被抵抗元素的副作用。易伤 (vulnerability) 的反义词。
+
+<color:keyword>resist base</color>/<color:keyword>rBase</color>: 基础抗性；对四种基本元素的全抗。
+
+<color:keyword>restoring</color>: 恢复；使用物品、法术或城镇服务扭转属性流失、经验流失和/或生命点数丢失。
+
+<color:keyword>running</color>: 奔跑；向指定方向移动，直到被干扰（如岔路口、怪物、有趣的物品等）或被打断。
+
+<color:keyword>sanity blast</color>: 理智冲击；远古骇物的效果；可以由看到远古骇物，或阅读死灵之书 (Necronomicon) 触发。
+
+<color:keyword>scrambling</color>: 打乱 / 属性重组；1) 属性打乱 (Stat scrambling)。2) 某些基于枢纽 (nexus) 元素的怪物光环和近战攻击的风味文本信息；这些攻击不会触发真正的属性打乱，但与枢纽有关联。
+
+<color:keyword>searching</color>: 搜索；1) 搜索技能；决定你定位陷阱和隐藏门能力的技能。2) 搜索动作，使用 's' 命令搜索陷阱和隐藏门。<color:o>搜索模式 (Searching mode)</color>：通过 'S'/'#' 命令切换的模式，让你每隔一回合自动搜索一次。3) 在帮助文件中使用 '/' 和 '\' 命令进行搜索。
+
+<color:keyword>shaft</color>: 竖井；连接两个地下城楼层，或地下城楼层与地表之间的通道。与楼梯的区别在于，大多数竖井会跨层；比如在 DL 8 向下走楼梯必定到 DL 9，而进入向下的竖井会到 DL 10，除非 9 层有固定任务。
+
+<color:keyword>sharpness</color>: 锋锐；一种武器属性；允许该武器打出斩首般极其严重的暴击 (vorpal criticals)。参见 <link:attack.txt#Sharpness>。
+
+<color:keyword>shop</color>: 商店；也称作 <color:keyword>store (店铺)</color>；可以买卖特定主题物品的建筑。与 <color:keyword>building (建筑)</color> 相对。
+
+<color:keyword>shuffle</color>: 刷新/洗牌；1) 商店刷新 (Shop shuffle)；付钱给店主让他用新物品补货。2) 装备轮换 (Equipment shuffle)；一次性更新多件装备。3) 洗牌术 (Shuffle)；王牌领域中一个效果极不可测的法术。
+
+<color:keyword>skill</color>: 技能；1) 你角色的八项主要技能之一：近战、箭术、豁免、潜行、察觉、搜索、解除陷阱或使用魔法装置；引申指任何类似的可提升属性，如挖掘或红外视力。参见 <link:birth.txt#PrimarySkills>。2) 你对特定武器或法术的掌握程度；即熟练度 (proficiency)。参见 <link:prof.txt>。3) 技能大师 (Skillmaster) 精通或可以精通的任何内容。
+
+<color:keyword>slay</color>: 杀戮属性；武器伤害骰子的乘数，仅针对特定类型的怪物生效。与 brand (元素烙印) 相对。参见 <link:faq.txt#Slays>。
+
+<color:keyword>SP</color>: 法术点数；法力值 (mana)。
+
+<color:keyword>spell</color>: 法术；1) 书本法术；玩家通过学习法术书掌握的魔法效果，使用 'm' 命令施放。2) 任何通过 'm' 命令使用的魔法或精神力量。3) 怪物法术，某怪物种族固有的法术。4) 能力/力量 (Powers)；基于种族、职业或突变的类法术能力，通过 'U'/'O' 命令使用。
+
+<color:keyword>spellcasting stat</color>: 施法属性；影响法术失败率和/或法力池大小的属性；通常正常法术的施法属性都是相同的，但不一定适用于种族或突变能力。
+
+<color:keyword>stat</color>: 属性/三围；你的角色拥有的六项基本统计数据之一：力量 (STR)、智力 (INT)、感知 (WIS)、敏捷 (DEX)、体质 (CON) 或魅力 (CHR)。参见 <link:birth.txt#PrimaryStats>。
+
+<color:keyword>stat base</color>: 基础属性；在计入种族、职业、性格、装备和突变加成之前的属性值。
+
+<color:keyword>stat cap</color>: 属性上限；基础属性能够达到的最高值。介于 18/70 到 18/130 之间。
+
+<color:keyword>stat drain</color>: 属性流失；属性的降低，通常由怪物攻击导致，在面板上通过该属性变黄来指示。流失的属性可以被恢复。
+
+<color:keyword>stat scrambling</color>: 属性打乱；由于未能抵抗枢纽攻击而导致的两个属性当前基础值的永久互换，可以作为出生选项来避免（代价是受到一个诅咒效果）。
+
+<color:keyword>stat-up</color>: 属性提升；一次提高某项选定属性的机会。
+
+<color:keyword>status bar</color>: 状态条；参见 <color:keyword>health bar (血条)</color>。
+
+<color:keyword>status effect</color>: 状态效果；一种暂时的状况，特别是负面状况，如混乱、致盲、中毒、眩晕或幻觉。玩家和怪物都会受到状态效果的影响。参见 <link:status.txt>。
+
+<color:keyword>subwindow</color>: 子窗口；主游戏窗口 (Term-0) 以外的窗口，被一些玩家用于方便地显示怪物和物品列表、装备、最近消息或其他信息。
+
+<color:keyword>summon</color>: 召唤；导致新怪物出现的能力；也指召唤出来的怪物实例本身。“我被召唤召唤师的召唤师包围了。”
+
+<color:keyword>the surface</color>: 地表；统指所有非地下城和非任务的区域；即荒野大地图，包括各城镇。
+
+<color:keyword>sustain</color>: 维持属性；保护你免受大多数可能降低特定属性效果影响的属性。特别的属性流失来源（尤其是时间 Time 攻击）可以无视维持属性。
+
+<color:keyword>tailored item</color>: 量身定制物品/职业掉落；保证是一种适合你种族和职业的物品类型；包括所有招财获取 (Acquirement) 术的结果、大部分任务奖励以及少部分常规物品掉落。
+
+<color:keyword>telepathy</color>: 心电感应 / 盲感；无需探测或直接看到即可了解附近怪物类型和位置的能力。
+
+<color:keyword>terrible</color>: 可怕的；对被诅咒的神器的伪鉴定感觉。
+
+<color:keyword>to-AC</color>: 护甲加值；[+Y] 或 [X,+Y] 中的 Y，通常是魔法附魔。经常容易被祛魔或酸液伤害损坏。与 <color:keypress>基础 AC (base AC)</color> 区分开来，后者是 [X,+Y] 中的 X，并且不会被祛魔或酸液损坏。
+
+<color:keyword>to-dam</color>: 伤害加值；提高你的伤害输出的物品属性；物品描述 (+X,+Y) 中的 Y。你的角色对近战、远程战斗和法术有不同的伤害加值，一件物品可能影响其中一项或多项。
+
+<color:keyword>to-hit</color>: 命中加值；你击中怪物的能力/准确度；提高你击中怪物能力的物品属性；物品描述 (+X,+Y) 中的 X。你的角色对近战和远程战斗有不同的命中加值，一件物品可能影响其中一项或两项。
+
+<color:keyword>town</color>: 城镇；设有商店和其他建筑的区域。
+
+<color:keyword>town service</color>: 城镇服务；由城镇建筑提供的服务（通常需要付费），如研究物品（*完全鉴定*）、恢复属性或睡一晚。
+
+<color:keyword>trap</color>: 陷阱；1) 地板陷阱；地板上一个不允许物品掉落的方格，通常会在玩家进入时试图伤害或带来麻烦。2) 宝箱陷阱；在安全打开宝箱前需要解除的一种机关，有时非常恶毒。3) 怪物陷阱；由玩家设置，让怪物踩进去的地板陷阱。
+
+<color:keyword>travelling</color>: 旅行 / 自动寻路；1) 自动走到楼层另一个地点的过程，通常是因为使用自动拾取或 'H' / 'J' 旅行命令。2) 手动旅行；手动从一个地点走到另一个地点，特别是在荒野中。
+
+<color:keyword>unique</color>: 唯一怪 / 首领 / 暗金怪；有名字的怪物，通常比同深度的普通怪物更危险，并且免疫减速、湮灭和灭绝。同一只暗金怪可以被反复遭遇（在不同楼层），直到被击杀为止，此时它将不再生成。
+
+<color:keyword>unlife attack</color>: 反生命攻击；一种怪物近战攻击类型。成功的反生命攻击会使攻击者变得更强，并使被攻击目标变弱。变强的怪物会打得更疼并施放更危险的法术。可以将其与吸血 (vampiric) 攻击做对比。
+
+<color:keyword>vampiric attack</color>: 吸血攻击；一种玩家或怪物的攻击，从活体目标吸取生命值，治愈攻击者并略微降低目标的最大生命值。参见反生命攻击。
+
+<color:keyword>vault</color>: 特殊房间/金库；地下城楼层的特殊区域，其特征是拥有永久墙壁以及高密度的危险怪物与极品战利品。引申指有许多跨级怪物的特殊地下城房间。
+
+<color:keyword>vorpal weapon</color>: 锐锋武器 / 斩首武器；具有锋锐 (Sharpness) 属性的武器。参见 <color:keyword>sharpness</color>。
+
+<color:keyword>vulnerability</color>: 弱点 / 易伤；导致你受到该元素更多伤害，并使你的物品更容易被该元素损坏或摧毁的属性。抗性 (resistance) 的反义词。
+
+<color:keyword>wanted monster</color>: 悬赏怪物；其尸体、骨骼或耳朵可以上交到各种城镇地点以领取奖励的怪物。<color:o>每日悬赏 (Daily wanted)</color>：有金钱奖励的非唯一悬赏怪，每天都在变化。<color:o>唯一悬赏 (Wanted unique)</color>：本次游戏悬赏怪物名单上的 20 种唯一暗金怪，上交时有物品奖励。
+
+<color:keyword>wilderness</color>: 荒野 / 大地图；地下城和城镇任务级别之外的区域；即地表；或者狭义地指不在城镇附近的区域。
+
+<color:keyword>XP</color>: 经验值 (Experience)；参见 <color:keyword>EXP</color>。
+
+
+<topic:Informal><style:heading>非正式词汇和缩写 (黑话俚语)</style>
+
+以下术语属于俚语、非正式表达，或者是代码中使用的词语，你在游玩过程中很少或根本不会碰到，但可能会在其他玩家交流中看到：
+
+<color:keyword>AFC</color>: 远古邪恶诅咒 (Ancient Foul Curse)，游戏中最恶心的诅咒效果。也被称为 TY、Ty 或 TY_CURSE，以 ZAngband 开发者 Topi Ylinen 命名。
+
+<color:keyword>ASC</color>: 防召唤走廊 (Anti-summoning corridor)。你在地下城墙壁中挖掘的隧道，尤其是“之”字形的隧道，以限制召唤物的空间并减少能同时攻击你的怪物数量。
+
+<color:keyword>band</color>/<color:keyword>*band</color>: 任何起源于原版 Angband 的游戏分支变体统称，包括 FrogComposband。
+
+<color:keyword>bravery</color>: 头铁 / 命大 / 作死 (Bravery)。指你朋友做了一件按理说绝对会送命的事，但居然没死，单纯因为你朋友运气逆天。“那可真是相当的头铁啊。”
+
+<color:keyword>buff</color>: 加强 / 增益状态；1) 在游戏开发的语境下，使某事物变强；加强某事物的行为。“混沌之龙太弱了，应该加强 (buff) 一下。” 2) 正面的暂时效果，如加速或英雄气概。
+
+<color:keyword>bump</color>: 脸滚键盘 / 纯砍 (Bump/Melee)；近战肉搏；在近战中直接撞过去打怪物。“战士的平砍攻击 (bump attacks) 很棒，但别的啥也不会。” 纯砍职业 (Bump class)：依赖直接走过去近战对撞的职业。
+
+<color:keyword>cheese</color>: 逃课 / 赖皮战术 (Cheese)。指有效但被认为很无聊的策略，通常因为它极其单调或者依赖游戏机制的某种漏洞（或两者兼而有之）。“卡视野 (LOS cheese) 在青蛙里不如在原版里那么有效，但有时还是管用。”
+
+<color:keyword>CLW/CSW/CCW</color>: 轻伤治疗 (Cure Light Wounds) / 严重伤害治疗 (Cure Serious Wounds) / 致命伤治疗 (Cure Critical Wounds)；这三种常见的小型治疗药水，游戏前期的主要消耗品。
+
+<color:keyword>cuddlywug</color>: Quylthulg 怪（一种字母为 Q 的纯召唤眼球怪），假装记不住怎么拼写它的人所用的戏称。(注：Cuddlywug 意为毛绒玩具)
+
+<color:keyword>diving</color>: 下潜 / 速降；指快速推进到高深度的游戏方式；与刷怪 (grinding) 相反。
+
+<color:keyword>DSM</color>: 龙鳞甲 (Dragon Scale Mail)。<color:keyword>BDSM</color> 通常指平衡龙鳞甲 (Balance Dragon Scale Mail)，但在上下文中也可以意会 :)
+
+<color:keyword>easily</color>: 简简单单 / 随随便便；也作 <color:keyword>just easily</color>。通常用于形容某件非常困难或危险的事，特别是需要极大运气或在短期内根本行不通的事（带反讽意味）。“随随便便就把诺登斯杀了”；“随随便便就找到凛吉尔冰剑了”；“随随便便就能从产卵坑拿到 BDSM 甲”。
+
+<color:keyword>fix</color>: 修复。改进东西，让东西变得更好，修复问题；绝对不是“搞坏”的同义词，绝对不是 (狗头)。
+
+<color:keyword>glhfdd</color>: 祝好运、玩开心、别暴毙 (Good luck, have fun, don't die)；对其他玩家表达良好祝愿的用语。
+
+<color:keyword>grinding</color>: 刷怪 / 十里坡剑神；在进入更危险区域之前，旨在通过积累经验和战利品使角色变强的缓慢、细致的游玩方式；与速降下潜相反。
+
+<color:keyword>hat</color>: 极品帽子 / 头盔；一顶帽子、王冠或头盔；特别是指极其强大的神器，比如安珀之冠 (Crown of Amber) 或龙族黄金冠 (Golden Crown of Dragonkind)。
+
+<color:keyword>Hugostyle</color>/<color:keyword>Hugo-style</color>: 雨果流 / Hugo 流；一种以早期超高近战伤害、快速升级并在荒野中度过大量时间为特征的游玩风格；引申指任何类似于雨果流的角色。以该风格的主要倡导者玩家 Hugo 命名。
+
+<color:keyword>Indy</color>/<color:keyword>Indy's whip</color>: 印第安纳琼斯的长鞭 (Indy's whip)；在“我讨厌蛇！”任务中找到的神器。“如果你早期没找到任何像样的武器，就去把蛇坑任务做了拿 Indy 鞭子。”
+
+<color:keyword>J</color>/<color:keyword>the J</color>: J / 混沌之龙；因为代码里巨蛇/巨龙是用字母 J 表示的。指 Angband 地下城的最终 Boss，你必须杀死它才能赢得游戏。“今晚去干翻 J 吗？”
+
+<color:keyword>loot</color>: 极品战利品；1) 发现的所有物品和金钱。2) 一件特别有价值的物品；值得捡起来的物品。“别忘了把山姆的帽子捡起来，那可是极品战利品。”
+
+<color:keyword>LOS</color>: 视线 (Line of sight)，指玩家或怪物的视线范围。LOS 法术：影响视线内所有目标的效果。
+
+<color:keyword>mild inconvenience</color>: 轻微的不便；指没有被描述为“最糟”的情况，因为秘密守卫 (keepers of secrets) 才是最糟的。
+
+<color:keyword>mut</color>: 突变 (mutation)。
+
+<color:keyword>nerf</color>: 削弱；在游戏开发的语境下，使某事物变弱。加强 (buff) 的反义词。“观光客太强了，需要被削弱。”
+
+<color:keyword>OOD</color>: 跨级 / 越级生成 (Out of depth)。
+
+<color:keyword>OP</color>: Oppy / 超模 (overpowered)；极度强大，以至于为了游戏平衡很可能应该被削弱。通常用于评价你终于拿来拿到首胜的任何职业或种族。<color:o>OPLotharang:</color> 洛萨兰战斧，一件极其变态的神器。
+
+<color:keyword>PD</color>: 相位之门 (Phase Door)。
+
+<color:keyword>post-game</color>: 终局后内容；在杀死混沌之龙赢得游戏后的游玩内容；一旦杀死了它就会变得可访问的游戏部分。
+
+<color:keyword>pot</color>: 药水 (potion)。
+
+<color:keyword>quythulg</color>: Quylthulg，真正记不住怎么拼的人写的。
+
+<color:keyword>randart</color>: 随机神器 (Random artifact)。
+
+<color:keyword>resist hole</color>: 漏抗 (Resist hole)；缺乏特定抗性的状况，特别是指大部分或所有其他抗性都齐备的强大角色身上缺了那么一项。“带着暗和虚空漏抗去打奈比罗斯 (Nebiros)，真是头铁。”
+
+<color:keyword>rfe</color>: 请求增强 (Request for enhancement)；对 FrogComposband 提出特定修改的严肃或阴阳怪气的请求。“RFE：增加一个新突变，给个固定几率直接传送到这一层最深 DL 的怪脸前。”
+
+<color:keyword>rip</color>: 安息 / 暴毙 (Rest In Peace)；引申为死亡。“RIP 我”；“奥伯龙 RIP”；“观光客超模 RIP”；“啊啊，刚刚在 J 面前又暴毙了”。
+
+<color:keyword>Scroll of Disappointment</color>: 失望卷轴 (Scroll of Disappointment)；讽刺的是招财获取卷轴 (Scroll of Acquirement)。
+
+<color:keyword>statstick</color>: 属性棍/白板撑三围；一件物品（特别是近战或远程武器），作为实际打怪武器来说不太好，但能提供宝贵的抗性或属性加成。“灵魂剑 (Soulsword) 是把极棒的属性棍。”
+
+<color:keyword>swap item</color>: 换装/备用装备；不经常装备，但放在背包里，在需要时可以临时装备（以获得特定抗性、增加速度或伤害等）的物品。“我带着纳雅 (Narya) 当换装，以防遇到炎魔暗金怪。”
+
+<color:keyword>tag</color>: 踩点 / 开门；非常短暂地访问一个地下城，仅仅是为了在那里建立一个归城回忆点。
+
+<color:keyword>telefail</color>: 传送失败；尝试使用传送卷轴、传诵法杖或其他自身传送手段失败的情况。玩家死亡的一个常见原因。
+
+<color:keyword>TO</color>: 传送其他 (Teleport Other) 法术。“把召唤物 TO 走，轻轻松松杀格劳龙 (Glaurung)。”
+
+<color:keyword>trickshot</color>: 盲狙 / 诡射；玩家或怪物对视线外目标造成伤害的攻击。
+
+<color:keyword>V</color>: 原版 Angband (Vanilla Angband)；Angband 原作，以此与其他变体区分。
+
+<color:keyword>wargs</color>: 那个全是座狼的任务（即狼骑士任务）。“你应该早点做 wargs 任务。” 同理，<color:keyword>thieves</color> 指代盗贼藏身处，<color:keyword>snakes</color> 指代“我讨厌蛇！”，<color:keyword>mimics</color> 指代宝箱怪的财宝等。
+
+<color:keyword>the worst</color>: 最糟糕的事物；用于固定搭配 <color:o>秘密守卫是最糟的 (keepers of secrets are the worst)</color>，表示秘密守卫 (战锤里的 Slaanesh 大魔) 确实是角色能遇到的最恶心的东西。除此之外用来表示某个东西很烦人、很危险或是有点麻烦，但不是字面意义上最糟糕的，因为秘密守卫才是。
+
+<color:D>
+最初版     : FrogComposband 7.1.liquorice
+更新       : FrogComposband 7.1.salmiak
+</color>

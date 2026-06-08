@@ -1,0 +1,291 @@
+<style:note>注意：虽然在介绍界面按下 <color:keypress>?</color> 会把你带到这里，而且本页面确实对游戏的大部分内容进行了简要概述，但它并不是整个帮助系统的主页面。如果你想访问 FrogComposband 帮助的其他部分，请按 <color:keypress>!</color>。</style>
+
+<topic:CreateAt><style:title>创建角色</style>
+
+FrogComposband 是一款角色扮演游戏，在游戏中，你（玩家）将控制一个角色，置身于一个充满神话与魔法的危险世界，这里居住着恶魔、龙、神明、鸭子以及末世中其他稀有而奇怪的生物。在你要去斩杀<color:keyword>混沌之蛇 (Serpent of Chaos)</color>的征途中，你要做的最重要的决定就是扮演什么类型的角色：是施展法术的魔法师，还是挥舞利剑的战士？是隐秘潜行的盗贼，还是奏响乐曲的吟游诗人？是神圣的牧师，还是邪恶的混沌之子？游戏提供了无数种选择，本帮助文件将详细介绍创建新角色的过程，同时这也将作为向你介绍游戏许多核心概念的指南。
+
+角色创建（或称“出生 / birth”）由一系列的选择来控制。你必须选择角色的种族（<color:keyword>人类</color>、<color:keyword>矮人</color>、<color:keyword>霍比特人</color>、<color:keyword>食人魔</color>、<color:keyword>吸血鬼</color>、<color:keyword>狼人</color>等）、职业（<color:keyword>战士</color>、<color:keyword>法师</color>、<color:keyword>牧师</color>、<color:keyword>律师</color>等）以及性格（<color:keyword>强壮</color>、<color:keyword>精明</color>、<color:keyword>混沌</color>、<color:keyword>分裂</color>等）。每一个选择都在帮助文件中有详细描述（参见 <link:raceclass_contents.txt>）。
+
+角色创建过程主要包含三个界面。第一个是简短的欢迎界面，在此你将选择要玩的游戏类型（<color:keyword>游戏模式</color>）。下一个界面允许你选择或更改角色的种族、职业、性别、性格以及名字。最后一个界面则用于分配你的初始属性。我们将详细介绍每一个界面，并在过程中进行解释。准备好了吗？
+
+<topic:Welcome><style:heading>欢迎界面</style>
+第一个界面是欢迎界面。它简单地向你介绍了游戏，并允许你选择几个控制角色创建过程的选项之一。它看起来大概是这样的：
+<style:screenshot>  <indent>
+欢迎来到 <color:R>FrogComposband</color>，一款地下城探索角色扮演游戏。
+你的目标是击败可怕的<color:R>混沌之蛇</color>，但在面对它之前，你必须战胜
+许多敌人。你的第一步是为这个任务创建一个角色。接下来的界面
+将引导你完成这个过程，以便你能快速开始游戏。你可以随时按
+<color:o>?</color> 获取一般性帮助。
+                                                                                
+首先，你必须决定要玩哪种类型的游戏。<color:R>新手模式 (Beginner)</color> 限制
+了可用选项，为新玩家简化了流程。
+                                                                                
+ <color:G>选择要玩的游戏类型</color>                                                
+  <color:y>b</color>) 新手模式 (Beginner)                                                          
+  <color:y>n</color>) 正常模式 (Normal)                                                            
+  <color:y>m</color>) 怪物模式 (Monster)                                                           
+                                                                                
+  <color:y>=</color>) 选项 (Options)                                                             
+  <color:y>?</color>) 帮助 (Help)                                                                
+  <color:y>s</color>) 查看高分榜 (View Scores)                                                   
+<color:y>ESC</color>) <color:v>退出 (Quit)</color>                                                                
+                                                                                
+<color:G>提示:</color> 你通常可以通过输入命令的大写字母来获取特定帮助。例如，               
+      在此界面输入 <color:o>B</color> 以获取有关新手模式的帮助。
+</indent></style>
+
+如果你是游戏的新手，不妨考虑<color:keyword>新手模式 (Beginner)</color>。选择此选项后，你不会像往常那样被铺天盖地的选择所淹没，从而让你能够轻松完成角色创建过程，并快速开始游玩（并享受）这款游戏。一旦你玩过几次，想要体验游戏提供的更多内容，包括探索拥有广阔荒野和各种各样地下城的世界，以及体验全部种族、职业和性格选择的组合，那么你应该选择<color:keyword>正常模式 (Normal)</color>。
+
+如果你真的足够大胆，你可以尝试<color:keyword>怪物模式 (Monster)</color>选项，它允许你扮演许多不同类型的怪物。怪物没有职业，但随着经验的增加，它们会进化成更强大的形态。它们往往还具有不同的身体部位构造，使得装备子系统变得既有趣又更具挑战性。
+
+在此界面上还可能有一个<color:keyword>快速开始 (Quick Start)</color>选项。该选项只是简单地重复你上一个角色（大概率刚遭遇了不幸）的创建选择。如果你在游戏前期经常死亡，这是一个非常有用的选项，因为它极大地加快了重新建卡的速度。
+
+<topic:RaceClass><style:heading>种族/职业界面</style>
+在这个界面上，你可以更改角色的种族、职业以及（除非你选择了新手模式）性格。界面看起来大概如下：
+<style:screenshot>  <indent>
+名字 : <color:B>Fatty Bolger</color>                    <color:o>游戏速度:</color> <color:v>茶歇模式    </color>
+性别 : <color:B>男性</color><color:d>                </color> STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp
+性格 : <color:B>普通    </color><color:d>            </color> <color:G> +0</color><color:r>  </color><color:G> +0</color><color:r>  </color><color:G> +0</color><color:r>  </color><color:v> +0</color><color:r>  </color><color:G> +0</color><color:r>  </color><color:G> +0</color><color:r>  100%       100%</color>       
+种族 : <color:B>霍比特人</color><color:d>            </color> <color:G> -2</color><color:r>  </color><color:G> +1</color><color:r>  </color><color:G> +1</color><color:r>  </color><color:v> +3</color><color:r>  </color><color:G> +2</color><color:r>  </color><color:G> +1</color><color:r>   92%  +14  120%</color>       
+职业 : <color:B>盗贼 </color><color:d>               </color> <color:G> +2</color><color:r>  </color><color:G> +1</color><color:r>  </color><color:G> -1</color><color:r>  </color><color:v> +3</color><color:r>  </color><color:G> +1</color><color:r>  </color><color:G> +1</color><color:r>  100%  +12  125%</color>       
+魔法 : <color:B>行窃    </color><color:d>           </color><color:R>== +0</color><color:r>  </color><color:R> +2</color><color:r>  </color><color:R> +0</color><color:r>  </color><color:v> +6</color><color:r>  </color><color:R> +3</color><color:r>  </color><color:R> +2</color><color:r>  </color><color:R> 92%  +26  150%</color>
+<color:d>                           </color>                                                     
+  <color:y>n</color>) 更改名字<color:d>                 </color> <color:y>  *</color>) 随机名字                                 
+  <color:y>s</color>) 更改性别<color:d>                 </color> <color:y>  ?</color>) 帮助                                        
+  <color:y>p</color>) 更改性格<color:d>                 </color> <color:y>  =</color>) 选项                                     
+  <color:y>r</color>) 更改种族<color:d>                 </color> <color:y>TAB</color>) 更多信息                                   
+  <color:y>c</color>) 更改职业<color:d>                 </color> <color:y>RET</color>) 下一屏                                 
+  <color:y>m</color>) 更改魔法<color:d>                 </color> <color:y>ESC</color>) 上一屏                                 
+  <color:y>g</color>) 更改游戏速度<color:d>             </color>
+<color:d>                              </color>                                                  
+<color:G>提示:</color> 你通常可以通过输入命令的大写字母来获取特定帮助。例如，               
+      在此界面输入 <color:o>R</color> 以获取当前所选种族的帮助。
+</indent></style>
+那么，我们看到了什么？首先，<color:B>蓝色</color>的字段是你可以在此界面上更改的选项。默认选择已经填好（且足以进行游戏），但你可能希望更改它们并做出自己的选择。你的性别基本上只是一种背景调剂，几乎没有游戏性影响（选项仅限于男性和女性，但至少游戏足够前卫，提供了在游戏过程中转换性别的方法！）。然而，你可以做出的其他选择要重要得多：你的<color:keyword>种族</color>、<color:keyword>职业</color>、<color:keyword>性格</color>以及<color:keyword>魔法领域</color>（如果有的话）将构成你角色的核心。
+
+右侧是一个表格，显示了关于你当前种族、职业和性格选择将提供的属性加成和其他修正的信息。每个角色都有六个基本能力值，称为<color:keyword>属性 (stats)</color>，它们对游戏进行非常重要；寻找提高属性的方法将是你在游戏中的主要实际目标之一。这六个基本属性是：力量 (STR)、智力 (INT)、感知 (WIS)、敏捷 (DEX)、体质 (CON) 和魅力 (CHR)；有关详细信息，请参阅下面的 <link:birth.txt#PrimaryStats>。你角色的施法属性（如果有）以<color:v>紫色</color>显示；对于魔法职业来说，这是一个非常重要的属性，因为它决定了角色施放法术的能力，通常你希望它越高越好。
+
+在下一个界面上，你将为这个角色选择初始属性，你选择的数值将被表格中显示的修正值所调整。表格的最后一行是总计行，很好地总结了你各种创建选择的累积效果。正是这一行中的值将被加到你的初始属性上。
+
+表格中的其他字段包括：
+  <color:keyword>Life</color>: <indent>生命乘数 (Life Multiplier)。这个值乘以你的最大生命值 (HP)。生命值代表你角色的健康状况；如果你的生命值降至零以下，你就会死亡，游戏结束！关于如何计算最大生命值的更多信息，请参阅 <link:faq.txt#LifeRating>。</indent>
+  <color:keyword>BHP</color>:  <indent>基础生命值 (Base Hit Points) 的缩写，这是一个加到你初始生命值中的固定数值，旨在让游戏前期稍微容易一些。</indent>
+  <color:keyword>Exp</color>:  <indent>经验系数 (Experience Factor) 的缩写，这个百分比决定了你的角色升级的快慢。（所有玩家都从 1 级开始，最高可升至 50 级。提高等级会增加生命值、提高技能、获得更强大法术的访问权限，并且还可能提供其他效果或加成。）</indent>
+
+除了属性，你的玩家角色还有技能（参见下面的 <link:birth.txt#PrimarySkills>）。例如，你的近战 (Melee) 技能决定了你在肉搏战中击中怪物的能力。和属性一样，这些技能也受你的角色创建选项影响，并显示在此界面和下一界面的信息表中；但是，由于屏幕宽度有限，你需要使用 <color:keypress>TAB</color> 键来切换视图：
+<style:screenshot>  <indent>
+名字 : <color:B>Fatty Bolger</color>                    <color:o>游戏速度:</color> <color:v>茶歇模式    </color>
+性别 : <color:B>男性</color><color:d>              </color>    解除陷阱   魔法装置   豁免       潜行                                                             
+性格 : <color:B>普通    </color><color:d>          </color>    <color:o>一般      </color> <color:o>一般      </color> <color:o>一般      </color> <color:o>一般      </color>                                                       
+种族 : <color:B>霍比特人</color><color:d>            </color>    <color:g>极佳      </color> <color:y>很好      </color> <color:y>良好      </color> <color:g>极佳      </color>                                                       
+职业 : <color:B>盗贼 </color><color:d>             </color>    <color:G>优秀      </color> <color:G>优秀      </color> <color:o>一般      </color> <color:y>很好      </color>                                                       
+魔法 : <color:B>行窃    </color><color:d>          </color> <color:R>== </color><color:g>极佳      </color> <color:g>极佳      </color> <color:y>良好      </color> <color:b>英雄      </color>                                                       
+</indent></style>
+再次按下 <color:keypress>TAB</color>：
+<style:screenshot>  <indent>
+名字 : <color:B>Fatty Bolger</color>                    <color:o>游戏速度:</color> <color:v>茶歇模式    </color>
+性别 : <color:B>男性</color><color:d>              </color>    搜索       察觉       近战       箭术                                                             
+性格 : <color:B>普通    </color><color:d>          </color>    <color:o>一般      </color> <color:o>一般      </color> <color:o>一般      </color> <color:o>一般      </color>                                                       
+种族 : <color:B>霍比特人</color><color:d>            </color>    <color:b>英雄      </color> <color:g>极佳      </color> <color:r>糟糕      </color> <color:y>很好      </color>                                                       
+职业 : <color:B>盗贼 </color><color:d>             </color>    <color:o>一般      </color> <color:o>一般      </color> <color:G>优秀      </color> <color:y>很好      </color>                                                       
+魔法 : <color:B>行窃    </color><color:d>          </color> <color:R>== </color><color:y>良好      </color> <color:y>良好      </color> <color:y>很好      </color> <color:G>优秀      </color>                                                       
+</indent></style>
+啊，我们看到霍比特人不太擅长近战。然而，选择盗贼作为职业足以弥补这一点，我们可以从总计行看出，这个角色的近战技能会相当不错。通常来说，职业对技能的影响大于种族和性格，尤其是在游戏后期（随着等级的提升，你也会获得技能加成，但这主要是通过职业获得的）。这个规则的主要例外是潜行 (Stealth)，那里的职业加成往往为零。
+
+在玩家字段和信息表下方是你可能选择的命令列表。这些命令可能会调出一个菜单供你选择，例如“更改种族 (Change Race)”命令：
+<style:screenshot>  <indent>
+名字 : <color:B>Fatty Bolger</color>                    <color:o>游戏速度:</color> <color:v>茶歇模式    </color>
+性别 : <color:B>男性</color><color:d>              </color>    搜索       察觉       近战       箭术                                                             
+性格 : <color:B>普通    </color><color:d>          </color>    <color:o>一般      </color> <color:o>一般      </color> <color:o>一般      </color> <color:o>一般      </color>                                                       
+种族 : <color:B>霍比特人</color><color:d>            </color>    <color:b>英雄      </color> <color:g>极佳      </color> <color:r>糟糕      </color> <color:y>很好      </color>                                                       
+职业 : <color:B>盗贼 </color><color:d>             </color>    <color:o>一般      </color> <color:o>一般      </color> <color:G>优秀      </color> <color:y>很好      </color>                                                       
+魔法 : <color:B>行窃    </color><color:d>          </color> <color:R>== </color><color:y>良好      </color> <color:y>良好      </color> <color:y>很好      </color> <color:G>优秀      </color>                                                       
+<color:d>                           </color>                                                     
+<color:G>选择要扮演的种族分类</color>                                                   
+  <color:y>a</color>) 人类 (Human)                                                                      
+  <color:y>b</color>) 精灵 (Elf)                                                                        
+  <color:y>c</color>) 霍比特人/矮人 (Hobbit/Dwarf)                                                               
+  <color:y>d</color>) 妖精 (Fairy)                                                                      
+  <color:y>e</color>) 天使/恶魔 (Angel/Demon)                                                                
+  <color:y>f</color>) 兽人/巨魔/巨人 (Orc/Troll/Giant)                                                            
+  <color:y>g</color>) 变形者 (Shapeshifter)                                                               
+  <color:y>h</color>) 不死生物 (Undead)                                                                     
+  <color:y>i</color>) 其他 (Other)                                                                      
+  <color:y>*</color>) 随机 (Random)                                                                     
+</indent></style>
+或者，命令可能会立即生效，就像“更改性别”命令一样。或者，如果你使用“更改名字”命令，你可以直接在原位编辑角色的名字：
+<style:screenshot>  <indent>
+名字 : <color:y>Skinny Dipper</color>                   <color:o>游戏速度:</color> <color:v>茶歇模式    </color>
+性别 : <color:B>男性</color><color:d>              </color>    搜索       察觉       近战       箭术                                                             
+性格 : <color:B>普通    </color><color:d>          </color>    <color:o>一般      </color> <color:o>一般      </color> <color:o>一般      </color> <color:o>一般      </color>                                                       
+种族 : <color:B>霍比特人</color><color:d>            </color>    <color:b>英雄      </color> <color:g>极佳      </color> <color:r>糟糕      </color> <color:y>很好      </color>                                                       
+职业 : <color:B>盗贼 </color><color:d>             </color>    <color:o>一般      </color> <color:o>一般      </color> <color:G>优秀      </color> <color:y>很好      </color>                                                       
+魔法 : <color:B>行窃    </color><color:d>          </color> <color:R>== </color><color:y>良好      </color> <color:y>良好      </color> <color:y>很好      </color> <color:G>优秀      </color>                                                       
+<color:d>                           </color>                                                     
+  <color:y>n</color>) 更改名字<color:d>                 </color> <color:y>  *</color>) 随机名字                                 
+  <color:y>s</color>) 更改性别<color:d>                 </color> <color:y>  ?</color>) 帮助                                        
+  <color:y>p</color>) 更改性格<color:d>                 </color> <color:y>  =</color>) 选项                                     
+  <color:y>r</color>) 更改种族<color:d>                 </color> <color:y>TAB</color>) 更多信息                                   
+  <color:y>c</color>) 更改职业<color:d>                 </color> <color:y>RET</color>) 下一屏                                 
+  <color:y>m</color>) 更改魔法<color:d>                 </color> <color:y>ESC</color>) 上一屏                                 
+  <color:y>g</color>) 更改游戏速度<color:d>             </color>
+<color:d>                              </color>                                                  
+<color:G>提示:</color> 你通常可以通过输入命令的大写字母来获取特定帮助。例如，               
+      在此界面输入 <color:o>R</color> 以获取当前所选种族的帮助。
+</indent></style>
+更改<color:keyword>游戏速度</color>并不会直接影响你的角色；相反，它决定了你希望体验的游戏类型。选项包括<color:keyword>正常模式 (normal)</color>（带有荒野的完整游戏）、<color:keyword>茶歇模式 (coffee-break)</color>（没有荒野的加速游戏）和<color:keyword>速溶模式 (instant-coffee)</color>（极度加速的游戏）。在新手模式中无法选择游戏速度，该模式总是强制使用茶歇模式。
+
+当你对角色的选择感到满意时，按 <color:keypress>RET</color> 进入下一个界面。你随时可以按 <color:keypress>ESC</color> 后退并进行修改，所以尽情尝试吧。
+
+<topic:Stats><style:heading>属性界面</style>
+在这个界面上，你将分配你的初始属性。你可以通过为每个属性分配点数来实现；你总共有 30 点可以使用，不过你可以通过向你完全不在乎的属性分配负点数来获得一些额外的点数。非常高的初始属性需要消耗更多点数。默认情况下，游戏会尝试猜测一个合理的分配方案，如果你是新玩家，你可能只需要使用默认值即可。
+
+这是一个示例界面：
+<style:screenshot>  <indent>
+名字 : <color:B>Fatty Bolger</color>                    <color:o>游戏速度:</color> <color:v>茶歇模式    </color>
+性别 : <color:B>男性</color><color:d>                </color> STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp        
+性格 : <color:B>普通    </color><color:d>            </color> <color:G> +0</color><color:r>  </color><color:G> +0</color><color:r>  </color><color:G> +0</color><color:r>  </color><color:v> +0</color><color:r>  </color><color:G> +0</color><color:r>  </color><color:G> +0</color><color:r>  100%       100%</color>       
+种族 : <color:B>霍比特人</color><color:d>            </color> <color:G> -2</color><color:r>  </color><color:G> +1</color><color:r>  </color><color:G> +1</color><color:r>  </color><color:v> +3</color><color:r>  </color><color:G> +2</color><color:r>  </color><color:G> +1</color><color:r>   92%  +14  120%</color>       
+职业 : <color:B>盗贼 </color><color:d>               </color> <color:G> +2</color><color:r>  </color><color:G> +1</color><color:r>  </color><color:G> -1</color><color:r>  </color><color:v> +3</color><color:r>  </color><color:G> +1</color><color:r>  </color><color:G> +1</color><color:r>  100%  +12  125%</color>       
+魔法 : <color:B>行窃    </color><color:d>           </color><color:R>== +0</color><color:r>  </color><color:R> +2</color><color:r>  </color><color:R> +0</color><color:r>  </color><color:v> +6</color><color:r>  </color><color:R> +3</color><color:r>  </color><color:R> +2</color><color:r>  </color><color:R> 92%  +26  150%</color>
+<color:d>                           </color>                                                     
+<color:G>输入你的初始属性</color><color:d>                </color>                                                
+         基础 点数 修正 总计<color:d>  </color>                                                
+<color:y>s</color>/<color:y>S</color>) STR   16   10  <color:R> +0</color>     16<color:d>  </color> <color:y>  n</color>) 更改名字                               
+<color:y>i</color>/<color:y>I</color>) INT   16   10  <color:R> +2</color>     18<color:d>  </color> <color:y>  ?</color>) 帮助                                      
+<color:y>w</color>/<color:y>W</color>) WIS    9   -2  <color:R> +0</color>      9<color:d>  </color> <color:y>  =</color>) 选项                                   
+<color:y>d</color>/<color:y>D</color>) DEX   16   10  <color:R> +6</color>  18/40<color:d>  </color> <color:y>TAB</color>) 更多信息                                 
+<color:y>c</color>/<color:y>C</color>) CON   14    3  <color:R> +3</color>     17<color:d>  </color> <color:y>RET</color>) <color:v>开始游戏</color>                                
+<color:y>r</color>/<color:y>R</color>) CHR   10   -1  <color:R> +2</color>     12<color:d>  </color> <color:y>ESC</color>) 上一屏                               
+               <color:G> 30</color><color:d>              </color>                                                
+<color:d>                                </color>                                                
+<color:G>注意: </color>你可以使用指示的按键调整每个初始属性。小写字母减少，大写字          
+      母增加初始值。属性值可以从 8 到 17 不等，你输入的每个值都会
+      消耗指示的点数。你只有 30 点可用，因此请务必重点调整那些
+      最重要的属性。
+</indent></style>
+按照说明进行更改。如果你的点数总计超过 30，开始游戏的选项将被禁用，直到你降低你的总消耗。准备好后，按 <color:keypress>ENTER</color> 开始游戏！
+
+<topic:WhatsNext><style:heading>接下来去哪？</style>
+此时你可以开始玩了。使用帮助系统（<color:keypress>?</color>）来学习基本命令。你可能还希望阅读一些额外的帮助文件，如<link:general.txt>一般信息文档或<link:tang.txt>新手指南；它们详细解释了你将面临什么挑战，并包含了帮助你入门的提示。除了这些，游戏内帮助中还有更多内容，但你可能并不想一开始就把自己埋在 500 页的文档里！
+
+<topic:CharAttributes><style:heading>角色能力/属性概述</style>
+在游戏过程中（甚至在角色创建过程中），你会看到许多不同的数值，它们被用来衡量或决定你角色的相对技能和能力。以下是一个简要概述：
+
+  <indent><color:B>基础属性 (Statistics/Stats)</color>
+每个角色有六个基础属性。它们是力量、智力、感知、敏捷、体质和魅力，它们在很多方面影响着角色的能力。例如，力量影响你的负重能力、你击中怪物时造成的伤害，以及你每回合武器攻击的次数。有关基础属性的更多详细信息，请参阅下文的 <link:birth.txt#PrimaryStats>。
+</indent>
+  <indent><color:B>经验 (Experience - EXP/XP)</color>
+经验几乎影响着你角色的所有其他方面。经验主要通过击杀怪物获得，但也可以通过首次施放法术、解除陷阱或解锁门来获得。某些职业还可以通过摧毁特定的地下城法术书来获得经验，地下城中也有药水可以喝下来增加你的经验。人造人 (Android) 种族遵循其自身独特的经验规则。
+
+当你的角色经验跨越某些固定的界限时，你将获得新的<color:keyword>角色等级</color>（最高可达 50 级）。发生这种情况时，你的生命值上限、法力池（如果有）和主要技能都会增加；你还可能获得新的力量或能力，或者能够提升你选择的某个基础属性。角色升级所需的经验界限取决于上述的“经验系数”。
+
+某些怪物可以“吸取”你的经验，从而可能降低你的角色等级。幸运的是，你可以通过魔法手段、城镇服务，或者简单地重新赚取这些经验来恢复被吸走的经验。
+</indent>
+  <indent><color:B>金币 (Gold - AU)</color>
+每个角色开始时都带有一些金币，可用于在城镇的商店和其他建筑中购买物品和服务。更多的金币可以通过将物品卖给商店、从死去的怪物尸体上搜刮、挖掘矿脉或简单地在地下城地板上捡取来获得。
+</indent>
+  <indent><color:B>生命值 (Hit Points - HP)</color>
+每个角色都有生命值，代表角色在死亡前能承受多少伤害。你的 HP 上限取决于你的角色等级、种族、职业、性格、体质、装备和生命乘数，并且可以通过魔法暂时提升；有关详细解释，请参阅 <link:faq.txt#LifeRating>。失去的生命值可以通过休息或各种魔法手段来恢复。
+</indent>
+  <indent><color:B>法力值 (Spell Points - SP/Mana)</color>
+许多角色拥有法力值（或称魔法点数），这代表他们可以施放多少次法术。你的法力池取决于你的角色等级、职业、职业的主要施法属性，以及由于穿戴过重盔甲等来源造成的任何惩罚（见 <link:magic.txt#CastingSpells>）。失去的法力值可以通过休息或魔法手段来恢复。
+</indent>
+  <indent><color:B>技能 (Skills)</color>
+每个角色有几项主要技能：解除陷阱、使用魔法装置、豁免、潜行、搜索、察觉、近战和箭术（弓/投掷）。这些技能源自角色的种族、职业、性格、基础属性、等级和魔法装备。下文对这些技能有更详细的描述（见 <link:birth.txt#PrimarySkills>）。
+</indent>
+  <indent><color:B>速度 (Speed)</color>
+速度是一个极其重要的能力。速度系统有些复杂；但基本上，一个人的速度越快（无论是你还是怪物），与其他所有人相比，他获得回合行动的频率就越高。如果你真的很慢，敌人可能在你只行动一次的时间里行动四次、五次甚至六次，这显然非常不妙——但是当你获得更多速度并能扭转局势时，难道不有趣吗？
+
+失去速度非常容易：只要携带超过你力量能轻松负担的物品即可。但要提高速度，你通常需要魔法，无论是法术或药水的形式，还是带有附魔的装备（如<color:keyword>速度之靴 Boots of Speed</color>）的形式。速度药水对游戏前期的玩家非常有用，在面对那些看起来过于强大的敌人（尤其是任务怪物和楼层守卫者！）时，你应该毫不吝啬地使用它们。随着你潜入更深的地下城，你很快就会发现普通的未附魔速度是不够的；即使你有一大管血，如果你的对手相比你来说太快了，你仍可能在没机会采取任何行动的情况下满血暴毙。
+</indent>
+<topic:PrimaryStats><style:heading>基础属性详解</style>
+每个角色有六个基础属性（力量、智力、感知、敏捷、体质和魅力），它们在不同方面调整角色的能力。每个属性都有一个数值，从最小的 3 到临界点 18，超过这个值后，它会进入一个以分数表示的范围，从 <color:keyword>18/01</color> 到 <color:keyword>18/220</color>；18/220 是最大值，通常显示为 <color:keyword>18/***</color>。在这种表示法中，18/10 相当于新玩家凭直觉可能认为是 19 的值，18/20 相当于 20 等等；但表示法的切换明确表明 18 是一个临界点，超过这个点后，永久属性增益来源的运作方式将非常不同。
+
+在游戏过程中，你的属性可以通过魔法手段、完成困难任务的奖励，或获得足够经验升至关键等级的奖励来提升。最终，你的属性将达到其内在的最大值（或称<color:keyword>属性上限 / stat cap</color>），这是角色创建时随机选择的 18/70 到 18/130 之间的某个值。此时，你的种族、职业和性格修正、魔法装备，以及可能存在的其他来源（如奇特的变异），将决定能否进一步将你的属性提升至 18/*** 的极限。
+
+你的<color:keyword>主属性</color>（或<color:keyword>施法属性</color>）决定了你的法术失败率和法力池的大小，并且如果你是一个读书施法者，它还决定了你可以学习多少法术。作为一般规则，如果你的施法属性降至 7 或以下，你的法力将会完全耗尽。
+
+哪些属性重要因角色而异，但实际上每个人都需要过得去的力量和智力，而体质随着游戏的进行变得越来越有价值。近战角色需要敏捷，而魔法使用者最需要的则是他们的施法属性。请相应地分配你的点数！
+
+  <indent><color:B>力量 (STR)</color>
+力量对于在近战和使用远程武器有效战斗至关重要。高力量会增加你近战武器每回合的攻击次数，增加每次命中的伤害，允许你使用更重的武器而不受惩罚，并略微提高你的命中率。力量对于挖掘隧道、破门以及携带重物而不被减速也非常有用。许多近战职业，如重槌兵 (Maulers)、狂战士 (Berserkers) 和武器大师 (Weaponmasters)，使用力量作为他们的主属性。</indent>
+
+  <indent><color:B>智力 (INT)</color>
+聪明的角色更擅长使用魔法装置、撬锁和解除陷阱。智力还影响角色从经验中学习的速度。智力是类似法师的施法者常见的主施法属性。</indent>
+
+  <indent><color:B>感知 (WIS)</color>
+充满智慧的角色拥有更高的豁免判定，这让他们有更好的机会抵抗邪恶的诅咒和麻痹。感知还会影响出现楼层感知 (level feelings) 和物品感知 (object feelings) 的速度。感知是类似牧师的职业常见的主施法属性。</indent>
+
+  <indent><color:B>敏捷 (DEX)</color>
+敏捷是身体灵活性和反应速度的结合。高敏捷可以让你在武器攻击时获得更多攻击次数，从而大大提高近战伤害；它还可以提高任何武器的命中率，并通过让你躲避敌人的攻击直接影响你的 AC（护甲等级）。敏捷对于撬锁、解除陷阱以及保护自己免受居住在地下城中的小偷的伤害也很有用。敏捷是许多职业的施法属性，包括默认选择的行窃 (Burglary) 领域盗贼。</indent>
+
+  <indent><color:B>体质 (CON)</color>
+体质是角色抵抗身体损伤的能力。高体质的角色会获得更多的生命值，并能更快地从受伤和震慑 (stunning) 状态中恢复。血骑士 (Blood-Knights) 使用体质作为他们的主属性。</indent>
+
+  <indent><color:B>魅力 (CHR)</color>
+魅力代表一个角色的个性和意志力。高魅力的角色会在商店获得更优惠的价格，所有魅惑效果在高魅力下效果更好。此外，魅力还用于决定玩家和怪物的恐惧程度；低魅力的玩家经常被吓坏，有时甚至会陷入瘫痪状态（见 <link:status.txt#Fear>）！相反，具有个人魅力的玩家可以更容易地击溃敌人的士气。一些职业，如吟游诗人 (Bards) 和咒术师 (Sorcerers)，使用魅力作为他们的主施法属性。</indent>
+
+<topic:PrimarySkills><style:heading>技能</style>
+这些属性通常主要基于你的职业，但也会受到你的种族、性格、基础属性和装备的影响。它们通常（但不总是）随角色等级而提升：
+
+  <indent><color:B>近战 (Melee)</color>
+近战技能非常简单，就是你在肉搏战中（无论是持械还是徒手）的命中率基准线。力量和敏捷会提升这项技能，你还可以通过装备上的战斗加成进一步提高你的命中率。这项技能随角色等级提升而增加，除了咒术师，他们无一例外地完全不擅长近战。</indent>
+
+  <indent><color:B>箭术 (Archery)</color>
+这项技能通常同时适用于使用远程发射武器和投掷抛射物，尽管在某些情况下可能会应用不同的计算。和近战技能一样，箭术技能是你的命中率基准线；但极高的箭术技能也可以提高你的射击速度，并降低弹药在撞击时破损的几率。力量和敏捷可以提升你的箭术，尽管这种提升只影响你的命中率，不包括上述的额外好处。除了狂战士和咒术师之外，所有角色的箭术都会随着角色等级自然提升。</indent>
+
+  <indent><color:B>豁免 (Saving Throw)</color>
+豁免是你的角色抵抗怪物对你施放的法术效果的能力。最常见的情况是，当法术涉及某种针对你或你的装备的诅咒时，就会进行豁免判定。豁免还能帮你抵抗麻痹，尽管你还需要行动自由 (Free Action) 来防范它！这项技能随等级自然提升——但在高等级时你也会遇到更恶毒的诅咒……豁免受感知影响。</indent>
+
+  <indent><color:B>潜行 (Stealth)</color>
+无声移动的能力非常有用。潜行能力好的角色通常能让对手大吃一惊，获得先发制人的机会（或完全避开战斗的机会），而潜行能力低的角色一旦唤醒附近的每个人，就会被敌人围攻。潜行通常不随角色等级提升，而只取决于你的种族、职业、性格和装备。新玩家应该高度重视潜行；你处理怪物群的经验越少，你就越不应该主动把它们引来。</indent>
+
+  <indent><color:B>解除陷阱 (Disarming)</color>
+解除陷阱是（安全地）移除陷阱的能力，包括撬开箱子和门上的锁。成功解除陷阱会为角色获得一些经验。陷阱必须先被找到才能被解除。敏捷和智力都影响解除陷阱技能，这项技能也随角色等级提升。</indent>
+
+  <indent><color:B>使用魔法装置 (Magic Device Skill)</color>
+使用魔法装置需要经验和知识，像法师这样天生的施法者往往比近战职业更擅长此道。装置技能是所有技能中最重要的，尤其是在游戏末期；尽管你的职业决定了你装置技能的大部分，但来自种族和性格的加成也很重要，单纯是因为这项技能本身太重要了。装置技能受智力影响，并随角色等级提升。</indent>
+
+  <indent><color:B>察觉 (Perception / 搜索频率)</color>
+<color:B>搜索 (Searching / 搜索能力)</color>
+这两项技能关系非常密切。两者都能帮助你注意到暗门、地板上的陷阱和箱子上的陷阱；当你主动寻找时，“搜索”会起作用，而“察觉”可能允许你在不主动寻找的情况下注意到它们。搜索还能提高你看破隐形怪物的能力。这些技能基于你的种族、职业、性格和装备，通常不随角色等级提升。</indent>
+
+<topic:Abilities><style:heading>额外能力</style>
+
+像基础属性和技能一样，这些额外能力帮助你的角色生存和探索。它们可能受到你的种族、职业或性格的影响，但只在少数例外情况下发生（除了红外视觉，它主要基于你的种族）。因此，这些能力在角色创建过程中并没有被显着显示，但它们确实在游戏中发挥着作用！
+
+  <indent><color:B>生命回复 (Regeneration)</color>
+回复能力决定了你恢复失去的生命值和法力值的速度。它通常只受魔法效果或装备影响，而不受种族或职业影响，尽管也有例外（例如安珀人 Amberites、熊人 Beornings、狼人 Werewolves 和英灵战士 Einherjar 回复得异常快）。如果你中了影响回复的邪恶诅咒，或者遭受了减慢回复的丑陋变异，那种痛苦会很快找上你……</indent>
+
+  <indent><color:B>红外视觉 (Infravision)</color>
+红外视觉是看到热源的能力。由于地下城往往很凉或很冷，红外视觉不能让你的角色看到墙壁或物品，但确实允许你在一定距离内探测到温血生物。无论有没有光源，红外视觉的效果都一样好。许多怪物是冷血的，因此无法被红外视觉探测到，但特别是在游戏前期（此时温血怪物更常见，且经常缺乏识破隐形的能力时），红外视觉可以发挥很大作用。大多数非人类种族都有某种天生的红外视觉，任何种族也都可以从魔法装备中获得红外视觉。</indent>
+
+  <indent><color:B>挖掘 (Digging)</color>
+这种能力允许你更有效地挖掘宝藏和开辟新隧道。它受力量、魔法装备、镐和铲等挖掘工具以及你的武器/挖掘工具的重量（重型武器更适合挖掘）影响。挖掘通常不受种族、职业或性格影响，虽然这里也有例外；例如，律师非常擅长挖掘。</indent>
+
+<topic:BirthOptions><style:heading>角色创建选项 (Birth Options)</style>
+在创建角色的过程中，你可以随时按 '=' 来访问角色创建选项，除非你选择了<color:keyword>新手模式 (Beginner Mode)</color>，该模式会为你分配几乎默认的选项。受欢迎的创建选项包括<color:keyword>茶歇模式 (coffee-break mode)</color>，它加速了游戏（但移除了荒野）；<color:keyword>无买卖模式 (no selling)</color>，增加了地下城的金币掉落，但阻止玩家出售物品换钱；以及<color:keyword>无属性打乱 (no scrambling)</color>，它移除了游戏中备受争议的属性打乱 (Stat Scrambling) 机制，并用一种邪恶但争议较小的弱效邪恶诅咒 (Baby Foul Curse) 来代替它。还有几十种其他的创建选项，有些同样很受欢迎，有些则非常小众；有关每个选项的详细解释，请参阅 <link:option.txt#Birth>。</indent>
+
+<topic:Reference><style:heading>附录与参考</style>
+
+<topic:BeginnerMode><style:keyword>新手模式 (Beginner Mode)</style>  <indent>专为新玩家设计，该模式极大地限制了你可以选择的种族和职业。此外，它从角色创建过程中移除了<color:keyword>性格 (Personality)</color>选项，自动为你分配“普通 (Ordinary)”性格（这绝对没有任何游戏内影响）。创建选项选择（<color:keypress>=</color>）也被禁用以加快角色创建速度；你将使用自动分配的、基本是默认的选项进行游戏。在新手模式下，<color:keyword>effective_speed</color> 显示选项（“将速度显示为能量乘数”）默认开启，因为它使速度值的含义对新玩家来说更清晰。最后，此选项迫使玩家在<color:keyword>茶歇模式 (coffee-break mode)</color>下进行游戏，该模式会加速游戏进程，消除荒野，并将特殊的精简城镇 (Lite-Town) 作为唯一的城镇。由于向上的楼梯不会在茶歇模式中生成，新手开始时会带有额外的回城卷轴 (Word of Recall)，这样他们（希望）就不会被困在地下城里。</indent>
+
+<topic:NormalMode><style:keyword>正常模式 (Normal Mode)</style>    <indent>这是标准的游玩方式：可以说是体验游戏的毫无保留的完整内容。所有种族和职业都可供选择，甚至包括那些可能还在开发中、尚未经过全面测试的。玩家可以访问创建选项和性格子系统。在这里，你可以（如果你愿意的话！）在一个拥有众多地下城和城镇供你探索的广阔地表荒野中游玩。</indent>
+
+<topic:MonsterMode><style:keyword>怪物模式 (Monster Mode)</style>   <indent>此模式允许玩家扮演怪物而不是正常角色。没有职业可供选择；相反，种族（以及亚种族）的选择决定了你扮演的怪物类型，并实际上同时构成了你的种族和职业。这里有很多选项可供选择，包括一些非常滑稽搞怪的选项！大多数怪物形态都会从弱小形态进化为更强大的形态（例如从森林巨魔进化为火巨魔等）；许多形态还具有独特的身体构造（例如索尔怪 Xorn 有两副完整的手臂，最多可以挥舞四把近战武器）。此外，大多数怪物种族都有一个首领，将其击杀后会掉落一件精美的神器。但游戏的目标依然不变：杀死<color:keyword>混沌之蛇</color>。</indent>
+
+<topic:QuickStart><style:keyword>快速开始 (Quick Start)</style>    <indent>一旦现有角色死亡，你可以从同一个存档创建一个新角色。如果是这样，你将获得这个额外选项；选择快速开始，你将获得一个全新角色，其种族、职业、选项和性格与你上一个角色完全相同。由于在游戏前期死亡是家常便饭，快速开始可以帮你省去一次又一次进行相同选择的繁琐。</indent>
+
+<topic:CharacterName><style:keyword>名字 (Character Name)</style> <indent>在角色创建过程中，你可以更改角色的名字。这个名字将用于你的存档文件（除非你在一个现有的、已经命名的存档内创建了这个角色），以及你可能设置的任何选项和偏好。所以请慎重选择你的名字。正如你可能想象的那样，改名是一个复杂的法律过程，涉及大量的文书工作（以及一笔不菲的费用）。如果你将来决定更改名字，请在乌尔德里克伯爵 (Count Uldrik) 的城堡中询问，他会指导你如何进行。</indent>
+
+<color:D>
+Original : (??)
+Updated  : (??)
+Updated  : Zangband DevTeam
+Updated  : Hengband 1.5.2
+Updated  : PosChengband 1.0.0
+Updated  : PosChengband 4.0.0
+Updated  : PosChengband 5.0.3
+Updated  : FrogComposband 7.1.liquorice
+</color>

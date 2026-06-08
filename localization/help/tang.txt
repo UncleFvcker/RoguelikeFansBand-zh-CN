@@ -1,0 +1,763 @@
+<style:title>新手指南 (The Newbie Guide)</style>
+
+欢迎来到 <color:keyword>FrogComposband</color>！本指南将试图为你提供一个快速的游戏概述，并引导你踏上斩杀可怕的“混沌之蛇 (Serpent of Chaos)”的征途。
+
+<topic:Overview><style:heading>概述 (Overview)</style>
+
+FrogComposband 是一款单人角色扮演游戏，在游戏中，你作为勇敢的冒险者，试图通过击败邪恶的怪物（最终包括<color:keyword>混沌之蛇</color>）来拯救（或征服？）世界。道路漫长且充满险恶。许多人曾尝试过却失败了，地下城里到处散落着自命不凡的英雄们的骸骨，他们被黑暗神明、巨龙、恶魔或者（在一个极不光彩的案例中）一只绵羊给宰了。你有获得成功所需的潜质吗？
+
+<topic:CreatingACharacter><style:heading>创建角色 (Creating a Character)</style>
+
+你的第一步将是创建你的角色。由于你是游戏的新手，你可能希望在初始提示时选择 <color:keyword>新手模式 (Beginner Mode)</color>。这将大大限制角色创建过程的复杂性，并激活<color:keyword>茶歇模式 (coffee-break mode)</color>——这是一种快节奏的游戏版本，具有加速的升级机制并且没有荒野大地图。在玩了几个角色以了解游戏玩法后，你可以在 <color:keyword>普通模式 (Normal Mode)</color> 下开始一个新角色，以查看所有选项并允许荒野探索。放宽心，反正你的第一个角色也不可能通关的！
+
+在新手模式下，游戏将引导你完成角色的创建。你可以参考 <link:birth.txt#CreateAt> 获取更详细的信息，但基本流程是你将选择一个性别、一个种族、一个职业以及你的初始属性。虽然你的性别（对游戏机制来说）并不重要，但你的种族，尤其是你的职业，是决定后续一切的关键。
+
+在新手模式下不要为种族选择太伤脑筋——所有经典的新手模式种族都相当强大，虽然他们的优势和劣势各不相同，但他们中的任何一个都能相当不错地胜任任何职业。<color:keyword>克拉克人 (Klackons，一种蚁人)</color> 是一个极其强大的种族；他们天生自带速度加成，并且天生免疫混乱（新玩家经常死于混乱！）。另一个稍微不那么大众化的选择是<color:keyword>狼人 (werewolf)</color>：你会获得改变形态的能力，甚至会影响你拥有哪些装备槽。狼人在魔法方面有些糟糕，所以对于初学的法师来说，这可能不是理想的（或者至少不是最契合背景设定的）选择。
+
+<topic:ClassPick><color:U>职业选择</color>
+
+通常情况下，游戏有大量（多到压倒性？）的选择，提供了无数多样化的游玩风格，甚至要花上一段时间才能搞清楚到底有哪些选项可用。现在，我们将考虑几种基本的方法来让你起步。
+
+最简单的风格（尤其是在游戏早期！）是“平砍/砍杀 (Hack and Slash)”，这就是<color:keyword>战士 (warrior)</color>的本质。如前所述，几乎任何种族都能成为一名优秀的战士，但如果你想在这方面加倍投入，你可以选择成为一名半巨魔 (Half-Troll)。需要警告的是：巨魔既丑陋又愚蠢，更别提有多不受欢迎了；店主们不愿意把东西卖给像你这么丑的人，所以你在购买补给时会有些困难。你可以通过大开杀戒来弥补这一点，反正这样也更有趣！战士的关键属性包括力量 (STR)、敏捷 (DEX) 和体质 (CON)；但如果你在游戏早期幸存下来，你也会需要一些智力 (INT)，因为即使是战士偶尔也需要使用魔法装置。
+
+另一种风格是采取潜行策略，扮演一名<color:keyword>盗贼 (rogue)</color>或一名<color:keyword>忍者 (ninja)</color>。这两个职业在近战中都相当强大，并将这与一些额外能力结合起来：忍者在升级时会获得特殊的<color:keyword>忍术 (ninjutsu)</color>技能，而盗贼则可以选择一个<color:keyword>魔法领域 (magical realm)</color>。“咒术 (Sorcery)”对任何角色来说都是一个强大的领域选择，但也有一种专门为盗贼设计的特殊选项：“行窃 (Burglary)”。行窃不仅是一个强大的领域，它还允许你做一些有趣的事情，比如设置陷阱和扒窃！盗贼和忍者的关键属性都包括力量和敏捷；但是不修“行窃”领域的盗贼也应该投资智力，因为这是他施法的主要属性。
+
+或者你可以全身心投入魔法，扮演一名<color:keyword>法师 (mage)</color>。魔法需要一些时间才能变强，而且法师在游戏早期非常脆弱，所以这条路线需要你多一点耐心。我建议选择“混沌 (Chaos)”或“毁灭 (Armageddon)”作为你的主要魔法领域，并选择“咒术 (Sorcery)”作为你的次要领域；混沌和毁灭为你提供了杀死怪物所需的良好攻击性，而咒术则提供了优秀的实用法术。法师的关键属性是智力，但你也会需要不错的力量，这仅仅是为了能背得动你找到的所有好东西。
+
+<topic:PersonalityPick><color:U>性格选择</color>
+
+所以你直接跳到了<color:keyword>普通模式</color>并且还需要选择一个性格 (personality)？
+
+你可以选择它们中的大多数，但有几个你可能应该<color:keyword>避免</color>选择。“懒惰 (Lazy)”和“脆弱 (Fragile)”是纯粹的挑战向性格，所以选择它们会让你本已陡峭的发展曲线变得更加陡峭。“性感 (Sexy)”听起来很吸引人，但往往会给新手带来痛苦。“混沌 (Chaotic)”和“精神分裂 (Split)”是非常狂野的体验；你可能想从一些更平静的性格开始。“龙傲天 (Munchkin)”是一个故意破坏平衡的上帝般性格，所以不要选它。最后，除非你的职业是像战士或武器匠这样的纯战斗职业，否则请避免选择“平庸 (Mundane)”。其余的任何性格你都应该能应付得来。
+
+许多新玩家确实会直接选择普通模式；但在本指南的大部分内容中，我们将假设你坚持使用了<color:keyword>新手模式</color>。这不仅让游戏保持简单，也让解释变得更简单！
+
+<topic:EquippingForDanger><style:heading>为危险整装待发 (Equipping for Danger)</style>
+
+一旦你完成了出生过程，你会发现自己置身于地表的城镇中。因为你选择了<color:keyword>新手模式</color>，所以只有一个地下城，而且没有荒野可供探索。你大部分的冒险时间都将在地下城中度过（如果你能活着的话！），但你需要定期返回地表购买和出售装备、完成城镇任务，并在你的家中存放或拾取物品。当你开始时，你会拥有一些根据你的职业而有所不同的初始装备，大部分应该已经为你装备好了。你还有少量的金币，可以用它们来补充你的补给，以应对第一次踏入险境的旅程。
+
+那么，你第一眼看到了什么？
+<style:screenshot>
+
+<color:U>#</color><color:g>.</color><color:G>#</color><color:g>..</color><color:U>#</color><color:s>.</color><color:U>##</color><color:s>.</color><color:U>######</color><color:s>.</color><color:U>##</color><color:b>~~</color><color:U>####</color><color:G>#</color><color:g>.</color><color:s>...</color><color:g>.</color><color:G>#</color><color:U>####</color><color:b>~~</color><color:U>##########################</color><color:b>~</color><color:r>.</color><color:s>.</color> LEVEL <color:G>     1</color>
+<color:U>#</color><color:g>....</color><color:U>#</color><color:s>.</color><color:U>##</color><color:s>.</color><color:U>######</color><color:s>.</color><color:U>##</color><color:b>~~~~~</color><color:g>...</color><color:s>...</color><color:g>...</color><color:b>~~~~~</color><color:U>##</color><color:s>.....................</color><color:U>###</color><color:b>~</color><color:r>.</color><color:s>.</color> EXP <color:G>      23</color>
+<color:U>##</color><color:g>.</color><color:G>#</color><color:g>.</color><color:U>#</color><color:s>.</color><color:U>#</color><color:v>+</color><color:s>....</color><color:U>#</color><color:B>+</color><color:U>#</color><color:s>.</color><color:U>###</color><color:b>~~~~~~~</color><color:s>...</color><color:b>~~~~~~~~</color><color:U>##</color><color:s>.</color><color:U>#########</color><color:s>.</color><color:U>#########</color><color:s>.</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color> AU  <color:G>     907</color>
+<color:U>###</color><color:g>..</color><color:U>#</color>.<color:U>##</color><color:s>.......</color>.<color:U>##########</color><color:s>...</color><color:U>##########</color><color:s>.</color><color:U>#########</color><color:s>.</color><color:U>#########</color><color:s>.</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color> <color:W>|</color><color:d>       </color><color:U>(</color><color:d>   </color>
+<color:U>###</color><color:g>.</color><color:G>#</color><color:U>#</color>.<color:s>.........</color>..<color:U>#########</color><color:s>...</color><color:U>#########</color><color:s>..</color><color:U>####</color><color:s>2</color><color:U>####</color><color:s>.</color><color:U>#########</color><color:s>.</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color> STR : <color:G> 18/10</color>
+<color:g>4</color><color:U>###</color><color:g>.</color><color:U>#</color>..<color:s>..</color><color:U>###</color><color:s>..</color>.........<color:U>###</color>..<color:s>.</color><color:U>###</color><color:s>............................</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color> INT : <color:G>    18</color>
+<color:s>.</color><color:U>#</color>+<color:U>#</color><color:g>.</color><color:U>#</color>..<color:s>.</color><color:U>#####</color><color:s>.</color>..............<color:s>...................</color><color:U>######</color><color:s>..</color><color:U>####</color><color:s>.</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color> WIS : <color:G>     7</color>
+<color:s>.</color><color:g>....</color><color:U>#</color>...<color:U>#####</color>................<color:s>..................</color><color:U>###</color><color:y>8</color><color:U>##</color><color:s>..</color>3<color:U>###</color><color:s>.</color><color:U>###</color><color:b>~</color><color:r>.</color><color:s>.</color> DEX : <color:G> 18/40</color>
+<color:s>.</color><color:U>#####</color>....<color:U>#</color><color:B>+</color><color:U>#</color>.................<color:s>..................</color><color:g>...</color><color:s>.</color><color:U>##</color><color:s>..</color><color:U>####</color><color:s>.</color><color:U>###</color><color:b>~</color><color:r>.</color><color:s>.</color> CON : <color:G>    18</color>
+<color:s>..</color>.........................<color:U>f</color>...<color:s>..............................</color><color:U>###</color><color:b>~</color><color:r>.</color><color:s>.</color> CHR : <color:G>    12</color>
+<color:s>.....</color>..........................<color:s>....................................</color> AC     <color:G>    6</color>
+<color:s>........</color>..................<color:U>##</color><color:r>6</color><color:U>##</color><color:s>........</color><color:U>##</color><color:v>++</color><color:U>####</color><color:s>....</color><color:U>###+####</color><color:s>..</color><color:U>###</color><color:b>~</color><color:r>.</color><color:s>.</color> HP <color:G>  43</color>/<color:G>  43</color>
+<color:s>.......</color><color:U>###</color>.@.............<color:U>#######</color><color:s>......</color><color:U>##########</color><color:s>...</color><color:U>########</color><color:s>..</color><color:U>###</color><color:b>~</color><color:r>.</color><color:s>.</color> SP <color:G>  14</color>/<color:G>  14</color>
+<color:s>......</color><color:U>####</color><color:v>></color>..............<color:U>#######</color><color:s>.....</color><color:U>###</color><color:s>....</color><color:U>#####</color><color:s>..</color><color:U>########</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color>             
+<color:U>#</color><color:s>....</color><color:U>#######</color>.............<color:U>#######</color><color:s>.....</color><color:v>+</color><color:U>#</color><color:s>......</color><color:U>##+</color><color:s>......</color><color:U>#####</color><color:s>..</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color>             
+<color:U>1</color><color:s>....</color><color:U>#######</color>..............<color:U>#####</color><color:s>......</color><color:v>+</color><color:U>#</color><color:s>......</color><color:U>##+</color><color:s>.....</color><color:r>.</color><color:U>#####</color><color:s>..</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color>             
+<color:U>#</color><color:s>.....</color><color:U>#####</color><color:s>..</color>............<color:U>#######</color><color:s>.....</color><color:U>###</color><color:s>....</color><color:U>#####</color><color:r>.</color><color:s>..</color><color:U>#######</color><color:s>.</color><color:r>.</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color>             
+<color:U>#</color><color:s>......</color><color:U>###</color><color:s>...</color>............<color:o>+</color><color:U>#####</color><color:B>+</color><color:s>...</color><color:r>.</color><color:s>..</color><color:U>##########</color><color:s>....</color><color:U>#######</color><color:s>..</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color>             
+<color:s>.............</color>............<color:U>#######</color><color:s>....</color><color:r>..</color><color:s>.</color><color:U>##</color><color:v>++</color><color:U>####</color><color:s>.</color><color:r>..</color><color:s>.</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color>             
+<color:U>#</color><color:s>..</color><color:U>##</color><color:b>5</color><color:U>##</color><color:s>..</color><color:U>#####+#####</color>.....<color:s>............</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>....</color><color:r>..</color><color:G>#</color><color:U>#</color><color:s>.</color><color:U>##</color><color:D>7</color><color:G>#</color><color:U>##</color><color:G>#</color><color:s>..</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color>             
+<color:U>#</color><color:s>.</color><color:U>#######</color><color:s>.</color><color:U>##########</color><color:o>9</color><color:s>..</color>..<color:g>.....</color><color:s>......</color><color:U>##</color><color:G>0</color><color:U>##</color><color:s>.</color><color:U>###</color><color:r>.</color><color:U>#</color><color:G>#</color><color:U>###</color><color:s>.</color><color:U>#######</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color> <color:B>Study (1)</color>   
+<color:U>#</color><color:s>..</color><color:U>#####</color><color:s>..</color><color:U>###########</color><color:s>....</color><color:g>.</color><color:G>#</color><color:g>.</color><color:G>#</color><color:g>.</color><color:s>......</color><color:U>#####</color><color:s>.</color><color:U>###</color><color:r>.</color><color:U>#####</color><color:r>.</color><color:U>#######</color><color:s>..</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color>             
+<color:s>.........................</color><color:U>##</color><color:v>M</color><color:U>##</color><color:s>...........</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>..</color><color:r>..</color><color:s>..</color><color:r>.</color><color:s>......</color><color:r>.</color><color:s>.</color><color:r>.</color><color:U>##</color><color:b>~~</color><color:r>.</color><color:s>.</color>             
+<color:U>################################################################</color><color:b>~</color><color:r>.</color><color:s>.</color>             
+<color:U>################################################################</color><color:b>~</color><color:r>.</color><color:s>.</color>             
+Outpost                                                                         
+</style>
+首先，屏幕左侧那个 @ 符号就是你。另外，那些 <color:U>#</color> 字符是墙壁，你可以看到它们构成了各种商店的建筑形状。每栋建筑都有一个数字或 '+' 字符代表其入口；只需移动到那个方格上就可以进入。每个数字代表一种不同类型的商店。你可以使用小键盘按键四处移动，并使用 <color:keypress>l</color> 或 <color:keypress>*</color> 命令配合小键盘按键环顾四周。（如果你没有小键盘，你可能应该通过 <color:keypress>=</color> 选项菜单开启 roguelike 键位布局；当你需要对角线移动时，仅仅依靠四个方向键会非常痛苦。）那个 <color:U>f</color> 是一个怪物，你应该使用 <color:keypress>*</color> 瞄准检查命令看看它是否有威胁：
+<style:screenshot> <indent>
+Monster: a Scrawny cat [r,q,t,p,o,x,j,+,-,?,<dir>]
+Name    : <color:B>Scrawny cat</color> (<color:U>f</color>)
+Level   : <color:G>Town</color><color:d>      </color>Speed: +0 <color:o>A Bit Erratic</color>
+AC      : <color:y>?</color><color:d>         </color>Type : <color:G>Natural</color>
+HP      : <color:y>?</color><color:d>         </color>
+<color:d>                    </color>
+Attacks : <color:y>?</color>
+
+Kills   : <color:G>0</color>
+Exp     : <color:G>0</color> at CL1
+
+一只长着锋利爪子、面露凶相的瘦小毛球。
+</indent></style>
+嗯，你可能不需要担心这只小猫咪。
+
+
+注意屏幕右下角的 <color:B>Study (1)</color>，这表明你可以学习一个新法术。如果你正在扮演法师，学习法术（按 <color:keypress>G</color> 获取法术）应该是你的首要任务；但在 1 级时，你只能学习一个，所以要让它发挥作用。我建议你先学习“魔法飞弹 (Magic Missile)”，前提是你听从了我的建议选择了混沌领域——作为法师，你真的需要用魔法来杀敌，所以你的第一个法术必须是具有攻击性的。稍后，当你更有经验时，你可以从咒术领域选择“探测怪物 (Detect Monsters)”。要施展法术，使用魔法命令 (<color:keypress>m</color>) 并按照提示操作。并非每个职业都能立刻学习法术；例如，不修“行窃”领域的盗贼必须达到角色等级 5 (CL5) 才能学习他们的第一个法术。
+
+接下来，你应该去买点装备。我建议买些逃生手段，比如炼金店 (<$:FF_ALCHEMY_SHOP>) 里的“传送卷轴”或“相位之门卷轴”。此外，你会想要圣殿 (<$:FF_TEMPLE>) 里的<color:B>治疗重伤药水 (Potions of Cure Serious Wounds)</color>。如果你扮演的是盗贼，试着从武器匠 (<$:FF_WEAPON_SMITHS>) 那里买一把投石索 (sling) 和一些弹药（卵石或弹丸），以及一个箭袋 (quiver) 来装你刚买的弹药。当你进入商店时，你会看到一份库存清单，以及一份可以使用的命令列表；只需按照说明进行购买即可。
+<style:screenshot> <indent>
+          Eddie Beast-Master (Snotling)           Weapon Smiths (25000)
+
+   Item Description                                         Weight      Price
+a) <color:o>?</color> <color:u>2 Books of Kendo [Yagyuu Bugeichou]</color>                       3.0  <color:D>     1510  </color>
+b) <color:W>|</color> a Dagger (1d5) (+1,+2)                                    1.2        230
+c) <color:W>|</color> a Bastard Sword (3d5) (+0,+0)                            14.0        720
+d) <color:y>/</color> a Trident (1d10) (+0,+0)                                  7.0  <color:D>      267  </color>
+e) / a Broad Spear (1d11) (+3,+2)                             10.0  <color:D>      926  </color>
+f) <color:u>}</color> <color:u>a Sling (x2) (+0,+0)</color>                                      0.5         54
+g) <color:U>}</color> <color:u>a Short Bow (x2.50) (+0,+0)</color>                               3.0        122
+h) <color:s>}</color> <color:u>2 Light Crossbows (x3.50) (+0,+0)</color>                        11.0        489
+i) <color:s>{</color> <color:U>26 Bolts (3d5) (+0,+0)</color>                                    0.3          3
+j) <color:s>{</color> <color:U>36 Rounded Pebbles (2d3) (+0,+0)</color>                          0.4          2
+k) <color:s>{</color> <color:U>16 Iron Shots (3d3) (+0,+0)</color>                               0.5          3
+
+Gold Remaining: <color:y>907</color>
+
+<color:keypress>b</color> 购买。 <color:keypress>s</color> 出售。 <color:keypress>x</color> 检查物品信息。
+<color:keypress>B</color> 买空当前库存。 <color:keypress>S</color> 刷新进货。 <color:keypress>R</color> 预订一件物品。
+<color:keypress>Esc</color> 退出。 <color:keypress>?</color> 帮助。
+</indent></style>
+买下东西后，它会被加入你的背包。使用 <color:keypress>i</color> 命令查看你的背包：
+<style:screenshot>
+<color:G>Inventory</color> <color:b>|</color> <color:D>Equipment</color>                                                           
+ a) <color:o>?</color> <color:u>a Thieves' Guide [Burglar's Handbook]</color>                  3.0 lb LEVEL <color:G>     1</color>
+ b) <color:U>,</color> <color:U>5 Rations of Food</color>                                      5.0 lb EXP <color:G>      23</color>
+ c) ? 2 Scrolls of Teleportation                             1.0 lb AU  <color:G>     805</color>
+ d) ? a Scroll of Word of Recall                             0.5 lb <color:W>|</color><color:d>      </color><color:u>~</color><color:U>(</color><color:d>   </color>
+ e) <color:u>~</color> <color:y>2 Wooden Torches (with 2500 turns of light)</color>            6.0 lb STR : <color:G> 18/10</color>
+ f) <color:u>}</color> <color:u>a Sling (x2) (+0,+0)</color>                                   0.5 lb INT : <color:G>    18</color>
+ g) <color:s>{</color> <color:U>16 Iron Shots (3d3) (+0,+0)</color>                            8.0 lb WIS : <color:G>     7</color>
+                                                          <color:R>  24.0 lb</color> DEX : <color:G> 18/40</color>
+Carrying 36.2 pounds (<color:G>27%</color> capacity).                                CON : <color:G>    18</color>
+                                                                    CHR : <color:G>    12</color>
+<color:y>Examine which item </color>(<color:o>Esc</color> to exit)<color:y>?</color>                                   AC     <color:G>    6</color>
+                                                                    HP <color:G>  43</color>/<color:G>  43</color>
+<color:s>....................................</color>............................... SP <color:G>  14</color>/<color:G>  14</color>
+<color:s>............................</color><color:U>##</color><color:r>6</color><color:U>##</color><color:s>....</color>....<color:U>##</color><color:v>++</color><color:U>####</color>....<color:U>###+####</color>..<color:U>###</color><color:b>~</color>             
+<color:s>.........</color><color:U>###</color><color:s>...............</color><color:U>#######</color><color:s>......</color><color:U>##########</color><color:s>...</color><color:U>########</color><color:s>..</color><color:U>###</color><color:b>~</color>             
+<color:s>........</color><color:U>####</color><color:v>></color><color:s>..............</color><color:U>#######</color><color:s>.....</color><color:U>###</color><color:s>....</color><color:U>#####</color><color:s>..</color><color:U>########</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>....</color><color:U>#######</color><color:s>.............</color><color:U>#######</color><color:s>.....</color><color:v>+</color><color:U>#</color><color:s>......</color><color:U>##+</color><color:s>......</color><color:U>#####</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:U>##1</color><color:s>....</color><color:U>#######</color><color:s>..............</color><color:U>#####</color><color:s>......</color><color:v>+</color><color:U>#</color><color:s>......</color><color:U>##+</color><color:s>.....</color><color:r>.</color><color:U>#####</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>.....</color><color:U>#####</color><color:s>..............</color><color:U>#######</color><color:s>.....</color><color:U>###</color><color:s>....</color><color:U>#####</color><color:r>.</color><color:s>..</color><color:U>#######</color><color:s>.</color><color:r>.</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>......</color><color:U>###</color><color:s>...............</color><color:o>+</color><color:U>#####</color><color:B>+</color><color:s>...</color><color:r>.</color><color:s>..</color><color:U>##########</color><color:s>....</color><color:U>#######</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:s>...........................</color><color:U>#######</color><color:s>....</color><color:r>..</color><color:s>.</color><color:U>##</color><color:v>++</color><color:U>####</color><color:s>.</color><color:r>..</color><color:s>.</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color> <color:B>Study (1)</color>   
+<color:U>###</color><color:s>..</color><color:U>##</color><color:b>5</color><color:U>##</color><color:s>..</color><color:U>#####+#####</color><color:s>.................</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>....</color><color:r>..</color><color:G>#</color><color:U>#</color><color:s>.</color><color:U>##</color><color:D>7</color><color:G>#</color><color:U>##</color><color:G>#</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>.</color><color:U>#######</color><color:s>.</color><color:U>##########</color><color:o>9</color><color:s>....</color><color:g>.....</color><color:s>......</color><color:U>##</color><color:G>0</color><color:U>##</color><color:s>.</color><color:U>###</color><color:r>.</color><color:U>#</color><color:G>#</color><color:U>###</color><color:s>.</color><color:U>#######</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>..</color><color:U>#####</color><color:s>..</color><color:U>###########</color><color:s>....</color><color:g>.</color><color:G>#</color><color:g>.</color><color:G>#</color><color:g>.</color><color:s>......</color><color:U>#####</color><color:s>.</color><color:U>###</color><color:r>.</color><color:U>#####</color><color:r>.</color><color:U>#######</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:s>...........................</color><color:U>##</color><color:v>M</color><color:U>##</color><color:s>...........</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>..</color><color:r>..</color><color:s>..</color><color:r>.</color><color:s>......</color><color:r>.</color><color:s>.</color><color:r>.</color><color:U>##</color><color:b>~~</color>             
+Outpost
+</style>
+就我而言，我买了一把投石索和一些铁弹丸；不幸的是，没有箭袋在售。（每种类型的远程武器都使用相应类型的弹药；卵石和弹丸配投石索。箭矢配弓，弩箭配弩，所以那些在这里帮不了我！）现在，投石索呆在我的背包里没有任何用处：我需要装备它，这通过 <color:keypress>w</color> 命令来完成。如果我按 <color:keypress>e</color> 检查我的装备槽，它现在就会显示出来：
+<style:screenshot>
+<color:D>Inventory</color> <color:b>|</color> <color:G>Equipment</color>                                                           
+ a) <color:W>|</color> Right Hand: a Dagger (1d5) (+0,+0)                     1.2 lb LEVEL <color:G>     1</color>
+ b)   Left Hand :                                                   EXP <color:G>      23</color>
+ c) <color:u>}</color> Shooting  : <color:u>a Sling (x2) (+0,+0)</color>                       0.5 lb AU  <color:G>     805</color>
+ d)   Quiver    :                                                   <color:W>|</color><color:d> </color><color:u>}</color><color:d>    </color><color:u>~</color><color:U>(</color><color:d>   </color>
+ e)   Right Ring:                                                   STR : <color:G> 18/10</color>
+ f)   Left Ring :                                                   INT : <color:G>    18</color>
+ g)   Neck      :                                                   WIS : <color:G>     7</color>
+ h) <color:u>~</color> Light     : <color:y>a Wooden Torch (with 2439 turns of ligh</color>    3.0 lb DEX : <color:G> 18/40</color>
+ i) <color:U>(</color> Body      : <color:s>Soft Leather Armour [4,+0]</color>                 8.0 lb CON : <color:G>    18</color>
+ j)   Cloak     :                                                   CHR : <color:G>    12</color>
+ k)   Head      :                                                   AC     <color:G>    6</color>
+ l)   Hands     :                                                   HP <color:G>  43</color>/<color:G>  43</color>
+ m)   Feet      :                                                   SP <color:G>  14</color>/<color:G>  14</color>
+                                                          <color:R>  12.7 lb</color>             
+Carrying 36.2 pounds (<color:G>27%</color> capacity).                                            
+                                                                                
+<color:y>Examine which item </color>(<color:o>Esc</color> to exit)<color:y>?</color>                                               
+                                                                                
+<color:U>###</color><color:s>.....</color><color:U>#####</color><color:s>..............</color><color:U>#######</color><color:s>.....</color><color:U>###</color><color:s>....</color><color:U>#####</color><color:r>.</color><color:s>..</color><color:U>#######</color><color:s>.</color><color:r>.</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>......</color><color:U>###</color><color:s>...............</color><color:o>+</color><color:U>#####</color><color:B>+</color><color:s>...</color><color:r>.</color><color:s>..</color><color:U>##########</color><color:s>....</color><color:U>#######</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:s>...........................</color><color:U>#######</color><color:s>....</color><color:r>..</color><color:s>.</color><color:U>##</color><color:v>++</color><color:U>####</color><color:s>.</color><color:r>..</color><color:s>.</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color> <color:B>Study (1)</color>   
+<color:U>###</color><color:s>..</color><color:U>##</color><color:b>5</color><color:U>##</color><color:s>..</color><color:U>#####+#####</color><color:s>.................</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>....</color><color:r>..</color><color:G>#</color><color:U>#</color><color:s>.</color><color:U>##</color><color:D>7</color><color:G>#</color><color:U>##</color><color:G>#</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>.</color><color:U>#######</color><color:s>.</color><color:U>##########</color><color:o>9</color><color:s>....</color><color:g>.....</color><color:s>......</color><color:U>##</color><color:G>0</color><color:U>##</color><color:s>.</color><color:U>###</color><color:r>.</color><color:U>#</color><color:G>#</color><color:U>###</color><color:s>.</color><color:U>#######</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>..</color><color:U>#####</color><color:s>..</color><color:U>###########</color><color:s>....</color><color:g>.</color><color:G>#</color><color:g>.</color><color:G>#</color><color:g>.</color><color:s>......</color><color:U>#####</color><color:s>.</color><color:U>###</color><color:r>.</color><color:U>#####</color><color:r>.</color><color:U>#######</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:s>...........................</color><color:U>##</color><color:v>M</color><color:U>##</color><color:s>...........</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>..</color><color:r>..</color><color:s>..</color><color:r>.</color><color:s>......</color><color:r>.</color><color:s>.</color><color:r>.</color><color:U>##</color><color:b>~~</color>             
+Outpost
+</style>
+要射击某物，只需使用 <color:keypress>f</color> 命令（在 roguelike 键位中是 <color:keypress>t</color>）发射你的弹药，按 <color:keypress>*</color> 选择目标并按 <color:keypress>5</color> 选择最近的怪物，看看你是否打中了：
+<style:screenshot>
+The Iron Shot (3d3) (+0,+0) hits the Scrawny cat. The Scrawny cat
+mewls pitifully.                                                    LEVEL <color:G>     1</color>
+<color:g>...</color><color:G>#</color><color:g>..</color><color:G>#</color><color:U>#</color><color:s>...........</color><color:U>##</color><color:b>~~</color><color:U>######+++######</color><color:b>~~</color><color:U>##########################</color><color:b>~</color> EXP <color:G>      23</color>
+<color:g>..</color><color:U>#</color><color:g>.</color><color:G>#</color><color:g>..</color><color:U>#</color><color:s>.</color><color:U>##</color><color:s>.</color><color:U>######</color><color:s>.</color><color:U>##</color><color:b>~~</color><color:U>####</color><color:G>#</color><color:g>.</color><color:s>...</color><color:g>.</color><color:G>#</color><color:U>####</color><color:b>~~</color><color:U>##########################</color><color:b>~</color> AU  <color:G>     805</color>
+<color:G>#</color><color:g>.</color><color:U>#</color><color:g>....</color><color:U>#</color><color:s>.</color><color:U>##</color><color:s>.</color><color:U>######</color><color:s>.</color><color:U>##</color><color:b>~~~~~</color><color:g>...</color><color:s>...</color><color:g>...</color><color:b>~~~~~</color><color:U>##</color><color:s>.....................</color><color:U>###</color><color:b>~</color> <color:W>|</color><color:d> </color><color:u>}</color><color:d>    </color><color:u>~</color><color:U>(</color><color:d>   </color>
+<color:g>.</color><color:U>###</color><color:g>.</color><color:G>#</color><color:g>.</color><color:U>#</color><color:s>.</color><color:U>#</color><color:v>+</color><color:s>....</color><color:U>#</color><color:B>+</color><color:U>#</color><color:s>.</color><color:U>###</color><color:b>~~~~~~~</color><color:s>...</color><color:b>~~~~~~~~</color><color:U>##</color><color:s>.</color><color:U>#########</color><color:s>.</color><color:U>#########</color><color:s>.</color><color:U>##</color><color:b>~~</color> STR : <color:G> 18/10</color>
+<color:U>#####</color><color:g>..</color><color:U>#</color><color:s>.</color><color:U>##</color><color:s>........</color><color:U>##########</color><color:s>...</color><color:U>##########</color>.<color:U>#########</color><color:s>.</color><color:U>#########</color><color:s>.</color><color:U>##</color><color:b>~~</color> INT : <color:G>    18</color>
+<color:U>#####</color><color:g>.</color><color:G>#</color><color:U>#</color><color:s>............</color><color:U>#########</color><color:s>...</color><color:U>#########</color>..<color:U>####</color><color:s>2</color><color:U>####</color><color:s>.</color><color:U>#########</color><color:s>.</color><color:U>##</color><color:b>~~</color> WIS : <color:G>     7</color>
+<color:U>##</color><color:g>4</color><color:U>###</color><color:g>.</color><color:U>#</color><color:s>....</color><color:U>###</color><color:s>.....</color>......<color:U>###</color>...<color:U>###</color>.................<color:s>...........</color><color:U>##</color><color:b>~~</color> DEX : <color:G> 18/40</color>
+<color:G>+</color><color:U>#</color><color:s>.</color><color:U>#</color>+<color:U>#</color><color:g>.</color><color:U>#</color><color:s>...</color><color:U>#####</color><color:s>....</color>..............................<color:U>######</color><color:s>..</color><color:U>####</color><color:s>.</color><color:U>##</color><color:b>~~</color> CON : <color:G>    18</color>
+<color:g>..</color><color:s>.</color><color:g>....</color><color:U>#</color><color:s>...</color><color:U>#####</color><color:s>...</color>...............................<color:U>###</color><color:y>8</color><color:U>##</color><color:s>..</color>3<color:U>###</color><color:s>.</color><color:U>###</color><color:b>~</color> CHR : <color:G>    12</color>
+<color:U>##</color><color:s>.</color><color:U>#####</color><color:s>....</color><color:U>#</color><color:B>+</color><color:U>#</color><color:s>....</color>....................@..........<color:g>...</color>.<color:U>##</color><color:s>..</color><color:U>####</color><color:s>.</color><color:U>###</color><color:b>~</color> AC     <color:G>    6</color>
+<color:s>...................</color>...........<color:s>{</color>.............................<color:s>...</color><color:U>###</color><color:b>~</color> HP <color:G>  43</color>/<color:G>  43</color>
+<color:s>....................</color>.........<color:U>f</color>.............................<color:s>........</color> SP <color:G>  14</color>/<color:G>  14</color>
+<color:s>....................</color>........<color:U>##</color><color:r>6</color><color:U>##</color>........<color:U>##</color><color:v>++</color><color:U>####</color>....<color:U>###+####</color><color:s>..</color><color:U>###</color><color:b>~</color>             
+<color:s>.........</color><color:U>###</color><color:s>...............</color><color:U>#######</color>......<color:U>##########</color><color:s>...</color><color:U>########</color><color:s>..</color><color:U>###</color><color:b>~</color> <color:U>f</color><color:R>[</color><color:v>*</color><color:R>--------]</color>
+<color:s>........</color><color:U>####</color><color:v>></color><color:s>..............</color><color:U>#######</color>.....<color:U>###</color><color:s>....</color><color:U>#####</color><color:s>..</color><color:U>########</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>....</color><color:U>#######</color><color:s>.............</color><color:U>#######</color>.....<color:v>+</color><color:U>#</color><color:s>......</color><color:U>##+</color><color:s>......</color><color:U>#####</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:U>##1</color><color:s>....</color><color:U>#######</color><color:s>..............</color><color:U>#####</color>......<color:v>+</color><color:U>#</color><color:s>......</color><color:U>##+</color><color:s>.....</color><color:r>.</color><color:U>#####</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>.....</color><color:U>#####</color><color:s>..............</color><color:U>#######</color>.....<color:U>###</color><color:s>....</color><color:U>#####</color><color:r>.</color><color:s>..</color><color:U>#######</color><color:s>.</color><color:r>.</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>......</color><color:U>###</color><color:s>...............</color><color:o>+</color><color:U>#####</color><color:B>+</color>...<color:u>.</color>.<color:s>.</color><color:U>##########</color><color:s>....</color><color:U>#######</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:s>...........................</color><color:U>#######</color>....<color:r>..</color><color:s>.</color><color:U>##</color><color:v>++</color><color:U>####</color><color:s>.</color><color:r>..</color><color:s>.</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color> <color:B>Study (1)</color>   
+<color:U>###</color><color:s>..</color><color:U>##</color><color:b>5</color><color:U>##</color><color:s>..</color><color:U>#####+#####</color><color:s>...........</color>....<color:s>..</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>.</color><color:r>.</color><color:s>....</color><color:r>..</color><color:G>#</color><color:U>#</color><color:s>.</color><color:U>##</color><color:D>7</color><color:G>#</color><color:U>##</color><color:G>#</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>.</color><color:U>#######</color><color:s>.</color><color:U>##########</color><color:o>9</color><color:s>....</color><color:g>.....</color><color:s>.</color>.....<color:U>##</color><color:G>0</color><color:U>##</color><color:s>.</color><color:U>###</color><color:r>.</color><color:U>#</color><color:G>#</color><color:U>###</color><color:s>.</color><color:U>#######</color><color:r>.</color><color:s>.</color><color:U>##</color><color:b>~~</color>             
+<color:U>###</color><color:s>..</color><color:U>#####</color><color:s>..</color><color:U>###########</color><color:s>....</color><color:g>.</color><color:G>#</color><color:g>.</color><color:G>#</color><color:g>.</color><color:s>.</color>.....<color:U>#####</color><color:s>.</color><color:U>###</color><color:r>.</color><color:U>#####</color><color:r>.</color><color:U>#######</color><color:s>..</color><color:U>##</color><color:b>~~</color>             
+<color:s>...........................</color><color:U>##</color><color:v>M</color><color:U>##</color>......<color:s>.....</color><color:r>.</color><color:s>..</color><color:r>.</color><color:s>..</color><color:r>..</color><color:s>..</color><color:r>.</color><color:s>......</color><color:r>.</color><color:s>.</color><color:r>.</color><color:U>##</color><color:b>~~</color>             
+Outpost
+</style>
+真抱歉，小猫咪！它还没死，但很快就会了。我希望你注意到几件事。首先，当你在玩游戏时，请注意<color:keyword>消息记录</color>将显示在屏幕顶部的区域。在我还是个小年轻的时候，游戏只有一行消息显示区域，而我们这些倒霉的玩家被铺天盖地的 <color:B>-more- (更多)</color> 提示折磨得痛不欲生，更不用说多按了那么多次空格键导致手指酸痛了！你现在仍然可能会时不时地遇到 <color:B>-more-</color> 提示；如果遇到了，只需在阅读完毕后按 <color:keypress>SPACE（空格键）</color>，就会显示下一批信息。消息会在你输入下一个命令后自动清除，所以请确保在按下任何键之前你已经读完了。你始终可以使用<color:keyword>查看历史消息</color>命令 (<color:keypress>CTRL+P</color>) 来回顾错过的消息。
+
+其次，在屏幕右侧你可以看到一个状态条 (<color:U>f</color><color:R>[</color><color:v>*</color><color:R>--------]</color>)。这非常重要——它追踪你当前的目标，或者你最近造成伤害的怪物。在这个例子中，它显示了小猫咪的生命值，你可以看到它正处于相当糟糕的境地。（参阅 <link:monster.txt#HealthBar> 获取关于为什么最后一个 <color:v>*</color> 变成了<color:v>紫罗兰色</color>的解释！）
+
+最后，注意我的弹丸 (<color:s>{</color>) 掉在了小猫咪旁边的地上。有时你的投射物会在撞击时碎裂；但如果它们没碎，你最好在打完架后去把它们收回来。你可以通过走到物品上方并使用拾取命令 (<color:keypress>g</color>) 来捡起它们；或者，如果你使用 <color:keypress>=</color> 选项菜单开启了 <color:keyword>always_pickup (总是拾取)</color> 选项，那么当你走过物品时就会自动将其拾取。
+
+在这里你可能可以使用 <color:keypress>n</color>（或 roguelike 键位中的 <color:keypress>X</color>）“重复上一个动作”命令来给小猫咪最后一击，但在这个游戏中，杀猫并不是你的主要目标：是时候继续前进了。如果你还有剩余的钱，去杂货店 (<color:U>1</color>) 买一盏灯笼 (lantern) 和一些油 (oil)；灯笼投射的光比火把更多，因此能让你在黑暗中看得更远。一定要装备上你的灯笼才能实际使用它（按 <color:keypress>w</color> 穿戴物品）。如果你还是没花光钱，去蘑菇店 (<$:FF_SHROOMERY>) 买一些“快速恢复蘑菇 (mushrooms of Fast Recovery)”和“治疗混乱蘑菇 (mushrooms of Cure Confusion)”。
+
+商店并不总是出售相同的物品；每隔一段时间他们就会重新进货，处理掉一些旧物品并购入新物品，但上面提到的那些游戏早期主要物品在你开始游戏时应该是能稳定买到的。
+
+希望你在购物时没有受到当地人 (<color:G>t</color>) 太多的打扰，但偶尔镇民也会与你互动。这可能仅仅是有点烦人，因为周围有很多醉汉，但也可能很危险，因为众所周知小混混会偷金币，而你看起来是个容易下手的目标。你可以简单地通过移动撞向怪物来攻击它（假设你装备了武器），或者像上面展示的那样射击它；但如果你是一名法师，你应该改用你的攻击性法术 (<color:keypress>m</color>)。法术目标的选择方式与射箭相同：<color:keypress>*</color> 激活瞄准模式，然后按 <color:keypress>*5</color> 总是瞄准最近的怪物。
+
+<topic:MyFirstTripDown><style:heading>我的首次下潜 (My First Trip Down)</style>
+
+购物完成后，你可以做两件主要的事情。你可以前往“伯爵城堡 (Count's Castle)”（那是北边有多个入口的大建筑），接取你的第一个<color:keyword>城镇任务 (town quest)</color>，然后尝试完成它。但让我们走另一条路，直接一头扎进地下城！
+
+在新手模式下，只有一个地下城可供进入。字符 <color:v>></color> 代表地下城入口。通常，> 指的是向下的楼梯；但是地下城入口 <color:v>></color> 和任务入口 <color:y>></color> 被加上了颜色以示区别。同样，< 指的是向上的楼梯。出于某种宇宙的巧合，这些也是你走楼梯时要按的键：按 <color:keypress>></color> 下楼，按 <color:keypress><</color> 上楼。有什么比这更好记的吗？所以走到下行楼梯那里，前往 <color:keyword>Angband</color> 地下城，出发吧！
+
+当你四处走动时，小心怪物，并使用查看命令 (<color:keypress>*</color>) 配合回忆选项 (<color:keypress>r</color>) 来获取怪物的描述。例如：
+<style:screenshot>
+Monster: a Soldier ant [r,q,t,p,o,x,j,+,-,?,<dir>]
+Name    : <color:B>Soldier ant</color> (<color:u>a</color>)                                               L <color:G>     1</color>
+Level   : <color:G>1 to 10</color><color:d>   </color>Speed: +0                                           <color:G>      23</color>
+AC      : <color:y>?</color><color:d>         </color>Type : <color:G>Natural</color>                                      <color:G>     805</color>
+HP      : <color:y>?</color><color:d>         </color>                                                    <color:d>   </color><color:u>~</color><color:U>(</color><color:d>   </color>
+<color:d>                    </color>                                                    : <color:G> 18/10</color>
+Attacks : <color:G>Type    Effects</color>                                               : <color:G>    18</color>
+          Bite    Hurt                                                  : <color:G>     7</color>
+                                                                        : <color:G> 18/40</color>
+Kills   : <color:G>0</color>                                                             : <color:G>    18</color>
+Exp     : <color:G>2</color> at CL1                                                      : <color:G>    12</color>
+                                                                           <color:G>    6</color>
+A large ant with powerful mandibles.                                    <color:G> 43</color>/<color:G>  43</color>
+                                 #.....<color:U>'</color>...                         SP <color:G>  14</color>/<color:G>  14</color>
+                                 #.@...#                                        
+                                 #<color:u>a</color>....#                            <color:u>a</color>[<color:b>*********</color>]
+                                 #.....#
+                                 #######                                        
+                                                                                
+                                                                                
+                                                                                
+                                                                    <color:B>Study (1)</color>   
+                                                                                
+                                                                                
+<color:s>Angband: L2</color></style>
+
+在这个例子中，我以前玩过的某个角色曾遇到过兵蚁 (soldier ant)，所以我对这种类型的怪物有一些基本了解——不是很多，但我确实知道它每回合有一次攻击，击杀能获得 2 点经验值（实际上因为茶歇模式的经验加速，获得的经验要多得多！）。这说明了游戏所称的<color:keyword>怪物记忆 (Monster Lore)</color> 机制。当你与怪物战斗时，你会学到更多关于它们的知识，游戏会为你记录这些知识。所有的记忆都保留在你的存档中，以便未来的角色能够受益。击杀敌人后，你可以通过 <color:keypress>~</color> 命令（知识菜单 Knowledge Menu），接着按 <color:keypress>m</color>（怪物知识），再用方向键选择相应的怪物来回忆你光辉战绩的细节。你会注意到随着你了解的深入，怪物描述也会更新。
+
+在这一步，你基本上就是在探索当前楼层。在普通模式下，你可以随时通过爬上刚才下来的楼梯走回城镇，但茶歇模式禁用了上行楼梯，所以当你希望返回城镇时，请阅读一张<color:keyword>回城言灵卷轴 (Scroll of Word of Recall)</color>。你还会找到通往更深处的新下行楼梯。基本上，你下潜得越深，事情就变得越困难——但战利品的质量也会提高，引诱你不断深入……
+
+所以，四处走走，杀杀怪吧。一开始不要太担心会死，因为刚开始死掉是很寻常的事。如果真的死了，下次你加载这个存档时，角色创建流程会给你一个额外的选项，让你<color:keyword>快速重新开始 (Quick Start)</color>这个角色，这基本上跳过了整个创建过程，并开始一个与上一个角色完全相同的开局。
+
+我将继续玩一会儿。你可以坐下来看着！……糟糕，我想我遇到麻烦了：
+<style:screenshot>
+<color:g>The Novice warrior attacks you:</color> He hits. He hits. <color:v>*** LOW HITPOINT </color>             
+<color:v>WARNING! ***</color> Press <color:y>Space</color> to continue.                               LEVEL <color:G>     2</color>
+                                                                    EXP <color:G>      21</color>
+                                                                    AU  <color:G>     805</color>
+                                                                    <color:W>|</color><color:d> </color><color:u>}</color><color:d>    </color><color:u>~</color><color:U>(</color><color:d>   </color>
+                                                                    STR : <color:G> 18/10</color>
+                                                                    INT : <color:G>    18</color>
+                                                                    WIS : <color:G>     7</color>
+                                                                    DEX : <color:G> 18/40</color>
+                                                                    CON : <color:G>    18</color>
+                                                                    CHR : <color:G>    12</color>
+                                      #.###                         AC     <color:G>    6</color>
+                                    #<color:s>.</color>..<color:U>p</color>.#                         HP <color:r>  10</color>/<color:G>  55</color>
+                                   #<color:s>.</color><color:D>(</color>.@...##                       SP <color:G>  18</color>/<color:G>  18</color>
+                                  #<color:s>...</color>....<color:s>..</color>#                                   
+                                  <color:s>...</color><color:D>|</color><color:s>.......</color>                                   
+                                  #<color:s>.........</color>#                                   
+                                   #<color:s>.......</color>##                                   
+                                   ##<color:s>....</color>                                       
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                           <color:B>Study (1)</color>   
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                                       
+<color:s>Angband: L2</color>
+</style>
+注意到我那刺眼的 <color:r>10</color> 点 HP 了吗？如果我的生命值降到 0 以下，我就死了。还注意到那条非常显眼的 <color:v>*** LOW HITPOINT WARNING! *** (*** 低生命值警告！***)</color> 了吗？这是为了确保你在遇到麻烦时能注意到。游戏甚至会强迫我在继续之前按下 <color:keypress>SPACE（空格）</color>。讲真，我觉得我要死了！
+<style:screenshot>
+<color:g>The Novice warrior attacks you:</color> He hits.<color:B>-more-</color>                                  
+                                                                    LEVEL <color:G>     2</color>
+                                                                    EXP <color:G>      21</color>
+                                                                    AU  <color:G>     805</color>
+                                                                    <color:W>|</color><color:d> </color><color:u>}</color><color:d>    </color><color:u>~</color><color:U>(</color><color:d>   </color>
+                                                                    STR : <color:G> 18/10</color>
+                                                                    INT : <color:G>    18</color>
+                                                                    WIS : <color:G>     7</color>
+                                                                    DEX : <color:G> 18/40</color>
+                                                                    CON : <color:G>    18</color>
+                                                                    CHR : <color:G>    12</color>
+                                      #.###                         AC     <color:G>    6</color>
+                                    #<color:s>.</color>..<color:U>p</color>.#                         HP <color:r>  -2</color>/<color:G>  55</color>
+                                   #<color:s>.</color><color:D>(</color>.@...##                       SP <color:G>  18</color>/<color:G>  18</color>
+                                  #<color:s>...</color>....<color:s>..</color>#                                   
+                                  <color:s>...</color><color:D>|</color><color:s>.......</color>                                   
+                                  #<color:s>.........</color>#                                   
+                                   #<color:s>.......</color>##                                   
+                                   ##<color:s>....</color>                                       
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                           <color:B>Study (1)</color>   
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                                       
+                                      #<color:s>.</color>#                                       
+<color:s>Angband: L2</color>
+</style>
+<color:v>哎哟！</color> 那一下真的很痛！
+<style:screenshot>
+             Goodbye, Filcher! <color:B>-more-</color>
+               _______________________
+              /                       \         ___
+             /                         \ ___   /   \      ___
+            /            RIP            \   \  :   :     /   \
+           /                             \  : _;,,,;_    :   :
+          /            Filcher            \,;_          _;,,,;_
+         |               the               |   ___
+         |           Vanquished            |  /   \
+         |                                 |  :   :
+         |              Rogue              | _;,,,;_   ____
+         |            Level: 2             |          /    \
+         |             Exp: 38             |          :    :
+         |             AU: 144             |          :    :
+         |        Killed on Level 2        |         _;,,,,;_
+         |      by a Novice warrior.       |
+         |                                 |
+         |    Thu Dec 05 07:54:18 2019     |
+        *|   *     *     *    *   *     *  | *
+________)/\\_)_/___(\/___(//_\)/_\//__\\(/_|_)_______
+</style>
+但不用害怕，我可以很快重新开始。如果我现在加载我旧角色的存档，会有一个新选项：
+
+    <color:y>q</color>) Quick Start (快速重新开始)
+
+选择 <color:keypress>q</color> 会让你进入角色创建菜单，并已经选好了你旧角色的种族、职业、属性和性格。这是一个全新的角色，所以我获得的所有物品（比如那把投石索）都消失了，我也没有任何经验。然而，我的怪物记忆保存了下来，所以我不用再重新学习兵蚁是干什么的了。
+
+去试着玩一会吧。立刻进入地下城可能不是个最好的主意；对于一个足够强大的角色（盗贼就是），一上来就去接第一个城镇任务（<color:keyword>盗贼藏身处 Thieves' Hideout</color>）能给你带来很好的早期帮助。第一个任务的危险评级是 5 级，所以在 CL 1 时去做有点冒险；但完成它你会得到一件有价值的物品作为奖励，而且你在任务中找到的钱可以让你购买关键补给，比如治疗混乱蘑菇。而且，在那之后你还可以请求接取奖励极高的<color:keyword>害虫防治 (Pest Control)</color>任务！
+
+到这里，教程就结束了，下面我将只提供一些关于游戏的基本小贴士。
+
+<topic:Tidbits><style:heading>小贴士 (Tidbits)</style>
+
+每个怪物都使用一个独特的 ASCII 字符来表明它是什么。例如，老鼠使用字母 'r'，而兽人使用字母 'o'。当你看到一个你不明白的字符时，按 <color:keypress>*</color> 瞄准查看它。如果它是一个怪物，你可以接着按 <color:keypress>r</color> 来回忆关于它的信息，其中包含描述信息以让你了解更多。其他字符如 '/' 和 '!' 代表你可以拾取（按 <color:keypress>g</color> 拾取）然后使用的物品。
+
+你如何使用一件物品取决于它的类型。一些常见的例子有：
+<style:screenshot>
+Char  Object(物品)   Usage(使用方法)
+====  ============== =========================================================
+<color:U>,</color>     Food(食物)     <color:keypress>E</color> 键食用。感到饥饿时就这么做。
+<color:B>!</color>     Potion(药水)   <color:keypress>q</color> 键饮用。尝试在喝之前先鉴定药水。
+?     Scroll(卷轴)   <color:keypress>r</color> 键阅读。
+<color:R>?</color>     Spellbook      <color:keypress>b</color> 键翻阅法术书。<color:keypress>G</color> 键学习法术。<color:keypress>m</color> 键施展法术。
+<color:B>-</color>     Wand(魔杖)     <color:keypress>a</color> 键瞄准射出。
+<color:r>-</color>     Rod(魔棒)      <color:keypress>z</color> 键激发。
+<color:U>_</color>     Staff(法杖)    <color:keypress>u</color> 键使用。
+<color:U>~</color>     Lantern(灯笼)  <color:keypress>w</color> 键穿戴。<color:keypress>F</color> 键补充灯油。
+<color:U>~</color>     Quiver(箭袋)   <color:keypress>w</color> 键装备。再次按 <color:keypress>w</color> 将投射物装入其中。
+<color:u>}</color>     Ranged Weapon  <color:keypress>w</color> 键装备远程武器。
+<color:o>/</color>     Polearm        <color:keypress>w</color> 键装备长柄武器。
+<color:B>\</color>     Hafted Weapon  <color:keypress>w</color> 键装备钝器类武器。
+|     Sword          <color:keypress>w</color> 键装备剑类武器。
+<color:U>(</color>     Soft Armor     <color:keypress>w</color> 键穿戴软甲。
+<color:s>[</color>     Hard Armor     <color:keypress>w</color> 键穿戴硬甲。
+<color:U>]</color>     Misc. Armor    <color:keypress>w</color> 键穿戴其他杂项护甲。
+</style>
+如果你想知道一个特定的符号代表什么，输入 <color:keypress>/</color>，然后输入该符号。例如，如果你想知道所有的 t 到底是什么东西，输入 <color:keypress>/t</color>，游戏会告诉你这些是镇民。你可以使用 <color:keypress>*</color> 瞄准命令检查单个物品、地形和怪物（有关此方面的更多详细信息，请参阅 <link:commdesc.txt#Targetting>）。其他能帮你搞清楚周围环境的有用命令包括：<color:keypress>Y</color>（或 <color:keypress>[</color>）查看怪物列表命令，以及 <color:keypress>O</color>（或 <color:keypress>]</color>）查看物品列表命令。
+
+从这里开始，我们将提供详细的地下城生存信息。其中有些是靠直觉就能明白的，而有些如果你不先死上很多次是不可能发现的。如果你想充分体验这种痛苦的学习过程，请不要继续往下读。然而，如果你已经厌倦了死亡，请往下看。
+ 
+<topic:MultipleBlows><style:heading>关于武器和多次攻击 (On Weapons and Multiple Blows)</style>
+
+有些角色在游戏开始时就能在攻击回合中获得多次武器连击 (multiple blows)。你能获得多少次连击取决于你的职业、武器重量、你的力量 (STR)、你的敏捷 (DEX)，以及你是双手挥舞还是单手挥舞这把武器。按 <color:keypress>C</color> 键检查你的角色面板 (Character Sheet)：
+<style:screenshot>
+ Name       : <color:B>Filcher</color><color:d>                   </color>   ========== Stats ==========          
+ Sex        : <color:B>Male</color><color:d>                      </color>         STR  : <color:G>    18/10</color>               
+ Personality: <color:B>Ordinary</color><color:d>                  </color>         INT  : <color:G>       18</color>               
+ Race       : <color:B>High-Elf</color><color:d>                  </color>         WIS  : <color:G>        7</color>               
+ Subrace    : <color:B>None                      </color>         DEX  : <color:G>    18/40</color>               
+ Class      : <color:B>Rogue</color><color:d>                     </color>         CON  : <color:G>       18</color>               
+ Realm      : <color:B>Burglary</color><color:d>                  </color>         CHR  : <color:G>       12</color>               
+<color:d>                                        </color>                                        
+ Level      : <color:G>       1</color><color:d>                  </color>         HP   : <color:G>    43/43</color>               
+ Cur Exp    : <color:G>       0</color><color:d>                  </color>         SP   : <color:G>    14/14</color>               
+ Max Exp    : <color:G>       0</color><color:d>                  </color>         AC   : <color:G>        6</color>               
+ Adv Exp    : <color:G>      23</color><color:d>                  </color>         Speed: <color:U>       +0</color>               
+<color:d>                                        </color>                                        
+<color:d>                                        </color>   ========== Skills =========          
+ Gold       : <color:G>     774</color><color:d>                  </color>   Melee      : <color:y>Good</color>                    
+ Kills      : <color:G>       0</color><color:d>                  </color>   Archery    : <color:y>Good</color>                    
+ Uniques    : <color:G>       0</color><color:d>                  </color>   SavingThrow: <color:y>Good</color>                    
+ Artifacts  : <color:G>     0+0</color><color:d>                  </color>   Stealth    : <color:G>Excellent</color>               
+<color:d>                                        </color>   Perception : <color:y>Good</color>                    
+ Game Day   : <color:G>       1</color><color:d>                  </color>   Searching  : <color:o>Fair</color>                    
+ Game Time  : <color:G>    6:00</color><color:d>                  </color>   Disarming  : <color:y>Good</color>                    
+ Play Time  : <color:G>   00:00</color><color:d>                  </color>   Device     : <color:y>Good</color>
+<color:d>                                        </color>                                        
+</style>
+然后要么向下滚动到技能 (Skills) 中的近战 (Melee) 部分，要么按 <color:keypress>m</color> 快速导航进入武器信息界面：
+<style:screenshot>
+<color:y> Hand #1:</color> a Dagger (1d5) (+0,+0)                            <color:G>Accuracy</color>
+ Weight : 1.2 lbs                                            AC Hit
+ Profic : Beginner (+0 To Hit)                               25 75%
+ To Hit : 0 + 4 = 4                                          50 53%
+ To Dam : 0 + 2 = 2                                          75 32%
+ Blows  : 2.42                                              100 10%
+<color:G> Damage </color>                                                    125  5%
+ Crits  : 1.00x (0.5%)                                      150  5%
+ Normal : 11                                                175  5%
+                                                            200  5%
+</style>
+在我的例子中，这是一个刚出生的冒险者，仍然在使用他的初始匕首 (Dagger)。但你会注意到他在一回合内获得了多次攻击 (Blows)，在这里是 2.42 次。这到底意味着什么呢？实际上很简单：有 42% 的情况下我每回合能攻击 3 次，而有 58% 的情况下我只能攻击 2 次。这比大多数新角色获得的次数都要多：盗贼能获得力量和敏捷的加成，而像匕首这样的轻武器能提供更多的攻击次数。然而，你会发现，尽管有 2.42 次攻击，我的总伤害仍然相当可怜：每回合只有 11 点。
+
+武器信息界面还显示了近战命中率 (Accuracy)。当然，你不可能每次挥动武器都命中；命中率取决于你对该武器的熟练度以及它的魔法加成（如果有的话）。它还取决于你的战斗技能，这在上面初始角色面板中技能部分的近战项下有显示（我的是 <color:y>Good [良好]</color>）。你的近战技能会随着属性（力量和敏捷）以及经验（等级）的增加而提升。所有这些都与怪物的护甲等级 (AC) 相抗衡；基本上，有些怪物就是比其他怪物更难打中。例如，龙皮糙肉厚是出了名的。
+
+你还可以在角色面板中看到你的投射武器的详细信息。它显示在近战部分之后（前提是你确实装备了一把射击武器），并且可以通过按 <color:keypress>s</color> 快速导航到那里：
+<style:screenshot>
+<color:y> Shooting</color>: <color:u>a Sling (x2) (+0,+0)</color>
+ Range   : 160'
+ Shots   : 1.39
+ Mult    : 2.04x
+ Profic  : Beginner (+0 To Hit)
+ To Hit  : 0 + 4 = 4
+ Xtra Dam: 0 (Multiplier Does Not Apply)
+
+<color:u> Ammo #1 </color>: <color:U>30 Rounded Pebbles (2d3) (+0,+0)</color><color:d>                 </color>  <color:G>AC Hit</color>            
+ Breakage: 8%<color:d>                                               </color>  25 79%            
+ Weight  : 0.4 lbs<color:d>                                          </color>  50 63%            
+ To Hit  : 0 + 4 = 4<color:d>                                        </color> 100 30%            
+ To Dam  : 0 (Multiplier Applies)<color:d>                           </color> 150  5%            
+ To Dam  : 0 (Multiplier Does Not Apply)<color:d>                    </color> 175  5%            
+ <color:G>Damage  </color><color:d>                                                   </color> 200  5%            
+ Crits   : 1.06x (4.1%)<color:d>                                     </color>
+ Normal  : 8/11<color:d>                                             </color>                    
+</style>
+在这种情况下，你看到我获得了多次射击 (Shots)，但远程战斗的机制与近战略有不同。你不是在一个回合内把所有允许的射击次数都打光，而是一次射击一发，但游戏向你收取的每发能量消耗少于通常的整回合动作量。我还没有解释速度系统，但只需知道行动消耗的能量越少，你移动得就越快，就能在附近任何怪物获得行动机会之前做更多的事情。
+
+这两个界面：武器信息 (Weapon Info) 和 射击信息 (Shooter Info)，在你的游戏过程中将变得越来越有用。如果你目前还不理解它们上面显示的所有内容，不用担心。
+
+<topic:OnArmorAndResistance><style:heading>关于护甲和抗性 (On Armor and Resistance)</style>
+
+我们刚才看到了怪物是如何拥有“护甲等级 (AC)”这个属性的，以及它是如何让怪物更难被击中的。同样，玩家也有一个护甲等级，它由你目前穿戴的护甲以及你的敏捷共同决定。除了让你更难被击中之外，AC 实际上还会降低某些类型近战攻击造成的伤害，因此它是一个非常重要的属性，你应尽可能将其提高。如果你发现自己在近战中被摧毁，你会想要从装备中寻找更高的 AC。
+
+这是我的角色面板，你可以在上面看到我的初始 AC（右侧列表中的 AC 行）：
+<style:screenshot>
+ Name       : <color:B>Filcher</color><color:d>                   </color>   ========== Stats ==========          
+ Sex        : <color:B>Male</color><color:d>                      </color>         STR  : <color:G>    18/10</color>               
+ Personality: <color:B>Ordinary</color><color:d>                  </color>         INT  : <color:G>       18</color>               
+ Race       : <color:B>High-Elf</color><color:d>                  </color>         WIS  : <color:G>        7</color>               
+ Subrace    : <color:B>None                      </color>         DEX  : <color:G>    18/40</color>               
+ Class      : <color:B>Rogue</color><color:d>                     </color>         CON  : <color:G>       18</color>               
+ Realm      : <color:B>Burglary</color><color:d>                  </color>         CHR  : <color:G>       12</color>               
+<color:d>                                        </color>                                        
+ Level      : <color:G>       1</color><color:d>                  </color>         HP   : <color:G>    43/43</color>               
+ Cur Exp    : <color:G>       0</color><color:d>                  </color>         SP   : <color:G>    14/14</color>               
+ Max Exp    : <color:G>       0</color><color:d>                  </color>         <color:R>AC   :         6</color>
+ Adv Exp    : <color:G>      23</color><color:d>                  </color>         Speed: <color:U>       +0</color>               
+<color:d>                                        </color>                                        
+<color:d>                                        </color>   ========== Skills =========          
+ Gold       : <color:G>     774</color><color:d>                  </color>   Melee      : <color:y>Good</color>                    
+ Kills      : <color:G>       0</color><color:d>                  </color>   Archery    : <color:y>Good</color>                    
+ Uniques    : <color:G>       0</color><color:d>                  </color>   SavingThrow: <color:y>Good</color>                    
+ Artifacts  : <color:G>     0+0</color><color:d>                  </color>   Stealth    : <color:G>Excellent</color>               
+<color:d>                                        </color>   Perception : <color:y>Good</color>                    
+ Game Day   : <color:G>       1</color><color:d>                  </color>   Searching  : <color:o>Fair</color>                    
+ Game Time  : <color:G>    6:00</color><color:d>                  </color>   Disarming  : <color:y>Good</color>                    
+ Play Time  : <color:G>   00:00</color><color:d>                  </color>   Device     : <color:y>Good</color>
+ </style>
+除了 AC，玩家还有一组非常重要的属性：抗性 (resistances)。或者，在当前这个例子中，不如说是“缺乏抗性”。向下滚动到角色面板的装备 (Equipment) 部分，或按 <color:keypress>e</color> 快速导航。在这里你可以无比清晰地看到你初始角色实际上是有多么的悲惨且不足。这是我的界面：
+<style:screenshot>
+                                                                                
+============================= Character <color:o>E</color>quipment ============================= 
+                                                                                
+ a) a Dagger (1d5) (+0,+0)                                                      
+ c) <color:u>a Sling (x2) (+0,+0)</color>                                                        
+ i) <color:s>Soft Leather Armour [4,+0]</color>                                                  
+                                                                                
+              <color:W>|</color> <color:u>}</color>     <color:U>(</color>    <color:d>             </color>              <color:W>|</color> <color:u>}</color>     <color:U>(</color>                 
+ <color:G>Resistances</color>  abcdefghijklm@<color:d>            </color> <color:G>Abilities  </color>  abcdefghijklm@            
+ Acid       : <color:D>..............</color>   0%<color:d>       </color> Speed      : <color:D>..............</color>            
+ Electricity: <color:D>..............</color>   0%<color:d>       </color> Free Act   : <color:D>..............</color>            
+ Fire       : <color:D>..............</color>   0%<color:d>       </color> See Invis  : <color:D>.............</color>+   1x       
+ Cold       : <color:D>..............</color>   0%<color:d>       </color> Warning    : <color:D>..............</color>            
+ Poison     : <color:D>..............</color>   0%<color:d>       </color> Slow Digest: <color:D>..............</color>            
+ Light      : <color:D>.............</color>+ <color:y> 30%</color><color:d>       </color> Regenerate : <color:D>..............</color> 100%       
+ Dark       : <color:D>..............</color>   0%<color:d>       </color> Levitation : <color:D>..............</color>            
+ Confusion  : <color:D>..............</color>   0%<color:d>       </color> Perm Lite  : <color:D>..............</color>            
+ Nether     : <color:D>..............</color>   0%<color:d>       </color> Reflection : <color:D>..............</color>            
+ Nexus      : <color:D>..............</color>   0%<color:d>       </color> Hold Life  : <color:D>..............</color>            
+ Sound      : <color:D>..............</color>   0%<color:d>       </color> Life Rating: <color:D>..............</color>            
+ Shards     : <color:D>..............</color>   0%<color:d>       </color> Dec Mana   : <color:D>..............</color>            
+ Chaos      : <color:D>..............</color>   0%<color:d>       </color> Easy Spell : <color:D>..............</color>            
+ Disenchantm: <color:D>..............</color>   0%<color:d>       </color> Anti Magic : <color:D>..............</color>            
+ Time       : <color:D>..............</color>   0%<color:d>       </color> Magic Skill: <color:D>..............</color>            
+ Blindness  : <color:D>..............</color>   0%<color:d>       </color> Spell Power: <color:D>..............</color>            
+ Fear       : <color:D>..............</color>   0x<color:d>       </color> Spell Cap  : <color:D>..............</color>            
+<color:d>                                        </color> Magic Res  : <color:D>..............</color>            
+              <color:W>|</color> <color:u>}</color>     <color:U>(</color>    <color:d>             </color> Infravision: <color:D>.............</color>+  40'       
+ <color:G>Auras      </color>  abcdefghijklm@<color:d>            </color> Stealth    : <color:D>..............</color>            
+ Aura Elec  : <color:D>..............</color><color:d>            </color> Searching  : <color:D>..............</color>            
+ Aura Fire  : <color:D>..............</color><color:d>            </color>                                        
+ Aura Cold  : <color:D>..............</color><color:d>            </color>              <color:W>|</color> <color:u>}</color>     <color:U>(</color>                 
+ Aura Shards: <color:D>..............</color><color:d>            </color> <color:G>Sustains   </color>  abcdefghijklm@            
+ Revenge    : <color:D>..............</color><color:d>            </color> Sust Str   : <color:D>..............</color>            
+<color:d>                                        </color> Sust Int   : <color:D>..............</color>            
+              <color:W>|</color> <color:u>}</color>     <color:U>(</color>    <color:d>             </color> Sust Wis   : <color:D>..............</color>            
+ <color:G>Slays      </color>  abcdefghijklm@<color:d>            </color> Sust Dex   : <color:D>..............</color>            
+ Slay Evil  : <color:D>..............</color><color:d>            </color> Sust Con   : <color:D>..............</color>            
+ Slay Undead: <color:D>..............</color><color:d>            </color> Sust Chr   : <color:D>..............</color>            
+ Slay Demon : <color:D>..............</color><color:d>            </color>                                        
+ Slay Dragon: <color:D>..............</color><color:d>            </color>              <color:W>|</color> <color:u>}</color>     <color:U>(</color>                 
+ Slay Human : <color:D>..............</color><color:d>            </color> <color:G>Detection  </color>  abcdefghijklm@            
+ Slay Animal: <color:D>..............</color><color:d>            </color> Telepathy  : <color:D>..............</color>            
+ Slay Orc   : <color:D>..............</color><color:d>            </color> ESP Evil   : <color:D>..............</color>            
+</style>
+你会注意到一组针对抗性 (Resistances) 的属性和另一组杂项能力 (Abilities) 属性，还有一些关于杀戮 (Slays) 等属性的额外分组。我们暂时只关注抗性。
+
+那么什么是抗性？你为什么要关心它呢？基本上，怪物的攻击通常具有元素属性。它们的伤害有一种“类型”。例如，一只喷火龙喷出的是……嗯，火！而你的火抗性能帮你抵御这种特定类型的伤害。许多伤害类型还带有令人作呕的副作用；就拿我们的例子来说，火属性攻击可以烧毁你背包里的物品（特别是卷轴、法杖和法术书），而火抗性在这方面也有帮助。以下是常见攻击类型的简短摘要，以及你何时会需要相关抗性（按 <link:defend.txt#Resistances> 获取更详细的列表）。请注意，一些怪物的攻击对毫无准备的玩家来说是非常致命的！
+<style:screenshot>
+<color:w>Type       Comment
+====       =============================================================</color>
+<color:D>Acid</color>       破坏卷轴/法杖，损坏护甲，可能降低魅力 (CHR)。
+           建议在 DL20-30 层获得抗性。
+<color:b>Elec</color>       破坏戒指/魔杖，可能降低敏捷 (DEX)。
+           建议在 DL30 层获得抗性。
+<color:R>Fire</color>       破坏卷轴/法杖/法术书，可能降低力量 (STR)。
+           建议在 DL20-30 层获得抗性。
+<color:w>Cold</color>       破坏药水，可能降低力量 (STR)。
+           建议在 DL30 层获得抗性。
+<color:G>Poison</color>     造成极高伤害，但具有一定延迟性。
+           可以通过药水或蘑菇治愈。
+<color:R>Nexus</color>      打乱你的属性点并将你传送走，有时会把你传送到非常意想不到的地方。
+           直接伤害并不算非常高。
+<color:U>Shards</color>     破坏药水，造成割伤。在 DL40 层之前不需要此抗性，
+           但在游戏后期会变得极其重要。
+<color:r>Confusion</color>  使你陷入混乱，导致无法正常行动。
+           随身携带蘑菇和药水来治愈。参见 <link:status.txt#Confusion>。
+<color:v>Paralysis</color>  将玩家冻结，导致你丢失回合。
+           在到达 DL25 层或“柳树老头”任务之前必须获得“自由行动”能力。参见 <link:status.txt#Paralysis>。
+</style>
+我的角色还不算完全没救。作为一名高等精灵 (High-Elf)，我开局自带光抗性 (30%) 和识破隐形 (See Invisible)。后者让我有机会看到幽灵和其他隐形怪物。你看不见的怪物可能非常烦人，更不用说可能致命了！不过识破隐形并不完美，因为它只提供一个检定概率；额外的来源，以及更好的搜索 (Searching) 技能，将有助于使其更可靠。
+
+虽然你的种族可以赋予抗性和能力，但大多数时候这些都来自你的装备。每列顶部的 'abcd...' 列表对应于我当前的装备集，如果一个物品被实际装备在那个槽位上，就会显示相应的物品字符（例如我的匕首显示为 <color:W>|</color>，我的投石索显示为 <color:u>}</color>）。你可以追踪你当前的抗性和能力，并查看你是从哪里获得它们的。'@' 字符代表玩家本身（记得在地图上显示为 @ 吗？）；这一列列出了种族或职业的固有能力，以及任何暂时获得的魔法强化效果。
+
+一般来说，你需要尽可能多地覆盖抗性。在游戏早期它们不那么重要，但随着你下潜得更深，你会逐渐了解你需要什么以及何时需要。特殊能力通常是可选的，除了“自由行动 (Free Action)”和“识破隐形 (See Invisible)”，如果可能的话，你会在 DL20-25 层就需要它们。（如果你足够幸运拥有了完整的“心灵感应 Telepathy”，你就可以不需要识破隐形了。）
+
+<color:G>请注意，抗性是可以叠加的。</color>如果两件物品都提供火抗性，你的抗性百分比会上升（尽管不是线性叠加）。特定抗性的多个来源也有助于防止各种伤害类型带来的许多讨厌副作用。到了游戏中期，你会希望拥有对四种基础元素（酸、火、冰和电）的两重抗性来源，以限制直接伤害和物品损失。参阅 <link:faq.txt#ItemLoss> 获取有关避免物品损坏的更多详情。
+
+好了，我忍不住要吐槽这个初始角色面板真是弱爆了，因为每一个属性栏都是空空如也的。这里有一个从我之前玩的“塔纳里恶魔 (Tanar'ri Demon)”角色中截取的更有趣的示例（注意到不同的装备槽体型了吗？这是一个<color:r>怪物模式 (Monster Mode)</color>的角色，在那种模式下奇怪的体型很常见）：
+<style:screenshot>
+============================= Character <color:o>E</color>quipment ============================= 
+                                                                                
+ a) The Long Sword 'Excalibur' (5d6) (+21,+19) [+5] (+3)                        
+      {WiChDg;ShFe;SiHlWrBs|S/*UL(WiCh}                                         
+ b) The Katana 'Kusanagi-no-tsurugi' (4d4) (+15,+15) (+3)                       
+      {DxSl;AcElFiCoNtDi;SiRgLuBs/*DUZ <color:B>A:Getaway</color>}                               
+ c) <color:r>a Ring of Protection [+18] {SoShFe(StWiDxCnCh}</color>                              
+ d) <color:r>a Ring of Speed (+13) {Sp </color><color:B>A:Speed</color><color:r>}</color>                                          
+ e) <color:U>The Set of Mithril Gauntlets 'Power Shield' [5,+21] (+4) {StCn;ElCaFe;Fa~L}</color> 
+ f) The Scimitar 'Soulsword' (3d6) (+15,+15) (+3)                               
+      {InWiLf;DkNtNxCaDi;SiHlBs/*DULZ}                                          
+ g) a Lochaber Axe (Defender) (3d9) (+15,+15) [+12] {ShBl;FaSiRgLvWr(Cn}        
+ h) <color:U>a Set of Mithril Gauntlets of the Thief (+2,-3) [5,+20] (+4) {SpDxSl(Dx}</color>    
+ i) The Battle Axe of Balli Stonehand (3d9) (+15,+15) [+5] (+3)                 
+      {StCnSl;AcElFiCoBl;FaSiRgLv/oTU}                                          
+ j) The Pike 'Grassroot' (2d6) (+21,+21) (+4) {SpStDxCnSr/pZ <color:B>A:Summon Hydras</color>}   
+ k) <color:o>a Sacred Pendant [+15] (+3) {WiLf;Bs}</color>                                       
+ l) <color:y>The Feanorian Lamp 'Armageddon Stone' (+4) {In;NtBl;Wr[M(In}</color>                
+                                                                                
+              <color:W>||</color><color:g>==</color><color:B>]</color><color:W>|</color><color:D>/</color><color:B>]</color><color:s>//</color><color:y>"</color><color:o>~</color><color:d>              </color>              <color:W>||</color><color:g>==</color><color:B>]</color><color:W>|</color><color:D>/</color><color:B>]</color><color:s>//</color><color:y>"</color><color:o>~</color>              
+ <color:G>Resistances</color>  abcdefghijkl@<color:d>             </color> <color:G>Abilities  </color>  abcdefghijkl@             
+ Acid       : <color:D>.</color>+<color:D>......</color>+<color:D>....</color> <color:R> 65%</color><color:d>        </color> Speed      : <color:D>...</color>+<color:D>...</color>+<color:D>.</color>+<color:D>..</color><color:y>#</color>             
+ Electricity: <color:D>.</color>+<color:D>..</color>+<color:D>...</color>+<color:D>....</color> <color:r> 72%</color><color:d>        </color> Free Act   : <color:D>....</color>+<color:D>.</color>+<color:D>.</color>+<color:D>...</color>+   4x        
+ Fire       : <color:D>.</color>+<color:D>......</color>+<color:D>...</color>+ <color:r> 72%</color><color:d>        </color> See Invis  : ++<color:D>...</color>++<color:D>.</color>+<color:D>...</color>+   6x        
+ Cold       : <color:D>.</color>+<color:D>......</color>+<color:D>....</color> <color:R> 65%</color><color:d>        </color> Warning    : +<color:D>.....</color>+<color:D>....</color>+<color:D>.</color>             
+ Poison     : <color:D>............</color>+ <color:y> 50%</color><color:d>        </color> Slow Digest: <color:D>............</color>+             
+ Light      : <color:D>.............</color>   0%<color:d>        </color> Regenerate : <color:D>.</color>+<color:D>....</color>+<color:D>.</color>+<color:D>....</color> 400%        
+ Dark       : <color:D>.....</color>+<color:D>.......</color> <color:y> 30%</color><color:d>        </color> Levitation : <color:D>......</color>+<color:D>.</color>+<color:D>....</color>             
+ Confusion  : <color:D>............</color>+ <color:y> 30%</color><color:d>        </color> Perm Lite  : <color:D>.</color>+<color:D>...........</color>             
+ Nether     : <color:D>.</color>+<color:D>...</color>+<color:D>.....</color>++ <color:r> 47%</color><color:d>        </color> Reflection : <color:D>.............</color>             
+ Nexus      : <color:D>.....</color>+<color:D>.......</color> <color:y> 30%</color><color:d>        </color> Hold Life  : +<color:D>....</color>+<color:D>......</color>+   3x        
+ Sound      : <color:D>..</color>+<color:D>..........</color> <color:y> 30%</color><color:d>        </color> Life Rating: <color:D>.....</color>+<color:D>....</color>+<color:D>..</color> +18%
+ Shards     : +<color:D>.</color>+<color:D>...</color>+<color:D>......</color> <color:r> 45%</color><color:d>        </color> Dec Mana   : <color:D>.............</color>             
+ Chaos      : <color:D>....</color>++<color:D>......</color>+ <color:r> 45%</color><color:d>        </color> Easy Spell : <color:D>.............</color>             
+ Disenchantm: <color:D>.</color>+<color:D>...</color>+<color:D>.......</color> <color:R> 40%</color><color:d>        </color> Anti Magic : <color:D>...........</color>+<color:D>.</color>             
+ Time       : <color:D>.............</color>   0%<color:d>        </color> Magic Skill: <color:D>.............</color>             
+ Blindness  : <color:D>......</color>+<color:D>.</color>+<color:D>..</color>+<color:D>.</color> <color:r> 45%</color><color:d>        </color> Spell Power: <color:D>.............</color>             
+ Fear       : +<color:D>.</color>+<color:D>.</color>+<color:D>.......</color><color:y>#</color>   4x<color:d>        </color> Spell Cap  : <color:D>.............</color>             
+<color:d>                                        </color> Magic Res  : <color:D>.............</color>             
+              <color:W>||</color><color:g>==</color><color:B>]</color><color:W>|</color><color:D>/</color><color:B>]</color><color:s>//</color><color:y>"</color><color:o>~</color><color:d>              </color> Infravision: <color:D>............</color>+  50'        
+ <color:G>Auras      </color>  abcdefghijkl@<color:d>             </color> Stealth    : <color:D>.</color>+<color:D>.....</color>++<color:D>....</color>             
+ Aura Elec  : <color:D>.............</color><color:d>             </color> Searching  : <color:D>.........</color>+<color:D>...</color>             
+ Aura Fire  : <color:D>.............</color><color:d>             </color>                                        
+ Aura Cold  : <color:D>.............</color><color:d>             </color>              <color:W>||</color><color:g>==</color><color:B>]</color><color:W>|</color><color:D>/</color><color:B>]</color><color:s>//</color><color:y>"</color><color:o>~</color>              
+ Aura Shards: <color:D>.............</color><color:d>             </color> <color:G>Sustains   </color>  abcdefghijkl@             
+ Revenge    : <color:D>.............</color><color:d>             </color> Sust Str   : <color:D>..</color>+<color:D>..........</color>             
+</style>
+注意到抗性是如何叠加的了吗？以及我是如何覆盖了绝大多数抗性的？这个角色已经准备好迎战混沌之蛇了！
+
+<topic:Skills><style:heading>关于技能 (On Skills)</style>
+
+你的角色面板也会指示你对各项技能的熟练程度（或不足之处）：
+<style:screenshot>
+           ========== Skills =========
+           Melee      : <color:v>Amber[15]</color>
+           Archery    : <color:y>Good</color>
+           SavingThrow: <color:v>Amber[7]</color>
+           Stealth    : <color:g>Superb</color>
+           Perception : <color:o>Fair</color>
+           Searching  : <color:o>Fair</color>
+           Disarming  : <color:g>Superb</color>
+           Device     : <color:g>Superb</color>
+</style>
+除了显而易见的近战 (Melee) 和箭术 (Archery) 之外，还有其他六种技能；你在特定技能上的等级取决于你的种族、职业、性格、属性和装备，并且你在升级时也会获得基于职业的技能加成。除了潜行 (Stealth) 之外，通常你的职业决定了你在某个特定技能上的大部分资质，尤其是在你升了几级之后。
+
+虽然为了弥补角色的弱点，抗性是一个更明显的需要关注的地方，但你也不应该忘记你的技能。特别是<color:keyword>潜行 (Stealth)</color>将在游戏早期给你带来很大帮助——你可以偷偷摸摸地四处搜集战利品并挑选战斗对象，而不会被源源不断的不速之客淹没。如果你能活到游戏后期，<color:keyword>使用魔法装置 (Device Skill)</color> 会变得更加重要——所有角色（除了狂战士 Berserker）都在某种程度上依赖魔法装置，而如果你的装置技能不足，一些极其有价值的装置将极难使用。<color:keyword>豁免 (Saving Throw)</color> 也不错；它能让你抵抗邪恶诅咒，甚至能提高你抵抗麻痹的几率。
+
+搜索 (Searching)、察觉 (Perception) 和解除陷阱 (Disarming) 是相对不那么重要的技能，尽管它们也有自己的用处；特别是搜索技能有助于你更频繁地识破隐形怪物。搜索和察觉都能让你感知到隐藏的门和陷阱（搜索是在你主动寻找它们时生效，察觉是在你不主动寻找时生效）。解除陷阱技能让你在拆除陷阱时更不容易触发它们，提高你解锁门的能力，并影响盗贼被动技能“恐慌传送”的失败率。搜索和察觉是密切相关的；一件提高你搜索技能的物品也会提高你的察觉技能。
+
+<topic:OnMagicalItems><style:heading>关于重要魔法物品 (On Important Magical Items)</style>
+
+魔法物品是每个玩家配置中非常重要的一部分，即使是对战士来说也是如此。有几种类型的魔法是每个人都需要的。
+
+  <indent><color:B>传送与逃生 (Teleportation and Escape)</color>
+
+在游戏中，被包围或被切断安全退路是非常容易发生的事。即使是最强大的战士也会被庞大的数量压垮；这还没算上许多怪物可以召唤其他怪物，而这些被召唤出来的怪物本身又能召唤召唤怪物的怪物……情况可能会在瞬间恶化，当这种情况发生时，你会希望手头有魔法逃生手段。
+
+<color:r>相位之门卷轴 (Phase Door)</color>     <indent>这是一种短距离传送；它在密闭空间中或在对抗没有远程攻击的怪物时可用作逃生手段，如果你想避免近战，它也是一种有用的战术工具。</indent>
+
+<color:r>传送卷轴 (Teleport)</color>       <indent>一种距离更长的逃生手段，是大多数撤退战术的支柱。然而，这种逃生方式有点冒险，因为你可能会降落在一个比你原本处境还要糟糕的地方。</indent>
+
+<color:r>传送移走卷轴 (Teleport Away)</color>  <indent>这会将一条直线上的所有怪物传送走，但许多怪物会抵抗，有些甚至免疫。它通常用于摆脱单个麻烦的对手，同时保留你当前的位置。</indent>
+
+<color:r>传送楼层卷轴 (Teleport Level)</color> <indent>这是最安全的逃生方式，能让你向上或向下移动整整一个地下城楼层。你抛弃了当前楼层及其所有的好东西，尽管有时你可以通过新楼层的楼梯原路找回来。</indent>
+
+<color:r>毁灭卷轴 (Destruction)</color>    <indent>这种强大的法术会抹除你周围区域的一切事物（包括神器！），炸毁周围环境并导致天花板上的岩石掉落。如果你遇到极其严重的麻烦，这是一个很好的逃生方法。然而，即使是毁灭法术也不是万无一失的：除了召唤物以外的怪物会进行豁免检定，并且有可能避免被抹除。此外，毁灭法术实际上需要该区域有天花板才行……我建议把毁灭卷轴留给最终决战；你会需要大量的毁灭卷轴来对付混沌之蛇的所有召唤物。</indent>
+</indent>
+  <indent><color:B>治疗与恢复 (Healing and Recovery)</color>
+
+在你的冒险过程中，事物总会伤害你。这是无法避免的。幸运的是，有许多魔法药水可以治愈你的伤口，或帮助你对抗如混乱或中毒等状态异常。
+
+<color:r>治疗轻伤药水 (Cure Light Wounds)</color>    <indent>恢复少量生命值，大约 20 点左右。虽然它不能完全治愈割伤，但能减轻其影响。（割伤会导致你流血，每回合损失生命值，不过小割伤往往在你死掉之前就会愈合。）</indent>
+
+<color:r>治疗重伤药水 (Cure Serious Wounds)</color>  <indent>恢复更多生命值，大约 35 或 40 点。它在治愈割伤方面也更有效。这是大多数游戏早期角色应该依赖的主要药水。</indent>
+
+<color:r>治疗致命伤药水 (Cure Critical Wounds)</color> <indent>更好用！它能治愈大约 50-60 点生命值，并完全治愈割伤和眩晕。</indent>
+
+<color:r>治愈药水 (Curing)</color>               <indent>不恢复任何 HP，但能治愈几乎所有的异常状态——割伤、眩晕、混乱，甚至是幻觉和盲目（能看到是谁在攻击你总是好的，更别提还需要眼睛来阅读你的卷轴和法术书了！）。极度的中毒状态可能只能被部分治愈。</indent>
+
+一些蘑菇也可以非常方便：
+
+<color:r>治疗混乱蘑菇 (Cure Confusion)</color>       <indent>治愈所有的混乱。在游戏早期极其有用，因为它们比治愈药水更便宜且更容易稳定获取；通常到了游戏中期就会被淘汰，因为你囤积的治愈药水越来越多，而且你也开始找到提供混乱抗性的装备。</indent>
+
+<color:r>解毒蘑菇 (Cure Poison)</color>          <indent>治愈所有的毒素。大多数药水（甚至法术）只能部分治愈重度中毒，所以这个可靠的选项在游戏后期非常方便，特别是对于毒素抗性低的角色。</indent>
+
+<color:r>快速恢复蘑菇 (Fast Recovery)</color>        <indent>恢复少量生命值（约 10 点），稍微减轻割伤，并加快你的生命恢复速度。</indent>
+
+以上物品在城镇的圣殿和蘑菇店很容易买到，你应该尽可能多地储备它们。以下药水必须在地下城或任务中找到，或者在黑市中购买：
+
+<color:r>恢复药水 (Healing)</color>   <indent>大幅恢复 HP，约 300 点。此外，除了恐惧、幻觉和中毒外，几乎所有的异常状态都会被治愈。这些药水并不算特别罕见，但最终的决战会消耗掉大量的这种药水，特别是对于近战流派来说，所以只在必要时使用它们，以确保你在游戏最后有足够的储备。</indent>
+
+<color:r>*大恢复*药水 (*Healing*)</color> <indent>超大幅恢复 HP，约 1000 点。此外，除了恐惧和幻觉外，几乎所有的异常状态都会被治愈。这些药水非常罕见，绝大多数应该保留给最后两场决战。</indent>
+
+<color:r>生命药水 (Life)</color>      <indent>完全恢复你所有因被吸取而下降的属性点和所有的 HP，并消除除了恐惧之外的所有异常状态。这些药水极其稀有，必须留到最终决战再用。</indent>
+</indent>
+  <indent><color:B>知识与鉴定 (Knowledge)</color>
+
+当你找到一个新物品时，通常你对它一无所知。为了了解你找到的物品，你需要一些获取知识的手段。每个玩家都对他们找到的一些物品有种与生俱来的感知力，只需走过该物品（或者至少把它放在背包里携带一段时间）就能给你一个关于它价值的线索。这种能力被称为<color:keyword>伪鉴定 (pseudo-ID)</color>（参见 <link:objects.txt#Quality> 和 <link:objects.txt#Pseudo-ID>）。伪鉴定实际上只对装备有效；它也能给出关于魔法装置的直觉，但这些直觉并没有太大的实际帮助。
+
+伪鉴定告诉你的信息不多。你可以通过尝试使用该物品来了解更多；例如，你可以吃掉刚找到的蘑菇，或者喝下背包里那瓶新药水。然而，这非常冒险，因为蘑菇和药水可能会产生可怕的效果！对于像魔杖、魔棒和法杖这样的魔法装置，在找到它们时就尝试使用是个稍微能让人接受的主意；但说真的，你需要一根<color:U>鉴定法杖 (Staff of Identify)</color>或其他可靠的<color:keyword>鉴定 (Identify)</color>来源。
+
+即使是“鉴定”也只能提供关于物品的初步知识，揭示其全名和魔法战斗加成或护甲加成，以及你通过之前使用类似物品的经验学会识别的任何属性。对于药水、卷轴和蘑菇来说，鉴定就足够了（你甚至会学会识别未来的相似物品，而根本不需要去鉴定它们！）；但对于魔法装置，特别是对于 ego（词缀装备）和神器装备，鉴定可能无法揭示重要的细节。
+
+获取知识的第二种手段是<color:keyword>*完全鉴定* (*Identify*)</color>，它能提供关于物品的完整信息，包括普通鉴定可能无法揭示的所有力量和抗性。“鉴定”和“*完全鉴定*”都以卷轴和魔法装置的形式存在。两者也都可以作为城镇服务提供（需要付费），这是物品被 *完全鉴定* 的最常见方式。你也可以简单地通过出售物品来 *完全鉴定* 它们，但那样你就失去该物品了！
+</indent>
+  <indent><color:B>探测与构图 (Detection and Mapping)</color>
+
+在地下城中，探测威胁和了解周围地形是至关重要的。<color:v>探测魔棒 (Rods of Detection)</color> 是你全能的探测工具包，一旦你找到一根，除非你有等效的法术，否则你可能会在游戏的剩余时间里一直带着它。在游戏的最早阶段，你可能会使用<color:v>探测怪物法杖 (Detect Monsters)</color>作为替代，也许还会用到<color:v>探测陷阱魔棒 (Detect Traps)</color>。
+
+绘制周围区域地图的<color:U>启明法杖 (Staves of Enlightenment)</color>，是你可能会在整个游戏中携带的另一件物品。照亮房间的<color:v>照明魔棒 (Rods of Illumination)</color>带着也非常方便；在黑暗中很容易错过一些致命（或有价值）的东西。
+</indent>
+  <indent><color:B>返回城镇 (Returning to Town)</color>
+
+有一种魔法物品，叫做“回城言灵卷轴”或直接叫“回城魔棒/魔杖”，它能带你在地表和地下城之间往返。这可是件大好事：在关闭荒野大地图的情况下，这是返回城镇的唯一途径！而在开启大地图的情况下，这意味着你不需要总是上下爬 100 层楼梯，也不需要一遍又一遍地进行同样繁重的荒野长途跋涉。
+</indent>
+<topic:OnWeapons><style:heading>关于武器、护甲和杀戮词缀 (On Weapons, Armor and Slays)</style>
+
+药水、卷轴和魔法装置并不是唯一的魔法物品。你也能找到魔法护甲和装备。我们上面已经讨论过抗性了，魔法装备是找到这些属性通常的地方。魔法武器在对抗某些敌人时通常更致命，这种属性被称为“杀戮/屠灭 (slays)”。
+
+你的装备周围总会带有一些小数字，告诉你它有多有效。护甲采用这种格式：
+
+  长袍 (+x,+y) [a,+b] (+c)
+
+武器采用这种格式：
+
+  长剑 (XdY) (+x,+y) [+b] (+c)
+
+所有这些数字意味着什么？
+
+<color:B>(+x,+y)</color> <indent>分别是你的命中率 (to-hit) 和伤害 (to-dam) 的加成。当你攻击时，这些会被加到你拥有的其他任何加成上。所有武器都会显示这些数字（即使它们为零），如果护甲的这些数字不为零，也会显示。许多身体护甲在基础 AC 之前会有一个小的负数（见下文）；这是对你命中率的惩罚（你的护甲太重了，导致你穿着它很难自如移动），但通常小到可以忽略不计。根据物品的不同，这些加成可能仅适用于近战、仅适用于箭术、同时适用于近战和箭术，或者仅适用于魔法咒语。</indent>
+
+<color:B>[a,+b]</color>  <indent>该物品的基础护甲等级和魔法护甲加成。越高越好。虽然理论上武器可以提供基础护甲加成，但实际上没有哪把武器会提供，而且只有少数几把武器有额外的魔法护甲加成 (+b)。</indent>
+
+<color:B>(+c)</color>    <indent>这是该物品对其他统计数据的魔法加成（有时被称为其 <color:keyword>pval [属性加成值]</color>）。可能包含你的一项或多项属性值（力量、智力、感知、敏捷、体质、魅力），你的速度或你的潜行。你的搜索技能或红外视力也可能得到改善。还有其他可能性，了解这种加成的效果通常需要你对该物品进行 *完全鉴定*。</indent>
+
+<color:B>(XdY)</color>   <indent>这些是近战武器的基础伤害骰子。当你击中对手时，游戏会投掷 X 次带有 Y 面的骰子来计算基础伤害。这个基础伤害可以乘以武器上的任何杀戮倍率，也可以被暴击（你运气好的攻击）成倍放大。然后，游戏会将你所有的伤害加成加到总和中，包括上面讨论过的 (+x,+y) 中的 +y。所以一把近战武器可以是极品，因为它有很好的伤害骰子（例如 (5d6) (+0,+0)），或者因为它有很高的固定伤害加成（例如 (1d5) (+5,+30)）。理想情况下，它会同时拥有两者：(5d6) (+5,+30)！</indent>
+
+除了所有这些被鉴定所揭示的属性外，武器和护甲还可能具有额外的好处。两者都可能赋予我们前面讨论过的特定抗性。此外，武器通常具有针对特定类别怪物的“杀戮”属性。杀戮属性的运作方式是成倍放大基础伤害骰子（刚刚讨论的 (XdY)），乘数随杀戮类型而变化。例如，一把带有“杀兽人 (Slay Orc)”属性的武器会将伤害骰子乘以 2.8 的系数，而一把带有“*杀兽人* (*Slay Orc*)”属性（带星号更强）的武器可能（我只是说可能！）会乘以高达 4.5 的系数。显然，这意味着这种乘数在 (5d6) 武器上的意义远大于在 (1d5) 武器上，因此杀戮属性在高骰子的武器上更有价值。通常你需要对武器进行 *完全鉴定* 才能了解它的杀戮属性，除非你以前在类似武器上见过相同的杀戮属性；按 (<color:keypress>I</color>) 检查物品，可以查看你对该物品了解的所有信息。
+
+<topic:OnExploration><style:heading>关于地下城探索 (On Dungeon Exploration)</style>
+
+我们将以一些探索地下城的各种技巧来结束这篇新手指南。
+
+  <topic:SecretDoors><indent><color:B>关于隐蔽门</color>
+
+在整个地下城中，许多门是隐藏在视线之外的。要找到它们，使用 <color:keypress>s</color> 搜索命令（或者按 <color:keypress>S</color>/<color:keypress>#</color> 切换为自动搜索模式，然后站着不动）。如果你知道该在哪里搜索，这会有所帮助；通常，像这样的情况会藏有隐蔽门（在这个例子中，可能包含隐蔽门的墙壁被高亮显示为<color:R>红色</color>）：
+ 
+#<color:R>#</color>###  ###'###  ####<color:R>#</color>#    #<color:R>#</color>#<color:R>#</color>###
+<color:R>#</color>@...  ..'@'..  ..@'.<color:R>#</color>    ..'@...
+#<color:R>#</color>###  ###<color:R>#</color>###  ####'#    #<color:R>#</color>#<color:R>#</color>###
+ 
+一般来说，如果你在走廊里看到一扇孤零零的门，附近通常还会有其他的门。如果你发现一条有两扇门的走廊拐角，寻找更多的门。十字路口通常会有一些隐蔽门。最后，隐蔽门永远不会出现在你必须对角线移动才能打开它们的地方。死胡同的情况（上面的第一个例子）通常确实有隐蔽门，但并非总是如此。如果你搜索了一会儿没找到任何东西，就放弃然后继续前进吧。有时死胡同会出现在地图边缘的尽头，那里没有空间让走廊继续延伸，因此也就不会生成隐蔽门了。
+</indent>
+  <indent><color:B>关于楼层感觉 (Level Feelings)</color>
+
+当你在一个新的楼层停留了相当长的时间后，你会收到一种直觉提示，给你一个关于这层楼有多“好”的模糊概念。一般来说，感觉听起来越可怕，这一层的物品就越好，或者怪物就越危险。很可能是后者……一个 <color:B>特殊的感觉 (special feeling)</color> 几乎必然意味着在这一层有一件尚未被发现的“神器”，所以花点时间去找到它吧。
+
+你接收到楼层感觉的速度受你的感知 (WIS) 属性影响，所以如果你那个又大又笨的战士似乎要等一辈子才能感觉到点什么，去检查一下他的感知，也许下次开局搞个聪明点的。参阅 <link:dungeon.txt#Feelings> 获取更多关于楼层感觉的信息。
+</indent>
+  <indent><color:B>关于怪物知识</color>
+
+在许多其他游戏中，你需要做笔记记录特定怪物的弱点、优势、法术等；但 FrogComposband 会自动为你做这些笔记。每次你发现关于怪物的新信息（比如它会喷火），这都会被添加到你对该怪物的知识中。有几种方法可以查看这些知识；你可以输入 <color:keypress>'/'</color>，然后输入怪物的符号（你可能需要滚动浏览其他怪物记忆才能找到你想要的那个）；你可以使用 <color:keypress>'~'</color> 知识菜单；或者如果你感兴趣的怪物在你的视野内，你可以使用查看 (<color:keypress>'*'</color>) 和回忆 (<color:keypress>'r'</color>) 命令。
+
+在你角色不幸死亡的情况下，你可以使用旧角色的存档文件创建一个新角色（不要简单地创建一个新角色，而是打开死掉角色的存档文件，然后就会弹出角色创建界面）。这个新角色将保留旧角色的怪物记忆。
+</indent>
+  <indent><color:B>关于死亡</color>
+
+在 FrogComposband 中，死亡是永久的。保存进度仅意味着让你从你离开的地方继续；如果你死了，你的存档文件会被标记上死亡记号。下次你尝试使用该存档时，你将获得新建角色的对话框。死亡角色的后代将保留他们的怪物记忆和游戏设置偏好。这里很多人都有诸如“Yuppy XIV（雅皮十四世）”这样的角色；人经常会死，死亡是家常便饭，所以不要灰心。总的来说，你杀死的怪物远比怪物杀死你的次数要多！
+</indent>
+  <indent><color:B>我还有些不明白的地方……？</color>
+
+试着在帮助系统中的其他地方找找，特别是“常见问题 (Frequently Asked Questions)”部分。它叫这个名字是有原因的！你也可以在 angband.oook.cz 论坛或 angband.live 在线聊天室中提出你的问题；这两个地方通常都有热心的人愿意分享他们满级的智慧。</indent>
+
+<topic:OnBigBoyPants><style:heading>进阶挑战 (On Big Boy Pants)</style>
+
+当你准备好跨过新手模式时，游戏将为你解锁极其多样的种族和职业选项，并给你一个完整的荒野大地图去探索。所有这些都在帮助系统的其余部分进行了讨论，所以当你准备好继续前进时，一定要查看其余的文档。请特别关注关于荒野大地图以及各种游戏模式选项的小节。当你准备好享受真正的刺激时，开一把怪物模式 (Monster Mode)，扮演一只赛博恶魔 (Cyberdemon) 吧！
+
+<color:v>祝你好运，玩得开心，别死得太快！:)</color>
+
+<color:D>
+原始版本   : Chris Weisiger (TANG 1.6.2 版本)
+更新者     : Zangband DevTeam
+更新者     : Hengband 1.0.11
+更新者     : PosChengband 1.0.0
+更新者     : PosChengband 4.0.0
+更新者     : FrogComposband 7.0.strawberry
+更新者     : FrogComposband 7.1.liquorice
+</color>

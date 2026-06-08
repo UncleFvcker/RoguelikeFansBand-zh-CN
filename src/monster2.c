@@ -1899,6 +1899,17 @@ s16b get_mon_num_aux(int level, int min_level, u32b options)
  *  MD_PRON_VISIBLE | MD_POSSESSIVE | MD_OBJECTIVE
  *    --> Reflexive, genderized if visable ("himself") or "itself"
  */
+static bool _monster_desc_name_is_zh(cptr name)
+{
+    while (*name)
+    {
+        if ((byte)*name >= 0x80) return TRUE;
+        name++;
+    }
+
+    return FALSE;
+}
+
 void monster_desc(char *desc, monster_type *m_ptr, int mode)
 {
     cptr            res;
@@ -1909,6 +1920,7 @@ void monster_desc(char *desc, monster_type *m_ptr, int mode)
     char            silly_name[1024];
     bool            seen, pron;
     bool            named = FALSE;
+    bool            zh_name = FALSE;
 
     /* Hack: Chengband requested to just show the pet's name (e.g. 'Stinky' vs
      * 'Your super-duper multi-hued behemoth called Stinky') */
@@ -1954,6 +1966,7 @@ void monster_desc(char *desc, monster_type *m_ptr, int mode)
 
     /* Can we "see" it (exists + forced, or visible + not unforced) */
     seen = (m_ptr && ((mode & MD_ASSUME_VISIBLE) || (!(mode & MD_ASSUME_HIDDEN) && m_ptr->ml)));
+    zh_name = _monster_desc_name_is_zh(name);
 
     /* Sexed Pronouns (seen and allowed, or unseen and allowed) */
     pron = (m_ptr && ((seen && (mode & MD_PRON_VISIBLE)) || (!seen && (mode & MD_PRON_HIDDEN))));
@@ -2069,7 +2082,10 @@ void monster_desc(char *desc, monster_type *m_ptr, int mode)
             /* XXX Check plurality for "some" */
 
             /* Indefinite monsters need an indefinite article */
-            (void)strcpy(desc, is_a_vowel(name[0]) ? "an " : "a ");
+            if (zh_name)
+                desc[0] = '\0';
+            else
+                (void)strcpy(desc, is_a_vowel(name[0]) ? "an " : "a ");
 
             (void)strcat(desc, name);
         }
@@ -2078,10 +2094,10 @@ void monster_desc(char *desc, monster_type *m_ptr, int mode)
         {
             /* Definite monsters need a definite article */
             if (is_pet(m_ptr))
-                (void)strcpy(desc, "your ");
+                (void)strcpy(desc, zh_name ? "你的" : "your ");
 
             else
-                (void)strcpy(desc, "the ");
+                (void)strcpy(desc, zh_name ? "" : "the ");
 
             (void)strcat(desc, name);
         }
@@ -2119,7 +2135,7 @@ void monster_desc(char *desc, monster_type *m_ptr, int mode)
             /* XXX Check for trailing "s" */
 
             /* Simply append "apostrophe" and "s" */
-            (void)strcat(desc, "'s");
+            (void)strcat(desc, zh_name ? "的" : "'s");
         }
     }
 

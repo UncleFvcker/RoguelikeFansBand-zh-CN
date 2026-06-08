@@ -726,7 +726,7 @@ static void autopick_entry_from_object(autopick_type *entry, object_type *o_ptr)
         /*Devices work better if we just use the effect name */
         if (object_is_device(o_ptr) && o_ptr->activation.type != EFFECT_NONE)
         {
-            strcpy(name_str, do_device(o_ptr, SPELL_NAME, 0));
+            strcpy(name_str, effect_internal_name(o_ptr->activation.type));
             strcat(name_str, "$");
             name = FALSE;
         }
@@ -845,7 +845,7 @@ static void autopick_entry_from_object(autopick_type *entry, object_type *o_ptr)
     {
         char o_name[MAX_NLEN];
 
-        object_desc(o_name, o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_NAME_ONLY));
+        object_desc(o_name, o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_NAME_ONLY | OD_INTERNAL_NAME));
         sprintf(name_str, "^%s$", o_name);
     }
 
@@ -1406,6 +1406,14 @@ static bool _string_match(cptr source, cptr pattern)
     }
     return FALSE;
 }
+
+static bool _autopick_name_match(cptr o_name, cptr o_name_internal, cptr pattern)
+{
+    if (_string_match(o_name, pattern)) return TRUE;
+    if (o_name_internal && strcmp(o_name, o_name_internal))
+        return _string_match(o_name_internal, pattern);
+    return FALSE;
+}
 /*  There has been a long standing Hengband bug with autoregistering
     objects for destruction greedily destroying too much. The classic
     example is autoregistering a mace only to find this also destroys
@@ -1432,7 +1440,7 @@ static bool _is_polymorphed_demon(void)
     else return (get_true_race()->flags & RACE_IS_DEMON);
 }
 
-static bool is_autopick_aux(object_type *o_ptr, autopick_type *entry, cptr o_name)
+static bool is_autopick_aux(object_type *o_ptr, autopick_type *entry, cptr o_name, cptr o_name_internal)
 {
     int j;
 
@@ -2015,7 +2023,7 @@ static bool is_autopick_aux(object_type *o_ptr, autopick_type *entry, cptr o_nam
     }
 
     /* Search-String */
-    if (!_string_match(o_name, entry->name))
+    if (!_autopick_name_match(o_name, o_name_internal, entry->name))
         return FALSE;
 
     /* TRUE when it need not to be 'collecting' */
@@ -2047,6 +2055,7 @@ int is_autopick(object_type *o_ptr)
 {
     int i;
     char o_name[MAX_NLEN];
+    char o_name_internal[MAX_NLEN];
 
     if (o_ptr->tval == TV_GOLD) return -1;
 
@@ -2065,9 +2074,11 @@ int is_autopick(object_type *o_ptr)
 
     /* Prepare object name string first */
     object_desc(o_name, o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
+    object_desc(o_name_internal, o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_INTERNAL_NAME));
 
     /* Convert the string to lower case */
     str_tolower(o_name);
+    str_tolower(o_name_internal);
 
     /* Look for a matching entry in the list */
     for (i=0; i < max_autopick; i++)
@@ -2094,7 +2105,7 @@ int is_autopick(object_type *o_ptr)
             }
             if (!notsame) continue;
         }
-        if (is_autopick_aux(o_ptr, entry, o_name))
+        if (is_autopick_aux(o_ptr, entry, o_name, o_name_internal))
             return i;
     }
 
@@ -4227,6 +4238,7 @@ static void search_for_object(text_body_type *tb, object_type *o_ptr, bool forwa
 {
     autopick_type an_entry = {0}, *entry = &an_entry;
     char o_name[MAX_NLEN];
+    char o_name_internal[MAX_NLEN];
     int bypassed_cy = -1;
 
     /* Start searching from current cursor position */
@@ -4234,9 +4246,11 @@ static void search_for_object(text_body_type *tb, object_type *o_ptr, bool forwa
 
     /* Prepare object name string first */
     object_desc(o_name, o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
+    object_desc(o_name_internal, o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_INTERNAL_NAME));
 
     /* Convert the string to lower case */
     str_tolower(o_name);
+    str_tolower(o_name_internal);
 
     while (TRUE)
     {
@@ -4256,7 +4270,7 @@ static void search_for_object(text_body_type *tb, object_type *o_ptr, bool forwa
         if (!autopick_new_entry(entry, tb->lines_list[i], FALSE)) continue;
 
         /* Does this line match to the object? */
-        match = is_autopick_aux(o_ptr, entry, o_name);
+        match = is_autopick_aux(o_ptr, entry, o_name, o_name_internal);
         autopick_free_entry(entry);
         if (!match)    continue;
 

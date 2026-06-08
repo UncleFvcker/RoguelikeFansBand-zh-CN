@@ -1,0 +1,131 @@
+<style:title>一般信息 (General Information)</style>
+
+本文档提供了游戏的简要介绍。FrogComposband 是一款单人地下城模拟游戏；你扮演一名角色，最终目标是杀死潜伏在地下城黑暗深处的、令人恐惧的<color:keyword>混沌之龙 (Serpent of Chaos)</color>。在你的冒险旅途中，你将完成许多支线任务，学习强大的魔法，击败或结交奇幻的怪物，获取奇妙的宝藏，探索黑暗的迷宫，阅读冗长的文本，被各种晦涩的外国流行文化梗搞得一头雾水，在事情不顺利时沮丧地狂拍桌子，并希望你最终能乐在其中。
+
+<topic:Help><style:heading>关于帮助文件</style>
+
+你可能见过许多游戏附带了 300 页的手册，作者还指望你在开始玩之前把它读完。FrogComposband 也是这样的，只不过它的手册可没那么“袖珍”。
+
+当然，你并不真的需要在玩之前通读整个手册；你可以直接跳进去，在游玩中摸索，当遇到令人困惑的东西时再去查看帮助。你只需阅读足够的内容，知道在这个游戏中你应该做什么以及如何去做就可以了。这个文件绝对值得一读，<color:keyword>命令帮助文件</color> (<link:command.txt>) 也是如此；如果不了解各种命令，你在游戏中真的寸步难行。<color:keyword>新手指南</color> (<link:tang.txt>) 你可以把它当作大多数基础知识的快速参考，或者完全忽略、永远不打开。至于 <color:keyword>常见问题解答 (FAQ)</color> (<link:faq.txt>)，你可以一开始先跳过，或者至少跳过前面的部分，等弄懂了命令和其他基础知识后再回来看；大部分文档集中于基础知识（详细程度各不相同），而 FAQ 则是快速查找更高级主题的好地方。
+
+在整个帮助文件中，一些概念被<color:keyword>用红色高亮显示</color>，偶尔也会用<color:G>绿色</color>或<color:y>黄色</color>，以营造出它们很重要的错觉，并让页面看起来不那么沉闷。<color:G>[方括号]</color>中的绿色字母是指向文档另一部分的链接，按下该字母即可跳转。你也可以按 <color:keypress>?</color> 获取关于“帮助系统本身”的帮助。
+
+<topic:Basics><style:heading>游戏基础</style>
+
+在游戏开始之前，你必须创建一个角色。你可以从大量的种族、职业、性格、魔法领域和出生选项中进行选择（参见 <link:birth_contents.txt>），但你的最终目标始终如一：击败邪恶的混沌之龙。你这么做是为了将世界从邪恶中解救出来，还是仅仅为了成为它的下一任暴君，这完全取决于你……
+
+你将通过简单的按键命令引导你的角色探索世界、发现有用的物品，并用钢铁和魔法与怪物战斗。杀死混沌之龙是一个非常长期的目标；单次游戏可能需要几天、几周甚至几个月的时间。为了准备迎接那场最终对决，你必须从冒险中获得大量的<color:G>经验值 (experience)</color>，并找到越来越有价值的魔法<color:G>装备 (equipment)</color>来保护自己并增强你的力量。
+
+游戏包含广阔的<color:keyword>荒野大地图 (wilderness)</color>，其中有许多城镇和无数的地下城可供探索。大多数地下城的底层都有一位首领 (boss) 守卫；击杀首领通常会给你丰厚的奖励。每个地下城也有一个主题；例如，<color:keyword>兽人洞穴 (Orc Caves)</color> 里面到处都是……你猜对了：兽人！但主题也可能完全是另一回事，比如禁止近战的<color:keyword>反近战洞穴 (Anti-Melee Cave)</color>，或者是每只怪物都被隔离开来、你可以（通常）与它们一对一单挑的<color:keyword>竞技场 (Arena)</color>。有太多东西可以探索了；但如果你想要一个更纯粹简单的游戏，这片荒野大地图是可选的。
+
+<topic:Modes><style:heading>游玩模式 (Play Modes)</style>
+
+游戏有几种不同的游玩模式。<color:keyword>新手模式 (Beginner Mode)</color> 限制了可用种族和职业的数量，移除了性格选择，自动分配出生选项并关闭了荒野大地图；这种模式旨在简化出生创建过程，以便你能尽快开始实际游玩。
+
+有些玩家跳过新手模式，直接进入<color:keyword>正常模式 (Normal Mode)</color>，这是最常见、最符合预期的游玩方式。正常模式默认开启荒野大地图（尽管你仍然可以将其关闭），并提供完整的种族、职业和性格选择库。准备好眼花缭乱吧！
+
+最后，如果你厌倦了死于无数强大的怪物之手，你可以在<color:keyword>怪物模式 (Monster Mode)</color> 中自己扮演一只怪物；在这里你选择诸多怪物类型中的一种来游玩，从该类型的弱小怪物开始，随着经验的增长进化成更强大的形态。怪物模式中的装备管理可能会大相径庭；许多怪物有着独特的身体结构，有些纯粹依靠天生攻击（爪子、牙齿、酸液伪足等），无法挥舞常规武器。怪物模式没有职业选择；你选择的怪物类型实际上既是你的种族，也是你的职业。
+
+<color:keyword>茶歇模式 (Coffee-break mode)</color> 是游戏的加速、快节奏版本，没有荒野大地图，不会重复进入相同楼层，游戏前期的楼层更小，增加了怪物物品掉落，并且升级更快。<color:G>选择新手模式会自动激活茶歇模式游玩</color>，但该模式也可作为正常模式和怪物模式的出生选项来选用，且并非专为新玩家设计。“无大地图 (no wilderness)”选项是围绕茶歇模式进行平衡的，因此不建议同时关闭茶歇模式和荒野大地图。
+
+<topic:First><style:heading>首先要做的事</style>
+
+你将在<color:keyword>前哨镇 (Outpost)</color>开始你的冒险，在那里你可以通过与各个店主交易来获取补给、武器、护甲和魔法设备。你将拥有一些与生俱来的初始装备，以及一点金币。
+
+首先，你应该去商店买一些关键补给——从<color:keyword>炼金店 (Alchemy Shop)</color> 购买相位之门和传送卷轴，以及从<color:keyword>神殿 (Temple Shop)</color> 购买严重治疗药水。很容易就会陷入超出你能力范围的险境，尤其是在早期，因此随时备好逃生和治疗的手段是必不可少的。如果你还有剩余的金币，考虑在<color:keyword>杂货店 (General Store)</color> 把你初始的火把升级为提灯 (lantern)；提灯的光照范围更广，能让你在黑暗中看得更远。
+
+你现在准备好深入地下城了，那里有奇妙的冒险在等着你……但等一下！如果你去拜访前哨镇统治者乌尔德里克 (Uldrik) 的城堡，你会接到一个特殊的<color:keyword>城镇任务 (town quest)</color>，你可能想先完成它。
+
+有关城镇及其商店的更多信息，请参见 <link:town.txt>；有关城镇任务的详细说明，请参见 <link:town.txt#TownQuests>。
+
+<topic:Dungeon><style:heading>进入地下城</style>
+
+<style:note>注意：本帮助中涵盖无大地图游玩的部分均假设已激活茶歇模式。如果你选择了新手模式，则自动符合此情况。</style>
+
+如果你在开启荒野大地图的情况下游玩，第一个要探索的地下城是<color:keyword>兔子洞 (Warrens)</color>，这是一个小型地下城，它的入口就在前哨镇你出生位置的旁边。像许多地下城一样，这里也有一个首领 (boss)：某个狗头人国王或领主。对于他的等级来说他相当难缠，但这主要是因为他周围随时准备着庞大的大军；保持头脑清醒，避免一次性与他的整支军队作战，你应该就会没事。如果你已经完成了乌尔德里克的第一个城镇任务并请求了下一个任务，你还会在兔子洞中找到 <color:y>害虫防治 (Pest Control)</color> 任务；完成这个任务是为你迎战狗头人领主做准备的绝佳方式。更多关于地下城中会有什么的信息，请参见 <link:dungeon_contents.txt>。
+
+如果你在关闭大地图的情况下游玩，至少地下城的选择非常简单：只有一个，即 <color:keyword>Angband</color>。在地下城中方向的选择也很简单：你只能往深处走！很快（和荒野游玩时有着同样的注意事项！）你就会找到 <color:y>害虫防治</color> 地下城任务，这是你初出茅庐的角色早期的第一个生死关头。你还会偶尔遇到随机的<color:keyword>楼层守卫 (level guardians)</color>；尽你所能杀了它们，因为它们会掉落贵重物品。一旦你觉得你已经在地下城冒险够了，读一张<color:keyword>归城卷轴 (Word of Recall)</color> 即可返回前哨镇。
+
+<topic:Wilderness><style:heading>荒野大地图 (Wilderness)</style>
+
+你的冒险发生在一片广阔而危险的荒野中。幸运的是，你的旅程开始于相对安全的前哨镇；但要注意，即使在城墙内，荒野也不远，危险的怪物也会溜达进来。
+
+一旦你征服了初始地下城<color:keyword>兔子洞 (Warrens)</color>（可能还有<color:keyword>盗贼藏身处 Hideout</color>，另一个可从前哨镇进入的早期地下城），你就可以准备出发前往野外了。你需要充足的光源和食物补给；但更重要的是<color:keyword>传送手段 (teleportation)</color>，因为荒野是一个危险的地方。
+
+如果你的目的是前往另一个城镇，或寻找地下城入口，你应该使用特殊的<color:keyword>全球荒野地图 (global wilderness map)</color>（有时也叫作“大地图 overworld map”）来进行旅行。进入和离开这张特殊地图使用与爬楼梯相同的按键：
+
+<style:note>按 <color:keypress><</color> 进入大地图，按 <color:keypress>></color> 离开大地图。</style>
+
+但是要小心：如果附近有警觉的敌人，你将无法进入大地图。此外，即使在大地图上，你也会遭到<color:keyword>伏击 (ambush)</color>；这在夜间以及远离相对安全的主干道时更容易发生。如果你没有传送手段来逃脱，伏击可能是非常致命的。
+
+在大地图上，你可以使用 <color:keypress>*</color> 环顾命令来查看城镇和地下城入口。请注意各种地下城和荒野地块的危险等级；当你在环顾时，这会显示在屏幕顶行，指示出安全的（或危险的）旅行区域。对于地下城，它会标示出其最浅的深度。
+
+许多城镇和地下城在等着你；早期适合探索的优质地下城包括<color:keyword>兽人洞穴 (Orc Caves)</color>、<color:keyword>潮汐洞穴 (Tidal Cave)</color>、<color:keyword>恶心洞穴 (Icky Cave)</color> 和 <color:keyword>迷宫 (Labyrinth)</color>。你还应该尽早访问 <color:keyword>莫里凡特 (Morivant)</color>、<color:keyword>阿南巴尔 (Anambar)</color> 和 <color:keyword>塔罗斯 (Thalos)</color> 镇——尽管不建议步行前往塔罗斯……在莫里凡特镇的东北方，靠近地图中心的位置，就是令人畏惧的 <color:keyword>Angband<color:normal> 地下城。那是混沌之龙的老巢，你必须杀死它才能赢得游戏。
+<style:screenshot>
+<color:b>~~~~~~</color><color:B>~~~~</color><color:g>..</color><color:B>~~~</color><color:u>........</color><color:B>~~~~~~~~~</color><color:g>.......</color>...<color:g>.</color>......<color:G>#</color><color:B>~</color>........<color:g>...</color><color:B>~~~~</color><color:G>#</color>
+<color:b>~~</color><color:B>~~~~~~~</color><color:g>....</color>*....<color:u>.........</color><color:B>~~~~</color><color:g>......</color>...<color:g>......</color><color:G>#</color><color:B>~~~~</color><color:G>#</color><color:o>######</color>..<color:g>.</color><color:B>~~</color><color:g>..</color><color:B>~</color><color:G>#</color>
+<color:B>~~~~~~~~</color><color:g>.</color>.....<color:g>.</color><color:G>#</color><color:u>.</color>..<color:u>.....</color><color:v>></color><color:u>...</color><color:g>.....</color>.....<color:g>......</color><color:y>></color><color:g>.</color><color:G>#</color><color:B>~</color><color:G>###</color><color:o>########</color>..<color:B>~</color><color:g>...</color><color:B>~</color><color:G>#</color>
+<color:B>~~~~~~~~</color><color:g>.</color>.<color:g>...</color><color:G>###</color><color:u>..</color>..<color:u>.........</color><color:g>...</color>..<color:g>............</color><color:B>~~</color><color:G>###</color><color:o>#######</color><color:B>~~</color>.<color:B>~</color><color:g>...</color><color:B>~~</color>
+<color:B>~~~~~~~~</color><color:g>.</color>.<color:g>..</color><color:G>#####</color><color:u>..</color>....<color:u>......</color><color:g>..</color>..<color:g>...</color><color:o>###</color><color:g>.......</color><color:B>~</color><color:G>##</color><color:o>#########</color><color:B>~</color><color:o>#</color>.<color:g>......</color>
+<color:B>~~~~~~~~</color><color:g>.</color>.<color:g>...</color><color:G>#####</color><color:u>....</color>..<color:u>.....</color><color:g>.</color>..<color:g>.....</color><color:o>###</color><color:g>......</color><color:B>~~</color><color:G>#</color><color:o>###########</color>..<color:g>.....</color>
+<color:B>~~~~~~~~</color><color:g>.</color>.<color:g>....</color><color:G>##</color><color:o>##</color><color:u>.....</color>...<color:u>...</color>..<color:g>.....</color><color:o>#</color><color:g>.</color><color:o>#</color><color:g>........</color><color:B>~~~</color><color:v>></color><color:o>##########</color>...<color:g>...</color>
+<color:B>~~~~~~~~</color><color:g>.</color>.<color:g>..</color><color:o>#####</color><color:v>></color><color:g>..</color><color:u>.....</color>...<color:g>.</color>.<color:g>....</color><color:v>></color><color:g>..............</color><color:o>#</color><color:B>~~</color><color:o>###########</color>...<color:g>.</color>
+<color:B>~~~~</color><color:g>..</color>....<color:o>####</color><color:g>.............</color>...<color:g>............</color><color:B>....</color><color:g>...</color><color:o>##############</color><color:v>></color><color:o>#</color>..
+.<color:g>.</color><color:B>~~</color><color:g>.</color>..<color:B>~</color><color:g>.</color>..<color:g>...</color>.......<color:g>........</color>.....<color:g>......</color><color:B>....~~</color><color:g>....</color><color:o>################</color><color:g>.</color>
+......<color:B>~~</color><color:g>..</color>.....<color:g>.....</color>....<color:g>.........</color>..<color:g>....</color><color:B>...~~~~</color><color:g>...</color><color:o>##################</color>
+<color:g>.....</color><color:B>~~~~</color><color:g>.......</color><color:B>~~~</color><color:g>....</color>......<color:g>.....</color>.<color:g>....</color><color:B>..~~~~~</color><color:g>.....</color><color:o>################</color>
+<color:o>#</color><color:g>....</color><color:B>~~~~~~~~~~~~~~~</color><color:g>........</color>.....@*<color:g>...</color><color:B>..~~~~~</color><color:g>.</color>...<color:g>....</color><color:o>##############</color>
+<color:o>##</color><color:g>.</color><color:G>#</color><color:g>..</color><color:B>~~~~~~</color><color:g>.....</color><color:B>~~~~~~~~~~~</color>.<color:B>~~~</color><color:g>..</color>...<color:g>.</color><color:B>~~..</color>.....<color:G>#</color>...<color:g>...</color><color:o>#############</color>
+<color:r>~</color><color:o>##</color><color:g>....</color><color:B>~~~~</color><color:g>....</color>*..<color:g>.</color><color:B>~~~~~~~~</color>..<color:B>~~~~~</color><color:g>..</color>.......<color:G>#######</color>...<color:g>..</color><color:o>###########</color><color:U>~</color>
+<color:v>></color><color:o>##</color><color:g>....</color><color:B>~~~</color><color:g>...</color><color:G>#</color><color:g>...</color>..<color:g>.</color><color:B>~~~~</color><color:g>...</color>.<color:g>....</color><color:B>~~</color><color:v>></color><color:B>~~~</color><color:G>############</color><color:v>></color><color:G>#</color>.....<color:u>.</color><color:o>########</color><color:r>~</color>
+<color:r>~</color><color:o>##</color><color:g>.</color><color:G>#</color><color:g>..</color><color:B>~~</color><color:g>..</color><color:G>###</color><color:g>....</color>...<color:B>~~</color><color:g>..</color>...<color:g>......</color><color:B>~~~~~</color><color:G>##############</color><color:g>...</color>....<color:u>.</color><color:o>####</color><color:U>~</color><color:r>~</color>
+<color:o>##</color><color:g>.</color><color:G>#</color><color:g>.</color><color:B>~~~</color><color:g>..</color><color:G>###</color><color:g>.......</color>......<color:g>.</color><color:G>####</color><color:g>....</color><color:B>~~</color><color:G>#################</color><color:g>..</color><color:B>~~~</color>.<color:u>...</color><color:o>###</color><color:U>~</color>
+<color:o>#</color><color:g>.</color><color:G>#</color><color:g>..</color><color:B>~~~</color><color:g>.....</color><color:u>...</color><color:g>......</color>.<color:G>#########</color><color:g>...</color><color:B>~</color><color:G>##################</color><color:g>..</color><color:B>~~~</color>..<color:u>....</color><color:o>##</color>
+<color:g>...</color><color:G>#</color><color:g>..</color><color:B>~~</color><color:g>....</color><color:u>.....</color><color:g>.....</color>.<color:G>######</color><color:o>#</color><color:G>##</color><color:g>..</color><color:B>~~</color><color:G>###################</color><color:B>~~~~</color><color:u>.</color>.<color:u>.</color><color:v>></color><color:u>...</color><color:o>#</color>
+<color:o>#</color><color:g>.....</color><color:B>~~</color><color:g>.....</color><color:u>.........</color>.<color:G>#####</color><color:o>#</color><color:v>></color><color:o>#</color><color:G>###</color><color:g>.</color><color:B>~</color><color:G>###################</color><color:B>~~~</color><color:u>..</color>.......
+<color:g>.</color><color:o>#</color><color:g>.....</color><color:B>~</color><color:g>...</color><color:u>..........</color>..<color:g>..</color><color:G>####</color><color:o>#</color><color:G>####</color><color:g>.</color><color:B>~~</color><color:G>###############</color><color:B>~~~~~~~</color><color:u>........</color>
+<color:u>.</color><color:g>......</color><color:B>~~~</color><color:u>.......</color><color:B>~~~~~~</color><color:g>...</color><color:G>#######</color><color:g>..</color><color:B>~~~</color><color:G>###############</color><color:B>~~~~~~~~~~~~~~</color>
+<color:u>..</color><color:g>...</color><color:B>~~~~~~</color><color:u>....</color><color:B>~~~~~~~~~~~~</color><color:g>.........</color><color:B>~~~</color><color:G>##############</color><color:B>~~~~~~~~~~~</color><color:b>~~~</color>
+<color:u>....</color><color:g>.</color><color:B>~~~~~~~~~~~~~~~~</color><color:b>~~</color><color:B>~~~~~~~~~</color><color:g>..</color><color:B>~~~~~~~~</color><color:G>#########</color><color:B>~~~~~~</color><color:b>~~~~~~~~~~</color>
+Surface
+</style>
+在文档中，我会时不时地加入截图以帮助解释说明。在上面的图片中，玩家（我，用 @ 表示）按 <color:keypress><</color> 进入了大地图，然后从前哨镇（西南方的 *）走到了莫里凡特镇，目前我就站在镇子旁边。地下城入口标记为 <$:FF_ENTRANCE>，而 Angband 的入口被高亮显示为 <color:y>></color>。
+
+如你所见，要穷尽可探索的地下城还需要很长一段时间（这里只显示了整个地图的一小部分！）；但其中一些地下城远比其他的要致命。<color:keyword>巨龙巢穴 (Dragon's Lair)</color> 就是一个例子，它从第 60 层开始，一直延伸到第 72 层。按什么顺序访问这些地下城并没有绝对的标准答案，尽管大多数玩家确实喜欢从简单的开始……
+
+许多最危险的地下城都有<color:keyword>入口守卫 (entrance guardians)</color>，这些高级怪物会试图阻止你进入洞穴。例如，<color:keyword>水晶城堡 (Crystal Castle)</color> 的入口由一只非常讨厌的以太巨龙守卫。大多数入口守卫倾向于不怎么移动，它们更喜欢尽可能地待在入口附近。
+
+关于荒野的最后一点说明：要深入群山，你需要有<color:keyword>悬浮 (levitation)</color>的能力。有几个地下城的入口埋在山里，没有悬浮你就无法到达它们——至于深邃的海洋，最好还是完全远离。
+
+有关荒野及其地下城的更详细描述，请参见 <link:town.txt#Wilderness>。
+
+<topic:Winning><style:heading>赢得游戏</style>
+
+好吧，我们的进度说得有点超前了，但到了这个时候，你肯定已经击败了<color:keyword>奥伯龙 (Oberon)</color>了，对吧？也许还没有，但最终你将强大到足以在 <color:keyword>Angband</color> 地下城的 99 层 (4950 英尺) 面击败这位安珀之王。击败这个敌人后，一个魔法楼梯将会出现，终于允许你到达 100 层并直面令人恐惧的<color:keyword>混沌之龙 (Serpent of Chaos)</color>。在杀死它之前，你无法前往低于它所在的楼层。尽量避免在 100 层瞎逛，除非你已经为它做好了准备，因为这只混沌巨蛇有个习惯——它会跨越整个地下城直奔你而来，因你的傲慢而将你无情抹杀……
+
+在无大地图游玩中，这些最终的战斗与其它 Angband 任务不同，如果你发现自己准备不足，你可以逃跑并归城。开启大地图游玩时在随机任务中也允许这样做（参见 <link:dungeon.txt#RandomQuests>）。
+
+混沌之龙是一个非常难对付的敌人，你需要收集你所有的资源，才能有一丝体面的获胜机会。这通常意味着很多很多（除此之外还要更多）的 <color:B>治疗药水 (Healing)</color> 和 <color:B>*大治疗药水* (*Healing*)</color>。你还需要大量的毁灭法术/卷轴来对付它的召唤物。我不会给出比这更多的提示了，因为弄清楚如何获胜本身就是乐趣的一部分，不是吗？
+
+如果你确实成功击杀了混沌之龙，你将获得<color:keyword>赢家 (WINNER)</color>的身份状态。你可以继续探索，甚至可以保存游戏以后再玩，但既然你已经击败了现存最强的生物，那确实没太大意义了。除非你听信了传闻，想去寻找那枚据说埋在地下城某处的强大戒指。另外，还有传言说某些怪物能从死里复活！
+
+当你准备好退隐时，只需“自杀”(<color:keypress>^K</color>) 即可结束游戏（别忘了在最后导出一次角色档案留作纪念）。请注意，在退隐之前你仍然可能被杀，所以你最好在误入赛博恶魔 (Cyberdemons) 的巢穴之前选择退隐……
+
+<topic:UponDeath><style:heading>关于死亡与临终</style>
+
+生命值 (<color:keyword>HP</color>) 记录着你角色的健康状况。如果你的角色的生命值降至 0 以下，他就死了，冒险也就结束了；在令人畏惧的墓碑屏幕出现之前，你可以留下几句临终遗言。你的角色将被添加到名人堂 (Hall of Fame)，你仍然可以通过名人堂或墓碑屏幕查看你的角色面板（其中所有物品都会神秘地变为已被鉴定状态）。
+
+无论你的角色是被杀还是胜利退隐，它都会留下一个精简版的存档文件，其中包含你的选项设置、怪物知识和物品知识（参见 <link:monster.txt#MonsterMemory>）以及出生时的选择。如果恢复这个存档，就会像没有这个文件一样生成一个新角色，但旧角色的怪物和物品知识会被新角色继承。你还会获得<color:keyword>快速开始 (quick start)</color>的额外选项，这允许你轻松地创建一个具有相同种族、职业和性格的新角色。
+
+不要灰心！死亡是非常普遍的，这会让最终到来的胜利变得更加甜蜜。赢得这场游戏可能需要几个月，甚至几年的时间。但旅途本身充满了乐趣，沿途也有许多东西可以尝试。<color:G>祝你好运，享受游戏吧！</color>
+
+<color:D>
+--
+最初版     : (??)
+更新       : (??)
+更新       : Zangband DevTeam
+更新       : Hengband 1.5.4
+更新       : PosChengband 4.0.0
+更新       : FrogComposband 7.0.nougat
+更新       : FrogComposband 7.1.liquorice
+</color>

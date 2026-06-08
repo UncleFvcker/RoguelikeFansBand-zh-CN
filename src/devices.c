@@ -2414,6 +2414,40 @@ bool effect_learn(int type)
     return FALSE;
 }
 
+cptr effect_internal_name(int type)
+{
+    static char buf[80];
+    _effect_info_ptr e;
+    int i;
+
+    switch (type)
+    {
+    case EFFECT_LITE_AREA: return "illumination";
+    case EFFECT_DETECT_ALL: return "detection";
+    case EFFECT_SPEED_HERO: return "heroic speed";
+    case EFFECT_HEAL: return "cure wounds";
+    case EFFECT_HEAL_CURING: return "healing";
+    case EFFECT_HEAL_CURING_HERO: return "angelic healing";
+    case EFFECT_IDENTIFY_FULL: return "*identify*";
+    case EFFECT_CONFUSING_LITE: return "confusing lights";
+    case EFFECT_BALL_WATER: return "tsunami";
+    case EFFECT_DRAIN_LIFE: return "annihilation";
+    }
+
+    e = _get_effect_info(type);
+    if (!e) return "";
+
+    for (i = 0; e->text[i] && i < (int)sizeof(buf) - 1; i++)
+    {
+        char c = e->text[i];
+        if (c == '_') c = ' ';
+        else c = (char)tolower((unsigned char)c);
+        buf[i] = c;
+    }
+    buf[i] = '\0';
+    return buf;
+}
+
 int effect_parse_type(cptr type)
 {
     int i;

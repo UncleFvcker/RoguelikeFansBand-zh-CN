@@ -1267,6 +1267,8 @@ static void crash_report_show(HWND hwnd, cptr kind, cptr str)
 static void term_init_double_buffer(term_data *td)
 {
     HDC hdc;
+    RECT rc;
+    HBRUSH brush;
 
     if (!td->w) return;
 
@@ -1288,6 +1290,16 @@ static void term_init_double_buffer(term_data *td)
     td->hOldBitmap = SelectObject(td->hDC, td->hBitmap);
 
     ReleaseDC(td->w, hdc);
+
+    td->updateRect.left = -1;
+
+    rc.left = 0;
+    rc.top = 0;
+    rc.right = td->size_wid;
+    rc.bottom = td->size_hgt;
+    brush = CreateSolidBrush(td->bg_color);
+    FillRect(td->hDC, &rc, brush);
+    DeleteObject(brush);
 }
 
 /*
@@ -2811,6 +2823,8 @@ static errr Term_text_win(int x, int y, int n, byte a, const char *s)
         u32b cp = 0;
         WCHAR wbuf[2];
         RECT cell = rc;
+        int draw_left;
+        int draw_top;
         int cells;
         int wlen;
 
@@ -2824,14 +2838,14 @@ static errr Term_text_win(int x, int y, int n, byte a, const char *s)
 
         cell.left = x * td->tile_wid + td->size_ow1 + i * td->tile_wid;
         cell.right = cell.left + cells * td->tile_wid;
+        draw_left = cell.left;
+        draw_top = cell.top;
         if (td->bizarre ||
             (td->tile_hgt != td->font_hgt) ||
             (td->tile_wid != td->font_wid))
         {
-            cell.left += ((td->tile_wid - td->font_wid) / 2);
-            cell.right = cell.left + cells * td->tile_wid;
-            cell.top += ((td->tile_hgt - td->font_hgt) / 2);
-            cell.bottom = cell.top + td->font_hgt;
+            draw_left += ((td->tile_wid - td->font_wid) / 2);
+            draw_top += ((td->tile_hgt - td->font_hgt) / 2);
         }
 
         if (*(s+i)==127)
@@ -2853,7 +2867,7 @@ static errr Term_text_win(int x, int y, int n, byte a, const char *s)
             {
                 HFONT font = (_win_codepoint_uses_cjk_font(cp) && td->cjk_font_id) ? td->cjk_font_id : td->font_id;
                 SelectObject(hdc, font);
-                ExtTextOutW(hdc, cell.left, cell.top, ETO_CLIPPED, &cell, wbuf, wlen, NULL);
+                ExtTextOutW(hdc, draw_left, draw_top, ETO_CLIPPED, &cell, wbuf, wlen, NULL);
                 _update_rect_enlarge(td, &cell);
             }
         }
