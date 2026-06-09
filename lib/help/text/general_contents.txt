@@ -1,17 +1,16 @@
-An Introduction and General Information.
+介绍与一般信息。
 
-Please choose one of the following online help files:
+请选择以下在线帮助文件之一：
 
-    [a] General Information
-    [b] About the Help Files
-    [c] The Basics of the Game
-    [d] Play Modes
-    [e] First Things to Do
-    [f] Into the Dungeon
-    [g] Wilderness
-    [h] Winning the Game
-    [i] Upon Death and Dying
-    [j] The Newbie Guide
+    [a] 一般信息
+    [b] 关于帮助文件
+    [c] 游戏基础
+    [d] 游玩模式
+    [e] 首先要做的事
+    [f] 进入地下城
+    [g] 荒野大地图
+    [h] 赢得游戏
+    [i] 关于死亡与临终
+    [j] 新手指南
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

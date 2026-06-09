@@ -1,464 +1,414 @@
-Skillmasters
+技能大师 (Skillmasters)
 
-Using a point-based skill system, the Skillmaster allows you to design 
-your own class. You receive 5 skill points to spend immediately upon 
-birth, and will gain an additional point every 5 character levels, for 
-a total of 15 points. You may spend these skill points to gain or 
-improve various skills with the Gain command.
 
-To be effective as a Skillmaster, you should have a plan as to which 
-skills you will learn and when; your skill choices are permanent, and 
-there are many more skills to learn than you could possibly hope to 
-acquire with just 15 skill points, so make sure you won't be stuck with 
-choices you regret. A bit of forethought is needed; this document 
-should help.
+基于点数式的技能系统，技能大师允许你设计自己的职业。你在建卡出生时会立即
+获得 5 个技能点 (skill points)可供分配，并且每提升 5 
+个角色等级将额外获得 1 点，总共 15 点。你可以使用 G (Gain/获取) 
+命令消耗这些技能点来学习或提升各种技能。
 
-Overview of the Various Skills
 
-The available skills come in various kinds, or groups. You invest 
-points in individual skills, not in groups, but the overall number of 
-points for the corresponding group is sometimes also important. For 
-example, the first group of skills is Melee; here, you may specialize 
-in various melee-weapon classes or learn bare-handed combat (Martial 
-Arts). The total number of points spent in this group determines your 
-overall Melee skill (as shown on the Character Sheet) and even affects 
-your STR and DEX. On the other hand, the number of points spent in the 
-skill itself determines your proficiency with that particular class of 
-weaponry, and also influences how many attacks per round you get. Each 
-skill group is discussed in detail below.
+要想成为一名高效的技能大师，你必须对学习哪些技能以及何时学习有一个规划；
+你的技能选择是永久的，而且可供学习的技能远比你那 15 
+个技能点能点满的要多，所以要确保你不会因为糟糕的选择而陷入困境。这需要一
+些前瞻性思考；本文档应该能帮到你。
 
-The main skill groups are:
+各种技能概述
 
-  Melee       Effectiveness in hand-to-hand combat
-  Ranged      Effectiveness in ranged combat (archery and throws)
-  Magic       Access to spell realms as an INT-based caster. Every 
-              spell realm except Life is available.
-  Prayer      Access to prayer realms as a WIS-based caster. Only good 
-              and evil realms are available.
-  Skills      Basic skills such as Devices, Stealth, Speed and Saving 
-              Throw
-  Techniques  Access to advanced or unusual talents that most players 
-              lack. This includes some book-based talents, such as 
-              Burglary and Kendo, as well as non-standard talents like 
-              Riding and Dual Wielding.
-  Abilities   For a single skill point, you can buy a power like Stone 
-              Skin or an ability like Good Luck.
+可用的技能 (skills)分为各种类别，或称为技能组 
+(groups)。你是将点数投资在单个技能上，而不是技能组上，但相应技能组的总点
+数有时也很重要。例如，第一个技能组是近战 
+(Melee)；在这里，你可以专精于各种近战武器类别，或者学习徒手格斗（武术）
+。该技能组中投入的总点数决定了你的整体近战技能（如角色面板所示），甚至会
+影响你的力量 (STR) 和敏捷 
+(DEX)。另一方面，投入到单个技能本身的点数决定了你对该特定武器类别的熟练
+度，并且还会影响你每回合的攻击次数。每个技能组将在下面详细讨论。
 
-Proficiency
+主要的技能组包括：
 
-Before discussing each of the skill groups in detail, it helps to 
-understand the proficiency system. It is explained in detail at [a], 
-but the short version is: the game has several different proficiency 
-systems, all of which are closely related; other classes' proficiency 
-usually starts at a very low level, improves through use and practice, 
-and is indicated through the five broad tiers [Un]skilled, [Be]ginner, 
-[Sk]illed, [Ex]pert and [Ma]ster.
+  近战        在肉搏战中的效率
+  远程        在远程战斗（射箭和投掷）中的效率
+  魔法        
+              作为以智力为基础的施法者获得法术领域的权限。除“生命”外的所
+              有法术领域均可使用。
+  祈祷        
+              作为以感知为基础的施法者获得祈祷领域的权限。仅有善良和邪恶
+              领域可供使用。
+  基本技能    诸如使用魔法装置、潜行、速度和豁免等基本技能
+  战技        
+              获取大多数玩家缺乏的高级或非凡天赋。这包括一些基于书本的天
+              赋（如行窃和剑道），以及非标准的天赋（如骑乘和双持）。
+  能力        
+              只需花费1个技能点，你就能买到像“石肤术”这样的力量或像“好运
+              ”这样的被动能力。
 
-But Skillmasters are very different; they do not learn through use and 
-practice. When Skillmasters spend a skill point, they instantly acquire 
-proficiency; as an example (of very bad advice), a level 1 Skillmaster 
-could spend all 5 points in Riding and instantly achieve Master-level 
-proficiency. The same goes for weapons: spending points is the only way 
-to gain proficiency (even the Weapon Versatility demigod talent is not 
-available). Skillmasters are [Un]skilled in everything they haven't 
-spent points in, and [Ma]ster in everything they have spent five points 
-in, but the tiers in between vary a bit.
+熟练度
 
-Melee Skills
+在详细讨论每个技能组之前，了解一下熟练度系统会很有帮助。在 [a] 
+中有详细说明，简单来说就是：游戏有几个不同的熟练度系统，它们都密切相关；
+其他职业的熟练度通常从非常低的等级开始，通过使用和练习来提升，并通过五个
+大致的层级来表示：[未]入门 ([Un]skilled)、[新]手 ([Be]ginner)、[熟]练 
+([Sk]illed)、[专]家 ([Ex]pert) 和 [大]师.
 
-Melee skills affect your skill in hand-to-hand combat. Each skill in 
-this group improves your proficiency either with a single class of 
-weapons (swords, polearms, hafted weapons, diggers) or in bare-handed 
-fighting, and also affects how many blows you can get per round. To use 
-any particular class of weaponry, you will need some skill. Thus, when 
-investing in melee skills, you must choose whether to be really good 
-with one or two weapon classes or decently good with all of them.
 
-The total number of points in this group determines your basic Melee 
-skill in the same way your class choice normally would. That is, you 
-get a fixed amount of base Melee skill, and an extra amount that 
-improves with level; warriors get plenty, mages not so much; but you, 
-as a Skillmaster, can improve your melee whenever you choose simply by 
-investing more points in various melee related skills. As a rough 
-guide, consider the following tables:
+但技能大师截然不同；他们不会通过使用和练习来学习。当技能大师花费技能点时
+，他们会立即获得熟练度；举个例子（非常糟糕的建议），一个 1 
+级的技能大师可以把所有 5 
+个点数都花在“骑乘”上，从而瞬间达到大师级熟练度。武器也是如此：花费技能点
+是获得熟练度的唯一途径（即便是半神“武器多面手”的天赋也不起作用）。技能大
+师在所有未投入点数的项目上都是 [未]入门，而在所有投入了五点的项目上都是 
+[大]师，但中间的层级会有所不同。
 
-  Melee Group                          Weapon Class
-  Pts  Relative Skill                  Pts  Proficiency Blows
-    0  Mage                              0  Unskilled   4.00
-  1-2  Priest                            1  Beginner    5.00
-  3-4  Ranger                            2  Skilled     5.25
-  5-8  Paladin                           3  Expert      5.50
-   9+  Warrior                           4  Master      5.75
-                                         5  Master      6.00
+近战技能 (Melee Skills)
 
-Note that Melee and Magic are somewhat antithetical. Investing in Melee 
-also improves your STR and DEX, but too many magic points will decrease 
-your STR (and CON). Magic points also decrease the maximum number of 
-blows displayed in the table above (by just 0.05 blows per point, but 
-too much magic will make this effect noticeable). Also, Magic improves 
-your INT and device skill, but too much Melee will have a slight 
-negative effect on both of these. 
 
-The individual melee skills are discussed next.
+近战技能会影响你的肉搏战能力。该技能组中的每项技能都能提高你对某一类武器
+（剑类、长柄武器、柄式武器/钝器、挖掘工具）或徒手格斗的熟练度 
+(proficiency)，并影响你每回合能获得多少打击数 
+(blows)。要使用任何特定的武器类别，你需要一定的技能。因此，在投资近战技
+能时，你必须做出选择：是精通一两类武器，还是对所有武器都相当在行。
 
-  Swords
-  Swords (|) are the most common class of weaponry and include swords, 
-  daggers, blades of chaos and all other weapons listed under swords in 
-  the ~P proficiency menu. Swords and polearms are the most obvious 
-  choices if you wish to specialize in a particular class of weaponry, 
-  due to their commonness.
 
-  Polearms
-  Polearms (/) are the second-most common class of weaponry and include 
-  tridents, spears, lances, axes and all other weapons listed under 
-  polearms in the ~P proficiency menu. This is a good skill to invest 
-  in if you are building a Riding skillmaster, since Lances and Heavy 
-  Lances are perfectly suited for riding melee.
+该技能组的总点数决定了你的基础近战技能，这与你平时选择职业的方式相同。也
+就是说，你会获得固定数值的基础近战技能，以及随等级提升的额外数值；战士获
+得的很多，法师则没那么多；但作为技能大师，你可以随时通过在各种近战相关技
+能中投入更多点数来提升你的近战能力。作为粗略的参考，请看下表：
 
-  Hafted (Blunt Weapons)
-  Hafted weapons (\) are less common than swords or polearms, but 
-  include the deadly Maces of Disruption and some exceptional artifacts 
-  like the Staff of Asclepius (again, see ~P for the full list). Note 
-  that prayer-based skillmasters have no weapon restrictions, and so 
-  don't need hafted weapons like normal priests do; still, this group 
-  is worth investing in if you want general access to weapon-based 
-  melee, or just have faith that a great hafted weapon will drop.
+  近战技能组                           武器类别
+  点数 等效职业                        点数 熟练度     打击数
+    0  法师                              0  [未]入门   4.00
+  1-2  牧师                              1  [新]手     5.00
+  3-4  游侠                              2  [熟]练     5.25
+  5-8  圣骑士                            3  [专]家     5.50
+   9+  战士                              4  [大]师     5.75
+                                         5  [大]师     6.00
 
-  Diggers
-  Yes, you can melee with Picks and Shovels if you want, but the 
-  weapons in this class are incredibly uncommon when compared to the 
-  three main groups; there are a couple of powerful end-game diggers, 
-  but realistically this is an option for deliberate challenge runs.
+请注意，近战和魔法在某种程度上是互斥的。 投资近战也会提高你的力量 (STR) 
+和敏捷 (DEX)，但过多的魔法点数会降低你的力量（和体质 
+CON）。魔法点数也会降低上表中显示的最大打击数（每点只降低 0.05 
+次打击，但过多的魔法会让这个效果变得明显）。另外，魔法能提高你的智力 
+(INT) 和魔法装置技能，但过多的近战会对这两者产生轻微的负面影响。
 
-  Martial Arts
-  With this skill you may fight monsters using a special, bare-handed 
-  combat technique. Skillmasters who invest a full 5 points in martial 
-  arts will be almost as effective in combat as a monk; the only 
-  difference is that your blows per round are marginally lower.
+接下来将讨论各项独立的近战技能。
+
+  剑类 (Swords)
+  剑类 (|) 是最常见的武器类别，包括剑、匕首、混沌之刃以及 ~P 
+  熟练度菜单中剑类 
+  (swords)下所有其他武器。由于其普遍性，如果你想专精某类武器，剑和长柄武
+  器是最显而易见的选择。
+
+  长柄武器 (Polearms)
+  长柄武器 (/) 是第二常见的武器类别，包括三叉戟、矛、骑枪、斧头以及 ~P 
+  熟练度菜单中长柄武器 
+  (polearms)下所有其他武器。如果你正在构建一个“骑乘”流派的技能大师，这是
+  一项很值得投资的技能，因为骑枪和重型骑枪非常适合骑乘近战。
+
+  柄式/钝器 (Hafted)
+  柄式武器 (\) 不如剑类或长柄武器常见，但它包含了致命的“裂解钉头锤 
+  (Maces of 
+  Disruption)”和一些诸如“阿斯克勒庇俄斯之杖”这样的卓越神器（同样，按 ~P 
+  查看完整列表）。注意，基于祈祷的技能大师没有武器限制，因此不需要像普通
+  牧师那样必须使用柄式武器；尽管如此，如果你希望普遍地使用武器近战，或者
+  仅仅是相信游戏会掉落一把极品钝器的话，这个技能组仍然值得投资。
+
+  挖掘工具 (Diggers)
   
-  A few cautions regarding this skill are in order, though. If you 
-  fight bare-handed, you also get the monk armor weight restrictions, 
-  but will not gain the monk speed boost or access to various postures. 
-  (The armor restrictions stop applying if you switch back to 
-  weapon-based melee.) In addition, martial arts will not work when 
-  mounted, and Kendo techniques require a melee weapon to work.
+  是的，只要你愿意，你可以用鹤嘴锄和铲子来进行近战，但与三大主要类别相比
+  ，这一类的武器极其罕见；虽然有几把强大的后期挖掘神器，但现实地说，这是
+  为蓄意挑战通关玩法准备的选项。
 
-Ranged Skills
-
-Ranged skills include Archery and Throwing. As a group, the total 
-number of points affects your Archery skill, as displayed on the 
-Character Sheet; yet most players treat Archery and Throwing as 
-mutually exclusive talents.
-
-  Archery
-  This skill improves your proficiency with all of Slings, Bows and 
-  Crossbows (unlike Melee, this skill does not require you to 
-  specialize in only one weapon type). With 2 or more points of 
-  Archery, you begin to gain extra shots per round, as well as reduced 
-  breakage odds for your missiles. You will never be quite as good as a 
-  specialist Archer, but then specialist Archers don't get 10 skill 
-  points to spend elsewhere... This skill also increases your stealth.
-
-  Throwing
-  This skill gives you the special power of Throw Weapon, which allows 
-  you to use your leading melee weapon as a throwing weapon. The range 
-  of a throw depends exclusively on your STR and the weight of the 
-  weapon; the damage depends on the weapon (and any slays it might 
-  have), your STR, and your Throwing skill. Investing enough points in 
-  Throwing also improves your throwing speed.
+  武术 (Martial Arts)
   
-  A thrown weapon will often return to you after striking a foe; with 
-  enough skill, this return effect becomes very likely. You even have a 
-  chance to catch the returning weapon with the same hand which threw 
-  it, effectively re-equipping the weapon in a single, graceful, fluid 
-  motion; this also becomes more likely with more skill, but depends on 
-  your DEX as well. With a high enough DEX and full Throwing skill, you 
-  can be almost certain to recover your weapon, fully equipped, after 
-  each toss... however, you should always be prepared for an occasional 
-  failure, no matter how skilled you are. So, carry a spare weapon!
+  拥有此技能，你就可以使用一种特殊的徒手战斗技巧来对抗怪物。在武术上投入
+  满 5 
+  点的技能大师，在战斗中的效率几乎与武僧一样高；唯一的区别是你每回合的打
+  击数略低。
   
-  The damage from a thrown weapon can be formidable; as your skill 
-  improves, so does the damage multiplier of the toss. Throwing 
-  functions much like archery, except you are the shooter and supply 
-  the damage multiplier through your skill; as with normal shooters, 
-  the multiplier is scaled slightly by STR. And the weapon is the 
-  projectile... Damage is calculated very similarly to archery, using 
-  the damage dice of the weapon thrown, applying any slays, adding in 
-  the damage bonus of the weapon and then multiplying everything 
-  together to get a nice, tasty sum. You can view the details in the 
-  Throwing section of your Character Sheet. Note, though, that most 
-  off-weapon boosts will not apply to throwing; Rings of Archery and a 
-  few other items can boost your accuracy, but that's pretty much it.
-
-Magic Skills
-
-Each skill in the Magic group grants access to a single spellbook 
-realm. The realm will use INT as your spellcasting stat (usually this 
-means INT will also determine the size of your mana pool, but that gets 
-more complicated if you also learn Techniques or Prayer skills). With 
-INT-based mana comes mage-like glove encumbrance; but if you invest at 
-least 5 overall points in magic, you also gain the mage ability to 
-benefit from cheap-spell and easy-spell items like Wizardstaves.
-
-With just a single point in a given realm, you will be a poor caster; 
-investing more points helps a Skillmaster even more than proficiency 
-normally helps casters, in that it reduces not only the mana cost but 
-also the level of the spell. Your minimum fail rates also go down with 
-points invested; only a full 5-point investment allows 0% fail. 
-
-See [b] for a list of the various spellbook realms. The Life realm is 
-not available as a Magic skill (only as a Prayer skill); but apart from 
-this you can learn all book realms, and can study as many different 
-realms as you like. You do not need to learn individual spells; you can 
-cast any spell in a studied realm, provided you have the book and your 
-level is high enough.
-
-Spending points in this group boosts your class Device skill, although 
-not as much as direct investment in Skills/Devices. Your INT is also 
-directly influenced by the total number of points in this group. Magic 
-makes you squishy and bad at melee; too much magic will adversely 
-affect your STR, CON and life rating multiplier and reduce your maximum 
-blows per round. However, studying Craft magic boosts your melee a bit.
-
-Prayer Skills
-
-Prayer skills are like Magic skills in that each one grants access to a 
-single spellbook realm; but Prayer realms use WIS, not INT, as the 
-spellcasting stat. As with Magic, investing 5 points in the Prayer 
-group lets you benefit from cheap-spell (Dm) and easy-spell (Es) items; 
-but here you don't have to worry about glove encumbrance, unless you 
-have invested at least equally in Magic.
-
-The downside is that the selection of realms is more limited; only the 
-good realms (Life/Crusade) and evil realms (Death/Daemon) are available 
-through the Prayer group. Note that Crusade, Death and Daemon are also 
-offered by Magic; you can learn them as either WIS-based Prayer realms 
-or INT-based Magic realms, but not both.
-
-Investing points in the Prayer group boosts your Saving Throw, though 
-not as much as direct investment in Skills/Magic Resistance. Investment 
-in Prayer skills also boosts your WIS; unlike Magic, this group does 
-not come with any stat or melee penalties.
-
-As mentioned above, Prayer skillmasters are not priests, so there are 
-no weapon restrictions. You can gleefully slice and dice while piously 
-enjoying Life prayers; if you wish, you can even freely mix good realms 
-with evil realms.
-
-Miscellaneous Skills
-
-This group contains a number of skills that influence your character 
-attributes. These skills each allow a maximum of 3 points to be 
-invested. Invest here to flesh out your character design.
-
-  Agility
-  This skill directly improves your DEX and also determines your class 
-  Disarming skill, as displayed on the Character Sheet. (By default, 
-  the Skillmaster will disarm about as well as a priest.) The only 
-  other skill that influences disarming is the Burglary technique 
-  discussed below.
-
-  Awareness
-  This skill determines your class Searching and Perception skills, as 
-  displayed on the Character Sheet. Since these are two of the least 
-  important primary skills, Awareness also gives additional benefits to 
-  compensate. These depend on the number of points invested: see 
-  invisible and faster pseudo-ID (1); automatic ID (2); and finally a 
-  telepathic awareness of nearby monsters (3).
-
-  Devices
-  Skill with magic devices is extremely important for most players: the 
-  difference between being able to reliably use a Staff of Healing and 
-  not can be the difference between life and death. By default your 
-  Device skill is primarily determined by the number of points spent in 
-  the Magic group; a small positive influence is also granted for 
-  Prayer skills as well as learning the Sorcery realm, but Melee points 
-  have a small negative influence on device skills. If you never learn 
-  any magic skills, it may be worth investing at least a point here, 
-  depending on your race and personality.
-
-  Health
-  This skill directly improves your CON and also determines your class 
-  base HP and life rating multiplier; by default Skillmasters have a 
-  100% multiplier, but investment in Magic skills slightly reduces it. 
-  If you want more hit points, or wish to undo the negative health 
-  effects of too many magic skills, invest in this skill. 
   
-  A quick note on HP distribution. Even independently of their higher 
-  life rating multipliers, Warriors gain HP much faster than Mages; the 
-  Mage HP progression is very late-game-heavy. Investing in Health (or 
-  Melee) makes your HP progression more warrior-like, while investing 
-  in Magic makes it more mage-like (investing in Archery or Prayers 
-  encourages an in-between HP progression, which is also the default). 
-  By the time you reach level 50 it all evens out, but in the mid-game 
-  the progression makes quite a difference.
+  不过，关于这个技能有几点需要注意。如果你徒手战斗，你也会受到武僧护甲重
+  量的限制，但不会获得武僧的速度加成或各种架势的权限。（如果你切换回使用
+  武器近战，护甲限制将不再适用。）此外，武术在骑乘时不起作用，且剑道 
+  (Kendo) 战技需要手持近战武器才能施展。
 
-  Magic Resistance
-  This skill increases your Saving Throw; a couple points here and some 
-  Prayer investment, and you will be almost immune to evil curses.
+远程技能 (Ranged Skills)
 
-  Speed
-  Each point in this skill increases your speed by +2. Speed is very 
-  important, especially in the early game; so if you plan to invest 
-  here, you should probably do so quite early. (Too bad there are so 
-  many other things you also want to invest in early...)
 
-  Stealth
-  This skill directly increases your Stealth. By default, Skillmasters 
-  have absolutely terrible stealth... both Archery and Burglary 
-  increase stealth a bit, but even if you are investing in one or both 
-  of those, spending points here as well can still help. Each point 
-  invested in this skill increases your stealth by +3; a single point 
-  will make you as stealthy as a mage, while two points make you 
-  slightly stealthier than a rogue. With three points you will be so 
-  stealthy you often gain powerful sneak attacks on sleeping monsters.
+远程技能包括箭术和投掷。作为一个技能组，投入的总点数会影响你的箭术技能，
+正如角色面板上显示的那样；然而，大多数玩家将“箭术”和“投掷”视为互斥的天赋
+。
 
-Techniques
-
-Techniques are speciality skills otherwise limited to one or two 
-classes. For example, only Samurai can learn Kendo; and while Riding is 
-more generally open, only Cavalry and Beastmasters are really good at 
-it. But Skillmasters may also learn these techniques, often in powerful 
-combination with other skills. You may invest up to five points in each 
-technique in this group; the total number of points in this group has 
-no gameplay effects.
-
-  Burglary
-  Normally restricted to the Rogue, Burglary ([c]) is a spellbook realm 
-  that uses DEX as the primary stat. This realm functions much like the 
-  normal realms in Magic and Prayer, and you need to invest a full five 
-  points to match a rogue in burglary. Burglary skill also improves 
-  your stealth and your disarming skills.
-
-  Kendo
-  Normally available only to Samurai, Kendo is a book-based technique 
-  that enhances melee combat. Indeed, in order to use any Kendo 
-  technique you must wield a melee weapon (so do not try to combine 
-  this skill with Martial Arts). Kendo techniques have no fail rates.
+  箭术 (Archery)
   
-  Learning this skill changes your mana to behave like that of the 
-  Samurai: your max resting mana is very small and determined solely by 
-  your WIS, but using the special Concentration class power temporarily 
-  boosts your mana pool. Boosted mana decays rather quickly with each 
-  turn, so you must time your concentration carefully before engaging 
-  an enemy in battle, and then hurry to defeat your foe before your 
-  mana runs out.
+  这项技能可以提高你对所有投石索、弓和弩的熟练度（与近战不同，这项技能不
+  需要你只专精一种武器类型）。拥有 2 
+  点或以上的箭术，你会开始获得每回合额外的射击次数，并降低弹药损坏的几率
+  。你永远不会像专门的弓箭手职业那么出色，但另一方面，专业的弓箭手也没有
+   10 个技能点可以花在别处……这项技能还会增加你的潜行。
+
+  投掷 (Throwing)
+  这项技能赋予你投掷武器 (Throw 
+  Weapon)的特殊能力，允许你将主手近战武器作为投掷武器使用。投掷的射程完
+  全取决于你的力量 (STR) 
+  和武器的重量；伤害取决于武器（以及它可能具有的任何杀戮属性）、你的力量
+  和你的投掷技能。在投掷上投入足够的点数也会提高你的投掷速度。
   
-  Unlike real Samurai, Kendo skillmasters must carry the books around 
-  to access the various techniques. Note that if you mix Kendo with 
-  other spell realms, the Samurai mana mechanics have priority; this 
-  can be convenient at times (you can regain mana quickly if you have 
-  time to concentrate), but inconvenient at other times (Restore Mana 
-  becomes less effective, and your mana pool even after concentration 
-  is not all that large). As a final insult, Kendo mana mechanics block 
-  all cheap-spell and easy-spell effects except realm stones. 
+  被投掷的武器在击中敌人后通常会返回 
+  (return)到你手中；随着技能足够高，这种返回效果变得非常容易触发。你甚至
+  有机会用投出武器的同一只手接住返回的武器，以一个优雅流畅的一气呵成的动
+  作重新装备武器；技能越高这越容易实现，但这也取决于你的敏捷 
+  (DEX)。在敏捷足够高且投掷技能点满的情况下，你几乎可以确信每次投掷后都
+  能收回并完全装备好你的武器……然而，无论你有多熟练，你总是应该为偶尔的失
+  败做好准备。所以，带上一把备用武器！
   
-  Investment in Kendo should generally be combined with investment in 
-  Melee. Kendo techniques make your attacks more powerful, but you 
-  still need to hit monsters in order to benefit...
+  
+  投掷武器造成的伤害可能非常惊人；随着你技能的提高，投掷的伤害倍率也会提
+  高。投掷的运作方式很像箭术，不同之处在于你本身就是射手，通过你的技能提
+  供伤害倍率；与普通射手一样，该倍率受力量的轻微加成。而武器本身就是弹药
+  ……伤害的计算方法与箭术非常相似，使用所投掷武器的伤害骰，应用任何杀戮属
+  性，加上武器的伤害加成，然后把所有这些乘在一起，得出一个非常可观的总和
+  。你可以在角色面板的投掷 
+  (Throwing)部分查看详情。但请注意，大多数非武器本身的增益属性（如箭术戒
+  指）不适用于投掷；箭术戒指和其他一些物品可以提高你的命中率，但也仅限于
+  此了。
 
-  Dual Wielding
-  The Dual Wielding skill, pioneered by Miyamoto Musashi, allows 
-  effective melee with two weapons at once. Investment in this skill 
-  increases your dual-wielding proficiency; but like Kendo, this skill 
-  should also be combined with Melee talents.
+魔法技能 (Magic Skills)
 
-  Riding
-  With this technique, you may ride your pets into battle. Each point 
-  invested in Riding immediately increases your riding proficiency, 
-  which affects your riding speed as well as your ability to ride more 
-  powerful mounts. Without adequate skill you will be tossed 
-  frequently, especially after taking a substantial amount of damage 
-  (which of course is the least convenient time for it). Full riding 
-  mastery requires five points in this skill, though you might be able 
-  to get by with just four. Investment in Riding also makes you more 
-  effective at using Capture Balls. Note that unarmed combat is not 
-  possible while mounted. See [d] and [e] for more information.
+“魔法”组中的每一项技能都会赋予你进入单一法术书领域 (spellbook 
+realm)的权限。该领域将使用智力 (INT) 
+作为你的施法属性（通常这意味着智力也将决定你的法力池大小，但如果你同时也
+学习了“战技”或“祈祷”技能，情况会变得更复杂）。由于法力基于智力，这带来了
+类似法师的手套妨碍 (glove encumbrance)惩罚；但如果你在魔法上投入至少 5 
+个总点数，你也将获得法师的能力，可以从诸如巫师法杖等带有省魔 
+(cheap-spell)和简易法术 (easy-spell)属性的物品中受益。
 
-Abilities
+如果只在某个领域投入 1 
+点，你将会是个糟糕的施法者；投入更多点数对技能大师的帮助，甚至比熟练度通
+常对施法者的帮助还要大，因为它不仅降低了法力消耗，还降低了法术的等级。你
+的最低失败率也会随着点数的投入而降低；只有投入整整 5 点，失败率才能降至 
+0%。
 
-Finally, you may invest a single point in any of the following skills 
-to gain a single power or talent. Unlike normal race and class powers, 
-powers gained through these skills are available for immediate use 
-without any mana cost and (usually) without any fail rate. For example, 
-you may buy the power of Stone Skin on level one and use it right away. 
-Stone Skin is also available as a spell in the Craft and Nature realms, 
-but then you'd have to level up, find the right spellbooks and spend 
-mana... Other powers in this group, such as Create Ammo or Eat Magic, 
-have no such spellcasting alternative and are accessible only through 
-the Abilities group.
+有关各种法术书领域的列表，请参阅 [b]。“生命 
+(Life)”领域不作为魔法技能提供（仅作为祈祷技能提供）；但除此之外，你可以
+学习所有书本领域，并且可以研究尽可能多不同领域的法术。你不需要去学习单个
+法术；只要你有书并且等级足够高，你就可以施展已研究领域中的任何法术。
 
-Not all Abilities give powers; some grant a passive talent, such as 
-Regeneration or Good Luck. Since Ability skills only cost a single 
-point each, they are a cheap way to flesh out your character.
+在这个组别花费点数会提升你的职业“魔法装置 
+(Device)”技能，尽管不如直接投资基本技能/魔法装置 
+(Skills/Devices)提升得多。你的智力也会直接受到该组别投入总点数的影响。魔
+法会让你变得脆皮且不善近战；过多的魔法会不利地影响你的力量、体质和生命等
+级倍数，并减少你的最大回合打击数。然而，学习“工匠 
+(Craft)”魔法会略微提升你的近战能力。
 
-  Clear Mind
-  This power regenerates a small amount of mana on each usage, helping 
-  spellcasters recover mana more rapidly. To save your typing fingers, 
-  the game automatically activates Clear Mind every turn when you rest.
-
-  Create Ammo
-  Normally restricted to Archers, this talent allows you to create 
-  missiles from junk objects in the dungeon. You may create shots from 
-  rubble, arrows from skeletons and broken sticks, and bolts from 
-  skeletons; the quality of such ammo depends on your character level.
-
-  Eat Magic
-  This power allows you to drain mana from devices to replenish your 
-  mana pool. Unlike the other powers in this group, Eat Magic can fail; 
-  and even if you succeed in activating the power itself, you may still 
-  fail to drain mana from the target device. You might even destroy the 
-  device in the process! Nevertheless, Eat Magic can be useful for 
-  endgame spellcasters; it directly competes with Clear Mind in the 
-  mana-regaining stakes, offering a faster but more expensive and 
-  unreliable alternative.
-
-  Good Luck
-  With this ability, you will have slightly better odds of finding 
-  excellent items; even artifacts, especially rare ones, become easier 
-  to find. Note that this ability does not stack with the Lucky aura.
-
-  Loremastery
-  This ability grants automatic, instantaneous identification of 
-  objects as you step over them. Spend a point here to save an 
-  inventory slot if you lack Identify spells or find them too slow.
-
-  Massacre
-  This power allows you to simultaneously attack each and every 
-  adjacent monster with your normal melee attacks. If you find yourself 
-  frequently surrounded by enemies, it helps if you can dispatch them 
-  by eights instead of ones!
-
-  Panic Hit
-  A power familiar to thieves and ninjas: in a single turn, you attack 
-  an adjacent enemy with your normal melee attacks and then teleport 
-  away. This is very useful in situations where you'd like to teleport 
-  anyway, as you get to land some additional damage in the process; but 
-  watch out, as the teleport has a chance to fail. High Disarming skill 
-  will improve your odds, but you can never fully rely on Panic Hit as 
-  an escape.
-
-  Regeneration
-  This ability simply gives +150% to regeneration, allowing you to 
-  recover both hit points and spell points much faster.
-
-  Resistance
-  This power grants temporary resistance to the base elements acid, 
-  fire, cold, electricity and poison. Having no-cost resistance 
-  available on demand helps protect both you and your inventory, and 
-  reduces the need to get full 65% base resistance from your equipment.
-
-  Rodeo
-  This power, otherwise exclusive to Cavalry, allows you to attempt to 
-  forcibly mount an unfriendly monster. If successful, you may tame 
-  yourself a new mount to ride; but often such an attempt ends in utter 
-  humiliation.
-
-  Stone Skin
-  This power grants temporary extra AC, making you harder to hit and 
-  harder to damage in melee combat. The amount of protection increases 
-  with your character level. This is a useful ability to have if you 
-  plan to kill monsters in melee.
+祈祷技能 (Prayer Skills)
 
 
+祈祷技能与魔法技能类似，每一项都赋予你进入单一法术书领域的权限；但祈祷领
+域使用感知 (WIS) 而不是智力 (INT) 
+作为施法属性。与魔法一样，在“祈祷”组别投入 5 点可以让你从带有省魔 (Dm) 
+和简易法术 (Es) 
+属性的物品中受益；但在这里你不需要担心手套妨碍惩罚，除非你在“魔法”上也投
+入了同等以上的点数。
 
+
+缺点是领域的选择更加有限；通过“祈祷”组别，你只能选择善良领域（生命/圣战
+）和邪恶领域（死亡/恶魔）。注意，圣战、死亡和恶魔也可以通过“魔法”获得；
+你可以将它们作为基于感知的祈祷领域或基于智力的魔法领域来学习，但不能两者
+兼有。
+
+在祈祷组别投资点数会提高你的“豁免 (Saving 
+Throw)”，尽管不如直接投资基本技能/魔法抗性 (Skills/Magic 
+Resistance)提升得那么多。投资祈祷技能也会提升你的感知 
+(WIS)；与魔法不同的是，这个组别不会带来任何属性或近战惩罚。
+
+
+如上所述，祈祷流的技能大师并不是牧师，所以没有武器限制。你可以一边虔诚地
+享受生命祈祷，一边兴高采烈地把敌人切片剁碎；如果你愿意，甚至可以自由地将
+善良领域与邪恶领域混合使用。
+
+杂项技能 (Miscellaneous Skills)
+
+这个组别包含一些影响你角色属性的技能。这些技能每个最多允许投入 3 
+点。在这里投资以充实你角色的流派设计。
+
+  灵巧 (Agility)
+  此技能直接提高你的敏捷 (DEX)，并决定了角色面板上显示的职业解除陷阱 
+  (Disarming)技能。（默认情况下，技能大师解陷阱的能力大约与牧师相当。）
+  唯一影响解除陷阱的另一个技能是下面讨论的行窃 (Burglary)战技。
+
+  洞察 (Awareness)
+  此技能决定了角色面板上显示的职业搜索 (Searching)和察觉 
+  (Perception)技能。因为这是两个最不重要的主技能，所以洞察也提供额外的好
+  处作为补偿。这些取决于投入的点数：拾破隐形和更快的伪鉴定 
+  (1点)；自动鉴定 (2点)；最后是能感知附近怪物的心灵感应 (3点)。
+
+  魔法装置 (Devices)
+  
+  使用魔法装置的技能对大多数玩家来说极其重要：能否可靠地使用一根“治疗法
+  杖”，可能是生与死的区别。默认情况下，你的魔法装置技能主要由你在魔法组
+  投入的点数决定；投入祈祷技能以及学习咒术 
+  (Sorcery)领域也会产生小的正面影响，但近战点数对魔法装置技能有小的负面
+  影响。如果你从不学习任何魔法技能，在这里至少投入一点可能是值得的，这取
+  决于你的种族和性格。
+
+  健康 (Health)
+  此技能直接提高你的体质 
+  (CON)，并决定你的职业基础生命值和生命等级倍数；默认情况下，技能大师的
+  倍数是 
+  100%，但在魔法技能上的投资会轻微降低它。如果你想要更多的生命值，或者想
+  消除过多魔法技能对健康的负面影响，请投资此技能。
+  
+  关于生命值 (HP) 
+  分布的一点简要说明。即使撇开它们更高的生命等级倍数不谈，战士的生命值增
+  长也比法师快得多；法师的生命值增长主要集中在游戏后期。投资健康（或近战
+  ）会使你的生命值增长更像战士，而投资魔法会使它更像法师（投资箭术或祈祷
+  会促成居中的生命值增长，这也是默认状态）。当你达到 50 
+  级时，一切都会平衡，但在游戏中期，这种增长曲线会有很大的不同。
+
+  魔法抗性 (Magic Resistance)
+  此技能增加你的豁免 (Saving 
+  Throw)；在这里投入两点，再加上一些祈祷技能的投资，你几乎就可以免疫邪恶
+  诅咒了。
+
+  速度 (Speed)
+  每投入一点此技能，你的速度就会增加 
+  +2。速度非常重要，尤其是在游戏早期；所以如果你计划在这里投资，你可能应
+  该在很早的时候就这么做。（可惜你想在早期投资的其他东西太多了……）
+
+  潜行 (Stealth)
+  
+  此技能直接增加你的潜行。默认情况下，技能大师的潜行简直惨不忍睹……箭术和
+  
+  行窃都能增加一点潜行，但即使你投资了其中之一或两者都投资了，在这里花费
+  点数仍然有帮助。每投入一点此技能，你的潜行就会增加 
+  +3；投入1点会让你像法师一样隐秘，而2点会让你比盗贼还隐秘一点。有了 3 
+  点，你将非常隐秘，经常能对睡眠中的怪物发动强大的偷袭。
+
+战技 (Techniques)
+
+战技是通常仅限于一两个职业的特殊技能。例如，只有武士才能学习剑道 
+(Kendo)；虽然骑乘 
+(Riding)相对更开放，但只有骑兵和驯兽师才真正擅长它。但是技能大师也可以学
+习这些战技，通常可以与其他技能进行强大的组合。你可以为这个组别中的每个战
+技投入最多五点；该组别的总点数对游戏玩法没有额外影响。
+
+  行窃 (Burglary)
+  通常仅限于盗贼，行窃（[c]
+  ）是一个使用敏捷作为主要属性的法术书领域。这个领域的运作方式非常类似于
+  魔法和祈祷中的普通领域，你需要投入满五点才能在行窃上匹敌盗贼。行窃技能
+  还能提高你的潜行和解除陷阱技能。
+
+  剑道 (Kendo)
+  
+  通常只有武士可用，剑道是一种基于书本的增强近战格斗的战技。实际上，为了
+  使用任何剑道战技，你必须手持近战武器（所以不要试图将这项技能与武术结合
+  ）。剑道战技没有失败率。
+  
+  
+  学习此技能会改变你的法力机制，使其像武士一样运作：你休息时的最大法力值
+  非常少，仅由你的感知 (WIS) 决定，但使用特殊的集中精神 
+  (Concentration)职业能力可以暂时提升你的法力池。提升后的法力在每一回合
+  都会迅速衰减，所以你必须在与敌人交战前仔细算好集中的时机，然后抓紧在法
+  力耗尽前击败对手。
+  
+  
+  与真正的武士不同，剑道流技能大师必须随身携带书本才能使用各种战技。请注
+  意，如果你将剑道与其他法术领域混合，武士法力机制拥有最高优先级；这有时
+  很方便（如果你有时间集中精神，你可以快速恢复法力），但有时又很不方便（
+  恢复法力药水/法术变得不那么有效，即使在集中精神后你的法力池也没有那么
+  大）。最要命的是，剑道法力机制会屏蔽除了领域石 (realm stones) 
+  以外所有的省魔和简易法术效果。
+  
+  
+  对剑道的投资通常应该与对近战天赋的投资结合起来。剑道技术使你的攻击更加
+  强大，但你仍然需要能够击中怪物才能从中获益……
+
+  双持 (Dual Wielding)
+  
+  由宫本武藏开创的双持技能，允许同时使用两把武器进行有效的近战。投资这项
+  技能会增加你的双持熟练度；但和剑道一样，这项技能也应该与近战天赋结合使
+  用。
+
+  骑乘 (Riding)
+  
+  拥有这项战技，你可以骑着你的宠物进入战场。每在骑乘上投入一点都会立即提
+  高你的骑乘熟练度，这会影响你的骑乘速度以及你骑乘更强大坐骑的能力。如果
+  没有足够的技能，你会经常被甩下来，尤其是在受到大量伤害之后（当然这通常
+  是在最不合时宜的时候）。完全掌握骑乘需要投入五点技能，尽管你也许投入四
+  点就能凑合。投资骑乘也会让你在使用捕获球时更有效率。注意，在骑乘时无法
+  进行徒手战斗。详情请参阅 [d] 和 [e]。
+
+能力 (Abilities)
+
+
+最后，你可以将单点技能投入到以下任何技能中以获得单一的力量或被动天赋。与
+普通的种族和职业能力不同，通过这些技能获得的能力可立即使用，无需消耗任何
+法力，且（通常）没有任何失败率。例如，你可以在一级买下石肤术 (Stone 
+Skin)并立刻使用。石肤术也作为“工匠”和“自然”领域的法术存在，但如果是那样
+，你必须升级，找到正确的法术书并消耗法力……这个组别中的其他能力，例如制造
+弹药 (Create Ammo)或吞噬魔法 (Eat 
+Magic)，没有相应的施法替代品，只能通过“能力”组别获得。
+
+并非所有的“能力”都提供主动力量；有些授予的是被动天赋，如再生 
+(Regeneration)或好运 (Good 
+Luck)。由于能力技能每个只需花费一个点数，因此它们是充实你角色构建的廉价
+方式。
+
+  心智清明 (Clear Mind)
+  
+  该力量在每次使用时恢复少量法力，帮助施法者更快地恢复法力。为了节省你敲
+  键盘的手指，当你休息时，游戏会自动每回合激活“心智清明”。
+
+  制造弹药 (Create Ammo)
+  
+  通常仅限于弓箭手，这个天赋允许你用地牢中的杂物制造弹药。你可以用碎石制
+  造弹丸 (shots)，用骸骨和破树枝制造箭矢 (arrows)，以及用骸骨制造弩箭 
+  (bolts)；这种弹药的质量取决于你的角色等级。
+
+  吞噬魔法 (Eat Magic)
+  
+  这种力量允许你从魔法装置中吸取法力来补充你的法力池。与这个组别中的其他
+  力量不同，“吞噬魔法”可能会失败；而且即使你成功激活了该力量本身，你也可
+  能无法从目标装置中吸取法力。在这个过程中你甚至可能会毁掉这个装置！尽管
+  如此，“吞噬魔法”对终局的施法者来说很有用；在恢复法力的手段上，它直接与
+  “心智清明”竞争，提供了一种更快但更昂贵且不可靠的替代方案。
+
+  好运 (Good Luck)
+  有了这种能力，你找到优秀 (excellent) 
+  物品的几率会略微提高；甚至神器，特别是稀有神器，也会变得更容易找到。请
+  注意，这种能力不会与“幸运”光环叠加。
+
+  鉴定学识 (Loremastery)
+  
+  这项能力授予当你踩过物品时自动、即时鉴定该物品的能力。如果你缺乏“鉴定”
+  法术或者觉得它们施放太慢，在这里花一点可以为你节省出一个物品栏空间。
+
+  大屠杀 (Massacre)
+  
+  该力量允许你用普通近战攻击同时打击周围的每个相邻怪物。如果你发现自己经
+  常被敌人包围，能够一次性干掉八个而不是一个会对你很有帮助！
+
+  惊骇打击 (Panic Hit)
+  
+  盗贼和忍者熟悉的一种力量：在单个回合中，你对一个相邻敌人进行正常的近战
+  攻击，然后传送离开。这在你无论如何都想传送逃跑的情况下非常有用，因为你
+  可以在此过程中造成一些额外的伤害；但要小心，传送是有几率失败的。高超的
+  “解除陷阱”技能会提高你的成功率，但你永远不能完全依赖“惊骇打击”作为逃生
+  手段。
+
+  再生 (Regeneration)
+  这种能力简单地给予 +150% 的再生加成，让你更快地恢复生命值和法力值。
+
+  抵抗 (Resistance)
+  
+  该力量赋予对基础元素（酸、火、冷、电）和毒素的临时抗性。能随时按需获得
+  零消耗的抗性有助于保护你和你的物品栏，并减少需要从装备中获取完整 65% 
+  基础抗性的压力。
+
+  强行骑乘 (Rodeo)
+  
+  这种力量原本是骑兵独有的，允许你尝试强行骑乘一个不友好的怪物。如果成功
+  ，你可以驯服一匹新的坐骑来骑乘；但通常这样的尝试会以彻底的羞辱告终。
+
+  石肤术 (Stone Skin)
+  这种力量赋予临时的额外护甲等级 
+  (AC)，使你在近战中更难被击中，也更难受到伤害。保护的数量随着你的角色等
+  级而增加。如果你计划在近战中杀死怪物，这是一个很有用的能力。

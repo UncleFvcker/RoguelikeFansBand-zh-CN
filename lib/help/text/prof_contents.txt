@@ -1,13 +1,12 @@
-The Proficiency System
+熟练度系统
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    [a] Overview
-    [b] Weapon Proficiency
-    [c] Dual-Wielding Proficiency
-    [d] Martial Arts Proficiency
-    [e] Riding Proficiency
-    [f] Spell Proficiency
+    [a] 概述
+    [b] 武器熟练度
+    [c] 双持熟练度
+    [d] 武术熟练度
+    [e] 骑乘熟练度
+    [f] 法术熟练度
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

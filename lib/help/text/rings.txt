@@ -1,102 +1,90 @@
-Rings
+戒指 (Rings)
 
-Getting Started
+新手入门
 
-Lacking any direct melee attacks and any means of movement, the ring's 
-first order of business is to lure a suitable ring-bearer. To achieve 
-this, there are two approaches. First, the most powerful means, and the 
-one available to the ring at the very start of their adventuring is to 
-lie still and look enticing! This is the essence of mimicry, and 
-monsters will generally take you for a normal ring unless you do 
-something to reveal your true nature (such as launching a magic missile 
-or otherwise damaging a visible monster). The second means of acquiring 
-a ring-bearer only comes later in the game, and should only be used 
-once a monster has perceived the ring for what it truly is: a sentient 
-and malicious magical creature, out to dominate its wielder.
 
-So the initial approach is to lure a potential ring-bearer and hope 
-they pick the ring up; but what if there are no suitable monsters 
-about? Here, the ring possesses a very special power called Glitter 
-(available through the U/O key). This power is much like resting: the 
-ring simply waits until a monster comes near; however, potential 
-ring-bearers will sense you glittering and approach you out of 
-curiosity. So don't worry: simply lie still and be patient, and 
-monsters will come to you!
+由于没有任何直接的近战攻击能力和移动手段，戒指的首要任务就是引诱一个合适
+的持戒人 
+(ring-bearer)。要实现这一点，有两种方法。首先，也是你在冒险刚开始时唯一
+可用的、同时也是最强大的方法：躺着不动，让自己看起来充满诱惑力！这就是拟
+态的本质，怪物通常会把你当成一枚普通的戒指，除非你做了什么暴露本性的事（
+比如发射一发魔法飞弹或伤害视线内的怪物）。第二种获取持戒人的方法在游戏后
+期才会出现，且应当只在怪物看穿你的真面目（一个有感知、充满恶意且想支配佩
+戴者的魔法生物）时才使用。
 
-Once a suitable ring-bearer approaches, you will want to lie still and 
-trick it into picking you up and wearing you. Only then will it realize 
-its mistake but by that time, it is too late! Of course, the 
-ring-bearer might recognize you for what you are when it gets close, at 
-which point it will attack you, so this approach is not without risk; 
-but if you succeed in being worn, the ring-bearer becomes your pet, and 
-is controlled by your will. Now, at last, you may move about!
 
-The other order of business for the ring upon starting the game is to 
-acquire magical spells by absorbing suitable jewelry (rings or 
-amulets). Since these are rare in the early going, the ring is actually 
-born with a couple of fine trinkets. You should absorb these at once to 
-gain a couple of minor powers that will assist you in the early going. 
-(See [a] below for more details.)
+所以最初的策略是引诱潜在的持戒人，并期望他们把你捡起来；但如果周围没有合
+适的怪物怎么办？此时，戒指拥有一项非常特殊的能力，叫做闪烁 
+(Glitter)（通过 U/O 
+键使用）。这个能力很像“休息”：戒指只需等待怪物靠近；然而，潜在的持戒人会
+感知到你的闪烁，并出于好奇靠近你。所以不用担心：只需静静躺着，保持耐心，
+怪物自然会找上门来！
 
-Acquiring and Keeping Your Bearer
 
-Glittering has a couple of downsides that limit its usefulness. 
-Firstly, you need to look nice and innocent, so being on somebody 
-else's finger won't do; if you already have a bearer, you need to 
-dismiss them or at least slip off their finger. Secondly, you only get 
-one attempt at fooling a monster; if he sees through you, he'll attack 
-you... just when you are at your most vulnerable due to having no 
-ring-bearer. Thirdly, even if you successfully fool a monster into 
-picking you up, it might not be a monster you're happy with!
+一旦合适的持戒人靠近，你要继续躺着不动，骗它把你捡起来戴上。只有到那时它
+才会意识到自己犯了错，但为时已晚！当然，持戒人靠近时也可能认出你的真面目
+，这时它会攻击你，所以这个方法并非没有风险；但如果你成功被戴上，持戒人就
+会成为你的宠物，并受你意志的支配。现在，你终于可以移动了！
 
-There is another way to acquire ring-bearers, though it only becomes 
-available some way into the game: you can charm any suitable monster. 
-The Charming power, like Glitter and Absorb, is used through the U 
-command (O in the roguelike keyset). Charming is not very reliable, but 
-unlike glittering, if you fail you can (usually) try again.
+戒指开局的另一项要务是通过吸收 
+(absorbing)合适的珠宝（戒指或护身符）来获取魔法法术。由于这些在游戏早期
+很稀有，戒指在出生时实际上会自带几件不错的小饰品。你应该立刻吸收它们，以
+获得几项能在早期帮助你的次级能力。（有关更多细节，请参阅下文的 [a]。）
 
-Having successfully charmed your target, use the p pet commands to make 
-them your new ring-bearer: get off a pet to leave the previous bearer, 
-stay close to encourage the new bearer to approach and finally ride a 
-pet when they are adjacent.
+获取并留住你的持戒人
 
-Both approaches to acquiring a ring-bearer rely on the ring's charisma 
-for success. Next to intelligence (which is your spellcasting stat), 
-charisma is the most important stat to a ring; so be sure to invest 
-points in both INT and CHR at birth.
 
-A final point to mention is that your hold on a ring-bearer is not 
-all-powerful. Occasionally, the bearer might cast you off, hurl you on 
-the ground, and begin attacking you! Again, the ring needs a strong 
-force of personality (i.e., Charisma) to maintain its dominance. Should 
-this fail, you can try to recharm the bearer; but sometimes a soured 
-ring-bearer simply needs to be put down, at which point the ring may 
-glitter patiently to lure a new bearer.
+“闪烁”有几个缺点，限制了它的实用性。首先，你需要看起来漂亮且无害，所以戴
+在别人手指上是行不通的；如果你已经有了一个持戒人，你需要解散他们，或者至
+少从他们手指上滑落下来。其次，你只有一次欺骗怪物的机会；如果他看穿了你，
+他就会攻击你……而这恰好是你因为没有持戒人而最脆弱的时候。第三，即使你成功
+骗过一个怪物把你捡起来，它也可能不是你满意的怪物！
 
-Getting Powers and Growing Stronger
 
-Rings have a normal inventory, but cannot wear any equipment. Instead, 
-they gain abilities and spells by absorbing any jewelry (rings or 
-amulets) that they find. A list of your absorbed magical spells and 
-essences, their effects, and their powers is displayed on your 
-character sheet (C), as well as in the Knowledge Menu's Extra Character 
-Info section (~x).
+还有另一种获取持戒人的方法，尽管它在游戏进行到一定程度后才会解锁：你可以
+魅惑 (charm)任何合适的怪物。“魅惑”能力，就像“闪烁”和“吸收”一样，通过 U 
+命令（在 Roguelike 按键设定中是 
+O）使用。“魅惑”不是很可靠，但与“闪烁”不同的是，如果你失败了，你（通常）
+可以再试一次。
 
-To absorb jewelry, you can use the U command (roguelike O); but for 
-ergonomic reasons, absorbing also happens automatically when you 
-destroy a ring or an amulet.
+成功魅惑目标后，使用 p 宠物命令使他们成为你新的持戒人：选择离开宠物 
+(get off a pet)以离开之前的持戒人，选择保持靠近 (stay 
+close)鼓励新持戒人靠近，最后当他们与你相邻时选择骑乘宠物 (ride a pet)。
 
-Getting powerful spells is difficult, and the ultimate powers may prove 
-elusive; however, with a suitably strong ring-bearer, ultimate success 
-should be possible.
+这两种获取持戒人的方法都依赖戒指的魅力 
+(charisma)来保证成功率。仅次于智力（你的施法属性），魅力是戒指最重要的属
+性；所以请确保在建卡时在智力 (INT) 和魅力 (CHR) 上都投入点数。
 
-Acceptable Ring-Bearers
 
-Not all monsters are suitable ring-bearers. Bearer candidates include 
-all humans (p), humanoids (h), townspeople (t), angels (A) and yeeks 
-(y), most vampires (V) and liches (L), and a few other thematically 
-suitable monsters such as the Nazgul. The Charm Ring-Bearer power only 
-works on these monsters; and even if you still acquire other monsters 
-as pets, you cannot ride them or make them pick you up.
+最后要提的一点是，你对持戒人的控制并不是绝对的。偶尔，持戒人可能会把你摘
+下，扔到地上，然后开始攻击你！同样，戒指需要强大的性格力量（即魅力）来维
+持其支配地位。如果维持失败，你可以尝试重新魅惑持戒人；但有时，一个变心的
+持戒人只需要被干掉，到那时戒指就可以再次耐心地闪烁，以引诱新的持戒人了。
 
+
+获取力量与变得更强
+
+
+戒指拥有正常的物品栏，但不能穿戴任何装备。相反，它们通过吸收找到的任何珠
+宝（戒指或护身符）来获得能力和法术。你的角色面板（C）以及知识菜单 
+(Knowledge Menu) 
+的额外角色信息部分（~x）会显示你吸收的魔法法术和精华列表，以及它们的效果
+和力量。
+
+要吸收珠宝，你可以使用 U 命令（Roguelike 按键为 
+O）；但出于操作便利性考虑，当你毁掉 (destroy) 
+一枚戒指或护身符时，也会自动触发吸收。
+
+
+获取强大的法术很困难，而且终极力量可能难以寻觅；然而，只要拥有一个足够强
+大的持戒人，取得最终的成功也是可能的。
+
+合格的持戒人
+
+并非所有怪物都适合作为持戒人。持戒人的候选者包括所有人类 (p)、类人生物 
+(h)、镇民 (t)、天使 (A) 和伊克人 (y)，以及大多数吸血鬼 (V) 和巫妖 
+(L)，还有一些其他在背景设定上合适的怪物，比如戒灵 (Nazgul)。魅惑持戒人 
+(Charm 
+Ring-Bearer)能力只对这些怪物起作用；即使你获得了其他怪物作为宠物，你也无
+法骑乘它们或让它们把你捡起来。
 

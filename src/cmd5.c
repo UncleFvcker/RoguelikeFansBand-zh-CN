@@ -45,6 +45,121 @@ cptr spell_category_verb(int tval)
     }
 }
 
+static int _cmd5_utf8_decode(cptr s, int max, u32b *cp)
+{
+    byte c0;
+
+    if (!s || !s[0])
+    {
+        *cp = 0;
+        return 0;
+    }
+
+    c0 = (byte)s[0];
+    if (c0 < 0x80)
+    {
+        *cp = c0;
+        return 1;
+    }
+    if ((c0 & 0xE0) == 0xC0)
+    {
+        byte c1;
+        if (max >= 0 && max < 2) goto bad;
+        c1 = (byte)s[1];
+        if ((c1 & 0xC0) != 0x80) goto bad;
+        *cp = ((u32b)(c0 & 0x1F) << 6) | (u32b)(c1 & 0x3F);
+        if (*cp < 0x80) goto bad;
+        return 2;
+    }
+    if ((c0 & 0xF0) == 0xE0)
+    {
+        byte c1, c2;
+        if (max >= 0 && max < 3) goto bad;
+        c1 = (byte)s[1];
+        c2 = (byte)s[2];
+        if ((c1 & 0xC0) != 0x80 || (c2 & 0xC0) != 0x80) goto bad;
+        *cp = ((u32b)(c0 & 0x0F) << 12) | ((u32b)(c1 & 0x3F) << 6) | (u32b)(c2 & 0x3F);
+        if (*cp < 0x800) goto bad;
+        return 3;
+    }
+    if ((c0 & 0xF8) == 0xF0)
+    {
+        byte c1, c2, c3;
+        if (max >= 0 && max < 4) goto bad;
+        c1 = (byte)s[1];
+        c2 = (byte)s[2];
+        c3 = (byte)s[3];
+        if ((c1 & 0xC0) != 0x80 || (c2 & 0xC0) != 0x80 || (c3 & 0xC0) != 0x80) goto bad;
+        *cp = ((u32b)(c0 & 0x07) << 18) | ((u32b)(c1 & 0x3F) << 12) | ((u32b)(c2 & 0x3F) << 6) | (u32b)(c3 & 0x3F);
+        if (*cp < 0x10000 || *cp > 0x10FFFF) goto bad;
+        return 4;
+    }
+
+bad:
+    *cp = '?';
+    return 1;
+}
+
+static int _cmd5_char_width(u32b cp)
+{
+    if (!cp) return 0;
+    if ( cp >= 0x1100
+      && ( cp <= 0x115F
+        || cp == 0x2329 || cp == 0x232A
+        || (0x2E80 <= cp && cp <= 0xA4CF && cp != 0x303F)
+        || (0xAC00 <= cp && cp <= 0xD7A3)
+        || (0xF900 <= cp && cp <= 0xFAFF)
+        || (0xFE10 <= cp && cp <= 0xFE19)
+        || (0xFE30 <= cp && cp <= 0xFE6F)
+        || (0xFF00 <= cp && cp <= 0xFF60)
+        || (0xFFE0 <= cp && cp <= 0xFFE6)
+        || (0x20000 <= cp && cp <= 0x3FFFD) ) )
+    {
+        return 2;
+    }
+    return 1;
+}
+
+static void _cmd5_put_wrapped(cptr s, int row, int col, int width, int max_lines)
+{
+    int i = 0;
+    int line;
+
+    for (line = 0; line < max_lines; line++)
+    {
+        char buf[512];
+        int bytes = 0;
+        int cells = 0;
+
+        while (s && s[i] && cells < width)
+        {
+            u32b cp;
+            int len = _cmd5_utf8_decode(s + i, -1, &cp);
+            int cw = _cmd5_char_width(cp);
+
+            if (!len) break;
+            if (cp == '\n')
+            {
+                i += len;
+                break;
+            }
+            if (cells + cw > width) break;
+            if (bytes + len >= (int)sizeof(buf) - 1) break;
+
+            memcpy(buf + bytes, s + i, len);
+            bytes += len;
+            cells += cw;
+            i += len;
+        }
+
+        buf[bytes] = '\0';
+        Term_erase(col, row + line, width);
+        Term_putstr(col, row + line, width, TERM_WHITE, buf);
+
+        while (s && s[i] == ' ') i++;
+    }
+}
+
 /*
  * Allow user to choose a spell/prayer from the given book.
  *
@@ -137,7 +252,7 @@ static int get_spell(int *sn, cptr prompt, int sval, bool learned, int use_realm
     window_stuff();
 
     /* Build a prompt (accept all spells) */
-    (void)strnfmt(out_val, 78, "(%^ss %c-%c, *=List, ESC=exit) %^s which %s? ",
+    (void)strnfmt(out_val, 78, "(%s %c-%c，*=列表，ESC=退出) 选择要%s的%s：",
         p, I2A(0), I2A(num - 1), prompt, p);
 
     /* Get a spell from the user */
@@ -278,7 +393,7 @@ static int get_spell(int *sn, cptr prompt, int sval, bool learned, int use_realm
             }
 
             /* Prompt */
-            (void)strnfmt(tmp_val, 78, "%^s %s (%d mana, %d%% fail)? ",
+            (void)strnfmt(tmp_val, 78, "%s%s (消耗 %d，失败 %d%%)？",
                 prompt, do_spell(use_realm, spell, SPELL_NAME), need_mana,
                 spell_chance(spell, use_realm));
 
@@ -1265,12 +1380,12 @@ void do_cmd_browse(void)
 {
     obj_ptr book;
     int     use_realm = 0, j, line;
+    int     max_desc_lines;
     int     spell = -1;
     int     num = 0;
     rect_t  display = ui_menu_rect();
     byte    spells[64];
     bool    _browse_loading_hack = FALSE;
-    char    temp[62*5];
 
     if (!(p_ptr->realm1 || p_ptr->realm2) && (p_ptr->pclass != CLASS_SORCERER) && (p_ptr->pclass != CLASS_RED_MAGE))
     {
@@ -1336,26 +1451,14 @@ void do_cmd_browse(void)
             print_spells(0, spells, num, display, use_realm);
         }
 
-        /* Clear lines, position cursor  (really should use strlen here) */
-        line = display.y + num + 1;
-        Term_erase(display.x, line, display.cx);
-        Term_erase(display.x, line + 1, display.cx);
-        Term_erase(display.x, line + 2, display.cx);
-        Term_erase(display.x, line + 3, display.cx);
-
-        roff_to_buf(do_spell(use_realm, spell, SPELL_DESC), 62, temp, sizeof(temp));
-
+        line = display.y + num + 2;
+        max_desc_lines = MAX(0, MIN(4, Term->hgt - line));
         _browse_loading_hack = FALSE;
-
-        for (j = 0; temp[j]; j += 1 + strlen(&temp[j]))
-        {
-            if (line > display.y + num + 3)
-            {
-                Term_erase(display.x, line + 1, display.cx);
-                _browse_loading_hack = TRUE;
-            }
-            put_str(&temp[j], ++line, display.x);
-        }
+        for (j = 0; j < max_desc_lines; j++)
+            Term_erase(display.x, line + j, display.cx);
+        if (max_desc_lines < 4)
+            _browse_loading_hack = TRUE;
+        _cmd5_put_wrapped(do_spell(use_realm, spell, SPELL_DESC), line, display.x, MIN(70, display.cx), max_desc_lines);
     }
     screen_load();
 }
@@ -2242,7 +2345,7 @@ void do_cmd_pet(void)
     {
         /* Build a prompt */
         strnfmt(out_val, 78,
-                "(Command %c-%c, *=List, ESC=exit) Select a command: ",
+                "(命令 %c-%c，*=列表，ESC=退出) 选择命令：",
                 I2A(0), I2A(num - 1));
     }
 

@@ -1,20 +1,19 @@
-Painful Status Effects
+痛苦的状态效果 (Painful Status Effects)
 
-Please choose one of the following help sections:
+请选择以下帮助小节之一：
 
-    [a] Overview of Painful Status Effects
-    [b] Confusion
-    [c] Paralysis
-    [d] Stunning
-    [e] Fear
-    [f] Blindness
-    [g] Slowness
-    [h] Cuts/Wounds
-    [i] Poisoning
-    [j] Unwellness
-    [k] Hallucination
-    [l] Polymorph
-    [m] Resisting Status Effects
+    [a] 痛苦的状态效果概述 (Overview of Painful Status Effects)
+    [b] 混乱 (Confusion)
+    [c] 麻痹 (Paralysis)
+    [d] 眩晕 (Stunning)
+    [e] 恐惧 (Fear)
+    [f] 盲目 (Blindness)
+    [g] 缓慢 (Slowness)
+    [h] 割伤/创伤 (Cuts/Wounds)
+    [i] 中毒 (Poisoning)
+    [j] 不适 (Unwellness)
+    [k] 幻觉 (Hallucination)
+    [l] 变形 (Polymorph)
+    [m] 抵抗状态效果 (Resisting Status Effects)
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令 (Help System Commands)

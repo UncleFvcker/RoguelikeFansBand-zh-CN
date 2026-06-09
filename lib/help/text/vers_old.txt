@@ -1,729 +1,704 @@
-=== History of PosChengband ===
+=== PosChengband 的历史 (History of PosChengband) ===
 
-PosChengband 1.0.0 Released
--crickets
+PosChengband 1.0.0 发布
+-（除了蟋蟀叫声外一片死寂 / 无更新日志）
 
-PosChengband is a fork of the excellent variant Hengband.
+PosChengband 是优秀的变体 Hengband 的一个分支 (fork)。
 
-=== History of Hengband ===
-Jan. 9th, 2004  hengband 1.6.0 (New stable branch) released.
- This is a bug-fix version of 1.5.4, and 
- the first version of the new stable branch (1.6.x) .
+=== Hengband 的历史 (History of Hengband) ===
+2004年1月9日  hengband 1.6.0 (新稳定分支) 发布。
+ 这是 1.5.4 的错误修复版本，
+ 也是新稳定分支 (1.6.x) 的第一个版本。
 
-- Activation of the Wizardstaff of Gandalf was changed.
-- Activation of the Charmed Pendant was changed.
-- "share gold" in thievs guild was abolished.
-- Hunter's office make no difference between two races of the same 
-name.
-- Mirrors will disappear when you move to other floor.
-
-- Various bug fixes:
-  "./configure --with-setgid=games" didn't work.
-  Strange behavior for inscriptions such as {@ud}.
-  Sanity blast each time you used save command.
-  Quest rewards in lite_town were older.
-  The game crashed at cure mutation service when you are a Lucky.
-  The rarely crashed when a unique vanished from a saved floor.
-  When a monster threw another monster, the player caused damage.
-  Many typo, screen update failures, wrong descriptions etc.
-
-- All changes for 1.4.5 are also included in 1.6.0 .
-
-
-Jan. 9th, 2004  hengband 1.4.5 (Old stable branch) released.
- This is the final version of old stable branch (1.4.x),
- and is the final version without the saved floor.
-
-- Avoid displaying unimportant descriptions when *identified* an 
-object.
-- Enabled use of sound.cfg on Windows. (Thanks to KoKa)
-- Mimicing monsters '+','%','{' didn't appear in monster knowledge 
-menu.
-
-- Various bug fixes:
-  Samurai couldn't use Boomerang tech in Arena.
-  A monster in Capture Ball sometimes disenchanted and changed.
-  Random teleport in Monster Arena cause infinite loop.
-  Charging Magic Whistles were stacked, and charge was reset.
-  Surplus {special} fake inscription on identified artifact.
-  Some items in the Race career list in character dump were missing.
-  Warrior of the Dawn couldn't reproduced in forests.
-  Cursed weapon in left hand was able to move to right hand.
-  Summon Pet sometimes failed.
-  Stop time was cancelled when any monster die.
-  Miscount of Silver Angels.
-  Renamed "A Set of Gloves of Dragon" to "A Set of Dragon Gloves".
-  Sometimes pets mistakenly breathed on the player.
-  Sometimes normal breath pierce walls.
-  The Minotaur of the Labyrinth should be summond by final boss.
-  Many typo, screen update failures, wrong descriptions etc.
-
-
-Aug. 12th, 2003  hengband 1.5.4 (Development branch) released.
-
-- New artifatct amulets.
-- Special inscription {@ma},{@0} etc. on equip/floor lists are allowed.
-- Tags, "a)" etc., are always effected by above inscription.
-- 'x' mark of view_unsafe_grids will be cleared by disarming spell.
-
-- Various bug fixes:
-  Pval didn't effect on values of normal objects.
-  Proficiency of missile weapons were not increased.
-
-- All changes for 1.4.4 are also included in 1.5.4.
-
-
-Aug. 12th, 2003  hengband 1.4.4 (Stable branch) released.
-
-- Various bug fixes:
-  Hidden doors were not hidden on tile graphics mode.
-  'Stop singing' didn't take time. (It should take 1/10 turn.)
-  Repeat didn't work correctly for Forcetrainers when blinded.
-
-
-Jul. 20th, 2003  hengband 1.5.3 (Development branch) released.
-
-- Improved Warning ability a bit.
-- Some English text were corrected. (thanks to an choco)
-
-- Various bug fixes:
-  Crash after every auto-save.
-  view_unsafe_grids allowed to see trails in the Maze.
-  Repeat didn't work correctly for Forcetrainers when blinded.
-
-- All changes for 1.4.3 are also included in 1.5.3.
-
-
-Jul. 20th, 2003  hengband 1.4.3 (Stable branch) released.
-
-- Various bug fixes:
-  Experience gain for killing monsters was zero.
-  When using manual_haggle, selling items didn't work.
-  Mana point was not updated correctly after Clear Mind.
-
-
-Jul. 10th, 2003  hengband 1.5.2 (Development branch) released.
-- Random artifacts get more 'Construction point' for Android.
-- Hunter's office gives items as prize now.
-- Probing gives all monster recall infomations.
-- Crowns of telepathy get many low ESPs when high one is 'nonliving'.
-- Warning ability is more accurate now.
-- Some monsters have 'dark light' now.
-- The Armageddon trap is less dangerous now.
-- Duration check of temporal effects on monsters is changed of timing.
-- And stealth of the player will get effected by their speed.
-- STUPID monsters try to cast spells in anti-magic cave.
-- Score penalty for Amberite Berserkers no longer applied.
-- Shapechanger will really change shape on tile graphics mode.
-- "Colour out of space" is same letter as terrain type under foot. 
-- Parmanent walls at boundaries mimics normal terrains in dungeon.
-- Enhanced view_unsafe_grids option; 'x' will be cleared when walked 
-over.
-- 'Cure mutation' service will always succeed.
-- Special inscription like {@ma} can be used in all commands now.
-- [Y/n] check on character generation accept all keys except N and ESC.
-- You can set Character history using template file at birth now.
-- Character dump now displays Blue-magics.
-- Character dump now displays full details of lost fight on Arena.
-- Tidyed up Quest list display.
-- Added 'Dark elven pit'
-- Copy&Paste using mouse on X11 port. (from sCthangband)
-
-- Various bug fixes:
-  Strange behaviors after using save command (^S).
-  '@' displayed at wrong position when trap door activated.
-  Duplicate unique monster while player is dominating one as their pet.
-  Inconsistent message about the effect of the jewel.
-  Incomplete update for sub-windows.  etc...
-
-- All changes for 1.4.2 are also included in 1.5.2.
-
-
-Jul. 10th, 2003  hengband 1.4.2 (Stable branch) released.
-
-- Cancelling of Racial/Class power no longer takes energy.
-- The algorism for breath shape is changed.
-
-- Various bug fixes:
-  Samurai was not able to 'Assume a Posture' when they have pets.
-  Buggy behavior of Teleportaion while mounting on a Lord of Change.
-  Inven/Equip sub-window displayed gerbages when resized.
-  Wrong monster name in playrecord file at the Arena.
-
-  Sorcerer and Red-Mage didn't get cost bonuses from Proficiency.
-  'Rush Attack' was able to pass over the Pattern.
-  Collected display update for "Fingolfin's Challenge" song.
-  Overflaw of item's value in store.
-  Songs were not really stopped while global map.
-  Date/time went wrong when player race is changed.
-  'Rodeo' sometimes failed to fail and behaved as succeed.
-  Collected font on WinNT/2000/XP.
-  Pets sometimes involved the player in their spell by mistake.
-  Wrong value of ego ring of resist time.
-  Salt Water didn't have effect on living.
-  Two rare bugs on decision for Quest completion.
-  Charge overflaw for stack of rods.
-  Clones of unique monster sometimes changed to real unique.
-  Bug on adding essence on a equippment with negative pval.
-  Collected update for monster light.  etc...
-
-
-  Dec. 24th, 2002  hengband 1.5.1 (Development branch) released.
-
-- Added visual editor in lists of known objects and etc... (Unangband)
-- Clairaudience spell of Bard doesn't detect walls with treasure.
-- Various bug fixes;
-  Monsters on saved floors awake, Error handling while save,
-  Monster data is broken while save and then crash,
-  Shaft takes you to wrong levels.
-- All changes for 1.4.1 are also included in 1.5.1.
-
-
-  Dec. 24th, 2002  hengband 1.4.1 (Stable branch) released.
-
-- Elvish waybread fully satisfies mortals.  (from OAngband)
-- General store sell Elvish waybread.
-- Salt water don't effect undead etc...
-- Description of weapons/armour from OAngband.
-- Added disturb when objects with inscription {!!} is recharged.
-- Improved display of tiles at knowledge command, etc., on Bigtile mode
-
-- Various bug fixes;
- Vault with no entrance,  Crash at (a) of info command,
- Arena while Wraithform,  Activation of smith's equip,
- Foods while mimiccing,  Kind of monsters at the Mountain,
- Broken name of the Staff,  Random teleport in monster arena.
-
-
-  Dec. 9th, 2002  hengband 1.5.0 (Development branch) released.
-
-Implemented 'Saved Floors':
-- You can climb back the same stairs to get back to the same floor.
-- But different stairs will always take you to different floors.
-- All saved floors will be cleared when your reached to the surface.
-- Changed effects of Level teleport, trap door and stair creation.
-  (Each effect takes you to the floor right above or right under.)
-- Remove two options; dungeon_stairs and confirm_stairs
-- Add a new option 'confirm_quest' which warns about one-way stairs.
-- Increased number of walls with treasure.
-- Implemented walls with hidden treasure.
-- Removed detect treasure effect from the Detection spell.
-
-
-  Dec. 9th, 2002  hengband 1.4.0 (Stable branch) released.
-
-- Removed scrolls of satisfy hunger and that class power of Berserkers.
-  Androids can quaff flasks of oil.
-  Barlogs can sacrifice corpses with symbol 't','p', or 'h' using the 
-Eat command.
-  Golems, Zombies, Skeletons, and Spectors can Eat charges of wands and 
-staves.
-  Ents can get nutritions from water in any potions.
-- Added lists of known monsters/objects from Eyangband.
-- Shift + direction keys will move cursor quickly in the look command.
-- Tuned interface to list stack of items in the look command with 
-easy_floor.
-- Added new service of buildings in town which evaluate effects of your 
-AC.
-- Added disturb_high: disturb whenever high-level monster moves
-- Added allow_debug_opts: allow use of debug/cheat options
-- Changed 'munchkin_death' into a cheat option 'cheat_save'.
-- Removed terrain_streams and stupid_monsters.
-- Fixed typos and grammar errors on English. (Thanks to John Mikula)
-- Fix various bugs:
-  Too many items break savefile.  Crash at boundary of wilderness.
-  Stop time at forest of global map.  Hidden door at Deep Water.
-  A floor mimiccing wall.  Warding True.  Disintegration on runes.
-  Absence of new traps.  Confused Blue-mage.  Quickness of 
-Mirror-magic.
-  Resurrection of Amberites.  Multiple Chameleon King.
-  Buffer-overflow breaks macro.
-
-
-  Oct. 31st, 2002  hengband 1.3.1 (Development branch) released.
-
-- Added a new menu 'Keep on top' for subwindows of Windows version
-- Auto-Inscription-For-Resistances, {%}, will work dynamically.
-- Weak pseud-identified inscription for enchanted objects is now
-  {uncursed} instead of {good}.
-- New trapped rooms: Piranha trap and Armageddon trap.
-- Keep background terrain under Rune of Protection and Rune of 
-Explosion.
-- Fixed the bug that trapped pit is isolated within walls.
-- Removed little boy and fat man.
-- New unique; Sheer Heart Attack, the Bomb Hand
-- Changed configure.in so that acconfig.h is no longer needed.
-- All changes from 1.2.0 to 1.2.2.
-
-
-  Oct. 31st, 2002  hengband 1.2.2 (Stable branch) released.
-
-- The Cloning Pits now includes Borshin.
-- Description of *identified* Light source of darkness now include
-  effects on light radius as numerical value.
-- Fixed bug that radius of light source couldn't reach to zero however
-  many darkness items are equipped, when the player has fiery aura.
-- Fixed many bugs(rod of percention, Royal Crypt, etc...)
-
-
-  Sep. 9th, 2002  hengband 1.2.1 (Stable branch) released.
-
-- Added description about license of Hengband; 'jlicense.txt'.
-  (jlicense.txt is Japanese only for now)
-- Increased AC of the ego Ring of Protection (Extra Armor) by 7.
-- Fixed some bug on monster's AI.
-- Fixed bug that cause crash when specific chest trap triggerd.
-- Fixed wrong display of the Tower quest in quest information command.
-- Fixed bug that fail rates of the imitation differed from the value
-  displayed in a spell list.
-- Changed the Walken to be drop items.
-- Fixed some memory leak and overruns and underruns memory allocation.
-- Fixed some other bug.
-
-
-  Aug. 28th, 2002  hengband 1.3.0 (Development branch) released.
-
-- Added a new room type; trapped monster pit.
-- Added object flags of various ESPs. (from Unangband and ToME)
-- Every slay flags now have corresponding *slay* flags.
-- The 'C' command display ESPs, Slays and 'other' flags on a new page.
-- Now Weaponsmiths can attach ESPs and *slay*s on equipments.
-- Inserted new-lines after first two paragraphs of monster-recall.
-- 'Experience' of Andoroid is now displayed as construction point.
-- Counting of play time will stop within the auto-picker editor.
-- Wrote quest information in character dump file.
-- Apply auto-destroy just after using Psychometry.
-- Added new command letter ';' of auto-picker/destroyer which forces
-  the game to ask if you want to pick the item up. (Thanks to Kieron)
-- The '?' key shows you contextual help while option setting and
-  character making.(from Eyangband)
-
-
-  Aug. 28th, 2002  hengband 1.2.0 (Stable branch) released.
-
-- Fixed many bugs
-- Splited version tree into two branch;
-   development version: 1.3.x and stable version: 1.2.x.
-- Introduced save-file-version which is independent from actual
-  version number of the game.
-- Placed Thorondor at level 50 of the Mountain dungeon as a master.
-- Strengthened all greater eagles very much.
-- Added new options: destroy_feeling and destroy_identify which
-  control whether auto-destroy will be applied just after pseudo
-  identify or identify.
-- Moved manual_haggle option into birth option from game option.
-- A mirror made by mirror-master will change back to original terrain
-  when the mirror is broken.
-- Added description of every spells of Magic-eater.
-- Area of Darkness spell was changed back to same as 1.1.0RC2.
-- You can use '(' and ')' key as first or last item on item selection.
-- Changed message text at climbing up to surface level.
-- Halved experience of drujs.
-- Added more descriptions of personalities on help file and character
-  making screen.
-
-Modifications for auto-picker/destroyer editor:
-- Added descriptions about function of {%} and {%all}.
-- Added search commands '/', 'n', 'N' on the editor.
-- New commands '~', '!', ';', '(' which repeatedly add or remove
-  corresponding command letter.
-- The game no longer creates pickpref-<player's name>.prf when
-  pickpref.prf is already exist.
-- Do auto-save the game at starting the editor.
-
-
-  Jun. 15th, 2002  hengband 1.1.0 released.
-
-- Changed behavior of light area.
-- Various bug fixes and tuning.
-
-
-  Jun. 2nd, 2002  hengband 1.1.0 Release Candidate 1 released.
-
-- Splited Life realm into two and new spells added; New 'Life' realm
-  and New 'Crusade' realm.
-- Speed system modified; multiple-moves got fewer at early stage.
-- Vi-like in-game editor(the _ key) of Auto-picker/destroyer
-  preference.
-- Character background can be edited by player at birth.
-- Auto-destoy/Auto-inscription is now performed just after identify
-  objects (like auto-squelch).
-- Indicators of temporal effects(status bar) are now have variable
-  size and position.
-- new option view_unsafe_grids from Unangband; Unkown grids that have
-  not beed trap detecteted are marked with gray 'x'.
-- new option disturb_trap_detect from Oangband; disturbs you when
-  player is running out of trap-detected area.
-- new option alert_trap_detect; alerts you with message when the
-  player is moving out of the trap-detected area.
-- Ninja can now throw(v) Iron Spikes in the Arena.
-- Known monster level is displayed together with monster name in look
-  command.
-- The game loads only either pickpref-<name>.prf or pickpref.prf, not
-  both.
-- Fake inscriptions({cursed} {empty} etc..) are not hidden under real
-  inscriptions.
-- A stack of more than 23 objects on floor can be listed when
-  easy_floor is on; you can scroll the list with the enter key.
-- Expanded limit radius of light from player's light source.
-- Downstairs don't become 'very long stairs' when ironman_downward is
-  on.
-- Added Essence of Slay human and Essence of Warning for Weaponsmith.
-- Added new monsters.
-- Default color of permanent walls is now Light Umber.
-- Added a few new tiles.
-- Some bugs fixed.
-
-
-  Apl. 6th, 2002  hengband 1.0.11 released.
-
-- The on-line help files is translated to English
-- Warning ability of an object can be canceled by its inscription {$}.
-- The terrain feature of brake changed '#' -> ':' 
-- Format of the mon-info.spo is revised
-- HUMAN flag for monsters and SLAY_HUMAN flag for weapons
-- 'Muramasa' and 'Chainsword' are modified and have SLAY_HUMAN now.
-- The cause of death is written in character dump.
-- Paralyzation status is written in the text of the cause of death.
-- Cursed items have various random unpleasant effects.
-- Bigtile graphics mode, each tile have double width and become a 
-square.
-- Bigscreen from OAngband
-- Correct cause of death when hallucination
-- Savefile name longer then 8 letters can be used. (For Windows)
-- Normal magic items have descriptions when *identified*
-- Some bugs fixed.
-
-
-  Mar. 6th, 2002  hengband 1.0.10 released.
-
-- New artifact, ego-ammo and vault.
-- Class power of Red-Mage is more useful.
-- Force Trainer becomes more and more powerful in melee when
-  they use 'Improve Force'. 
-- Monster AI is a bit improved.
-- The Serpent of Chaos summons guardians of each dungeons.
-- Random artifact names list was expanded.
-- Iron Spikes has (dmg per shot/dmg per turn) display.
-- Automatically tidy up bundles of ammo to 99 ammo and the rest.
-- Interact with visual command takes ^N ^A ^C.
-- Support 16x16 tile. Selected by extra option -- -a on X11.
-- 8x8 tile supports lighting effects.
-- Screen shot is supported in graphics mode.
-- Support in MPW environment of Macintosh.
-
-  Jan.30th, 2002  hengband 1.0.9 revision 1 released.
-
-- Fixed one more bug which cause crash (English version only).
-
-  Jan.27th, 2002  hengband 1.0.9 released.
-
-- New character making screen
-- New character information 'C' screen
-- Range and accuracy of crossbow are changed.
-- Rod of Pesticide was changed.
-- The score server now holds colored screenshots at dying and winning.
-  screenshots will be placed at:
-  'http://www.kmc.gr.jp/~habu/local/hengscore-en/screens/'.
-  But links on the webpage to the screenshots are not yet available.
-- Limited support of 8x8 tile graphics.
-- Hengband online help in *Japanese*. 
-  (sadly English version of online help is not yet available)
-- Rune of explosion no longer has anti-summoning effects.
-- Rune of protection no longer has perfect
-  anti-summoning effects. Sea of runes are no longer
-  perfect. But this change has a good side effect:
-  monsters can waste its time to try summoning.
-- Identify spell now shows only unidentified items in the list.
-- Difficulty to activate random artifact is changed.
-
-
-  Dec.31th, 2001  hengband 108fix2 revision 1 released.
-
-- 'fix2' is japanese bug fixed version but this bug was 
-  not effect on English version.
-- The 'interact with knowledge' command changed. 
-  You can get display of lines of auto picker/destroyer.
-
-
-  Dec.31th, 2001  hengband 108fix1 version 3 released.
-
-- Auto macro dump and other auto dump is now 
-  more useful. Old dump lines will be deleted 
-  before appending new dump.
-- A minor typo and a minor bug fixed.
+- 甘道夫的巫师法杖 (Wizardstaff of Gandalf) 的激活效果被更改。
+- 护身符坠饰 (Charmed Pendant) 的激活效果被更改。
+- 废除了盗贼公会的“分享金钱”。
+- 猎人办事处不再区分同名的两个不同种族。
+- 当你移动到其他楼层时，镜子会消失。
+
+- 各种 Bug 修复：
+  "./configure --with-setgid=games" 无法运行。
+  诸如 {@ud} 这样的铭刻行为异常。
+  每次使用保存命令时都会发生理智冲击。
+  精简镇 (lite_town) 中的任务奖励较旧。
+  当你性格为“幸运儿 (Lucky)”时，游戏在治疗变异服务处会崩溃。
+  当一个 Unique (唯一怪) 从已保存楼层消失时极低概率引发崩溃。
+  当一个怪物投掷另一个怪物时，玩家会受到伤害。
+  许多错别字、屏幕更新失败、错误的描述等。
+
+- 1.4.5 的所有更改也包含在 1.6.0 中。
+
+
+2004年1月9日  hengband 1.4.5 (旧稳定分支) 发布。
+ 这是旧稳定分支 (1.4.x) 的最终版本，
+ 也是没有“已保存楼层 (saved floor)”功能的最终版本。
+
+- 避免在 *完全鉴定* 物品时显示不重要的描述。
+- 允许在 Windows 上使用 sound.cfg。（感谢 KoKa）
+- 伪装成 '+','%','{' 的怪物不会出现在怪物知识菜单中。
+
+- 各种 Bug 修复：
+  武士 (Samurai) 无法在竞技场使用回旋镖 (Boomerang) 武技。
+  捕获球里的怪物有时会被解除魔法并发生改变。
+  怪物竞技场中的随机传送导致无限循环。
+  充能中的魔法哨子 (Magic Whistles) 被堆叠，且充能被重置。
+  已鉴定神器上多余的 {special} 伪铭刻。
+  角色信息转储文件中的种族生涯列表里缺少了一些项目。
+  黎明战士 (Warrior of the Dawn) 无法在森林中繁殖。
+  左手的被诅咒武器能够移动到右手。
+  召唤宠物有时会失败。
+  当任何怪物死亡时，时间停止 (Stop time) 会被取消。
+  白银天使 (Silver Angels) 的数量计算错误。
+  将 "A Set of Gloves of Dragon" 重命名为 "A Set of Dragon Gloves"。
+  有时宠物会错误地向玩家喷吐。
+  有时普通喷吐会穿透墙壁。
+  迷宫牛头怪 (Minotaur of the Labyrinth) 应该由最终 Boss 召唤。
+  许多错别字、屏幕更新失败、错误的描述等。
+
+
+2003年8月12日  hengband 1.5.4 (开发分支) 发布。
+
+- 新的神器护身符。
+- 允许在装备/地板列表中使用特殊铭刻 {@ma}, {@0} 等。
+- 标签如 "a)" 等现在总是受上述铭刻的影响。
+- view_unsafe_grids（显示不安全网格）的 'x' 标记将被解除陷阱法术清除。
+
+- 各种 Bug 修复：
+  Pval 属性未对普通物品的价值产生影响。
+  远程武器的熟练度没有增加。
+
+- 1.4.4 的所有更改也包含在 1.5.4 中。
+
+
+2003年8月12日  hengband 1.4.4 (稳定分支) 发布。
+
+- 各种 Bug 修复：
+  隐藏的门在图块图形模式下没有被隐藏。
+  '停止唱歌' 不花费时间。（它应该消耗 1/10 回合。）
+  在失明状态下，原力武士 (Forcetrainers) 的重复命令 (Repeat) 
+无法正确工作。
+
+
+2003年7月20日  hengband 1.5.3 (开发分支) 发布。
+
+- 稍微改进了预警 (Warning) 能力。
+- 纠正了一些英文文本。（感谢 an choco）
+
+- 各种 Bug 修复：
+  每次自动保存后崩溃。
+  view_unsafe_grids 选项允许在迷宫中看到轨迹。
+  在失明状态下，原力武士的重复命令无法正确工作。
+
+- 1.4.3 的所有更改也包含在 1.5.3 中。
+
+
+2003年7月20日  hengband 1.4.3 (稳定分支) 发布。
+
+- 各种 Bug 修复：
+  杀死怪物获得的经验值为零。
+  使用手动砍价 (manual_haggle) 时，出售物品不起作用。
+  使用“冥想 (Clear Mind)”后法力值没有正确更新。
+
+
+2003年7月10日  hengband 1.5.2 (开发分支) 发布。
+- 随机神器现在为人造人 (Android) 提供更多“构筑点数”。
+- 猎人办事处现在将物品作为奖品发放。
+- 探知 (Probing) 现在提供所有的怪物回忆信息。
+- 如果高阶心灵感应是“无生命”，心灵感应王冠现在会获得许多低阶心灵感应 
+(ESP)。
+- 预警能力现在更准确了。
+- 一些怪物现在拥有“黑暗之光”。
+- 末日/毁灭陷阱 (Armageddon trap) 现在的危险性降低了。
+- 更改了怪物身上时间效果持续时间的检查时机。
+- 玩家的潜行现在会受到其速度的影响。
+- 愚蠢的怪物 (STUPID) 会尝试在反魔法洞穴中施法。
+- 安珀的狂战士不再受到分数惩罚。
+- 变形者现在在图块图形模式下会真正改变形状。
+- “星之彩 (Colour out of space)”现在的字母与其脚下的地形类型相同。
+- 边界上的永久墙壁现在会伪装成地下城里的普通地形。
+- 增强了 view_unsafe_grids 选项；走到上面时 'x' 会被清除。
+- “治疗变异”服务现在总是会成功。
+- 像 {@ma} 这样的特殊铭刻现在可以在所有命令中使用。
+- 角色生成时的 [Y/n] 检查现在接受除 N 和 ESC 之外的所有键。
+- 你现在可以在出生时使用模板文件设置角色背景历史。
+- 角色转储文件现在会显示青魔法 (Blue-magics)。
+- 角色转储文件现在会显示在竞技场战败的完整细节。
+- 整理了任务列表的显示。
+- 添加了“黑暗精灵巢穴 (Dark elven pit)”
+- 在 X11 端口上使用鼠标进行复制和粘贴。(移植自 sCthangband)
+
+- 各种 Bug 修复：
+  使用保存命令 (^S) 后的奇怪行为。
+  当活板门陷阱激活时，'@' 显示在错误的位置。
+  当玩家将某个 Unique 怪物作为宠物支配时，会出现重复的 Unique。
+  关于珠宝效果的不一致提示信息。
+  子窗口的更新不完整。等等...
+
+- 1.4.2 的所有更改也包含在 1.5.2 中。
+
+
+2003年7月10日  hengband 1.4.2 (稳定分支) 发布。
+
+- 取消种族/职业能力不再消耗能量。
+- 更改了喷吐形状的算法。
+
+- 各种 Bug 修复：
+  武士在拥有宠物时无法“摆出架势 (Assume a Posture)”。
+  骑乘在万变魔君 (Lord of Change) 身上时传送的 Bug 行为。
+  物品栏/装备栏子窗口在调整大小时显示乱码。
+  在竞技场中，游玩记录文件里的怪物名称错误。
+
+  巫师 (Sorcerer) 和红魔道士 (Red-Mage) 
+没有获得来自熟练度的法力消耗减免。
+  “冲锋攻击”能够越过走廊图案 (Pattern)。
+  修正了“芬国昐的挑战 (Fingolfin's Challenge)”歌曲的显示更新。
+  商店中物品价值的溢出。
+  在大地图上歌曲并没有真正停止。
+  玩家种族改变时，日期/时间出错。
+  驯兽师技能“套马/牛仔骑术 (Rodeo)”有时判定失败却表现为成功。
+  修正了 WinNT/2000/XP 上的字体。
+  宠物有时会误将玩家卷入它们的法术中。
+  抵抗时间 ego 戒指的数值错误。
+  盐水对活物没有效果。
+  关于任务完成判定的两个罕见 Bug。
+  成堆魔棒的充能溢出。
+  Unique 怪物的克隆体有时会变成真正的 Unique。
+  将精华附加到具有负数 pval 属性的装备上的 Bug。
+  修正了怪物光照的更新。等等...
+
+
+  2002年12月24日  hengband 1.5.1 (开发分支) 发布。
+
+- 在已知物品等列表中添加了可视化编辑器。(移植自 Unangband)
+- 吟游诗人的顺风耳 (Clairaudience) 法术不再探测藏有宝物的墙壁。
+- 各种 Bug 修复；
+  已保存楼层上的怪物会苏醒，保存时的错误处理，
+  保存时怪物数据损坏并导致崩溃，
+  竖井会将你带到错误的楼层。
+- 1.4.1 的所有更改也包含在 1.5.1 中。
+
+
+  2002年12月24日  hengband 1.4.1 (稳定分支) 发布。
+
+- 精灵的旅粮能完全填饱凡人的肚子。(移植自 OAngband)
+- 杂货店出售精灵旅粮。
+- 盐水不会影响不死生物等...
+- 武器/护甲的描述取自 OAngband。
+- 增加了当带有铭刻 {!!} 的物品被重新充能时的打断 (disturb) 提示。
+- 改进了在知识命令等情况下的大图块 (Bigtile) 模式显示。
+
+- 各种 Bug 修复；
+ 没有入口的金库，info 命令中 (a) 选项崩溃，
+ 幽灵形态下进入竞技场，铁匠装备的激活，
+ 伪装时的食物判定，山脉中的怪物种类，
+ 法杖名称损坏，怪物竞技场中的随机传送。
+
+
+  2002年12月9日  hengband 1.5.0 (开发分支) 发布。
+
+实现了“已保存楼层 (Saved Floors)”：
+- 你可以顺着同样的楼梯爬回去，回到同一个楼层。
+- 但是不同的楼梯总是把你带到不同的楼层。
+- 当你到达地表时，所有已保存的楼层都会被清除。
+- 更改了传送楼层、活板门和创造楼梯的效果。
+  （每种效果都会把你带到正上方或正下方的楼层。）
+- 移除了两个选项：dungeon_stairs 和 confirm_stairs
+- 添加了一个新选项 'confirm_quest'，它会对单向楼梯发出警告。
+- 增加了藏有宝物的墙壁数量。
+- 实现了藏有隐藏宝物的墙壁。
+- 移除了探测法术中的探测宝物效果。
+
+
+  2002年12月9日  hengband 1.4.0 (稳定分支) 发布。
+
+- 移除了满足饥饿卷轴以及狂战士相应的职业能力。
+  人造人可以喝油瓶。
+  炎魔 (Barlogs) 可以使用食用 (Eat) 命令献祭符号为 't', 'p', 或 'h' 
+的尸体。
+  魔像、僵尸、骷髅和幽灵可以“吃掉”魔杖和法杖的充能。
+  树人可以从任何药水中的水获取营养。
+- 从 Eyangband 移植了已知怪物/物品列表。
+- Shift + 方向键可以在查看命令中快速移动光标。
+- 调整了开启 easy_floor 选项时在查看命令中列出成堆物品的界面。
+- 增加了城镇建筑的新服务，用于评估你的 AC（护甲等级）效果。
+- 增加了 disturb_high 选项：每当高等级怪物移动时就打断你。
+- 增加了 allow_debug_opts 选项：允许使用调试/作弊选项。
+- 将 'munchkin_death' 改为作弊选项 'cheat_save'。
+- 移除了 terrain_streams 和 stupid_monsters 选项。
+- 修正了英文版中的错别字和语法错误。（感谢 John Mikula）
+- 修复各种 Bug：
+  太多物品破坏存档文件。荒野边界崩溃。
+  全局地图森林中的时间停止。深水区的隐藏门。
+  伪装成墙壁的地板。真实守护 (Warding True)。符文上的解离。
+  缺乏新陷阱。混乱的蓝魔道士。镜魔道士魔法的速度。
+  安珀人的复活。多个变色龙之王。
+  缓冲区溢出破坏宏。
+
+
+  2002年10月31日  hengband 1.3.1 (开发分支) 发布。
+
+- 为 Windows 版本的子窗口增加了一个新菜单 '置于顶层 (Keep on top)'
+- 抗性自动铭刻 {%} 现在可以动态工作了。
+- 强化物品现在会得到微弱的伪鉴定铭刻 {uncursed}（未诅咒），而不是 
+{good}（良好）。
+- 新陷阱房间：食人鱼陷阱 (Piranha trap) 和末日/毁灭陷阱 (Armageddon 
+trap)。
+- 保留守护符文和爆裂符文下方的背景地形。
+- 修复了被困在墙壁内的陷阱坑的 Bug。
+- 移除了小男孩和胖男人。
+- 新的 Unique 怪物：炸弹手『穿心攻击』 (Sheer Heart Attack, the Bomb 
+Hand)
+- 更改了 configure.in，不再需要 acconfig.h。
+- 包含从 1.2.0 到 1.2.2 的所有更改。
+
+
+  2002年10月31日  hengband 1.2.2 (稳定分支) 发布。
+
+- 克隆人巢穴现在包含博尔辛 (Borshin)。
+- *完全鉴定* 
+后的黑暗光源的描述，现在会包含其作为数值的对光照半径的影响。
+- 修复了一个 
+Bug，当玩家拥有火焰灵气时，无论装备多少黑暗物品，光源半径都无法降至零。
+- 修复了许多 Bug（洞察魔棒、皇家陵墓等...）
+
+
+  2002年9月9日  hengband 1.2.1 (稳定分支) 发布。
+
+- 添加了关于 Hengband 许可证的说明；'jlicense.txt'。
+  （jlicense.txt 暂仅提供日文版本）
+- 守护 ego 戒指 (附加护甲) 的 AC 增加了 7。
+- 修复了有关怪物 AI 的一些 Bug。
+- 修复了当特定宝箱陷阱被触发时导致崩溃的 Bug。
+- 修复了任务信息命令中巨塔任务错误显示的问题。
+- 修复了模仿的失败率与法术列表中显示的值不同的 Bug。
+- 将沃肯 (Walken) 更改为掉落物品。
+- 修复了一些内存泄漏以及内存分配的溢出和下溢。
+- 修复了一些其他 Bug。
+
+
+  2002年8月28日  hengband 1.3.0 (开发分支) 发布。
+
+- 添加了一种新房间类型：怪物陷阱坑。
+- 增加了各种心灵感应 (ESP) 的物品标签。(移植自 Unangband 和 ToME)
+- 所有的杀戮 (slay) 标签现在都有对应的 *强效杀戮* (*slay*) 标签。
+- 'C' 命令会在一个新页面上显示 ESP、杀戮和“其他”标签。
+- 现在武器匠可以在装备上附加 ESP 和 *杀戮*。
+- 在怪物回忆的前两段之后插入了换行符。
+- 人造人的“经验值”现在显示为构筑点数。
+- 在自动拾取器编辑器中会停止计算游玩时间。
+- 将任务信息写入角色转储文件中。
+- 在使用精神探测 (Psychometry) 后立刻应用自动销毁。
+- 添加了自动拾取/销毁器的新命令字母 
+';'，它强制游戏询问你是否要拾取该物品。（感谢 Kieron）
+- 在选项设置和角色创建期间，'?' 键会显示上下文相关的帮助。(移植自 
+Eyangband)
+
+
+  2002年8月28日  hengband 1.2.0 (稳定分支) 发布。
+
+- 修复了许多 Bug
+- 将版本树拆分为两个分支；
+   开发版本：1.3.x 和 稳定版本：1.2.x。
+- 引入了独立于游戏实际版本号的存档文件版本号。
+- 将巨鹰之王索隆多 (Thorondor) 放置在山脉地下城第 50 层作为守护者。
+- 大幅加强了所有的巨鹰。
+- 增加了新选项：destroy_feeling 和 
+destroy_identify，控制在伪鉴定或鉴定之后是否立刻应用自动销毁。
+- 将手动砍价 (manual_haggle) 选项从游戏选项移至开局/出生 (birth) 选项。
+- 镜魔道士制造的镜子在破碎时会变回原来的地形。
+- 增加了魔法吞噬者 (Magic-eater) 所有法术的描述。
+- 黑暗区域法术改回与 1.1.0RC2 相同。
+- 在物品选择时，你可以使用 '(' 和 ')' 键跳转到第一个或最后一个物品。
+- 更改了爬上地表楼层时的提示信息文本。
+- 将德鲁杰 (drujs) 的经验值减半。
+- 在帮助文件和角色创建屏幕上增加了更多性格的描述。
+
+自动拾取/销毁器编辑器的修改：
+- 增加了关于 {%} 和 {%all} 功能的描述。
+- 在编辑器中增加了搜索命令 '/'、'n'、'N'。
+- 新命令 '~'、'!'、';'、'(' 会重复添加或移除相应的命令字母。
+- 当 pickpref.prf 已经存在时，游戏不再创建 pickpref-<玩家名字>.prf。
+- 启动编辑器时自动保存游戏。
+
+
+  2002年6月15日  hengband 1.1.0 发布。
+
+- 更改了光照区域的行为。
+- 各种 Bug 修复和调优。
+
+
+  2002年6月2日  hengband 1.1.0 Release Candidate 1 发布。
+
+- 将生命 (Life) 领域拆分为两个并添加了新法术；新的“生命”领域和新的“圣战 
+(Crusade)”领域。
+- 速度系统被修改；在游戏早期多重行动的机会变少了。
+- 类 Vi 风格的自动拾取/销毁器偏好设置游戏内编辑器（_ 键）。
+- 角色出生时的背景历史可以由玩家编辑。
+- 自动销毁/自动铭刻现在会在鉴定物品后立刻执行（类似 auto-squelch 
+自动踩碎）。
+- 临时效果指示器（状态栏）现在具有可变的大小和位置。
+- 来自 Unangband 的新选项 
+view_unsafe_grids：未被解除陷阱探测到的未知网格会标有灰色的 'x'。
+- 来自 Oangband 的新选项 
+disturb_trap_detect：当玩家跑出探测过陷阱的区域时打断你。
+- 新选项 alert_trap_detect：当玩家移出陷阱探测区域时用信息警告你。
+- 忍者现在可以在竞技场投掷 (v) 铁蒺藜 (Iron Spikes)。
+- 在查看命令中，已知怪物等级现在会与怪物名称一起显示。
+- 游戏只加载 pickpref-<名字>.prf 或 pickpref.prf 
+其中之一，不会同时加载。
+- 伪铭刻（{cursed} {empty} 等）不再隐藏在真实铭刻之下。
+- 开启 easy_floor 时，可以列出地板上超过 23 
+个物品的堆叠；你可以使用回车键滚动列表。
+- 扩大了玩家光源的光照极限半径。
+- 当 ironman_downward 开启时，下行楼梯不再变成“极长的楼梯”。
+- 为武器匠添加了“杀戮人类”精华和“预警”精华。
+- 添加了新怪物。
+- 永久墙壁的默认颜色现在是浅棕色 (Light Umber)。
+- 添加了一些新图块。
+- 修复了一些 Bug。
+
+
+  2002年4月6日  hengband 1.0.11 发布。
+
+- 在线帮助文件被翻译成英文
+- 物品的预警能力可以通过其铭刻 {$} 来取消。
+- 灌木丛 (brake) 的地形特征从 '#' 改为 ':' 
+- 修订了 mon-info.spo 的格式
+- 为怪物添加了 HUMAN 标签，为武器添加了 SLAY_HUMAN 标签
+- 修改了“村正 (Muramasa)”和“链锯剑 (Chainsword)”，它们现在具有 
+SLAY_HUMAN 属性。
+- 死亡原因会被写在角色转储文件中。
+- 瘫痪状态会写在死亡原因文本中。
+- 被诅咒的物品具有各种随机的令人不快的效果。
+- 大图块 (Bigtile) 图形模式，每个图块都有双倍宽度，变成一个正方形。
+- 来自 OAngband 的大屏幕 (Bigscreen) 功能
+- 修正了幻觉状态下的死因记录
+- 现在可以使用长于 8 个字母的存档文件名。（对于 Windows）
+- 魔法物品在被 *完全鉴定* 后会显示描述
+- 修复了一些 Bug。
+
+
+  2002年3月6日  hengband 1.0.10 发布。
+
+- 新神器、ego 弹药和新金库房间 (vault)。
+- 红魔道士的职业能力变得更实用了。
+- 原力武士在使用“强化原力”时，其近战能力变得越来越强大。
+- 怪物 AI 稍微得到了改善。
+- 混沌之蛇会召唤每个地下城的守卫。
+- 扩大了随机神器名称列表。
+- 铁蒺藜具有 (每次射击伤害/每回合伤害) 的显示。
+- 自动整理弹药堆，将其分成 99 个一捆及剩余部分。
+- 与视觉效果交互命令使用 ^N ^A ^C。
+- 支持 16x16 图块。在 X11 上通过附加选项 -- -a 选择。
+- 8x8 图块支持光照效果。
+- 在图形模式下支持屏幕截图。
+- 支持 Macintosh 的 MPW 环境。
+
+  2002年1月30日  hengband 1.0.9 revision 1 发布。
+
+- 修复了另一个导致崩溃的 Bug（仅限英文版）。
+
+  2002年1月27日  hengband 1.0.9 发布。
+
+- 新的角色创建屏幕
+- 新的角色信息 'C' 屏幕
+- 更改了弩的射程和精度。
+- 更改了杀虫魔棒 (Rod of Pesticide)。
+- 计分服务器现在保存死亡和获胜时的彩色截图。
+  截图将放置在：
+  'http://www.kmc.gr.jp/~habu/local/hengscore-en/screens/'。
+  但在网页上指向这些截图的链接尚不可用。
+- 提供了对 8x8 图块图形的有限支持。
+- *日文版* Hengband 在线帮助。
+  （遗憾的是，英文版的在线帮助尚不可用）
+- 爆裂符文不再具有反召唤效果。
+- 守护符文不再具有完美的
+  反召唤效果。符文之海也不再
+  是绝对安全的。但这一改动有一个好的副作用：
+  怪物可能会浪费时间尝试进行召唤。
+- 鉴定法术现在只在列表中显示未鉴定的物品。
+- 更改了随机神器激活的难度。
+
+
+  2001年12月31日  hengband 108fix2 revision 1 发布。
+
+- 'fix2' 是日文 Bug 修复版本，但该 Bug
+  并未影响英文版。
+- “与知识菜单交互”命令被更改。
+  你现在可以获取自动拾取/销毁器的文本行显示。
+
+
+  2001年12月31日  hengband 108fix1 version 3 发布。
+
+- 自动宏转储和其他自动转储功能现在
+  更加实用了。旧的转储行会在
+  附加新转储之前被删除。
+- 修复了一个轻微错别字和一个小 Bug。
 
  
-  Dec.30th, 2001  hengband 108fix1 version 2 released.
+  2001年12月30日  hengband 108fix1 version 2 发布。
 
-- All remained japanese messages are found and fixed, 
-  using a exclusive C program.
-- You can now define macros in the 'pickpref.prf'.
-
-
-  Dec.29th, 2001  hengband 108fix1 released.
-
-- This is a bug fixed japanese version, and almost 
-- same as 108eng3, but a few more bugs are fixed.
+- 使用一个专用的 C 程序，
+  找到了所有残余的日文消息并进行了修复。
+- 你现在可以在 'pickpref.prf' 中定义宏了。
 
 
-  Dec.25th, 2001  hengband 108eng2(stable) and 108eng3(test version) 
-released.
+  2001年12月29日  hengband 108fix1 发布。
 
--  108eng2: fixed some typo. ']' key now can be used as macro key.
--  108eng3: macro trigger is displayed in more suitable way;
-     such that \[F1] or \[control-shift-alt-HOME]. 
-     And you can use alt-key plus alphabet-key as macro 
-     key on Windows now; \[alt-A] or \[shift-alt-B].
+- 这是一个日文 Bug 修复版本，几乎
+- 与 108eng3 相同，但修复了更多几个 Bug。
 
 
-  Dec.24th, 2001  hengband 108eng1: makefile.bcc was not work. now 
-fixed.
+  2001年12月25日  hengband 108eng2(稳定版) 和 108eng3(测试版) 发布。
 
-  Dec.24th, 2001  hengband 1.0.8 released. This is a new Japanese 
-version. 
-
-The source can be used to compile English version too.
-- The address of the world score server is changed.
-- Makefiles was changed again.
-- New item: Magic Whistle.
-- Ninja had been a bit weakened. 
-- can study known spells using 'G' command for more proficiency.
-- Some minor bugs was fixed.
-- Yet another japanese massage was translated.
+-  108eng2：修复了一些拼写错误。']' 键现在可以用作宏按键。
+-  108eng3：宏触发器以更合适的方式显示；
+     如 \[F1] 或 \[control-shift-alt-HOME]。
+     现在你可以在 Windows 上使用 alt 键加字母键作为宏
+     按键；\[alt-A] 或 \[shift-alt-B]。
 
 
-  Dec.17th, 2001  hengband 1.0.7fix2 english beta4 released.
+  2001年12月24日  hengband 108eng1：makefile.bcc 无法工作。现已修复。
 
-- Yet another remained japanese messages are now translated.
-- Changed some option info texts and names again.
-- Inventory lists of Home and Museum in the character dump is fixed.
-- Some bugs related groo and Metal Babble is fixed.
+  2001年12月24日  hengband 1.0.8 发布。这是新的日文版本。
 
-
-  Dec.11th, 2001  hengband 1.0.7fix2 english beta3 released.
-
-- fixed a compile error. English info message of artifacts added.
-- changed some info text and name of options.
-
-
-  Dec. 9th, 2001  hengband 1.0.7fix2 english beta2 released.
-
-- fixed a terrible bug,
-- items in the home was not saved when more than 24 items stored.
-- Binary for Macintosh (ppc, osX) is now available.
+源代码也可以用于编译英文版本。
+- 全球计分服务器地址发生更改。
+- Makefiles 再次被更改。
+- 新物品：魔法哨子。
+- 忍者被稍微削弱了。
+- 可以在 'G' 命令中研究已知法术以获得更多熟练度。
+- 修复了一些小 Bug。
+- 翻译了另一批日文信息。
 
 
-  Dec. 8th, 2001  hengband 1.0.7fix2 english beta released.
+  2001年12月17日  hengband 1.0.7fix2 english beta4 发布。
 
-- Many mistakes of English messages, and bugs are fixed.
-
-
-  Dec. 5th, 2001  1.0.7fix2 english alpha2 released.
-
-- fixed some mistakes of archives. 
-
-
-  Dec. 4th, 2001  hengband 1.0.7fix2 english alpha version released.
+- 剩余的一批日文信息现已翻译完毕。
+- 再次更改了一些选项提示文本和名称。
+- 修复了角色转储中家和博物馆的物品清单。
+- 修复了与 Groo (格鲁) 和 Metal Babble (金属液态史莱姆) 相关的一些 
+Bug。
 
 
-=== The main differences of Hengband 1.0.7 from ZAngband2.2.8  ===
+  2001年12月11日  hengband 1.0.7fix2 english beta3 发布。
 
-- World score server: You can register scores and character dumps.
-- Player can write last words when died, which is displayed in the 
-  character dump registered to the score server.
-- Menu interface: return key activates the main menu which include 
-almost 
-  all commands. So beginners don't need to memorize all commands.
+- 修复了一个编译错误。添加了神器的英文提示信息。
+- 更改了一些选项的提示文本和名称。
 
-- Player can ride on some pet monsters, horses, dragons etc.
-- Player can wield two weapons at once or wield a weapon with 
-two-handed.
-- Player have proficiency levels of each weapons and spells, like 
-Nethack.
-- Player can change second magic realm. All previous realm's spell will 
-  be lost. There is a limit in the total of studying spells.
 
-- New classes:
-   Tourist : they can poorly cast arcane spells. difficult to survive.
-   Imitator : imitate spells or abilities which monsters have just 
-used.
-   BeastMaster : dominate or summon monsters and ride on these.
-   Sorcerer : cast spells of all magic realms. But physically hopeless.
-   Archer : a warrior specialized in missile weapon. can create ammo.
-   Magic-Eater : absorb wands, staffs and rods to use it as magic 
-spell.
-   Bard : sing songs. like Harper of PernAngband.
-   Red-Mage : dual-class, can cast all lower rank spells of all realms.
-   Samurai : use Samurai Arts which include various special attack.
-   ForceTrainer : use the spiritual Force. prefer to be bare-hand
-   Blue-Mage : study monster's spells. use these as his own spell.
-   Cavalry : a warrior specialized in riding.
-   Berserker : powerful warrior. but cannot use magic items except 
-potions.
-   Weaponsmith : extract essences from items. use it to improve 
-equipment.
-   Mirror-Master : create magical mirror. use its fantastic power.
-   Ninja : act without lights, attack monsters with possible insta 
-kill.
+  2001年12月9日  hengband 1.0.7fix2 english beta2 发布。
 
-- New races:
-   Ent, Archon, Balrog, Dunadan, Shadow-Fairy, Kutar, Android
-- Player's Personality:
-   At the character making, you can choose Personality, which include 
-   Ordinary, Mighty, Shrewd, Pious, Nimble, Fearless, Combat, Lazy, 
-   Sexy, Lucky, Patient, and Munchkin.
-- New magic realms: Craft magic, Daemon magic
-   Other magic realms also exist for new classes' exclusive use.
-   Existing realms are modified.
-- Class powers: class specific powers, like the racial one.
-- Pernangband-like large wilderness map and many different dungeons, 
-  including Maze, Volcano, R'lyeh, Anti-magic cave, Anti-melee cave, 
-  Chameleon cave, Dark cave, Hell, Heaven, etc.
+- 修复了一个可怕的 Bug，
+- 当储存了超过 24 件物品时，家里的物品没有被保存。
+- 现在提供 Macintosh (ppc, osX) 的二进制文件。
 
-- The amount of energy which player and monsters take in each turn are 
-  randomized, which makes pillar-dancing impossible, and produces 
-  danger of possible sudden death.
-- Monsters can breath or cast spells to a place adjacent to player.
-- A monster which was attacked in the last turn can move and cast 
-spells 
-  even if the attacker is not in the line of sight. 
-  So a Quylthulg pit is no more an easy source of experience.
-- The path shape of bolt spells is same as the path of missile weapons.
-- New abilities of monsters
-  - Dispel magic spell: dispels all magic of player, including 
-    Globe of Invulnerability. And many deeper unique monsters, 
-    including Serpent of Chaos, wisely cast dispel magic spell.
-  - Psycho spear: beam spell which penetrate Globe of Invulnerability.
-  - Stop the Time: A few monsters can cast it...
-  - blow with drain mana: some monster cause damage at SP with its 
-blow.
-- Higher level monsters can resist genocide.
-- Even artifacts will be removed by *destruction*.
 
-- Player can name his pets, and can take pets over to any place.
-- Pet monsters will not turn against player when attacked by player.
-- Monsters killed by player's pets don't drop items.
-- Player and monsters cannot summon monsters of opposite alignment.
-- New items:
-  - Capture Ball, capture a monster to make pets, or carry a pet.
-  - Wizardstaff and Ring of Mana, decrease mana consumption of spells.
-  - ring of warning, warn before dangerous move.
-    and many other new items...
-- Many new artifacts and new monsters.
-- Random Quest monster is always unique, and one-time only.
-- Ego rings and Ego amulets.
-- Names of random artifacts will reflect it's ability.
-  A weapon which has fire brand, fire resistance, and fiery aura is 
-  more likely named 'Fire Brand' or like that.
+  2001年12月8日  hengband 1.0.7fix2 english beta 发布。
 
-- When player level advances, stats increase sometimes. Instead,
-  stat gaining potion is much rarer.
-- Players start with more HP and more SP, early stage is not very hard.
-- Home is expanded to 20 pages. and all 4 Homes in 4 towns is same.
-- New building Museum: Give as many items as you like for memorial.
-- New building Hunter's office: They offer prize for wanted monsters.
+- 修复了许多英文信息的错误以及 Bug。
 
-- New casino game Poker : It's real poker.
-- New casino game Monster Arena : You bets to one of four monsters. 
-    They battle each other and you win when your monster wins.
-- Auto picker: write item names on a file named 'pickpref.prf', then 
-  these items will be automatically picked up or destroyed and even 
-  automatically inscribed.
+
+  2001年12月5日  1.0.7fix2 english alpha2 发布。
+
+- 修复了压缩包的一些错误。
+
+
+  2001年12月4日  hengband 1.0.7fix2 english alpha version 发布。
+
+
+=== Hengband 1.0.7 与 ZAngband 2.2.8 的主要区别 ===
+
+- 全球计分服务器：你可以注册分数和角色转储文件。
+- 玩家可以在死时写下遗言，这会显示在
+  注册到计分服务器的角色转储文件中。
+- 菜单界面：回车键会激活包含几乎
+  所有命令的主菜单。因此初学者不需要记住所有命令。
+
+- 玩家可以骑乘在一些宠物怪物、马、龙等身上。
+- 玩家可以同时挥舞两把武器，或者双手挥舞一把武器。
+- 玩家具有各种武器和法术的熟练度等级，就像 Nethack 一样。
+- 玩家可以更改第二魔法领域。之前领域的所有法术都将
+  丢失。研究法术的总数是有限制的。
+
+- 新职业：
+   游客 (Tourist)：他们能勉强施展奥秘法术。很难存活。
+   模仿者 (Imitator)：模仿怪物刚使用过的法术或能力。
+   驯兽师 (BeastMaster)：支配或召唤怪物并骑乘它们。
+   巫师 (Sorcerer)：能施放所有魔法领域的法术。但物理能力毫无希望。
+   弓箭手 (Archer)：精通远程武器的战士。能制造弹药。
+   魔法吞噬者 (Magic-Eater)：吸收魔棒、法杖以将其作为魔法咒语使用。
+   吟游诗人 (Bard)：唱歌。类似 PernAngband 的竖琴手。
+   红魔道士 (Red-Mage)：双修职业，能施放所有领域低阶法术。
+   武士 (Samurai)：使用包含各种特殊攻击的武士技。
+   原力武士 (ForceTrainer)：使用精神原力。倾向于徒手。
+   蓝魔道士 (Blue-Mage)：学习怪物的法术。将其化为自己的法术使用。
+   骑兵 (Cavalry)：精通骑乘的战士。
+   狂战士 (Berserker)：强大的战士。但除了药水外不能使用魔法物品。
+   武器匠 (Weaponsmith)：从物品中提取精华。用其改进装备。
+   镜魔道士 (Mirror-Master)：创造魔法镜子。使用其奇妙的力量。
+   忍者 (Ninja)：在无光环境下行动，攻击怪物可能会一击必杀。
+
+- 新种族：
+   树人 (Ent), 神圣使者 (Archon), 炎魔 (Balrog), 登丹人 (Dunadan), 
+暗影妖精 (Shadow-Fairy), 库塔 (Kutar), 人造人 (Android)
+- 玩家的性格 (Personality)：
+   在创建角色时，你可以选择性格，包括
+   普通 (Ordinary)、强壮 (Mighty)、精明 (Shrewd)、虔诚 (Pious)、敏捷 
+(Nimble)、无畏 (Fearless)、好战 (Combat)、慵懒 (Lazy)、
+   性感 (Sexy)、幸运 (Lucky)、耐心 (Patient)，以及 龙傲天 (Munchkin)。
+- 新魔法领域：工匠 (Craft) 魔法，恶魔 (Daemon) 魔法
+   也存在供新职业专属使用的其他魔法领域。
+   现有的领域被修改了。
+- 职业能力：职业特定的能力，类似于种族能力。
+- 类似 Pernangband 的大型荒野地图和许多不同的地下城，
+  包括迷宫 (Maze)、火山 (Volcano)、拉莱耶 (R'lyeh)、反魔法洞穴 
+(Anti-magic cave)、禁止近战洞穴 (Anti-melee cave)、
+  变色龙洞穴 (Chameleon cave)、黑暗洞穴 (Dark cave)、地狱 (Hell)、天堂 
+(Heaven) 等等。
+
+- 玩家和怪物在每回合消耗的能量数是
+  随机的，这使得“绕柱战术/放风筝”变得不可能，并且产生了
+  可能突然暴毙的危险。
+- 怪物可以向玩家相邻的地方喷吐或施法。
+- 在上一回合被攻击的怪物即使攻击者不在视线范围内
+  也能移动和施法。
+  因此，夸尔苏格巢穴 (Quylthulg pit) 不再是轻松刷经验的来源。
+- 射线类法术的路径形状与远程武器的路径相同。
+- 怪物的新能力
+  - 解除魔法 (Dispel magic) 法术：解除玩家的所有魔法，包括
+    无敌结界。而且许多更深层的 Unique 怪物，
+    包括混沌之蛇，会聪明地施放解除魔法。
+  - 灵能长枪 (Psycho spear)：穿透无敌结界的光束法术。
+  - 时间停止 (Stop the Time)：少数几个怪物可以施放它...
+  - 吸收法力攻击：有些怪物在攻击时会对法力值 (SP) 造成伤害。
+- 更高级别的怪物可以抵抗群体灭绝。
+- 即便是神器也会被 *毁灭* 抹除。
+
+- 玩家可以给宠物命名，并将宠物带到任何地方。
+- 当宠物被玩家攻击时，它们不会反戈相向。
+- 被玩家宠物杀死的怪物不会掉落物品。
+- 玩家和怪物不能召唤相反阵营的怪物。
+- 新物品：
+  - 捕获球 (Capture Ball)，捕捉怪物作为宠物，或携带宠物。
+  - 巫师法杖 (Wizardstaff) 和法力戒指 (Ring of 
+Mana)，降低法术法力消耗。
+  - 预警戒指 (ring of warning)，在危险移动前发出警告。
+    以及许多其他新物品...
+- 许多新神器和新怪物。
+- 随机任务怪物总是 Unique (唯一怪)，并且只有一次机会。
+- Ego 戒指和 Ego 护身符。
+- 随机神器的名称将反映其能力。
+  一把拥有火焰烙印、火焰抗性和火焰灵气的武器
+  很可能会被命名为“火之烙印”或类似的名字。
+
+- 玩家升级时，属性有时会增加。作为替代，
+  增加属性的药水变得极其罕见。
+- 玩家开局时拥有更多的 HP 和 SP，早期阶段并不太难。
+- 家被扩展到了 20 页。并且四个城镇中的 4 个家是互通的。
+- 新建筑 博物馆：捐献尽可能多的物品用作纪念。
+- 新建筑 猎人办事处：他们为被通缉的怪物提供奖金。
+
+- 新赌场游戏 扑克：这是真正的扑克。
+- 新赌场游戏 怪物竞技场：你对四只怪物中的一只下注。
+    它们互相战斗，当你的怪物赢了时你就赢了。
+- 自动拾取器：将物品名称写在名为 'pickpref.prf' 的文件中，然后
+  这些物品就会被自动拾取或销毁，甚至可以
+  被自动铭刻。
 
 
 
-=== Zangband History and Information ===
+=== Zangband 的历史与信息 (Zangband History and Information) ===
 
-Versions 1.0 - 2.1.0c
+版本 1.0 - 2.1.0c
 ---------------------
 
-The seeds of Zangband lie in an obsolete and long ago vanished PC
-variant (somewhat misleadingly) dubbed Angband--. The variant was
-written by a hopeless Angband addict (previously Moria veteran and
-winner) who got bored with the standard monsters and wanted to
-introduce some new monsters. Angband-- was based on the PC Angband 1.31
-sources, and it was set in Roger Zelazny's 'Amber' universe.
+Zangband 的萌芽在于一个已被废弃且早就消失的 PC
+变体中，它（有些误导性地）被称为 Angband--。这个变体
+是由一位无可救药的 Angband 瘾君子（他曾经是 Moria 的老兵和
+通关者）编写的，他厌倦了标准的怪物并想
+引入一些新怪物。Angband-- 基于 PC Angband 1.31
+源代码，它的背景设定在罗杰·泽拉兹尼 (Roger Zelazny) 的“安珀 
+(Amber)”宇宙中。
 
-Later this individual got a better computer and learned to code, and 
-produced the PC Zangband, and most Angband-- monsters survived into
-PC Zangband 1.0. PC Zangband 1.0 was the first PC Angband to introduce
-(simple, font-based) graphics, which were also used in the graphical
-PC Angband 1.40. 
+后来这个人换了一台更好的电脑并学会了编程，进而
+制作出了 PC Zangband，绝大多数 Angband-- 的怪物都保留到了
+PC Zangband 1.0 中。PC Zangband 1.0 是第一个引入了
+图形界面（基于字体的简单图形）的 PC Angband，这些图形后来也被用于
+图形化的 PC Angband 1.40。
 
-Yet this individual was still not cured of his addiction... his almost
-as strong addiction to the Civilization style fantasy strategy game 
-'Master of Magic' inspired him to write a new magic system. The current
-version of Zangband (2.*) incorporates this magic system, as well as
-the best features from Angband-- and PC Zangband 1.0. It is based on
-the Angband 2.8.1 sources (by Ben Harrison), and is therefore portable
-to other systems (unlike the earlier versions which were for dos-pc's
-only).
 
-Incidentally, this person (me, Topi Ylinen) also thought that the 
-standard Angband monsters were too easy, which led him to introduce
-such monsters as Death swords, Cyberdemons and Great wyrms of power...
+然而，这个人仍然没有治好他的瘾……他同样对《文明》风格的奇幻策略游戏《魔法
+大师 (Master of Magic)》有着强烈的瘾，
+这启发了他编写一个全新的魔法系统。当前
+版本的 Zangband (2.*) 就包含了这个魔法系统，以及
+来自 Angband-- 和 PC Zangband 1.0 的最佳特性。它基于
+Angband 2.8.1 的源码（由 Ben Harrison 编写），因此可以
+移植到其他系统（不像早期版本那样仅限 dos-pc 平台）。
 
-Versions 2.1.0d - present
+顺便说一句，这个人（也就是我，Topi Ylinen）也认为
+标准的 Angband 怪物太简单了，这促使他引入了
+诸如死亡之剑、赛博恶魔和力量远古巨龙这样的怪物……
+
+版本 2.1.0d - 至今
 -------------------------
 
-ZAngband 2.1.0c was Topi's last version, he has got a job and and
-doesn't have enough time anymore to continue work on ZAngband.
-He asked for a new maintainer and I was the one to take over the task.
-May I introduce myself, my name is Robert Ruehlmann, I'm the creator
-of the graphical Angband versions for DOS and webmaster of
-"Thangorodrim - The Angband Page" ("http://www.thangorodrim.net").
+ZAngband 2.1.0c 是 Topi 的最后一个版本，他找到了一份工作
+并且没有足够的时间继续 ZAngband 的开发了。
+他希望寻找一位新的维护者，而我接手了这个任务。
+请允许我自我介绍一下，我的名字是 Robert Ruehlmann，我是
+DOS 版图形化 Angband 的创建者，也是
+"Thangorodrim - The Angband Page" ("http://www.thangorodrim.net") 
+的网站管理员。
 
-Special thanks
+特别鸣谢
 --------------
 
-The newer versions of Zangband might not have come into existence
-without the significant help from these excellent Angband programmers.
+如果没有这些优秀的 Angband 程序员的鼎力相助，较新版本的
+Zangband 可能根本不会存在。
 
-Topi would like to thank:
+Topi 想要感谢：
 
-        Ben Harrison, for obvious reasons.
+        Ben Harrison，原因显而易见。
 
-        Greg Wooledge, who pointed out a bug in the dos compiler,
-        which was preventing Topi's progress with the first 2.* version
-        of Zangband and for various patches.
+        Greg Wooledge，他指出了 dos 编译器中的一个 Bug，
+        正是这个 Bug 阻碍了 Topi 开发第一个 Zangband 2.* 版本
+        的进度，此外也感谢他提供的各种补丁。
 
-        Julian Lighton, who must have sent Topi more ideas, patches,
-        and bug reports, than all the others toghether.
+        Julian Lighton，他给 Topi 发送的想法、补丁
+        和错误报告肯定比其他所有人加起来还要多。
 
-        Robert Ruehlmann, whose nice new main-dos.c enables SVGA
-        graphics and even windows in ms-dos.
+        Robert Ruehlmann，他漂亮的新 main-dos.c 代码让
+        ms-dos 中也能使用 SVGA 图形界面甚至窗口化。
 
-        Paul Sexton, who is responsible for about 50% of the new code
-        in 2.1.0.
+        Paul Sexton，他负责了 2.1.0 版本中大约 50% 的新代码。
 
-Robert would also like to thank:
+Robert 也想要感谢：
 
-        Heino Vander Sanden, who created the quest-code and
-        Dean Anderson, whose patch showed me the quickest way to
-        implement the quests.
+        Heino Vander Sanden，他编写了任务代码；还有
+        Dean Anderson，他的补丁向我展示了实现任务的最快方法。
 
-        Adam Bolt, who created the new ZAngband tiles.
+        Adam Bolt，他制作了新的 ZAngband 图块。
 
-        Scott Bigham, for the S-Lang patch.
+        Scott Bigham，为了 S-Lang 补丁。
 
-        Jeff Duprey for the new mutations.      
+        Jeff Duprey，为了新的变异。      
 
-        John Duffin and Leigh Silas Hanrihan for the new items.
+        John Duffin 和 Leigh Silas Hanrihan，为了新的物品。
 
-        Marten Woxberg for many new ideas.
+        Marten Woxberg，为了许多新的想法。
 
-        Ken Wigle for allowing me to include his town and quest code.
+        Ken Wigle，感谢允许我包含他的城镇和任务代码。
 
-        Tim Baker for many patches and bugfixes and for ZAngbandTk.
+        Tim Baker，为了许多补丁和 Bug 修复，以及 ZAngbandTk。
 
-        Chris Weisiger for many new vault layouts.
+        Chris Weisiger，为了许多新的金库房间 (vault) 布局。
 
-        Juergen Neitzel for countless new rumors.
+        Juergen Neitzel，为了无数的新传闻。
 
-        Topi Ylinen, Mark Howson, Adam Horowitz, Oscar Nelson and
-        all the other regular members of the #angband chat channel
-        for giving me lots of new ideas and being good friends.
+        Topi Ylinen, Mark Howson, Adam Horowitz, Oscar Nelson 以及
+        #angband 聊天频道的所有其他常驻成员
+        感谢他们给我提供了很多新想法并且是很好的朋友。
 
         Benny S. Hofmann, Aram Harrow, Greg Harvey, Keldon Jones,
         Graham Murray, Remco Gerlich, Tim Baker, Oscar Nelson,
@@ -733,503 +708,489 @@ Robert would also like to thank:
         Brandon Walker, Kelly Trinh, Brian Graham, James W. Sager III,
         John Holton, Larry Bassel, Markus Linnala, Musus Umbra,
         Mike Hommel, Christopher Stranczek, Werner Baer, Andreas Koch,
-        Jon Boehnker, Jason Willoughby, David Paoletti and many others
-        for bugreports, patches, bugfixes, and ideas.
+        Jon Boehnker, Jason Willoughby, David Paoletti 以及许多其他人
+        感谢他们的错误报告、补丁、错误修复和想法。
 
 
-=== Brief Version History (of standard Angband) ===
+=== 简短版本历史 (标准 Angband) ===
 
-First came "VMS Moria", by Robert Alan Koeneke (1985).
+首先是 "VMS Moria"，作者是 Robert Alan Koeneke (1985)。
 
-Then came "Umoria" (Unix Moria), by James E. Wilson (1989).
+然后是 "Umoria" (Unix Moria)，作者是 James E. Wilson (1989)。
 
-In 1990, Alex Cutler and Andy Astrand, with the help of other students
-at the University of Warwick, created Angband 1.0, based on the
-existing code for Umoria 5.2.1. They wanted to expand the game, keeping
-or even strengthening the grounding in Tolkien lore, while adding more
-monsters and items, including unique monsters and artifact items, plus
-activation, pseudo-sensing, level feelings, and special dungeon rooms.
+1990年，Alex Cutler 和 Andy Astrand，在华威大学
+其他学生的帮助下，基于现有的 Umoria 5.2.1 代码创建了
+Angband 1.0。他们想要扩展游戏，在保留
+甚至加强托尔金传说的基础上，增加更多的
+怪物和物品，包括独特的怪物和神器物品，以及
+激活、伪感知 (pseudo-sensing)、楼层感觉和特殊地下城房间等机制。
 
-Over time, Sean Marsh, Geoff Hill, Charles Teague, and others, worked
-on the source, releasing a copy known as "Angband 2.4.frog_knows" at
-some point, which ran only on Unix systems, but which was ported by
-various people to various other systems.
+随着时间的推移，Sean Marsh, Geoff Hill, Charles Teague 等人
+共同参与了源码开发，并在某个时候发布了名为
+"Angband 2.4.frog_knows" 的副本，它只能在 Unix 系统上运行，
+但后来被各种各样的人移植到了许多其他系统上。
 
-Then Charles Swiger (cs4w+@andrew.cmu.edu) attempted to clean up the
-mess, resulting in several versions, starting sometime around November,
-1993, with Angband 2.5.1 (more or less) and leading up to Angband 2.6.2
-in late 1994. Several people ported (the primarily Unix/NeXT centered)
-Angband 2.6.1 to other platforms, including Keith Randall, who made a
-Macintosh port that added support for color usage. Some of the changes
-during this period were based on suggestions from the "net", PC Angband
-1.40, UMoria 5.5, and some of the Angband "variations", such as
-FAngband.
+然后 Charles Swiger (cs4w+@andrew.cmu.edu) 试图清理这个
+烂摊子，产生了几个版本，大约始于 1993 年 11 月
+的 Angband 2.5.1 (差不多这个时间)，一直发展到 1994 年底的
+Angband 2.6.2。一些人将（主要以 Unix/NeXT 为中心的）
+Angband 2.6.1 移植到了其他平台，其中包括 Keith Randall，他
+制作了一个 Macintosh 移植版并添加了对颜色的支持。这期间的一些修改
+是基于来自“网络 (net)”、PC Angband 1.40、UMoria 5.5，以及一些 Angband 
+“变种”（如 FAngband）的建议。
 
-Finally, I (Ben Harrison) took over in late 1994 when Charles Swiger
-left. Initially my intention was simply to clean up what had become,
-after ten years, a rather unholy mess, but the deeper I delved into the
-code, the more it became apparent that drastic changes were needed, so,
-starting with MacAngband 2.6.1, I began a more or less total rewrite,
-resulting, eventually, in Angband 2.7.0, released around January first,
-1995.
+最后，在 Charles Swiger 离开后，我 (Ben Harrison) 于 1994 年底
+接管了项目。起初我的意图只是简单地清理这个经历了十年发展后
+变得相当混乱的代码库，但我对代码钻研得越深，
+需要进行彻底更改的必要性就越明显。因此，
+从 MacAngband 2.6.1 开始，我开始了或多或少彻底的重写工作，
+最终产出了在 1995 年 1 月 1 日左右发布的
+Angband 2.7.0。
 
-Angband 2.7.0 was a very clean (but very buggy) rewrite that, among
-other things, allowed extremely simple porting to multiple platforms,
-starting with Unix and Macintosh, and by the time most of the bugs were
-cleaned up, in Angband 2.7.2, including X11, and various IBM machines.
-Angband 2.7.4 was released to the "ftp.cis.ksu.edu" site, and quickly
-gained acceptance, perhaps helped by the OS2 and Windows and Amiga and
-Linux ports. Angband 2.7.5 and 2.7.6 added important capabilities such
-as macros and user pref files, and continued to clean up the source.
-Angband 2.7.8 was designed to supply another "stable" version that we
-can all give to our friends, with new "help files" and "spoiler files"
-for the "online help", plus a variety of minor tweaks and some new
-features. Angband 2.7.9 optimized a few things, and tweaked a few other
-things, and cleaned up a few other things, and introduced a few minor
-semantic changes.
+Angband 2.7.0 是一次非常干净（但也非常多 Bug）的重写，除
+其他特性外，它允许极度简单地移植到多个平台，
+从 Unix 和 Macintosh 开始，到大多数错误被
+清理干净的 Angband 2.7.2 时，已包括 X11 和各种 IBM 机器。
+Angband 2.7.4 被发布到了 "ftp.cis.ksu.edu" 站点，并迅速
+获得了认可，部分得益于 OS2、Windows、Amiga 和
+Linux 移植版的帮助。Angband 2.7.5 和 2.7.6 增加了如
+宏和用户首选项文件等重要功能，并继续清理代码。
+Angband 2.7.8 的设计旨在提供另一个“稳定”版本，让我们
+都可以把它发给朋友们玩，它包含“在线帮助”的新“帮助文件”和“剧透文件 
+(spoiler files)”，
+外加各种小调整和一些新功能。Angband 2.7.9 优化了一些东西，微调了另一些
+东西，清理了一些其他的东西，并引入了一些较小的
+语义更改。
 
-It is very hard to pin down, along the way from 2.6.2 to 2.7.0, and
-thence to 2.7.8, exactly what was added exactly when. Most of these
-steps involved so many changes as to make "diff files" not very useful,
-since often the diff files were as long as the code itself. Most of the
-changes, with the notable exception of the creation of the new
-"main-xxx.c" files for the various new platforms, and a few other
-exceptions generally noted in the source, were written by myself,
-either spontaneously, or, more commonly, as the result of a suggestion
-or comment by an Angband player. So if you have any problems with
-anything that you do not recognize from older versions, you can blame
-them on me. And if you like the new features and such, you can send me
-a brief little "thank you" email (to benh@phial.com) or something...
+很难确切地指出，从 2.6.2 到 2.7.0，然后再到 2.7.8
+的过程中，到底在什么时间增加了什么。大多数这些
+步骤涉及了太多的修改，以至于“差异文件 (diff files)”都变得不再实用，
+因为通常差异文件和代码本身一样长。除了为不同新平台创建新的 "main-xxx.c" 
+文件的显著例外
+以及一些在源码中特别注明的例外之外，大多数更改
+都是由我亲自编写的，
+有的是我自发的，或者更常见的是响应一位 Angband 
+玩家的建议或评论。因此，如果你在使用
+你不认识的旧版本时遇到任何问题，你可以把锅
+甩给我。如果你喜欢这些新功能等，你可以发一封简短的“感谢”邮件（到 
+benh@phial.com）或者其他什么的给我……
 
-The Official Angband Home Page ("http://www.phial.com/")
-was created along with Angband 2.7.9 to serve as an up to date
-description of any bugs found in various versions, and to list all of
-the people whose email addresses I kept having to look up.
-
-
-=== Some of the changes from Angband 2.6.1 to Angband 2.7.9 ===
-
-The most important modification was a massive "code level cleanup" that
-made all of my other modifications much simpler and safer. This cleanup
-was so massive that in many places the code is no longer recognizable,
-for example, via "diff -r", often because it was rewritten from
-scratch.
-
-The second most important modification was the design of a generic
-"term.c" package, which allows Angband to be ported to a new machine
-with as few as 50 lines of code. Angband 2.7.9 thus runs without
-modification on many machines, including Macintosh, PowerMac, Unix/X11,
-Unix/Curses, Amiga, Windows, OS2-386, DOS-386, and even DOS-286.
-
-It would be difficult to list all of the changes between Angband 2.6.1
-and Angband 2.7.9, because many of them were made in passing during the
-massive code level cleanup. Many of the changes are invisible to the
-user, but still provide increased simplicity and efficiency, and
-decreased code size, or make other more visable changes possible. For
-example, the new "project()" code that handles all bolts, beams, and
-balls, the new "update_view()" code that simplifies line of sight
-computation, or the new "generate()" code that builds new levels in the
-dungeon. Many changes have been made to increase efficiency, including
-the new "process_monsters()" and "update_monsters()" functions, and
-the new "objdes()" and "lite_spot()" routines. The generic "Term"
-package yielded efficient screen updates, and enabled the efficient use
-of "color".
-
-But anyway, here are a few things that come to mind, in no particular
-order, and with very little time or effort. Somehow I managed to put
-off updating this file to the very end, and it will just have to do for
-now. The recent changes (and bug fixes) can be found at the Official
-Angband Home Page.
-
-     color
-     macros
-     keymaps
-     user pref files
-     generic feature array, with template file
-     generic object array, with template file
-     generic artifact array, with template file
-     generic ego-item array, with template file
-     generic monster array, with template fils
-     generic vault array, with template file
-     binary image files for the template files
-     special stat effect tables
-     a special table of spells
-     a special table of options
-     inventory tagging
-     inventory restrictions
-     using objects off the floor
-     various new runtime options
-     the new "destroy" command
-     the new "examine" command
-     the new "note" command
-     the new "dump screen" command
-     the new "load screen" command
-     the new "un-inscribe" command
-     the new "change visuals" command
-     the new "change colors" command
-     the new "change macros" command
-     the new "save game" command
-     the new "fire" vs "throw" commands
-     rearranged equipment slots
-     a standard bow slot
-     an extra inventory slot
-     an underlying keyset
-     refueling torches
-     better monster memory
-     nicer targeting mode
-     object stacking
-     the recall window
-     the choice window
-     the mirror window
-     new high score code
-     special lighting effects
-     intelligent monsters
-     new monster flags
-     text formatting code
-     much cleaner store code
-     generic spell projections
-     scrolls of *identify*
-     maximize mode
-     preserve mode
-     new inscription code
-     new message recall code
-     new spell and prayer code
-     massive cleanup of effects code
-     new object allocation routines
-     powerful (but simple) on line help
-     robust savefile cheat preventers
-     new official cheating options
-     new blindness code
-     new hallucination code
-     optimized object description code
-     new keypress input routines
-     actual object discounts
-     fractional (asymptotic) speed
-     postponing updates/redraws
-     run-time price determination
-     better wizard commands
-     the automatic player
-     launchers of extra shots
-     elemental ignore flags
-     new ego-item types
-     new player ghost creation
-     no more sliding objects
-     no more sliding monsters
-     new object flags
-     new chest trap code
-     regularized the artifact code
-     regularized the ego-item code
-     new monster abilities
-     new monster spell attacks
-     some new store owners
-     run-time skill computation
-     player kills vs ancestor kills
-     better room illumination code
-     better group monster code
-     table access through pointers
-     more redefinable constants
-     slightly new screen layout
-     extreme code cleaning
-     extreme optimizations
+Angband 官方主页 ("http://www.phial.com/")
+是与 Angband 2.7.9 一起创建的，其目的是为了提供在各个版本中发现的 Bug 
+的
+最新描述，并列出我过去不得不不断查找其邮件地址的
+所有人员。
 
 
-=== A Note from the Maintainer (of standard Angband) ===
+=== 从 Angband 2.6.1 到 Angband 2.7.9 的部分更改 ===
 
-Welcome to Angband 2.7.9v6.
+最重要的修改是一次大规模的“代码级清理”，
+这使我所有的其他修改变得更简单、更安全。这次清理
+规模非常巨大，在很多地方代码都变得面目全非，
+例如，通过 "diff -r" 看，很多代码都是从头重写的。
 
-My name is Ben Harrison, and I have been the maintainer of Angband
-since November, 1994, when the previous maintainer, Charles Swiger
-(who developed Angband 2.5.1 through 2.6.2), got a real job. Starting
-with Angband 2.7.0, and continuing through the current version (2.7.9),
-I have been responsible for a number of major improvements to the basic
-Angband game, some of them obvious to the casual user and others hidden
-below the surface, but no less significant. The most significant
-improvement has been a total rewrite of large portions of the code,
-which, after ten years of modifications by various people, had begun to
-resemble a rotting death mold. Also significant was the design of a
-generic "term.c" package, which has allowed Angband to be easily ported
-to Macintosh, Amiga, X11, Windows, and basically every system in
-existance (including a beta-version for DOS-286).
+第二重要的修改是设计了一个通用的
+"term.c" 包，这允许仅用 50 行左右的代码将 Angband 移植
+到一台新机器上。因此 Angband 2.7.9 无需
+修改即可在许多机器上运行，包括 Macintosh, PowerMac, Unix/X11,
+Unix/Curses, Amiga, Windows, OS2-386, DOS-386, 甚至是 DOS-286。
 
-In addition, I have added lots of new commands, features, and
-functionalities, most of which appear to have been accepted by most
-people as a good idea (TM).
+由于从 Angband 2.6.1 到 Angband 2.7.9 的许多变更
 
-It is extremely easy to port Angband 2.7.9 to a new system. If you
-cannot find a version that will compile on your machine, you can
-usually make one by writing a single file of about one hundred lines of
-C code.
+都是在大规模代码清理中顺手完成的，要列出所有这些变更非常困难。许多更改对
+用户来说是不可见的，
+但仍提供了更高的简单性和效率，并
+减小了代码体积，或者使得其他更明显的修改成为可能。
+例如，处理所有光束、射线和球体法术的新 "project()" 
+代码，简化视线计算的新 "update_view()" 
+代码，或者在地下城中生成新楼层的新 "generate()" 
+代码。为了提高效率进行了许多修改，包括新的 "process_monsters()" 和 
+"update_monsters()" 函数，以及新的 "objdes()" 和 "lite_spot()" 
+例程。通用的 "Term" 
+包实现了高效的屏幕更新，并使得高效使用“颜色”成为可能。
 
-Angband 2.7.8 was intended to be a nice, clean, stable version, so we
-can all give copies to our friends. Unfortunately, it contained a few
-minor bugs. The *enchant* armor/weapon scrolls were "swapped". The game
-starts to look funny if too many objects accumulate on the floor. The
-"Q" command (commit suicide) does not work. You may not be able to load
-older savefiles. Some special dungeon levels may take a long time to
-generate. Good drops can include cursed rings of speed. But you can see
-that none of these are "fatal", so Angband 2.7.8 remains for now the
-most "official" version.
+不管怎样，这里随意列出了一些我能想到的东西，没有任何
+特定的顺序，也没花多少时间和精力。不知为何，我一直把更新这份文件的事情
+拖到了最后，目前只能凑合着看了。近期的修改（和错误修复）可以在 Angband 
+官方主页上找到。
 
-Angband 2.7.9v1 through Angband 2.7.9v6 are intended as "transition"
-versions leading up to the release of Angband 2.8.0. Angband 2.8.0 will
-include many extensive changes from Angband 2.7.8, see the web page for
-more information.
+     颜色
+     宏
+     按键映射
+     用户偏好文件
+     通用的地形特征数组，附带模板文件
+     通用的物品数组，附带模板文件
+     通用的神器数组，附带模板文件
+     通用的 ego 物品数组，附带模板文件
+     通用的怪物数组，附带模板文件
+     通用的金库房间数组，附带模板文件
+     用于模板文件的二进制镜像文件
+     特殊属性状态效果表
+     法术特别表
+     选项特别表
+     物品栏标签
+     物品栏限制
+     使用地板上的物品
+     各种新的运行时选项
+     新的“销毁”命令
+     新的“检查”命令
+     新的“笔记”命令
+     新的“转储屏幕”命令
+     新的“加载屏幕”命令
+     新的“解除铭刻”命令
+     新的“更改视觉效果”命令
+     新的“更改颜色”命令
+     新的“更改宏”命令
+     新的“保存游戏”命令
+     新的“开火 (fire)”与“投掷 (throw)”分离命令
+     重新排列的装备槽
+     标准的弓槽
+     一个额外的物品栏槽
+     底层的键盘集
+     为火把添加燃料
+     更好的怪物回忆
+     更好的瞄准模式
+     物品堆叠
+     召回窗口
+     选项窗口
+     镜像窗口
+     新的高分代码
+     特殊光照效果
+     智能怪物
+     新怪物标签
+     文本格式化代码
+     更整洁的商店代码
+     通用法术投射
+     *完全鉴定* 卷轴
+     最大化模式
+     保留模式
+     新铭刻代码
+     新信息回忆代码
+     新法术与祈祷代码
+     大幅清理效果代码
+     新物品分配例程
+     强大（但简单）的在线帮助
+     健壮的防止修改存档作弊机制
+     新的官方作弊选项
+     新的失明代码
+     新的幻觉代码
+     优化物品描述代码
+     新的按键输入例程
+     真实的物品折扣
+     小数（渐近）速度
+     延迟更新/重绘
+     运行时价格决定
+     更好的巫师（调试）命令
+     自动玩家（脚本）
+     额外射击的发射器
+     元素免疫标签
+     新 ego 物品类型
+     新玩家幽灵创建
+     不再有滑动/漂移的物品
+     不再有滑动/漂移的怪物
+     新物品标签
+     新宝箱陷阱代码
+     规范化神器代码
+     规范化 ego 物品代码
+     新怪物能力
+     新怪物法术攻击
+     一些新店主
+     运行时技能计算
+     玩家击杀对比先祖击杀
+     更好的房间照明代码
+     更好的群体怪物代码
+     通过指针访问表
+     更多可重定义的常量
+     略微新的屏幕布局
+     极致的代码清理
+     极致的优化
 
-Most of these changes have been completed, and include things like
-cleaning up some internal code issues, optimizing the code (again),
-extending the functionality of some existing commands (such as target
-and look, which now handle directional motion), tweaking various
-aspects of the program, most notably in the introduction of new
-symbols and colors for various monsters, and in the use of a more
-regular set of RGB values for the various color codes, etc. Again, see
-the web page for a complete list.
 
-Angband 2.8.0 will introduce a version independent savefile format,
-along with a new terrain feature concept, and the ability to allow
-multiple objects in the same cave grid. It may or may not separate the
-"unique" monsters from the "normal" monsters, perhaps introducing some
-new "normal" monsters, such as "skeleton lord" or "giant boar" or
-"master mage".
+=== 来自维护者的留言 (标准 Angband 维护者) ===
 
-You can email compliments, complaints, bug reports, and presents to
-me ("benh@voicenet.com"), and you can post interesting experiences,
-general questions, compilation questions and code suggestions to the
-newsgroup ("rec.games.roguelike.angband").
+欢迎来到 Angband 2.7.9v6。
 
-You can obtain the latest source and pre-compiled executables from
-various places, try 
-"ftp://ftp.cis.ksu.edu/pub/Games/Angband/Angband-2.7.x"
-and the developer site at "ftp://export.andrew.cmu.edu/angband". You
-will need to enter the appropriate sub-directory, such as "Source" or
-"Macintosh".
+我的名字是 Ben Harrison，自 1994 年 11 月
+前任维护者 Charles Swiger（他开发了 Angband 2.5.1 到 
+2.6.2）找到一份正经工作以来，我就一直担任 Angband 的维护者。从 Angband 
+2.7.0 开始，一直到
+当前版本 (2.7.9)，我对基础的 Angband 游戏进行了一系列重大的改进，
+其中一些对普通用户来说很明显，而另一些则隐藏在
+表面之下，但同样意义重大。最显著的
+改进是对大部分代码进行了彻底重写，
+因为经过十年来各种人的修改后，这代码已经
+开始像一团腐烂的死亡霉菌了。同样重要的是通用 "term.c" 包的设计，它使得 
+Angband 可以轻松移植
+到 Macintosh、Amiga、X11、Windows 以及几乎所有存在的系统
+（包括 DOS-286 的一个 beta 版本）。
 
-You should visit "http://www.voicenet.com/~benh/Angband/" (the
-Official Angband Home Page) and 
-"http://www.paranoia.com/~jth/angband.html"
-(the Unofficial Angband Home Page), for more up to date information.
+此外，我添加了许多新命令、特性
+和功能，其中大部分似乎已经被大多数人
+认为是一个好主意 (TM)。
 
-You may freely distribute the game, and its source, though you are
-bound not only by the existing copyright notice from 1984, but also
-whatever restrictions may be present on various other pieces of the
-code, including the fact that any source written by me is technically
-automatically placed under copyright and may thus not be used for
-commercial purposes.
+将 Angband 2.7.9 移植到一个新系统极其容易。如果
+你找不到可以在你机器上编译的版本，你通常可以通过编写一个大约一百行 C 
+代码的
+单一文件来制作一个。
 
-The basic help files supplied with this game are more or less up to
-date, but when in doubt, the source (or the newsgroup) is the place to
-turn for advice. Or attempt to figure it out by experimentation, this
-is sometimes the most fun. In particular, see "commands.txt" for
-information on the available commands, some of which have been recently
-added or changed, and "options.txt", which describe how to customize
-several aspects of the game to suit your preferences.
+Angband 2.7.8 本来旨在作为一个漂亮、干净、稳定的版本，好让
+我们都能把副本发给朋友玩。不幸的是，它包含几个小 Bug。*附魔* 
+护甲/武器的卷轴被“弄反”了。如果太多物品堆积在地上，游戏画面会变得很奇怪
+。“Q”命令（自杀）无法工作。你可能无法加载旧存档文件。一些特殊的地下城楼
+层可能需要很长时间才能生成。好的战利品可能会掉落被诅咒的速度戒指。但你可
+以看出
+这些 Bug 没有一个是“致命的”，因此 Angband 2.7.8 暂且仍然是
+最“官方”的版本。
 
-The documentation is very easy to modify and update, so you may want to
-check in to the ftp site occasionally to see if there are any new help
-files (or spoiler files) for you to acquire. Note that the spoiler
-files are not distributed with the source since they are so huge, but
-you can obtain them from various places as with the source and
-executables. New spoiler files may be placed in the "lib/help" or
-"lib/info" directories, to allow access via the "online help" system.
+Angband 2.7.9v1 到 Angband 2.7.9v6 被定位为发布 Angband 2.8.0 的“过渡”
+版本。Angband 2.8.0 将
+包含许多自 Angband 2.7.8 以来的广泛更改，有关更多信息，请参阅网页。
 
-Remember to tell all your friends about how much you like Angband...
+这些更改的大部分已经完成，包括诸如
+清理一些内部代码问题、再次优化代码、
 
-Happy adventuring!
+扩展一些现有命令（如瞄准和查看，现在可以处理方向移动）的功能、调整程序的
+各个方面，
+最引人注目的是引入了各种怪物的新符号和颜色，并使用了更规范的 RGB 
+值集作为各种颜色代码等。再说一次，
+请参阅网页获取完整列表。
+
+Angband 2.8.0 
+将引入一种独立于版本的存档文件格式，以及一个全新的地形特征概念，以及允许
+
+在同一个洞穴网格中存在多个物品的能力。它可能会也可能不会将
+
+“Unique（唯一）”怪物与“普通”怪物分开，也许会引入一些新的“普通”怪物，比如
+“骷髅领主”或“巨型野猪”或“法师大师”。
+
+你可以将赞美、抱怨、错误报告和礼物
+通过电子邮件发给我 ("benh@voicenet.com")，你还可以将有趣的经历、
+一般问题、编译问题和代码建议发布到
+新闻组 ("rec.games.roguelike.angband")。
+
+你可以从各个地方获取最新的源代码和预编译的可执行文件，
+试试 "ftp://ftp.cis.ksu.edu/pub/Games/Angband/Angband-2.7.x"
+和开发者站点 "ftp://export.andrew.cmu.edu/angband"。你
+将需要进入相应的子目录，如 "Source" 或 "Macintosh"。
+
+你应该访问 "http://www.voicenet.com/~benh/Angband/"（Angband 
+官方主页）和 "http://www.paranoia.com/~jth/angband.html"
+（Angband 非官方主页），获取更多最新信息。
+
+你可以自由分发游戏及其源码，虽然你受限于 1984 
+年的现有版权声明，而且受限于在代码的其他各个部分上可能存在的任何其他限制
+，
+
+这包括这样一个事实：任何由我编写的源码在技术上自动受到版权保护，不得用于
+商业用途。
+
+
+随游戏提供的基础帮助文件或多或少是最新的，但在有疑问时，源代码（或新闻组
+）是寻求建议的最佳去处。或者通过尝试来自己弄清楚，这
+往往是最有趣的。特别地，参阅 "commands.txt" 了解
+可用命令的信息，其中一些最近被添加或更改了；参阅 "options.txt" 
+了解如何定制游戏的几个方面
+以适应你的偏好。
+
+文档非常容易修改和更新，因此你可能想
+偶尔检查一下 FTP 
+站点，看看是否有任何新的帮助文件（或剧透文件）供你获取。请注意，剧透文件
+不会随源代码一起分发，因为它们太大了，但
+
+你可以像获取源代码和可执行文件一样从各个地方获得它们。新的剧透文件可以放
+在 "lib/help" 或 "lib/info" 目录中，以允许通过“在线帮助”系统访问。
+
+记得告诉所有的朋友你有多喜欢 Angband……
+
+冒险愉快！
 
 +++ Ben +++
 
 
-=== A Posting from the Original Author ===
+=== 原作者的一篇帖子 (A Posting from the Original Author) ===
 
-From: koeneke@ionet.net (Robert Alan Koeneke)
-Newsgroups: rec.games.roguelike.angband,rec.games.roguelike.moria
-Subject: Early history of Moria
-Date: Wed, 21 Feb 1996 04:20:51 GMT
+发件人: koeneke@ionet.net (Robert Alan Koeneke)
+新闻组: rec.games.roguelike.angband,rec.games.roguelike.moria
+主题: Moria 的早期历史 (Early history of Moria)
+日期: 1996年2月21日 星期三 04:20:51 GMT
 
-I had some email show up asking about the origin of Moria, and its
-relation to Rogue.  So I thought I would just post some text on the
-early days of Moria.
+我收到一些邮件询问 Moria 的起源，以及它
+与 Rogue 的关系。所以我想我就干脆发一些关于 Moria 早期日子的文章吧。
 
-First of all, yes, I really am the Robert Koeneke who wrote the first
-Moria.  I had a lot of mail accusing me of pulling their leg and
-such.  I just recently connected to Internet (yes, I work for a
-company in the dark ages where Internet is concerned) and 
-was real surprised to find Moria in the news groups...  Angband was an
-even bigger surprise, since I have never seen it.  I probably spoke to
-its originator though...  I have given permission to lots of people
-through the years to enhance, modify, or whatever as long as they
-freely distributed the results.  I have always been a proponent of
-sharing games, not selling them.
+首先，是的，我真的是写了初代 Moria 的那个 Robert 
+Koeneke。我收到过许多信件指责我是在忽悠他们诸如此类。我最近才连上互联网
+（是的，我在互联网方面犹如处于中世纪的
+一家公司工作），并
+非常惊讶地在新闻组中发现了 Moria……Angband 甚至是一个
+更大的惊喜，因为我以前从未见过它。不过我可能曾经和
 
-Anyway...
+它的创始人谈过……这些年来，我一直允许许多人去增强、修改、或者随便做什么，
+只要他们
+免费分发成果。我一直是一个主张共享游戏而非出售游戏的支持者。
 
-Around 1980 or 81 I was enrolled in engineering courses at the
-University of Oklahoma.  The engineering lab ran on a PDP 1170 under
-an early version of UNIX.  I was always good at computers, so it was
-natural for me to get to know the system administrators.  They invited
-me one night to stay and play some games, an early startrek game, The
-Colossal Cave Adventure (later just 'Adventure'), and late one night,
-a new dungeon game called 'Rogue'.
+总之……
 
-So yes, I was exposed to Rogue before Moria was even a gleam in my
-eye.  In fact, Rogue was directly responsible for millions of hours of
-play time wasted on Moria and its descendents...
+在 1980 或 81 年左右，我在俄克拉荷马大学 (University of Oklahoma) 
+参加工程课程。工程实验室使用运行着早期版本 UNIX 的 PDP 
+1170。我一直很擅长电脑，所以结识系统管理员对我来说
 
-Soon after playing Rogue (and man, was I HOOKED), I got a job in a
-different department as a student assistant in computers.  I worked on
-one of the early VAX 11/780's running VMS, and no games were available
-for it at that time.  The engineering lab got a real geek of an
-administrator who thought the only purpose of a computer was WORK!
-Imagine...  Soooo, no more games, and no more rogue!
+是很自然的事。有天晚上他们邀请我留下来玩几款游戏，有一款早期的星际迷航游
+戏，《巨洞冒险》(The
+Colossal Cave Adventure，后来简称为 'Adventure')，以及在深夜，
+一款名为 'Rogue' 的新地下城游戏。
 
-This was intolerable!  So I decided to write my own rogue game, Moria
-Beta 1.0.  I had three languages available on my VMS system.  Fortran
-IV, PASCAL V1.?, and BASIC.  Since most of the game was string
-manipulation, I wrote the first attempt at Moria in VMS BASIC, and it
-looked a LOT like Rogue, at least what I could remember of it.  Then I
-began getting ideas of how to improve it, how it should work
-differently, and I pretty much didn't touch it for about a year.
+所以是的，在 Moria 连个想法都不是的时候，我就接触到了 
+Rogue。事实上，数百万个小时浪费在 Moria 及其衍生版本上的游玩时间，Rogue 
+要负直接责任……
 
-Around 1983, two things happened that caused Moria to be born in its
-recognizable form.  I was engaged to be married, and the only cure for
-THAT is to work so hard you can't think about it; and I was enrolled
-for fall to take an operating systems class in PASCAL.
+在玩了 Rogue 
+之后不久（天哪，我是真的上头了），我在另一个部门找到了一份计算机学生助理
+的工作。我在一台运行 VMS 系统的早期 VAX 11/780 上工作，
 
-So, I investigated the new version of VMS PASCAL and found out it had
-a new feature.  Variable length strings!  Wow...
+那时上面根本没游戏可玩。工程实验室招来了一个极其书呆子的管理员，他认为电
+脑的唯一用途就是工作！想象一下……所以，再也没有游戏了，再也没有 Rogue 
+了！
 
-That summer I finished Moria 1.0 in VMS PASCAL.  I learned more about
-data structures, optimization, and just plain programming that summer
-then in all of my years in school.  I soon drew a crowd of devoted
-Moria players...  All at OU.
+这简直无法忍受！所以我决定自己写一个 Rogue 游戏，那就是 Moria
+Beta 1.0。在我的 VMS 系统上有三种语言可用。Fortran
+IV、PASCAL V1.? 和 BASIC。由于游戏的大部分都是字符串
+操作，所以我是用 VMS BASIC 编写了第一次尝试的 Moria，而且它
+看起来非常像 Rogue，至少是我记忆中的 Rogue。然后我
 
-I asked Jimmey Todd, a good friend of mine, to write a better
-character generator for the game, and so the skills and history were
-born.  Jimmey helped out on many of the functions in the game as well.
-This would have been about Moria 2.0
+开始有了一些如何改进它、它应该如何以不同方式运作的想法，然后我大概有一年
+没碰它。
 
-In the following two years, I listened a lot to my players and kept
-making enhancements to the game to fix problems, to challenge them,
-and to keep them going.  If anyone managed to win, I immediately found
-out how, and 'enhanced' the game to make it harder.  I once vowed it
-was 'unbeatable', and a week later a friend of mine beat it!  His
-character, 'Iggy', was placed into the game as 'The Evil Iggy', and
-immortalized...  And of course, I went in and plugged up the trick he
-used to win...
+1983 年前后，发生了两件事促成了 Moria 
+以它今天为人熟知的形式诞生。我订婚了，而治疗这个的
+唯一办法就是拼命工作不去想它；此外我注册了秋季学期
+一门使用 PASCAL 的操作系统课程。
 
-Around 1985 I started sending out source to other universities.  Just
-before a OU / Texas football clash, I was asked to send a copy to the
-University of Texas...  I couldn't resist...  I modified it so that
-the begger on the town level was 'An OU football fan' and they moved
-at maximum rate.  They also multiplied at maximum rate...  So the
-first step you took and woke one up, it crossed the floor increasing
-to hundreds of them and pounded you into oblivion...  I soon received
-a call and provided instructions on how to 'de-enhance' the game!
+所以，我研究了新版本的 VMS PASCAL，发现它有
+一个新功能。变长字符串！哇……
 
-Around 1986 - 87 I released Moria 4.7, my last official release.  I
-was working on a Moria 5.0 when I left OU to go to work for American
-Airlines (and yes, I still work there).  Moria 5.0 was a complete
-rewrite, and contained many neat enhancements, features, you name it.
-It had water, streams, lakes, pools, with water monsters.  It had
-'mysterious orbs' which could be carried like torches for light but
-also gave off magical aura's (like protection from fire, or aggravate
-monster...).  It had new weapons and treasures...  I left it with the
-student assistants at OU to be finished, but I guess it soon died on
-the vine.  As far as I know, that source was lost...
+那个夏天，我用 VMS PASCAL 完成了 Moria 
+1.0。那年夏天我在数据结构、优化和纯粹的编程方面学到的东西，比在学校这么
+多年学到的还要多。我很快就吸引了一群忠诚的
+Moria 玩家……全都在俄克拉荷马大学。
 
-I gave permission to anyone who asked to work on the game.  Several
-people asked if they could convert it to 'C', and I said fine as long
-as a complete credit history was maintained, and that it could NEVER
-be sold, only given.  So I guess one or more of them succeeded in
-their efforts to rewrite it in 'C'.
+我请我的好朋友 Jimmey Todd 
+帮游戏写一个更好的人物生成器，于是技能和背景历史就诞生了。Jimmey 
+在游戏的许多功能上也帮了忙。这大概是 Moria 2.0 的时候。
 
-I have since received thousands of letters from all over the world
-from players telling about their exploits, and from administrators
-cursing the day I was born...  I received mail from behind the iron
-curtain (while it was still standing) talking about the game on VAX's
-(which supposedly couldn't be there due to export laws).  I used to
-have a map with pins for every letter I received, but I gave up on
-that!
 
-I am very happy to learn my creation keeps on going...  I plan to
-download it and Angband and play them...  Maybe something has been
-added that will surprise me!  That would be nice...  I never got to
-play Moria and be surprised...
+在接下来的两年里，我倾听了很多玩家的意见，不断对游戏进行改进以解决问题，
+为他们提供挑战，
+
+让他们保持游玩的动力。如果有人设法通关了，我会立刻找出是怎么回事，然后“
+增强”游戏让它变难。我曾经信誓旦旦地说这是“不可战胜”的，结果一周后我一个
+朋友就通关了！他的角色 '伊吉 (Iggy)' 作为 '邪恶的伊吉 (The Evil Iggy)' 
+被放进了游戏中，名垂千古……当然，我顺手修复了他用来通关的把戏……
+
+大约在 1985 
+年，我开始将源代码发送给其他大学。就在一场俄大与德州的橄榄球赛前夕，有人
+让我发一份副本给德克萨斯大学……我没忍住……我修改了代码，把城镇层的乞丐变成
+了“俄大橄榄球粉丝”，而且他们以最快速度移动。他们也以最快速度繁殖……所以你
+刚走第一步吵醒了一个，它就会在穿过房间时增加到数百个，把你锤成肉泥……我很
+快就接到电话，并提供了如何“去增强”游戏的指示！
+
+1986 到 87 年左右，我发布了 Moria 
+4.7，这是我最后一次正式发布。当我离开俄大去美国航空工作（是的，我现在还
+在那工作）时，我正在开发 Moria 5.0。Moria 5.0 
+是完全的重写，包含许多巧妙的增强功能。它有水、溪流、湖泊、水池，以及水生
+怪物。它有“神秘法球”，可以像火把一样携带用于照明，但也散发着魔法灵气（比
+如火焰抗性，或者激怒怪物……）。它有新的武器和宝藏……我把它留给俄大的学生助
+理去完成，但我猜它很快就胎死腹中了。据我所知，那份源码丢失了……
+
+
+我给予了任何提出请求的人去继续开发这款游戏的权限。有几个人问他们是否可以
+将其转换为 'C' 
+语言，我说可以，只要保留完整的鸣谢历史，而且绝对不能出售，只能免费赠与。
+所以我想他们中的一个或多个人成功地用 'C' 重写了它。
+
+
+从那以后，我收到了来自世界各地玩家的成千上万封信，讲述着他们的冒险故事，
+也收到了管理员们对我出生那一天的咒骂……我收到过来自铁幕后（当时还在）的邮
+件，讨论着 VAX 
+上的游戏（根据出口法律这本不应该出现在那里）。我曾经有一张地图，上面用大
+头针标记了我收到每一封信的地点，但我后来放弃了！
+
+我非常高兴地得知我的造物还在继续前行……我打算下载它和 Angband 
+然后玩一玩……也许加入了什么会让我惊讶的东西！那会很棒……我从未在玩 Moria 
+的时候能够感到惊讶过……
 
 Robert Alan Koeneke
 koeneke@ionet.net
 
 
-=== Previous Versions (outdated) ===
+=== 过往版本 (已过时) ===
 
 
-                          VMS Moria Version 4.8
-Version 0.1  : 03/25/83
-Version 1.0  : 05/01/84
-Version 2.0  : 07/10/84
-Version 3.0  : 11/20/84
-Version 4.0  : 01/20/85
+                          VMS Moria 版本 4.8
+版本 0.1  : 03/25/83
+版本 1.0  : 05/01/84
+版本 2.0  : 07/10/84
+版本 3.0  : 11/20/84
+版本 4.0  : 01/20/85
 
-Modules :
-     V1.0  Dungeon Generator      - RAK
-           Character Generator    - RAK & JWT
-           Moria Module           - RAK
-           Miscellaneous          - RAK & JWT
-     V2.0  Town Level & Misc      - RAK
-     V3.0  Internal Help & Misc   - RAK
-     V4.0  Source Release Version - RAK
+模块 :
+     V1.0  地下城生成器      - RAK
+           人物生成器        - RAK & JWT
+           Moria 模块       - RAK
+           杂项             - RAK & JWT
+     V2.0  城镇楼层与杂项    - RAK
+     V3.0  内部帮助与杂项    - RAK
+     V4.0  源代码发布版本    - RAK
 
 Robert Alan Koeneke               Jimmey Wayne Todd Jr.
-Student/University of Oklahoma    Student/University of Oklahoma
+学生/俄克拉荷马大学                学生/俄克拉荷马大学
 
 
 
 
 
-                        Umoria Version 5.2 (formerly UNIX Moria)
-Version 4.83 :  5/14/87
-Version 4.85 : 10/26/87
-Version 4.87 :  5/27/88
-Version 5.0  :  11/2/89
-Version 5.2  :   5/9/90
+                        Umoria 版本 5.2 (前身为 UNIX Moria)
+版本 4.83 :  5/14/87
+版本 4.85 : 10/26/87
+版本 4.87 :  5/27/88
+版本 5.0  :  11/2/89
+版本 5.2  :   5/9/90
 
-James E. Wilson, U.C. Berkeley
+James E. Wilson, 加州大学伯克利分校
                  wilson@ernie.Berkeley.EDU
                  ...!ucbvax!ucbernie!wilson
 
-Other contributors:
-D. G. Kneller         - MSDOS Moria port
-Christopher J. Stuart - recall, options, inventory, and running code
-Curtis McCauley       - Macintosh Moria port
-Stephen A. Jacobs     - Atari ST Moria port
-William Setzer        - object naming code
-David J. Grabiner     - numerous bug reports, and consistency checking
-Dan Bernstein         - UNIX hangup signal fix, many bug fixes
-and many others...
+其他贡献者:
+D. G. Kneller         - MSDOS Moria 移植版
+Christopher J. Stuart - 回忆、选项、物品栏和跑步代码
+Curtis McCauley       - Macintosh Moria 移植版
+Stephen A. Jacobs     - Atari ST Moria 移植版
+William Setzer        - 物品命名代码
+David J. Grabiner     - 许多 Bug 报告和一致性检查
+Dan Bernstein         - UNIX 挂起信号修复、许多 Bug 修复
+以及其他许多人...
 
 
 
 
-Copyright (c) 1989 James E. Wilson, Robert A. Keoneke
-  This software may be copied and distributed for educational,
-  research, and not for profit purposes provided that this copyright
-  and statement are included in all such copies.
+版权所有 (c) 1989 James E. Wilson, Robert A. Keoneke
+  该软件可为教育、研究以及非营利目的复制和分发，
+  前提是所有的副本都包含此版权声明。
 
-Umoria Version 5.2, patch level 1
+Umoria 版本 5.2，补丁级别 1
 
-Angband Version 2.0  Alex Cutler, Andy Astrand, Sean Marsh, Geoff Hill, 
+Angband 版本 2.0  Alex Cutler, Andy Astrand, Sean Marsh, Geoff Hill, 
                      Charles Teague.
 
-Angband Version 2.4   :  5/09/93
+Angband 版本 2.4   :  5/09/93
 
-Angband Version 2.5   : 12/05/93 Charles Swiger.
+Angband 版本 2.5   : 12/05/93 Charles Swiger.
 
-Angband Version 2.6   :  9/04/94
+Angband 版本 2.6   :  9/04/94
 
-Angband Version 2.7   :  1/1/95  Ben Harrison
+Angband 版本 2.7   :  1/1/95  Ben Harrison
 
 --
-Original   : (??)
-Updated    : (??)
-Updated    : Zangband DevTeam
-Updated    : Hengband 1.5.3
-
+原始版本   : (??)
+更新者     : (??)
+更新者     : Zangband DevTeam
+更新者     : Hengband 1.5.3

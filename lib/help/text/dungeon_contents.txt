@@ -1,20 +1,19 @@
-The Dungeons
+地下城 (The Dungeons)
 
-Please choose one of the following sections in the help file:
+请选择帮助文件中的以下章节之一：
 
-    [a] The Dungeons
-    [b] Symbols on Your Map
-    [c] Within the Dungeon
-    [d] Objects in the Dungeon
-    [e] Mining
-    [f] Staircases
-    [g] Secret Doors
-    [h] Floor Traps
-    [i] Level Feelings
-    [j] Random Quests
-    [k] Fixed Quests
-    [l] Conquering Dungeons
-    [m] List of Dungeons
+    [a] 地下城 (The Dungeons)
+    [b] 地图上的符号 (Symbols on Your Map)
+    [c] 地下城内部 (Within the Dungeon)
+    [d] 地下城中的物品 (Objects in the Dungeon)
+    [e] 挖掘与采矿 (Mining)
+    [f] 楼梯 (Staircases)
+    [g] 密门 (Secret Doors)
+    [h] 地板陷阱 (Floor Traps)
+    [i] 关卡预感 (Level Feelings)
+    [j] 随机任务 (Random Quests)
+    [k] 固定任务 (Fixed Quests)
+    [l] 征服地下城 (Conquering Dungeons)
+    [m] 地下城列表 (List of Dungeons)
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

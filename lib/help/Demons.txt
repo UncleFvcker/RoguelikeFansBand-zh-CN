@@ -1,96 +1,96 @@
-<style:title>恶魔 (Demons)</style>
+<style:title>恶魔</style>
 
-恶魔是邪恶的强大仆从，拥有许多种形态。它们依靠自身邪恶的力量或野蛮的肉体力量来生存。
+Demons are powerful servants of evil and come in many forms. They rely on their devilish powers or their brutish strength to survive.
  
-各种恶魔种族包括：炎魔（强大的火焰恶魔）；恐虐仆从（强大的毁灭战士）；塔纳里（较弱的恶魔，其终极形态拥有三对手臂，但更喜欢裸身战斗）；以及赛博恶魔（其火力无人能及）。
+The various demonic races include the Balrogs, powerful demons of fire; the Servants of Khorne, mighty warriors of destruction; the Tanar'ri, weaker demons whose ultimate form has three sets of arms, but prefers to fight naked; and Cyberdemons, whose firepower is unsurpassable.
  
-恶魔不能吃普通食物，但必须以它们人类敌人的尸骸为食。它们不受不可名状的恐怖 (Eldritch Horror) 的影响。
+Demons cannot eat normal food, but must feast upon the remains of their human enemies. They are unaffected by the Eldritch Horror.
 
-<topic:Balrog><color:o>炎魔 (Balrog)</color>
-炎魔是暗影与火焰的恶魔。它们的邪恶无边无际。它们的法术是所有恶魔中最强大的，在极高等级时，它们甚至可以直接从地狱召唤出烈火。
+<topic:炎魔><color:o>炎魔</color>
+Balrogs are demons of shadow and flame. Their evil knows no bounds. Their spells are the most powerful of all demonkind, and at very high levels they may even call forth fires directly from hell.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>
-智力         <color:v> +1</color>        魔法装置    <color:y>极好(V.Good) </color>
-感知         <color:w>-10</color>        豁免        <color:g>卓越(Superb) </color>
-敏捷         <color:w> +1</color>        潜行        <color:D>极烂(V.Bad)  </color>
-体质         <color:w> +4</color>        搜索        <color:r>极差(Bad)    </color>
-魅力         <color:w> +2</color>        察觉        <color:r>极差(Bad)    </color>
-生命加成     105%       近战        <color:b>英雄(Heroic) </color>
-基础HP        45        箭术        <color:r>极差(Bad)    </color>
-经验修正     300%       红外视力    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:v> +1</color>        Device      <color:y>极好       </color>
+Wisdom       <color:w>-10</color>        Save        <color:g>卓越       </color>
+Dexterity    <color:w> +1</color>        Stealth     <color:D>极差       </color>
+Constitution <color:w> +4</color>        Searching   <color:r>糟糕       </color>
+Charisma     <color:w> +2</color>        Perception  <color:r>糟糕       </color>
+Life Rating  105%       Melee       <color:b>英雄       </color>
+Base HP       45        Archery     <color:r>糟糕       </color>
+Experience   300%       Infravision 50'
 </style></indent>
-<topic:Tanar'ri><color:o>塔纳里 (Tanar'ri)</color>
-塔纳里最初是奴隶恶魔，但奋起推翻了它们的主人。它们通常呈现类人形态，是充满恶意与残忍的经典恶魔。这种恶魔的终极形态是六臂蛇魔 (Marilith)——一种拥有三对手臂和蛇形躯体的女性恶魔，能够同时使用六把近战武器进行攻击！
+<topic:塔纳厘><color:o>塔纳厘</color>
+Tanar'ri were originally slave demons, but rose up to overthrow their masters. They generally take on a humanoid form and are classic demons full of malice and cruelty. The ultimate form for this demon is the Marilith, a female demon with three sets of arms and a serpent body capable of attacking with six melee weapons!
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> +0</color>        解除陷阱    <color:o>一般(Fair)   </color>
-智力         <color:v> +1</color>        魔法装置    <color:y>极好(V.Good) </color>
-感知         <color:w> -5</color>        豁免        <color:o>一般(Fair)   </color>
-敏捷         <color:w> +3</color>        潜行        <color:o>一般(Fair)   </color>
-体质         <color:w> +1</color>        搜索        <color:R>较差(Poor)   </color>
-魅力         <color:w> +1</color>        察觉        <color:r>极差(Bad)    </color>
-生命加成      95%       近战        <color:y>极好(V.Good) </color>
-基础HP        30        箭术        <color:R>较差(Poor)   </color>
-经验修正     200%       红外视力    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +0</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:v> +1</color>        Device      <color:y>极好       </color>
+Wisdom       <color:w> -5</color>        Save        <color:o>一般       </color>
+Dexterity    <color:w> +3</color>        Stealth     <color:o>一般       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +1</color>        Perception  <color:r>糟糕       </color>
+Life Rating   95%       Melee       <color:y>极好       </color>
+Base HP       30        Archery     <color:R>贫弱       </color>
+Experience   200%       Infravision 50'
 </style></indent>
-<topic:Servant of Khorne><color:o>恐虐仆从 (Servant of Khorne)</color>
-恐虐的仆从有许多种形态，是强大的近战力量。除了近战它们什么都不懂，并会打击所有敢于违抗它们主人意志的敌人。随着经验的增长，恐虐会赐予它的仆从全新且更强大的形态作为奖励。
+<topic:恐虐仆从><color:o>恐虐仆从</color>
+Khorne's servants come in many forms and are powerful forces of melee. They know nothing save melee, and strike at all that dare oppose the will of their master. As they gain experience, Khorne rewards his servants with new and more powerful forms.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> +5</color>        解除陷阱    <color:o>一般(Fair)   </color>
-智力         <color:w> -5</color>        魔法装置    <color:r>极差(Bad)    </color>
-感知         <color:w> -5</color>        豁免        <color:y>良好(Good)   </color>
-敏捷         <color:w> +0</color>        潜行        <color:D>极烂(V.Bad)  </color>
-体质         <color:w> +4</color>        搜索        <color:R>较差(Poor)   </color>
-魅力         <color:w> +0</color>        察觉        <color:r>极差(Bad)    </color>
-生命加成     110%       近战        <color:b>英雄(Heroic) </color>
-基础HP        42        箭术        <color:r>极差(Bad)    </color>
-经验修正     250%       红外视力    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +5</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> -5</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -5</color>        Save        <color:y>良好       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:D>极差       </color>
+Constitution <color:w> +4</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  110%       Melee       <color:b>英雄       </color>
+Base HP       42        Archery     <color:r>糟糕       </color>
+Experience   250%       Infravision 50'
 </style></indent>
-<topic:Cyberdemon><color:o>赛博恶魔 (Cyberdemon)</color>
-赛博恶魔是巨大的类人形态，半恶魔半机械。它们稍微有些迟钝且移动不规律，但它们庞大的身躯和无人能及的火力足以弥补这一点。地下城的墙壁都在它们沉重的脚步声中回荡！
+<topic:赛博恶魔><color:o>赛博恶魔</color>
+Cyberdemons are giant humanoid forms, half demon and half machine. They are a bit slow and move erratically, but their immense bodies and unsurpassable firepower more than make up for this. The walls of the dungeon reverberate with their heavy steps!
 
-赛博恶魔是极少数不经历进化（变身）的怪物种族之一，因此它们几乎所有的力量从一开始就可以使用，尽管它们在后期会获得更强的力量，且其攻击性会随着经验的增长而变得更强。
+Cyberdemons are one of the very few monster races not to undergo evolution, and so almost all their might is available from the beginning, although they do gain even more strength later on and their offense becomes stronger with experience.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> +8</color>        解除陷阱    <color:o>一般(Fair)   </color>
-智力         <color:w>-10</color>        魔法装置    <color:D>极烂(V.Bad)  </color>
-感知         <color:w>-10</color>        豁免        <color:R>较差(Poor)   </color>
-敏捷         <color:w> -3</color>        潜行        <color:D>极烂(V.Bad)  </color>
-体质         <color:w> +8</color>        搜索        <color:R>较差(Poor)   </color>
-魅力         <color:w> +0</color>        察觉        <color:r>极差(Bad)    </color>
-生命加成     120%       近战        <color:b>英雄(Heroic) </color>
-基础HP        50        箭术        <color:r>极差(Bad)    </color>
-经验修正     275%       红外视力    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +8</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w>-10</color>        Device      <color:D>极差       </color>
+Wisdom       <color:w>-10</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> -3</color>        Stealth     <color:D>极差       </color>
+Constitution <color:w> +8</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  120%       Melee       <color:b>英雄       </color>
+Base HP       50        Archery     <color:r>糟糕       </color>
+Experience   275%       Infravision 50'
 </style></indent>
 <topic:Tables><style:heading>表 1 - 恶魔属性加成表</style>
 <style:table>
-<color:G>                 </color> <color:G>力量 智力 感知 敏捷 体质 魅力 生命  BHP  经验  商店</color>
-炎魔               +4   +1  -10   +1   +4   +2  105%  +45  300%  140%
-塔纳里             +0   +1   -5   +3   +1   +1   95%  +30  200%  140%
-恐虐仆从           +5   -5   -5   +0   +4   +0  110%  +42  250%  140%
-赛博恶魔           +8  -10  -10   -3   +8   +0  120%  +50  275%  140%
+<color:G>                 </color> <color:G>STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp  Shop</color>
+炎魔             +4   +1  -10   +1   +4   +2  105%  +45  300%  140%
+塔纳厘          +0   +1   -5   +3   +1   +1   95%  +30  200%  140%
+恐虐仆从       +5   -5   -5   +0   +4   +0  110%  +42  250%  140%
+赛博恶魔       +8  -10  -10   -3   +8   +0  120%  +50  275%  140%
 
 </style>
 <topic:Skills1><style:heading>表 2 - 恶魔技能加成表 I</style>
 <style:table>
-                  <color:w>解除陷阱      魔法装置      豁免          潜行         </color>
-炎魔              <color:o>一般(Fair)   </color> <color:y>极好(V.Good) </color> <color:g>卓越(Superb) </color> <color:D>极烂(V.Bad)  </color>
-塔纳里            <color:o>一般(Fair)   </color> <color:y>极好(V.Good) </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color>
-恐虐仆从          <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:y>良好(Good)   </color> <color:D>极烂(V.Bad)  </color>
-赛博恶魔          <color:o>一般(Fair)   </color> <color:D>极烂(V.Bad)  </color> <color:R>较差(Poor)   </color> <color:D>极烂(V.Bad)  </color>
+                  <color:w>解除陷阱  使用装置  豁免        潜行       </color>
+炎魔            <color:o>一般       </color> <color:y>极好       </color> <color:g>卓越       </color> <color:D>极差       </color>
+塔纳厘         <color:o>一般       </color> <color:y>极好       </color> <color:o>一般       </color> <color:o>一般       </color>
+恐虐仆从      <color:o>一般       </color> <color:r>糟糕       </color> <color:y>良好       </color> <color:D>极差       </color>
+赛博恶魔      <color:o>一般       </color> <color:D>极差       </color> <color:R>贫弱       </color> <color:D>极差       </color>
 
 </style>
 <topic:Skills2><style:heading>表 3 - 恶魔技能加成表 II</style>
 <style:table>
-                  <color:w>搜索          察觉          近战          箭术          夜视 </color>
-炎魔              <color:r>极差(Bad)    </color> <color:r>极差(Bad)    </color> <color:b>英雄(Heroic) </color> <color:r>极差(Bad)    </color>   50'
-塔纳里            <color:R>较差(Poor)   </color> <color:r>极差(Bad)    </color> <color:y>极好(V.Good) </color> <color:R>较差(Poor)   </color>   50'
-恐虐仆从          <color:R>较差(Poor)   </color> <color:r>极差(Bad)    </color> <color:b>英雄(Heroic) </color> <color:r>极差(Bad)    </color>   50'
-赛博恶魔          <color:R>较差(Poor)   </color> <color:r>极差(Bad)    </color> <color:b>英雄(Heroic) </color> <color:r>极差(Bad)    </color>   50'
+                  <color:w>搜索        察觉        近战        箭术        红外</color>
+炎魔            <color:r>糟糕       </color> <color:r>糟糕       </color> <color:b>英雄       </color> <color:r>糟糕       </color>   50'
+塔纳厘         <color:R>贫弱       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:R>贫弱       </color>   50'
+恐虐仆从      <color:R>贫弱       </color> <color:r>糟糕       </color> <color:b>英雄       </color> <color:r>糟糕       </color>   50'
+赛博恶魔      <color:R>贫弱       </color> <color:r>糟糕       </color> <color:b>英雄       </color> <color:r>糟糕       </color>   50'
 
 </style>
 
 
-<color:s>自动生成，适用于 FrogComposband 7.2.salmiak。</color>
+<color:s>自动生成于 FrogComposband 7.4。</color>

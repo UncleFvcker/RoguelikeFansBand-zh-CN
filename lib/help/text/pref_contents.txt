@@ -1,16 +1,15 @@
-User Preference Files
+用户首选项文件 (User Preference Files)
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    [a] User Preferences
-    [b] Preference Files
-    [c] Preference Commands
-    [d] An Example
-    [e] Interacting with Visuals
-    [f] Interacting with Colors
-    [g] Interacting with Options
-    [h] Interacting with Macros
-    [i] Some Macro Examples
+    [a] 用户首选项
+    [b] 首选项文件
+    [c] 首选项命令
+    [d] 示例
+    [e] 与视觉效果交互
+    [f] 与颜色交互
+    [g] 与选项交互
+    [h] 与宏交互
+    [i] 一些宏示例
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

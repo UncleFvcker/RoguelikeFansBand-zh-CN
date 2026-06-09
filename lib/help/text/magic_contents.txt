@@ -1,18 +1,17 @@
-Spellcasting
+施法
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    [a] The Magic System
-    [b] Spellcaster Types
-    [c] Spellbook Magic
-    [d] Spell Proficiency
-    [e] What a Spellbook Looks Like
-    [f] Which Spells Should I Study?
-    [g] General Magic Realms
-    [h] Class-Specific Magic Realms
-    [i] On Casting Spells
-    [j] Spell Types
-    [k] Using Macros to Cast Spells
+    [a] 魔法系统
+    [b] 施法者类型
+    [c] 法术书魔法
+    [d] 法术熟练度
+    [e] 法术书界面说明
+    [f] 我应该学习哪些法术？
+    [g] 通用魔法领域
+    [h] 职业专属魔法领域
+    [i] 关于施法
+    [j] 法术类型
+    [k] 使用宏来施法
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

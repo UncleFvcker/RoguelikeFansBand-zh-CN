@@ -1,20 +1,18 @@
-The Speed System
+速度系统 (The Speed System)
 
-Please choose one of the following help topics:
+请选择以下帮助主题之一：
 
-    [a] The Speed System
-    [b] Quick Overview for Newbies
-    [c] Technical Explanation
-    [d] Speed/Energy Conversion Table
-    [e] Energy Randomness
-    [f] Energy Cost of Actions
-    [g] Temporary Haste and Slowness
-    [h] Monster Speed
-    [i] Where Do I Get More Speed?
-    [j] Overburdening
-    [k] Speed Display
-    [l] Duration of Timed Effects
+    [a] 速度系统 (The Speed System)
+    [b] 新手快速概述 (Quick Overview for Newbies)
+    [c] 技术性解释 (Technical Explanation)
+    [d] 速度/能量转换表 (Speed/Energy Conversion Table)
+    [e] 能量的随机性 (Energy Randomness)
+    [f] 行动的能量成本 (Energy Cost of Actions)
+    [g] 临时加速与减速 (Temporary Haste and Slowness)
+    [h] 怪物速度 (Monster Speed)
+    [i] 我从哪里获取更多速度？ (Where Do I Get More Speed?)
+    [j] 负重超载 (Overburdening)
+    [k] 速度显示 (Speed Display)
+    [l] 计时效果的持续时间 (Duration of Timed Effects)
 
-    (?) Help System Commands
-
-
+    (?) 帮助系统命令 (Help System Commands)

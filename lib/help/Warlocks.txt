@@ -1,145 +1,145 @@
-<style:title>邪术师 (Warlocks)</style>
+<style:title>邪术师</style>
 
-邪术师是一个魔法职业；他们的法术和力量并非来源于书本，而是通过与特定种类的怪物签订超自然契约（eldritch pact）获得的。这种契约是不可撤销的，并在邪术师生涯开始时就已签订。根据他们结盟的怪物种类，邪术师将获得独特的加成、能力和魔法力量；例如，与幽冥世界（netherworld）的力量结盟可以赋予毒素和幽冥抗性、强化的体质，以及控制和召唤不死生物的法术，同时还能获得直接引导幽冥世界破坏力的法术。每种这样的结盟都有其主题加成和力量，你可以在各自的帮助章节中阅读详细信息。
+邪术师是一个魔法职业；他们的法术和力量并非源自书本，而是源自与特定怪物类别签订的邪术契约(eldritch pact)。这份契约是不可撤销的，在邪术师生涯的最初就会缔结。根据他们结盟的怪物类别，邪术师将获得独特的加成、能力和魔法力量；例如，与幽冥世界的力量结盟可以获得对毒素和幽冥的抗性，增强的体质，控制和召唤不死生物的法术，以及直接使用幽冥世界破坏力的法术。每种结盟都有主题性的加成和力量，你可以在相应的帮助章节中阅读详情。
 
-与特定种类的怪物结盟会大幅降低邪术师对抗这些敌人的能力。相反，邪术师寻求与他们的同族合作，或者尝试支配它们；直接的武力攻击通常很难成功。
+与特定的怪物类别结盟会大幅降低邪术师与这些敌人战斗的能力。作为替代，邪术师寻求与他们的同类合作，或者可能支配它们；直接攻击很少成功。
  
-除了与契约相关的法术外，所有邪术师都能使用“魔能爆（Eldritch Blast）”的独特力量。他们的主要施法属性是魅力，因为他们试图支配并与所选的同族结盟，而这些怪物往往拥有极强的自我意志。
+除了与契约相关的法术，所有邪术师都能获得“魔能爆”这一独特力量。他们的主要施法属性是魅力，因为他们寻求统治并与选定的眷族结盟，而这些怪物通常都有很强的自我意志。
 
-<topic:Undead><color:o>不死生物 (Undead)</color>
-不死生物是坚韧的怪物，它们每一个都至少经历过一次死亡并存活了下来。与不死生物签订契约的邪术师会发现自己获得了额外的抗性，例如寒冷、毒素、黑暗和幽冥。此外，他们将能够识破隐形怪物，并获得对吸取生命力量的抗性。他们还将获得不死系的能力，通常涉及对幽冥世界力量的探测和控制。最终，这份契约将允许其修行者用一个词语就摧毁怪物，甚至可能在一定程度上彻底脱离活人的世界。当然，与不死生物结盟会大幅降低邪术师对抗这些怪物的能力。
+<topic:死灵><color:o>死灵</color>
+The undead are tough creatures, each having already survived death at least once. Warlocks who make a pact with Undead will find themselves gaining additional resistances such as cold, poison, darkness and nether. In addition, they will be able to see invisible monsters and gain resistance to life-draining forces. They will also gain access to undeadly powers, which typically involve detection and control over the forces of the netherworld. Eventually, this pact will allow its practitioners to destroy monsters with a single word, and, perhaps, to even partially leave the world of the living altogether. Of course, allying with the undead substantially reduces the warlock's ability to fight these creatures.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> -1</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> +2</color>        魔法装置    <color:g>出神入化     </color>
-感知         <color:w> -3</color>        豁免检定    <color:y>很好         </color>
-敏捷         <color:w> +0</color>        潜行能力    <color:y>良好         </color>
-体质         <color:w> +2</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:v> +2</color>        察觉能力    <color:R>较差         </color>
-生命评级     107%       近战能力    <color:o>一般         </color>
-基础HP        15        箭术能力    <color:R>较差         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -1</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> +2</color>        Device      <color:g>卓越       </color>
+Wisdom       <color:w> -3</color>        Save        <color:y>极好       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:y>良好       </color>
+Constitution <color:w> +2</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:v> +2</color>        Perception  <color:R>贫弱       </color>
+Life Rating  107%       Melee       <color:o>一般       </color>
+Base HP       15        Archery     <color:R>贫弱       </color>
+Experience   135%
 </style></indent>
-<topic:Dragons><color:o>龙族 (Dragons)</color>
-龙骑士与龙之间的纽带是世界上最强大、最持久的联系之一。双方都从彼此身上汲取力量、权能和勇气，并将共同成为可怕的强敌。与龙族结盟可以形成这种纽带，签订此契约的邪术师能获得令人印象深刻的骑乘战斗能力。确实，他们是世界上首屈一指的骑手，仅略逊于骑兵和驯兽师。但是，虽然他们在技能（也许还有近战）上略有不足，但他们在骑乘技巧和魔法强化方面具有很强的优势。比起其他武器，龙骑士最偏爱长枪，并不断寻找传说中的“龙枪（Dragonlance）”，他们将其视为自己失落已久的与生俱来的权利。
+<topic:龙类><color:o>龙类</color>
+The bond between a Dragonrider and a Dragon is one of the strongest and most enduring ties seen the world over. Each draws strength, power, and encouragement from the other, and together they make a formidable foe. An alliance with Dragonkind enables this bond to form, and the Warlock of this pact gains impressive powers for mounted combat. Indeed, they are among the elite riders of the world, only slightly inferior to Cavalry and Beastmasters. But where they have a slight deficiency in skill (and perhaps in melee as well), they have a strong advantage in riding techniques and magical enhancements. Dragonriders favor the lance above all other weapons, and seek continuously the legendary 'Dragonlance' which they view as their long-lost birthright.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> +2</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> +0</color>        魔法装置    <color:y>良好         </color>
-感知         <color:w> +0</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> -1</color>        潜行能力    <color:R>较差         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:v> +2</color>        察觉能力    <color:R>较差         </color>
-生命评级     102%       近战能力    <color:o>一般         </color>
-基础HP        10        箭术能力    <color:R>较差         </color>
-经验修正     130%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +2</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> +0</color>        Device      <color:y>良好       </color>
+Wisdom       <color:w> +0</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> -1</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:v> +2</color>        Perception  <color:R>贫弱       </color>
+Life Rating  102%       Melee       <color:o>一般       </color>
+Base HP       10        Archery     <color:R>贫弱       </color>
+Experience   130%
 </style></indent>
-<topic:Angels><color:o>天使 (Angels)</color>
-天使是神圣的存在，他们使用各种手段来打击他们眼中的邪恶。与天使签订契约的邪术师也会发现自己的豁免检定显着提高，并且（最终）他们的身体将几乎免疫射线类效果。由于天使与善良的力量紧密相连，与天使签订契约将大幅降低对所有善良阵营怪物造成的伤害。
+<topic:天使><color:o>天使</color>
+Angels are heavenly beings who use a variety of techniques to smite those they view as evil. Warlocks who make pacts with Angels will also find their saving throws significantly improved, and (eventually) their body almost immune to bolt-like effects. Since Angels are strongly aligned with the forces of good, making a pact with Angels will reduce damage done to all good monsters by a substantial amount.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> +1</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> +1</color>        魔法装置    <color:y>很好         </color>
-感知         <color:w> +2</color>        豁免检定    <color:g>出神入化     </color>
-敏捷         <color:w> +1</color>        潜行能力    <color:R>较差         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:v> +3</color>        察觉能力    <color:r>极差         </color>
-生命评级      98%       近战能力    <color:o>一般         </color>
-基础HP         4        箭术能力    <color:R>较差         </color>
-经验修正     150%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +1</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> +1</color>        Device      <color:y>极好       </color>
+Wisdom       <color:w> +2</color>        Save        <color:g>卓越       </color>
+Dexterity    <color:w> +1</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:v> +3</color>        Perception  <color:r>糟糕       </color>
+Life Rating   98%       Melee       <color:o>一般       </color>
+Base HP        4        Archery     <color:R>贫弱       </color>
+Experience   150%
 </style></indent>
-<topic:Demons><color:o>恶魔 (Demons)</color>
-恶魔是地狱中狡猾的生物，为了击倒敌人会使用任何可以动用的手段。与恶魔签订契约的邪术师会发现他们使用所有魔法装置的能力得到了提升，并学会了随意为这些装置重新充能的能力。最终，恶魔邪术师将获得在脚步下粉碎墙壁的能力，甚至获得火焰免疫。与恶魔签订契约将大幅降低对所有恶魔造成的伤害。
+<topic:恶魔><color:o>恶魔</color>
+Demons are crafty creatures of Hell, using whatever means at their disposal to bring down their enemies. Warlocks who make pacts with Demons will find their abilities to use all magical devices improved, and learn the ability to Recharge these devices at will. Eventually, Demon Warlocks attain the ability to crush walls beneath their footsteps, and even gain immunity to fire. Making a pact with Demons will reduce damage done to all demons by a substantial amount.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> +3</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> +1</color>        魔法装置    <color:g>出神入化     </color>
-感知         <color:w>-10</color>        豁免检定    <color:y>很好         </color>
-敏捷         <color:w> +1</color>        潜行能力    <color:r>极差         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:v> +2</color>        察觉能力    <color:r>极差         </color>
-生命评级     100%       近战能力    <color:y>很好         </color>
-基础HP        15        箭术能力    <color:R>较差         </color>
-经验修正     150%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +3</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> +1</color>        Device      <color:g>卓越       </color>
+Wisdom       <color:w>-10</color>        Save        <color:y>极好       </color>
+Dexterity    <color:w> +1</color>        Stealth     <color:r>糟糕       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:v> +2</color>        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       15        Archery     <color:R>贫弱       </color>
+Experience   150%
 </style></indent>
-<topic:Hounds><color:o>猎犬 (Hounds)</color>
-与猎犬的结盟出乎意料地强大：猎犬快速、隐秘且敏捷，除了基本的元素抗性之外，邪术师还将获得这些属性。他们还能获得不错的近战能力，以及引导不可预测的以太力量的能力。当然，猎犬邪术师也可以召唤他们的同族来协助，尽管这可能不足以对抗世界上更困难的敌人。不过，换个花样，让那些烦人的猎犬站在你这边难道不有趣吗？
+<topic:猎犬><color:o>猎犬</color>
+An alliance with hounds is sneakily strong: hounds are fast, stealthy and nimble, and the warlock will gain these attributes as well, in addition to basic elemental resistances. They also gain decent melee, and the ability to channel the unpredictable powers of the aether. Of course, Hound Warlocks may also call on their kin for assistance, though this may not be enough against the more difficult foes of the world. Still, wouldn't it be fun to have some of those annoying hounds on your side for a change?
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> +0</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -2</color>        魔法装置    <color:o>一般         </color>
-感知         <color:w> -2</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> +2</color>        潜行能力    <color:y>很好         </color>
-体质         <color:w> +2</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:v> +1</color>        察觉能力    <color:R>较差         </color>
-生命评级     102%       近战能力    <color:y>良好         </color>
-基础HP        12        箭术能力    <color:R>较差         </color>
-经验修正     110%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +0</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -2</color>        Device      <color:o>一般       </color>
+Wisdom       <color:w> -2</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:y>极好       </color>
+Constitution <color:w> +2</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:v> +1</color>        Perception  <color:R>贫弱       </color>
+Life Rating  102%       Melee       <color:y>良好       </color>
+Base HP       12        Archery     <color:R>贫弱       </color>
+Experience   110%
 </style></indent>
-<topic:Spiders><color:o>蜘蛛 (Spiders)</color>
-在世界上所有令人反胃、到处爬行的东西中，你偏偏选择与蜘蛛结盟？没错，它们隐秘、快速，而且非常善于隐藏。蜘蛛能够分泌出粘稠的精细物质来诱捕粗心大意的人，然后潜伏在附近，或者至少你是这么认为的，因为你很少看到它们。此外，许多蜘蛛擅长传送的力量，能够迅速从一个地点跳跃到另一个地点，这常常让想要捕食它们的掠食者感到相当困惑。它们对毒素和星界传送（nexus）都适应良好。不过，它们有些娇弱——当然，前提是你能抓住一只！
+<topic:蜘蛛><color:o>蜘蛛</color>
+Of all the icky, crawling things in the world, you have chosen to make an alliance with spiders? Sure, they are stealthy, and fast, and very adept at hiding. Able to extrude a fine sticky substance to ensnare the unwary, the spider lurks nearby, or so you assume since you very seldom see them. Moreover, many spiders are adept at the powers of teleportation, able to jump quickly from one location to another, which can be quite baffling to a would be predator. They are comfortable with both poison and nexus. They are a bit on the squishy side, though - that is, if you manage to catch one!
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> -1</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> +0</color>        魔法装置    <color:G>优秀         </color>
-感知         <color:w> -2</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> +2</color>        潜行能力    <color:g>出神入化     </color>
-体质         <color:w> +0</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:v> +1</color>        察觉能力    <color:r>极差         </color>
-生命评级      97%       近战能力    <color:o>一般         </color>
-基础HP         1        箭术能力    <color:G>优秀         </color>
-经验修正     120%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -1</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> +0</color>        Device      <color:G>优秀       </color>
+Wisdom       <color:w> -2</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:g>卓越       </color>
+Constitution <color:w> +0</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:v> +1</color>        Perception  <color:r>糟糕       </color>
+Life Rating   97%       Melee       <color:o>一般       </color>
+Base HP        1        Archery     <color:G>优秀       </color>
+Experience   120%
 </style></indent>
-<topic:Giants><color:o>巨人 (Giants)</color>
-与巨人和泰坦结盟能赋予令人印象深刻的体力和坚韧，但其他属性通常会受到影响。在游戏后期，你将获得类似巨人的抗性，包括声音、破片和混沌。你的战斗表现将令人惊叹；并且像巨人一样，你会偏爱重型武器。哦，如果有需要，你也不会介意扔一两块巨石！这种结盟提供了许多物理上的优势，但在魔法能力或技能方面却非常匮乏。缔结此契约的邪术师是出色的战士，在战斗技巧上几乎与战士职业无法区分！
+<topic:巨人><color:o>巨人</color>
+An alliance with giants and titans grants impressive physical strength and fortitude, but other stats will generally suffer. Later in life, you will gain giant-like resistances including sound, shards and chaos. Your combat will be impressive; and like giants, you will favor heavy weapons. Oh, and you won't mind tossing a boulder or two should the need arise! This alliance offers much in the way of physical advantages, but very little in the way of magical abilities or skill. Warlocks with this alliance are excellent fighters, being nearly indistiguishable in skill from Warriors!
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:w> +2</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -4</color>        魔法装置    <color:r>极差         </color>
-感知         <color:w> -4</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> -3</color>        潜行能力    <color:r>极差         </color>
-体质         <color:w> +2</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:v> +0</color>        察觉能力    <color:r>极差         </color>
-生命评级     112%       近战能力    <color:b>英雄         </color>
-基础HP        25        箭术能力    <color:o>一般         </color>
-经验修正     140%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +2</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -4</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -4</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> -3</color>        Stealth     <color:r>糟糕       </color>
+Constitution <color:w> +2</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:v> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  112%       Melee       <color:b>英雄       </color>
+Base HP       25        Archery     <color:o>一般       </color>
+Experience   140%
 </style></indent>
 <topic:Tables><style:heading>表 1 - 邪术师属性加成表</style>
 <style:table>
-<color:G>                   </color><color:G>力量 智力 感知 敏捷 体质 魅力 生命  HP   经验</color>
-不死生物            -1   +2   -3   +0   +2   +2  107%  +15  135%
-龙族                +2   +0   +0   -1   +1   +2  102%  +10  130%
-天使                +1   +1   +2   +1   +1   +3   98%   +4  150%
-恶魔                +3   +1  -10   +1   +1   +2  100%  +15  150%
-猎犬                +0   -2   -2   +2   +2   +1  102%  +12  110%
-蜘蛛                -1   +0   -2   +2   +0   +1   97%   +1  120%
-巨人                +2   -4   -4   -3   +2   +0  112%  +25  140%
+<color:G>                 </color> <color:G>STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp</color>
+死灵             -1   +2   -3   +0   +2   +2  107%  +15  135%
+龙类             +2   +0   +0   -1   +1   +2  102%  +10  130%
+天使             +1   +1   +2   +1   +1   +3   98%   +4  150%
+恶魔             +3   +1  -10   +1   +1   +2  100%  +15  150%
+猎犬             +0   -2   -2   +2   +2   +1  102%  +12  110%
+蜘蛛             -1   +0   -2   +2   +0   +1   97%   +1  120%
+巨人             +2   -4   -4   -3   +2   +0  112%  +25  140%
 
 </style>
 <topic:Skills1><style:heading>表 2 - 邪术师技能加成表 I</style>
 <style:table>
-                  <color:w>解除陷阱      魔法装置      豁免检定      潜行能力     </color>
-不死生物          <color:R>较差         </color> <color:g>出神入化     </color> <color:y>很好         </color> <color:y>良好         </color>
-龙族              <color:R>较差         </color> <color:y>良好         </color> <color:R>较差         </color> <color:R>较差         </color>
-天使              <color:R>较差         </color> <color:y>很好         </color> <color:g>出神入化     </color> <color:R>较差         </color>
-恶魔              <color:R>较差         </color> <color:g>出神入化     </color> <color:y>很好         </color> <color:r>极差         </color>
-猎犬              <color:R>较差         </color> <color:o>一般         </color> <color:R>较差         </color> <color:y>很好         </color>
-蜘蛛              <color:R>较差         </color> <color:G>优秀         </color> <color:R>较差         </color> <color:g>出神入化     </color>
-巨人              <color:R>较差         </color> <color:r>极差         </color> <color:R>较差         </color> <color:r>极差         </color>
+                  <color:w>解除陷阱  使用装置  豁免        潜行       </color>
+死灵            <color:R>贫弱       </color> <color:g>卓越       </color> <color:y>极好       </color> <color:y>良好       </color>
+龙类            <color:R>贫弱       </color> <color:y>良好       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
+天使            <color:R>贫弱       </color> <color:y>极好       </color> <color:g>卓越       </color> <color:R>贫弱       </color>
+恶魔            <color:R>贫弱       </color> <color:g>卓越       </color> <color:y>极好       </color> <color:r>糟糕       </color>
+猎犬            <color:R>贫弱       </color> <color:o>一般       </color> <color:R>贫弱       </color> <color:y>极好       </color>
+蜘蛛            <color:R>贫弱       </color> <color:G>优秀       </color> <color:R>贫弱       </color> <color:g>卓越       </color>
+巨人            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:r>糟糕       </color>
 
 </style>
 <topic:Skills2><style:heading>表 3 - 邪术师技能加成表 II</style>
 <style:table>
-                  <color:w>搜索能力      察觉能力      近战能力      箭术能力     </color>
-不死生物          <color:R>较差         </color> <color:R>较差         </color> <color:o>一般         </color> <color:R>较差         </color>
-龙族              <color:R>较差         </color> <color:R>较差         </color> <color:o>一般         </color> <color:R>较差         </color>
-天使              <color:R>较差         </color> <color:r>极差         </color> <color:o>一般         </color> <color:R>较差         </color>
-恶魔              <color:R>较差         </color> <color:r>极差         </color> <color:y>很好         </color> <color:R>较差         </color>
-猎犬              <color:R>较差         </color> <color:R>较差         </color> <color:y>良好         </color> <color:R>较差         </color>
-蜘蛛              <color:R>较差         </color> <color:r>极差         </color> <color:o>一般         </color> <color:G>优秀         </color>
-巨人              <color:R>较差         </color> <color:r>极差         </color> <color:b>英雄         </color> <color:o>一般         </color>
+                  <color:w>搜索        察觉        近战        箭术       </color>
+死灵            <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+龙类            <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+天使            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+恶魔            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:R>贫弱       </color>
+猎犬            <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color> <color:R>贫弱       </color>
+蜘蛛            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:o>一般       </color> <color:G>优秀       </color>
+巨人            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:b>英雄       </color> <color:o>一般       </color>
 
 </style>
 
 
-<color:s>为 FrogComposband 7.2.salmiak 自动生成。</color>
+<color:s>自动生成于 FrogComposband 7.4。</color>

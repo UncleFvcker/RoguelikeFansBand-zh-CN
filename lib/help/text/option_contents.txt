@@ -1,21 +1,20 @@
-Options
+选项 (Options)
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    [a] Options
-    [b] Birth/Start-Up Options
-    [c] Input Options
-    [d] Map & Screen Options
-    [e] Text Display Options
-    [f] Game Play Options
-    [g] Disturbance Options
-    [h] Auto-Destroyer Options
-    [i] List Display Options
-    [j] Base Delay Factor
-    [k] Hitpoint Warning
-    [l] Autosave Options
-    [m] Window Flags
-    [n] Cheating Options
+    [a] 选项概述
+    [b] 出生/启动选项
+    [c] 输入选项
+    [d] 地图与屏幕选项
+    [e] 文本显示选项
+    [f] 游戏玩法选项
+    [g] 干扰选项
+    [h] 自动销毁器选项
+    [i] 列表显示选项
+    [j] 基础延迟系数
+    [k] 生命值警告
+    [l] 自动存档选项
+    [m] 窗口标志
+    [n] 作弊选项
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

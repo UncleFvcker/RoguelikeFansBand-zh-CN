@@ -1,22 +1,21 @@
-Monsters
+怪物
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    [a] Overview
-    [b] Monster Symbols
-    [c] Assessing a Monster
-    [d] Unique Monsters
-    [e] Listing All Monsters in View
-    [f] Monster Color
-    [g] Eldritch Horrors
-    [h] Pets and Riding
-    [i] Friendly Monsters
-    [j] Mimics and Shadowers
-    [k] Breeding Monsters
-    [l] Monster Knowledge
-    [m] It Resists...
-    [n] Genocide
-    [o] Health Bar Colors
+    [a] 概述
+    [b] 怪物符号
+    [c] 评估怪物
+    [d] 唯一怪物
+    [e] 列出视线内的所有怪物
+    [f] 怪物颜色
+    [g] 远古恐惧
+    [h] 宠物与骑乘
+    [i] 友善怪物
+    [j] 模仿者与暗影者
+    [k] 繁殖怪
+    [l] 怪物知识
+    [m] 抗性与免疫
+    [n] 灭绝术
+    [o] 健康条颜色
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

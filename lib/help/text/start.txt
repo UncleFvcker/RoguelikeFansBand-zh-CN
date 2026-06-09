@@ -1,31 +1,30 @@
-Welcome to the Online Help System
+欢迎使用在线帮助系统 (Welcome to the Online Help System)
 
-    Getting Started:
-    [a] General Information
-    [b] Creating a Character    
-    [c] Commands
-    [d] Frequently Asked Questions
-    [e] Common Mistakes to Avoid
+    游戏入门 (Getting Started):
+    [a] 基础信息 (General Information)
+    [b] 创建角色 (Creating a Character)    
+    [c] 游戏命令 (Commands)
+    [d] 常见问题解答 (Frequently Asked Questions)
+    [e] 避免常见错误 (Common Mistakes to Avoid)
 
-    Core Concepts:
-    [f] Races, Classes and Personalities
-    [g] The Towns and Wilderness
-    [h] The Dungeons
-    [i] Objects
-    [j] Monsters and Pets
-    [k] Attacking and Weapons
-    [l] Defending and Armor
-    [m] Spellcasting
-    [n] Status Effects
-    [o] Glossary/List of Concepts
+    核心概念 (Core Concepts):
+    [f] 种族、职业与性格 (Races, Classes and Personalities)
+    [g] 城镇与荒野 (The Towns and Wilderness)
+    [h] 地下城 (The Dungeons)
+    [i] 物品 (Objects)
+    [j] 怪物与宠物 (Monsters and Pets)
+    [k] 攻击与武器 (Attacking and Weapons)
+    [l] 防御与护甲 (Defending and Armor)
+    [m] 施法 (Spellcasting)
+    [n] 状态效果 (Status Effects)
+    [o] 术语表与概念列表 (Glossary/List of Concepts)
 
-    Advanced Topics:
-    [p] Options
-    [q] User Preference Files
-    [r] The Speed System
-    [s] The Proficiency System
+    进阶主题 (Advanced Topics):
+    [p] 游戏选项 (Options)
+    [q] 用户偏好设定文件 (User Preference Files)
+    [r] 速度系统 (The Speed System)
+    [s] 熟练度系统 (The Proficiency System)
     [t] 墨家明器
-    [u] Subwindows
+    [u] 子窗口 (Subwindows)
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令 (Help System Commands)

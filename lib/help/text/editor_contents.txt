@@ -1,33 +1,33 @@
-墨家明器
+物品自动处理系统 (墨家明器)
 
-Please choose a help section.
+请选择一个帮助章节。
 
-  The following topics are in tutorial format:
-    [a] Introduction
-    [b] Review of Object Knowledge
-    [c] Managing Objects
-    [d] Basic Usage
-    [e] Oops, I'm Auto-Destroying Rings of Speed
-    [f] What About Stuff I Want?
-    [g] Introduction to Rules and Events
-    [h] Rules
-    [i] Example Scenarios
-    [j] Conditionals
-    [k] Using the Editor
-    [l] The Easy Destroyer
+  以下主题为教程格式：
+    [a] 简介 (Introduction)
+    [b] 物品知识回顾 (Review of Object Knowledge)
+    [c] 管理物品 (Managing Objects)
+    [d] 基本用法 (Basic Usage)
+    [e] 糟糕，我把速度戒指自动销毁了！ (Oops, I'm Auto-Destroying Rings 
+of Speed)
+    [f] 那我想要的东西呢？ (What About Stuff I Want?)
+    [g] 规则与事件简介 (Introduction to Rules and Events)
+    [h] 规则 (Rules)
+    [i] 示例场景 (Example Scenarios)
+    [j] 条件语句 (Conditionals)
+    [k] 使用编辑器 (Using the Editor)
+    [l] 简易销毁器 (The Easy Destroyer)
 
-  The following topics are reference material:
-    [m] Reference Tables
-    [n] Line Types in the Editor
-    [o] Rules: Syntax
-    [p] Rules: Action Letters
-    [q] Rules: Index of Nouns
-    [r] Rules: Index of Adjectives
-    [s] Rules: Special Clauses
-    [t] Conditionals: Syntax
-    [u] Conditionals: Functions
-    [v] Conditionals: Variables
-    [w] Conditionals: Literals
+  以下主题为参考资料：
+    [m] 参考表格 (Reference Tables)
+    [n] 编辑器中的行类型 (Line Types in the Editor)
+    [o] 规则：语法 (Rules: Syntax)
+    [p] 规则：动作字母 (Rules: Action Letters)
+    [q] 规则：名词关键字 (Rules: Index of Nouns)
+    [r] 规则：形容词关键字 (Rules: Index of Adjectives)
+    [s] 规则：特殊子句 (Rules: Special Clauses)
+    [t] 条件语句：语法 (Conditionals: Syntax)
+    [u] 条件语句：函数 (Conditionals: Functions)
+    [v] 条件语句：变量 (Conditionals: Variables)
+    [w] 条件语句：字面量 (Conditionals: Literals)
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

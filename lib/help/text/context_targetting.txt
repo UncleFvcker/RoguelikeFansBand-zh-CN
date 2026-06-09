@@ -1,42 +1,36 @@
-Targetting
+瞄准 (Targetting)
 
-The targetting prompt offers many options, and two different modes: 
-monster-targetting mode and free-targetting mode. If there are hostile 
-monsters in line of sight, targetting begins in monster-targetting 
-mode; the first target offered will be the nearest such monster, with 
-other hostile monsters in line of sight as alternative targets. Use 
-direction keys to cycle between monsters; + and - also work, but are 
-less intuitive. Turn on the target_pet option ([a]) if you want this 
-mode to allow non-hostile monsters as targets.
+瞄准提示提供了许多选项，并且有两种不同的模式：怪物瞄准模式 
+(monster-targetting mode) 和 自由瞄准模式 (free-targetting 
+mode)。如果视线内有敌对怪物，瞄准将以怪物瞄准模式开始；提供的第一个目标
+将是最近的此类怪物，视线内的其他敌对怪物将作为备选目标。使用方向键在怪物
+之间循环切换；+ 和 - 
+也可以，但不太直观。如果你希望此模式允许将非敌对怪物作为目标，请开启 
+target_pet (瞄准宠物) 选项 ([a])。
 
-If you wish to target (or inspect) a square with no monster on it, 
-press p or o, switching to free-targetting mode where direction keys 
-simply move the cursor. (This mode is automatically entered if no 
-hostile monsters are in line of sight.) o and p are identical except in 
-one respect: pressing p (which stands for player) moves the cursor to 
-your own location, while pressing o (which stands for offset) does not. 
+如果你希望瞄准（或检视）一个没有怪物的方格，请按 p 或 
+o，切换到自由瞄准模式，此时方向键仅用于移动光标。（如果视线内没有敌对怪
+物，游戏会自动进入此模式。）o 和 p 除了在一个方面之外完全相同：按 
+p（代表 player/玩家）会将光标移动到你自己的位置，而按 o（代表 
+offset/偏移）则不会。
 
-At any time, press 5, t or . to accept the current target (and exit 
-targetting mode), q or ESC to exit targetting mode without selecting a 
-target, r to recall lore about a monster on the target square, x to see 
-all items on the target square (including stolen or picked-up items 
-carried by monsters, but excluding normal monster item drops), and ( to 
-select a square as a travel target. In the original keyset, J and j 
-also work as travel keys and are equivalent with (.
+在任何时候，按 5、t 或 . 以接受当前目标（并退出瞄准模式），按 q 或 ESC 
+在不选择目标的情况下退出瞄准模式，按 r 回忆目标方格上怪物的知识 
+(图鉴)，按 x 
+查看目标方格上的所有物品（包括被怪物携带的被盗或拾起的物品，但不包括正常
+的怪物掉落物），以及按 ( 将一个方格选为旅行目标。在原版按键集中，J 和 j 
+也可用作旅行键，且等同于 (。
 
-Users of the roguelike keyset have a bonus option in free-targetting 
-mode: they can press Shift+DIR to move the cursor many squares at a 
-time.
+Roguelike 按键集的用户在自由瞄准模式下有一个额外的选择：他们可以按 
+Shift+DIR (方向键) 一次将光标移动多个方格。
 
-Precision Targetting
+精确瞄准 (Precision Targetting)
 
-When you cast a spell or fire a missile at a target location, the path 
-chosen is the direct path towards that location, which may or may not 
-be the path you want. Sometimes, by clever choice of a side location as 
-your target, you may be able to aim at squares not directly in line of 
-sight:
+当你在一个目标位置施放法术或发射投射物时，选择的路径是通向该位置的直接 
+(direct)路径，但这可能不是你想要的路径。有时，通过巧妙地选择一个侧面位置
+作为你的目标，你可能能够瞄准不在直接视线内的方格：
   
-  Position: an unknown grid [q,t,p,m,x,j,+,-,?,<dir>]                           
+  位置: 一个未知的网格      [q,t,p,m,x,j,+,-,?,<dir>]                           
         ##........#.... #%%####
         #........\......      #
         %.......}{\@....      #
@@ -54,46 +48,44 @@ sight:
       #       # ##*        #                                                    
       #########  #*#########
   
-Notice that bright-red *? There's a dragon on that square I cannot 
-target directly; but I managed to include that square in my spell's 
-path by using p to target a location on the southern edge of the map.
+注意到那个亮红色的 * 
+了吗？那个方格上有一条我无法直接瞄准的龙；但我通过使用 p 
+瞄准地图南部边缘的一个位置，成功地将该方格纳入了我的法术路径中。
 
-Note that bolt spells always stop at the first monster in the spell's 
-path, but beam and breath spells affect all squares in their paths, and 
-ball spells can reach the target square by flying over monsters' heads 
-if necessary.
+请注意，矢类法术 (bolt spells) 
+总是停在法术路径上的第一个怪物处，但射线类 (beam) 和吐息类 (breath) 
+法术会影响其路径上的所有方格，而球类法术 (ball spells) 
+如果有必要的话，可以通过飞过怪物的头顶来飞达目标方格。
 
-Location Targets vs Monster Targets
+位置目标与怪物目标 (Location Targets vs Monster Targets)
 
-When selecting a target, you may target either a monster or a location. 
-This is an important difference: if you target a monster, the target 
-will move when the monster moves; but if you target a location, the 
-target remains stationary, even if the location had a monster in it. 
 
-If you bypass targetting mode you can also target a compass direction, 
-which for this purpose is always equivalent to targetting a location, 
-even if there was an obvious monster in the direction indicated. So 
-watch out if there's a monster due west of you, you fire west and then 
-spam n (or X in the roguelike keyset) to repeat: this will work 
-beautifully as long as the monster remains due west, but as soon as it 
-moves north or south you will need to retarget, something you would not 
-have needed to do had you selected the monster as your target.
+在选择目标时，你可以瞄准怪物或位置。这是一个重要的区别：如果你瞄准一个怪
+物，目标会随着怪物的移动而移动；但如果你瞄准一个位置，目标将保持静止，即
+使该位置上曾经有一个怪物。
 
-Quick Summary
 
-  5 t .        Select new target and exit targetting mode
-  ESC q        Exit targetting mode with no target selected    
-  DIR          Move to square or monster in direction indicated
-  +            Move to more distant monster
-  -            Move to less distant monster
-  ( j J        Select travel target (exit and travel if not aiming)
+如果你跳过瞄准模式，你也可以直接瞄准一个罗盘方向，出于此目的，这总是等同
+于瞄准一个位置，即使在指示的方向上有一个明显的怪物。因此你要当心，如果你
+正西方有一个怪物，你向西开火然后狂按 n（在 Roguelike 按键集中是 
+X）来重复操作：只要怪物保持在正西方，这将非常完美地起效，但一旦它向北或
+向南移动，你就需要重新瞄准了——如果你当初选择怪物作为目标，你就不需要承受
+这种麻烦。
 
-  m            Enter monster-targetting mode
-  p            Enter free-targetting mode (move cursor to player)
-  o            Enter free-targetting mode (keep cursor location)
+快捷参考 (Quick Summary)
 
-  r            Recall monster lore     
-  x            Cycle between items on target square
+  5 t .        选择新目标并退出瞄准模式
+  ESC q        不选择目标并退出瞄准模式
+  DIR          移动到指示方向的方格或怪物处
+  +            移动到更远的怪物处
+  -            移动到更近的怪物处
+  ( j J        选择旅行目标 (如果不处于瞄准状态，则退出并开始旅行)
 
-  ?            Display this help topic
+  m            进入怪物瞄准模式
+  p            进入自由瞄准模式 (将光标移至玩家位置)
+  o            进入自由瞄准模式 (保持光标在原位置)
 
+  r            回忆怪物知识
+  x            在目标方格上的物品之间循环查看
+
+  ?            显示此帮助主题

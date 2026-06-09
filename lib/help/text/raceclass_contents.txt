@@ -1,15 +1,14 @@
-Races, Classes and Personalities
+种族、职业与性格
 
-Please choose one of the following online help files:
+请选择以下在线帮助文件之一：
 
-    [a] The Races
-    [b] The Classes
-    [c] The Personalities
-    [d] Monster Races
+    [a] 种族
+    [b] 职业
+    [c] 性格
+    [d] 怪物种族
 
-    [e] Race Ability Tables
-    [f] Class Ability Tables
-    [g] Personality Ability Tables
+    [e] 种族能力表
+    [f] 职业能力表
+    [g] 性格能力表
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

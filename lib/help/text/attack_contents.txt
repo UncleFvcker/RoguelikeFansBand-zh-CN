@@ -1,25 +1,24 @@
-Attacking and Weapons
+攻击与武器
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    [a] Overview
-    [b] Attacking from a Distance
-    [c] Melee Weapons
-    [d] Ranged Weapons
-    [e] Ego Weapons and Artifacts
-    [f] Slays and Brands
-    [g] Critical Hits
-    [h] Choosing the Right Weapon
-    [i] Attacking Monsters in Walls
-    [j] Attacking Pets or Friendly Monsters
-    [k] Martial Arts
-    [l] Two-Handed Wielding
-    [m] Dual-Wielding
-    [n] Magical Aids to Physical Combat
-    [o] Improving Your Odds
-    [p] Attacking with Magical Devices
-    [q] Attacking with Spells  
-    [r] Basic Tactics
+    [a] 概述
+    [b] 远距离攻击
+    [c] 近战武器
+    [d] 远程武器
+    [e] ego武器与神器
+    [f] 杀戮与烙印
+    [g] 暴击
+    [h] 选择合适的武器
+    [i] 攻击墙内的怪物
+    [j] 攻击宠物或友方怪物
+    [k] 武术
+    [l] 双手握持
+    [m] 双持
+    [n] 物理战斗的魔法辅助
+    [o] 增加胜算
+    [p] 使用魔法装置攻击
+    [q] 使用法术攻击  
+    [r] 基础战术
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

@@ -1,22 +1,21 @@
-The Towns and Wilderness
+城镇与荒野 (The Towns and Wilderness)
 
-Please choose one of the following help sections:
+请选择以下帮助小节之一：
 
-    [a] The Towns and Wilderness
-    [b] Town and Wilderness Symbols
-    [c] What to Expect in a Town
-    [d] Townspeople
-    [e] Shopping in the Town
-    [f] Object Pricing
-    [g] List of Shops
-    [h] Special Buildings
-    [i] Town Quests
-    [j] The Wilderness Option
-    [k] Discovering and Entering Dungeons
-    [l] Which Dungeons Should I Visit?
-    [m] Travelling Between Towns
-    [n] The No Wilderness Option
-    [o] Coffee-Break Mode
+    [a] 城镇与荒野 (The Towns and Wilderness)
+    [b] 城镇与荒野符号 (Town and Wilderness Symbols)
+    [c] 在城镇里能遇到什么 (What to Expect in a Town)
+    [d] 镇民 (Townspeople)
+    [e] 在城镇购物 (Shopping in the Town)
+    [f] 物品定价 (Object Pricing)
+    [g] 商店列表 (List of Shops)
+    [h] 特殊建筑 (Special Buildings)
+    [i] 城镇任务 (Town Quests)
+    [j] 荒野选项 (The Wilderness Option)
+    [k] 发现并进入地下城 (Discovering and Entering Dungeons)
+    [l] 我应该去哪些地下城？ (Which Dungeons Should I Visit?)
+    [m] 在城镇间旅行 (Travelling Between Towns)
+    [n] 关闭荒野模式选项 (The No Wilderness Option)
+    [o] 茶歇模式 (Coffee-Break Mode)
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令 (Help System Commands)

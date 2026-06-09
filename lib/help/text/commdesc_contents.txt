@@ -1,25 +1,23 @@
-Command Descriptions
+命令详细说明 (Command Descriptions)
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    [a] Command Descriptions
-    [b] Inventory Commands
-    [c] Movement Commands
-    [d] Resting Commands
-    [e] Searching Commands
-    [f] Alter Commands
-    [g] Spell and Prayer Commands
-    [h] Object Use Commands
-    [i] Ranged Combat Commands
-    [j] Looking Commands
-    [k] Message Commands
-    [l] Game Status Commands
-    [m] Saving and Exiting Commands
-    [n] User Preference Commands
-    [o] Help Commands
-    [p] Extra Commands
-    [q] Summary
+    [a] 命令详细说明
+    [b] 物品栏命令
+    [c] 移动命令
+    [d] 休息命令
+    [e] 搜索命令
+    [f] 交互命令
+    [g] 法术和祈祷命令
+    [h] 物品使用命令
+    [i] 远程战斗命令
+    [j] 观察命令
+    [k] 消息命令
+    [l] 状态命令
+    [m] 存档与退出命令
+    [n] 用户偏好命令
+    [o] 帮助命令
+    [p] 额外命令
+    [q] 速查汇总表
 
-    (?) Help System Commands
-
-
+    (?) 帮助系统命令

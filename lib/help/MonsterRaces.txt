@@ -1,586 +1,586 @@
-<style:title>怪物种族 (Monster Races)</style>
+<style:title>怪物种族</style>
 
-那么，你觉得自己准备好扮演怪物了吗？有许多怪物种族和亚种可供选择，不同的种族大致按以下类型进行了松散的分类：动物、龙类、恶魔等等。
+So, you feel ready to play as a monster? There are many monster races and subraces to choose from, and the various races are loosely grouped by type below: Animals, Dragons, Demons, and so forth.
 
-作为怪物，<color:v>你将无法选择普通职业；</color>你的种族基本上也就是你的职业。怪物不使用法术书，但其中许多在其他方面具有魔法能力；例如，火龙可以喷火，并且可能会获得一系列非书本法术。大多数怪物类型随着经验的增加会获得新的法术、力量或能力；请同时查看魔法命令 (<color:keypress>m</color>) 和种族能力命令 (<color:keypress>U</color>/<color:keypress>O</color>)，看看你在游玩时可以使用哪些能力。
+As a monster, <color:v>you will not be able to choose a normal class;</color> your race will essentially be your class as well. Monsters do not use book spells, but many of them are magical in other ways; for example, fire dragons can breathe fire and may gain access to a range of non-book spells. Most monster types gain new spells, powers or abilities with experience; check out both the magic command (<color:keypress>m</color>) and the racial power command (<color:keypress>U</color>/<color:keypress>O</color>) to see what powers are available to you as you play.
 
-大多数怪物种族拥有自定义的体型，这可能会严重限制你能穿戴的装备数量和种类。例如，<color:keyword>眼魔 (Beholder)</color>无法穿戴盔甲或挥舞剑……那景象确实会很奇怪！但为了弥补这一点，它们可以在其眼柄上戴最多八枚戒指。通常，这类细节在下面会有所描述。
+Most monster races have custom body types, which may severely constrain the amount and kind of equipment you may wear. For example, a <color:keyword>Beholder</color> cannot wear armor or wield a sword... that would be an odd sight indeed! But to make up for this, they can wear up to eight rings on their eyestalks. Generally, details of this kind are described below.
 
-最后，所有怪物都会<color:keyword>进化 (evolve)</color>。当它们获得足够的经验时，它们将呈现出更强大的形态。继续以龙为例，你可能会从幼龙 (Baby) 进化到青年龙 (Young)，再到成年龙 (Mature)，接着是远古龙 (Ancient)，最后成为巨龙 (Great Wyrm)，在这个过程中变得无比强大。下面列出的属性和技能假设角色为 35 级。
+Finally, all monsters <color:keyword>evolve</color>. When they gain enough experience, they will assume a more powerful form. To continue with our example of dragons, you might evolve from Baby to Young to Mature to Ancient and finally to a Great Wyrm, becoming vastly more powerful in the process. The stats and skills listed below assume a level 35 character.
 
-有关<color:keyword>属性 (Stats)</color>的详细信息，请参见 <link:birth.txt#PrimaryStats>。有关<color:keyword>技能 (Skills)</color>的信息，请参见 <link:birth.txt#PrimarySkills>。要一目了然地比较各种族，请查看下方的种族表格 (<link:MonsterRaces.txt#Tables>)。
+For details on the <color:keyword>Stats</color>, see <link:birth.txt#PrimaryStats>. For information about the <color:keyword>Skills</color>, see <link:birth.txt#PrimarySkills>. To compare the various races at a glance, take a look at the race tables below (<link:MonsterRaces.txt#Tables>).
 
-<style:heading>动物 (Animal)</style>
-  <indent><topic:Centipede><color:o>Centipede (蜈蚣)</color>
-蜈蚣是拥有许多腿的自然生物。随着它们的进化，它们会改变颜色，但除此之外似乎没有太多区别各种形态的特征。也许你更喜欢蓝色而不是红色或绿色？最终，一旦你进化到终极形态，你将能够随意改变颜色，从而变得极其强大。
+<style:heading>动物</style>
+  <indent><topic:蜈蚣><color:o>蜈蚣</color>
+Centipedes are natural creatures with many legs. As they evolve, they change colors, but not much else seems to differentiate the various forms. Perhaps you prefer blue to red or green? Eventually, once you have evolved into your ultimate evolutionary form, you will be able to change colors at will and thereby become very powerful indeed.
  
-作为蜈蚣，你主要的生存属性是你那能够穿戴许多双靴子的能力。希望这足够了。
+As a centipede, your main survival attribute will be the many pairs of boots you can wear. Hopefully, this will be enough.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +0</color>        解除陷阱    <color:y>良好         </color>
-智力         <color:w> -3</color>        魔法装置    <color:o>一般         </color>
-感知         <color:w> -3</color>        豁免        <color:o>一般         </color>
-敏捷         <color:w> +0</color>        潜行        <color:y>很好         </color>
-体质         <color:w> +0</color>        搜索        <color:r>差           </color>
-魅力         <color:w> -3</color>        察觉        <color:r>差           </color>
-生命评级      90%       近战        <color:y>良好         </color>
-基础生命      15        箭术        <color:D>极差         </color>
-经验值       100%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +0</color>        Disarming   <color:y>良好       </color>
+Intelligence <color:w> -3</color>        Device      <color:o>一般       </color>
+Wisdom       <color:w> -3</color>        Save        <color:o>一般       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:y>极好       </color>
+Constitution <color:w> +0</color>        Searching   <color:r>糟糕       </color>
+Charisma     <color:w> -3</color>        Perception  <color:r>糟糕       </color>
+Life Rating   90%       Melee       <color:y>良好       </color>
+Base HP       15        Archery     <color:D>极差       </color>
+Experience   100%       Infravision 50'
 </style></indent>
-<topic:Hound><color:o>Hound (猎犬)</color>
-虽然和风猎犬通常成群狩猎，但你选择了独行。你将以透明猎犬（Clear Hound）的孱弱形态开始生命。随着你的成长，你会经历几个进化阶段。在每个阶段，你进化成的形态都是随机决定的；但每一个阶层都比上一层提供更强大的选择。谁知道呢——也许有一天你甚至会进化成一只以太猎犬（Aether Hound）。
+<topic:猎犬><color:o>猎犬</color>
+虽然西风猎犬通常成群结队地狩猎，但你却选择了独来独往。你将以一只脆弱的透明猎犬形态开始生命。随着你的成长，你将经历多次进化。在每一次进化中，你的形态将被随机决定；但每个阶层的选择都比上一个更强大。谁知道呢——也许有一天你会进化成以太猎犬。
  
-猎犬不会魔法，因此无法施展法术；然而，它们是出色的猎手，会学习许多能协助狩猎的特殊能力。正如你可能非常了解的那样，猎犬喜欢吐息！
+猎犬不具魔力，因此无法施展法术；然而，它们是出色的猎手，并能学习一些特殊能力来协助狩猎。而且正如你所深知的那样，猎犬非常喜欢吐息！
  
-由于它们的犬科体型，猎犬无法挥舞武器；相反，它们用恶毒的撕咬和剃刀般锋利的爪子进行攻击。虽然它们的近战不如龙类那么强大，但也通常足以解决问题。猎犬可以在前爪上戴四枚戒指，在后腿上穿一双靴子，在脖子上戴一个护身符，甚至还能穿一件斗篷和一件盔甲。
+受限于犬类的躯体，猎犬无法挥舞武器；取而代之的是，它们用凶猛的撕咬和极其锋利的爪子进行攻击。虽然它们的近战能力不如龙族强大，但通常也足以解决问题。猎犬可以在前爪上戴四枚戒指，在后腿上穿一双靴子，在脖子上戴一条护身符，甚至还能穿上一件披风和一套身体护甲。
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +3</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -3</color>        魔法装置    <color:r>差           </color>
-感知         <color:w> -5</color>        豁免        <color:R>较差         </color>
-敏捷         <color:w> +4</color>        潜行        <color:g>极佳         </color>
-体质         <color:w> +3</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> +1</color>        察觉        <color:R>较差         </color>
-生命评级     100%       近战        <color:y>很好         </color>
-基础生命      22        箭术        <color:r>差           </color>
-经验值       150%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +3</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -3</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -5</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +4</color>        Stealth     <color:g>卓越       </color>
+Constitution <color:w> +3</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +1</color>        Perception  <color:R>贫弱       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       22        Archery     <color:r>糟糕       </color>
+Experience   150%       Infravision 50'
 </style></indent>
-<topic:Hydra><color:o>Hydra (多头蛇)</color>
-多头蛇是拥有多个脑袋的怪物。随着它们进化，它们会长出额外的头，这赋予了它们额外的攻击次数以及装备更多物品（头盔和护身符）的能力。虽然并非每个头都能戴头盔和护身符（想象一下那该有多强！），但每个头都能攻击；因此，只要有足够的力量和敏捷来驾驭如此可怕的火力，一条 11 个头的多头蛇每回合最多可以攻击 11 次。
+<topic:多头蛇><color:o>多头蛇</color>
+Hydras are monsters with multiple heads. As they evolve, they grow additional heads, giving them extra attacks as well as the ability to wear more equipment (helmets and amulets). While not every head may wear a helmet and an amulet (imagine how powerful that would be!), each head is capable of attacking; so an 11-headed hydra can attack up to 11 times per round, provided it has enough strength and dexterity to command such a fearsome arsenal.
  
-多头蛇并不怎么精通魔法，所以玩起来很像战士，只是多了一些额外能力。五头和七头的多头蛇抵抗毒素并获得一些基于毒素的攻击。九头和十一头的多头蛇是火焰生物：它们抵抗火焰，攻击附带燃烧，并且除了其他基于火焰的攻击外，还能喷吐火焰。所有多头蛇都能极快地再生。
+Hydras are not very magical, and so play much like warriors but with a few extra abilities. Five- and seven-headed hydras resist poison and gain a few poison-based attacks. Nine- and eleven-headed hydras are creatures of flame: they resist fire, their attacks burn, and they are capable of breathing fire among other flame-based attacks. All hydras regenerate extremely rapidly.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +1</color>        解除陷阱    <color:y>良好         </color>
-智力         <color:w> -2</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> -2</color>        豁免        <color:o>一般         </color>
-敏捷         <color:w> +2</color>        潜行        <color:R>较差         </color>
-体质         <color:w> +3</color>        搜索        <color:r>差           </color>
-魅力         <color:w> +0</color>        察觉        <color:r>差           </color>
-生命评级     105%       近战        <color:y>良好         </color>
-基础生命      45        箭术        <color:r>差           </color>
-经验值       130%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +1</color>        Disarming   <color:y>良好       </color>
+Intelligence <color:w> -2</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> -2</color>        Save        <color:o>一般       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +3</color>        Searching   <color:r>糟糕       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  105%       Melee       <color:y>良好       </color>
+Base HP       45        Archery     <color:r>糟糕       </color>
+Experience   130%       Infravision 50'
 </style></indent>
-<topic:Spider><color:o>Spider (蜘蛛)</color>
-蜘蛛是喜欢潜伏等待猎物的隐秘怪物。它们拥有剧毒攻击，并能编织粘稠的网来缠住敌人。它们有八条腿，足以佩戴四枚戒指和两双靴子；它们还可以戴头盔、护身符、斗篷甚至盔甲（当然，需要稍微调整一下），但不能挥舞武器或弓。它们也不能装备光源，但这不成问题，因为蜘蛛早就习惯了黑暗。
+<topic:蜘蛛><color:o>蜘蛛</color>
+Spiders are stealthy monsters that prefer to wait for their prey. They have poisonous attacks and can weave sticky webs to entangle their enemies. They have eight legs, enough for four rings and two pairs of boots; they may also wear a helmet, an amulet, a cloak and even a suit of body armor (after slight adjustments, of course), but cannot wield a weapon or a bow. They also cannot equip light sources, but this is not an issue, as spiders are accustomed to the dark.
  
-蜘蛛有两条进化路线：相位蜘蛛 (Phase Spider) 和阿剌克涅/蛛化精灵 (Aranea)。阿剌克涅拥有更强的坚韧和更好的属性，以及能够麻痹对手的强大近战能力；而相位蜘蛛则以其无与伦比的传送能力来弥补相对脆弱的体格。
+There are two paths of evolution for the spider: the Phase Spider and the Aranea. Araneas have greater fortitude and better stats, as well as powerful melee capable of paralyzing an opponent; but Phase Spiders compensate for their relative fragility with unsurpassed powers of teleportation.
  
-所有蜘蛛都以非常孱弱的洞穴蜘蛛形态开始。由于没有任何特殊天赋，洞穴蜘蛛如果想活下来就必须小心翼翼地游玩。
+All spiders begin in the very weak form of the Cave Spider. Lacking any special talents, the cave spider must play carefully if it is to survive.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +1</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> +0</color>        魔法装置    <color:y>良好         </color>
-感知         <color:w> -5</color>        豁免        <color:o>一般         </color>
-敏捷         <color:w> +0</color>        潜行        <color:G>优秀         </color>
-体质         <color:w> +2</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉        <color:R>较差         </color>
-生命评级     100%       近战        <color:G>优秀         </color>
-基础生命      25        箭术        <color:r>差           </color>
-经验值       200%       红外视觉    50'
-</style></indent>
-</indent>
-<style:heading>天使/恶魔 (Angel/Demon)</style>
-  <indent><topic:Angel><color:o>Angel (天使)</color>
-天使是肩负神圣使命的超凡天界生物。它们的翅膀让它们能够飞越鸿沟和陷坑。它们极少被隐形欺骗，并且随着成长会对各种元素产生抗性。它们的属性确实令人敬畏，其神圣魔法极其强大，将良好的攻击与探测、治疗、近战强化和辅助能力结合在了一起。天使是最强大的种族之一，但它们的升级速度也极其缓慢。
- 
-天使具有类人型体格；它们使用与大多数普通玩家种族相同的装备槽，且没有天生的近战攻击手段。感知 (Wisdom) 是它们的主要施法属性。
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +2</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> +2</color>        魔法装置    <color:G>优秀         </color>
-感知         <color:v> +5</color>        豁免        <color:g>极佳         </color>
-敏捷         <color:w> +2</color>        潜行        <color:o>一般         </color>
-体质         <color:w> +2</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> +4</color>        察觉        <color:R>较差         </color>
-生命评级      99%       近战        <color:y>良好         </color>
-基础生命      26        箭术        <color:o>一般         </color>
-经验值       325%       红外视觉    30'
-</style></indent>
-<topic:Demon><color:o>Demon (恶魔)</color>
-恶魔是邪恶的强大仆从，形态各异。它们依靠其魔鬼般的力量或野蛮的蛮力来生存。
- 
-各种恶魔种族包括炎魔 (Balrogs)，强大的火焰恶魔；恐虐仆从 (Servants of Khorne)，强大的毁灭战士；塔纳里 (Tanar'ri)，较弱的恶魔，其终极形态有三双手臂但更喜欢裸身战斗；以及赛博恶魔 (Cyberdemons)，其火力无可匹敌。
- 
-恶魔不能吃正常的食物，必须以它们人类敌人的遗骸为食。它们不受“远古恐惧 (Eldritch Horror)”的影响。
-
-有关恶魔的更多详细信息，请参见 <link:Demons.txt>。
-
-</indent>
-<style:heading>眼魔 (Beholder)</style>
-  <indent><topic:Beholder><color:o>Beholder (眼魔)</color>
-眼魔是漂浮的肉球，中央有一只主眼，周围环绕着许多较小的眼柄。它们用经常能困惑甚至麻痹敌人的凝视来攻击。它们无法挥舞普通的武器或穿戴盔甲，但可以在每根眼柄上装备一枚戒指，并且眼柄的数量会随着眼魔的进化而增加。
- 
-眼魔在进化过程中会获得力量，包括一些强大的攻击法术；但它们的主要攻击手段永远是其强大的凝视。智力 (Intelligence) 是它们的施法属性，且眼魔确实非常聪明。它们的搜索和察觉能力是传奇级别的，在魔法装置方面也相当能干。然而，它们不够强壮，在被敌人包围时必须小心。
- 
-眼魔的攻击方式是独一无二的。由于它们的凝视不是普通的物理攻击，它们的近战不受力量和敏捷的加成。此外，攻击次数也是由等级决定的，而不是通常的方式：在这方面，它们类似于武僧。最后，眼魔不需要紧挨着敌人就能进行近战攻击；它们可以凝视远处的怪物，尽管其凝视范围有所限制，并且长时间的远距离凝视会使它们感到疲劳。
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> -3</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:v> +7</color>        魔法装置    <color:v>琥珀[10]     </color>
-感知         <color:w> +0</color>        豁免        <color:g>极佳         </color>
-敏捷         <color:w> +2</color>        潜行        <color:b>英雄         </color>
-体质         <color:w> +0</color>        搜索        <color:b>英雄         </color>
-魅力         <color:w> +1</color>        察觉        <color:b>英雄         </color>
-生命评级     100%       近战        <color:o>一般         </color>
-基础生命      20        箭术        <color:r>差           </color>
-经验值       200%       红外视觉    80'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +1</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> +0</color>        Device      <color:y>良好       </color>
+Wisdom       <color:w> -5</color>        Save        <color:o>一般       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:G>优秀       </color>
+Constitution <color:w> +2</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:R>贫弱       </color>
+Life Rating  100%       Melee       <color:G>优秀       </color>
+Base HP       25        Archery     <color:r>糟糕       </color>
+Experience   200%       Infravision 50'
 </style></indent>
 </indent>
-<style:heading>龙类 (Dragon)</style>
-  <indent><topic:Dragon><color:o>Dragon (龙类)</color>
-龙类是长有翅膀的强大巨蟒般生物。它们在战斗中非常强悍，拥有剃刀般锋利的爪子和能粉碎骨头的啃咬；但更具传奇色彩的是它们的吐息，随着巨龙的成熟，吐息会变得越来越致命。
+<style:heading>Angel/Demon</style>
+  <indent><topic:天使><color:o>天使</color>
+Angels are heavenly beings on a holy mission. Their wings allow them to fly over chasms and pits. They are rarely fooled by invisibility, and become resistant to the elements as they mature. Their stats are truly awe-inspiring, and their divine magic extremely strong, offering good offense combined with detection, healing, melee enhancement and utility. Angels are one of the most powerful races, but they also gain levels extremely slowly.
  
-由于是非类人型躯体，龙无法穿戴盔甲、手套或靴子；然而，作为魔法生物，它们最多可以装备六枚戒指。它们还可以戴头盔、光源、斗篷和护身符。由于这些装备限制，龙可能很难补全所有的抗性；但每条龙至少拥有一个固有的抗性，甚至可能是免疫。
- 
-龙以十分年幼的孱弱形态开始生命。随着身体的成熟，它们的鳞片变得坚硬，爪子变得锋利。它们的吐息变得越来越强，并且经常获得额外的魔法力量和抗性。所有的龙都会飞，但幼龙不如长者飞得快。
- 
-除了钢铁龙 (Steel Dragons) 远不如其同类聪明且仅依靠蛮力外，每条龙都可以选择专精于特定类型的魔法。这些特殊的龙类魔法领域不需要书籍就能学习。领域的选择对龙的属性和技能有着直接的影响。
+Angels have a humanoid body type; they use the same equipment slots as most normal player races, and have no innate melee attacks. Wisdom is their primary spell stat.
 
-有关龙类的更多详细信息，请参见 <link:Dragons.txt>。
-有关龙类魔法领域的更多详细信息，请参见 <link:DragonRealms.txt>。
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +2</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> +2</color>        Device      <color:G>优秀       </color>
+Wisdom       <color:v> +5</color>        Save        <color:g>卓越       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:o>一般       </color>
+Constitution <color:w> +2</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +4</color>        Perception  <color:R>贫弱       </color>
+Life Rating   99%       Melee       <color:y>良好       </color>
+Base HP       26        Archery     <color:o>一般       </color>
+Experience   325%       Infravision 30'
+</style></indent>
+<topic:恶魔><color:o>恶魔</color>
+Demons are powerful servants of evil and come in many forms. They rely on their devilish powers or their brutish strength to survive.
+ 
+The various demonic races include the Balrogs, powerful demons of fire; the Servants of Khorne, mighty warriors of destruction; the Tanar'ri, weaker demons whose ultimate form has three sets of arms, but prefers to fight naked; and Cyberdemons, whose firepower is unsurpassable.
+ 
+Demons cannot eat normal food, but must feast upon the remains of their human enemies. They are unaffected by the Eldritch Horror.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +4</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:w> +2</color>        魔法装置    <color:y>良好         </color>
-感知         <color:w> +1</color>        豁免        <color:o>一般         </color>
-敏捷         <color:w> +1</color>        潜行        <color:R>较差         </color>
-体质         <color:w> +3</color>        搜索        <color:o>一般         </color>
-魅力         <color:w> +2</color>        察觉        <color:o>一般         </color>
-生命评级     115%       近战        <color:G>优秀         </color>
-基础生命      40        箭术        <color:r>差           </color>
-经验值       250%       红外视觉    50'
+有关恶魔的更多详细信息，请参阅 <link:Demons.txt>。
+
+</indent>
+<style:heading>眼魔</style>
+  <indent><topic:眼魔><color:o>眼魔</color>
+眼魔是漂浮的肉球，中央长有一只大眼睛，周围环绕着许多长在眼柄上的小眼睛。它们用凝视进行攻击，通常会使敌人混乱甚至瘫痪。它们无法使用普通的武器或护甲，但可以在每个眼柄上装备一枚戒指，并且眼柄的数量会随着眼魔的进化而增加。
+ 
+随着眼魔的进化，它们会获得更强大的力量，包括一些强力的攻击性法术；但它们的主要攻击手段始终是强大的凝视。智力是它们的施法属性，而眼魔确实非常聪明。它们的搜索和察觉能力是传说级别的，并且非常擅长使用魔法装置。然而，它们并不算强壮，在被敌人包围时必须小心。
+ 
+眼魔的攻击方式很独特。因为凝视不是普通的物理攻击，它们无法从力量和敏捷中获得近战加成。此外，攻击次数是由等级决定的，而不是通常的方式：在这方面，它们类似于武僧。最后，眼魔不需要靠近敌人就能进行“近战”攻击；它们可以凝视远处的怪物，尽管其凝视的范围受到一定限制，而且长时间的远距离凝视会使它们疲惫不堪。
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -3</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:v> +7</color>        Device      <color:v>琥珀[10]   </color>
+Wisdom       <color:w> +0</color>        Save        <color:g>卓越       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:b>英雄       </color>
+Constitution <color:w> +0</color>        Searching   <color:b>英雄       </color>
+Charisma     <color:w> +1</color>        Perception  <color:b>英雄       </color>
+Life Rating  100%       Melee       <color:o>一般       </color>
+Base HP       20        Archery     <color:r>糟糕       </color>
+Experience   200%       Infravision 80'
 </style></indent>
 </indent>
-<style:heading>元素/能量漩涡 (Elemental/Vortex)</style>
-  <indent><topic:Elemental><color:o>Elemental (元素)</color>
-元素是由单一元素形态赋予生命的无心智生物。作为一个物种，元素永远不会被割伤（流血），并且由于几乎没有心智，它们对摧毁理智 (sanity blasting) 免疫。它们很少感到恐惧，并对困惑和毒素有抗性。此外，它们会根据其形态获得特定的力量和能力。
+<style:heading>龙</style>
+  <indent><topic:龙><color:o>龙</color>
+Dragons are powerful winged serpents. They are strong in combat, with razor-sharp claws and a bone-crushing bite; but even more legendary is their breath, which grows ever more deadly as the dragon matures.
  
-土元素 (Earth Elementals) 速度很慢，但因为身体坚硬而获得 AC 加成。它们抵抗碎片，甚至能把皮肤变成石头。在它们如鱼得水的土元素环境中，它们可以自由地穿行于岩石之间。不幸的是，由于它们是由泥土构成的，它们的魔法药水经常会变成泥巴！
+Due to their non-humanoid bodies, dragons are unable to wear armor, gloves or boots; however, being creatures of magic, they may equip up to six rings. They can also wear a helmet, a light source, a cloak and an amulet. Because of these equipment restrictions, dragons may have a difficult time covering all resistances; but each dragon has at least one innate resistance, maybe even an immunity.
  
-气元素 (Air Elementals) 速度快得惊人，或者说那只是它们带电身体的劈啪作响？它们可以向敌人投掷闪电箭和电球，甚至可以为自己的武器注入致命的闪电。然而，由于被闪电包围，戒指、护身符、魔杖和魔棒很快就会被摧毁！
+Dragons begin life in a weak form, being very young. As their bodies mature, their scales grow tough and their claws sharp. Their breaths become stronger and stronger, and they frequently gain additional magical powers and resistances. All dragons can fly, but younger dragons are not so quick as their elders.
  
-火元素 (Fire Elementals) 速度较快（足以绕着它们的土元素兄弟转圈），并且披着火焰外衣。它们可以带着地狱的怒火进行攻击，但需要提防使用寒冷攻击的敌人。由于被火包围，它们会迅速把卷轴和法杖烧成灰烬！
- 
-最后是水元素 (Water Elementals)，它们能够召唤致命的水箭。它们免疫震慑。它们的攻击具有很强的腐蚀性；但唉，有时它们自己的盔甲也会被腐蚀。水元素还有一套基于其内部水流速度的独特能量系统；战斗和使用元素力量会使它们兴奋，变成汹涌的洪流，而休息或漫无目的地溅水则会使它们慢下来。高流速使水元素变得更强壮，但它们的盔甲有时会被水流卷走而滑落！
+With the exception of Steel Dragons, who are far less intelligent than their kin and rely on brute force only, each dragon may choose to specialize in a specific type of magic. These special dragon-magic realms do not require books to learn. The selection of a realm has a direct influence on the stats and skills of the dragon.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +5</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:w> -5</color>        魔法装置    <color:r>差           </color>
-感知         <color:w> -5</color>        豁免        <color:y>很好         </color>
-敏捷         <color:w> -4</color>        潜行        <color:y>很好         </color>
-体质         <color:w> +6</color>        搜索        <color:o>一般         </color>
-魅力         <color:w> +0</color>        察觉        <color:R>较差         </color>
-生命评级     120%       近战        <color:b>英雄         </color>
-基础生命      30        箭术        <color:r>差           </color>
-经验值       170%       红外视觉    50'
-</style></indent>
-<topic:Vortex><color:o>Vortex (能量漩涡)</color>
-能量漩涡是元素力量构成的无心智的旋风，在地下城中旋转着寻找猎物。它们很少会陷入困惑，也永远不会失明，因为它们没有正常意义上的视觉；实际上，它们似乎即使没有眼睛也能察觉周围环境，并且不需要光源。它们既不会被震慑也不会被割伤流血，其无心智的本质使它们免疫恐惧。但是，唉！它们对魔法装置一窍不通，近战也有点弱；虽然它们吐息起来毫不费力，但吐息攻击并不是特别强。
- 
-能量漩涡没有正常的身体；相反，它们只是一团快速旋转的元素质量。正因如此，它们可以将物品卷入它们旋转的精华中，从而获得加成和保护。它们可以使用的物品数量随着等级的提高而增加，并且没有限制它们在每个槽位中可以“挥舞”什么类型的装备。虽然它们可以通过这种方式装备武器，但无法用武器进行攻击；相反，漩涡的近战依赖于它们将附近怪物吞没在旋转元素中的内在能力。
- 
-能量漩涡会随机进化，尽管所有漩涡似乎最终都会达到以太漩涡 (Aether vortex) 的进化完美状态。在 50 级时，它们会获得一种特殊天赋来增强力量。
+有关龙族的更多详细信息，请参阅 <link:Dragons.txt>。
+有关龙族领域的更多详细信息，请参阅 <link:DragonRealms.txt>。
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +2</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -5</color>        魔法装置    <color:r>差           </color>
-感知         <color:w> -5</color>        豁免        <color:g>极佳         </color>
-敏捷         <color:w> +4</color>        潜行        <color:y>良好         </color>
-体质         <color:w> +2</color>        搜索        <color:r>差           </color>
-魅力         <color:w> +0</color>        察觉        <color:r>差           </color>
-生命评级      95%       近战        <color:G>优秀         </color>
-基础生命      25        箭术        <color:D>极差         </color>
-经验值       125%       红外视觉     0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> +2</color>        Device      <color:y>良好       </color>
+Wisdom       <color:w> +1</color>        Save        <color:o>一般       </color>
+Dexterity    <color:w> +1</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +3</color>        Searching   <color:o>一般       </color>
+Charisma     <color:w> +2</color>        Perception  <color:o>一般       </color>
+Life Rating  115%       Melee       <color:G>优秀       </color>
+Base HP       40        Archery     <color:r>糟糕       </color>
+Experience   250%       Infravision 50'
 </style></indent>
 </indent>
-<style:heading>魔像 (Golem)</style>
-  <indent><topic:Golem><color:o>Golem (魔像)</color>
-魔像是由强大魔法赋予生命的生物：被召唤来服务其创造者的活石头。但你已经挣脱了束缚，正在大开杀戒！
+<style:heading>元素/漩涡</style>
+  <indent><topic:元素生物><color:o>元素生物</color>
+Elementals are mindless creatures animated from a single elemental form. As a species, elementals can never be cut, and being virtually mindless they are immune to sanity blasting. They rarely feel fear, and are resistant to confusion and poison. In addition, they gain specific powers and abilities depending on their form.
  
-魔像在移动时非常缓慢；它们的非移动动作往往也很慢，但不如移动那么明显。尽管只能进行单次（但十分强力的）打击，它们在近战中仍出类拔萃；它们可以装备武器，但用强有力的拳头战斗效果更好。魔像拥有极高的护甲等级，并且具有良好的抗性；它们也抵抗魔法，并且随着进化抵抗力会变得更强，减少来自所有魔法攻击的伤害。
+Earth Elementals are slow, but gain AC bonuses due to their tough bodies. They are resistant to shards, and may even turn their skins to stone. At home in elemental earth, they may travel freely through rocky confines. Unfortunately, as they are made of earth, their magic potions frequently turn to mud!
  
-魔像有几个种类，都拥有共同的进化血统。首先是强大的巨像 (Colossus)，是同类中最大（也是最慢）的。接下来是天空魔像 (Sky Golem)，这是一种拥有强大魔法的生物，抵抗时间的侵蚀。最后是法术扭曲自动机 (Spellwarp Automaton)，这是一种彻底的毁灭生物，几乎完全免疫魔法；不幸的是，这最后一种形态需要极漫长的时间才能成型。
+Air Elementals are shockingly fast, but perhaps that is just the crackle of their electrified bodies? They may hurl bolts and balls of electricity at their enemies, and may even imbue their weapons with deadly lightning. However, being surrounded by lightning, rings, amulets, wands and rods are quickly destroyed!
+ 
+Fire Elementals are somewhat fast (enough to run circles around their earthen brethren) and are cloaked in flames. They may attack with hell's fury, but need to be on the lookout for cold-wielding foes. Being surrounded by fire, they rapidly burn scrolls and staves to ash!
+ 
+Finally, there are the Water Elementals, creatures able to conjure deadly water bolts. They are immune to stunning. Their attacks can be quite corrosive; but alas, sometimes their own armor corrodes as well. Water Elementals also have a unique energy system based on the speed of their internal water flow; fighting and the use of elemental powers excite them and turn them into a raging torrent, while resting or aimlessly splashing about slows them down again. High flow rates make water elementals stronger, but their armor sometimes gets caught in the flow and slips off!
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +4</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:w> -4</color>        魔法装置    <color:r>差           </color>
-感知         <color:w> -4</color>        豁免        <color:g>极佳         </color>
-敏捷         <color:w> -3</color>        潜行        <color:r>差           </color>
-体质         <color:w> +4</color>        搜索        <color:r>差           </color>
-魅力         <color:w> +2</color>        察觉        <color:r>差           </color>
-生命评级     108%       近战        <color:b>英雄         </color>
-基础生命      50        箭术        <color:R>较差         </color>
-经验值       200%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +5</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> -5</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -5</color>        Save        <color:y>极好       </color>
+Dexterity    <color:w> -4</color>        Stealth     <color:y>极好       </color>
+Constitution <color:w> +6</color>        Searching   <color:o>一般       </color>
+Charisma     <color:w> +0</color>        Perception  <color:R>贫弱       </color>
+Life Rating  120%       Melee       <color:b>英雄       </color>
+Base HP       30        Archery     <color:r>糟糕       </color>
+Experience   170%       Infravision 50'
+</style></indent>
+<topic:漩涡><color:o>漩涡</color>
+漩涡是由元素力量组成的无意识旋风，它们在地牢中一路旋转寻找猎物。它们很少会困惑，也永远不会被致盲，因为它们缺乏正常意义上的视觉；事实上，即使没有眼睛，它们似乎也能察觉到周围的环境，且不需要佩戴光源。它们既不能被震慑也不能被割伤，其无意识的本性使它们免疫恐惧。但是，唉！它们在使用魔法装置方面毫无希望，在近战中也有些虚弱；虽然它们几乎毫不费力地就能进行喷吐，但它们的喷吐攻击并不是特别强。
+ 
+漩涡没有正常的身体；相反，它们只是一个快速旋转的元素质量团。因此，它们可以将物体吸入它们旋转的精华中，在此过程中获得加成和防护。它们可以使用的物体数量随着等级的增加而增加，而且它们在每个槽位可以“装备”的设备类型没有任何限制。虽然它们可以用这种方式装备武器，但它们不能用武器进行攻击；相反，漩涡的近战依赖于它们将附近怪物吞噬进旋转元素中的天生能力。
+ 
+漩涡的进化是随机的，尽管它们最终似乎都会达到以太漩涡(Aether vortex)这种进化的完美状态。在50级时，它们会获得一种特殊的天赋来增强它们的力量。
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +2</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -5</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -5</color>        Save        <color:g>卓越       </color>
+Dexterity    <color:w> +4</color>        Stealth     <color:y>良好       </color>
+Constitution <color:w> +2</color>        Searching   <color:r>糟糕       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating   95%       Melee       <color:G>优秀       </color>
+Base HP       25        Archery     <color:D>极差       </color>
+Experience   125%       Infravision 0'
 </style></indent>
 </indent>
-<style:heading>果冻 (Jelly)</style>
-  <indent><topic:Jelly><color:o>Jelly (软泥怪/果冻)</color>
-果冻状的软泥怪是酸性生物，安静地巡逻周围环境，寻找可以吸收的物体。在它们生命的大部分时间里，它们都非常隐秘。它们不像正常种族那样把装备穿在身上；相反，它们能够将物品吸收进凝胶状的躯体中。事实上，它们的每个装备槽（伪足除外）都能够容纳任何类型的装备，并且槽位的数量随着经验的增加而增加。至于攻击，软泥怪能够形成一个伪足，它们可以用伪足来抓取普通的近战武器，或者留空来使用它们天生的酸液攻击。
+<style:heading>魔像</style>
+  <indent><topic:魔像><color:o>魔像</color>
+Golems are creatures animated by powerful magics: living stone conjured to serve their creators. But you have broken loose and are running amok!
  
-软泥怪不依赖视觉，而是使用一种不太为人所知的环境感知力，这使得它们在没有光或红外视觉的情况下也能在黑暗中看清。因此，虽然软泥怪可以装备火把或灯笼，但完全没理由这么做。
+Golems are very slow when it comes to moving about; their non-movement actions also tend to be slow, but not to the same extent. They excel in melee despite being limited to a single (but mighty) blow; they can equip a weapon, but fight much better with their powerful fists. Golems have a very high armor class and possess good resistances; they are also resistant to magic, and become more resistant as they evolve, reducing the damage taken from all magical attacks.
  
-软泥怪以找到的物品为食，根据吸收物品的重量获得营养。如果需要，它们可以吃食物口粮，但这些东西太轻了，提供的营养价值微乎其微。它们更喜欢吃沉重的盔甲和武器。为了方便起见，被摧毁的物品会被自动吃掉；而且它们永远不会觉得撑，它们的胃口是贪得无厌的。
- 
-软泥怪最初只是一小滩黑色软泥怪，装备承载能力非常小。然而，它们很快就会进化成凝胶方块 (Gelatinous Cube)，然后进化成酸性细胞质 (Acidic Cytoplasm)。软泥怪在生命后期还会进行一次极其强大的额外进化。
+There are several varieties of golem, all sharing a common evolutionary heritage. First there is the mighty Colossus, the biggest (and slowest) of their kind. Next is the Sky Golem, a creature of powerful magic, resistant to the ravages of time. Finally, there is the Spellwarp Automaton, a creature of utter destruction, almost completely immune to magic; unfortunately, this last form takes nearly forever to build.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +3</color>        解除陷阱    <color:y>良好         </color>
-智力         <color:w> -7</color>        魔法装置    <color:r>差           </color>
-感知         <color:w> -7</color>        豁免        <color:y>良好         </color>
-敏捷         <color:w> +2</color>        潜行        <color:g>极佳         </color>
-体质         <color:w> +3</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> -1</color>        察觉        <color:r>差           </color>
-生命评级      99%       近战        <color:b>英雄         </color>
-基础生命      40        箭术        <color:r>差           </color>
-经验值       150%       红外视觉     0'
-</style></indent>
-<topic:Quylthulg><color:o>Quylthulg (跨维度生物)</color>
-跨维度生物是一团令人作呕、颤抖着的脉动肉块，几乎无法移动。在身体层面上，它们极其可悲。然而，它们控制别人按自己意愿行事的能力是传奇级别的，而且在情况不妙时它们极其擅长逃跑。跨维度生物没有物理攻击手段。
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> -3</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:w> -3</color>        魔法装置    <color:b>英雄         </color>
-感知         <color:w> -3</color>        豁免        <color:y>很好         </color>
-敏捷         <color:w> -3</color>        潜行        <color:g>极佳         </color>
-体质         <color:w> -3</color>        搜索        <color:R>较差         </color>
-魅力         <color:v> +8</color>        察觉        <color:o>一般         </color>
-生命评级      95%       近战        <color:D>极差         </color>
-基础生命       0        箭术        <color:D>极差         </color>
-经验值       150%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> -4</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -4</color>        Save        <color:g>卓越       </color>
+Dexterity    <color:w> -3</color>        Stealth     <color:r>糟糕       </color>
+Constitution <color:w> +4</color>        Searching   <color:r>糟糕       </color>
+Charisma     <color:w> +2</color>        Perception  <color:r>糟糕       </color>
+Life Rating  108%       Melee       <color:b>英雄       </color>
+Base HP       50        Archery     <color:R>贫弱       </color>
+Experience   200%       Infravision 50'
 </style></indent>
 </indent>
-<style:heading>矮妖 (Leprechaun)</style>
-  <indent><topic:Leprechaun><color:o>Leprechaun (矮妖)</color>
-矮妖是小巧、调皮的生物，总是谋划着如何搞到金子。它们身体虚弱，但动作敏捷且隐秘。至于战斗，它们根本不喜欢使用武器；相反，通过腾出持武器的手，它们可以在一个动作内从敌人身上偷取物品或金子并逃往安全地带。如果有需要，它们也能够使用普通武器进行战斗，但你很少听说矮妖能在战斗中令人感到恐惧！
+<style:heading>果冻</style>
+  <indent><topic:胶质怪><color:o>胶质怪</color>
+Jellies are acidic creatures, quietly patrolling their surroundings in search of objects to absorb. They are quite stealthy for most of their lives. They don't wear equipment on their bodies the way normal races do; instead, they are capable of absorbing objects into their gelatinous frames. In fact, each of their equipment slots (except their pseudopod) is capable of holding any type of equipment whatsoever, and the number of slots increases with experience. For attacking, jellies are capable of forming a single pseudopod which they may either use for grasping a normal melee weapon, or leave empty to use their innate acid-based attacks.
  
-矮妖把财富看得比什么都重，甚至在开局时就带着它们那传说中的一罐金子。矮妖也有着爱尔兰人的好运，因此它们更容易获得好掉落物。在魔法方面，矮妖有一些天赋，甚至包括一些用于进攻的诅咒；毕竟，恶毒矮妖和死亡矮妖是邪恶的生物。它们是传送和探测大师；虽然它们的近战技巧不会引起什么恐惧（除了对贫穷的恐惧），但它们是弓箭和装置的大师。在高等级时，它们以令人难以置信的速度移动，似乎同时出现在多个地方。敏捷 (Dexterity) 决定了矮妖的魔法技能。
+Rather than relying on sight, jellies use a little-understood sense of their surroundings which allows them to see in the dark with neither light nor infravision. So while jellies can equip a torch or lantern, there is little reason for them to do so.
  
-矮妖在施法时使用金币，就像大多数角色使用法力一样。金币也被用来支付装置充能或为附魔法力的武器充能。此外，手头的金币数量越多，矮妖的力量就越强，能获得每回合额外的打击次数、额外的射击次数，并增加 AC 和生命评级；足够多的金币甚至能增加魔法装置的力量。不用说，对矮妖而言，贪婪是件好事！
+Jellies feed off the objects they find, gaining nutrition in proportion to the weight of the object absorbed. They can eat rations of food if desired, but these are so light as to offer very little nutritional value. Jellies prefer to eat heavy armors and weapons. For convenience, destroyed objects are automatically eaten; and jellies never become bloated, their appetite being insatiable.
+ 
+Jellies begin life as a small puddle of black ooze, with very little carrying capacity for equipment. However, they quickly evolve into a Gelatinous Cube and then into an Acidic Cytoplasm. Jellies take one additional, powerful evolutionary step late in life.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> -6</color>        解除陷阱    <color:y>良好         </color>
-智力         <color:w> +1</color>        魔法装置    <color:v>琥珀[2]      </color>
-感知         <color:w> +1</color>        豁免        <color:y>良好         </color>
-敏捷         <color:v> +7</color>        潜行        <color:v>琥珀[10]     </color>
-体质         <color:w> -2</color>        搜索        <color:o>一般         </color>
-魅力         <color:w> -2</color>        察觉        <color:R>较差         </color>
-生命评级      80%       近战        <color:o>一般         </color>
-基础生命      15        箭术        <color:o>一般         </color>
-经验值       150%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +3</color>        Disarming   <color:y>良好       </color>
+Intelligence <color:w> -7</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -7</color>        Save        <color:y>良好       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:g>卓越       </color>
+Constitution <color:w> +3</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> -1</color>        Perception  <color:r>糟糕       </color>
+Life Rating   99%       Melee       <color:b>英雄       </color>
+Base HP       40        Archery     <color:r>糟糕       </color>
+Experience   150%       Infravision 0'
+</style></indent>
+<topic:库尔苏格><color:o>库尔苏格</color>
+库尔苏格是一堆令人作呕的、不断颤动和脉动的肉块，几乎无法移动。在身体上，它们非常可怜。然而，它们控制他人服从命令的能力是传说级别的，并且在情况不妙时它们非常擅长逃跑。库尔苏格没有任何物理攻击能力。
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -3</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> -3</color>        Device      <color:b>英雄       </color>
+Wisdom       <color:w> -3</color>        Save        <color:y>极好       </color>
+Dexterity    <color:w> -3</color>        Stealth     <color:g>卓越       </color>
+Constitution <color:w> -3</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:v> +8</color>        Perception  <color:o>一般       </color>
+Life Rating   95%       Melee       <color:D>极差       </color>
+Base HP        0        Archery     <color:D>极差       </color>
+Experience   150%       Infravision 50'
 </style></indent>
 </indent>
-<style:heading>模仿者/附身者 (Mimic/Possessor)</style>
-  <indent><topic:Death-Sword><color:o>Death-Sword (死亡之剑)</color>
-死亡之剑是由魔法手段赋予生命的强大武器。正因如此，它们无法像其他玩家那样使用装备；相反，它们自身就是其当前形态的武器。但别担心：死亡之剑有能力从它们找到的武器中吸收魔法精华，并在此过程中获得力量。
-
-随着死亡之剑升级，它将进化成越来越强大的武器。更高级的武器需要更多的精华来附魔，有时会导致能力的暂时丧失；但当你深入深渊时，魔法武器也会变得更容易找到，所以任何失去的力量通常都能很快恢复。
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +4</color>        解除陷阱    <color:y>良好         </color>
-智力         <color:w> -5</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> -5</color>        豁免        <color:y>很好         </color>
-敏捷         <color:w> +1</color>        潜行        <color:y>良好         </color>
-体质         <color:w> +4</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉        <color:r>差           </color>
-生命评级     100%       近战        <color:y>很好         </color>
-基础生命      30        箭术        <color:r>差           </color>
-经验值       150%       红外视觉    30'
-</style></indent>
-<topic:Filthy Rag><color:o>Filthy Rag (肮脏破布)</color>
-一堆又脏又旧、饱经风霜的旧衣服，被魔法（或者仅仅是因为积聚了足够的微生物）赋予了生命和意识，充满了想要报复所有那些干净、抛光、时尚的板甲的强烈渴望。大概是因为积了一层厚厚的污垢，一些东西（比如一双旧靴子和两只普通的皮手套）永久地附着在了这块破布上，让它可以四处走动并痛击敌人。如果你觉得这东西现在看起来很丑，那就等它找到其它防护盔甲并有时间拆解、吸收其魔法品质后再说吧……
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> -1</color>        解除陷阱    <color:y>良好         </color>
-智力         <color:w> -1</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> -1</color>        豁免        <color:y>很好         </color>
-敏捷         <color:w> -1</color>        潜行        <color:y>良好         </color>
-体质         <color:w> -2</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> -4</color>        察觉        <color:r>差           </color>
-生命评级      98%       近战        <color:y>良好         </color>
-基础生命      20        箭术        <color:r>差           </color>
-经验值       110%       红外视觉    20'
-</style></indent>
-<topic:Mimic><color:o>Mimic (模仿者)</color>
-模仿者与附身者类似；但模仿者不控制被击败者的尸体，而是模仿周围的人。这使得模仿者能够假扮成它们尚未征服的敌人的形态，这非常有用。然而，这有一个小限制：模仿者只能复制它们所看到的东西！这种限制迫使模仿者比附身者更频繁地改变形态，因为当原版不在身边时，对其当前身体的记忆会迅速消退。偶尔，模仿者能够将特定形态记忆得足够好，从而无需原版身体作参照就能再次使用，尽管这种情况并不经常发生，而且模仿者只能记住少量的形态。为了获得这种机会，模仿者在击杀原版时必须正处于该目标形态。
+<style:heading>小妖精</style>
+  <indent><topic:小妖精><color:o>小妖精</color>
+Leprechauns are small, mischievous creatures, always scheming for gold. They are weak, but quick and stealthy. For combat, they prefer not to use weapons at all; rather, by keeping their weapon hand free, they may pilfer objects or gold from their foes and flee to safety, all in a single action. They are capable of fighting with normal weapons should the need arise, but one seldom hears of leprechauns inspiring fear in combat!
  
-模仿者的属性、技能、法术、抗性和天生力量取决于它们所呈现的形态；在转变为新躯体后，请务必查看种族能力命令 (<color:keypress>U</color>/<color:keypress>O</color>) 和魔法命令 (<color:keypress>m</color>)。当前形态也决定了施法属性；例如，新手祭司模仿者使用感知，而新手学徒模仿者依赖智力。
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +0</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> +1</color>        魔法装置    <color:y>良好         </color>
-感知         <color:w> -1</color>        豁免        <color:o>一般         </color>
-敏捷         <color:w> +2</color>        潜行        <color:R>较差         </color>
-体质         <color:w> +0</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> -1</color>        察觉        <color:R>较差         </color>
-生命评级     108%       近战        <color:y>很好         </color>
-基础生命      15        箭术        <color:G>优秀         </color>
-经验值       250%       红外视觉     0'
-</style></indent>
-<topic:Possessor><color:o>Possessor (附身者)</color>
-附身者是一种奇怪的生物，其自然形态完全无害。然而，它们能够附身在被击杀怪物的尸体上，并根据当前躯体获得力量和能力。因此，它们确实可以变得非常强大！不幸的是，并非每种怪物都会掉落尸体，并且找到合适的尸体来栖身可能很困难。如果附身者离开当前的身体，所有的装备（除光源外）都会掉落，并且会暂时恢复到其脆弱的原始状态。最后，离开当前身体大多数时候会摧毁那具尸体，所以附身者只有在手头有更好的尸体时才应该这样做（而且只能在附近没有怪物时做！）。附身者通常完全控制它们居住的身体；但在极低血量下，这种控制很难维持，受到严重伤害的附身者有很小的几率被赶出身体。
+Leprechauns value riches above all else, and even begin the game with their legendary pot of gold. Leprechauns also have the luck of the Irish, and good drops are more common for them. For magic, the leprechaun has a few talents, even including some curses for offense; Malicious Leprechauns and Death Leprechauns are vile, evil creatures, after all. They are masters of teleportation and detection; and while their melee skills do not inspire much fear (except of poverty), they are great masters of bow and device alike. At high levels, they move with incredible speed and seem to be in multiple places at once. Dexterity determines the leprechaun's skill with their magic.
  
-附身者的属性、技能、法术、抗性和天生力量取决于它们居住的身体；在附身新躯体后，请务必查看种族能力命令 (<color:keypress>U</color>/<color:keypress>O</color>) 和魔法命令 (<color:keypress>m</color>)。当前躯体也决定了施法属性；例如，新手祭司附身者使用感知，而新手学徒附身者依赖智力。
+A leprechaun uses gold for spellcasting the way most characters use mana. Gold is also used to pay for recharging devices or to power mana branded weapons. In addition, increasing the amount of gold on hand increases the power of the leprechaun, granting extra blows per round, extra shots per round, and increased AC and life rating; sufficient gold even increases the power of magical devices. Needless to say, greed is good when you're a leprechaun!
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> -4</color>        解除陷阱    <color:r>差           </color>
-智力         <color:w> +0</color>        魔法装置    <color:r>差           </color>
-感知         <color:w> -3</color>        豁免        <color:R>较差         </color>
-敏捷         <color:w> +0</color>        潜行        <color:b>英雄         </color>
-体质         <color:w> -4</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> -7</color>        察觉        <color:R>较差         </color>
-生命评级      60%       近战        <color:R>较差         </color>
-基础生命      15        箭术        <color:r>差           </color>
-经验值       250%       红外视觉    70'
-</style></indent>
-<topic:Ring><color:o>Ring (戒指)</color>
-戒指是由魔法手段赋予了感知的生物。
- 
-戒指不能佩戴常规装备；相反，它们自己仅仅只是一枚附有魔法的戒指而已。戒指拥有少量的天生力量。由于戒指无法自行移动，它需要引诱附近的怪物戴上它。魔法戒指往往会腐化它们的主人，随着时间的推移，持戒者会发现他无法控制自己的意志！
- 
-戒指可以从它们找到的首饰（戒指或护身符）中吸收魔法，并以此方式获得抗性、属性和额外的法术。戒指没有物理攻击手段；相反，它们可以用强大的法术轰击敌人（当然是在吸收之后），或者干脆躺平，让现任持戒者为它们战斗。
-
-有关戒指的更多详细信息，请参见 <link:rings.txt>。
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> -3</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:v> +4</color>        魔法装置    <color:g>极佳         </color>
-感知         <color:w> +1</color>        豁免        <color:y>良好         </color>
-敏捷         <color:w> +0</color>        潜行        <color:y>很好         </color>
-体质         <color:w> -1</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> +3</color>        察觉        <color:R>较差         </color>
-生命评级      85%       近战        <color:r>差           </color>
-基础生命      10        箭术        <color:r>差           </color>
-经验值       150%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -6</color>        Disarming   <color:y>良好       </color>
+Intelligence <color:w> +1</color>        Device      <color:v>琥珀[2]    </color>
+Wisdom       <color:w> +1</color>        Save        <color:y>良好       </color>
+Dexterity    <color:v> +7</color>        Stealth     <color:v>琥珀[10]   </color>
+Constitution <color:w> -2</color>        Searching   <color:o>一般       </color>
+Charisma     <color:w> -2</color>        Perception  <color:R>贫弱       </color>
+Life Rating   80%       Melee       <color:o>一般       </color>
+Base HP       15        Archery     <color:o>一般       </color>
+Experience   150%       Infravision 50'
 </style></indent>
 </indent>
-<style:heading>兽人/巨魔/巨人 (Orc/Troll/Giant)</style>
-  <indent><topic:Giant><color:o>Giant (巨人)</color>
-巨人是身躯庞大的类人生物。巨人有几种类型。火巨人、霜巨人和风暴巨人是元素巨人，它们会获得与其类型相符的元素抗性、杀戮武器加成甚至攻击方式。泰坦 (Titans) 则是传说中强大的不朽生命；它们的攻击往往会使敌人陷入困惑，而且它们很少单独战斗。最后是强大的赫鲁巨人 (Hrus)；它们如此强壮，最终甚至能粉碎挡在路上的墙壁，但它们的魔法力量相当有限。
+<style:heading>拟态者/附身者</style>
+  <indent><topic:死亡之剑><color:o>死亡之剑</color>
+死亡之剑是通过魔法手段活化的强大武器。因此，它们无法像其他玩家那样使用装备；相反，它们本身就是处于当前形态的武器。但不必担心：死亡之剑有能力从它们找到的武器中吸收魔法精华，并在此过程中获得力量。
+
+随着死亡之剑等级的提升，它将进化成越来越强大的武器。更高级的武器需要更多的精华来附魔，有时会导致能力的暂时丧失；但随着你深入地牢，魔法武器也会变得更容易找到，因此任何失去的力量通常很快就能恢复。
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +4</color>        Disarming   <color:y>良好       </color>
+Intelligence <color:w> -5</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> -5</color>        Save        <color:y>极好       </color>
+Dexterity    <color:w> +1</color>        Stealth     <color:y>良好       </color>
+Constitution <color:w> +4</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       30        Archery     <color:r>糟糕       </color>
+Experience   150%       Infravision 30'
+</style></indent>
+<topic:破布><color:o>破布</color>
+一堆又脏又旧、饱经风霜的衣服，在魔法的作用下（或者仅仅是因为积聚了足够的微生物）获得了生命和意识，并且充满了报复那些干净、光亮、时髦的板甲的强烈欲望。某种东西，很可能是一层厚厚的污垢，将一双旧靴子和两只普通的皮手套永久地粘附在最初的破布上，使它能够四处走动并痛打敌人。如果你觉得这东西现在看起来很丑，那就等它找到其他的防护护甲，并有时间将其拆解吸收掉其中的魔法属性之后再说吧……
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -1</color>        Disarming   <color:y>良好       </color>
+Intelligence <color:w> -1</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> -1</color>        Save        <color:y>极好       </color>
+Dexterity    <color:w> -1</color>        Stealth     <color:y>良好       </color>
+Constitution <color:w> -2</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> -4</color>        Perception  <color:r>糟糕       </color>
+Life Rating   98%       Melee       <color:y>良好       </color>
+Base HP       20        Archery     <color:r>糟糕       </color>
+Experience   110%       Infravision 20'
+</style></indent>
+<topic:模仿者><color:o>模仿者</color>
+模仿者类似于附身者；但模仿者不是控制被击败者的尸体，而是模仿他们周围的存在。这使得模仿者能够呈现出他们尚未征服的敌人的形态，这是非常实用的。然而，这里有一个小小的代价：模仿者只能复制他们看到的东西！这种限制迫使模仿者比附身者更频繁地改变形态，因为当本体不在附近时，他们对当前躯体的认知会迅速消退。偶尔，模仿者能够将特定形态记忆得足够好，以便在没有本体可模仿的情况下再次使用，尽管这种情况并不经常发生，而且模仿者只能记忆很少的形态。要有机会做到这一点，模仿者必须在杀死本体时处于所需的形态。
  
-巨人依靠其优越的体格，用势大力沉的打击将对手捶成肉泥。面对远处的敌人，巨人能够投掷巨石造成毁灭性的破坏。巨人使用与大多数普通玩家种族相同的装备槽，且没有天生的攻击方式。
+模仿者的属性、技能、法术、抗性和天生能力由他们呈现的形态决定；在呈现新躯体后，一定要检查种族能力命令 (<color:keypress>U</color>/<color:keypress>O</color>) 和魔法命令 (<color:keypress>m</color>)。当前形态也决定了施法属性；例如，新手牧师的模仿形态使用感知，而新手魔法师的模仿形态则依赖智力。
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +8</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:w> -3</color>        魔法装置    <color:r>差           </color>
-感知         <color:w> -3</color>        豁免        <color:R>较差         </color>
-敏捷         <color:w> -2</color>        潜行        <color:r>差           </color>
-体质         <color:w> +5</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> +1</color>        察觉        <color:r>差           </color>
-生命评级     117%       近战        <color:b>英雄         </color>
-基础生命      46        箭术        <color:o>一般         </color>
-经验值       200%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +0</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> +1</color>        Device      <color:y>良好       </color>
+Wisdom       <color:w> -1</color>        Save        <color:o>一般       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +0</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> -1</color>        Perception  <color:R>贫弱       </color>
+Life Rating  108%       Melee       <color:y>极好       </color>
+Base HP       15        Archery     <color:G>优秀       </color>
+Experience   250%       Infravision 0'
 </style></indent>
-<topic:Orc><color:o>Orc (兽人)</color>
-兽人是魔苟斯 (Morgoth) 的造物，也是其军队的中坚力量。它们习惯了洞穴和隧道，对黑暗有抗性，但容易被强光伤害。兽人名声在外，是丑陋、野蛮的掠夺者，因此不要指望从店主那里得到太多好脸色。魔苟斯的精神活在兽人体内并驱使它们前进，使它们难以被吓倒。兽人在隐秘性和微妙性上的不足，用纯粹的蛮力来弥补，面对像狗头人这样的弱小敌人时通常能轻松将其扫到一边；然而在地下城深处，那些最强壮的战士和最强大的魔法师居住的地方，却很少能见到兽人的身影。
+<topic:附身者><color:o>附身者</color>
+附身者是一种古怪的生物，在自然形态下完全无害。然而，它们能够附身于被它们杀死的怪物尸体上，并根据当前躯体获得相应的力量和能力。因此，它们可以变得非常强大！不幸的是，并非所有种类的怪物都会掉落尸体，因此获得合适的尸骸来栖身可能很困难。如果附身者离开他们当前的躯体，他们所有的装备（除了光源）都将被移除，并暂时回到他们原生、脆弱的状态。最后，离开当前躯体通常会摧毁那具尸骸，因此附身者只有在手头有更好的尸骸时（并且附近没有怪物时！）才应该这样做。附身者通常完全控制它们居住的身体；但在极低的生命值下，这种控制变得难以维持，遭受严重伤害的附身者有很小的几率被从躯体中弹出。
+ 
+附身者的属性、技能、法术、抗性和天生能力由他们占据的躯干决定；在附身新躯体后，一定要检查种族能力命令 (<color:keypress>U</color>/<color:keypress>O</color>) 和魔法命令 (<color:keypress>m</color>)。当前的身体也决定了施法属性；例如，新手牧师的附身躯干使用感知，而新手魔法师的附身躯干则依赖智力。
 
-有关兽人的更多详细信息，请参见 <link:Orcs.txt>。
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> -1</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:w> -4</color>        魔法装置    <color:D>极差         </color>
-感知         <color:w> -5</color>        豁免        <color:R>较差         </color>
-敏捷         <color:w> +0</color>        潜行        <color:R>较差         </color>
-体质         <color:w> +0</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> -5</color>        察觉        <color:r>差           </color>
-生命评级      99%       近战        <color:G>优秀         </color>
-基础生命      30        箭术        <color:G>优秀         </color>
-经验值       100%       红外视觉    30'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -4</color>        Disarming   <color:r>糟糕       </color>
+Intelligence <color:w> +0</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -3</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:b>英雄       </color>
+Constitution <color:w> -4</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> -7</color>        Perception  <color:R>贫弱       </color>
+Life Rating   60%       Melee       <color:R>贫弱       </color>
+Base HP       15        Archery     <color:r>糟糕       </color>
+Experience   250%       Infravision 70'
 </style></indent>
-<topic:Troll><color:o>Troll (巨魔)</color>
-巨魔是令人作呕的生物：体型庞大、强壮但愚蠢。它们是出色的战士，但对魔法装置一窍不通。巨魔拥有不可思议的再生能力。
+<topic:戒指><color:o>戒指</color>
+戒指是通过魔法手段活化的有感知的生物。
+ 
+戒指不能穿戴普通装备；相反，它们本身就是一枚被魔法附魔的戒指。戒指拥有一小部分天生能力。由于戒指无法自行移动，它需要诱惑附近的怪物戴上它。魔法戒指往往会腐化它们的主人，随着时间的推移，佩戒者会发现自己的意志已不再属于自己！
+ 
+戒指可以从找到的珠宝（戒指或护身符）中吸收魔法，并通过这种方式获得抗性、属性和额外的法术。戒指没有任何物理攻击能力；相反，它们可以用强大的法术轰击敌人（当然，前提是已经吸收了法术），或者它们可以简单地躺平，让当前的佩戒者替它们战斗。
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +5</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -5</color>        魔法装置    <color:r>差           </color>
-感知         <color:w> -5</color>        豁免        <color:R>较差         </color>
-敏捷         <color:w> -1</color>        潜行        <color:R>较差         </color>
-体质         <color:w> +5</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉        <color:r>差           </color>
-生命评级     112%       近战        <color:g>极佳         </color>
-基础生命      50        箭术        <color:R>较差         </color>
-经验值       150%       红外视觉    50'
+有关戒指的更多详细信息，请参阅 <link:rings.txt>。
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -3</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:v> +4</color>        Device      <color:g>卓越       </color>
+Wisdom       <color:w> +1</color>        Save        <color:y>良好       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:y>极好       </color>
+Constitution <color:w> -1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +3</color>        Perception  <color:R>贫弱       </color>
+Life Rating   85%       Melee       <color:r>糟糕       </color>
+Base HP       10        Archery     <color:r>糟糕       </color>
+Experience   150%       Infravision 50'
 </style></indent>
 </indent>
-<style:heading>不死生物 (Undead)</style>
-  <indent><topic:Lich><color:o>Lich (巫妖)</color>
-巫妖是昔日巫师的不死形态。它们的魔法很强，但战斗技能很弱。作为不死生物，它们能迅速获得对寒冷、毒素和虚空的抗性，并且这些抗性会随着巫妖的进化而增加。
+<style:heading>Orc/Troll/Giant</style>
+  <indent><topic:巨人><color:o>巨人</color>
+Giants are humanoids of immense stature. There are several types of giants. Fire, Frost and Storm giants are elemental giants, and gain elemental resistances, slays and even attacks appropriate for their type. Titans are powerful immortal beings of legend; their attacks often confuse their foes, and they rarely fight alone. Finally, there are the mighty Hrus; they are so strong they can eventually crush the walls in their path, but their magical powers are fairly limited.
  
-巫妖生来就具有魔法能力，并随着进步获得额外的力量；在所有怪物种族中，没有谁能超越大巫妖 (Archlich) 的火力，但要进化到那个阶段可能是一个挑战。智力是它们的主要施法属性。
- 
-巫妖是类人生物，因此使用标准的装备栏；如果它们放弃使用普通武器，可以通过触摸对手来产生各种强大的效果。尽管有这种致命的触碰，近战也永远不会是它们的强项。
+Giants rely on their superior physical stature to pummel their opponents with mighty blows. Against a distant foe, giants are capable of hurling large boulders with devastating effect. Giants use the same equipment slots as most normal player races, and have no innate attacks.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> -3</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:v> +4</color>        魔法装置    <color:b>英雄         </color>
-感知         <color:w> -4</color>        豁免        <color:y>良好         </color>
-敏捷         <color:w> +2</color>        潜行        <color:y>良好         </color>
-体质         <color:w> -1</color>        搜索        <color:y>很好         </color>
-魅力         <color:w> +1</color>        察觉        <color:o>一般         </color>
-生命评级      90%       近战        <color:r>差           </color>
-基础生命      18        箭术        <color:r>差           </color>
-经验值       225%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +8</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> -3</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -3</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> -2</color>        Stealth     <color:r>糟糕       </color>
+Constitution <color:w> +5</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +1</color>        Perception  <color:r>糟糕       </color>
+Life Rating  117%       Melee       <color:b>英雄       </color>
+Base HP       46        Archery     <color:o>一般       </color>
+Experience   200%       Infravision 50'
 </style></indent>
-<topic:Mummy><color:o>Mummy (木乃伊)</color>
-丧尸和木乃伊是所有不死种族中最令人恐惧的存在。邪恶的诅咒是木乃伊的拿手好戏；它们不仅可以诅咒对手，还可以随意诅咒或解除自己装备上的诅咒；并且包裹在它们身上的诅咒越强、越多，它们的魔法力量就越大。当然，它们也不得不应付被诅咒带来的负面效果……
+<topic:兽人><color:o>兽人</color>
+Orcs are Morgoth's creation and the backbone of his armies. They are accustomed to caves and tunnels, and resist darkness but tend to be vulnerable to light. Orcs are ugly, brutish pillagers by reputation and should not expect much love from shopkeepers. Morgoth's spirit lives in orcs and drives them forward, making them hard to frighten. What orcs lack in stealth and subtlety they make up for with their sheer brute strength, and generally have little trouble brushing aside weak enemies like kobolds; yet in the deep dungeons, where the strongest fighters and most powerful magicians reside, orcs are rarely seen.
 
-你以卑微的丧尸化人类形态开始你的不死生命，几乎没有什么诅咒或其它能力供你使用；但很快你就会进化成木乃伊化人类，事情才真正开始有起色。木乃伊的进化有些随机——你可能会发现自己成了一只强壮但愚蠢的尸鬼 (Draugr)，或者是一名狡猾但虚弱的木乃伊巫师 (Mummified sorcerer)——但最终，你将在令人毛骨悚然的终极形态——木乃伊王 (Mummy king)身上将力量与魔法结合在一起。
+有关兽人的更多详细信息，请参阅 <link:Orcs.txt>。
 
-作为坟墓和黑夜的生物，丧尸和木乃伊不需要光就能轻松看清；事实上，携带光源会削弱它们诅咒中的黑暗能量。在近战中，它们更喜欢依赖天生的攻击；装备武器只会分散它们对自己真正战斗技巧的注意力，这仅仅在游戏极早期才是一种可行的进攻选择。
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> -1</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -2</color>        魔法装置    <color:D>极差         </color>
-感知         <color:w> -3</color>        豁免        <color:y>良好         </color>
-敏捷         <color:w> -2</color>        潜行        <color:R>较差         </color>
-体质         <color:w> +0</color>        搜索        <color:R>较差         </color>
-魅力         <color:v> -1</color>        察觉        <color:r>差           </color>
-生命评级     100%       近战        <color:G>优秀         </color>
-基础生命      22        箭术        <color:y>良好         </color>
-经验值       135%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -1</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> -4</color>        Device      <color:D>极差       </color>
+Wisdom       <color:w> -5</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +0</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> -5</color>        Perception  <color:r>糟糕       </color>
+Life Rating   99%       Melee       <color:G>优秀       </color>
+Base HP       30        Archery     <color:G>优秀       </color>
+Experience   100%       Infravision 30'
 </style></indent>
-<topic:Vampire><color:o>Vampire (吸血鬼)</color>
-作为强大的不死生物之一，吸血鬼的景象令人敬畏。然而这种可怕的生物有一个严重的弱点：明亮的阳光是它的克星，它将不得不逃离地表进入地下深处，直到太阳最终落山。作为不死生物，吸血鬼抵抗虚空，并能牢牢掌控自己的生命力；吸血鬼也抵抗寒冷和毒素，黑暗只会让它们有回家的感觉。然而，吸血鬼受到对新鲜血液永不满足的饥渴的折磨，这种饥渴只能通过吸食附近怪物的血来满足。
- 
-随着进化，吸血鬼能获得各种黑暗力量。当然，它们在极早期的阶段就能获得吸血啃咬，因为必须用这种能力去吸食活物。用这种能力杀死人类也是延续吸血鬼种族的一种手段，许多人因此成了真正的黑暗王子的仆从！传闻吸血鬼拥有有限的变形能力和一种强大的、具有催眠效果的凝视。
+<topic:巨魔><color:o>巨魔</color>
+Trolls are disgusting creatures: big, strong and stupid. They make excellent warriors, but are hopeless with magical devices. Trolls have incredible powers of regeneration.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +4</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> +1</color>        魔法装置    <color:G>优秀         </color>
-感知         <color:w> -3</color>        豁免        <color:o>一般         </color>
-敏捷         <color:w> +2</color>        潜行        <color:b>英雄         </color>
-体质         <color:w> -2</color>        搜索        <color:o>一般         </color>
-魅力         <color:v> +4</color>        察觉        <color:o>一般         </color>
-生命评级      96%       近战        <color:G>优秀         </color>
-基础生命      20        箭术        <color:R>较差         </color>
-经验值       250%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +5</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -5</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -5</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> -1</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +5</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  112%       Melee       <color:g>卓越       </color>
+Base HP       50        Archery     <color:R>贫弱       </color>
+Experience   150%       Infravision 50'
 </style></indent>
 </indent>
-<style:heading>其他 (Other)</style>
-  <indent><topic:Pumpkin><color:o>Pumpkin (南瓜)</color>
-由某个脑回路不正常的科学家创造出来，他竟然觉得拥有感知力和嗜血本能的南瓜是个好主意，这些生物最初是顶着南瓜头的人形生物；然而，随着时间的推移，南瓜会膨胀并压碎下面脆弱的树枝身体，只留下一个巨大的滚动果实和无法抑制的杀戮欲望。死亡南瓜缺乏大多数常规的装备槽位，但它们能在体内储存许多光源来弥补这一点。而且，据说最致命南瓜的咬击具有吸血效果……
-
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +1</color>        解除陷阱    <color:r>差           </color>
-智力         <color:w> -2</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> -2</color>        豁免        <color:y>良好         </color>
-敏捷         <color:w> +0</color>        潜行        <color:R>较差         </color>
-体质         <color:w> +1</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> -2</color>        察觉        <color:r>差           </color>
-生命评级     102%       近战        <color:g>极佳         </color>
-基础生命      15        箭术        <color:R>较差         </color>
-经验值       115%       红外视觉    20'
-</style></indent>
-<topic:Xorn><color:o>Xorn (石行兽)</color>
-石行兽是巨大的土元素生物。它们以恐土兽 (Umber Hulk) 的形态开始生命，这是一种长着能切开岩石的巨大下颌和能让敌人困惑的怒目圆睁的怪异生物。在它们进化的这个阶段，它们的身体大致呈人形，可以戴头盔、护身符、斗篷，甚至是一双靴子；然而，一旦恐土兽进一步进化，它就不能再穿戴这些物品了。取而代之的是，成熟的石行兽可以用它的四条粗壮的手臂来装备武器、盾牌、戒指和手套；成年石行兽还能毫不费力地穿透岩石。
+<style:heading>不死生物</style>
+  <indent><topic:巫妖><color:o>巫妖</color>
+Liches are the undead forms of former sorcerers. Their magic is strong, but their fighting skills weak. As undead, they quickly gain resistance to cold, poison and nether, and these resistances increase as the lich evolves.
  
-石行兽没有主动的魔法力量，而是依靠它们在岩石中躲藏的能力以及额外手臂在近战中提供的优势。与大多数战士角色一样，石行兽在杀怪方面非常有效，但在使用高级魔法装置方面有困难。
+Liches are born with magical powers, and gain additional powers as they advance; of all the monster races, none can surpass the firepower of an Archlich, but managing to evolve that far can be a challenge. Intelligence is their primary spell stat.
+ 
+Liches are humanoid, and so use the standard set of equipment items; but should they forgo the use of a normal weapon, they may touch their opponents for various powerful effects. Even with this deadly touch, though, melee will never be their strong suit.
 
-  <indent><style:table><color:G>属性                     技能</color>
-力量         <color:w> +4</color>        解除陷阱    <color:y>良好         </color>
-智力         <color:w> -4</color>        魔法装置    <color:r>差           </color>
-感知         <color:w> -2</color>        豁免        <color:R>较差         </color>
-敏捷         <color:w> -1</color>        潜行        <color:R>较差         </color>
-体质         <color:w> +2</color>        搜索        <color:R>较差         </color>
-魅力         <color:w> -1</color>        察觉        <color:r>差           </color>
-生命评级     104%       近战        <color:y>很好         </color>
-基础生命      25        箭术        <color:r>差           </color>
-经验值       150%       红外视觉    50'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -3</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:v> +4</color>        Device      <color:b>英雄       </color>
+Wisdom       <color:w> -4</color>        Save        <color:y>良好       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:y>良好       </color>
+Constitution <color:w> -1</color>        Searching   <color:y>极好       </color>
+Charisma     <color:w> +1</color>        Perception  <color:o>一般       </color>
+Life Rating   90%       Melee       <color:r>糟糕       </color>
+Base HP       18        Archery     <color:r>糟糕       </color>
+Experience   225%       Infravision 50'
+</style></indent>
+<topic:木乃伊><color:o>木乃伊</color>
+僵尸和木乃伊是所有不死种族中最令人畏惧的存在之一。邪恶诅咒是木乃伊赖以生存的根本；它们不仅能对敌人施加恶咒，还能随意给自己的装备增加或解除诅咒；它们身上缠绕的诅咒越强、越多，其魔力就越强大。当然，它们也必须承受被诅咒的负面影响……
+
+你以卑微的僵尸化人类开始你的不死生涯，几乎没有诅咒或其他能力可用；但很快你就会进化成木乃伊化人类，情况将大有起色。木乃伊的进化在一定程度上是随机的——你可能会发现自己变成了强壮但愚笨的尸鬼，或者是狡猾但虚弱的木乃伊术士——但最终，你将在令人毛骨悚然的最终形态“木乃伊王”中把力量与魔法结合在一起。
+
+作为陵墓和黑夜的生物，僵尸和木乃伊在没有光的情况下也能看得很清楚；事实上，携带光源会削弱它们诅咒的黑暗能量。在近战中，它们更倾向于依赖自身的天生攻击；装备武器只会分散它们真正的战斗技巧，仅在游戏极初期算是一个可行的进攻选择。
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> -1</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -2</color>        Device      <color:D>极差       </color>
+Wisdom       <color:w> -3</color>        Save        <color:y>良好       </color>
+Dexterity    <color:w> -2</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +0</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:v> -1</color>        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:G>优秀       </color>
+Base HP       22        Archery     <color:y>良好       </color>
+Experience   135%       Infravision 50'
+</style></indent>
+<topic:吸血鬼><color:o>吸血鬼</color>
+One of the mightier undead creatures, the Vampire is an awe-inspiring sight. Yet this dread creature has a serious weakness: the bright rays of sun are its bane, and it will need to flee the surface to the deep recesses of earth until the sun finally sets. Being undead, Vampires resist nether and have a firm hold on their life force; vampires also resists cold and poison, and darkness only makes them feel at home. Vampires are, however, susceptible to their perpetual hunger for fresh blood, which can only be satiated by sucking blood from a nearby monster.
+ 
+Vampires gain access to various dark powers as they evolve. Of course, they gain a vampiric bite at a very early stage, as they must use this power to feed on the living. Killing humans with this power is also a means of perpetuating the vampire species, and many are the servants of a true prince of darkness! Vampires are rumored to have limited shapeshifting abilities and a powerful, hypnotic gaze.
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +4</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> +1</color>        Device      <color:G>优秀       </color>
+Wisdom       <color:w> -3</color>        Save        <color:o>一般       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:b>英雄       </color>
+Constitution <color:w> -2</color>        Searching   <color:o>一般       </color>
+Charisma     <color:v> +4</color>        Perception  <color:o>一般       </color>
+Life Rating   96%       Melee       <color:G>优秀       </color>
+Base HP       20        Archery     <color:R>贫弱       </color>
+Experience   250%       Infravision 50'
 </style></indent>
 </indent>
-<topic:Tables><style:heading>表格 1 - 种族属性加成表</style>
+<style:heading>其他</style>
+  <indent><topic:南瓜怪><color:o>南瓜怪</color>
+The creations of some differently normal scientist who thought sentient blood-thirsty pumpkins would be a great idea, these creatures begin their lives as pumpkin-headed humanoids; over time, however, the pumpkin bloats and crushes the frail stick body underneath, leaving just a massive rolling fruit and an unquenchable desire to kill. Death pumpkins lack most normal equipment slots, but make up for it by the many lights they can store within their body. Also, the bites of the deadliest pumpkins are said to be vampiric...
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +1</color>        Disarming   <color:r>糟糕       </color>
+Intelligence <color:w> -2</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> -2</color>        Save        <color:y>良好       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> -2</color>        Perception  <color:r>糟糕       </color>
+Life Rating  102%       Melee       <color:g>卓越       </color>
+Base HP       15        Archery     <color:R>贫弱       </color>
+Experience   115%       Infravision 20'
+</style></indent>
+<topic:索恩><color:o>索恩</color>
+索恩是体型巨大的土元素生物。它们生命之初是土巨怪，这是一种奇异的生物，拥有能切开岩石的巨大下颚和能使敌人困惑的耀眼双目。在进化的这个阶段，它们的身体隐约呈现人形，这允许它们戴头盔、护身符、斗篷甚至一双靴子；然而，一旦土巨怪进一步进化，它就不能再穿戴这些物品了。取而代之的是，成年的索恩可以利用它四条粗壮的手臂来装备武器、盾牌、戒指和手套；成熟的索恩也可以毫不费力地穿过岩石。
+ 
+索恩没有主动的魔法能力，而是依靠它们隐藏在岩石中的能力以及多出的手臂在近战中提供的优势。像大多数战士角色一样，索恩在击杀怪物方面非常有效，但在使用高级魔法装置时会遇到困难。
+
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:w> +4</color>        Disarming   <color:y>良好       </color>
+Intelligence <color:w> -4</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -2</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> -1</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +2</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> -1</color>        Perception  <color:r>糟糕       </color>
+Life Rating  104%       Melee       <color:y>极好       </color>
+Base HP       25        Archery     <color:r>糟糕       </color>
+Experience   150%       Infravision 50'
+</style></indent>
+</indent>
+<topic:Tables><style:heading>表 1 - 种族属性加成表</style>
 <style:table>
 <color:G>            </color> <color:G>STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp  Shop</color>
-蜈蚣         +0   -3   -3   +0   +0   -3   90%  +15  100%  120%
-猎犬         +3   -3   -5   +4   +3   +1  100%  +22  150%  110%
-多头蛇       +1   -2   -2   +2   +3   +0  105%  +45  130%  130%
-蜘蛛         +1   +0   -5   +0   +2   +0  100%  +25  200%  115%
-天使         +2   +2   +5   +2   +2   +4   99%  +26  325%   90%
-眼魔         -3   +7   +0   +2   +0   +1  100%  +20  200%  140%
-龙类         +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
-元素         +5   -5   -5   -4   +6   +0  120%  +30  170%  120%
-能量漩涡     +2   -5   -5   +4   +2   +0   95%  +25  125%  120%
-魔像         +4   -4   -4   -3   +4   +2  108%  +50  200%  130%
-果冻         +3   -7   -7   +2   +3   -1   99%  +40  150%  125%
-跨维度生物   -3   -3   -3   -3   -3   +8   95%   +0  150%  120%
-矮妖         -6   +1   +1   +7   -2   -2   80%  +15  150%   85%
-死亡之剑     +4   -5   -5   +1   +4   +0  100%  +30  150%  110%
-肮脏破布     -1   -1   -1   -1   -2   -4   98%  +20  110%  120%
-模仿者       +0   +1   -1   +2   +0   -1  108%  +15  250%  110%
-附身者       -4   +0   -3   +0   -4   -7   60%  +15  250%  110%
-戒指         -3   +4   +1   +0   -1   +3   85%  +10  150%  110%
-巨人         +8   -3   -3   -2   +5   +1  117%  +46  200%  130%
-兽人         -1   -4   -5   +0   +0   -5   99%  +30  100%  140%
-巨魔         +5   -5   -5   -1   +5   +0  112%  +50  150%  135%
-巫妖         -3   +4   -4   +2   -1   +1   90%  +18  225%  135%
-木乃伊       -1   -2   -3   -2   +0   -1  100%  +22  135%  120%
-吸血鬼       +4   +1   -3   +2   -2   +4   96%  +20  250%  130%
-南瓜         +1   -2   -2   +0   +1   -2  102%  +15  115%  110%
-石行兽       +4   -4   -2   -1   +2   -1  104%  +25  150%  120%
+蜈蚣        +0   -3   -3   +0   +0   -3   90%  +15  100%  120%
+猎犬        +3   -3   -5   +4   +3   +1  100%  +22  150%  110%
+多头蛇     +1   -2   -2   +2   +3   +0  105%  +45  130%  130%
+蜘蛛        +1   +0   -5   +0   +2   +0  100%  +25  200%  115%
+天使        +2   +2   +5   +2   +2   +4   99%  +26  325%   90%
+眼魔        -3   +7   +0   +2   +0   +1  100%  +20  200%  140%
+龙           +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
+元素生物  +5   -5   -5   -4   +6   +0  120%  +30  170%  120%
+漩涡        +2   -5   -5   +4   +2   +0   95%  +25  125%  120%
+魔像        +4   -4   -4   -3   +4   +2  108%  +50  200%  130%
+胶质怪     +3   -7   -7   +2   +3   -1   99%  +40  150%  125%
+库尔苏格  -3   -3   -3   -3   -3   +8   95%   +0  150%  120%
+小妖精     -6   +1   +1   +7   -2   -2   80%  +15  150%   85%
+死亡之剑  +4   -5   -5   +1   +4   +0  100%  +30  150%  110%
+破布        -1   -1   -1   -1   -2   -4   98%  +20  110%  120%
+模仿者     +0   +1   -1   +2   +0   -1  108%  +15  250%  110%
+附身者     -4   +0   -3   +0   -4   -7   60%  +15  250%  110%
+戒指        -3   +4   +1   +0   -1   +3   85%  +10  150%  110%
+巨人        +8   -3   -3   -2   +5   +1  117%  +46  200%  130%
+兽人        -1   -4   -5   +0   +0   -5   99%  +30  100%  140%
+巨魔        +5   -5   -5   -1   +5   +0  112%  +50  150%  135%
+巫妖        -3   +4   -4   +2   -1   +1   90%  +18  225%  135%
+木乃伊     -1   -2   -3   -2   +0   -1  100%  +22  135%  120%
+吸血鬼     +4   +1   -3   +2   -2   +4   96%  +20  250%  130%
+南瓜怪     +1   -2   -2   +0   +1   -2  102%  +15  115%  110%
+索恩        +4   -4   -2   -1   +2   -1  104%  +25  150%  120%
 
 </style>
-<topic:Skills1><style:heading>表格 2 - 种族技能加成表 I</style>
+<topic:Skills1><style:heading>表 2 - 种族技能加成表 I</style>
 <style:table>
-             <color:w>解除陷阱      使用装置      豁免          潜行         </color>
-蜈蚣         <color:y>良好         </color> <color:o>一般         </color> <color:o>一般         </color> <color:y>很好         </color>
-猎犬         <color:R>较差         </color> <color:r>差           </color> <color:R>较差         </color> <color:g>极佳         </color>
-多头蛇       <color:y>良好         </color> <color:R>较差         </color> <color:o>一般         </color> <color:R>较差         </color>
-蜘蛛         <color:R>较差         </color> <color:y>良好         </color> <color:o>一般         </color> <color:G>优秀         </color>
-天使         <color:R>较差         </color> <color:G>优秀         </color> <color:g>极佳         </color> <color:o>一般         </color>
-眼魔         <color:o>一般         </color> <color:v>琥珀[10]     </color> <color:g>极佳         </color> <color:b>英雄         </color>
-龙类         <color:o>一般         </color> <color:y>良好         </color> <color:o>一般         </color> <color:R>较差         </color>
-元素         <color:o>一般         </color> <color:r>差           </color> <color:y>很好         </color> <color:y>很好         </color>
-能量漩涡     <color:R>较差         </color> <color:r>差           </color> <color:g>极佳         </color> <color:y>良好         </color>
-魔像         <color:o>一般         </color> <color:r>差           </color> <color:g>极佳         </color> <color:r>差           </color>
-果冻         <color:y>良好         </color> <color:r>差           </color> <color:y>良好         </color> <color:g>极佳         </color>
-跨维度生物   <color:o>一般         </color> <color:b>英雄         </color> <color:y>很好         </color> <color:g>极佳         </color>
-矮妖         <color:y>良好         </color> <color:v>琥珀[2]      </color> <color:y>良好         </color> <color:v>琥珀[10]     </color>
-死亡之剑     <color:y>良好         </color> <color:R>较差         </color> <color:y>很好         </color> <color:y>良好         </color>
-肮脏破布     <color:y>良好         </color> <color:R>较差         </color> <color:y>很好         </color> <color:y>良好         </color>
-模仿者       <color:R>较差         </color> <color:y>良好         </color> <color:o>一般         </color> <color:R>较差         </color>
-附身者       <color:r>差           </color> <color:r>差           </color> <color:R>较差         </color> <color:b>英雄         </color>
-戒指         <color:o>一般         </color> <color:g>极佳         </color> <color:y>良好         </color> <color:y>很好         </color>
-巨人         <color:o>一般         </color> <color:r>差           </color> <color:R>较差         </color> <color:r>差           </color>
-兽人         <color:o>一般         </color> <color:D>极差         </color> <color:R>较差         </color> <color:R>较差         </color>
-巨魔         <color:R>较差         </color> <color:r>差           </color> <color:R>较差         </color> <color:R>较差         </color>
-巫妖         <color:o>一般         </color> <color:b>英雄         </color> <color:y>良好         </color> <color:y>良好         </color>
-木乃伊       <color:R>较差         </color> <color:D>极差         </color> <color:y>良好         </color> <color:R>较差         </color>
-吸血鬼       <color:R>较差         </color> <color:G>优秀         </color> <color:o>一般         </color> <color:b>英雄         </color>
-南瓜         <color:r>差           </color> <color:R>较差         </color> <color:y>良好         </color> <color:R>较差         </color>
-石行兽       <color:y>良好         </color> <color:r>差           </color> <color:R>较差         </color> <color:R>较差         </color>
+             <color:w>解除陷阱  使用装置  豁免        潜行       </color>
+蜈蚣       <color:y>良好       </color> <color:o>一般       </color> <color:o>一般       </color> <color:y>极好       </color>
+猎犬       <color:R>贫弱       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:g>卓越       </color>
+多头蛇    <color:y>良好       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+蜘蛛       <color:R>贫弱       </color> <color:y>良好       </color> <color:o>一般       </color> <color:G>优秀       </color>
+天使       <color:R>贫弱       </color> <color:G>优秀       </color> <color:g>卓越       </color> <color:o>一般       </color>
+眼魔       <color:o>一般       </color> <color:v>琥珀[10]   </color> <color:g>卓越       </color> <color:b>英雄       </color>
+龙          <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+元素生物 <color:o>一般       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:y>极好       </color>
+漩涡       <color:R>贫弱       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:y>良好       </color>
+魔像       <color:o>一般       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:r>糟糕       </color>
+胶质怪    <color:y>良好       </color> <color:r>糟糕       </color> <color:y>良好       </color> <color:g>卓越       </color>
+库尔苏格 <color:o>一般       </color> <color:b>英雄       </color> <color:y>极好       </color> <color:g>卓越       </color>
+小妖精    <color:y>良好       </color> <color:v>琥珀[2]    </color> <color:y>良好       </color> <color:v>琥珀[10]   </color>
+死亡之剑 <color:y>良好       </color> <color:R>贫弱       </color> <color:y>极好       </color> <color:y>良好       </color>
+破布       <color:y>良好       </color> <color:R>贫弱       </color> <color:y>极好       </color> <color:y>良好       </color>
+模仿者    <color:R>贫弱       </color> <color:y>良好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+附身者    <color:r>糟糕       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:b>英雄       </color>
+戒指       <color:o>一般       </color> <color:g>卓越       </color> <color:y>良好       </color> <color:y>极好       </color>
+巨人       <color:o>一般       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:r>糟糕       </color>
+兽人       <color:o>一般       </color> <color:D>极差       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
+巨魔       <color:R>贫弱       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
+巫妖       <color:o>一般       </color> <color:b>英雄       </color> <color:y>良好       </color> <color:y>良好       </color>
+木乃伊    <color:R>贫弱       </color> <color:D>极差       </color> <color:y>良好       </color> <color:R>贫弱       </color>
+吸血鬼    <color:R>贫弱       </color> <color:G>优秀       </color> <color:o>一般       </color> <color:b>英雄       </color>
+南瓜怪    <color:r>糟糕       </color> <color:R>贫弱       </color> <color:y>良好       </color> <color:R>贫弱       </color>
+索恩       <color:y>良好       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
 
 </style>
-<topic:Skills2><style:heading>表格 3 - 种族技能加成表 II</style>
+<topic:Skills2><style:heading>表 3 - 种族技能加成表 II</style>
 <style:table>
-             <color:w>搜索          察觉          近战          箭术          红外 </color>
-蜈蚣         <color:r>差           </color> <color:r>差           </color> <color:y>良好         </color> <color:D>极差         </color>   50'
-猎犬         <color:R>较差         </color> <color:R>较差         </color> <color:y>很好         </color> <color:r>差           </color>   50'
-多头蛇       <color:r>差           </color> <color:r>差           </color> <color:y>良好         </color> <color:r>差           </color>   50'
-蜘蛛         <color:R>较差         </color> <color:R>较差         </color> <color:G>优秀         </color> <color:r>差           </color>   50'
-天使         <color:R>较差         </color> <color:R>较差         </color> <color:y>良好         </color> <color:o>一般         </color>   30'
-眼魔         <color:b>英雄         </color> <color:b>英雄         </color> <color:o>一般         </color> <color:r>差           </color>   80'
-龙类         <color:o>一般         </color> <color:o>一般         </color> <color:G>优秀         </color> <color:r>差           </color>   50'
-元素         <color:o>一般         </color> <color:R>较差         </color> <color:b>英雄         </color> <color:r>差           </color>   50'
-能量漩涡     <color:r>差           </color> <color:r>差           </color> <color:G>优秀         </color> <color:D>极差         </color>    0'
-魔像         <color:r>差           </color> <color:r>差           </color> <color:b>英雄         </color> <color:R>较差         </color>   50'
-果冻         <color:R>较差         </color> <color:r>差           </color> <color:b>英雄         </color> <color:r>差           </color>    0'
-跨维度生物   <color:R>较差         </color> <color:o>一般         </color> <color:D>极差         </color> <color:D>极差         </color>   50'
-矮妖         <color:o>一般         </color> <color:R>较差         </color> <color:o>一般         </color> <color:o>一般         </color>   50'
-死亡之剑     <color:R>较差         </color> <color:r>差           </color> <color:y>很好         </color> <color:r>差           </color>   30'
-肮脏破布     <color:R>较差         </color> <color:r>差           </color> <color:y>良好         </color> <color:r>差           </color>   20'
-模仿者       <color:R>较差         </color> <color:R>较差         </color> <color:y>很好         </color> <color:G>优秀         </color>    0'
-附身者       <color:R>较差         </color> <color:R>较差         </color> <color:R>较差         </color> <color:r>差           </color>   70'
-戒指         <color:R>较差         </color> <color:R>较差         </color> <color:r>差           </color> <color:r>差           </color>   50'
-巨人         <color:R>较差         </color> <color:r>差           </color> <color:b>英雄         </color> <color:o>一般         </color>   50'
-兽人         <color:R>较差         </color> <color:r>差           </color> <color:G>优秀         </color> <color:G>优秀         </color>   30'
-巨魔         <color:R>较差         </color> <color:r>差           </color> <color:g>极佳         </color> <color:R>较差         </color>   50'
-巫妖         <color:y>很好         </color> <color:o>一般         </color> <color:r>差           </color> <color:r>差           </color>   50'
-木乃伊       <color:R>较差         </color> <color:r>差           </color> <color:G>优秀         </color> <color:y>良好         </color>   50'
-吸血鬼       <color:o>一般         </color> <color:o>一般         </color> <color:G>优秀         </color> <color:R>较差         </color>   50'
-南瓜         <color:R>较差         </color> <color:r>差           </color> <color:g>极佳         </color> <color:R>较差         </color>   20'
-石行兽       <color:R>较差         </color> <color:r>差           </color> <color:y>很好         </color> <color:r>差           </color>   50'
+             <color:w>搜索        察觉        近战        箭术        红外</color>
+蜈蚣       <color:r>糟糕       </color> <color:r>糟糕       </color> <color:y>良好       </color> <color:D>极差       </color>   50'
+猎犬       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>极好       </color> <color:r>糟糕       </color>   50'
+多头蛇    <color:r>糟糕       </color> <color:r>糟糕       </color> <color:y>良好       </color> <color:r>糟糕       </color>   50'
+蜘蛛       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:G>优秀       </color> <color:r>糟糕       </color>   50'
+天使       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color> <color:o>一般       </color>   30'
+眼魔       <color:b>英雄       </color> <color:b>英雄       </color> <color:o>一般       </color> <color:r>糟糕       </color>   80'
+龙          <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:r>糟糕       </color>   50'
+元素生物 <color:o>一般       </color> <color:R>贫弱       </color> <color:b>英雄       </color> <color:r>糟糕       </color>   50'
+漩涡       <color:r>糟糕       </color> <color:r>糟糕       </color> <color:G>优秀       </color> <color:D>极差       </color>    0'
+魔像       <color:r>糟糕       </color> <color:r>糟糕       </color> <color:b>英雄       </color> <color:R>贫弱       </color>   50'
+胶质怪    <color:R>贫弱       </color> <color:r>糟糕       </color> <color:b>英雄       </color> <color:r>糟糕       </color>    0'
+库尔苏格 <color:R>贫弱       </color> <color:o>一般       </color> <color:D>极差       </color> <color:D>极差       </color>   50'
+小妖精    <color:o>一般       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:o>一般       </color>   50'
+死亡之剑 <color:R>贫弱       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:r>糟糕       </color>   30'
+破布       <color:R>贫弱       </color> <color:r>糟糕       </color> <color:y>良好       </color> <color:r>糟糕       </color>   20'
+模仿者    <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>极好       </color> <color:G>优秀       </color>    0'
+附身者    <color:R>贫弱       </color> <color:R>贫弱       </color> <color:R>贫弱       </color> <color:r>糟糕       </color>   70'
+戒指       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:r>糟糕       </color> <color:r>糟糕       </color>   50'
+巨人       <color:R>贫弱       </color> <color:r>糟糕       </color> <color:b>英雄       </color> <color:o>一般       </color>   50'
+兽人       <color:R>贫弱       </color> <color:r>糟糕       </color> <color:G>优秀       </color> <color:G>优秀       </color>   30'
+巨魔       <color:R>贫弱       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:R>贫弱       </color>   50'
+巫妖       <color:y>极好       </color> <color:o>一般       </color> <color:r>糟糕       </color> <color:r>糟糕       </color>   50'
+木乃伊    <color:R>贫弱       </color> <color:r>糟糕       </color> <color:G>优秀       </color> <color:y>良好       </color>   50'
+吸血鬼    <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:R>贫弱       </color>   50'
+南瓜怪    <color:R>贫弱       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:R>贫弱       </color>   20'
+索恩       <color:R>贫弱       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:r>糟糕       </color>   50'
 
 </style>
 
 
-<color:s>Automatically generated for FrogComposband 7.2.salmiak.</color>
+<color:s>自动生成于 FrogComposband 7.4。</color>

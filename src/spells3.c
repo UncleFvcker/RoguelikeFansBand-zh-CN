@@ -3648,21 +3648,25 @@ void print_spells(int target_spell, byte *spells, int num, rect_t display, int u
             line_attr = TERM_L_GREEN;
         }
 
-        /* Dump the spell --(-- */
+        c_put_str(line_attr, out_val, display.y + i + 1, display.x);
+
+        /* Draw columns directly so UTF-8 spell names don't disturb alignment. */
         if (use_realm == REALM_HISSATSU)
         {
-            strcat(out_val, format("%-25s %3d %3d",
-                do_spell(use_realm, spell, SPELL_NAME),
-                vaikeustaso, need_mana));
+            Term_putstr(display.x + 5, display.y + i + 1, 23, line_attr,
+                do_spell(use_realm, spell, SPELL_NAME));
+            c_put_str(line_attr, format("%3d %3d", vaikeustaso, need_mana),
+                display.y + i + 1, display.x + 29);
         }
         else
         {
-            strcat(out_val, format("%-25s%c%-4s %3d %3d %3d%% %s",
-                do_spell(use_realm, spell, SPELL_NAME),
-                (max ? '!' : ' '), ryakuji,
-                vaikeustaso, need_mana, spell_chance(spell, use_realm), comment));
+            Term_putstr(display.x + 5, display.y + i + 1, 23, line_attr,
+                do_spell(use_realm, spell, SPELL_NAME));
+            c_put_str(line_attr, format("%c%-4s %3d %3d %3d%% %s",
+                    (max ? '!' : ' '), ryakuji,
+                    vaikeustaso, need_mana, spell_chance(spell, use_realm), comment),
+                display.y + i + 1, display.x + 29);
         }
-        c_put_str(line_attr, out_val, display.y + i + 1, display.x);
     }
 
     /* Clear the bottom line */

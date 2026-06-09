@@ -1,225 +1,216 @@
-Rune-Knights
-
-A large part of playing as a Rune-Knight involves the attachment of 
-mystical runes of power to various pieces of equipment. Each type of 
-rune grants some special thematic abilities; these abilities will vary 
-slightly depending on the type of object to which the rune is affixed. 
-Generally, runes are more powerful when attached to body armor than 
-when attached to helmets, gloves or shields. Since attaching a rune 
-generally consumes all of your mana and rune-knights do not regenerate 
-mana normally, trying to figure things out by trial and error would be 
-time-consuming and lead to suboptimal rune placement. Note that you can 
-only attach a single rune to any given object, and cannot remove or 
-change that rune once it has been added, although nothing prevents you 
-from adding the same rune to multiple objects.
-
-The rune cheat-sheet below is a bit of a spoiler, but most players are 
-happy to play with this information handy.
-
-Equipment/Inventory Runes by Type
-
-In this section, each rune is displayed along with each type of object 
-to which it may be affixed; thus, you may see what each rune does at a 
-glance, and decide where to use it best.
-
-Absorption
-Melee Weapons L1  Magic Resistance; Mana Absorption
-Shields       L1  Magic Resistance; Mana Absorption
-Body Armor    L1  Magic Resistance; Mana Absorption
-
-Protection
-Shields       L5  AC Bonus; Protection from Corrosion
-Body Armor    L5  AC Bonus; Protection from Corrosion
-Helmets       L5  AC Bonus; Protection from Corrosion
-Cloaks        L5  AC Bonus; Protection from Corrosion
-Gloves        L5  AC Bonus; Protection from Corrosion
-Boots         L5  AC Bonus; Protection from Corrosion
-
-Regeneration
-Body Armor    L7  Regeneration
-Cloaks        L7  Regeneration
-
-Fire
-Melee Weapons L9  Flame Tongue
-Shields       L9  Resist Fire
-Body Armor    L9  Resist Fire; Fiery Aura
-Cloaks        L9  Fiery Aura
-Lights        L9  Fiery Aura
-Gloves        L45 Flame Tongue
-
-Air
-Melee Weapons L40 +0.75 Attacks
-Cloaks        L11 Levitation
-Boots         L11 Levitation
-
-Water
-Melee Weapons L13 Acid Brand
-Shields       L13 Resist Acid
-Body Armor    L13 Resist Acid and Stunning
-Cloaks        L13 Resist Acid
-Gloves        L45 Acid Brand
-
-Light
-Helmets       L15 Resist Light
-Lights        L15 Resist Light
-
-Shadow
-Shields       L17 Resist Darkness
-Body Armor    L17 Resist Darkness; +5L/50 Stealth
-Helmets       L17 Resist Darkness
-Cloaks        L17 +5L/50 Stealth
-
-Earth
-Melee Weapons L35 Vorpal
-Shields       L19 Resist Shards
-Body Armor    L19 Resist Shards; Aura of Shards
-Cloaks        L19 Aura of Shards
-
-Understanding
-Helmets       L21 +2 INT; Easy Identify
-Lights        L21 +1 INT
-
-Preservation
-If this rune is carried in your pack, the chance of items in your pack 
-being destroyed by elemental attacks is cut to half.
-
-Haste
-Gloves        L25 +2 DEX
-Boots         L25 +3L/50 Speed
-
-Seeing
-Helmets       L27 Resist Blindness; See Invisible
-Lights        L27 Resist Blindness
-
-Life
-Shields       L29 Hold Life
-Body Armor    L29 Hold Life; +1 CON
-Lights        L29 Hold Life
-
-Stability
-Body Armor    L31 Resist Nexus, Chaos and Disenchantment
-Helmets       L31 Resist Nexus
-Cloaks        L31 Resist Nexus
-Boots         L31 Resist Nexus
-
-Reflection
-Shields       L33 Reflection
-
-Death
-Melee Weapons L35 Vampiric
-Shields       L35 Resist Nether
-Body Armor    L35 Resist Nether and Poison
-Helmets       L35 Resist Nether
-
-Mind
-Helmets       L37 +2 INT; Sustain INT; Telepathy
-Lights        L37 Telepathy
-
-Might
-Body Armor    L39 +2 STR, DEX, CON; Sustain STR, DEX, CON
-Helmets       L39 +2 STR, CON
-
-Destruction
-Melee Weapons L41 +2 Damage Dice
-Gloves        L41 Slaying
-
-Good Fortune
-If this rune is carried in your pack, you will be blessed with good 
-luck. This grants increased odds of finding excellent and special 
-items. The good-luck effect is similar to the White Aura mutation and 
-the Lucky personality, and does not stack with them.
-
-Immortality
-Shields       L45 Resist Time
-Body Armor    L45 Resist Time; Hold Life; Sustain Stats
-Helmets       L45 Resist Time
-Cloaks        L45 Resist Time
-
-Runes by Equipment Slot
-
-In this section, the various runes are grouped according to equipment 
-slot. This will enable you to see at a glance which types of runes may 
-be used on which types of objects. Hopefully, this will assist you in 
-planning the ultimate allocation of power.
-
-Melee Weapons
-Absorption    L1  Magic Resistance; Mana Absorption
-Fire          L9  Flame Tongue
-Water         L13 Acid Brand
-Earth         L35 Vorpal
-Death         L35 Vampiric
-Air           L40 +0.75 Attacks
-Destruction   L41 +2 Damage Dice
-
-Shields
-Absorption    L1  Magic Resistance; Mana Absorption
-Protection    L5  AC Bonus; Protection from Corrosion
-Fire          L9  Resist Fire
-Water         L13 Resist Acid
-Shadow        L17 Resist Darkness
-Earth         L19 Resist Shards
-Life          L29 Hold Life
-Reflection    L33 Reflection
-Death         L35 Resist Nether
-Immortality   L45 Resist Time
-
-Body Armor
-Absorption    L1  Magic Resistance; Mana Absorption
-Protection    L5  AC Bonus; Protection from Corrosion
-Regeneration  L7  Regeneration
-Fire          L9  Resist Fire; Fiery Aura
-Water         L13 Resist Acid and Stunning
-Shadow        L17 Resist Darkness; Stealth
-Earth         L19 Resist Shards; Aura of Shards
-Life          L29 Hold Life; +1 CON
-Stability     L31 Resist Nexus, Chaos and Disenchantment
-Death         L35 Resist Nether and Poison
-Might         L39 +2 STR, DEX, CON; Sustain STR, DEX, CON
-Immortality   L45 Resist Time; Hold Life; Sustain All Stats
-
-Helmet
-Protection    L5  AC Bonus; Protection from Corrosion
-Light         L15 Resist Light
-Shadow        L17 Resist Darkness
-Understanding L21 +2 INT; Easy Identify
-Seeing        L27 Resist Blindness; See Invisible
-Stability     L31 Resist Nexus
-Death         L35 Resist Nether
-Mind          L37 +2 INT; Sustain Int; Telepathy
-Might         L39 +2 STR, CON
-Immortality   L45 Resist Time
-
-Cloak
-Protection    L5  AC Bonus; Protection from Corrosion
-Regeneration  L7  Regeneration
-Fire          L9  Fiery Aura
-Air           L11 Levitation
-Water         L13 Resist Acid
-Shadow        L17 Stealth
-Earth         L19 Aura of Shards
-Stability     L31 Resist Nexus
-Immortality   L45 Resist Time
-
-Gloves
-Protection    L5  AC Bonus; Protection from Corrosion
-Haste         L25 +2 DEX
-Destruction   L41 Slaying
-Fire          L45 Flame Tongue
-Water         L45 Acid Brand
-
-Boots
-Protection    L5  AC Bonus; Protection from Corrosion
-Air           L11 Levitation
-Haste         L25 +3L/50 Speed
-Stability     L31 Resist Nexus
-
-Lights
-Fire          L9  Fiery Aura
-Light         L15 Resist Light
-Understanding L21 +1 INT
-Seeing        L27 Resist Blindness
-Life          L29 Hold Life
-Mind          L37 Telepathy
+符文骑士 (Rune-Knights)
 
 
+扮演符文骑士的很大一部分乐趣在于将神秘的力量符文附着在各种装备上。每种类
+型的符文都能赋予特定的主题能力；这些能力会根据符文所附着的物品类型而略有
+不同。通常来说，符文附着在身体护甲上比附着在头盔、手套或盾牌上更强大。由
+于附着符文通常会消耗你所有的法力，而符文骑士的法力不会自然回复，因此试图
+通过不断试错来摸索将会非常耗时，并导致符文搭配不理想。请注意，你只能在任
+何给定物品上附着一枚符文，一旦添加便无法移除或更改，不过游戏并不限制你将
+相同的符文附加到多件不同的物品上。
 
+
+下方的符文小抄有点剧透成分，但大多数玩家都很乐意手边备有这些信息来进行游
+戏。
+
+按类型分类的装备/物品栏符文
+
+
+在本节中，每种符文都与它可以附着的物品类型一起显示；因此，你可以一目了然
+地看到每种符文的作用，并决定用在哪里最好。
+
+吸收 (Absorption)
+近战武器      L1  魔法抗性; 吸收法力
+盾牌          L1  魔法抗性; 吸收法力
+身体护甲      L1  魔法抗性; 吸收法力
+
+保护 (Protection)
+盾牌          L5  护甲加成; 防止酸液腐蚀
+身体护甲      L5  护甲加成; 防止酸液腐蚀
+头盔          L5  护甲加成; 防止酸液腐蚀
+披风          L5  护甲加成; 防止酸液腐蚀
+手套          L5  护甲加成; 防止酸液腐蚀
+鞋子          L5  护甲加成; 防止酸液腐蚀
+
+恢复 (Regeneration)
+身体护甲      L7  生命回复
+披风          L7  生命回复
+
+火 (Fire)
+近战武器      L9  火焰烙印
+盾牌          L9  抗火
+身体护甲      L9  抗火; 火焰光环
+披风          L9  火焰光环
+光源          L9  火焰光环
+手套          L45 火焰烙印
+
+气 (Air)
+近战武器      L40 +0.75 攻击次数
+披风          L11 漂浮
+鞋子          L11 漂浮
+
+水 (Water)
+近战武器      L13 酸液烙印
+盾牌          L13 抗酸
+身体护甲      L13 抗酸与抗震慑
+披风          L13 抗酸
+手套          L45 酸液烙印
+
+光 (Light)
+头盔          L15 抗光
+光源          L15 抗光
+
+影 (Shadow)
+盾牌          L17 抗暗
+身体护甲      L17 抗暗; +5L/50 潜行
+头盔          L17 抗暗
+披风          L17 +5L/50 潜行
+
+土 (Earth)
+近战武器      L35 锋锐
+盾牌          L19 抗碎片
+身体护甲      L19 抗碎片; 碎片光环
+披风          L19 碎片光环
+
+理解 (Understanding)
+头盔          L21 +2 智力; 简易鉴定
+光源          L21 +1 智力
+
+保存 (Preservation)
+如果该符文存放在背包中，背包内物品被元素攻击摧毁的几率将减半。
+
+极速 (Haste)
+手套          L25 +2 敏捷
+鞋子          L25 +3L/50 速度
+
+洞察 (Seeing)
+头盔          L27 抗盲; 拾破隐形
+光源          L27 抗盲
+
+生命 (Life)
+盾牌          L29 维持生命
+身体护甲      L29 维持生命; +1 体质
+光源          L29 维持生命
+
+稳定 (Stability)
+身体护甲      L31 抗时空、抗混沌与抗解除附魔
+头盔          L31 抗时空
+披风          L31 抗时空
+鞋子          L31 抗时空
+
+反射 (Reflection)
+盾牌          L33 反射
+
+死亡 (Death)
+近战武器      L35 吸血
+盾牌          L35 抗虚冥
+身体护甲      L35 抗虚冥与抗毒
+头盔          L35 抗虚冥
+
+心灵 (Mind)
+头盔          L37 +2 智力; 维持智力; 心灵感应
+光源          L37 心灵感应
+
+威力 (Might)
+身体护甲      L39 +2 力量、敏捷、体质; 维持力量、敏捷、体质
+头盔          L39 +2 力量、体质
+
+毁灭 (Destruction)
+近战武器      L41 +2 伤害骰
+手套          L41 杀戮
+
+好运 (Good Fortune)
+
+如果该符文存放在背包中，你将受到好运的祝福。这会增加找到优秀和特殊物品的
+几率。该好运效果类似于“白色光环”变异和“幸运”性格，且不与它们叠加。
+
+不朽 (Immortality)
+盾牌          L45 抗时间
+身体护甲      L45 抗时间; 维持生命; 维持所有属性
+头盔          L45 抗时间
+披风          L45 抗时间
+
+按装备部位分类的符文
+
+
+在本节中，各种符文根据装备部位进行了分组。这将使你一目了然地看到哪些类型
+的符文可以用于哪些类型的物品。希望这能帮助你规划出力量的终极分配方案。
+
+近战武器
+吸收           L1  魔法抗性; 吸收法力
+火             L9  火焰烙印
+水             L13 酸液烙印
+土             L35 锋锐
+死亡           L35 吸血
+气             L40 +0.75 攻击次数
+毁灭           L41 +2 伤害骰
+
+盾牌
+吸收           L1  魔法抗性; 吸收法力
+保护           L5  护甲加成; 防止酸液腐蚀
+火             L9  抗火
+水             L13 抗酸
+影             L17 抗暗
+土             L19 抗碎片
+生命           L29 维持生命
+反射           L33 反射
+死亡           L35 抗虚冥
+不朽           L45 抗时间
+
+身体护甲
+吸收           L1  魔法抗性; 吸收法力
+保护           L5  护甲加成; 防止酸液腐蚀
+恢复           L7  生命回复
+火             L9  抗火; 火焰光环
+水             L13 抗酸与抗震慑
+影             L17 抗暗; 潜行
+土             L19 抗碎片; 碎片光环
+生命           L29 维持生命; +1 体质
+稳定           L31 抗时空、抗混沌与抗解除附魔
+死亡           L35 抗虚冥与抗毒
+威力           L39 +2 力量、敏捷、体质; 维持力量、敏捷、体质
+不朽           L45 抗时间; 维持生命; 维持所有属性
+
+头盔
+保护           L5  护甲加成; 防止酸液腐蚀
+光             L15 抗光
+影             L17 抗暗
+理解           L21 +2 智力; 简易鉴定
+洞察           L27 抗盲; 拾破隐形
+稳定           L31 抗时空
+死亡           L35 抗虚冥
+心灵           L37 +2 智力; 维持智力; 心灵感应
+威力           L39 +2 力量、体质
+不朽           L45 抗时间
+
+披风
+保护           L5  护甲加成; 防止酸液腐蚀
+恢复           L7  生命回复
+火             L9  火焰光环
+气             L11 漂浮
+水             L13 抗酸
+影             L17 潜行
+土             L19 碎片光环
+稳定           L31 抗时空
+不朽           L45 抗时间
+
+手套
+保护           L5  护甲加成; 防止酸液腐蚀
+极速           L25 +2 敏捷
+毁灭           L41 杀戮
+火             L45 火焰烙印
+水             L45 酸液烙印
+
+鞋子
+保护           L5  护甲加成; 防止酸液腐蚀
+气             L11 漂浮
+极速           L25 +3L/50 速度
+稳定           L31 抗时空
+
+光源
+火             L9  火焰光环
+光             L15 抗光
+理解           L21 +1 智力
+洞察           L27 抗盲
+生命           L29 维持生命
+心灵           L37 心灵感应

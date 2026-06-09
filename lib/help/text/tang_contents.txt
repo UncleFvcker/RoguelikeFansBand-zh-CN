@@ -1,19 +1,18 @@
-The Newbie Guide: A Tutorial and Survival Guide
+新手指南：教程与生存指南 (The Newbie Guide: A Tutorial and Survival 
+Guide)
 
-Please choose one of the following sections:
+请选择以下小节之一：
 
-    [a] Overview
-    [b] Creating a Character
-    [c] Equipping for Danger
-    [d] My First Trip Down
-    [e] Tidbits
-    [f] On Weapons and Multiple Blows
-    [g] On Armor and Resistance
-    [h] On Skills
-    [i] On Important Magical Items
-    [j] On Weapons, Armor and Slays
-    [k] On Dungeon Exploration
+    [a] 概述 (Overview)
+    [b] 创建角色 (Creating a Character)
+    [c] 为危险整装待发 (Equipping for Danger)
+    [d] 我的首次下潜 (My First Trip Down)
+    [e] 小贴士 (Tidbits)
+    [f] 关于武器和多次攻击 (On Weapons and Multiple Blows)
+    [g] 关于护甲和抗性 (On Armor and Resistance)
+    [h] 关于技能 (On Skills)
+    [i] 关于重要魔法物品 (On Important Magical Items)
+    [j] 关于武器、护甲和杀戮词缀 (On Weapons, Armor and Slays)
+    [k] 关于地下城探索 (On Dungeon Exploration)
 
-    (?) Help System Commands
-
-
+    (?) 帮助系统命令 (Help System Commands)

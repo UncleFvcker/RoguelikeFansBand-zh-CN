@@ -1,31 +1,29 @@
-Equipment Properties
+装备属性 (Equipment Properties)
 
-    This help file should be considered reference material. 
-    There is no need to read it before starting play, and 
-    it may contain spoilers about items you have not seen.
+    
+    本帮助文件应被视为参考资料。在开始游玩之前没有必要阅读它
+    ，并且它可能包含有关你尚未见过的物品的剧透。
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    [a] Overview of Equipment Properties
-    [b] Basic Properties
-      [c] Damage Dice
-      [d] Damage Multiplier
-      [e] Combat Bonuses
-      [f] Armor Class
-      [g] Pval
-      [h] Weight
-      [i] Activations
-    [j] Flag Attributes
-      [k] Bonuses and Penalties
-      [l] Resistances, Immunities and Vulnerabilities
-      [m] Miscellaneous Abilities
-      [n] Auras and Shells
-      [o] Slays and Brands
-      [p] Telepathies
-      [q] Sustains
-      [r] Attributes Visible on Inspection
-    [s] Equipment Curses
+    [a] 装备属性概述
+    [b] 基本属性
+      [c] 伤害骰
+      [d] 伤害倍率
+      [e] 战斗加成
+      [f] 护甲等级
+      [g] Pval (属性修正值)
+      [h] 重量
+      [i] 主动激活
+    [j] 标志属性
+      [k] 加成与惩罚
+      [l] 抗性、免疫与易伤
+      [m] 杂项能力
+      [n] 光环与护盾
+      [o] 屠杀与烙印
+      [p] 心灵感应
+      [q] 属性维持
+      [r] 检查时可见的属性
+    [s] 装备诅咒
 
-    (?) Help System Commands
-
-
+    (?) 帮助系统命令

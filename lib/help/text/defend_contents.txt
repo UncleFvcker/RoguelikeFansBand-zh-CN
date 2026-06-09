@@ -1,18 +1,15 @@
-Defending and Armor
+防御与护甲
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-    [a] Defending and Armor
-    [b] Armor Class
-    [c] Resisting Magical Attacks
-    [d] Ego Armor and Artifacts
-    [e] List of Resistances
-    [f] Immunities
-    [g] Other Protection
-    [h] The Power of Monster Attacks
-    [i] Recovering from Attacks
+    [a] 防御与护甲
+    [b] 护甲等级
+    [c] 抵抗魔法攻击
+    [d] Ego 护甲与神器
+    [e] 抗性列表
+    [f] 免疫
+    [g] 其他保护
+    [h] 怪物攻击的威力
+    [i] 从攻击中恢复
 
-    (?) Help System Commands
-
-
-
+    (?) 帮助系统命令

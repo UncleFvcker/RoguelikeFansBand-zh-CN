@@ -1,29 +1,28 @@
-Objects
+物品 (Objects)
 
-Please choose one of the following help sections:
+请选择以下帮助章节之一：
 
-  The following topics are in verbose tutorial format:
-    [a] Objects
-    [b] Where Can I Get Stuff?
-    [c] OK, I Found Something. What Does It Do?
-    [d] How Good is this Object, Anyway?
-    [e] Object Flavors
-    [f] Jewelry
-    [g] Object Lore
-    [h] Devices
-    [i] Spellbooks
-    [j] Object Inscriptions
+  以下主题采用详细的教程格式：
+    [a] 物品 (Objects)
+    [b] 我能从哪里获得物品？
+    [c] 好的，我找到了一个东西。它有什么用？
+    [d] 这件物品到底有多好？
+    [e] 物品风味
+    [f] 首饰
+    [g] 物品图鉴
+    [h] 装置
+    [i] 法术书
+    [j] 物品铭刻
 
-  The following topics are reference material:
-    [k] Object Symbols
-    [l] Commands for Using Objects
-    [m] Numbers on Items
-    [n] Equipment
-    [o] Inventory/Pack
-    [p] Pseudo-ID
-    [q] List of Abbreviations
-    [r] Inscriptions: Summary
-    [s] Equipment Properties
+  以下主题为参考资料：
+    [k] 物品符号
+    [l] 物品使用命令
+    [m] 物品上的数字
+    [n] 装备
+    [o] 物品栏/背包
+    [p] 伪鉴定
+    [q] 缩写列表
+    [r] 铭刻：总结
+    [s] 装备属性
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

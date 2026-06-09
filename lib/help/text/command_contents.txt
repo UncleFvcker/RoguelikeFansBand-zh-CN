@@ -1,14 +1,13 @@
-Commands
+操作命令 (Commands)
 
-Please choose one of the following online help files:
+请选择以下在线帮助文件之一：
 
-    [a] Commands
-    [b] Original Keyset
-    [c] Roguelike Keyset
-    [d] Command Counts
-    [e] Command Arguments
-    [f] Item Labels
-    [g] Command Descriptions
+    [a] 操作命令
+    [b] 原版按键集
+    [c] Roguelike 按键集
+    [d] 命令计数
+    [e] 命令参数
+    [f] 物品标签
+    [g] 命令详细说明
 
-    (?) Help System Commands
-
+    (?) 帮助系统命令

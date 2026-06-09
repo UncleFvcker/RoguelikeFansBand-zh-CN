@@ -1,88 +1,87 @@
-Shopping
+购物 (Shopping)
 
-Press [a] for the Quick Reference and [b] for details on shopping.
+参阅 [a] 查看快捷参考 (Quick Reference)，或参阅 [b] 了解购物详情。
 
-Each town on the surface contains numerous shops where you may purchase 
-supplies or sell unwanted objects. Each shop specializes in a certain 
-class of items: The Weapon Smiths sells weapons (melee and missile) 
-while the Armory sells armor; the Alchemist sells potions and scrolls 
-while the General Store sells basic utilities such as food, lanterns 
-and oil. Each town also has a Black Market where you may, for an 
-exorbitant price, purchase items normally found only in the dungeon.
 
-Your First Shopping Spree
+地表的每个城镇都包含许多商店，你可以在那里购买补给或出售不需要的物品。每
+家商店都专精于某类物品：武器店 (Weapon Smiths) 
+出售武器（近战和远程），而护甲店 (Armory) 出售护甲；炼金店 (Alchemist) 
+出售药水和卷轴，而杂货店 (General Store) 
+则出售食物、提灯和油等基础实用物品。每个城镇还有一个黑市 (Black 
+Market)，在那里你可以以高昂的价格购买到通常只在地下城中才能找到的物品。
 
-When you enter a shop, you will see a screen describing the shop's 
-owner and the items available for purchase:
+你的第一次大采购
+
+
+当你进入商店时，你会看到一个屏幕，上面显示了店主的信息以及可供购买的物品
+：
  
-     Vengella the Cruel (Half-Troll)                            Armory (15000)  
+     残酷的文杰拉 (半巨魔)                                        护甲店 (15000 
                                                                                 
-     Item Description                                              Weight  Price
-  a) ( Soft Leather Armour of Protection [4,+16]                  8.0 lbs  10400
-  b) ( Cord Armour [6,+4]                                         8.0 lbs   1010
-  c) ( Cord Armour [6,+0]                                         8.0 lbs    272
-  d) ( Leather Scale Mail (-1) [11,+0]                           14.0 lbs   1540
-  e) ( a Leather Jacket (-1) [12,+0]                             13.0 lbs   1870
-  f) ] a Hard Leather Cap [2,+3]                                  1.5 lbs    546
-  g) ] a Metal Cap [3,+0]                                         2.0 lbs     35
-  h) ] a Set of Studded Leather Gloves (+1) [1,+0]                0.5 lbs   1010
-  i) ] a Set of Studded Leather Gloves (+1) [1,+0] {25% off}      0.5 lbs    758
-  j) ] a Pair of Soft Leather Boots [2,+0]                        2.0 lbs     10
-  k) ] a Pair of Hard Leather Boots [3,+0]                        4.0 lbs     35
-  l) ] a Pair of Metal Shod Boots (+2) [4,+0]                     8.0 lbs   2220
+     物品描述                                                  重量     价格    
+  a) ( 保护之软皮甲 [4,+16]                                       8.0 lbs  10400
+  b) ( 绳甲 [6,+4]                                                8.0 lbs   1010
+  c) ( 绳甲 [6,+0]                                                8.0 lbs    272
+  d) ( 皮鳞甲 (-1) [11,+0]                                        14.0 lbs   150
+  e) ( 一件皮夹克 (-1) [12,+0]                                    13.0 lbs   180
+  f) ] 一顶硬皮帽 [2,+3]                                          1.5 lbs    546
+  g) ] 一顶金属帽 [3,+0]                                          2.0 lbs     35
+  h) ] 一副镶钉皮手套 (+1) [1,+0]                                0.5 lbs   1010
+  i) ] 一副镶钉皮手套 (+1) [1,+0] {25% off}                      0.5 lbs    758
+  j) ] 一双软皮靴 [2,+0]                                          2.0 lbs     10
+  k) ] 一双硬皮靴 [3,+0]                                          4.0 lbs     35
+  l) ] 一双铁头靴 (+2) [4,+0]                                    8.0 lbs   2220
                                                                                 
- Gold Remaining: 1.94k                                                          
+ 剩余金币: 1.94k                                                                
                                                                                 
- b to buy. s to sell. x to begin examining items.                               
- B to buyout inventory. S to shuffle stock. R to reserve an item.               
- Esc to exit. ? for help.                                                       
+ b 购买。 s 出售。 x 开始检视物品。                                             
+ B 买空库存。 S 刷新库存。 R 预留物品。                                         
+ Esc 退出。 ? 查看帮助。                                                        
  
-A quick list of available commands is displayed on the bottom of the 
-screen. Simply choose the appropriate command and follow the 
-instructions. Use Page Up and Page Down if the shop inventory extends 
-to multiple pages.
 
-Every store owner has access to limited funds, and will only pay so 
-much for items that you sell; this amount is listed next to the store 
-type on the top of the display.
+屏幕底部显示了可用命令的简要列表。只需选择相应的命令并遵循提示操作即可。
+如果商店的库存有很多页，请使用 Page Up 和 Page Down 来翻页。
 
-Quick Reference
-  Basic Commands
-  p b g     Purchase an item from the shop
-  s d       Sell an item to the shop
-  x         Examine an item in the shop
-  B         Buy out the entire shop inventory
-  S         Pay to have shop inventory shuffled
-  R         Reserve a shop item for future purchase
-  q Esc     Leave the shop
+
+每位店主的资金都是有限的，所以对于你出售的物品，他们能支付的金额有一个上
+限；这个金额显示在屏幕顶部的商店类型旁边。
+
+快捷参考 (Quick Reference)
+  基本命令
+  p b g     从商店购买物品
+  s d       向商店出售物品
+  x         检视商店中的物品
+  B         买空整个商店的库存
+  S         花钱刷新商店库存
+  R         预留商店物品以供未来购买
+  q Esc     离开商店
   
-  Extra Commands
-  w         Wear an item
-  t T       Take off an item
-  k ^D      Destroy items in your pack
-  e         Display equipment
-  i         Display inventory
-  I         Inspect objects in your pack
-  Tab       Toggle inventory/equipment subwindows
-  {         Inscribe objects in your pack
-  }         Uninscribe objects in your pack
-  C         Display character sheet
+  额外命令
+  w         穿戴/装备物品
+  t T       脱下/卸下物品
+  k ^D      销毁背包中的物品
+  e         显示装备栏
+  i         显示物品栏
+  I         检视背包中的物品
+  Tab       切换物品栏/装备栏子窗口
+  {         为背包中的物品铭刻
+  }         擦除背包中物品的铭刻
+  C         显示角色面板
   
-    Note: These Extra Commands are simply normal game 
-    commands made available for your convenience so you 
-    need not leave the shop to use them. However, the 
-    keybindings for these commands are hard-coded so any 
-    keymaps you may have defined will not apply.
+    
+    注：这些额外命令其实就是普通的游戏命令，在这里提供只是为
+    了方便起见，这样你就不必离开商店去使用它们。但是，这些命
+    令的按键绑定是硬编码的 
+    (hard-coded)，因此你自定义的任何按键映射 (keymaps) 
+    都不起作用。
   
-  Navigation
-  Page Up   Scroll through long object lists
+  导航
+  Page Up   滚动浏览长长的物品列表
   Page Down
-  Space     Same as Page Up
-  -         Same as Page Down
+  Space     与 Page Up 相同
+  -         与 Page Down 相同
   
-  Display Options
-  ^W        Toggle weights (see [c])
-  ^G        Toggle graphics (see [d])
+  显示选项
+  ^W        切换重量显示 (参阅 [c])
+  ^G        切换图形显示 (参阅 [d])
   
-
-

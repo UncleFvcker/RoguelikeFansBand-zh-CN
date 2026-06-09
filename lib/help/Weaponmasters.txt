@@ -1,209 +1,209 @@
-<style:title>武器大师 (Weaponmasters)</style>
+<style:title>武器大师</style>
 
-武器大师极其擅长使用单一类别的武器，并根据其选择的专精获得特殊的战斗加成和能力。专注是成功的关键；武器大师在使用非专精武器时极其糟糕，但当他们手持顺手的武器时，几乎无人能匹敌他们所获得的强大战力。
+武器大师精通单一类别的武器，能够根据其选择的专精获得特殊的战斗加成和力量。专注是成功的关键；武器大师在使用非专精武器时真的非常糟糕，但很少有人能比得上他们在手中拿着合适武器时所展现出的威力。
 
-<topic:Axes><color:o>斧头 (Axes)</color>
-威力无穷的斧头！你的劈砍将造成无与伦比的伤害。专精斧头能提供极强的进攻能力，特别是当你双手挥舞斧头时。然而，这种专精在功能性上几乎没有提供任何帮助。速战速决吧，因为你的性命全系于此！
+<topic:斧头><color:o>斧头</color>
+The mighty axe! Your blows will cleave with damage unsurpassed. Specializing in axes gives great offensive prowess, especially when your axe is wielded with two hands. However, this speciality offers little in the way of utility. Kill quickly as your life depends on it!
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +3</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -3</color>        魔法装置    <color:r>极差         </color>
-感知         <color:w> -2</color>        豁免检定    <color:r>极差         </color>
-敏捷         <color:w> -2</color>        潜行能力    <color:R>较差         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:r>极差         </color>
-生命评级     105%       近战能力    <color:b>英雄         </color>
-基础HP        12        箭术能力    <color:R>较差         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +3</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -3</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -2</color>        Save        <color:r>糟糕       </color>
+Dexterity    <color:w> -2</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  105%       Melee       <color:b>英雄       </color>
+Base HP       12        Archery     <color:R>贫弱       </color>
+Experience   135%
 </style></indent>
-<topic:Bows><color:o>弓 (Bows)</color>
-一箭毙命！弓箭大师将获得强化射击的技巧，包括更快的射速、越过前方怪物头顶进行抛射的能力、降低弹药损耗、一箭必杀的能力等等。作为一名射手，你的远程战力将极其可怕，尽管你的近战能力会有些许欠缺。
+<topic:弓类><color:o>弓类</color>
+You will shoot to kill! The bowmaster gains techniques to enhance shooting, including more rapid firing, the ability to volley shots over the heads of intervening monsters, reduced ammo destruction, the ability to kill with a single arrow and much more. As a shooter, your missile prowess will be quite formidable, though your melee will be somewhat lacking.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +0</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -1</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> -1</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> +2</color>        潜行能力    <color:y>良好         </color>
-体质         <color:w> -1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:R>较差         </color>
-生命评级     102%       近战能力    <color:o>一般         </color>
-基础HP        12        箭术能力    <color:b>英雄         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +0</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -1</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> -1</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:y>良好       </color>
+Constitution <color:w> -1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:R>贫弱       </color>
+Life Rating  102%       Melee       <color:o>一般       </color>
+Base HP       12        Archery     <color:b>英雄       </color>
+Experience   135%
 </style></indent>
-<topic:Clubs><color:o>棍棒 (Clubs)</color>
-你致力于将对手敲得失去知觉！这种专精在对抗怪物时能获得被动的状态效果，如混乱、击飞和震慑。此外，你还将获得一些有限的实用技巧。在较高等级时，你的武器将更有可能对倒霉的敌人造成毁灭性的粉碎打击。
+<topic:棍棒><color:o>棍棒</color>
+You will seek to club your opponents senseless! This speciality gains passive status effects against monsters, such as confusion, knock out and stunning. Also, you will gain some limited utility techniques. At high levels, your weapons will become more likely to score devastating, crushing blows against your hapless enemies.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +2</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -3</color>        魔法装置    <color:r>极差         </color>
-感知         <color:w> -2</color>        豁免检定    <color:r>极差         </color>
-敏捷         <color:w> -2</color>        潜行能力    <color:R>较差         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:r>极差         </color>
-生命评级     105%       近战能力    <color:G>优秀         </color>
-基础HP        12        箭术能力    <color:o>一般         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +2</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -3</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -2</color>        Save        <color:r>糟糕       </color>
+Dexterity    <color:w> -2</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  105%       Melee       <color:G>优秀       </color>
+Base HP       12        Archery     <color:o>一般       </color>
+Experience   135%
 </style></indent>
-<topic:Crossbows><color:o>弩 (Crossbows)</color>
-弩兵大师能射出致命的弩箭，造成巨大伤害。他们的弩箭可能会发生威力巨大的爆炸，伤害附近的怪物。此外，他们的射击力度之大，甚至能将对手向后击退！
+<topic:弩类><color:o>弩类</color>
+The crossbowmaster shoots deadly bolts for great damage. Their bolts may explode powerfully damaging nearby monsters. Also, they may shoot so hard as to knock their opponents backwards!
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +1</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -2</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> -3</color>        豁免检定    <color:r>极差         </color>
-敏捷         <color:w> +0</color>        潜行能力    <color:o>一般         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:r>极差         </color>
-生命评级     102%       近战能力    <color:o>一般         </color>
-基础HP        12        箭术能力    <color:b>英雄         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +1</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -2</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> -3</color>        Save        <color:r>糟糕       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:o>一般       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  102%       Melee       <color:o>一般       </color>
+Base HP       12        Archery     <color:b>英雄       </color>
+Experience   135%
 </style></indent>
-<topic:Daggers><color:o>匕首 (Daggers)</color>
-背后捅刀！这种专精偏好双持和类似盗贼的行为。匕首大师甚至可以摆出“小李飞刀 (The Flying Dagger)”的架势，这极大地增强了他们低等级时的匕首投掷能力。事实上，他们在投掷匕首方面的造诣是传奇级的，甚至显得有些近乎魔法！在较高等级时，你还可以通过狂暴架势 (Frenzy Stance) 获得可怕的近战战力。最后，匕首大师拥有非常强大的短距离传送技巧，能与他们的投掷能力产生很好的协同效应。
+<topic:匕首><color:o>匕首</color>
+A knife in the back! This speciality favors dual-wielding and rogue-type behavior. The daggermaster can even assume the posture of The Flying Dagger which greatly enhances their low level dagger toss capability. Indeed, their prowess with the dagger toss is legendary and appears almost magical! At high levels, you will also gain formidable melee prowess with the Frenzy Stance. Finally, daggermasters have very strong short ranged teleport techniques that synergize well with their toss abilities.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +0</color>        解除陷阱    <color:y>良好         </color>
-智力         <color:w> +0</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> -1</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> +3</color>        潜行能力    <color:y>很好         </color>
-体质         <color:w> -1</color>        搜索能力    <color:o>一般         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:R>较差         </color>
-生命评级     105%       近战能力    <color:y>很好         </color>
-基础HP        12        箭术能力    <color:g>出神入化     </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +0</color>        Disarming   <color:y>良好       </color>
+Intelligence <color:w> +0</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> -1</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +3</color>        Stealth     <color:y>极好       </color>
+Constitution <color:w> -1</color>        Searching   <color:o>一般       </color>
+Charisma     <color:w> +0</color>        Perception  <color:R>贫弱       </color>
+Life Rating  105%       Melee       <color:y>极好       </color>
+Base HP       12        Archery     <color:g>卓越       </color>
+Experience   135%
 </style></indent>
-<topic:Polearms><color:o>长柄武器 (Polearms)</color>
-在出发收割死亡之前，你板起了一副冷酷的面孔。你会大开大合地挥舞武器，通常能同时击中周围的多个对手。
+<topic:长柄武器><color:o>长柄武器</color>
+You don a grim face before setting out to reap your harvest of death. You will swing your weapon wide often affecting multiple surrounding opponents.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +2</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -2</color>        魔法装置    <color:r>极差         </color>
-感知         <color:w> -2</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> +0</color>        潜行能力    <color:R>较差         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:r>极差         </color>
-生命评级     105%       近战能力    <color:g>出神入化     </color>
-基础HP        12        箭术能力    <color:R>较差         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +2</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -2</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -2</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  105%       Melee       <color:g>卓越       </color>
+Base HP       12        Archery     <color:R>贫弱       </color>
+Experience   135%
 </style></indent>
-<topic:Shields><color:o>盾牌 (Shields)</color>
-专精盾牌能提供极其出色的防御和反击能力。此外，你甚至可以选择用盾牌而不是普通武器进行近战，将你的对手砸得失去知觉。这种战斗形式被称为“盾击 (Shield Bashing)”，是此专精独有的。
+<topic:盾牌><color:o>盾牌</color>
+Specializing in shields gives excellent powers of defense and retaliation. In addition, you can even choose to melee with your shield rather than a normal weapon, bashing your opponents senseless. This form of combat is known as Shield Bashing and is unique to this speciality.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +2</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:w> -1</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> +0</color>        豁免检定    <color:y>很好         </color>
-敏捷         <color:w> +0</color>        潜行能力    <color:R>较差         </color>
-体质         <color:w> +2</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:r>极差         </color>
-生命评级     105%       近战能力    <color:G>优秀         </color>
-基础HP        12        箭术能力    <color:R>较差         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +2</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> -1</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> +0</color>        Save        <color:y>极好       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +2</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  105%       Melee       <color:G>优秀       </color>
+Base HP       12        Archery     <color:R>贫弱       </color>
+Experience   135%
 </style></indent>
-<topic:Slings><color:o>投石索 (Slings)</color>
-当心了，歌利亚！作为投石索大师，你将以不可思议的速度射出石子。你的射击甚至可以在其他怪物身上产生跳弹弹射，从而造成多次命中。与其他箭术专精一样，你的弹药不易破损。
+<topic:弹弓><color:o>弹弓</color>
+Watch out, Goliath! As a master of slings you will shoot pebbles with uncanny speed. Your shots may even ricochet off other monsters to score multiple hits. As with other archery specializations, your ammo will break less often.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> -1</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:w> +0</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> +0</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> +3</color>        潜行能力    <color:y>良好         </color>
-体质         <color:w> -1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:R>较差         </color>
-生命评级     102%       近战能力    <color:o>一般         </color>
-基础HP        12        箭术能力    <color:b>英雄         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> -1</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> +0</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> +0</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +3</color>        Stealth     <color:y>良好       </color>
+Constitution <color:w> -1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:R>贫弱       </color>
+Life Rating  102%       Melee       <color:o>一般       </color>
+Base HP       12        Archery     <color:b>英雄       </color>
+Experience   135%
 </style></indent>
-<topic:Staves><color:o>法杖 (Staves)</color>
-齐天大圣！你将用威力无比的法杖（长棍）如暴风骤雨般打击对手，并随时准备反击敌人的攻势。你可以撑杆跃入战场，并对敌人使出回旋踢造成震慑效果，用你的靴子攻击他们！你甚至最终可以付出巨大代价克隆自己。
+<topic:法杖><color:o>法杖</color>
+Monkey King! You will battle opponents with a flurry of blows from your mighty staff and will be prepared to counter the attacks of your enemies. You can vault into battle and circle kick enemies for stunning effects, attacking them with your boots! You may even eventually clone yourself at great cost.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +0</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -2</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> -1</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> +2</color>        潜行能力    <color:R>较差         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:r>极差         </color>
-生命评级     105%       近战能力    <color:G>优秀         </color>
-基础HP        12        箭术能力    <color:R>较差         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +0</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -2</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> -1</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +2</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  105%       Melee       <color:G>优秀       </color>
+Base HP       12        Archery     <color:R>贫弱       </color>
+Experience   135%
 </style></indent>
-<topic:Swords><color:o>剑 (Swords)</color>
-你将成为一名真正的剑术大师！精通剑术将为你的武器赋予元素、斩首 (vorpal) 或吸血的力量。
+<topic:剑类><color:o>剑类</color>
+You will become a true swordmaster! Mastery of the blade will augment your weapon with elemental, vorpal or vampiric powers.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +1</color>        解除陷阱    <color:R>较差         </color>
-智力         <color:w> -2</color>        魔法装置    <color:r>极差         </color>
-感知         <color:w> -2</color>        豁免检定    <color:R>较差         </color>
-敏捷         <color:w> +1</color>        潜行能力    <color:R>较差         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:r>极差         </color>
-生命评级     105%       近战能力    <color:g>出神入化     </color>
-基础HP        12        箭术能力    <color:R>较差         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +1</color>        Disarming   <color:R>贫弱       </color>
+Intelligence <color:w> -2</color>        Device      <color:r>糟糕       </color>
+Wisdom       <color:w> -2</color>        Save        <color:R>贫弱       </color>
+Dexterity    <color:w> +1</color>        Stealth     <color:R>贫弱       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  105%       Melee       <color:g>卓越       </color>
+Base HP       12        Archery     <color:R>贫弱       </color>
+Experience   135%
 </style></indent>
-<topic:Diggers><color:o>挖掘工具 (Diggers)</color>
-挖掘大师。你偏爱岩石构成的封闭空间，且不介意随身拖着一两具尸体，在必要时你可以将它们埋葬以获得临时加成。你可以选择几种架势之一，使当前武器的挖掘加成作为额外加成生效，例如增加力量、体质，甚至速度！所以，请密切留意那些 +8 的挖掘工具吧！
+<topic:挖掘工具><color:o>挖掘工具</color>
+A master of digging. You prefer rocky enclosures and don't mind lugging around a corpse or two, which you can bury in a pinch for a temporary bonus. You can choose one of several postures which allow you to use the digging bonus of your current weapon as an additional bonus, such as increased strength, constitution, or even speed! So keep your eye open for those +8 diggers!
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量         <color:v> +2</color>        解除陷阱    <color:o>一般         </color>
-智力         <color:w> -2</color>        魔法装置    <color:R>较差         </color>
-感知         <color:w> -2</color>        豁免检定    <color:o>一般         </color>
-敏捷         <color:w> +0</color>        潜行能力    <color:o>一般         </color>
-体质         <color:w> +1</color>        搜索能力    <color:R>较差         </color>
-魅力         <color:w> +0</color>        察觉能力    <color:r>极差         </color>
-生命评级     105%       近战能力    <color:g>出神入化     </color>
-基础HP        12        箭术能力    <color:R>较差         </color>
-经验修正     135%
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength     <color:v> +2</color>        Disarming   <color:o>一般       </color>
+Intelligence <color:w> -2</color>        Device      <color:R>贫弱       </color>
+Wisdom       <color:w> -2</color>        Save        <color:o>一般       </color>
+Dexterity    <color:w> +0</color>        Stealth     <color:o>一般       </color>
+Constitution <color:w> +1</color>        Searching   <color:R>贫弱       </color>
+Charisma     <color:w> +0</color>        Perception  <color:r>糟糕       </color>
+Life Rating  105%       Melee       <color:g>卓越       </color>
+Base HP       12        Archery     <color:R>贫弱       </color>
+Experience   135%
 </style></indent>
 <topic:Tables><style:heading>表 1 - 武器大师属性加成表</style>
 <style:table>
-<color:G>                   </color><color:G>力量 智力 感知 敏捷 体质 魅力 生命  HP   经验</color>
-斧头               +3   -3   -2   -2   +1   +0  105%  +12  135%
-弓                 +0   -1   -1   +2   -1   +0  102%  +12  135%
-棍棒               +2   -3   -2   -2   +1   +0  105%  +12  135%
-弩                 +1   -2   -3   +0   +1   +0  102%  +12  135%
-匕首               +0   +0   -1   +3   -1   +0  105%  +12  135%
-长柄武器           +2   -2   -2   +0   +1   +0  105%  +12  135%
-盾牌               +2   -1   +0   +0   +2   +0  105%  +12  135%
-投石索             -1   +0   +0   +3   -1   +0  102%  +12  135%
-法杖               +0   -2   -1   +2   +1   +0  105%  +12  135%
-剑                 +1   -2   -2   +1   +1   +0  105%  +12  135%
-挖掘工具           +2   -2   -2   +0   +1   +0  105%  +12  135%
+<color:G>                 </color> <color:G>STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp</color>
+斧头             +3   -3   -2   -2   +1   +0  105%  +12  135%
+弓类             +0   -1   -1   +2   -1   +0  102%  +12  135%
+棍棒             +2   -3   -2   -2   +1   +0  105%  +12  135%
+弩类             +1   -2   -3   +0   +1   +0  102%  +12  135%
+匕首             +0   +0   -1   +3   -1   +0  105%  +12  135%
+长柄武器       +2   -2   -2   +0   +1   +0  105%  +12  135%
+盾牌             +2   -1   +0   +0   +2   +0  105%  +12  135%
+弹弓             -1   +0   +0   +3   -1   +0  102%  +12  135%
+法杖             +0   -2   -1   +2   +1   +0  105%  +12  135%
+剑类             +1   -2   -2   +1   +1   +0  105%  +12  135%
+挖掘工具       +2   -2   -2   +0   +1   +0  105%  +12  135%
 
 </style>
 <topic:Skills1><style:heading>表 2 - 武器大师技能加成表 I</style>
 <style:table>
-                  <color:w>解除陷阱      魔法装置      豁免检定      潜行能力     </color>
-斧头              <color:R>较差         </color> <color:r>极差         </color> <color:r>极差         </color> <color:R>较差         </color>
-弓                <color:R>较差         </color> <color:R>较差         </color> <color:R>较差         </color> <color:y>良好         </color>
-棍棒              <color:R>较差         </color> <color:r>极差         </color> <color:r>极差         </color> <color:R>较差         </color>
-弩                <color:R>较差         </color> <color:R>较差         </color> <color:r>极差         </color> <color:o>一般         </color>
-匕首              <color:y>良好         </color> <color:R>较差         </color> <color:R>较差         </color> <color:y>很好         </color>
-长柄武器          <color:R>较差         </color> <color:r>极差         </color> <color:R>较差         </color> <color:R>较差         </color>
-盾牌              <color:o>一般         </color> <color:R>较差         </color> <color:y>很好         </color> <color:R>较差         </color>
-投石索            <color:o>一般         </color> <color:R>较差         </color> <color:R>较差         </color> <color:y>良好         </color>
-法杖              <color:R>较差         </color> <color:R>较差         </color> <color:R>较差         </color> <color:R>较差         </color>
-剑                <color:R>较差         </color> <color:r>极差         </color> <color:R>较差         </color> <color:R>较差         </color>
-挖掘工具          <color:o>一般         </color> <color:R>较差         </color> <color:o>一般         </color> <color:o>一般         </color>
+                  <color:w>解除陷阱  使用装置  豁免        潜行       </color>
+斧头            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:r>糟糕       </color> <color:R>贫弱       </color>
+弓类            <color:R>贫弱       </color> <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color>
+棍棒            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:r>糟糕       </color> <color:R>贫弱       </color>
+弩类            <color:R>贫弱       </color> <color:R>贫弱       </color> <color:r>糟糕       </color> <color:o>一般       </color>
+匕首            <color:y>良好       </color> <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>极好       </color>
+长柄武器      <color:R>贫弱       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
+盾牌            <color:o>一般       </color> <color:R>贫弱       </color> <color:y>极好       </color> <color:R>贫弱       </color>
+弹弓            <color:o>一般       </color> <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color>
+法杖            <color:R>贫弱       </color> <color:R>贫弱       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
+剑类            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
+挖掘工具      <color:o>一般       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:o>一般       </color>
 
 </style>
 <topic:Skills2><style:heading>表 3 - 武器大师技能加成表 II</style>
 <style:table>
-                  <color:w>搜索能力      察觉能力      近战能力      箭术能力     </color>
-斧头              <color:R>较差         </color> <color:r>极差         </color> <color:b>英雄         </color> <color:R>较差         </color>
-弓                <color:R>较差         </color> <color:R>较差         </color> <color:o>一般         </color> <color:b>英雄         </color>
-棍棒              <color:R>较差         </color> <color:r>极差         </color> <color:G>优秀         </color> <color:o>一般         </color>
-弩                <color:R>较差         </color> <color:r>极差         </color> <color:o>一般         </color> <color:b>英雄         </color>
-匕首              <color:o>一般         </color> <color:R>较差         </color> <color:y>很好         </color> <color:g>出神入化     </color>
-长柄武器          <color:R>较差         </color> <color:r>极差         </color> <color:g>出神入化     </color> <color:R>较差         </color>
-盾牌              <color:R>较差         </color> <color:r>极差         </color> <color:G>优秀         </color> <color:R>较差         </color>
-投石索            <color:R>较差         </color> <color:R>较差         </color> <color:o>一般         </color> <color:b>英雄         </color>
-法杖              <color:R>较差         </color> <color:r>极差         </color> <color:G>优秀         </color> <color:R>较差         </color>
-剑                <color:R>较差         </color> <color:r>极差         </color> <color:g>出神入化     </color> <color:R>较差         </color>
-挖掘工具          <color:R>较差         </color> <color:r>极差         </color> <color:g>出神入化     </color> <color:R>较差         </color>
+                  <color:w>搜索        察觉        近战        箭术       </color>
+斧头            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:b>英雄       </color> <color:R>贫弱       </color>
+弓类            <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:b>英雄       </color>
+棍棒            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:G>优秀       </color> <color:o>一般       </color>
+弩类            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:o>一般       </color> <color:b>英雄       </color>
+匕首            <color:o>一般       </color> <color:R>贫弱       </color> <color:y>极好       </color> <color:g>卓越       </color>
+长柄武器      <color:R>贫弱       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:R>贫弱       </color>
+盾牌            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:G>优秀       </color> <color:R>贫弱       </color>
+弹弓            <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:b>英雄       </color>
+法杖            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:G>优秀       </color> <color:R>贫弱       </color>
+剑类            <color:R>贫弱       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:R>贫弱       </color>
+挖掘工具      <color:R>贫弱       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:R>贫弱       </color>
 
 </style>
 
 
-<color:s>为 FrogComposband 7.2.salmiak 自动生成。</color>
+<color:s>自动生成于 FrogComposband 7.4。</color>

@@ -1,19 +1,18 @@
-Creating a Character
+创建角色
 
-Please choose one of the following help topics:
+请选择以下帮助主题之一：
 
-    [a] Creating a Character
-    [b] The Welcome Screen
-    [c] The Race/Class Screen
-    [d] The Stats Screen
-    [e] Character Attributes
-    [f] Statistics
-    [g] Skills
-    [h] Additional Abilities
-    [i] Birth Options
-    [j] Reference
-    [k] Game Speed Modes
+    [a] 创建角色
+    [b] 欢迎界面
+    [c] 种族/职业界面
+    [d] 属性界面
+    [e] 角色能力与属性
+    [f] 基础属性
+    [g] 技能
+    [h] 额外能力
+    [i] 角色创建选项
+    [j] 附录与参考
+    [k] 游戏速度模式
 
-    (?) Help System Commands
-
-
+    (?) 帮助系统命令
+    

@@ -1,352 +1,352 @@
-<style:title>半神血统 (Demigod Parentage)</style>
+<style:title>半神血统</style>
 
-“半神”一词通常用于描述神话中父母一方为神明、另一方为人类的人物；因此，半神是人神混血儿，非常强大。半神会根据他们的血统获得特殊能力。
+半神一词通常用于描述神话人物，他们的一位父母是神，另一位则是人类；因此，半神是人与神的混血儿，拥有极其强大的力量。半神会根据其神明父母的血统获得特殊的能力。
 
-<topic:Minor-God><color:o>次级神明 (Minor-God)</color>
-作为次级神明的子嗣，你没有获得任何初始能力。
+<topic:次神><color:o>次神</color>
+作为某个不知名小神的后代，你没有获得任何初始能力。
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:o>一般(Fair)   </color>
-感知          +1        豁免        <color:o>一般(Fair)   </color>
-敏捷          +1        潜行        <color:R>较差(Poor)   </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:y>极好(V.Good) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     180%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:o>一般       </color>
+Wisdom        +1        Save        <color:o>一般       </color>
+Dexterity     +1        Stealth     <color:R>贫弱       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   180%       Infravision 0'
 </style></indent>
-<topic:Zeus><color:o>宙斯 (Zeus)</color>
-宙斯，众神之王与奥林匹斯山的统治者，是天空与雷电之神，也是赫拉名义上的丈夫。你继承了高大的身躯，你身上的闪电光环将成为你神圣血统的标志。你还拥有闪电抗性。
+<topic:宙斯><color:o>宙斯</color>
+Zeus, King of the gods and ruler of Mount Olympus, is god of the Sky and Thunder, and nominal husband of Hera. You inherit increased stature and your divine birth will be marked by your aura of electricity. You also resist lightning.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +2        解除陷阱    <color:y>良好(Good)   </color>
-智力          +2        魔法装置    <color:y>良好(Good)   </color>
-感知          +2        豁免        <color:y>良好(Good)   </color>
-敏捷          +2        潜行        <color:R>较差(Poor)   </color>
-体质          +2        搜索        <color:o>一般(Fair)   </color>
-魅力          +2        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:g>卓越(Superb) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     250%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +2        Disarming   <color:y>良好       </color>
+Intelligence  +2        Device      <color:y>良好       </color>
+Wisdom        +2        Save        <color:y>良好       </color>
+Dexterity     +2        Stealth     <color:R>贫弱       </color>
+Constitution  +2        Searching   <color:o>一般       </color>
+Charisma      +2        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:g>卓越       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   250%       Infravision 0'
 </style></indent>
-<topic:Poseidon><color:o>波塞冬 (Poseidon)</color>
-波塞冬，宙斯的兄弟，是海洋与风暴之主。你继承了元素防护能力以及能融化敌人护甲的腐蚀性攻击。
+<topic:波塞冬><color:o>波塞冬</color>
+Poseidon, Brother of Zeus, is Lord of the Seas and Storm. You inherit elemental protection and corrosive attacks that melt the armor of your foes.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +2        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:o>一般(Fair)   </color>
-感知          +1        豁免        <color:o>一般(Fair)   </color>
-敏捷          +2        潜行        <color:R>较差(Poor)   </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:G>优秀(Exclnt) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     240%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +2        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:o>一般       </color>
+Wisdom        +1        Save        <color:o>一般       </color>
+Dexterity     +2        Stealth     <color:R>贫弱       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:G>优秀       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   240%       Infravision 0'
 </style></indent>
-<topic:Hades><color:o>哈迪斯 (Hades)</color>
-哈迪斯是冥界之王。你获得了对虚冥力量的抗性、增强的坚毅力，并能牢牢掌控自身的生命与健康。
+<topic:哈迪斯><color:o>哈迪斯</color>
+Hades is Ruler of the Underworld. You gain resistance to nether forces, increased fortitude and have a firm grasp on your life and health.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:o>一般(Fair)   </color>
-感知          +1        豁免        <color:y>良好(Good)   </color>
-敏捷          +1        潜行        <color:o>一般(Fair)   </color>
-体质          +3        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     107%       近战        <color:G>优秀(Exclnt) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     240%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:o>一般       </color>
+Wisdom        +1        Save        <color:y>良好       </color>
+Dexterity     +1        Stealth     <color:o>一般       </color>
+Constitution  +3        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  107%       Melee       <color:G>优秀       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   240%       Infravision 0'
 </style></indent>
-<topic:Athena><color:o>雅典娜 (Athena)</color>
-雅典娜是伟大的智慧女神与雅典的守护者。她是宙斯与泰坦神墨提斯之女，她的狡黠远超其他神祇。你继承了极其清晰的思维与魔法天赋，能够比其他凡人更稳定地施放法术。即使施法失败，你也只需支付减少后的法力消耗，而不是全额消耗。你还能牢牢维系自身的心智力量。
+<topic:雅典娜><color:o>雅典娜</color>
+Athena is the great goddess of wisdom and the protector of Athens. She was born of Zeus and the Titan Metis, and her cunning far surpasses that of the other deities. You inherit great clarity of thought and magic and will be able to cast spells more reliably than other mortals. And should you fail to cast a spell, you will pay a reduced casting cost rather than the full amount. You also have a firm grip on your mental prowess.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +3        魔法装置    <color:y>极好(V.Good) </color>
-感知          +1        豁免        <color:o>一般(Fair)   </color>
-敏捷          +1        潜行        <color:R>较差(Poor)   </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:y>极好(V.Good) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     240%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:o>一般       </color>
+Intelligence  +3        Device      <color:y>极好       </color>
+Wisdom        +1        Save        <color:o>一般       </color>
+Dexterity     +1        Stealth     <color:R>贫弱       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   240%       Infravision 0'
 </style></indent>
-<topic:Ares><color:o>阿瑞斯 (Ares)</color>
-阿瑞斯是宙斯与赫拉勇敢的儿子，他的名字令战士与平民皆敬畏。他传奇的战斗实力超越了宙斯与波塞冬，但在诡计方面不及其他奥林匹斯神明。你继承了卓越的战斗加成，并牢牢掌控着自己的力量。到了晚期，你将能依自身意愿进入狂暴状态。然而，由于你会向所有遇到的敌人大声发出挑战，你对战斗的渴望降低了你的潜行能力。此外，你对魔法的抗性也令人堪忧。
+<topic:阿瑞斯><color:o>阿瑞斯</color>
+Ares is the bold son of Zeus and Hera, whose very name is feared and respected by warriors and citizens alike. His legendary combat prowess exceeds that of Zeus and Poseidon, but he is less skilled in wiles than the other Olympians. You inherit exceptional bonuses to combat and have a firm grip on your strength. Later in life, you will be able to fly into a berserk rage on command. However, your lust for combat decreases your stealth as you call out challenges to all that you meet. And your resistance to magic is suspect as well.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +3        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:o>一般(Fair)   </color>
-感知          +1        豁免        <color:R>较差(Poor)   </color>
-敏捷          +1        潜行        <color:r>极差(Bad)    </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:g>卓越(Superb) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     240%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +3        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:o>一般       </color>
+Wisdom        +1        Save        <color:R>贫弱       </color>
+Dexterity     +1        Stealth     <color:r>糟糕       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:g>卓越       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   240%       Infravision 0'
 </style></indent>
-<topic:Hermes><color:o>赫尔墨斯 (Hermes)</color>
-赫尔墨斯作为众神的使者，是奥林匹斯神明用来协商停战的极其狡诈的外交官。凭借他的飞翼便鞋和强大的魔法，没有他去不了的地方，也没有任何方法能拘束他。你继承了伟大的运动能力，且永远不会被减速。你的潜行能力优于你的同族，并且你的速度会随着经验的增长而提升。
+<topic:赫尔墨斯><color:o>赫尔墨斯</color>
+Hermes, the Messenger, is the extremely cunning diplomat used by the Olympians to negotiate truces. With his Winged Sandals and his powerful magic, there is no place barred from him, and there is no way to detain him. You inherit great powers of motion and will never become slowed. Your stealth is better than your brethren and your speed will increase with experience.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:G>优秀(Exclnt) </color>
-智力          +1        魔法装置    <color:o>一般(Fair)   </color>
-感知          +1        豁免        <color:o>一般(Fair)   </color>
-敏捷          +1        潜行        <color:y>良好(Good)   </color>
-体质          +1        搜索        <color:G>优秀(Exclnt) </color>
-魅力          +1        察觉        <color:y>良好(Good)   </color>
-生命加成     100%       近战        <color:y>极好(V.Good) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     240%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:G>优秀       </color>
+Intelligence  +1        Device      <color:o>一般       </color>
+Wisdom        +1        Save        <color:o>一般       </color>
+Dexterity     +1        Stealth     <color:y>良好       </color>
+Constitution  +1        Searching   <color:G>优秀       </color>
+Charisma      +1        Perception  <color:y>良好       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   240%       Infravision 0'
 </style></indent>
-<topic:Apollo><color:o>阿波罗 (Apollo)</color>
-阿波罗在各种传说中被视为光明与太阳、真理与预言、医药、治愈、瘟疫、音乐、诗歌、艺术、箭术等多项领域之神。你继承了照明的能力，并对基于光的攻击完全免疫。你极少被致盲。
+<topic:阿波罗><color:o>阿波罗</color>
+Apollo has been variously recognized as a god of light and the sun, truth and prophecy, medicine, healing, plague, music, poetry, arts, archery, and more. You inherit powers of illumination and are completely immune to light based attacks. You are seldom blinded.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:y>良好(Good)   </color>
-感知          +1        豁免        <color:o>一般(Fair)   </color>
-敏捷          +1        潜行        <color:R>较差(Poor)   </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:y>极好(V.Good) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     230%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:y>良好       </color>
+Wisdom        +1        Save        <color:o>一般       </color>
+Dexterity     +1        Stealth     <color:R>贫弱       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   230%       Infravision 0'
 </style></indent>
-<topic:Artemis><color:o>阿尔忒弥斯 (Artemis)</color>
-阿尔忒弥斯常被描述为宙斯与勒托之女，也是阿波罗的孪生妹妹。她是希腊神话中的狩猎、野兽、荒野、分娩、贞洁与少女之神，能给女性带来疾病或治愈疾病；她常被描绘成手持弓箭的女猎手。你继承了箭术的力量，且动作非常敏捷。你的弓箭技艺无人能及，射出的箭矢具有更远的射程和更强的致命性。
+<topic:阿尔忒弥斯><color:o>阿尔忒弥斯</color>
+Artemis was often described as the daughter of Zeus and Leto, and the twin sister of Apollo. She was the Hellenic goddess of the hunt, wild animals, wilderness, childbirth, virginity and young girls, bringing and relieving disease in women; she often was depicted as a huntress carrying a bow and arrows. You inherit powers of archery and are very nimble. Your skills with the bow are unmatched and you shoot arrows with increased range and deadliness.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:o>一般(Fair)   </color>
-感知          +1        豁免        <color:o>一般(Fair)   </color>
-敏捷          +3        潜行        <color:R>较差(Poor)   </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:y>极好(V.Good) </color>
-基础HP        20        箭术        <color:G>优秀(Exclnt) </color>
-经验修正     230%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:o>一般       </color>
+Wisdom        +1        Save        <color:o>一般       </color>
+Dexterity     +3        Stealth     <color:R>贫弱       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       20        Archery     <color:G>优秀       </color>
+Experience   230%       Infravision 0'
 </style></indent>
-<topic:Hephaestus><color:o>赫菲斯托斯 (Hephaestus)</color>
-赫菲斯托斯是技术、铁匠、工匠、手艺人、雕塑家、金属、冶金、火焰和火山之神。与其他神话中的铁匠一样，但他与大多数神明不同的是他身患跛足，这在希腊人眼中给了他怪异的容貌。他担任众神的铁匠。你继承了附魔与防护的力量。你的装备不会因腐蚀或魔法攻击而受损。
+<topic:赫菲斯托斯><color:o>赫菲斯托斯</color>
+Hephaestus was the god of technology, blacksmiths, craftsmen, artisans, sculptors, metals, metallurgy, fire and volcanoes. Like other mythic smiths but unlike most other gods, Hephaestus was lame, which gave him a grotesque appearance in Greek eyes. He served as the blacksmith of the gods. You inherit powers of enchantment and protection. Your equipment will not suffer diminution by corrosion or magical attack.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:o>一般(Fair)   </color>
-感知          +1        豁免        <color:o>一般(Fair)   </color>
-敏捷          +1        潜行        <color:R>较差(Poor)   </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:g>卓越(Superb) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     230%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:o>一般       </color>
+Wisdom        +1        Save        <color:o>一般       </color>
+Dexterity     +1        Stealth     <color:R>贫弱       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:g>卓越       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   230%       Infravision 0'
 </style></indent>
-<topic:Hera><color:o>赫拉 (Hera)</color>
-赫拉是宙斯的妻子，也是他的三个姐妹之一。她的主要职责是保护女性与婚姻的女神。你继承了极其清晰的头脑与魔法能力。你非常睿智，且能牢牢维系你的魔法能量，你的魔法能量甚至得到了增强。
+<topic:赫拉><color:o>赫拉</color>
+Hera was the wife and one of three sisters of Zeus. Her chief function was as the goddess of women and marriage. You inherit great clarity of mind and capacity for magic. You are very wise and have a firm grasp on your magical energy, which is even augmented.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:y>良好(Good)   </color>
-感知          +3        豁免        <color:y>良好(Good)   </color>
-敏捷          +1        潜行        <color:R>较差(Poor)   </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:y>极好(V.Good) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     220%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:y>良好       </color>
+Wisdom        +3        Save        <color:y>良好       </color>
+Dexterity     +1        Stealth     <color:R>贫弱       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   220%       Infravision 0'
 </style></indent>
-<topic:Demeter><color:o>德墨忒尔 (Demeter)</color>
-德墨忒尔是丰收女神，掌管着谷物、大地的肥沃与四季。你获得了再生、治愈和节制的力量。最终，你将能抵抗时间流逝的侵蚀。
+<topic:德墨忒尔><color:o>德墨忒尔</color>
+Demeter is the goddess of the harvest, who presided over grains, the fertility of the earth, and the seasons. You gain powers of regeneration, healing, and temperance. Eventually, you will become resistant to the ravages of time.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:o>一般(Fair)   </color>
-感知          +1        豁免        <color:y>良好(Good)   </color>
-敏捷          +1        潜行        <color:R>较差(Poor)   </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +1        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:y>极好(V.Good) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     220%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:o>一般       </color>
+Wisdom        +1        Save        <color:y>良好       </color>
+Dexterity     +1        Stealth     <color:R>贫弱       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +1        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   220%       Infravision 0'
 </style></indent>
-<topic:Aphrodite><color:o>阿佛洛狄忒 (Aphrodite)</color>
-阿佛洛狄忒是希腊神话中的爱情、美丽、欢愉与繁衍之神。你继承了她的性感魅力。因此，你的宠物更加听话，店主们也会为了讨好你而对你大加奉承。你可以亲吻怪物，它们甚至可能会决定像奴隶般死心塌地追随你，尽管有时这只会激怒它们。
+<topic:阿佛洛狄忒><color:o>阿佛洛狄忒</color>
+Aphrodite is the Greek goddess of love, beauty, pleasure, and procreation. You inherit her sex appeal. As such, your pets are more obedient and shopkeepers fawn over you in their efforts to please you. You may kiss monsters and they might even decide to follow you with slavish devotion, though sometimes this just angers them.
 
-  <indent><style:table><color:G>属性                    技能</color>
-力量          +1        解除陷阱    <color:o>一般(Fair)   </color>
-智力          +1        魔法装置    <color:o>一般(Fair)   </color>
-感知          +1        豁免        <color:o>一般(Fair)   </color>
-敏捷          +1        潜行        <color:R>较差(Poor)   </color>
-体质          +1        搜索        <color:o>一般(Fair)   </color>
-魅力          +3        察觉        <color:r>极差(Bad)    </color>
-生命加成     100%       近战        <color:y>极好(V.Good) </color>
-基础HP        20        箭术        <color:y>良好(Good)   </color>
-经验修正     220%       红外视力    0'
+  <indent><style:table><color:G>Stats                   Skills</color>
+Strength      +1        Disarming   <color:o>一般       </color>
+Intelligence  +1        Device      <color:o>一般       </color>
+Wisdom        +1        Save        <color:o>一般       </color>
+Dexterity     +1        Stealth     <color:R>贫弱       </color>
+Constitution  +1        Searching   <color:o>一般       </color>
+Charisma      +3        Perception  <color:r>糟糕       </color>
+Life Rating  100%       Melee       <color:y>极好       </color>
+Base HP       20        Archery     <color:y>良好       </color>
+Experience   220%       Infravision 0'
 </style></indent>
 <topic:Tables><style:heading>表 1 - 半神属性加成表</style>
 
-<style:table><color:G>                力量 智力 感知 敏捷 体质 魅力 生命  经验  商店</color>
-次级神明         +1   +1   +1   +1   +1   +1  100%  180%  100%
-宙斯             +2   +2   +2   +2   +2   +2  100%  250%   90%
-波塞冬           +2   +1   +1   +2   +1   +1  100%  240%  100%
-哈迪斯           +1   +1   +1   +1   +3   +1  107%  240%  100%
-雅典娜           +1   +3   +1   +1   +1   +1  100%  240%  100%
-阿瑞斯           +3   +1   +1   +1   +1   +1  100%  240%  100%
-赫尔墨斯         +1   +1   +1   +1   +1   +1  100%  240%  100%
-阿波罗           +1   +1   +1   +1   +1   +1  100%  230%  100%
-阿尔忒弥斯       +1   +1   +1   +3   +1   +1  100%  230%  100%
-赫菲斯托斯       +1   +1   +1   +1   +1   +1  100%  230%  100%
-赫拉             +1   +1   +3   +1   +1   +1  100%  220%  100%
-德墨忒尔         +1   +1   +1   +1   +1   +1  100%  220%  100%
-阿佛洛狄忒       +1   +1   +1   +1   +1   +3  100%  220%   70%
+<style:table><color:G>               STR  INT  WIS  DEX  CON  CHR  Life  Exp  Shop</color>
+次神          +1   +1   +1   +1   +1   +1  100%  180%  100%
+宙斯          +2   +2   +2   +2   +2   +2  100%  250%   90%
+波塞冬       +2   +1   +1   +2   +1   +1  100%  240%  100%
+哈迪斯       +1   +1   +1   +1   +3   +1  107%  240%  100%
+雅典娜       +1   +3   +1   +1   +1   +1  100%  240%  100%
+阿瑞斯       +3   +1   +1   +1   +1   +1  100%  240%  100%
+赫尔墨斯    +1   +1   +1   +1   +1   +1  100%  240%  100%
+阿波罗       +1   +1   +1   +1   +1   +1  100%  230%  100%
+阿尔忒弥斯  +1   +1   +1   +3   +1   +1  100%  230%  100%
+赫菲斯托斯  +1   +1   +1   +1   +1   +1  100%  230%  100%
+赫拉          +1   +1   +3   +1   +1   +1  100%  220%  100%
+德墨忒尔    +1   +1   +1   +1   +1   +1  100%  220%  100%
+阿佛洛狄忒  +1   +1   +1   +1   +1   +3  100%  220%   70%
 
 </style>
 <topic:Skills1><style:heading>表 2 - 半神技能加成表 I</style>
 <style:table>
-             <color:w>解除陷阱      魔法装置      豁免          潜行         </color>
-次级神明     <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
-宙斯         <color:y>良好(Good)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color> <color:R>较差(Poor)   </color>
-波塞冬       <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
-哈迪斯       <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color>
-雅典娜       <color:o>一般(Fair)   </color> <color:y>极好(V.Good) </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
-阿瑞斯       <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color> <color:r>极差(Bad)    </color>
-赫尔墨斯     <color:G>优秀(Exclnt) </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color>
-阿波罗       <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
-阿尔忒弥斯   <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
-赫菲斯托斯   <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
-赫拉         <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color> <color:R>较差(Poor)   </color>
-德墨忒尔     <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:R>较差(Poor)   </color>
-阿佛洛狄忒   <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+             <color:w>解除陷阱  使用装置  豁免        潜行       </color>
+次神       <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+宙斯       <color:y>良好       </color> <color:y>良好       </color> <color:y>良好       </color> <color:R>贫弱       </color>
+波塞冬    <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+哈迪斯    <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color>
+雅典娜    <color:o>一般       </color> <color:y>极好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+阿瑞斯    <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color> <color:r>糟糕       </color>
+赫尔墨斯 <color:G>优秀       </color> <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color>
+阿波罗    <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+阿尔忒弥 <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+赫菲斯托 <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color>
+赫拉       <color:o>一般       </color> <color:y>良好       </color> <color:y>良好       </color> <color:R>贫弱       </color>
+德墨忒尔 <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:R>贫弱       </color>
+阿佛洛狄 <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color>
 
 </style>
 <topic:Skills2><style:heading>表 3 - 半神技能加成表 II</style>
 <style:table>
-             <color:w>搜索          察觉          近战          箭术          夜视 </color>
-次级神明     <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:y>极好(V.Good) </color> <color:y>良好(Good)   </color>    0'
-宙斯         <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:g>卓越(Superb) </color> <color:y>良好(Good)   </color>    0'
-波塞冬       <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:G>优秀(Exclnt) </color> <color:y>良好(Good)   </color>    0'
-哈迪斯       <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:G>优秀(Exclnt) </color> <color:y>良好(Good)   </color>    0'
-雅典娜       <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:y>极好(V.Good) </color> <color:y>良好(Good)   </color>    0'
-阿瑞斯       <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:g>卓越(Superb) </color> <color:y>良好(Good)   </color>    0'
-赫尔墨斯     <color:G>优秀(Exclnt) </color> <color:y>良好(Good)   </color> <color:y>极好(V.Good) </color> <color:y>良好(Good)   </color>    0'
-阿波罗       <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:y>极好(V.Good) </color> <color:y>良好(Good)   </color>    0'
-阿尔忒弥斯   <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:y>极好(V.Good) </color> <color:G>优秀(Exclnt) </color>    0'
-赫菲斯托斯   <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:g>卓越(Superb) </color> <color:y>良好(Good)   </color>    0'
-赫拉         <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:y>极好(V.Good) </color> <color:y>良好(Good)   </color>    0'
-德墨忒尔     <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:y>极好(V.Good) </color> <color:y>良好(Good)   </color>    0'
-阿佛洛狄忒   <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:y>极好(V.Good) </color> <color:y>良好(Good)   </color>    0'
+             <color:w>搜索        察觉        近战        箭术        红外</color>
+次神       <color:o>一般       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:y>良好       </color>    0'
+宙斯       <color:o>一般       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:y>良好       </color>    0'
+波塞冬    <color:o>一般       </color> <color:r>糟糕       </color> <color:G>优秀       </color> <color:y>良好       </color>    0'
+哈迪斯    <color:o>一般       </color> <color:r>糟糕       </color> <color:G>优秀       </color> <color:y>良好       </color>    0'
+雅典娜    <color:o>一般       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:y>良好       </color>    0'
+阿瑞斯    <color:o>一般       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:y>良好       </color>    0'
+赫尔墨斯 <color:G>优秀       </color> <color:y>良好       </color> <color:y>极好       </color> <color:y>良好       </color>    0'
+阿波罗    <color:o>一般       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:y>良好       </color>    0'
+阿尔忒弥 <color:o>一般       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:G>优秀       </color>    0'
+赫菲斯托 <color:o>一般       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:y>良好       </color>    0'
+赫拉       <color:o>一般       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:y>良好       </color>    0'
+德墨忒尔 <color:o>一般       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:y>良好       </color>    0'
+阿佛洛狄 <color:o>一般       </color> <color:r>糟糕       </color> <color:y>极好       </color> <color:y>良好       </color>    0'
 
 </style>
 <topic:Powers><style:heading>表 4 - 半神特殊能力</style>
 
-所有半神都能获得特殊能力。当他们达到 20 级时，可以从以下列表中选择一项能力。当他们达到 40 级时，可以再选择一项。这些能力永远无法移除或更改，因此你可能需要仔细研究这个列表，以决定为你的角色选择哪些能力。
+All demigods have access to special powers. When they reach level 20, they may choose a single power from the following list. When they reach level, 40, they may choose another. These powers can never be removed or changed, so you might want to study this list to decide which powers you will choose for your character.
 
-  <indent><color:G>双持精通 (Ambidexterity)</color>
-给予相当于 15 个百分点的双持武器技能加成。</indent>
+  <indent><color:G>不可触碰</color>
+提供 +20 护甲。</indent>
 
-  <indent><color:G>奥法精通 (Arcane Mastery)</color>
-降低 3 个百分点的法术失败率（仍受最高和最低失败率限制）。</indent>
+  <indent><color:G>不屈不挠</color>
+提供生命值加成（每角色等级 +1 HP）。</indent>
 
-  <indent><color:G>星界指引 (Astral Guide)</color>
-将玩家主动引发的传送所需时间减少 67% 到 70%。</indent>
+  <indent><color:G>个人崇拜</color>
+被召唤出的敌对怪物有最高50%的几率变为友好甚至成为宠物，这取决于它们的等级和玩家的魅力。</indent>
 
-  <indent><color:G>黑市常客 (Black Marketeer)</color>
-让你在黑市获得优惠价格（所有物品半价）。</indent>
+  <indent><color:G>健步如飞</color>
+行走消耗的能量减少 40%。</indent>
 
-  <indent><color:G>个人崇拜 (Cult of Personality)</color>
-召唤出的敌对怪物有高达 50% 的几率变得友好甚至成为宠物，具体取决于它们的等级和玩家的魅力。</indent>
+  <indent><color:G>博学者</color>
+在你捡起物品时自动鉴定。</indent>
 
-  <indent><color:G>恶魔之握 (Demonic Grasp)</color>
-免疫充能吸取。</indent>
+  <indent><color:G>奇妙狂乱</color>
+保留在不到一回合内击杀怪物时剩余的能量，同时赋予你施展“旋风攻击(Whirlwind Attack)”的能力，允许你消耗 50 SP 或 HP 攻击所有相邻的怪物。</indent>
 
-  <indent><color:G>闪避 (Evasion)</color>
-减少所有敌人吐息、火箭和岩石攻击 11% 到 20% 的伤害，并有 50% 几率避开地震。</indent>
+  <indent><color:G>奥术精通</color>
+降低 3% 的法术失败率（最大和最小失败率仍然适用）。</indent>
 
-  <indent><color:G>绝妙狂热 (Fantastic Frenzy)</color>
-保留在一回合内击杀怪物后剩余的行动能量，并赋予“旋风斩 (Whirlwind Attack)”能力，允许你消耗 50 SP 或 HP 攻击所有相邻的怪物。</indent>
+  <indent><color:G>左右开弓</color>
+提供相当于15个百分点的双持技能加成。</indent>
 
-  <indent><color:G>快速学习 (Fast Learner)</color>
-每击杀一个怪物额外获得 20% 经验值。</indent>
-
-  <indent><color:G>邪恶巫术 (Fell Sorcery)</color>
-你的法术将变得更强大（+15% 法术强度），代价是略微降低你的力量、敏捷和体质。</indent>
-
-  <indent><color:G>健步如飞 (Fleet of Foot)</color>
-步行的行动能量消耗减少 40%。</indent>
-
-  <indent><color:G>炼狱契约 (Infernal Deal)</color>
-每当附近的一个敌对怪物被击杀时，你将恢复 HP，恢复量等于该怪物原生等级的三分之二。</indent>
-
-  <indent><color:G>灵感锻造 (Inspired Smithing)</color>
-物品重铸会获得更好的结果（平均价值提升 10%）。</indent>
-
-  <indent><color:G>知识大师 (Loremaster)</color>
-在你拾取物品时自动将其鉴定。</indent>
-
-  <indent><color:G>魔法合一 (One with Magic)</color>
-赋予 77% 的几率抵抗反魔法和解除魔法（在变形或处于怨灵形态时几率较低）。</indent>
-
-  <indent><color:G>无双狙击 (Peerless Sniper)</color>
-使用远程发射武器伤害怪物不再引发其反击。</indent>
-
-  <indent><color:G>无双追踪 (Peerless Tracker)</color>
-赋予绘制周围地形和探测附近怪物的能力。</indent>
-
-  <indent><color:G>药水狂饮 (Potion Chugger)</color>
-让你喝药水的速度快一倍。</indent>
-
-  <indent><color:G>神圣活力 (Sacred Vitality)</color>
-所有治疗效果获得 20% 加成。</indent>
-
-  <indent><color:G>快速阅读 (Speed Reader)</color>
-让你读卷轴的速度快一倍。</indent>
-
-  <indent><color:G>坚韧心智 (Strong Mind)</color>
+  <indent><color:G>强韧心智</color>
 使你免疫法力吸取。</indent>
 
-  <indent><color:G>隐秘施法 (Subtle Casting)</color>
-使用远程魔法伤害怪物不再引发其反击。</indent>
+  <indent><color:G>快速学习者</color>
+你每击杀一只怪物将获得多 20% 的经验值。</indent>
 
-  <indent><color:G>踏雪无痕 (Tread Softly)</color>
-潜行增加 3。</indent>
+  <indent><color:G>快速阅读</color>
+让你阅读卷轴的速度变为原来的两倍。</indent>
 
-  <indent><color:G>无懈可击 (Untouchable)</color>
-护甲等级 +20。</indent>
+  <indent><color:G>恐怖巫术</color>
+你的法术将变得更强大 (+15% 法术强度)，代价是力量、敏捷和体质会受到轻微的惩罚。</indent>
 
-  <indent><color:G>不屈不挠 (Unyielding)</color>
-增加生命值上限（每个角色等级 +1 HP）。</indent>
+  <indent><color:G>恶魔之握</color>
+免疫充能流失。</indent>
 
-  <indent><color:G>武器多面手 (Weapon Versatility)</color>
-允许你精通任何武器（但不会使让你觉得恶心的武器变得不恶心）。</indent>
+  <indent><color:G>恶魔契约</color>
+每当附近的一只敌对怪物被击杀时，你将恢复HP，恢复量相当于怪物原生等级的三分之二。</indent>
 
-  <indent><color:G>奇异心智 (Weird Mind)</color>
-保护你的心智免受幻觉和不可名状的恐怖 (Eldritch Horrors) 的影响。</indent>
+  <indent><color:G>悄步前行</color>
+使你的潜行能力提升 3。</indent>
+
+  <indent><color:G>无双狙击手</color>
+用远程武器伤害怪物不再引发反击。</indent>
+
+  <indent><color:G>无双追踪者</color>
+赋予映射周围环境并探测附近怪物的能力。</indent>
+
+  <indent><color:G>星界向导</color>
+将玩家触发的传送所需时间减少 67% 到 70%。</indent>
+
+  <indent><color:G>武器多面手</color>
+允许你对任何武器达到完全精通（但这不能消除不适合武器带来的惩罚）。</indent>
+
+  <indent><color:G>灵感锻造</color>
+在物品重铸时，你将获得更好的结果（平均价值提高 10%）。</indent>
+
+  <indent><color:G>狂饮药水</color>
+让你喝药水的速度变为原来的两倍。</indent>
+
+  <indent><color:G>神圣活力</color>
+提供 20% 的所有治疗效果加成。</indent>
+
+  <indent><color:G>诡异心智</color>
+保护你的心智免受幻觉和不可名状的恐怖的侵害。</indent>
+
+  <indent><color:G>闪避</color>
+将所有敌人喷吐攻击、火箭和岩石的伤害降低 11% 到 20%，并有 50% 的几率避开地震。</indent>
+
+  <indent><color:G>隐秘施法</color>
+用远程魔法伤害怪物不再引发反击。</indent>
+
+  <indent><color:G>魔法亲和</color>
+提供 77% 的几率抵抗反魔法和解除魔法（在变形或处于怨灵形态时几率较低）。</indent>
+
+  <indent><color:G>黑市商人</color>
+让你在黑市中享受优惠价格（所有物品半价）。</indent>
 
 
-<topic:Weaknesses><style:heading>表 5 - 人类弱点 (Human Weaknesses)</style>
+<topic:Weaknesses><style:heading>表 5 - 人类弱点</style>
 
-普通人类会获得一项半神天赋，但他们在达到 35 级时也会获得一项特殊的人类弱点。每个弱点对应六项基础属性之一；人类获得哪个弱点取决于他们的主要施法属性。没有施法属性的角色被视为战士类型，并会获得“失衡打击”弱点。
+Normal humans receive one demigod talent, but they also acquire a special human weakness on reaching level 35. Each weakness corresponds to one of the six basic stats; which weakness a human gets depends on their primary spellcasting stat. Characters with no spell stat are assumed to be warrior-like and receive the Unbalancing Strikes weakness.
 
-  <indent><color:R>失衡打击 (Unbalancing Strikes)</color>
-力量是你最大的资本；但你现在挥出的力量大到难以控制。每次你在近战中造成暴击都会使你失去平衡；你无法在该回合内造成更多暴击，且由于你需要额外的时间来恢复平衡，该回合将消耗 1.2 回合的时间而不是 1 回合。</indent>
+  <indent><color:R>失衡打击</color>
+力量是你最大的资本；但你现在打击的威力大到难以控制。你在近战中造成的每一次暴击都会使你失去平衡；在那个回合中你无法造成更多的暴击，而且因为你需要额外的时间来恢复平衡，这样的回合将消耗 1.2 回合而不是 1 回合。</indent>
 
-  <indent><color:R>想象力过剩 (Overactive Imagination)</color>
-你的大脑高度发达——对于人类而言——但也许有时候好东西太多了也不是什么好事？你过度活跃的想象力使你容易受到恐惧的影响，并在所有与恐惧相关的玩家/怪物交互判定中，将你的有效角色等级降低 10 级。</indent>
+  <indent><color:R>想象力过于丰富</color>
+作为人类，你的大脑高度发达——但也许有时好事过了头？你过于丰富的想象力使你容易感到恐惧，在所有与恐惧相关的玩家/怪物交互中，你的有效角色等级会降低 10 级。</indent>
 
-  <indent><color:R>神性共鸣 (Attuned to God)</color>
-你极其睿智，花在冥想上的时间如此之长，以至于你的心智现在已完全与神性产生了共鸣；但作为代价，你感觉不到与邪恶怪物的任何联系。即使使用心灵感应的法术或装备，你也无法通过心灵感应探测到任何邪恶怪物。</indent>
+  <indent><color:R>与神同调</color>
+你极其明智，并花费了大量时间冥想，以至于你的思想现在已完全与神性同调；但结果是，你感觉与邪恶怪物没有任何联系。你无法通过心灵感应探测到任何邪恶怪物，即使使用心灵感应法术或装备也不行。</indent>
 
-  <indent><color:R>反应过载 (Nimbler than Your Body)</color>
-敏捷是你最突出的特点；但人类的肉体是有极限的。在攻击怪物、躲避敌人打击或发射弹药时，你有可能会扭伤肌肉；这会暂时使你的速度降低 10。</indent>
+  <indent><color:R>敏捷超乎肉体</color>
+敏捷是你最强的优势；但这具人类躯体能承受的极限是有限的。你在打击怪物、躲避敌人攻击或发射弹药时有时会拉伤肌肉；这会暂时使你的速度降低 10。</indent>
 
-  <indent><color:R>逼近极限 (Pushed to the Limits)</color>
-你的体质和耐力异乎寻常；但就像许多高水平运动员一样，你的免疫系统很难跟上节奏。你会频繁遭遇身体不适，这会暂时降低你的体质和敏捷。</indent>
+  <indent><color:R>逼近极限</color>
+你的体质和耐力非同凡响；但就像许多高强度运动员一样，你的免疫系统难以跟上。你会频繁地感到身体不适，这会暂时降低你的体质和敏捷。</indent>
 
-  <indent><color:R>狂妄自大 (Overconfidence)</color>
-你可能极具个人魅力；但过度沉醉于对自己的吹捧会导致盲目自信和行事草率。缺乏足够的注意力会使你在近战和射击精度、以及使用装置和法术失败率方面受到惩罚，类似于“慵懒 (Lazy)”性格带来的影响。</indent>
-
-
+  <indent><color:R>过度自信</color>
+你也许极具魅力；但过度沉醉于自己的炒作中会导致过度自信和马虎。由于缺乏足够的专注，你的近战和射击精度、以及使用装置和法术的失败率会受到惩罚，类似于“懒惰”性格带来的效果。</indent>
 
 
-<color:s>自动生成，适用于 FrogComposband 7.2.salmiak。</color>
+
+
+<color:s>自动生成于 FrogComposband 7.4。</color>
