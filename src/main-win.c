@@ -2123,6 +2123,8 @@ static void windows_map(void);
  */
 static void term_data_redraw(term_data *td)
 {
+    term *old = Term;
+
     if (td->map_active)
     {
         /* Redraw the map */
@@ -2137,7 +2139,7 @@ static void term_data_redraw(term_data *td)
         Term_redraw();
 
         /* Restore the term */
-        Term_activate(term_screen);
+        Term_activate(old);
     }
 }
 
@@ -2442,6 +2444,80 @@ static errr Term_xtra_win_clear(void)
 
     /* Success */
     return 0;
+}
+
+static uint term_data_client_cols(term_data *td, LPARAM lParam)
+{
+    int wid = (int)LOWORD(lParam) - (int)td->size_ow1 - (int)td->size_ow2;
+
+    if (wid < (int)td->tile_wid) return 1;
+    return (uint)(wid / (int)td->tile_wid);
+}
+
+static uint term_data_client_rows(term_data *td, LPARAM lParam)
+{
+    int hgt = (int)HIWORD(lParam) - (int)td->size_oh1 - (int)td->size_oh2;
+
+    if (hgt < (int)td->tile_hgt) return 1;
+    return (uint)(hgt / (int)td->tile_hgt);
+}
+
+static int term_data_mouse_col(term_data *td, LPARAM lParam)
+{
+    int x = (int)(short)LOWORD(lParam) - (int)td->size_ow1;
+
+    if (x < 0) x = 0;
+    return MIN(x / (int)td->tile_wid, (int)td->cols - 1);
+}
+
+static int term_data_mouse_row(term_data *td, LPARAM lParam)
+{
+    int y = (int)(short)HIWORD(lParam) - (int)td->size_oh1;
+
+    if (y < 0) y = 0;
+    return MIN(y / (int)td->tile_hgt, (int)td->rows - 1);
+}
+
+static void term_data_force_redraw(term_data *td)
+{
+    term *old = Term;
+    RECT rc;
+
+    if (!td || !td->w) return;
+
+    if (td->hDC)
+    {
+        HBRUSH brush = CreateSolidBrush(td->bg_color);
+
+        rc.left = 0;
+        rc.top = 0;
+        rc.right = td->size_wid;
+        rc.bottom = td->size_hgt;
+        FillRect(td->hDC, &rc, brush);
+        DeleteObject(brush);
+        _update_rect_reset(td);
+        _update_rect_enlarge(td, &rc);
+    }
+
+    Term_activate(&td->t);
+    Term_redraw();
+    Term_activate(old);
+
+    InvalidateRect(td->w, NULL, TRUE);
+    UpdateWindow(td->w);
+}
+
+static void term_data_erase_background(term_data *td, HDC hdc)
+{
+    RECT rc;
+    HBRUSH brush;
+
+    if (!td || !td->w || !hdc) return;
+
+    GetClientRect(td->w, &rc);
+    brush = CreateSolidBrush(td->bg_color);
+    FillRect(hdc, &rc, brush);
+    DeleteObject(brush);
 }
 
 
@@ -3306,6 +3382,9 @@ static void init_windows(void)
     SetWindowPos(td->w, HWND_TOP, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
 
     term_init_double_buffer(td);
+
+    /* The core initializes messages immediately after init_windows(). */
+    Term_activate(term_screen);
 
     /* New palette XXX XXX XXX */
     (void)new_palette();
@@ -4348,6 +4427,12 @@ LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
             return 0;
         }
 
+        case WM_ERASEBKGND:
+        {
+            term_data_erase_background(td, (HDC)wParam);
+            return 1;
+        }
+
         case WM_SYSKEYDOWN:
         case WM_KEYDOWN:
         {
@@ -4365,8 +4450,8 @@ LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
 
         case WM_LBUTTONDOWN:
         {
-            mousex = MIN(LOWORD(lParam) / td->tile_wid, td->cols - 1);
-            mousey = MIN(HIWORD(lParam) / td->tile_hgt, td->rows - 1);
+            mousex = term_data_mouse_col(td, lParam);
+            mousey = term_data_mouse_row(td, lParam);
             mouse_down = TRUE;
             oldx = mousex;
             oldy = mousey;
@@ -4414,7 +4499,7 @@ LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
             SetClipboardData(CF_TEXT, hGlobal);
             CloseClipboard();
 
-            Term_redraw();
+            term_data_force_redraw(td);
 
             return 0;
         }
@@ -4424,8 +4509,8 @@ LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
             if (mouse_down)
             {
                 int dx, dy;
-                int cx = MIN(LOWORD(lParam) / td->tile_wid, td->cols - 1);
-                int cy = MIN(HIWORD(lParam) / td->tile_hgt, td->rows - 1);
+                int cx = term_data_mouse_col(td, lParam);
+                int cy = term_data_mouse_row(td, lParam);
                 int ox, oy;
 
                 if (paint_rect)
@@ -4512,9 +4597,6 @@ LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
             return 0;
         }
 
-        /*case WM_ERASEBKGND:
-            return 1;*/
-
         case WM_COMMAND:
         {
             process_menus(LOWORD(wParam));
@@ -4551,12 +4633,14 @@ LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
 
                 case SIZE_RESTORED:
                 {
-                    uint cols = (LOWORD(lParam) - td->size_ow1) / td->tile_wid;
-                    uint rows = (HIWORD(lParam) - td->size_oh1) / td->tile_hgt;
+                    uint cols = term_data_client_cols(td, lParam);
+                    uint rows = term_data_client_rows(td, lParam);
 
                     /* New size */
                     if ((td->cols != cols) || (td->rows != rows))
                     {
+                        term *old_term = Term;
+
                         /* Save the new size */
                         td->cols = cols;
                         td->rows = rows;
@@ -4576,9 +4660,11 @@ LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
                         /* I'm going nuts here! Was td size data just always
                            wrong before? Crazy Nuts :P */
                         term_getsize(td);
-                        
-                        /* Redraw later */
-                        InvalidateRect(td->w, NULL, TRUE);
+
+                        /* Restore */
+                        Term_activate(old_term);
+
+                        term_data_force_redraw(td);
                     }
 
                     td->size_hack = TRUE;
@@ -4595,6 +4681,18 @@ LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
                 }
             }
             break;
+        }
+
+        case WM_EXITSIZEMOVE:
+        {
+            /* Snap a manually resized window back to whole terminal cells. */
+            if (!td || !td->w) return 1;
+
+            td->size_hack = TRUE;
+            term_window_resize(td);
+            td->size_hack = FALSE;
+            term_data_force_redraw(td);
+            return 0;
         }
 
         case WM_PALETTECHANGED:
@@ -4742,8 +4840,8 @@ LRESULT FAR PASCAL AngbandListProc(HWND hWnd, UINT uMsg,
 
             td->size_hack = TRUE;
 
-            cols = (LOWORD(lParam) - td->size_ow1) / td->tile_wid;
-            rows = (HIWORD(lParam) - td->size_oh1) / td->tile_hgt;
+            cols = term_data_client_cols(td, lParam);
+            rows = term_data_client_rows(td, lParam);
 
             /* New size */
             if ((td->cols != cols) || (td->rows != rows))
@@ -4768,8 +4866,7 @@ LRESULT FAR PASCAL AngbandListProc(HWND hWnd, UINT uMsg,
                 /* Activate */
                 Term_activate(old_term);
 
-                /* Redraw later */
-                InvalidateRect(td->w, NULL, TRUE);
+                term_data_force_redraw(td);
 
                 /* HACK - Redraw all windows */
                 p_ptr->window = 0xFFFFFFFF;
@@ -4781,12 +4878,29 @@ LRESULT FAR PASCAL AngbandListProc(HWND hWnd, UINT uMsg,
             return 0;
         }
 
+        case WM_EXITSIZEMOVE:
+        {
+            if (!td || !td->w) return 1;
+
+            td->size_hack = TRUE;
+            term_window_resize(td);
+            td->size_hack = FALSE;
+            term_data_force_redraw(td);
+            return 0;
+        }
+
         case WM_PAINT:
         {
             BeginPaint(hWnd, &ps);
             if (td) term_data_redraw(td);
             EndPaint(hWnd, &ps);
             return 0;
+        }
+
+        case WM_ERASEBKGND:
+        {
+            term_data_erase_background(td, (HDC)wParam);
+            return 1;
         }
 
         case WM_SYSKEYDOWN:
