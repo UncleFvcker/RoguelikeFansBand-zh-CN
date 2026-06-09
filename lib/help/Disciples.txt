@@ -1,155 +1,155 @@
-<style:title>门徒</style>
+<style:title>门徒 (Disciples)</style>
 
-Trusted followers of mysterious ancient spirits known as the 'Purples', the Disciples roam the world running errands for their masters, learning mighty spells and receiving rare items as rewards for their work. There are three main flavors of Purple Disciples - disciples of Karrot, disciples of Yeqrezh, and disciples of a group of Purples known as the Troika. Each of the Purples expects different things of their Disciples, and each helps them achieve their ends in very different ways.
+作为被称为“紫灵 (Purples)”的神秘古老神明的忠实追随者，门徒们在世界各地游荡，为主人们跑腿，学习强大的法术，并获得稀有物品作为他们工作的奖励。紫灵门徒主要分为三派：卡罗特 (Karrot) 的门徒，耶克雷兹 (Yeqrezh) 的门徒，以及一个被称为“三头同盟 (Troika)”的紫灵群体的门徒。每位紫灵对他们的门徒都有不同的期望，并以截然不同的方式帮助门徒实现目标。
 
-<topic:卡罗特><color:o>卡罗特</color>
-Karrot is a proud and ambitious Purple, convinced that it is his destiny to one day rule the universe; but rather than getting personally involved, he has assigned to his Disciples the task of eliminating any potential rivals (like the Serpent of Chaos). Being so sure of his greatness, Karrot sees little reason to vary his habits and is the only one of the Purples to predictably teach all of his Disciples the same spells. Karrot occasionally assigns side-quests to his Disciples, with the dual aim of testing their mettle and removing lesser threats to his supremacy. These side-quests only appear on fairly challenging levels; they can be avoided by sticking to safer areas, but this will not make Karrot happy...
+<topic:Karrot><color:o>卡罗特 (Karrot)</color>
+卡罗特是一位骄傲且野心勃勃的紫灵，他坚信有朝一日统治宇宙是他的宿命；但他并没有亲自插手，而是将消除任何潜在竞争对手（如混沌之龙 Serpent of Chaos）的任务交给了他的门徒。由于对自己的伟大深信不疑，卡罗特认为没有理由改变他的习惯，并且他是唯一一个总是按部就班地教授所有门徒相同法术的紫灵。卡罗特偶尔会给他的门徒分配支线任务，其双重目的是测试他们的勇气并消除对他霸权的次要威胁。这些支线任务只出现在相当具有挑战性的楼层；你可以通过待在较安全的区域来避开它们，但这会让卡罗特很不高兴……
 
-Karrot considers many artifacts to be his rightful personal property, and will claim them immediately if you should find them. He will, however, give you another artifact as a reward for your discovery. These replacement artifacts tend to start out as fairly weak, but eventually become very strong as you gain Karrot's respect by leveling up and by successfully completing side-quests. If you're really lucky and do a particularly good job, you might even receive the ultimate gift - Urog, Karrot's legendary blade of shadows!
+卡罗特认为许多神器都是他合法的个人财产，如果你找到它们，他会立即将其据为己有。不过，他会给你另一件神器作为你找到神器的奖励。这些替代神器起初往往相当弱小，但随着你通过升级和成功完成支线任务来获得卡罗特的尊重，它们最终会变得非常强大。如果你真的很幸运且表现特别出色，你甚至可能获得终极礼物——尤洛格 (Urog)，卡罗特传说中的暗影之刃！
 
-Disciples of Karrot tend to play as fighter-mages, relying on melee, spells and devices alike. They are unique among Disciples in not having a mana pool; casting a spell takes a toll on their hit points instead. They are also the only Disciples to have a charming spell - but the greatest of Karrot's followers are rumoured to eventually learn even rarer abilities...
-Karrot's disciples depend on Intelligence to make their spells work.
+卡罗特的门徒倾向于扮演战法的角色，兼顾依赖近战、法术和魔法装置。他们在门徒中是独一无二的，因为他们没有法力池；取而代之的是，施放法术会消耗他们的生命值。他们也是唯一拥有魅惑法术的门徒——但据说最伟大的卡罗特追随者最终能学会更加罕见的能力……
+卡罗特的门徒依靠智力来维持施法的运作。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> -1</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:v> +1</color>        Device      <color:G>优秀       </color>
-Wisdom       <color:w> -1</color>        Save        <color:y>良好       </color>
-Dexterity    <color:w> +0</color>        Stealth     <color:o>一般       </color>
-Constitution <color:w> -1</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +1</color>        Perception  <color:R>贫弱       </color>
-Life Rating   95%       Melee       <color:y>良好       </color>
-Base HP       14        Archery     <color:y>良好       </color>
-Experience   125%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> -1</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:v> +1</color>        魔法装置    <color:G>优秀(Exclnt) </color>
+感知         <color:w> -1</color>        豁免        <color:y>良好(Good)   </color>
+敏捷         <color:w> +0</color>        潜行        <color:o>一般(Fair)   </color>
+体质         <color:w> -1</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +1</color>        察觉        <color:R>较差(Poor)   </color>
+生命加成      95%       近战        <color:y>良好(Good)   </color>
+基础HP        14        箭术        <color:y>良好(Good)   </color>
+经验修正     125%
 </style></indent>
-<topic:耶克雷什><color:o>耶克雷什</color>
-Yeqrezh is the friendliest of the Purples, supportive of his Disciples and willing to let them find their own way. Disciples of Yeqrezh will learn 20 spells over the course of the game - one every two character levels, apart from levels 10, 20, 30, 40 and 50; seventeen of these spells are offered by Yeqrezh, while the other three (at levels 16, 32 and 48) are chosen by you. Every ten levels, Yeqrezh offers direct help to his Disciples; depending on your choice, he can give you rare items or a permanent mental or physical ability, or share some of his life experience with you. Some of these abilities can be improved repeatedly, allowing you to accumulate exceptional mastery.
+<topic:Yeqrezh><color:o>耶克雷兹 (Yeqrezh)</color>
+耶克雷兹是紫灵中最友好的，他支持他的门徒并愿意让他们自己去探索道路。耶克雷兹的门徒在游戏过程中将学会 20 个法术——除了 10、20、30、40 和 50 级外，每升两级学会一个；其中 17 个法术由耶克雷兹提供，而另外 3 个（在 16、32 和 48 级时）由你选择。每隔十级，耶克雷兹会为他的门徒提供直接的帮助；根据你的选择，他可以给你稀有物品或一项永久的心智/肉体能力，抑或是与你分享他的一些人生经验。这些能力中的一部分可以被重复强化，使你能够累积非凡的专精能力。
 
-Disciples of Yeqrezh gain many practical tools as well as solid offensive options, and a useful item as a gift from their patron every odd-numbered character level. They are the most mage-like of all Disciples, and lack of hit points is their only true weakness. Nevertheless, they are extremely versatile, and can also win through melee, archery or even sneaking about silently collecting loot.
+耶克雷兹的门徒可以获得许多实用的工具以及可靠的进攻手段，并且在每个奇数角色等级时都会收到其守护神赠送的一件实用物品作为礼物。他们是所有门徒中最像法师的，而生命值偏低是他们唯一真正的弱点。尽管如此，他们极其全能，也可以通过近战、箭术甚至悄无声息地潜行收集战利品来赢得胜利。
 
-Yeqrezh is the recommended patron for new (or highly cautious) players, as he is the only Purple not to actively incentivize a demanding, push-the-envelope approach. Yeqrezh's disciples, like Karrot's, rely on Intelligence to power their spells.
+耶克雷兹是推荐给新手（或极度谨慎的）玩家的守护神，因为他是唯一一个不会主动鼓励你采取高风险、挑战极限打法的紫灵。像卡罗特的门徒一样，耶克雷兹的门徒依靠智力来驱动他们的法术。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +0</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:v> +1</color>        Device      <color:o>一般       </color>
-Wisdom       <color:w> +1</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> +0</color>        Stealth     <color:o>一般       </color>
-Constitution <color:w> -3</color>        Searching   <color:R>贫弱       </color>
-Charisma     <color:w> +0</color>        Perception  <color:R>贫弱       </color>
-Life Rating   90%       Melee       <color:y>良好       </color>
-Base HP       12        Archery     <color:G>优秀       </color>
-Experience   115%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +0</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:v> +1</color>        魔法装置    <color:o>一般(Fair)   </color>
+感知         <color:w> +1</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> +0</color>        潜行        <color:o>一般(Fair)   </color>
+体质         <color:w> -3</color>        搜索        <color:R>较差(Poor)   </color>
+魅力         <color:w> +0</color>        察觉        <color:R>较差(Poor)   </color>
+生命加成      90%       近战        <color:y>良好(Good)   </color>
+基础HP        12        箭术        <color:G>优秀(Exclnt) </color>
+经验修正     115%
 </style></indent>
-<topic:特罗伊卡><color:o>特罗伊卡</color>
-The Troika is a group of three closely related Purples working together - Guntujant, Uxip and Sohoglyth. Guntujant is a capricious Purple who follows the careers of his servants very closely, and rewards and punishes them seemingly at random; the powers gained by his followers are unpredictable, but generally quite strong. Uxip delights in combat, and grants Troika disciples their prodigious endurance and skill with two-handed weapons; however, a number of common items are an abomination unto Uxip, and cannot be used by followers of the Troika. Sohoglyth is a mysterious spirit, but a profoundly powerful one. She occasionally sets bonus quests for Troika disciples; if enough of the quests are completed with no failures, she will reward the questor with the power of telepathy, remote object quality sensing, or even walking through walls.
+<topic:Troika><color:o>三头同盟 (Troika)</color>
+三头同盟是一个由三个密切相关的紫灵协同工作的组织——冈图扬 (Guntujant)、乌克西普 (Uxip) 和 索霍格利斯 (Sohoglyth)。冈图扬是一个变化无常的紫灵，他密切关注着仆从们的生涯，并似乎随机地对他们进行奖惩；他追随者获得的力量是不可预测的，但通常相当强大。乌克西普热衷于战斗，并赋予三头同盟门徒惊人的耐力和双手武器技巧；然而，对于乌克西普来说，许多普通物品都是可憎之物，因此三头同盟的追随者无法使用这些物品。索霍格利斯是一个神秘的灵魂，但力量极其深厚。她偶尔会给三头同盟的门徒设定奖励任务；如果在没有失败的情况下完成了足够的任务，她将奖励任务完成者心灵感应、远程物品感知、甚至穿墙的能力。
 
-Troika Disciples are in general very strong, especially in combat but also sorcery, yet the limitations placed upon them by Uxip and Guntujant also make them in some ways vulnerable. In particular, they frequently suffer random punishments, risk being punished if they teleport from a fight while not at low health, cannot wear a shield or cure poison with mushrooms, and must earn the right to use a rod of Detection. The spells of Troika disciples are unique in that they are not learned at any particular character level; instead, Guntujant and Uxip will teach them as a reward for killing dangerous enemies, especially uniques. Strength determines the spellcasting ability of a Troika disciple.
+三头同盟门徒通常非常强大，尤其是在战斗以及法术方面，然而乌克西普和冈图扬对他们施加的限制也使他们在某些方面很脆弱。特别是，他们经常遭受随机的惩罚，如果在并非低血量时从战斗中传送逃离就有可能受到惩罚，此外他们不能装备盾牌或用蘑菇解毒，并且必须赢取使用探测魔棒 (rod of Detection) 的权利。三头同盟门徒的法术十分独特，因为它们不是在任何特定角色等级学会的；相反，冈图扬和乌克西普会将教授法术作为击杀危险敌人（特别是独特怪物）的奖励。力量决定了三头同盟门徒的施法能力。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:v> +1</color>        Disarming   <color:y>良好       </color>
-Intelligence <color:w> +0</color>        Device      <color:r>糟糕       </color>
-Wisdom       <color:w> -1</color>        Save        <color:r>糟糕       </color>
-Dexterity    <color:w> +1</color>        Stealth     <color:o>一般       </color>
-Constitution <color:w> +2</color>        Searching   <color:R>贫弱       </color>
-Charisma     <color:w> +0</color>        Perception  <color:R>贫弱       </color>
-Life Rating  108%       Melee       <color:G>优秀       </color>
-Base HP       23        Archery     <color:y>良好       </color>
-Experience   150%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:v> +1</color>        解除陷阱    <color:y>良好(Good)   </color>
+智力         <color:w> +0</color>        魔法装置    <color:r>极差(Bad)    </color>
+感知         <color:w> -1</color>        豁免        <color:r>极差(Bad)    </color>
+敏捷         <color:w> +1</color>        潜行        <color:o>一般(Fair)   </color>
+体质         <color:w> +2</color>        搜索        <color:R>较差(Poor)   </color>
+魅力         <color:w> +0</color>        察觉        <color:R>较差(Poor)   </color>
+生命加成     108%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        23        箭术        <color:y>良好(Good)   </color>
+经验修正     150%
 </style></indent>
-<color:B>TIP</color>: The special random quests for Karrot and Troika disciples can only appear 如果你所在的层数足够深，使得该任务具有挑战性。按下 <color:y>CTRL+F</color>reveals your patron's opinion of your current depth. The Purples also like you to visit many different dungeons; do not expect a large number of assignments in a single dungeon, unless 你在没有荒野的模式下游玩。
+<color:B>提示</color>：卡罗特和三头同盟门徒的特殊随机任务只有在你所处的深度足以使任务具有挑战性时才会出现。按下 <color:y>CTRL+F</color> 可以查看你的守护神对你当前所处深度的看法。紫灵们也喜欢你探索许多不同的地下城；不要指望在同一个地下城中接到大量任务，除非你是在没有大地图野外的模式下进行游戏。
 
 <topic:Tables><style:heading>表 1 - 门徒属性加成表</style>
 <style:table>
-<color:G>                 </color> <color:G>STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp</color>
-卡罗特          -1   +1   -1   +0   -1   +1   95%  +14  125%
-耶克雷什       +0   +1   +1   +0   -3   +0   90%  +12  115%
-特罗伊卡       +1   +0   -1   +1   +2   +0  108%  +23  150%
+<color:G>                 </color> <color:G>力量 智力 感知 敏捷 体质 魅力 生命  BHP  经验</color>
+卡罗特             -1   +1   -1   +0   -1   +1   95%  +14  125%
+耶克雷兹           +0   +1   +1   +0   -3   +0   90%  +12  115%
+三头同盟           +1   +0   -1   +1   +2   +0  108%  +23  150%
 
 </style>
 <topic:Skills1><style:heading>表 2 - 门徒技能加成表 I</style>
 <style:table>
-                  <color:w>解除陷阱  使用装置  豁免        潜行       </color>
-卡罗特         <color:o>一般       </color> <color:G>优秀       </color> <color:y>良好       </color> <color:o>一般       </color>
-耶克雷什      <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
-特罗伊卡      <color:y>良好       </color> <color:r>糟糕       </color> <color:r>糟糕       </color> <color:o>一般       </color>
+                  <color:w>解除陷阱      魔法装置      豁免          潜行         </color>
+卡罗特            <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color>
+耶克雷兹          <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color>
+三头同盟          <color:y>良好(Good)   </color> <color:r>极差(Bad)    </color> <color:r>极差(Bad)    </color> <color:o>一般(Fair)   </color>
 
 </style>
 <topic:Skills2><style:heading>表 3 - 门徒技能加成表 II</style>
 <style:table>
-                  <color:w>搜索        察觉        近战        箭术       </color>
-卡罗特         <color:o>一般       </color> <color:R>贫弱       </color> <color:y>良好       </color> <color:y>良好       </color>
-耶克雷什      <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color> <color:G>优秀       </color>
-特罗伊卡      <color:R>贫弱       </color> <color:R>贫弱       </color> <color:G>优秀       </color> <color:y>良好       </color>
+                  <color:w>搜索          察觉          近战          箭术         </color>
+卡罗特            <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color>
+耶克雷兹          <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:y>良好(Good)   </color> <color:G>优秀(Exclnt) </color>
+三头同盟          <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:G>优秀(Exclnt) </color> <color:y>良好(Good)   </color>
 
 </style>
-<topic:Powers><style:heading>表 4 - 耶克瑞什天赋</style>
+<topic:Powers><style:heading>表 4 - 耶克雷兹天赋 (Yeqrezh Talents)</style>
 
-Disciples of Yeqrezh can choose five special gifts, one every ten levels. These gifts can take the form of new abilities, physical powers, or rare items; some can be chosen repeatedly, while others can only be picked once. Once you have selected a gift, you can never go back on your decision, so you might want to study this list to decide which gifts to choose for your character.
+耶克雷兹的门徒可以选择五份特殊的礼物，每十级选择一次。这些礼物可以是新能力、肉体力量或稀有物品的形式；有些可以重复选择，而另一些只能选择一次。一旦你选择了一份礼物，你就永远无法撤回你的决定，因此你可能需要研究这个列表，以决定为你的角色选择哪些礼物。
 
-  <indent><color:G>紫色肌肉</color>
-提供 +2 力量（STR）和 +2 敏捷（DEX）。</indent>
+  <indent><color:G>紫灵肌肉 (Purple Muscles)</color>
+赋予 +2 力量 和 +2 敏捷。</indent>
 
-  <indent><color:G>紫色活力</color>
-所有治疗效果恢复的生命值将比平时多 10%。</indent>
+  <indent><color:G>紫灵活力 (Purple Vitality)</color>
+所有治疗效果将比通常多恢复 10% 的 HP。</indent>
 
-  <indent><color:G>紫色速度</color>
-提供 +1 速度。</indent>
+  <indent><color:G>紫灵速度 (Purple Speed)</color>
+赋予 +1 速度。</indent>
 
-  <indent><color:G>紫色致命</color>
-提供 +8 的近战伤害加成（不适用于天生攻击）。</indent>
+  <indent><color:G>紫灵致命 (Purple Deadliness)</color>
+赋予 +8 近战伤害加值（不适用于天生攻击）。</indent>
 
-  <indent><color:G>紫色潜行</color>
-提供 +4 潜行。</indent>
+  <indent><color:G>紫灵潜行 (Purple Stealth)</color>
+赋予 +4 潜行。</indent>
 
-  <indent><color:G>紫色防护</color>
-提供 +15 护甲（AC）。</indent>
+  <indent><color:G>紫灵防护 (Purple Protection)</color>
+赋予 +15 护甲等级 (AC)。</indent>
 
-  <indent><color:G>装置精通</color>
-赋予相当于 +1 装置精通(Md) 的装置技能。</indent>
+  <indent><color:G>装置精通 (Device Mastery)</color>
+赋予相当于 +1 Md (魔法装置系数) 的魔法装置技能。</indent>
 
-  <indent><color:G>急速射击</color>
-提供相当于 +1 额外射击(Xs) 的射击速度加成。</indent>
+  <indent><color:G>快速射击 (Rapid Shooting)</color>
+赋予相当于 +1 Xs (额外射击次数) 的射击速度提升。</indent>
 
-  <indent><color:G>强力咒术</color>
-使你的法术强度提高 +15%，但会降低你 3 点生命乘数。</indent>
+  <indent><color:G>强效咒术 (Power Sorcery)</color>
+将你的法术强度提高 15%，但将你的生命值乘数降低 3 点。</indent>
 
-  <indent><color:G>紧张施法</color>
-使你的法术强度提高 +15%，但会让你变得容易恐惧。</indent>
+  <indent><color:G>神经质施法 (Nervous Casting)</color>
+将你的法术强度提高 15%，但使你容易受到恐惧的影响。</indent>
 
-  <indent><color:G>轻松施法</color>
+  <indent><color:G>轻松施法 (Easy Casting)</color>
 降低 4 个百分点的法术失败率。</indent>
 
-  <indent><color:G>敏捷施法</color>
+  <indent><color:G>快速咏唱 (Quick Spelling)</color>
 施放法术只需消耗通常 93% 的时间。</indent>
 
-  <indent><color:G>快速恢复</color>
-提供 +100% 再生率。</indent>
+  <indent><color:G>加速恢复 (Speedy Recovery)</color>
+赋予 +100% 再生。</indent>
 
-  <indent><color:G>彩票</color>
-你将从耶克列日那里收到三张*获取*卷轴。</indent>
+  <indent><color:G>彩票 (Lottery Tickets)</color>
+你将从耶克雷兹那里获得 3 张 *祈愿* (*Acquirement*) 卷轴。</indent>
 
-  <indent><color:G>死亡笔记</color>
-你将从耶克列日那里收到五张群体大屠杀卷轴。</indent>
+  <indent><color:G>死亡笔记 (Notes of Death)</color>
+你将从耶克雷兹那里获得 5 张群体灭绝 (Mass Genocide) 卷轴。</indent>
 
-  <indent><color:G>生命精华</color>
-你将从耶克列日那里收到三瓶生命药水。</indent>
+  <indent><color:G>生命精华 (Essence of Life)</color>
+你将从耶克雷兹那里获得 3 瓶生命药水 (potions of Life)。</indent>
 
-  <indent><color:G>耶克记忆</color>
-立即提升 5 个角色等级。</indent>
+  <indent><color:G>耶克雷兹的记忆 (Yeqrezh's Memories)</color>
+立即再提升 5 个角色等级。</indent>
 
-  <indent><color:G>怪异思维</color>
-保护你的心智免受幻觉和不可名状的恐怖的侵害。</indent>
+  <indent><color:G>奇异心智 (Strange Mind)</color>
+保护你的心智免受幻觉和不可名状的恐怖 (Eldritch Horrors) 的影响。</indent>
 
-  <indent><color:G>坚韧思维</color>
+  <indent><color:G>坚韧心智 (Strong Mind)</color>
 使你免疫法力吸取。</indent>
 
-  <indent><color:G>实物教学</color>
-允许你感知远处物品的品质，并自动鉴定你踩到的所有物品。</indent>
+  <indent><color:G>物品认知 (Object Lessons)</color>
+允许你感知远处物品的品质，并自动鉴定所有你踩过的物品。</indent>
 
-  <indent><color:G>王牌洗牌</color>
-使你能够使用“洗牌”法术，并在抽到“审判”牌时自动获得自我感知效果。</indent>
+  <indent><color:G>王牌洗牌 (Trump Shuffling)</color>
+让你能够使用“洗牌 (Shuffle)”法术，且如果抽到“审判 (Judgement)”牌，会自动赋予你“自我认知 (Self Knowledge)”。</indent>
 
 
 </style>
 
 
-<color:s>自动生成于 FrogComposband 7.4。</color>
+<color:s>自动生成，适用于 FrogComposband 7.2.salmiak。</color>

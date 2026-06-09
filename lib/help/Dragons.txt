@@ -1,268 +1,268 @@
-<style:title>龙族</style>
+<style:title>巨龙 (Dragons)</style>
 
-Dragons are powerful winged serpents. They are strong in combat, with razor-sharp claws and a bone-crushing bite; but even more legendary is their breath, which grows ever more deadly as the dragon matures.
+巨龙是强大的带翼爬行类生物。他们在战斗中极为强悍，拥有极其锋利的利爪和足以粉碎骨头的咬噬；但更具传奇色彩的是他们的吐息，随着巨龙的心智成熟，吐息会变得越来越致命。
  
-Due to their non-humanoid bodies, dragons are unable to wear armor, gloves or boots; however, being creatures of magic, they may equip up to six rings. They can also wear a helmet, a light source, a cloak and an amulet. Because of these equipment restrictions, dragons may have a difficult time covering all resistances; but each dragon has at least one innate resistance, maybe even an immunity.
+由于其非人型的躯体，巨龙无法穿戴护甲、手套或靴子；然而，作为魔法生物，他们最多可以装备六枚戒指。他们还可以佩戴一顶头盔、一个光源、一件披风和一条护身符。由于这些装备上的限制，巨龙可能很难凑齐所有的抗性；但每条巨龙都至少拥有一种先天抗性，甚至可能是免疫。
  
-Dragons begin life in a weak form, being very young. As their bodies mature, their scales grow tough and their claws sharp. Their breaths become stronger and stronger, and they frequently gain additional magical powers and resistances. All dragons can fly, but younger dragons are not so quick as their elders.
+巨龙在生命之初（非常幼小的阶段）形态较为虚弱。随着他们身体的成熟，其鳞片会变得坚硬，爪子会变得锋利。他们的吐息越来越强，并且经常会获得额外的魔法力量和抗性。所有巨龙都能飞行，但年幼的巨龙不如年长的同类飞得快。
  
-With the exception of Steel Dragons, who are far less intelligent than their kin and rely on brute force only, each dragon may choose to specialize in a specific type of magic. These special dragon-magic realms do not require books to learn. The selection of a realm has a direct influence on the stats and skills of the dragon.
+除了钢铁龙 (Steel Dragons) 之外（他们远不如同族聪明，只依靠蛮力），每条巨龙都可以选择专精于一种特定类型的魔法。这些特殊的巨龙魔法领域不需要书本即可学习。领域的选择会对巨龙的属性和技能产生直接的影响。
 
-有关<color:keyword>龙族领域</color>的更多信息，请参阅 <link:DragonRealms.txt>。
+有关<color:keyword>巨龙领域 (Dragon Realms)</color>的更多信息，请参阅 <link:DragonRealms.txt>。
 
-<topic:红龙><color:o>红龙</color>
-Red Dragons are elemental dragons of fire, and the second-strongest fighters among dragons. Their fiery breaths are the stuff of legends with damage unsurpassed. Even their bites are likely to burn their opponents, further enhancing their deadliness in melee. As the Red Dragon matures, it becomes more and more resistant to fire, eventually gaining total immunity.
+<topic:Red Dragon><color:o>红龙 (Red Dragon)</color>
+红龙是火元素巨龙，也是巨龙中战斗力第二强的。他们那拥有无与伦比破坏力的火焰吐息是传说中的经典。甚至他们的咬噬也很可能烧伤对手，进一步增强了他们在近战中的致命性。随着红龙的成熟，他们对火焰的抗性越来越强，最终将获得完全的免疫。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> +2</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> +1</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> +1</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> +3</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +2</color>        Perception  <color:o>一般       </color>
-Life Rating  115%       Melee       <color:G>优秀       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   250%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> +2</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> +1</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> +1</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> +3</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +2</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     115%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     250%       红外视力    50'
 </style></indent>
-<topic:白龙><color:o>白龙</color>
-White Dragons are to cold what Red Dragons are to fire. Their melee is awe-inspiring, and their icy breath can be felt even in their bite. Together with Red Dragons, they have the deadliest breaths among dragonkind; and they become more and more resistant to cold as they mature, eventually attaining immunity.
+<topic:White Dragon><color:o>白龙 (White Dragon)</color>
+白龙之于寒冰，正如红龙之于火焰。他们的近战令人敬畏，甚至在他们的咬噬中也能感受到冰冷的气息。与红龙一样，他们在龙族中拥有最致命的吐息；随着他们的成熟，对寒冷的抗性也会越来越强，最终达到免疫。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> +2</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> +1</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> +1</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> +3</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +2</color>        Perception  <color:o>一般       </color>
-Life Rating  115%       Melee       <color:G>优秀       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   250%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> +2</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> +1</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> +1</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> +3</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +2</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     115%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     250%       红外视力    50'
 </style></indent>
-<topic:蓝龙><color:o>蓝龙</color>
-Blue Dragons are elemental dragons of lightning. Their breaths are as strong as those of their Red and White brethren, their melee somewhat weaker but still mighty, and their bites eventually shock their foes. Blue Dragons become more and more resistant to lightning as they mature, eventually gaining total immunity.
+<topic:Blue Dragon><color:o>蓝龙 (Blue Dragon)</color>
+蓝龙是闪电元素巨龙。他们的吐息和红龙、白龙同胞一样强大，他们的近战虽然稍弱但也十分威猛，最终他们的咬噬能够电击敌人。蓝龙随着成熟会越来越抵抗闪电，最终获得完全的免疫。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> +2</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> +1</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> +1</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> +3</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +2</color>        Perception  <color:o>一般       </color>
-Life Rating  115%       Melee       <color:G>优秀       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   250%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> +2</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> +1</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> +1</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> +3</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +2</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     115%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     250%       红外视力    50'
 </style></indent>
-<topic:黑龙><color:o>黑龙</color>
-Black Dragons are to acid what Blue Dragons are to lightning. Their breaths are as strong as those of their Red, White and Blue kin; and fewer monsters resist acid, giving them an extra opening. As the Black Dragon matures, its bites become corrosive, and it grows more resistant to acid until it reaches immunity.
+<topic:Black Dragon><color:o>黑龙 (Black Dragon)</color>
+黑龙之于强酸，正如蓝龙之于闪电。他们的吐息和红、白、蓝龙同族一样强大；而且对强酸有抗性的怪物较少，这给了他们额外的破绽可乘。随着黑龙的成熟，其咬噬变得具有腐蚀性，并且对强酸的抗性也会随之增长，直至达到免疫。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> +2</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> +1</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> +1</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> +3</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +2</color>        Perception  <color:o>一般       </color>
-Life Rating  115%       Melee       <color:G>优秀       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   250%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> +2</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> +1</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> +1</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> +3</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +2</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     115%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     250%       红外视力    50'
 </style></indent>
-<topic:绿龙><color:o>绿龙</color>
-Green Dragons are elemental dragons of venom. They are not quite as strong as Red or White dragons, but are still fearsome opponents. As they mature, their bites poison their enemies. Green Dragons become more and more resistant to poison over time, eventually achieving immunity.
+<topic:Green Dragon><color:o>绿龙 (Green Dragon)</color>
+绿龙是毒素元素巨龙。他们不如红龙或白龙强壮，但仍是可怕的对手。随着他们的成熟，他们的咬噬会使敌人中毒。随着时间的推移，绿龙对毒素的抗性越来越强，最终获得免疫。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> +2</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> +1</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> +1</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> +3</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +2</color>        Perception  <color:o>一般       </color>
-Life Rating  115%       Melee       <color:G>优秀       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   250%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> +2</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> +1</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> +1</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> +3</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +2</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     115%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     250%       红外视力    50'
 </style></indent>
-<topic:暗影龙><color:o>暗影龙</color>
-Shadow Drakes are among the stealthiest of dragons. They are creatures of nether, and eventually evolve into Death Drakes and Spectral Wyrms. Their melee is the weakest among dragonkind and their breaths are also somewhat lacking, but they still make fearsome opponents. As they advance, these dragons gain the ability to pass through walls, and acquire several resistances including immunity to nether.
+<topic:Shadow Drake><color:o>暗影飞龙 (Shadow Drake)</color>
+暗影飞龙是潜行能力最强的龙之一。它们是虚冥 (nether) 生物，并最终会进化成死亡飞龙 (Death Drakes) 和幽灵太古龙 (Spectral Wyrms)。它们的近战在龙族中最弱，吐息也有所欠缺，但依然是可怕的对手。随着等级的提升，这些飞龙会获得穿墙的能力，并获得几种抗性，包括对虚冥的免疫。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +2</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> +1</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> -1</color>        Save        <color:y>良好       </color>
-Dexterity    <color:w> -1</color>        Stealth     <color:y>良好       </color>
-Constitution <color:w> +0</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +2</color>        Perception  <color:o>一般       </color>
-Life Rating   95%       Melee       <color:y>良好       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   300%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +2</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> +1</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> -1</color>        豁免        <color:y>良好(Good)   </color>
+敏捷         <color:w> -1</color>        潜行        <color:y>良好(Good)   </color>
+体质         <color:w> +0</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +2</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成      95%       近战        <color:y>良好(Good)   </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     300%       红外视力    50'
 </style></indent>
-<topic:律法龙><color:o>律法龙</color>
-Law Drakes are powerful dragons of order. They can breathe sound or shards and eventually evolve into Great Wyrms of Law, though not as quickly as you might hope. Their breaths are much weaker than those of the elemental dragons, but far fewer monsters resist sound or shards. Their melee is also on the weak side by dragon standards, but most lesser creatures would be quite happy with it!
+<topic:Law Drake><color:o>秩序飞龙 (Law Drake)</color>
+秩序飞龙是强大的秩序之龙。它们能够喷吐声波或破片，并最终进化成秩序太古龙 (Great Wyrms of Law)——尽管进化速度可能没有你期望的那么快。它们的吐息比元素巨龙弱得多，但能抵抗声波或破片的怪物也要少得多。以龙的标准来看，它们的近战也偏弱，不过对于大多数低级生物来说，这点力量已经足够它们消受了！
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +0</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> -1</color>        Device      <color:G>优秀       </color>
-Wisdom       <color:w> -2</color>        Save        <color:y>良好       </color>
-Dexterity    <color:w> -2</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> -1</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> -1</color>        Perception  <color:o>一般       </color>
-Life Rating  100%       Melee       <color:y>良好       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   280%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +0</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> -1</color>        魔法装置    <color:G>优秀(Exclnt) </color>
+感知         <color:w> -2</color>        豁免        <color:y>良好(Good)   </color>
+敏捷         <color:w> -2</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> -1</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> -1</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     100%       近战        <color:y>良好(Good)   </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     280%       红外视力    50'
 </style></indent>
-<topic:混沌龙><color:o>混沌龙</color>
-Chaos Drakes are powerful dragons of chaos. They can breathe chaos or disenchantment and eventually evolve into Great Wyrms of Chaos, though not as quickly as you might hope. Their breaths are much weaker than those of the elemental dragons, but far fewer monsters resist chaos or disenchantment; and though their melee is weak for a dragon, by more typical standards they fight quite well.
+<topic:Chaos Drake><color:o>混沌飞龙 (Chaos Drake)</color>
+混沌飞龙是强大的混沌之龙。它们能够喷吐混沌或祛魔 (disenchantment)，并最终进化成混沌太古龙 (Great Wyrms of Chaos)——尽管进化速度可能没有你期望的那么快。它们的吐息比元素巨龙弱得多，但能抵抗混沌或祛魔的怪物也要少得多；并且虽然以龙的标准来看它们的近战很弱，但按更普遍的标准来衡量，它们其实非常善战。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +0</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> -1</color>        Device      <color:G>优秀       </color>
-Wisdom       <color:w> -2</color>        Save        <color:y>良好       </color>
-Dexterity    <color:w> -2</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> -1</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> -1</color>        Perception  <color:o>一般       </color>
-Life Rating  100%       Melee       <color:y>良好       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   280%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +0</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> -1</color>        魔法装置    <color:G>优秀(Exclnt) </color>
+感知         <color:w> -2</color>        豁免        <color:y>良好(Good)   </color>
+敏捷         <color:w> -2</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> -1</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> -1</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     100%       近战        <color:y>良好(Good)   </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     280%       红外视力    50'
 </style></indent>
-<topic:平衡龙><color:o>平衡龙</color>
-Balance Drakes are a blend of Chaos and Law Drakes. They can breathe sound, shards, chaos or disenchantment and eventually evolve into Great Wyrms of Balance. Their breaths and attacks are weaker than those of Chaos and Law Drakes, but not by much.
+<topic:Balance Drake><color:o>平衡飞龙 (Balance Drake)</color>
+平衡飞龙是混沌飞龙与秩序飞龙的混合体。它们能够喷吐声波、破片、混沌或祛魔，并最终进化成平衡太古龙 (Great Wyrms of Balance)。它们的吐息和攻击比混沌飞龙及秩序飞龙要弱，但也弱不了太多。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +0</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> -1</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> -2</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> -2</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> -1</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> -1</color>        Perception  <color:o>一般       </color>
-Life Rating   95%       Melee       <color:y>良好       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   300%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +0</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> -1</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> -2</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> -2</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> -1</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> -1</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成      95%       近战        <color:y>良好(Good)   </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     300%       红外视力    50'
 </style></indent>
-<topic:以太龙><color:o>以太龙</color>
-Ethereal Drakes are dragons of light and darkness. They begin life as modest Pseudo Dragons, but quickly evolve into Ethereal Drakes and then Ethereal Dragons. As they mature, they gain the ability to pass through walls and become more and more resistant to light, darkness and confusion. They are fairly weak fighters and have the weakest breaths in all of dragonkind, except for Steel Dragons which cannot breathe at all.
+<topic:Ethereal Drake><color:o>以太飞龙 (Ethereal Drake)</color>
+以太飞龙是光与暗之龙。它们生命的起点是普通的伪龙 (Pseudo Dragons)，但会很快进化成以太飞龙，然后成为以太巨龙。随着它们的成熟，它们将获得穿墙能力，并且对光明、黑暗和困惑的抗性越来越强。它们是相对较弱的斗士，并拥有整个龙族中最弱的吐息——除了根本无法吐息的钢铁龙之外。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +2</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> +1</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> -1</color>        Save        <color:y>良好       </color>
-Dexterity    <color:w> +0</color>        Stealth     <color:y>良好       </color>
-Constitution <color:w> +1</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +1</color>        Perception  <color:o>一般       </color>
-Life Rating  102%       Melee       <color:y>良好       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   250%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +2</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> +1</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> -1</color>        豁免        <color:y>良好(Good)   </color>
+敏捷         <color:w> +0</color>        潜行        <color:y>良好(Good)   </color>
+体质         <color:w> +1</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +1</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     102%       近战        <color:y>良好(Good)   </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     250%       红外视力    50'
 </style></indent>
-<topic:水晶龙><color:o>水晶龙</color>
-Crystal Drakes are dragons of a strange crystalline form. They breathe shards and fight powerfully with their razor-sharp claws and teeth. At high levels, they gain the power of reflection.
+<topic:Crystal Drake><color:o>水晶飞龙 (Crystal Drake)</color>
+水晶飞龙是一种形态奇异的结晶体巨龙。它们喷吐破片，并利用其锋利的爪牙进行猛烈的战斗。在高等级时，它们会获得反射的法力。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +1</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> -1</color>        Device      <color:o>一般       </color>
-Wisdom       <color:w> -2</color>        Save        <color:y>极好       </color>
-Dexterity    <color:w> +0</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> +0</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +0</color>        Perception  <color:o>一般       </color>
-Life Rating  100%       Melee       <color:G>优秀       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   275%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +1</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> -1</color>        魔法装置    <color:o>一般(Fair)   </color>
+感知         <color:w> -2</color>        豁免        <color:y>极好(V.Good) </color>
+敏捷         <color:w> +0</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> +0</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +0</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     100%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     275%       红外视力    50'
 </style></indent>
-<topic:青铜龙><color:o>青铜龙</color>
-Bronze Dragons are wyrms of perplexity. While they are not quite as strong as most other dragons, they eventually confuse monsters with their bite attack; also, they become more and more resistant to confusion as they mature.
+<topic:Bronze Dragon><color:o>青铜龙 (Bronze Dragon)</color>
+青铜龙是令人困惑的太古巨龙。虽然它们不如多数其他巨龙强壮，但它们最终能够通过咬噬攻击使怪物陷入困惑；而且随着他们的成熟，它们对困惑的抗性也会越来越高。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> +3</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> +0</color>        Save        <color:y>良好       </color>
-Dexterity    <color:w> +2</color>        Stealth     <color:o>一般       </color>
-Constitution <color:w> +3</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +3</color>        Perception  <color:o>一般       </color>
-Life Rating  110%       Melee       <color:y>良好       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   250%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> +3</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> +0</color>        豁免        <color:y>良好(Good)   </color>
+敏捷         <color:w> +2</color>        潜行        <color:o>一般(Fair)   </color>
+体质         <color:w> +3</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +3</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     110%       近战        <color:y>良好(Good)   </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     250%       红外视力    50'
 </style></indent>
-<topic:金龙><color:o>金龙</color>
-Gold Dragons are wyrms of sound. While they are not quite as strong as most other dragons, they are able to breathe sound on command, stunning their foes; also, they become more and more resistant to sound as they mature.
+<topic:Gold Dragon><color:o>金龙 (Gold Dragon)</color>
+金龙是掌控声波的太古巨龙。虽然它们不如多数其他巨龙强壮，但它们能够随心所欲地喷吐声波击晕敌人；而且随着他们的成熟，它们对声波的抗性也会越来越高。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +4</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> +3</color>        Device      <color:y>良好       </color>
-Wisdom       <color:w> +0</color>        Save        <color:y>良好       </color>
-Dexterity    <color:w> +2</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> +3</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +3</color>        Perception  <color:o>一般       </color>
-Life Rating  110%       Melee       <color:y>极好       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   250%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> +3</color>        魔法装置    <color:y>良好(Good)   </color>
+感知         <color:w> +0</color>        豁免        <color:y>良好(Good)   </color>
+敏捷         <color:w> +2</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> +3</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +3</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     110%       近战        <color:y>极好(V.Good) </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     250%       红外视力    50'
 </style></indent>
-<topic:钢龙><color:o>钢龙</color>
-Steel Dragons are magical dragons formed from rock. As they mature, their form hardens from stone into steel. Needless to say, their armor class is phenomenal, but their dexterity actually decreases with maturity. Steel dragons begin life being susceptible to cold damage, though they will eventually outgrow this vulnerability. They are not as fast as other dragons and have no powers whatsoever, not even the ubiquitous dragon breath! But their fighting is impossibly strong, putting all the other dragons to complete and utter shame. They also have extremely high hitpoints.
+<topic:Steel Dragon><color:o>钢铁龙 (Steel Dragon)</color>
+钢铁龙是由岩石构成的魔法巨龙。随着它们的成熟，它们的身躯会从岩石硬化为钢铁。毋庸置疑，它们的护甲等级是惊人的高，但它们的敏捷反而会随着成熟而下降。钢铁龙在生命之初极易受到寒冷伤害，尽管它们最终会克服这种弱点。它们的速度不如其他巨龙快，并且没有任何特殊能力，甚至连那些无处不在的巨龙吐息也没有！但它们的战斗力强得不可思议，让所有其他巨龙相形见绌、自叹弗如。它们还拥有极高的生命值。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +8</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> -6</color>        Device      <color:r>糟糕       </color>
-Wisdom       <color:w> -6</color>        Save        <color:g>卓越       </color>
-Dexterity    <color:w> -3</color>        Stealth     <color:r>糟糕       </color>
-Constitution <color:w> +7</color>        Searching   <color:r>糟糕       </color>
-Charisma     <color:w> +3</color>        Perception  <color:r>糟糕       </color>
-Life Rating  137%       Melee       <color:g>卓越       </color>
-Base HP       40        Archery     <color:r>糟糕       </color>
-Experience   250%       Infravision 50'
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +8</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> -6</color>        魔法装置    <color:r>极差(Bad)    </color>
+感知         <color:w> -6</color>        豁免        <color:g>卓越(Superb) </color>
+敏捷         <color:w> -3</color>        潜行        <color:r>极差(Bad)    </color>
+体质         <color:w> +7</color>        搜索        <color:r>极差(Bad)    </color>
+魅力         <color:w> +3</color>        察觉        <color:r>极差(Bad)    </color>
+生命加成     137%       近战        <color:g>卓越(Superb) </color>
+基础HP        40        箭术        <color:r>极差(Bad)    </color>
+经验修正     250%       红外视力    50'
 </style></indent>
-<topic:Tables><style:heading>表 1 - 龙族属性加成表</style>
+<topic:Tables><style:heading>表 1 - 巨龙属性加成表</style>
 <style:table>
-<color:G>                 </color> <color:G>STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp  Shop</color>
-红龙             +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
-白龙             +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
-蓝龙             +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
-黑龙             +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
-绿龙             +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
-暗影龙          +2   +1   -1   -1   +0   +2   95%  +40  300%  130%
-律法龙          +0   -1   -2   -2   -1   -1  100%  +40  280%  130%
-混沌龙          +0   -1   -2   -2   -1   -1  100%  +40  280%  130%
-平衡龙          +0   -1   -2   -2   -1   -1   95%  +40  300%  130%
-以太龙          +2   +1   -1   +0   +1   +1  102%  +40  250%  130%
-水晶龙          +1   -1   -2   +0   +0   +0  100%  +40  275%  130%
-青铜龙          +4   +3   +0   +2   +3   +3  110%  +40  250%  130%
-金龙             +4   +3   +0   +2   +3   +3  110%  +40  250%  130%
-钢龙             +8   -6   -6   -3   +7   +3  137%  +40  250%  130%
+<color:G>                 </color> <color:G>力量 智力 感知 敏捷 体质 魅力 生命  BHP  经验  商店</color>
+红龙               +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
+白龙               +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
+蓝龙               +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
+黑龙               +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
+绿龙               +4   +2   +1   +1   +3   +2  115%  +40  250%  130%
+暗影飞龙           +2   +1   -1   -1   +0   +2   95%  +40  300%  130%
+秩序飞龙           +0   -1   -2   -2   -1   -1  100%  +40  280%  130%
+混沌飞龙           +0   -1   -2   -2   -1   -1  100%  +40  280%  130%
+平衡飞龙           +0   -1   -2   -2   -1   -1   95%  +40  300%  130%
+以太飞龙           +2   +1   -1   +0   +1   +1  102%  +40  250%  130%
+水晶飞龙           +1   -1   -2   +0   +0   +0  100%  +40  275%  130%
+青铜龙             +4   +3   +0   +2   +3   +3  110%  +40  250%  130%
+金龙               +4   +3   +0   +2   +3   +3  110%  +40  250%  130%
+钢铁龙             +8   -6   -6   -3   +7   +3  137%  +40  250%  130%
 
 </style>
-<topic:Skills1><style:heading>表 2 - 龙族技能加成表 I</style>
+<topic:Skills1><style:heading>表 2 - 巨龙技能加成表 I</style>
 <style:table>
-                  <color:w>解除陷阱  使用装置  豁免        潜行       </color>
-红龙            <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
-白龙            <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
-蓝龙            <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
-黑龙            <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
-绿龙            <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
-暗影龙         <color:o>一般       </color> <color:y>良好       </color> <color:y>良好       </color> <color:y>良好       </color>
-律法龙         <color:o>一般       </color> <color:G>优秀       </color> <color:y>良好       </color> <color:R>贫弱       </color>
-混沌龙         <color:o>一般       </color> <color:G>优秀       </color> <color:y>良好       </color> <color:R>贫弱       </color>
-平衡龙         <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color> <color:R>贫弱       </color>
-以太龙         <color:o>一般       </color> <color:y>良好       </color> <color:y>良好       </color> <color:y>良好       </color>
-水晶龙         <color:o>一般       </color> <color:o>一般       </color> <color:y>极好       </color> <color:R>贫弱       </color>
-青铜龙         <color:o>一般       </color> <color:y>良好       </color> <color:y>良好       </color> <color:o>一般       </color>
-金龙            <color:o>一般       </color> <color:y>良好       </color> <color:y>良好       </color> <color:R>贫弱       </color>
-钢龙            <color:o>一般       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:r>糟糕       </color>
+                  <color:w>解除陷阱      魔法装置      豁免          潜行         </color>
+红龙              <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+白龙              <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+蓝龙              <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+黑龙              <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+绿龙              <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+暗影飞龙          <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color>
+秩序飞龙          <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:y>良好(Good)   </color> <color:R>较差(Poor)   </color>
+混沌飞龙          <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:y>良好(Good)   </color> <color:R>较差(Poor)   </color>
+平衡飞龙          <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+以太飞龙          <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color>
+水晶飞龙          <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>极好(V.Good) </color> <color:R>较差(Poor)   </color>
+青铜龙            <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color>
+金龙              <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color> <color:R>较差(Poor)   </color>
+钢铁龙            <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:g>卓越(Superb) </color> <color:r>极差(Bad)    </color>
 
 </style>
-<topic:Skills2><style:heading>表 3 - 龙族技能加成表 II</style>
+<topic:Skills2><style:heading>表 3 - 巨龙技能加成表 II</style>
 <style:table>
-                  <color:w>搜索        察觉        近战        箭术        红外</color>
-红龙            <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:r>糟糕       </color>   50'
-白龙            <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:r>糟糕       </color>   50'
-蓝龙            <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:r>糟糕       </color>   50'
-黑龙            <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:r>糟糕       </color>   50'
-绿龙            <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:r>糟糕       </color>   50'
-暗影龙         <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:r>糟糕       </color>   50'
-律法龙         <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:r>糟糕       </color>   50'
-混沌龙         <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:r>糟糕       </color>   50'
-平衡龙         <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:r>糟糕       </color>   50'
-以太龙         <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:r>糟糕       </color>   50'
-水晶龙         <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:r>糟糕       </color>   50'
-青铜龙         <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:r>糟糕       </color>   50'
-金龙            <color:o>一般       </color> <color:o>一般       </color> <color:y>极好       </color> <color:r>糟糕       </color>   50'
-钢龙            <color:r>糟糕       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:r>糟糕       </color>   50'
+                  <color:w>搜索          察觉          近战          箭术          夜视 </color>
+红龙              <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:r>极差(Bad)    </color>   50'
+白龙              <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:r>极差(Bad)    </color>   50'
+蓝龙              <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:r>极差(Bad)    </color>   50'
+黑龙              <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:r>极差(Bad)    </color>   50'
+绿龙              <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:r>极差(Bad)    </color>   50'
+暗影飞龙          <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:r>极差(Bad)    </color>   50'
+秩序飞龙          <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:r>极差(Bad)    </color>   50'
+混沌飞龙          <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:r>极差(Bad)    </color>   50'
+平衡飞龙          <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:r>极差(Bad)    </color>   50'
+以太飞龙          <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:r>极差(Bad)    </color>   50'
+水晶飞龙          <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:r>极差(Bad)    </color>   50'
+青铜龙            <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:r>极差(Bad)    </color>   50'
+金龙              <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>极好(V.Good) </color> <color:r>极差(Bad)    </color>   50'
+钢铁龙            <color:r>极差(Bad)    </color> <color:r>极差(Bad)    </color> <color:g>卓越(Superb) </color> <color:r>极差(Bad)    </color>   50'
 
 </style>
 
 
-<color:s>自动生成于 FrogComposband 7.4。</color>
+<color:s>自动生成，适用于 FrogComposband 7.2.salmiak。</color>

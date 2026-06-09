@@ -1,360 +1,360 @@
-<style:title>性格</style>
+<style:title>性格 (The Personalities)</style>
 
-Your personality is the way you see and act in the world, and has a small but significant effect on your stats and skills. In general, you should pick a personality that complements the strengths and weaknesses inherent in your race and class. Most personalities only make a minor difference, but a few can change the game dramatically.
+你的性格代表你看待世界和在其中行动的方式，它对你的属性和技能有着微小但重要的影响。通常，你应该选择一种能够互补你种族和职业固有优缺点的性格。大多数性格只产生细微的差别，但有几种会极大地改变游戏体验。
 
-For details on the <color:keyword>Stats</color>, see <link:birth.txt#PrimaryStats>. For information about the <color:keyword>Skills</color>, see <link:birth.txt#PrimarySkills>. The skill descriptions in this document are <color:v>for comparison purposes only</color>; for example, your fledgling munchkin will not be born with <color:v>Amber[25]</color> melee skill. In general, skills are also influenced by level, race, class, stats and equipment. To compare the stat and skill boosts of each personality, take a look at the <link:Personalities.txt#Tables> personality tables below.
+关于<color:keyword>属性 (Stats)</color>的详细信息，请参阅 <link:birth.txt#PrimaryStats>。关于<color:keyword>技能 (Skills)</color>的信息，请参阅 <link:birth.txt#PrimarySkills>。本文档中的技能描述<color:v>仅供比较参考</color>；例如，你初出茅庐的龙傲天角色出生时并不会拥有 <color:v>琥珀[25]</color> 的近战技能。通常来说，技能也会受到等级、种族、职业、属性和装备的影响。要比较每种性格的属性和技能加成，请查看下面的 <link:Personalities.txt#Tables> 性格表格。
 
-<topic:普通><color:o>普通</color>
-一个普通人在各方面都很平庸，既不会获得技能、天赋，也不会有属性调整。
+<topic:Ordinary><color:o>普通 (Ordinary)</color>
+普通人在各方面都很平庸，既不会获得技能和天赋加成，也不会有属性调整。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +0        Disarming   <color:o>一般       </color>
-Intelligence  +0        Device      <color:o>一般       </color>
-Wisdom        +0        Save        <color:o>一般       </color>
-Dexterity     +0        Stealth     <color:o>一般       </color>
-Constitution  +0        Searching   <color:o>一般       </color>
-Charisma      +0        Perception  <color:o>一般       </color>
-Life Rating  100%       Melee       <color:o>一般       </color>
-Experience   100%       Archery     <color:o>一般       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +0         解除陷阱    <color:o>尚可         </color>
+智力         +0         魔法装置    <color:o>尚可         </color>
+感知         +0         豁免        <color:o>尚可         </color>
+敏捷         +0         潜行        <color:o>尚可         </color>
+体质         +0         搜索        <color:o>尚可         </color>
+魅力         +0         察觉        <color:o>尚可         </color>
+生命评级    100%        近战        <color:o>尚可         </color>
+经验值      100%        箭术        <color:o>尚可         </color>
 </style></indent>
-<topic:强壮><color:o>强壮</color>
-强壮提升你的物理属性、技能和体力，但会降低你的魔法能力，并对你的法术失败率造成轻微的惩罚。这是最具有战士风格的性格。
+<topic:Mighty><color:o>强壮 (Mighty)</color>
+强壮会提升你的身体属性、技能和耐力，但会降低你的魔法能力，并使法术失败率略微上升。这是最具战士风格的性格。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +2        Disarming   <color:r>糟糕       </color>
-Intelligence  -2        Device      <color:r>糟糕       </color>
-Wisdom        -2        Save        <color:R>贫弱       </color>
-Dexterity     +0        Stealth     <color:R>贫弱       </color>
-Constitution  +1        Searching   <color:r>糟糕       </color>
-Charisma      +1        Perception  <color:r>糟糕       </color>
-Life Rating  102%       Melee       <color:g>卓越       </color>
-Experience   100%       Archery     <color:o>一般       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +2         解除陷阱    <color:r>糟糕         </color>
+智力         -2         魔法装置    <color:r>糟糕         </color>
+感知         -2         豁免        <color:R>较差         </color>
+敏捷         +0         潜行        <color:R>较差         </color>
+体质         +1         搜索        <color:r>糟糕         </color>
+魅力         +1         察觉        <color:r>糟糕         </color>
+生命评级    102%        近战        <color:g>绝佳         </color>
+经验值      100%        箭术        <color:o>尚可         </color>
 </style></indent>
-<topic:精明><color:o>精明</color>
-精明并不能赋予你令人印象深刻的体格，但良好的装置操作能力能让再矮小的人也变得强大；这是典型的法师性格，但也能帮助战士弥补自己的弱点。精明对法术失败率有直接的正面影响。
+<topic:Shrewd><color:o>精明 (Shrewd)</color>
+精明不会给你留下深刻印象的体格，但熟练的魔法装置操作能力能让最弱小的人变强；这是典型的法师性格，但也能帮助战士弥补弱点。精明对法术失败率有直接的正面影响。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      -2        Disarming   <color:y>良好       </color>
-Intelligence  +2        Device      <color:G>优秀       </color>
-Wisdom        +0        Save        <color:o>一般       </color>
-Dexterity     +1        Stealth     <color:o>一般       </color>
-Constitution  -1        Searching   <color:r>糟糕       </color>
-Charisma      -1        Perception  <color:g>卓越       </color>
-Life Rating   97%       Melee       <color:r>糟糕       </color>
-Experience   100%       Archery     <color:R>贫弱       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         -2         解除陷阱    <color:y>良好         </color>
+智力         +2         魔法装置    <color:G>优秀         </color>
+感知         +0         豁免        <color:o>尚可         </color>
+敏捷         +1         潜行        <color:o>尚可         </color>
+体质         -1         搜索        <color:r>糟糕         </color>
+魅力         -1         察觉        <color:g>绝佳         </color>
+生命评级     97%        近战        <color:r>糟糕         </color>
+经验值      100%        箭术        <color:R>较差         </color>
 </style></indent>
-<topic:虔诚><color:o>虔诚</color>
-虔诚加深了你对神明的信仰。它使你的物理能力平平，且使你的属性适合成为一名牧师。
+<topic:Pious><color:o>虔诚 (Pious)</color>
+虔诚会加深你对神的信仰。这使你的物理能力平平，且属性非常适合牧师。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +0        Disarming   <color:r>糟糕       </color>
-Intelligence  -1        Device      <color:o>一般       </color>
-Wisdom        +2        Save        <color:y>良好       </color>
-Dexterity     -1        Stealth     <color:R>贫弱       </color>
-Constitution  +0        Searching   <color:G>优秀       </color>
-Charisma      +0        Perception  <color:r>糟糕       </color>
-Life Rating  100%       Melee       <color:R>贫弱       </color>
-Experience   100%       Archery     <color:R>贫弱       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +0         解除陷阱    <color:r>糟糕         </color>
+智力         -1         魔法装置    <color:o>尚可         </color>
+感知         +2         豁免        <color:y>良好         </color>
+敏捷         -1         潜行        <color:R>较差         </color>
+体质         +0         搜索        <color:G>优秀         </color>
+魅力         +0         察觉        <color:r>糟糕         </color>
+生命评级    100%        近战        <color:R>较差         </color>
+经验值      100%        箭术        <color:R>较差         </color>
 </style></indent>
-<topic:敏捷><color:o>敏捷</color>
-敏捷对你的技能有好处，并允许你移动时发出的噪音更小；但你缺乏一些原始的力量，且无法承受那么多次的打击。
+<topic:Nimble><color:o>灵巧 (Nimble)</color>
+灵巧有利于你的各项技能，并让你移动时的噪音更小；但你的原始力量有些不足，而且你无法承受太多的攻击。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      -1        Disarming   <color:G>优秀       </color>
-Intelligence  +1        Device      <color:o>一般       </color>
-Wisdom        -1        Save        <color:R>贫弱       </color>
-Dexterity     +2        Stealth     <color:y>良好       </color>
-Constitution  -1        Searching   <color:g>卓越       </color>
-Charisma      +0        Perception  <color:g>卓越       </color>
-Life Rating   99%       Melee       <color:o>一般       </color>
-Experience   100%       Archery     <color:y>极好       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         -1         解除陷阱    <color:G>优秀         </color>
+智力         +1         魔法装置    <color:o>尚可         </color>
+感知         -1         豁免        <color:R>较差         </color>
+敏捷         +2         潜行        <color:y>良好         </color>
+体质         -1         搜索        <color:g>绝佳         </color>
+魅力         +0         察觉        <color:g>绝佳         </color>
+生命评级     99%        近战        <color:o>尚可         </color>
+经验值      100%        箭术        <color:y>极好         </color>
 </style></indent>
-<topic:无畏><color:o>无畏</color>
-除了帮助你抵抗恐惧之外，无畏还能提升你的近战技能和人格力量（魅力）；但你的体质和生命值会受到负面影响。
+<topic:Fearless><color:o>无畏 (Fearless)</color>
+无畏不仅能帮助你抵抗恐惧，还能提高你的近战技能和性格魄力；但会对体质和生命值造成负面影响。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +1        Disarming   <color:r>糟糕       </color>
-Intelligence  +0        Device      <color:o>一般       </color>
-Wisdom        +0        Save        <color:R>贫弱       </color>
-Dexterity     -1        Stealth     <color:o>一般       </color>
-Constitution  -1        Searching   <color:y>良好       </color>
-Charisma      +1        Perception  <color:r>糟糕       </color>
-Life Rating   98%       Melee       <color:y>良好       </color>
-Experience   100%       Archery     <color:o>一般       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +1         解除陷阱    <color:r>糟糕         </color>
+智力         +0         魔法装置    <color:o>尚可         </color>
+感知         +0         豁免        <color:R>较差         </color>
+敏捷         -1         潜行        <color:o>尚可         </color>
+体质         -1         搜索        <color:y>良好         </color>
+魅力         +1         察觉        <color:r>糟糕         </color>
+生命评级     98%        近战        <color:y>良好         </color>
+经验值      100%        箭术        <color:o>尚可         </color>
 </style></indent>
-<topic:好战><color:o>好战</color>
-好战的冒险者偏爱近战和射击，而牺牲了诸如解除陷阱、使用魔法装置或豁免等其他技能；然而，这种性格比“强壮”那种粗犷、未经锻炼的肌肉更具有微妙的技巧。
+<topic:Combat><color:o>好战 (Combat)</color>
+好战的冒险者偏爱近战和射击，这牺牲了其他技能，如解除陷阱、魔法装置或豁免判定；然而，与“强壮”那种未经锻炼的纯粹肌肉相比，这种性格更为细腻。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +1        Disarming   <color:R>贫弱       </color>
-Intelligence  -1        Device      <color:R>贫弱       </color>
-Wisdom        -1        Save        <color:R>贫弱       </color>
-Dexterity     +1        Stealth     <color:o>一般       </color>
-Constitution  +0        Searching   <color:R>贫弱       </color>
-Charisma      +0        Perception  <color:y>良好       </color>
-Life Rating  100%       Melee       <color:y>良好       </color>
-Experience   100%       Archery     <color:y>良好       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +1         解除陷阱    <color:R>较差         </color>
+智力         -1         魔法装置    <color:R>较差         </color>
+感知         -1         豁免        <color:R>较差         </color>
+敏捷         +1         潜行        <color:o>尚可         </color>
+体质         +0         搜索        <color:R>较差         </color>
+魅力         +0         察觉        <color:y>良好         </color>
+生命评级    100%        近战        <color:y>良好         </color>
+经验值      100%        箭术        <color:y>良好         </color>
 </style></indent>
-<topic:性感><color:o>性感</color>
-性感的冒险者拥有出色的属性和技能，但他们傲慢的态度会激怒所有的怪物。
+<topic:Sexy><color:o>性感 (Sexy)</color>
+性感的冒险者拥有优秀的属性和技能，但他们傲慢的态度会激怒所有的怪物。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +1        Disarming   <color:g>卓越       </color>
-Intelligence  +1        Device      <color:y>极好       </color>
-Wisdom        +1        Save        <color:o>一般       </color>
-Dexterity     +1        Stealth     <color:o>一般       </color>
-Constitution  +1        Searching   <color:G>优秀       </color>
-Charisma      +1        Perception  <color:y>良好       </color>
-Life Rating  100%       Melee       <color:G>优秀       </color>
-Experience   100%       Archery     <color:y>极好       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +1         解除陷阱    <color:g>绝佳         </color>
+智力         +1         魔法装置    <color:y>极好         </color>
+感知         +1         豁免        <color:o>尚可         </color>
+敏捷         +1         潜行        <color:o>尚可         </color>
+体质         +1         搜索        <color:G>优秀         </color>
+魅力         +1         察觉        <color:y>良好         </color>
+生命评级    100%        近战        <color:G>优秀         </color>
+经验值      100%        箭术        <color:y>极好         </color>
 </style></indent>
-<topic:幸运><color:o>幸运</color>
-幸运的冒险者属性很差，但令人惊讶的是，他们能把所有事情都做好。出于某种原因，好事似乎更经常发生在幸运的玩家身上。
+<topic:Lucky><color:o>幸运 (Lucky)</color>
+幸运的冒险者属性很差，但令人惊讶的是，他们能把所有事情都做好。出于某种原因，好事似乎更常发生在幸运的玩家身上。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      -2        Disarming   <color:g>卓越       </color>
-Intelligence  -2        Device      <color:G>优秀       </color>
-Wisdom        -2        Save        <color:o>一般       </color>
-Dexterity     -2        Stealth     <color:G>优秀       </color>
-Constitution  -2        Searching   <color:v>琥珀[10]   </color>
-Charisma      -2        Perception  <color:b>英雄       </color>
-Life Rating   98%       Melee       <color:g>卓越       </color>
-Experience   100%       Archery     <color:G>优秀       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         -2         解除陷阱    <color:g>绝佳         </color>
+智力         -2         魔法装置    <color:G>优秀         </color>
+感知         -2         豁免        <color:o>尚可         </color>
+敏捷         -2         潜行        <color:G>优秀         </color>
+体质         -2         搜索        <color:v>琥珀[10]     </color>
+魅力         -2         察觉        <color:b>英勇         </color>
+生命评级     98%        近战        <color:g>绝佳         </color>
+经验值      100%        箭术        <color:G>优秀         </color>
 </style></indent>
-<topic:耐心><color:o>耐心</color>
-耐心的冒险者做事非常谨慎，但并不总是拥有极快的速度或自信的手法。耐心的人物具有高度的韧性，他们缓慢而有条理的动作使他们相对较为隐秘。
+<topic:Patient><color:o>耐心 (Patient)</color>
+耐心的冒险者做事非常谨慎，但在速度或动作的自信上并不总是那么出色。耐心的角色韧性极高，缓慢但有节律的动作使他们相对来说更善于潜行。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +0        Disarming   <color:R>贫弱       </color>
-Intelligence  +0        Device      <color:R>贫弱       </color>
-Wisdom        +2        Save        <color:y>良好       </color>
-Dexterity     -2        Stealth     <color:y>良好       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +0        Perception  <color:o>一般       </color>
-Life Rating  102%       Melee       <color:R>贫弱       </color>
-Experience   100%       Archery     <color:o>一般       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +0         解除陷阱    <color:R>较差         </color>
+智力         +0         魔法装置    <color:R>较差         </color>
+感知         +2         豁免        <color:y>良好         </color>
+敏捷         -2         潜行        <color:y>良好         </color>
+体质         +2         搜索        <color:o>尚可         </color>
+魅力         +0         察觉        <color:o>尚可         </color>
+生命评级    102%        近战        <color:R>较差         </color>
+经验值      100%        箭术        <color:o>尚可         </color>
 </style></indent>
-<topic:怯懦><color:o>怯懦</color>
-怯懦的人是个胆小鬼，他们宁愿不惜一切代价避免战斗。怯懦的冒险者射击和使用魔法装置的能力很好，他们的潜行能力令人印象深刻，而且在非战斗状态下移动速度很快；但是他们的属性和其他技能则有些欠缺。
+<topic:Craven><color:o>怯懦 (Craven)</color>
+怯懦的人是胆小鬼，喜欢不惜一切代价避免战斗。怯懦的冒险者擅长射击和使用魔法装置，潜行能力令人印象深刻，而且在非战斗状态下移动速度很快；但他们的属性和其他技能则有所欠缺。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      -1        Disarming   <color:y>极好       </color>
-Intelligence  +1        Device      <color:y>极好       </color>
-Wisdom        +1        Save        <color:R>贫弱       </color>
-Dexterity     -1        Stealth     <color:g>卓越       </color>
-Constitution  -1        Searching   <color:o>一般       </color>
-Charisma      -2        Perception  <color:o>一般       </color>
-Life Rating   99%       Melee       <color:D>极差       </color>
-Experience   100%       Archery     <color:y>极好       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         -1         解除陷阱    <color:y>极好         </color>
+智力         +1         魔法装置    <color:y>极好         </color>
+感知         +1         豁免        <color:R>较差         </color>
+敏捷         -1         潜行        <color:g>绝佳         </color>
+体质         -1         搜索        <color:o>尚可         </color>
+魅力         -2         察觉        <color:o>尚可         </color>
+生命评级     99%        近战        <color:D>极差         </color>
+经验值      100%        箭术        <color:y>极好         </color>
 </style></indent>
-<topic:急躁><color:o>急躁</color>
-急躁的人力求把所有事情都快速完成。速度高于技巧或谨慎，急躁的冒险者在地下城中飞速穿行，并且经常把事情搞砸。
+<topic:Hasty><color:o>急躁 (Hasty)</color>
+急躁的人力求快速地完成所有事情。对他们来说速度至高无上，而非技巧或严谨，急躁的冒险者在地牢中穿行得很快，但也经常搞砸很多事。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +0        Disarming   <color:r>糟糕       </color>
-Intelligence  -1        Device      <color:r>糟糕       </color>
-Wisdom        -2        Save        <color:R>贫弱       </color>
-Dexterity     +2        Stealth     <color:R>贫弱       </color>
-Constitution  -1        Searching   <color:D>极差       </color>
-Charisma      +0        Perception  <color:r>糟糕       </color>
-Life Rating  100%       Melee       <color:R>贫弱       </color>
-Experience   100%       Archery     <color:R>贫弱       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +0         解除陷阱    <color:r>糟糕         </color>
+智力         -1         魔法装置    <color:r>糟糕         </color>
+感知         -2         豁免        <color:R>较差         </color>
+敏捷         +2         潜行        <color:R>较差         </color>
+体质         -1         搜索        <color:D>极差         </color>
+魅力         +0         察觉        <color:r>糟糕         </color>
+生命评级    100%        近战        <color:R>较差         </color>
+经验值      100%        箭术        <color:R>较差         </color>
 </style></indent>
-<topic:懒惰><color:o>懒惰</color>
-懒惰的人没有好的属性，什么行动也做不好。所有的失败率都会受到负面影响。然而，有人传言说，通过做最少的事情而找到的每一件神器，可能会带来更加“懒惰”的奖励...
+<topic:Lazy><color:o>懒惰 (Lazy)</color>
+懒惰的人没有任何优秀的属性，也做不好任何行动。所有的失败率都会受到负面影响。然而有人低语道：你工作得越少，得到的回报就越丰厚……
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      -2        Disarming   <color:r>糟糕       </color>
-Intelligence  -2        Device      <color:r>糟糕       </color>
-Wisdom        -2        Save        <color:R>贫弱       </color>
-Dexterity     -2        Stealth     <color:R>贫弱       </color>
-Constitution  -2        Searching   <color:D>极差       </color>
-Charisma      -2        Perception  <color:r>糟糕       </color>
-Life Rating   95%       Melee       <color:r>糟糕       </color>
-Experience   100%       Archery     <color:R>贫弱       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         -2         解除陷阱    <color:r>糟糕         </color>
+智力         -2         魔法装置    <color:r>糟糕         </color>
+感知         -2         豁免        <color:R>较差         </color>
+敏捷         -2         潜行        <color:R>较差         </color>
+体质         -2         搜索        <color:D>极差         </color>
+魅力         -2         察觉        <color:r>糟糕         </color>
+生命评级     95%        近战        <color:r>糟糕         </color>
+经验值      100%        箭术        <color:R>较差         </color>
 </style></indent>
-<topic:不幸><color:o>不幸</color>
-不幸的冒险者在纸面属性上看起来令人印象深刻，按理说应该能过得很轻松——但不知何故，他们的战斗进行得并不顺利，而且他们最需要的物品似乎永远也不会掉落。
+<topic:Unlucky><color:o>倒霉 (Unlucky)</color>
+倒霉的冒险者纸面实力令人印象深刻，按理说应该很轻松才对——但不知为何，他们的战斗总是不那么顺利，他们最需要的物品也似乎永远不会掉落。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +2        Disarming   <color:r>糟糕       </color>
-Intelligence  +2        Device      <color:y>良好       </color>
-Wisdom        +2        Save        <color:D>极差       </color>
-Dexterity     +2        Stealth     <color:o>一般       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:G>优秀       </color>
-Life Rating  104%       Melee       <color:o>一般       </color>
-Experience   100%       Archery     <color:o>一般       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +2         解除陷阱    <color:r>糟糕         </color>
+智力         +2         魔法装置    <color:y>良好         </color>
+感知         +2         豁免        <color:D>极差         </color>
+敏捷         +2         潜行        <color:o>尚可         </color>
+体质         +2         搜索        <color:o>尚可         </color>
+魅力         +2         察觉        <color:G>优秀         </color>
+生命评级    104%        近战        <color:o>尚可         </color>
+经验值      100%        箭术        <color:o>尚可         </color>
 </style></indent>
-<topic:混乱><color:o>混乱</color>
-混乱的冒险者是混沌恶魔领主的仆从，在他们升级时通常会收到来自庇护者的奖励——或惩罚。他们的长处和弱点是不可预测的；甚至他们的属性加成也可能会发生变化。
+<topic:Chaotic><color:o>混沌 (Chaotic)</color>
+混沌的冒险者是混沌恶魔领主的仆从，在升级时经常会收到来自赞助人的奖励——或惩罚。他们的优势和劣势不可预测；甚至连属性加成也会发生变化。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +0        Disarming   <color:o>一般       </color>
-Intelligence  +0        Device      <color:o>一般       </color>
-Wisdom        +0        Save        <color:o>一般       </color>
-Dexterity     +0        Stealth     <color:o>一般       </color>
-Constitution  +0        Searching   <color:o>一般       </color>
-Charisma      +0        Perception  <color:o>一般       </color>
-Life Rating   99%       Melee       <color:o>一般       </color>
-Experience   100%       Archery     <color:o>一般       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +0         解除陷阱    <color:o>尚可         </color>
+智力         +0         魔法装置    <color:o>尚可         </color>
+感知         +0         豁免        <color:o>尚可         </color>
+敏捷         +0         潜行        <color:o>尚可         </color>
+体质         +0         搜索        <color:o>尚可         </color>
+魅力         +0         察觉        <color:o>尚可         </color>
+生命评级     99%        近战        <color:o>尚可         </color>
+经验值      100%        箭术        <color:o>尚可         </color>
 </style></indent>
-<topic:平凡><color:o>平凡</color>
-平凡的冒险者几乎没有什么天赋可言，并且无法使用法术，也不太擅长使用魔法装置；但是他们的反魔法能力使他们能够抵抗许多危险诅咒的影响。
+<topic:Mundane><color:o>平凡 (Mundane)</color>
+平凡的冒险者没有什么天赋可言，无法使用法术，也不太擅长使用魔法装置；但他们的反魔法特性使他们能够抵抗许多危险诅咒的影响。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      -1        Disarming   <color:o>一般       </color>
-Intelligence  -1        Device      <color:r>糟糕       </color>
-Wisdom        -1        Save        <color:G>优秀       </color>
-Dexterity     -1        Stealth     <color:o>一般       </color>
-Constitution  -1        Searching   <color:o>一般       </color>
-Charisma      -1        Perception  <color:o>一般       </color>
-Life Rating   97%       Melee       <color:o>一般       </color>
-Experience   100%       Archery     <color:o>一般       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         -1         解除陷阱    <color:o>尚可         </color>
+智力         -1         魔法装置    <color:r>糟糕         </color>
+感知         -1         豁免        <color:G>优秀         </color>
+敏捷         -1         潜行        <color:o>尚可         </color>
+体质         -1         搜索        <color:o>尚可         </color>
+魅力         -1         察觉        <color:o>尚可         </color>
+生命评级     97%        近战        <color:o>尚可         </color>
+经验值      100%        箭术        <color:o>尚可         </color>
 </style></indent>
-<topic:芒奇金><color:o>芒奇金</color>
-芒奇金性格是为那些喜欢数值碾压的玩家准备的。它会提升你所有的属性和技能；拥有这种性格，你可以轻松赢得游戏，但这样做不会获得任何荣誉。
+<topic:Munchkin><color:o>龙傲天 (Munchkin)</color>
+龙傲天性格是为那些喜欢碾压一切的功利玩家准备的。它会提高你所有的属性和技能；拥有这种性格，你可以轻松赢得游戏，但这没有任何荣誉可言。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +3        Disarming   <color:g>卓越       </color>
-Intelligence  +3        Device      <color:v>琥珀[10]   </color>
-Wisdom        +3        Save        <color:g>卓越       </color>
-Dexterity     +3        Stealth     <color:b>英雄       </color>
-Constitution  +3        Searching   <color:v>琥珀[52]   </color>
-Charisma      +3        Perception  <color:v>琥珀[52]   </color>
-Life Rating  150%       Melee       <color:v>琥珀[25]   </color>
-Experience    50%       Archery     <color:v>琥珀[2]    </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +3         解除陷阱    <color:g>绝佳         </color>
+智力         +3         魔法装置    <color:v>琥珀[10]     </color>
+感知         +3         豁免        <color:g>绝佳         </color>
+敏捷         +3         潜行        <color:b>英勇         </color>
+体质         +3         搜索        <color:v>琥珀[52]     </color>
+魅力         +3         察觉        <color:v>琥珀[52]     </color>
+生命评级    150%        近战        <color:v>琥珀[25]     </color>
+经验值       50%        箭术        <color:v>琥珀[2]      </color>
 </style></indent>
-<topic:脆弱><color:o>脆弱</color>
-作为一名脆弱的冒险者，你缺乏自信和肉体韧性。由于你体力极差，你会很快在近战、远程战斗、魔法战斗或任何其他剧烈活动中精疲力竭。（也许你该待在家里，安安静静地读一些不那么重的书。）
+<topic:Fragile><color:o>脆弱 (Fragile)</color>
+作为一名脆弱的冒险者，你缺乏自信和身体韧性。由于你的耐力低得令人发指，无论是近战、远程战斗、魔法战斗还是任何其他剧烈活动，都会让你迅速筋疲力尽。（也许你只是应该待在家里，安静地读一些不太重的书。）
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      -3        Disarming   <color:o>一般       </color>
-Intelligence  +0        Device      <color:o>一般       </color>
-Wisdom        +1        Save        <color:R>贫弱       </color>
-Dexterity     -1        Stealth     <color:R>贫弱       </color>
-Constitution  -3        Searching   <color:y>良好       </color>
-Charisma      -2        Perception  <color:y>良好       </color>
-Life Rating   91%       Melee       <color:R>贫弱       </color>
-Experience   100%       Archery     <color:R>贫弱       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         -3         解除陷阱    <color:o>尚可         </color>
+智力         +0         魔法装置    <color:o>尚可         </color>
+感知         +1         豁免        <color:R>较差         </color>
+敏捷         -1         潜行        <color:R>较差         </color>
+体质         -3         搜索        <color:y>良好         </color>
+魅力         -2         察觉        <color:y>良好         </color>
+生命评级     91%        近战        <color:R>较差         </color>
+经验值      100%        箭术        <color:R>较差         </color>
 </style></indent>
-<topic:阴险><color:o>阴险</color>
-阴险的冒险者很隐秘，并且非常擅长使用轻型刺击武器；但是使用重型武器进行面对面的战斗则与他们的长处背道而驰。
+<topic:Sneaky><color:o>鬼祟 (Sneaky)</color>
+鬼祟的冒险者善于潜行，并且擅长使用轻型刺击武器；但使用重型武器进行面对面战斗则不利于发挥他们的长处。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      -3        Disarming   <color:y>极好       </color>
-Intelligence  +1        Device      <color:o>一般       </color>
-Wisdom        +1        Save        <color:o>一般       </color>
-Dexterity     +2        Stealth     <color:g>卓越       </color>
-Constitution  -1        Searching   <color:G>优秀       </color>
-Charisma      +1        Perception  <color:o>一般       </color>
-Life Rating   97%       Melee       <color:o>一般       </color>
-Experience   100%       Archery     <color:o>一般       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         -3         解除陷阱    <color:y>极好         </color>
+智力         +1         魔法装置    <color:o>尚可         </color>
+感知         +1         豁免        <color:o>尚可         </color>
+敏捷         +2         潜行        <color:g>绝佳         </color>
+体质         -1         搜索        <color:G>优秀         </color>
+魅力         +1         察觉        <color:o>尚可         </color>
+生命评级     97%        近战        <color:o>尚可         </color>
+经验值      100%        箭术        <color:o>尚可         </color>
 </style></indent>
-<topic:高贵><color:o>高贵</color>
-作为一个高贵的人，你享受着上流社会教养带来的好处（至少，你认为这是好处）。你开局就有额外的金钱，并且似乎相对容易获得更多的金钱；但是冒险生活的其他方面对你来说是否也能如此顺理成章，还有待观察。
+<topic:Noble><color:o>贵族 (Noble)</color>
+作为一个贵族，你拥有上层阶级教养带来的好处（至少，你认为这些是好处）。你开局带有额外的金钱，并且似乎能相对轻松地获得更多的金钱；但在冒险生活的其他方面，你是否也能如此自然地适应，还有待观察。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +0        Disarming   <color:R>贫弱       </color>
-Intelligence  +0        Device      <color:o>一般       </color>
-Wisdom        +0        Save        <color:o>一般       </color>
-Dexterity     -2        Stealth     <color:o>一般       </color>
-Constitution  -1        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating   99%       Melee       <color:y>良好       </color>
-Experience   110%       Archery     <color:R>贫弱       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +0         解除陷阱    <color:R>较差         </color>
+智力         +0         魔法装置    <color:o>尚可         </color>
+感知         +0         豁免        <color:o>尚可         </color>
+敏捷         -2         潜行        <color:o>尚可         </color>
+体质         -1         搜索        <color:o>尚可         </color>
+魅力         +2         察觉        <color:o>尚可         </color>
+生命评级     99%        近战        <color:y>良好         </color>
+经验值      110%        箭术        <color:R>较差         </color>
 </style></indent>
-<topic:分裂><color:o>分裂</color>
-你拥有多重人格，并继承了每个人格的优点和缺点。在任何时候，你的其中一个人格处于主导地位，你将获得该人格的全部效果；其余的人格要么被部分抑制，要么被完全抑制。部分抑制的人格会提供减少的属性和技能加成，并且某些其他效果（例如“怯懦”的行走速度加成或“性感”的激怒怪物）将完全消失，但人格的其他部分正常生效。完全休眠的人格目前对你没有任何影响，但以后可能会重新浮现！等级的提升以及受到严重伤害的创伤，可能会导致以前被抑制的人格占据主导地位，反之亦然。
+<topic:Split><color:o>分裂 (Split)</color>
+你患有多重人格，并继承了每种人格的优缺点。在任何时候，你的某一个人格会处于主导地位，你将获得该人格的全部效果；其余的人格要么被部分抑制，要么被完全休眠。被部分抑制的人格提供的属性和技能加成会减少，其他一些效果（如“怯懦”的步行速度加成或“性感”的激怒怪物）将完全消失，但该人格的其他部分照常生效。完全休眠的人格目前对你没有影响，但可能会在以后重新浮现！等级的提升以及受到重创的创伤，可能会导致之前被抑制的人格占据主导地位，反之亦然。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +0        Disarming   <color:o>一般       </color>
-Intelligence  +0        Device      <color:o>一般       </color>
-Wisdom        +0        Save        <color:o>一般       </color>
-Dexterity     +0        Stealth     <color:o>一般       </color>
-Constitution  +0        Searching   <color:o>一般       </color>
-Charisma      +0        Perception  <color:o>一般       </color>
-Life Rating  100%       Melee       <color:o>一般       </color>
-Experience   100%       Archery     <color:o>一般       </color>
+  <indent><style:table><color:G>属性                    技能</color>
+力量         +0         解除陷阱    <color:o>尚可         </color>
+智力         +0         魔法装置    <color:o>尚可         </color>
+感知         +0         豁免        <color:o>尚可         </color>
+敏捷         +0         潜行        <color:o>尚可         </color>
+体质         +0         搜索        <color:o>尚可         </color>
+魅力         +0         察觉        <color:o>尚可         </color>
+生命评级    100%        近战        <color:o>尚可         </color>
+经验值      100%        箭术        <color:o>尚可         </color>
 </style></indent>
 <topic:Tables><style:heading>表 1 - 性格属性加成表</style>
 
-<style:table><color:G>               STR  INT  WIS  DEX  CON  CHR  Life  Exp</color>
-普通          +0   +0   +0   +0   +0   +0  100%  100%
-强壮          +2   -2   -2   +0   +1   +1  102%  100%
-精明          -2   +2   +0   +1   -1   -1   97%  100%
-虔诚          +0   -1   +2   -1   +0   +0  100%  100%
-敏捷          -1   +1   -1   +2   -1   +0   99%  100%
-无畏          +1   +0   +0   -1   -1   +1   98%  100%
-好战          +1   -1   -1   +1   +0   +0  100%  100%
-性感          +1   +1   +1   +1   +1   +1  100%  100%
-幸运          -2   -2   -2   -2   -2   -2   98%  100%
-耐心          +0   +0   +2   -2   +2   +0  102%  100%
-怯懦          -1   +1   +1   -1   -1   -2   99%  100%
-急躁          +0   -1   -2   +2   -1   +0  100%  100%
-懒惰          -2   -2   -2   -2   -2   -2   95%  100%
-不幸          +2   +2   +2   +2   +2   +2  104%  100%
-混乱          +0   +0   +0   +0   +0   +0   99%  100%
-平凡          -1   -1   -1   -1   -1   -1   97%  100%
-芒奇金       +3   +3   +3   +3   +3   +3  150%   50%
-脆弱          -3   +0   +1   -1   -3   -2   91%  100%
-阴险          -3   +1   +1   +2   -1   +1   97%  100%
-高贵          +0   +0   +0   -2   -1   +2   99%  110%
-分裂          +0   +0   +0   +0   +0   +0  100%  100%
+<style:table><color:G>                 STR  INT  WIS  DEX  CON  CHR  Life  Exp</color>
+普通            +0   +0   +0   +0   +0   +0  100%  100%
+强壮            +2   -2   -2   +0   +1   +1  102%  100%
+精明            -2   +2   +0   +1   -1   -1   97%  100%
+虔诚            +0   -1   +2   -1   +0   +0  100%  100%
+灵巧            -1   +1   -1   +2   -1   +0   99%  100%
+无畏            +1   +0   +0   -1   -1   +1   98%  100%
+好战            +1   -1   -1   +1   +0   +0  100%  100%
+性感            +1   +1   +1   +1   +1   +1  100%  100%
+幸运            -2   -2   -2   -2   -2   -2   98%  100%
+耐心            +0   +0   +2   -2   +2   +0  102%  100%
+怯懦            -1   +1   +1   -1   -1   -2   99%  100%
+急躁            +0   -1   -2   +2   -1   +0  100%  100%
+懒惰            -2   -2   -2   -2   -2   -2   95%  100%
+倒霉            +2   +2   +2   +2   +2   +2  104%  100%
+混沌            +0   +0   +0   +0   +0   +0   99%  100%
+平凡            -1   -1   -1   -1   -1   -1   97%  100%
+龙傲天          +3   +3   +3   +3   +3   +3  150%   50%
+脆弱            -3   +0   +1   -1   -3   -2   91%  100%
+鬼祟            -3   +1   +1   +2   -1   +1   97%  100%
+贵族            +0   +0   +0   -2   -1   +2   99%  110%
+分裂            +0   +0   +0   +0   +0   +0  100%  100%
 
 </style>
 <topic:Skills1><style:heading>表 2 - 性格技能加成表 I</style>
 <style:table>
-             <color:w>解除陷阱  使用装置  豁免        潜行       </color>
-普通       <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
-强壮       <color:r>糟糕       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
-精明       <color:y>良好       </color> <color:G>优秀       </color> <color:o>一般       </color> <color:o>一般       </color>
-虔诚       <color:r>糟糕       </color> <color:o>一般       </color> <color:y>良好       </color> <color:R>贫弱       </color>
-敏捷       <color:G>优秀       </color> <color:o>一般       </color> <color:R>贫弱       </color> <color:y>良好       </color>
-无畏       <color:r>糟糕       </color> <color:o>一般       </color> <color:R>贫弱       </color> <color:o>一般       </color>
-好战       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color>
-性感       <color:g>卓越       </color> <color:y>极好       </color> <color:o>一般       </color> <color:o>一般       </color>
-幸运       <color:g>卓越       </color> <color:G>优秀       </color> <color:o>一般       </color> <color:G>优秀       </color>
-耐心       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color> <color:y>良好       </color>
-怯懦       <color:y>极好       </color> <color:y>极好       </color> <color:R>贫弱       </color> <color:g>卓越       </color>
-急躁       <color:r>糟糕       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
-懒惰       <color:r>糟糕       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
-不幸       <color:r>糟糕       </color> <color:y>良好       </color> <color:D>极差       </color> <color:o>一般       </color>
-混乱       <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
-平凡       <color:o>一般       </color> <color:r>糟糕       </color> <color:G>优秀       </color> <color:o>一般       </color>
-芒奇金    <color:g>卓越       </color> <color:v>琥珀[10]   </color> <color:g>卓越       </color> <color:b>英雄       </color>
-脆弱       <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
-阴险       <color:y>极好       </color> <color:o>一般       </color> <color:o>一般       </color> <color:g>卓越       </color>
-高贵       <color:R>贫弱       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
-分裂       <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
+             <color:w>解除陷阱      魔法装置      豁免          潜行         </color>
+普通         <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+强壮         <color:r>糟糕         </color> <color:r>糟糕         </color> <color:R>较差         </color> <color:R>较差         </color>
+精明         <color:y>良好         </color> <color:G>优秀         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+虔诚         <color:r>糟糕         </color> <color:o>尚可         </color> <color:y>良好         </color> <color:R>较差         </color>
+灵巧         <color:G>优秀         </color> <color:o>尚可         </color> <color:R>较差         </color> <color:y>良好         </color>
+无畏         <color:r>糟糕         </color> <color:o>尚可         </color> <color:R>较差         </color> <color:o>尚可         </color>
+好战         <color:R>较差         </color> <color:R>较差         </color> <color:R>较差         </color> <color:o>尚可         </color>
+性感         <color:g>绝佳         </color> <color:y>极好         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+幸运         <color:g>绝佳         </color> <color:G>优秀         </color> <color:o>尚可         </color> <color:G>优秀         </color>
+耐心         <color:R>较差         </color> <color:R>较差         </color> <color:y>良好         </color> <color:y>良好         </color>
+怯懦         <color:y>极好         </color> <color:y>极好         </color> <color:R>较差         </color> <color:g>绝佳         </color>
+急躁         <color:r>糟糕         </color> <color:r>糟糕         </color> <color:R>较差         </color> <color:R>较差         </color>
+懒惰         <color:r>糟糕         </color> <color:r>糟糕         </color> <color:R>较差         </color> <color:R>较差         </color>
+倒霉         <color:r>糟糕         </color> <color:y>良好         </color> <color:D>极差         </color> <color:o>尚可         </color>
+混沌         <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+平凡         <color:o>尚可         </color> <color:r>糟糕         </color> <color:G>优秀         </color> <color:o>尚可         </color>
+龙傲天       <color:g>绝佳         </color> <color:v>琥珀[10]     </color> <color:g>绝佳         </color> <color:b>英勇         </color>
+脆弱         <color:o>尚可         </color> <color:o>尚可         </color> <color:R>较差         </color> <color:R>较差         </color>
+鬼祟         <color:y>极好         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:g>绝佳         </color>
+贵族         <color:R>较差         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+分裂         <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color>
 
 </style>
 <topic:Skills2><style:heading>表 3 - 性格技能加成表 II</style>
 <style:table>
-             <color:w>搜索        察觉        近战        箭术       </color>
-普通       <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
-强壮       <color:r>糟糕       </color> <color:r>糟糕       </color> <color:g>卓越       </color> <color:o>一般       </color>
-精明       <color:r>糟糕       </color> <color:g>卓越       </color> <color:r>糟糕       </color> <color:R>贫弱       </color>
-虔诚       <color:G>优秀       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
-敏捷       <color:g>卓越       </color> <color:g>卓越       </color> <color:o>一般       </color> <color:y>极好       </color>
-无畏       <color:y>良好       </color> <color:r>糟糕       </color> <color:y>良好       </color> <color:o>一般       </color>
-好战       <color:R>贫弱       </color> <color:y>良好       </color> <color:y>良好       </color> <color:y>良好       </color>
-性感       <color:G>优秀       </color> <color:y>良好       </color> <color:G>优秀       </color> <color:y>极好       </color>
-幸运       <color:v>琥珀[10]   </color> <color:b>英雄       </color> <color:g>卓越       </color> <color:G>优秀       </color>
-耐心       <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color> <color:o>一般       </color>
-怯懦       <color:o>一般       </color> <color:o>一般       </color> <color:D>极差       </color> <color:y>极好       </color>
-急躁       <color:D>极差       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
-懒惰       <color:D>极差       </color> <color:r>糟糕       </color> <color:r>糟糕       </color> <color:R>贫弱       </color>
-不幸       <color:o>一般       </color> <color:G>优秀       </color> <color:o>一般       </color> <color:o>一般       </color>
-混乱       <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
-平凡       <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
-芒奇金    <color:v>琥珀[52]   </color> <color:v>琥珀[52]   </color> <color:v>琥珀[25]   </color> <color:v>琥珀[2]    </color>
-脆弱       <color:y>良好       </color> <color:y>良好       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
-阴险       <color:G>优秀       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
-高贵       <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:R>贫弱       </color>
-分裂       <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
+             <color:w>搜索          察觉          近战          箭术         </color>
+普通         <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+强壮         <color:r>糟糕         </color> <color:r>糟糕         </color> <color:g>绝佳         </color> <color:o>尚可         </color>
+精明         <color:r>糟糕         </color> <color:g>绝佳         </color> <color:r>糟糕         </color> <color:R>较差         </color>
+虔诚         <color:G>优秀         </color> <color:r>糟糕         </color> <color:R>较差         </color> <color:R>较差         </color>
+灵巧         <color:g>绝佳         </color> <color:g>绝佳         </color> <color:o>尚可         </color> <color:y>极好         </color>
+无畏         <color:y>良好         </color> <color:r>糟糕         </color> <color:y>良好         </color> <color:o>尚可         </color>
+好战         <color:R>较差         </color> <color:y>良好         </color> <color:y>良好         </color> <color:y>良好         </color>
+性感         <color:G>优秀         </color> <color:y>良好         </color> <color:G>优秀         </color> <color:y>极好         </color>
+幸运         <color:v>琥珀[10]     </color> <color:b>英勇         </color> <color:g>绝佳         </color> <color:G>优秀         </color>
+耐心         <color:o>尚可         </color> <color:o>尚可         </color> <color:R>较差         </color> <color:o>尚可         </color>
+怯懦         <color:o>尚可         </color> <color:o>尚可         </color> <color:D>极差         </color> <color:y>极好         </color>
+急躁         <color:D>极差         </color> <color:r>糟糕         </color> <color:R>较差         </color> <color:R>较差         </color>
+懒惰         <color:D>极差         </color> <color:r>糟糕         </color> <color:r>糟糕         </color> <color:R>较差         </color>
+倒霉         <color:o>尚可         </color> <color:G>优秀         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+混沌         <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+平凡         <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+龙傲天       <color:v>琥珀[52]     </color> <color:v>琥珀[52]     </color> <color:v>琥珀[25]     </color> <color:v>琥珀[2]      </color>
+脆弱         <color:y>良好         </color> <color:y>良好         </color> <color:R>较差         </color> <color:R>较差         </color>
+鬼祟         <color:G>优秀         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color>
+贵族         <color:o>尚可         </color> <color:o>尚可         </color> <color:y>良好         </color> <color:R>较差         </color>
+分裂         <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color> <color:o>尚可         </color>
 
 </style>
 
 
-<color:s>自动生成于 FrogComposband 7.4。</color>
+<color:s>Automatically generated for FrogComposband 7.2.salmiak.</color>

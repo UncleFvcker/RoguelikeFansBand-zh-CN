@@ -1,166 +1,166 @@
-<style:title>龙族领域</style>
+<style:title>巨龙领域 (Dragon Realms)</style>
 
-Dragons are magical creatures and may choose to learn a particular branch of dragon magic. Dragons do not need spellbooks to cast spells or learn powers; instead, they simply gain spells as they mature. Each realm of dragon magic has a direct impact on the player's stats and skills, and each realm also requires a different stat for casting purposes.
+巨龙是魔法生物，可以选择学习特定分支的巨龙魔法。巨龙不需要法术书来施放法术或学习能力；相反，它们在成长过程中自然就能领悟法术。每个巨龙魔法领域都会对玩家的属性和技能产生直接影响，并且每个领域在施法时也需要不同的属性作为支持。
 
-<topic:传说><color:o>传说</color>
-Dragons specializing in lore are seekers of knowledge. They are the most intelligent of dragonkind, and it is intellect that drives their magic. Armed with a vast array of detection and knowledge spells, dragons of lore seek power through knowledge. They eventually gain powers of telepathy and automatic object identification. Lore dragons are quick learners, and gain maturity much more rapidly than the rest of their kind.
+<topic:Lore><color:o>学识 (Lore)</color>
+专精于学识的巨龙是知识的探求者。它们是龙族中最聪明的，智力是驱动它们魔法的源泉。凭借大量探测和知识类法术的武装，学识巨龙通过知识来寻求力量。它们最终能获得心灵感应和自动鉴定物品的能力。学识巨龙学习速度极快，心智成熟的速度远超同类。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> -1</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:v> +3</color>        Device      <color:y>极好       </color>
-Wisdom       <color:w> +0</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> -1</color>        Stealth     <color:o>一般       </color>
-Constitution <color:w> -1</color>        Searching   <color:G>优秀       </color>
-Charisma     <color:w> +0</color>        Perception  <color:G>优秀       </color>
-Life Rating  100%       Melee       <color:R>贫弱       </color>
-Experience    80%       Archery     <color:o>一般       </color>
-攻击 100%
-喷吐 100%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> -1</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:v> +3</color>        魔法装置    <color:y>极好(V.Good) </color>
+感知         <color:w> +0</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> -1</color>        潜行        <color:o>一般(Fair)   </color>
+体质         <color:w> -1</color>        搜索        <color:G>优秀(Exclnt) </color>
+魅力         <color:w> +0</color>        察觉        <color:G>优秀(Exclnt) </color>
+生命加成     100%       近战        <color:R>较差(Poor)   </color>
+经验修正      80%       箭术        <color:o>一般(Fair)   </color>
+攻击效率     100%
+吐息威力     100%
 </style></indent>
-<topic:吐息><color:o>吐息</color>
-龙息是传说中令人敬畏的力量，而这个领域旨在强化龙族这一最强大的特性。掌握此专精后，你能够塑造并控制你的吐息，在不同情况下最大化其杀伤力。此外，该领域的龙如果条件允许，还可以选择它们的吐息类型，并且随着它们的成长，吐息消耗的精力也会减少。这种专注需要极大的毅力才能掌握，并在一定程度上削弱了龙的防御和近战能力。
+<topic:Breath><color:o>吐息 (Breath)</color>
+巨龙吐息是传说中的绝技，而这一领域旨在增强龙族这项最强大的特质。拥有这项专精，你将能够塑造和控制你的吐息，从而在特定情况下将致命性最大化。此外，只要条件允许，该领域的巨龙还可以选择它们的吐息类型，并且随着它们的成长，吐息消耗的能量会越来越少。这种专注需要极强的体能来掌握，并会在一定程度上削弱巨龙的防御和近战能力。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +0</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> -1</color>        Device      <color:o>一般       </color>
-Wisdom       <color:w> -1</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> +0</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:v> +3</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +1</color>        Perception  <color:o>一般       </color>
-Life Rating  103%       Melee       <color:o>一般       </color>
-Experience   105%       Archery     <color:o>一般       </color>
-攻击  90%
-喷吐 115%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +0</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> -1</color>        魔法装置    <color:o>一般(Fair)   </color>
+感知         <color:w> -1</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> +0</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:v> +3</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +1</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     103%       近战        <color:o>一般(Fair)   </color>
+经验修正     105%       箭术        <color:o>一般(Fair)   </color>
+攻击效率      90%
+吐息威力     115%
 </style></indent>
-<topic:攻击><color:o>攻击</color>
-攻击领域的龙追求近战的绝对霸权。该领域提供了强大的攻击法术来支持这个本来就已经是近战精英的种族，其结果往往是毁灭与死亡。在这个领域的支持下，龙可以用极其锋利的爪子撕裂对手，可以用强有力的巨颚抓起相邻的对手并像布娃娃一样把他们扔出去，甚至可以将它们的吐息元素附加在撕咬攻击上！一头横冲直撞的龙是真正令人敬畏的景象，很少有人能目睹，或者说，很少有人能在目睹后幸存下来。这种专注视力量高于一切。
+<topic:Attack><color:o>攻击 (Attack)</color>
+攻击巨龙将近战霸权置于一切之上。这个领域提供强大的攻击法术来辅助一个本已跻身近战精英行列的种族，其结果往往是毁灭与死亡。在这个领域中，巨龙可以用格外锋利的爪子撕裂对手，可以用强有力的下颚咬住相邻的对手并将他们像破布娃娃一样抛来抛去，甚至可以给咬噬攻击附带上吐息的元素属性！一条狂暴的巨龙是令人心生敬畏的景象，很少有人能亲眼目睹，或者说很少有人能侥幸生还。这种专注将力量置于一切之上。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:v> +3</color>        Disarming   <color:r>糟糕       </color>
-Intelligence <color:w> -2</color>        Device      <color:r>糟糕       </color>
-Wisdom       <color:w> -2</color>        Save        <color:R>贫弱       </color>
-Dexterity    <color:w> +1</color>        Stealth     <color:R>贫弱       </color>
-Constitution <color:w> -1</color>        Searching   <color:R>贫弱       </color>
-Charisma     <color:w> +0</color>        Perception  <color:R>贫弱       </color>
-Life Rating   97%       Melee       <color:G>优秀       </color>
-Experience   105%       Archery     <color:o>一般       </color>
-攻击 115%
-喷吐  80%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:v> +3</color>        解除陷阱    <color:r>极差(Bad)    </color>
+智力         <color:w> -2</color>        魔法装置    <color:r>极差(Bad)    </color>
+感知         <color:w> -2</color>        豁免        <color:R>较差(Poor)   </color>
+敏捷         <color:w> +1</color>        潜行        <color:R>较差(Poor)   </color>
+体质         <color:w> -1</color>        搜索        <color:R>较差(Poor)   </color>
+魅力         <color:w> +0</color>        察觉        <color:R>较差(Poor)   </color>
+生命加成      97%       近战        <color:G>优秀(Exclnt) </color>
+经验修正     105%       箭术        <color:o>一般(Fair)   </color>
+攻击效率     115%
+吐息威力      80%
 </style></indent>
-<topic:工匠><color:o>工匠</color>
-The most powerful magical items have long been believed forged by dragonflame. The craft dragon gains powers of enchantment, and may even reforge artifacts into the objects of their choosing! Otherwise, craft dragons are not particularly powerful, as they trade melee and breath prowess for magical understanding. This focus requires great wisdom.
+<topic:Craft><color:o>工匠 (Craft)</color>
+长久以来，人们一直认为最强大的魔法物品是在龙炎中锻造而成的。工匠巨龙获得了附魔的力量，甚至可以将神器重铸为自己所选的物品！除此之外，工匠巨龙并不是特别强大，因为它们用近战和吐息的实力换取了对魔法的理解。这种专注需要极高的感知。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> -1</color>        Disarming   <color:o>一般       </color>
-Intelligence <color:w> -1</color>        Device      <color:g>卓越       </color>
-Wisdom       <color:v> +3</color>        Save        <color:o>一般       </color>
-Dexterity    <color:w> -1</color>        Stealth     <color:o>一般       </color>
-Constitution <color:w> -1</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> -1</color>        Perception  <color:o>一般       </color>
-Life Rating  100%       Melee       <color:R>贫弱       </color>
-Experience    95%       Archery     <color:o>一般       </color>
-攻击 100%
-喷吐 100%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> -1</color>        解除陷阱    <color:o>一般(Fair)   </color>
+智力         <color:w> -1</color>        魔法装置    <color:g>卓越(Superb) </color>
+感知         <color:v> +3</color>        豁免        <color:o>一般(Fair)   </color>
+敏捷         <color:w> -1</color>        潜行        <color:o>一般(Fair)   </color>
+体质         <color:w> -1</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> -1</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     100%       近战        <color:R>较差(Poor)   </color>
+经验修正      95%       箭术        <color:o>一般(Fair)   </color>
+攻击效率     100%
+吐息威力     100%
 </style></indent>
-<topic:护甲><color:o>护甲</color>
-Dragon scales have thwarted many a would-be dragonslayer. Naturally tough and resistant, the dragon's armor is even further enhanced by this realm. This specialization gives enhanced armor class, reflection, resistance to cuts and stunning, resistance to poison and life draining, and sustaining of several key stats, albeit not all at once. With all of these extra innate bonuses, the magic spells of this realm are few in number but serve to offer temporary defensive augmentations. Unlike their kin, dragons of this order prize agility above all else.
+<topic:Armor><color:o>护甲 (Armor)</color>
+龙鳞曾阻挡过无数梦想成为屠龙者的冒险家。巨龙本来就坚韧且抗打击，其护甲在这一领域还能得到进一步的强化。这种专精赋予了强化的护甲等级、反射能力、对割伤和震慑的抗性、对毒素和生命吸取的抗性，以及对几个关键属性的维持能力——尽管这些增益不会一次性全部获得。由于拥有这所有的额外先天加成，该领域的魔法咒语数量很少，但能够提供临时的防御性增强。与同类不同，这个领域的巨龙将敏捷置于一切之上。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> -1</color>        Disarming   <color:R>贫弱       </color>
-Intelligence <color:w> -1</color>        Device      <color:R>贫弱       </color>
-Wisdom       <color:w> -1</color>        Save        <color:y>良好       </color>
-Dexterity    <color:v> +3</color>        Stealth     <color:y>良好       </color>
-Constitution <color:w> +1</color>        Searching   <color:o>一般       </color>
-Charisma     <color:w> +1</color>        Perception  <color:o>一般       </color>
-Life Rating  102%       Melee       <color:r>糟糕       </color>
-Experience   105%       Archery     <color:o>一般       </color>
-攻击  90%
-喷吐  90%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> -1</color>        解除陷阱    <color:R>较差(Poor)   </color>
+智力         <color:w> -1</color>        魔法装置    <color:R>较差(Poor)   </color>
+感知         <color:w> -1</color>        豁免        <color:y>良好(Good)   </color>
+敏捷         <color:v> +3</color>        潜行        <color:y>良好(Good)   </color>
+体质         <color:w> +1</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:w> +1</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成     102%       近战        <color:r>极差(Bad)    </color>
+经验修正     105%       箭术        <color:o>一般(Fair)   </color>
+攻击效率      90%
+吐息威力      90%
 </style></indent>
-<topic:支配><color:o>支配</color>
-All dragons have a formidable presence and make fearsome opponents; but Domination dragons are truly a breed apart, seeking to bend and control the will of all they meet. Convinced of their right to rule, these dragons may subjugate the weak, terrify the uncertain, and stun the unwary with their awesome presence. They are the best dragons at controlling minions, and can summon mighty aid. Initially hostile monsters summoned to battle may switch sides when they notice whom they have been commanded to fight; and in the end, the dragon of domination may sever all oaths of allegiance, returning enemy summons to where they came from. Needless to say, dragons of this order value force of will above all else.
+<topic:Domination><color:o>统御 (Domination)</color>
+所有巨龙都拥有令人敬畏的仪态，并能成为可怕的对手；但统御巨龙确实是与众不同的存在，它们寻求屈服并控制所有遇见之物的意志。坚信自己拥有统治权，这些巨龙能够运用其可怖的威势使弱小者臣服、使动摇者恐惧，并震慑那些毫无防备的人。它们是控制仆从表现最好的巨龙，并能召唤强大的援助。最初被召唤来战斗时怀有敌意的怪物，当它们发现自己被命令与谁战斗时可能会倒戈相向；最终，统御巨龙可以斩断一切效忠誓言，将被召唤的敌人遣返回它们来的地方。毋庸置疑，这个领域的巨龙将意志力置于一切之上。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> -1</color>        Disarming   <color:R>贫弱       </color>
-Intelligence <color:w> -1</color>        Device      <color:R>贫弱       </color>
-Wisdom       <color:w> -1</color>        Save        <color:R>贫弱       </color>
-Dexterity    <color:w> -1</color>        Stealth     <color:o>一般       </color>
-Constitution <color:w> -1</color>        Searching   <color:o>一般       </color>
-Charisma     <color:v> +3</color>        Perception  <color:o>一般       </color>
-Life Rating   95%       Melee       <color:R>贫弱       </color>
-Experience   105%       Archery     <color:o>一般       </color>
-攻击  95%
-喷吐  90%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> -1</color>        解除陷阱    <color:R>较差(Poor)   </color>
+智力         <color:w> -1</color>        魔法装置    <color:R>较差(Poor)   </color>
+感知         <color:w> -1</color>        豁免        <color:R>较差(Poor)   </color>
+敏捷         <color:w> -1</color>        潜行        <color:o>一般(Fair)   </color>
+体质         <color:w> -1</color>        搜索        <color:o>一般(Fair)   </color>
+魅力         <color:v> +3</color>        察觉        <color:o>一般(Fair)   </color>
+生命加成      95%       近战        <color:R>较差(Poor)   </color>
+经验修正     105%       箭术        <color:o>一般(Fair)   </color>
+攻击效率      95%
+吐息威力      90%
 </style></indent>
-<topic:圣战><color:o>圣战</color>
-圣战领域的龙肩负着毁灭邪恶势力的使命。因此，该领域仅对金龙和律法龙开放。由于目标专一，圣战龙在近战和吐息方面不如其他龙强大，但它们的法术足以弥补这一缺陷——至少在对抗邪恶敌人时是如此。圣战龙能够喷吐通常无法获得的神圣元素。一见到邪恶，它们就会被激怒并可能加速进入战斗。它们甚至能进行一些治疗；最终，它们可以在近战和吐息中用神圣力量惩击邪恶势力。这种龙个性坚毅，甚至能为最终的决战召唤志同道合的同族。
+<topic:Crusade><color:o>圣战 (Crusade)</color>
+圣战巨龙肩负着摧毁邪恶势力的使命。因此，该领域仅对金龙 (Gold Dragon) 和秩序之龙 (Law Dragon) 开放。由于专注于单一目标，圣战巨龙在近战或吐息方面不如其他巨龙强大，但它们的法术足以弥补这一缺陷——至少在对抗邪恶对手时是如此。圣战巨龙可以喷吐常人无法接触到的神圣元素。当看到邪恶存在时，它们会陷入狂怒，并可能加速进入战斗状态。它们甚至能进行一点治疗；最终，它们可以用神圣力量在近战和吐息中打击邪恶势力。这种巨龙个性极强，可能在最终决战时召唤志同道合的同类。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:w> +1</color>        Disarming   <color:r>糟糕       </color>
-Intelligence <color:w> -1</color>        Device      <color:o>一般       </color>
-Wisdom       <color:w> -1</color>        Save        <color:R>贫弱       </color>
-Dexterity    <color:w> +1</color>        Stealth     <color:o>一般       </color>
-Constitution <color:w> -1</color>        Searching   <color:R>贫弱       </color>
-Charisma     <color:v> +2</color>        Perception  <color:R>贫弱       </color>
-Life Rating   95%       Melee       <color:y>良好       </color>
-Experience   107%       Archery     <color:o>一般       </color>
-攻击  90%
-喷吐  90%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:w> +1</color>        解除陷阱    <color:r>极差(Bad)    </color>
+智力         <color:w> -1</color>        魔法装置    <color:o>一般(Fair)   </color>
+感知         <color:w> -1</color>        豁免        <color:R>较差(Poor)   </color>
+敏捷         <color:w> +1</color>        潜行        <color:o>一般(Fair)   </color>
+体质         <color:w> -1</color>        搜索        <color:R>较差(Poor)   </color>
+魅力         <color:v> +2</color>        察觉        <color:R>较差(Poor)   </color>
+生命加成      95%       近战        <color:y>良好(Good)   </color>
+经验修正     107%       箭术        <color:o>一般(Fair)   </color>
+攻击效率      90%
+吐息威力      90%
 </style></indent>
-<topic:死亡><color:o>死亡</color>
-Death dragons are enemies of life itself, seeking to destroy all living creatures. With this realm, the dragon may bend their breath weapon to suit their necromantic desires, eventually breathing mastery over both death and life. At high levels, the death dragon's melee attacks gain a powerful draining effect against living creatures. This focus values strength above all else. This foul realm is only available to Shadow and Chaos dragons.
+<topic:Death><color:o>死亡 (Death)</color>
+死亡巨龙是生命本身的敌人，它们企图毁灭所有活着的生物。在这个领域中，巨龙可以扭曲它们的吐息武器以满足其死灵法术的渴望，最终能够熟练喷吐掌控死亡与生命的吐息。在高等级时，死亡巨龙的近战攻击对活物具有强大的吸取效果。这种专注将力量置于一切之上。这个邪恶的领域仅对暗影之龙 (Shadow Dragon) 和混沌之龙 (Chaos Dragon) 开放。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength     <color:v> +2</color>        Disarming   <color:r>糟糕       </color>
-Intelligence <color:w> -2</color>        Device      <color:R>贫弱       </color>
-Wisdom       <color:w> -2</color>        Save        <color:R>贫弱       </color>
-Dexterity    <color:w> +0</color>        Stealth     <color:y>良好       </color>
-Constitution <color:w> -2</color>        Searching   <color:R>贫弱       </color>
-Charisma     <color:w> +1</color>        Perception  <color:R>贫弱       </color>
-Life Rating   95%       Melee       <color:y>良好       </color>
-Experience   105%       Archery     <color:o>一般       </color>
-攻击  90%
-喷吐  90%
+  <indent><style:table><color:G>属性                    技能</color>
+力量         <color:v> +2</color>        解除陷阱    <color:r>极差(Bad)    </color>
+智力         <color:w> -2</color>        魔法装置    <color:R>较差(Poor)   </color>
+感知         <color:w> -2</color>        豁免        <color:R>较差(Poor)   </color>
+敏捷         <color:w> +0</color>        潜行        <color:y>良好(Good)   </color>
+体质         <color:w> -2</color>        搜索        <color:R>较差(Poor)   </color>
+魅力         <color:w> +1</color>        察觉        <color:R>较差(Poor)   </color>
+生命加成      95%       近战        <color:y>良好(Good)   </color>
+经验修正     105%       箭术        <color:o>一般(Fair)   </color>
+攻击效率      90%
+吐息威力      90%
 </style></indent>
-<topic:Tables><style:heading>表 1 - 龙之领域属性加成表</style>
+<topic:Tables><style:heading>表 1 - 巨龙领域属性加成表</style>
 
-<style:table><color:G>               STR  INT  WIS  DEX  CON  CHR  Life  Exp  Attack  Breath</color>
-传说          -1 <color:v>  +3 </color>  +0   -1   -1   +0  100%   80%   100%    100%
-吐息          +0   -1   -1   +0 <color:v>  +3 </color>  +1  103%  105%    90%    115%
-攻击        <color:v>  +3 </color>  -2   -2   +1   -1   +0   97%  105%   115%     80%
-工匠          -1   -1 <color:v>  +3 </color>  -1   -1   -1  100%   95%   100%    100%
-护甲          -1   -1   -1 <color:v>  +3 </color>  +1   +1  102%  105%    90%     90%
-支配          -1   -1   -1   -1   -1 <color:v>  +3 </color>  95%  105%    95%     90%
-圣战          +1   -1   -1   +1   -1 <color:v>  +2 </color>  95%  107%    90%     90%
-死亡        <color:v>  +2 </color>  -2   -2   +0   -2   +1   95%  105%    90%     90%
+<style:table><color:G>               力量 智力 感知 敏捷 体质 魅力 生命  经验  攻击  吐息</color>
+学识            -1 <color:v>  +3 </color>  +0   -1   -1   +0  100%   80%   100%    100%
+吐息            +0   -1   -1   +0 <color:v>  +3 </color>  +1  103%  105%    90%    115%
+攻击          <color:v>  +3 </color>  -2   -2   +1   -1   +0   97%  105%   115%     80%
+工匠            -1   -1 <color:v>  +3 </color>  -1   -1   -1  100%   95%   100%    100%
+护甲            -1   -1   -1 <color:v>  +3 </color>  +1   +1  102%  105%    90%     90%
+统御            -1   -1   -1   -1   -1 <color:v>  +3 </color>  95%  105%    95%     90%
+圣战            +1   -1   -1   +1   -1 <color:v>  +2 </color>  95%  107%    90%     90%
+死亡          <color:v>  +2 </color>  -2   -2   +0   -2   +1   95%  105%    90%     90%
 
 </style>
-<topic:Skills1><style:heading>表 2 - 龙之领域技能加成表 I</style>
+<topic:Skills1><style:heading>表 2 - 巨龙领域技能加成表 I</style>
 <style:table>
-               <color:w>解除陷阱  使用装置  豁免        潜行       </color>
-传说         <color:o>一般       </color> <color:y>极好       </color> <color:o>一般       </color> <color:o>一般       </color>
-吐息         <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color>
-攻击         <color:r>糟糕       </color> <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color>
-工匠         <color:o>一般       </color> <color:g>卓越       </color> <color:o>一般       </color> <color:o>一般       </color>
-护甲         <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color> <color:y>良好       </color>
-支配         <color:R>贫弱       </color> <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color>
-圣战         <color:r>糟糕       </color> <color:o>一般       </color> <color:R>贫弱       </color> <color:o>一般       </color>
-死亡         <color:r>糟糕       </color> <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color>
+               <color:w>解除陷阱      魔法装置      豁免          潜行         </color>
+学识           <color:o>一般(Fair)   </color> <color:y>极好(V.Good) </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color>
+吐息           <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+攻击           <color:r>极差(Bad)    </color> <color:r>极差(Bad)    </color> <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color>
+工匠           <color:o>一般(Fair)   </color> <color:g>卓越(Superb) </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color>
+护甲           <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:y>良好(Good)   </color> <color:y>良好(Good)   </color>
+统御           <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color>
+圣战           <color:r>极差(Bad)    </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color>
+死亡           <color:r>极差(Bad)    </color> <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:y>良好(Good)   </color>
 
 </style>
-<topic:Skills2><style:heading>表 3 - 龙之领域技能加成表 II</style>
+<topic:Skills2><style:heading>表 3 - 巨龙领域技能加成表 II</style>
 <style:table>
-               <color:w>搜索        察觉        近战        箭术       </color>
-传说         <color:G>优秀       </color> <color:G>优秀       </color> <color:R>贫弱       </color> <color:o>一般       </color>
-吐息         <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>
-攻击         <color:R>贫弱       </color> <color:R>贫弱       </color> <color:G>优秀       </color> <color:o>一般       </color>
-工匠         <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color> <color:o>一般       </color>
-护甲         <color:o>一般       </color> <color:o>一般       </color> <color:r>糟糕       </color> <color:o>一般       </color>
-支配         <color:o>一般       </color> <color:o>一般       </color> <color:R>贫弱       </color> <color:o>一般       </color>
-圣战         <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color> <color:o>一般       </color>
-死亡         <color:R>贫弱       </color> <color:R>贫弱       </color> <color:y>良好       </color> <color:o>一般       </color>
+               <color:w>搜索          察觉          近战          箭术         </color>
+学识           <color:G>优秀(Exclnt) </color> <color:G>优秀(Exclnt) </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color>
+吐息           <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color>
+攻击           <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:G>优秀(Exclnt) </color> <color:o>一般(Fair)   </color>
+工匠           <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color>
+护甲           <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:r>极差(Bad)    </color> <color:o>一般(Fair)   </color>
+统御           <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color>
+圣战           <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color>
+死亡           <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color>
 
 </style>
 
 
-<color:s>自动生成于 FrogComposband 7.4。</color>
+<color:s>自动生成，适用于 FrogComposband 7.2.salmiak。</color>

@@ -5,10 +5,30 @@ bool spoiler_hack = FALSE;
 #ifdef ALLOW_SPOILERS
 
 typedef void(*_file_fn)(FILE*);
+static bool _preserve_localized_help_file(cptr name)
+{
+    FILE *fp = NULL;
+    char  buf[1024];
+
+    path_build(buf, sizeof(buf), ANGBAND_DIR_HELP, name);
+    fp = my_fopen(buf, "r");
+    if (fp)
+    {
+        my_fclose(fp);
+        if (character_dungeon) msg_format("保留已汉化帮助文件 %s", buf);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 static void _help_file(cptr name, _file_fn fn)
 {
     FILE    *fp = NULL;
     char    buf[1024];
+
+    if (_preserve_localized_help_file(name))
+        return;
 
     path_build(buf, sizeof(buf), ANGBAND_DIR_HELP, name);
     fp = my_fopen(buf, "w");

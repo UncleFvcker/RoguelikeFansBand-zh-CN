@@ -1,208 +1,208 @@
-<style:title>龙人</style>
+<style:title>龙人 (Draconians)</style>
 
-龙裔是一个具有类似龙类特征的类人种族。龙裔有几个亚种，拥有不同的抗性、喷吐能力和属性；例如，红龙裔对火焰有抗性，并且能随意喷吐火焰，而白龙裔则喷吐和抵抗寒冰。所有的龙裔都能漂浮。此外，当他们足够成熟时，他们可以选择一种特殊的龙裔力量。
+龙人是一个具有巨龙特征的类人种族。龙人有几种不同的亚种，它们拥有不同的抗性、吐息和属性；例如，红龙人具有火焰抗性，也可以随意吐息火焰；而白龙人则能吐息并抵抗寒冷。所有龙人都会悬浮。此外，当他们成长到足够成熟时，可以选择一种特殊的龙人能力。
 
-<topic:红色><color:o>红色</color>
-Red Draconians have an affinity for fire, which they both breathe at will and resist. Together with their White kin, they are the strongest in combat of the draconians; but they are not so good with magic, and their stealth is quite poor. Should they choose the power of Dragon Skin, they will gain a fiery aura as well. Should they choose the power of Dragon Strike, their blows will burn their enemies.
+<topic:Red><color:o>红龙人 (Red)</color>
+红龙人天生亲和火焰，他们可以随意喷吐火焰，并对其具有抗性。与他们的白龙人同族一样，他们是龙人中战斗力最强的；但他们不擅长魔法，潜行能力也相当差。如果他们选择“巨龙之皮 (Dragon Skin)”能力，还将获得一层火焰光环。如果选择“巨龙打击 (Dragon Strike)”能力，他们的攻击将烧伤敌人。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +3        Disarming   <color:R>贫弱       </color>
-Intelligence  +0        Device      <color:R>贫弱       </color>
-Wisdom        +0        Save        <color:o>一般       </color>
-Dexterity     +1        Stealth     <color:R>贫弱       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating  104%       Melee       <color:G>优秀       </color>
-Base HP       22        Archery     <color:o>一般       </color>
-Experience   190%       Infravision 20'
+  <indent><style:table><color:G>属性                    技能</color>
+力量          +3        解除陷阱    <color:R>较差(Poor)   </color>
+智力          +0        魔法装置    <color:R>较差(Poor)   </color>
+感知          +0        豁免        <color:o>一般(Fair)   </color>
+敏捷          +1        潜行        <color:R>较差(Poor)   </color>
+体质          +2        搜索        <color:o>一般(Fair)   </color>
+魅力          +2        察觉        <color:o>一般(Fair)   </color>
+生命加成     104%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        22        箭术        <color:o>一般(Fair)   </color>
+经验修正     190%       红外视力    20'
 </style></indent>
-<topic:白色><color:o>白色</color>
-White Draconians have an affinity for frost, which they both breathe at will and resist. Together with their Red kin, they are the strongest in combat of the draconians; but they are not so good with magic, and their stealth is quite poor. Should they choose the power of Dragon Skin, they will gain an aura of cold as well. Should they choose the power of Dragon Strike, their blows will freeze their enemies.
+<topic:White><color:o>白龙人 (White)</color>
+白龙人天生亲和冰霜，他们可以随意喷吐寒霜，并对其具有抗性。与他们的红龙人同族一样，他们是龙人中战斗力最强的；但他们不擅长魔法，潜行能力也相当差。如果他们选择“巨龙之皮 (Dragon Skin)”能力，还将获得一层寒冰光环。如果选择“巨龙打击 (Dragon Strike)”能力，他们的攻击将冻结敌人。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +3        Disarming   <color:R>贫弱       </color>
-Intelligence  +0        Device      <color:R>贫弱       </color>
-Wisdom        +0        Save        <color:o>一般       </color>
-Dexterity     +1        Stealth     <color:R>贫弱       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating  104%       Melee       <color:G>优秀       </color>
-Base HP       22        Archery     <color:o>一般       </color>
-Experience   190%       Infravision 20'
+  <indent><style:table><color:G>属性                    技能</color>
+力量          +3        解除陷阱    <color:R>较差(Poor)   </color>
+智力          +0        魔法装置    <color:R>较差(Poor)   </color>
+感知          +0        豁免        <color:o>一般(Fair)   </color>
+敏捷          +1        潜行        <color:R>较差(Poor)   </color>
+体质          +2        搜索        <color:o>一般(Fair)   </color>
+魅力          +2        察觉        <color:o>一般(Fair)   </color>
+生命加成     104%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        22        箭术        <color:o>一般(Fair)   </color>
+经验修正     190%       红外视力    20'
 </style></indent>
-<topic:蓝色><color:o>蓝色</color>
-Blue Draconians have an affinity for lightning, which they both breathe at will and resist. They are strong in combat, but not so good with magic or stealth. Should they choose the power of Dragon Skin, they will gain a shocking aura as well. Should they choose the power of Dragon Strike, their blows will electrocute their enemies.
+<topic:Blue><color:o>蓝龙人 (Blue)</color>
+蓝龙人天生亲和闪电，他们可以随意喷吐闪电，并对其具有抗性。他们在战斗中很强，但不擅长魔法或潜行。如果他们选择“巨龙之皮 (Dragon Skin)”能力，还将获得一层雷电光环。如果选择“巨龙打击 (Dragon Strike)”能力，他们的攻击将电击敌人。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +2        Disarming   <color:R>贫弱       </color>
-Intelligence  +1        Device      <color:R>贫弱       </color>
-Wisdom        +1        Save        <color:o>一般       </color>
-Dexterity     +1        Stealth     <color:o>一般       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating  103%       Melee       <color:G>优秀       </color>
-Base HP       22        Archery     <color:o>一般       </color>
-Experience   190%       Infravision 20'
+  <indent><style:table><color:G>属性                    技能</color>
+力量          +2        解除陷阱    <color:R>较差(Poor)   </color>
+智力          +1        魔法装置    <color:R>较差(Poor)   </color>
+感知          +1        豁免        <color:o>一般(Fair)   </color>
+敏捷          +1        潜行        <color:o>一般(Fair)   </color>
+体质          +2        搜索        <color:o>一般(Fair)   </color>
+魅力          +2        察觉        <color:o>一般(Fair)   </color>
+生命加成     103%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        22        箭术        <color:o>一般(Fair)   </color>
+经验修正     190%       红外视力    20'
 </style></indent>
-<topic:黑色><color:o>黑色</color>
-Black Draconians have an affinity for acid, which they both breathe at will and resist. They are strong in combat, but not so good with magic or stealth. With the power of Dragon Strike, their blows will corrode their enemies.
+<topic:Black><color:o>黑龙人 (Black)</color>
+黑龙人天生亲和强酸，他们可以随意喷吐强酸，并对其具有抗性。他们在战斗中很强，但不擅长魔法或潜行。如果选择“巨龙打击 (Dragon Strike)”能力，他们的攻击将腐蚀敌人。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +2        Disarming   <color:R>贫弱       </color>
-Intelligence  +1        Device      <color:R>贫弱       </color>
-Wisdom        +1        Save        <color:o>一般       </color>
-Dexterity     +1        Stealth     <color:o>一般       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating  103%       Melee       <color:G>优秀       </color>
-Base HP       22        Archery     <color:o>一般       </color>
-Experience   190%       Infravision 20'
+  <indent><style:table><color:G>属性                    技能</color>
+力量          +2        解除陷阱    <color:R>较差(Poor)   </color>
+智力          +1        魔法装置    <color:R>较差(Poor)   </color>
+感知          +1        豁免        <color:o>一般(Fair)   </color>
+敏捷          +1        潜行        <color:o>一般(Fair)   </color>
+体质          +2        搜索        <color:o>一般(Fair)   </color>
+魅力          +2        察觉        <color:o>一般(Fair)   </color>
+生命加成     103%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        22        箭术        <color:o>一般(Fair)   </color>
+经验修正     190%       红外视力    20'
 </style></indent>
-<topic:绿色><color:o>绿色</color>
-Green Draconians have an affinity for poison, which they both breathe at will and resist. They are average in all respects among the draconians. With the power of Dragon Strike, their blows will poison their enemies.
+<topic:Green><color:o>绿龙人 (Green)</color>
+绿龙人天生亲和毒素，他们可以随意喷吐毒素，并对其具有抗性。在龙人中，他们在各方面都表现平平。如果选择“巨龙打击 (Dragon Strike)”能力，他们的攻击将使敌人中毒。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +1        Disarming   <color:R>贫弱       </color>
-Intelligence  +1        Device      <color:o>一般       </color>
-Wisdom        +1        Save        <color:o>一般       </color>
-Dexterity     +1        Stealth     <color:y>良好       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating  101%       Melee       <color:y>良好       </color>
-Base HP       22        Archery     <color:o>一般       </color>
-Experience   205%       Infravision 20'
+  <indent><style:table><color:G>属性                    技能</color>
+力量          +1        解除陷阱    <color:R>较差(Poor)   </color>
+智力          +1        魔法装置    <color:o>一般(Fair)   </color>
+感知          +1        豁免        <color:o>一般(Fair)   </color>
+敏捷          +1        潜行        <color:y>良好(Good)   </color>
+体质          +2        搜索        <color:o>一般(Fair)   </color>
+魅力          +2        察觉        <color:o>一般(Fair)   </color>
+生命加成     101%       近战        <color:y>良好(Good)   </color>
+基础HP        22        箭术        <color:o>一般(Fair)   </color>
+经验修正     205%       红外视力    20'
 </style></indent>
-<topic:青铜><color:o>青铜</color>
-Bronze Draconians are the most intelligent of their kind, and the best with magic as well. They are seldom confused, though the same may not be said of their enemies. With the power of Dragon Strike, even the melee attacks of the Bronze Draconian will baffle their enemies.
+<topic:Bronze><color:o>青铜龙人 (Bronze)</color>
+青铜龙人是同族中最聪明的，也是最擅长魔法的。他们很少会被困惑，但他们的敌人就没那么好运了。如果选择“巨龙打击 (Dragon Strike)”能力，即使是青铜龙人的近战攻击也会让敌人感到困惑。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +1        Disarming   <color:R>贫弱       </color>
-Intelligence  +2        Device      <color:y>良好       </color>
-Wisdom        +1        Save        <color:o>一般       </color>
-Dexterity     +1        Stealth     <color:y>良好       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating  101%       Melee       <color:y>良好       </color>
-Base HP       22        Archery     <color:o>一般       </color>
-Experience   215%       Infravision 20'
+  <indent><style:table><color:G>属性                    技能</color>
+力量          +1        解除陷阱    <color:R>较差(Poor)   </color>
+智力          +2        魔法装置    <color:y>良好(Good)   </color>
+感知          +1        豁免        <color:o>一般(Fair)   </color>
+敏捷          +1        潜行        <color:y>良好(Good)   </color>
+体质          +2        搜索        <color:o>一般(Fair)   </color>
+魅力          +2        察觉        <color:o>一般(Fair)   </color>
+生命加成     101%       近战        <color:y>良好(Good)   </color>
+基础HP        22        箭术        <color:o>一般(Fair)   </color>
+经验修正     215%       红外视力    20'
 </style></indent>
-<topic:水晶><color:o>水晶</color>
-Hard of skin, the Crystal Draconian is difficult to hit in melee; but their agility suffers, and they are not the brightest of their kind. They resist shards, which they may also breathe on command. With the power of Dragon Skin, they gain an aura of shards as well. With the power of Dragon Strike, even their melee attacks will shred their enemies.
+<topic:Crystal><color:o>水晶龙人 (Crystal)</color>
+水晶龙人拥有坚硬的皮肤，在近战中很难被击中；但他们的敏捷性较差，而且也不是同族中最聪明的。他们对破片具有抗性，并能随心所欲地喷吐破片。如果选择“巨龙之皮 (Dragon Skin)”能力，他们还将获得一层破片光环。如果选择“巨龙打击 (Dragon Strike)”能力，即使是他们的近战攻击也能撕碎敌人。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +1        Disarming   <color:R>贫弱       </color>
-Intelligence  -1        Device      <color:R>贫弱       </color>
-Wisdom        +1        Save        <color:o>一般       </color>
-Dexterity     +0        Stealth     <color:o>一般       </color>
-Constitution  +3        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating  103%       Melee       <color:G>优秀       </color>
-Base HP       22        Archery     <color:o>一般       </color>
-Experience   250%       Infravision 20'
+  <indent><style:table><color:G>属性                    技能</color>
+力量          +1        解除陷阱    <color:R>较差(Poor)   </color>
+智力          -1        魔法装置    <color:R>较差(Poor)   </color>
+感知          +1        豁免        <color:o>一般(Fair)   </color>
+敏捷          +0        潜行        <color:o>一般(Fair)   </color>
+体质          +3        搜索        <color:o>一般(Fair)   </color>
+魅力          +2        察觉        <color:o>一般(Fair)   </color>
+生命加成     103%       近战        <color:G>优秀(Exclnt) </color>
+基础HP        22        箭术        <color:o>一般(Fair)   </color>
+经验修正     250%       红外视力    20'
 </style></indent>
-<topic:金色><color:o>金色</color>
-The wisest of their kind, Gold Draconians are resilient in the face of magical attacks. They are resistant to sound, which they may also breathe at will, stunning their opponents. With the power of Dragon Strike, even their melee attacks will stun enemies.
+<topic:Gold><color:o>金龙人 (Gold)</color>
+金龙人是同族中最明智的，在面对魔法攻击时具有很强的韧性。他们对声波具有抗性，并可以随意喷吐声波，击晕对手。如果选择“巨龙打击 (Dragon Strike)”能力，即使是他们的近战攻击也会击晕敌人。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +1        Disarming   <color:R>贫弱       </color>
-Intelligence  +1        Device      <color:y>良好       </color>
-Wisdom        +2        Save        <color:o>一般       </color>
-Dexterity     +1        Stealth     <color:y>良好       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating  102%       Melee       <color:y>良好       </color>
-Base HP       22        Archery     <color:o>一般       </color>
-Experience   220%       Infravision 20'
+  <indent><style:table><color:G>属性                    技能</color>
+力量          +1        解除陷阱    <color:R>较差(Poor)   </color>
+智力          +1        魔法装置    <color:y>良好(Good)   </color>
+感知          +2        豁免        <color:o>一般(Fair)   </color>
+敏捷          +1        潜行        <color:y>良好(Good)   </color>
+体质          +2        搜索        <color:o>一般(Fair)   </color>
+魅力          +2        察觉        <color:o>一般(Fair)   </color>
+生命加成     102%       近战        <color:y>良好(Good)   </color>
+基础HP        22        箭术        <color:o>一般(Fair)   </color>
+经验修正     220%       红外视力    20'
 </style></indent>
-<topic:阴影><color:o>阴影</color>
-Lithe, stealthy and nimble, the Shadow Draconian is seldom seen in this world. They are resistant to the forces of nether, which they may also breathe. They are the weakest of the draconians, and the poorest in melee; but they are better than average with magic. With the power of Dragon Strike, they may steal life from their enemies in melee.
+<topic:Shadow><color:o>暗影龙人 (Shadow)</color>
+轻盈、隐秘且敏捷，暗影龙人很少出现在这个世界上。他们对虚冥力量具有抗性，并能将其作为吐息喷出。他们是龙人中最弱的，在近战中最差；但他们的魔法能力高于平均水平。如果选择“巨龙打击 (Dragon Strike)”能力，他们可以在近战中窃取敌人的生命。
 
-  <indent><style:table><color:G>Stats                   Skills</color>
-Strength      +0        Disarming   <color:R>贫弱       </color>
-Intelligence  +1        Device      <color:o>一般       </color>
-Wisdom        +1        Save        <color:o>一般       </color>
-Dexterity     +3        Stealth     <color:G>优秀       </color>
-Constitution  +2        Searching   <color:o>一般       </color>
-Charisma      +2        Perception  <color:o>一般       </color>
-Life Rating  100%       Melee       <color:o>一般       </color>
-Base HP       22        Archery     <color:o>一般       </color>
-Experience   225%       Infravision 40'
+  <indent><style:table><color:G>属性                    技能</color>
+力量          +0        解除陷阱    <color:R>较差(Poor)   </color>
+智力          +1        魔法装置    <color:o>一般(Fair)   </color>
+感知          +1        豁免        <color:o>一般(Fair)   </color>
+敏捷          +3        潜行        <color:G>优秀(Exclnt) </color>
+体质          +2        搜索        <color:o>一般(Fair)   </color>
+魅力          +2        察觉        <color:o>一般(Fair)   </color>
+生命加成     100%       近战        <color:o>一般(Fair)   </color>
+基础HP        22        箭术        <color:o>一般(Fair)   </color>
+经验修正     225%       红外视力    40'
 </style></indent>
 <topic:Tables><style:heading>表 1 - 龙人属性加成表</style>
 
-<style:table><color:G>               STR  INT  WIS  DEX  CON  CHR  Life  Exp  Shop</color>
-红色          +3   +0   +0   +1   +2   +2  104%  190%  115%
-白色          +3   +0   +0   +1   +2   +2  104%  190%  115%
-蓝色          +2   +1   +1   +1   +2   +2  103%  190%  110%
-黑色          +2   +1   +1   +1   +2   +2  103%  190%  110%
-绿色          +1   +1   +1   +1   +2   +2  101%  205%  105%
-青铜          +1   +2   +1   +1   +2   +2  101%  215%  100%
-水晶          +1   -1   +1   +0   +3   +2  103%  250%  105%
-金色          +1   +1   +2   +1   +2   +2  102%  220%   95%
-阴影          +0   +1   +1   +3   +2   +2  100%  225%  105%
+<style:table><color:G>               力量 智力 感知 敏捷 体质 魅力 生命  经验  商店</color>
+红龙人           +3   +0   +0   +1   +2   +2  104%  190%  115%
+白龙人           +3   +0   +0   +1   +2   +2  104%  190%  115%
+蓝龙人           +2   +1   +1   +1   +2   +2  103%  190%  110%
+黑龙人           +2   +1   +1   +1   +2   +2  103%  190%  110%
+绿龙人           +1   +1   +1   +1   +2   +2  101%  205%  105%
+青铜龙人         +1   +2   +1   +1   +2   +2  101%  215%  100%
+水晶龙人         +1   -1   +1   +0   +3   +2  103%  250%  105%
+金龙人           +1   +1   +2   +1   +2   +2  102%  220%   95%
+暗影龙人         +0   +1   +1   +3   +2   +2  100%  225%  105%
 
 </style>
 <topic:Skills1><style:heading>表 2 - 龙人技能加成表 I</style>
 <style:table>
-             <color:w>解除陷阱  使用装置  豁免        潜行       </color>
-红色       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:R>贫弱       </color>
-白色       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:R>贫弱       </color>
-蓝色       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:o>一般       </color>
-黑色       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:o>一般       </color>
-绿色       <color:R>贫弱       </color> <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color>
-青铜       <color:R>贫弱       </color> <color:y>良好       </color> <color:o>一般       </color> <color:y>良好       </color>
-水晶       <color:R>贫弱       </color> <color:R>贫弱       </color> <color:o>一般       </color> <color:o>一般       </color>
-金色       <color:R>贫弱       </color> <color:y>良好       </color> <color:o>一般       </color> <color:y>良好       </color>
-阴影       <color:R>贫弱       </color> <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color>
+             <color:w>解除陷阱      魔法装置      豁免          潜行         </color>
+红龙人       <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+白龙人       <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color> <color:R>较差(Poor)   </color>
+蓝龙人       <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color>
+黑龙人       <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color>
+绿龙人       <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color>
+青铜龙人     <color:R>较差(Poor)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color>
+水晶龙人     <color:R>较差(Poor)   </color> <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color>
+金龙人       <color:R>较差(Poor)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color>
+暗影龙人     <color:R>较差(Poor)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color>
 
 </style>
 <topic:Skills2><style:heading>表 3 - 龙人技能加成表 II</style>
 <style:table>
-             <color:w>搜索        察觉        近战        箭术        红外</color>
-红色       <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:o>一般       </color>   20'
-白色       <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:o>一般       </color>   20'
-蓝色       <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:o>一般       </color>   20'
-黑色       <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:o>一般       </color>   20'
-绿色       <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color>   20'
-青铜       <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color>   20'
-水晶       <color:o>一般       </color> <color:o>一般       </color> <color:G>优秀       </color> <color:o>一般       </color>   20'
-金色       <color:o>一般       </color> <color:o>一般       </color> <color:y>良好       </color> <color:o>一般       </color>   20'
-阴影       <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color> <color:o>一般       </color>   40'
+             <color:w>搜索          察觉          近战          箭术          夜视 </color>
+红龙人       <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:o>一般(Fair)   </color>   20'
+白龙人       <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:o>一般(Fair)   </color>   20'
+蓝龙人       <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:o>一般(Fair)   </color>   20'
+黑龙人       <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:o>一般(Fair)   </color>   20'
+绿龙人       <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color>   20'
+青铜龙人     <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color>   20'
+水晶龙人     <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:G>优秀(Exclnt) </color> <color:o>一般(Fair)   </color>   20'
+金龙人       <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:y>良好(Good)   </color> <color:o>一般(Fair)   </color>   20'
+暗影龙人     <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color> <color:o>一般(Fair)   </color>   40'
 
 </style>
 <topic:Powers><style:heading>表 4 - 龙人特殊能力</style>
 
-All draconians have access to special powers. When they reach level 35, they may choose a single power from the following list. These powers can never be removed or changed, so you might want to study this list to decide which power you will choose for your character.
+所有龙人都拥有特殊能力。当他们达到 35 级时，可以从以下列表中选择一项能力。这些能力永远无法移除或更改，因此你可能需要仔细研究这个列表，以决定为你的角色选择哪种能力。
 
-  <indent><color:G>再生</color>
-你的再生速度将会快得多。</indent>
+  <indent><color:G>远古知识 (Ancient Knowledge)</color>
+在你拾取物品时自动将其鉴定。</indent>
 
-  <indent><color:G>变形</color>
-你的身体将变形成一条龙（例如：6个戒指槽，无法装备武器）</indent>
-
-  <indent><color:G>召唤同族</color>
-你将能够从龙族那里召唤援助。</indent>
-
-  <indent><color:G>抗性增加</color>
-你将获得相应类型的额外抗性（如火或寒冷）。</indent>
-
-  <indent><color:G>致命吐息</color>
+  <indent><color:G>致命吐息 (Deadly Breath)</color>
 你的吐息将变得更致命。</indent>
 
-  <indent><color:G>远古知识</color>
-物品在你捡起时会自动鉴定。</indent>
+  <indent><color:G>巨龙之皮 (Dragon Skin)</color>
+你将获得额外的护甲等级，并在可能的情况下获得防御光环。</indent>
 
-  <indent><color:G>魔法抗性</color>
-你将获得对抗魔法攻击的额外豁免检定。</indent>
+  <indent><color:G>巨龙打击 (Dragon Strike)</color>
+你将能够使用特殊打击（如火焰、寒冰等）攻击相邻的对手。</indent>
 
-  <indent><color:G>龙之打击</color>
-你将能够用特殊攻击（火、寒冷等）打击相邻的对手。</indent>
+  <indent><color:G>魔法抗性 (Magic Resistance)</color>
+面对魔法攻击时，你将获得更高的豁免检定。</indent>
 
-  <indent><color:G>龙皮</color>
-你将获得额外的护甲等级，如果有条件，还会获得一个防御性光环。</indent>
+  <indent><color:G>巨龙化形 (Metamorphosis)</color>
+你的身体将变形成一条真正的巨龙（例如：获得 6 个戒指槽且无法使用武器）。</indent>
+
+  <indent><color:G>再生 (Regeneration)</color>
+你的生命恢复速度将大幅加快。</indent>
+
+  <indent><color:G>抗性 (Resistance)</color>
+你将获得对应属性（如火焰或寒冰）的额外抗性。</indent>
+
+  <indent><color:G>召唤同族 (Summon Kin)</color>
+你将能够召唤巨龙来协助你。</indent>
 
 
 
 
 
-<color:s>自动生成于 FrogComposband 7.4。</color>
+<color:s>自动生成，适用于 FrogComposband 7.2.salmiak。</color>
