@@ -1,427 +1,412 @@
-﻿The Personalities
+性格 (The Personalities)
 
-Your personality is the way you see and act in the world, and has a 
-small but significant effect on your stats and skills. In general, you 
-should pick a personality that complements the strengths and weaknesses 
-inherent in your race and class. Most personalities only make a minor 
-difference, but a few can change the game dramatically.
 
-For details on the Stats, see [a]. For information about the Skills, 
-see [b]. The skill descriptions in this document are for comparison 
-purposes only; for example, your fledgling munchkin will not be born 
-with Amber[25] melee skill. In general, skills are also influenced by 
-level, race, class, stats and equipment. To compare the stat and skill 
-boosts of each personality, take a look at the [c] personality tables 
-below.
+你的性格代表你看待世界和在其中行动的方式，它对你的属性和技能有着微小但重
+要的影响。通常，你应该选择一种能够互补你种族和职业固有优缺点的性格。大多
+数性格只产生细微的差别，但有几种会极大地改变游戏体验。
 
-Ordinary
-An ordinary person is average in every respect, gaining neither skills, 
-talents nor stat adjustments.
+关于属性 (Stats)的详细信息，请参阅 [a]。关于技能 (Skills)的信息，请参阅 
+[b]
+。本文档中的技能描述仅供比较参考；例如，你初出茅庐的龙傲天角色出生时并不
+会拥有 琥珀[25] 
+的近战技能。通常来说，技能也会受到等级、种族、职业、属性和装备的影响。要
+比较每种性格的属性和技能加成，请查看下面的 [c] 性格表格。
 
-  Stats                   Skills
-  Strength      +0        Disarming   Fair         
-  Intelligence  +0        Device      Fair         
-  Wisdom        +0        Save        Fair         
-  Dexterity     +0        Stealth     Fair         
-  Constitution  +0        Searching   Fair         
-  Charisma      +0        Perception  Fair         
-  Life Rating  100%       Melee       Fair         
-  Experience   100%       Archery     Fair         
+普通 (Ordinary)
+普通人在各方面都很平庸，既不会获得技能和天赋加成，也不会有属性调整。
+
+  属性                    技能
+  力量         +0         解除陷阱    尚可         
+  智力         +0         魔法装置    尚可         
+  感知         +0         豁免        尚可         
+  敏捷         +0         潜行        尚可         
+  体质         +0         搜索        尚可         
+  魅力         +0         察觉        尚可         
+  生命评级    100%        近战        尚可         
+  经验值      100%        箭术        尚可         
   
-Mighty
-Mighty raises your physical stats, skills and stamina, but reduces your 
-magical abilities and gives a slight penalty to your spell fail rates. 
-It is the most warrior-like personality.
+强壮 (Mighty)
 
-  Stats                   Skills
-  Strength      +2        Disarming   Bad          
-  Intelligence  -2        Device      Bad          
-  Wisdom        -2        Save        Poor         
-  Dexterity     +0        Stealth     Poor         
-  Constitution  +1        Searching   Bad          
-  Charisma      +1        Perception  Bad          
-  Life Rating  102%       Melee       Superb       
-  Experience   100%       Archery     Fair         
+强壮会提升你的身体属性、技能和耐力，但会降低你的魔法能力，并使法术失败率
+略微上升。这是最具战士风格的性格。
+
+  属性                    技能
+  力量         +2         解除陷阱    糟糕         
+  智力         -2         魔法装置    糟糕         
+  感知         -2         豁免        较差         
+  敏捷         +0         潜行        较差         
+  体质         +1         搜索        糟糕         
+  魅力         +1         察觉        糟糕         
+  生命评级    102%        近战        绝佳         
+  经验值      100%        箭术        尚可         
   
-Shrewd
-Being Shrewd does not give you an impressive physique, but good device 
-handling embiggens the smallest man; this is the stereotypical Mage 
-personality, yet can also help a warrior complement his weaknesses. 
-Shrewdness has a direct positive influence on spell fail rates.
+精明 (Shrewd)
 
-  Stats                   Skills
-  Strength      -2        Disarming   Good         
-  Intelligence  +2        Device      Excellent    
-  Wisdom        +0        Save        Fair         
-  Dexterity     +1        Stealth     Fair         
-  Constitution  -1        Searching   Bad          
-  Charisma      -1        Perception  Superb       
-  Life Rating   97%       Melee       Bad          
-  Experience   100%       Archery     Poor         
+精明不会给你留下深刻印象的体格，但熟练的魔法装置操作能力能让最弱小的人变
+强；这是典型的法师性格，但也能帮助战士弥补弱点。精明对法术失败率有直接的
+正面影响。
+
+  属性                    技能
+  力量         -2         解除陷阱    良好         
+  智力         +2         魔法装置    优秀         
+  感知         +0         豁免        尚可         
+  敏捷         +1         潜行        尚可         
+  体质         -1         搜索        糟糕         
+  魅力         -1         察觉        绝佳         
+  生命评级     97%        近战        糟糕         
+  经验值      100%        箭术        较差         
   
-Pious
-Pious deepens your faith in your God. It makes your physical ability 
-average, and your stats suitable for a priest.
+虔诚 (Pious)
+虔诚会加深你对神的信仰。这使你的物理能力平平，且属性非常适合牧师。
 
-  Stats                   Skills
-  Strength      +0        Disarming   Bad          
-  Intelligence  -1        Device      Fair         
-  Wisdom        +2        Save        Good         
-  Dexterity     -1        Stealth     Poor         
-  Constitution  +0        Searching   Excellent    
-  Charisma      +0        Perception  Bad          
-  Life Rating  100%       Melee       Poor         
-  Experience   100%       Archery     Poor         
+  属性                    技能
+  力量         +0         解除陷阱    糟糕         
+  智力         -1         魔法装置    尚可         
+  感知         +2         豁免        良好         
+  敏捷         -1         潜行        较差         
+  体质         +0         搜索        优秀         
+  魅力         +0         察觉        糟糕         
+  生命评级    100%        近战        较差         
+  经验值      100%        箭术        较差         
   
-Nimble
-Nimbleness is good for your skills and allows you to move less noisily; 
-but your raw strength is somewhat lacking, and you cannot survive quite 
-as many hits.
+灵巧 (Nimble)
 
-  Stats                   Skills
-  Strength      -1        Disarming   Excellent    
-  Intelligence  +1        Device      Fair         
-  Wisdom        -1        Save        Poor         
-  Dexterity     +2        Stealth     Good         
-  Constitution  -1        Searching   Superb       
-  Charisma      +0        Perception  Superb       
-  Life Rating   99%       Melee       Fair         
-  Experience   100%       Archery     Very Good    
+灵巧有利于你的各项技能，并让你移动时的噪音更小；但你的原始力量有些不足，
+而且你无法承受太多的攻击。
+
+  属性                    技能
+  力量         -1         解除陷阱    优秀         
+  智力         +1         魔法装置    尚可         
+  感知         -1         豁免        较差         
+  敏捷         +2         潜行        良好         
+  体质         -1         搜索        绝佳         
+  魅力         +0         察觉        绝佳         
+  生命评级     99%        近战        尚可         
+  经验值      100%        箭术        极好         
   
-Fearless
-Being Fearless raises your melee skills and force of personality, 
-besides helping you resist fear; but your constitution and hit points 
-are negatively affected.
+无畏 (Fearless)
 
-  Stats                   Skills
-  Strength      +1        Disarming   Bad          
-  Intelligence  +0        Device      Fair         
-  Wisdom        +0        Save        Poor         
-  Dexterity     -1        Stealth     Fair         
-  Constitution  -1        Searching   Good         
-  Charisma      +1        Perception  Bad          
-  Life Rating   98%       Melee       Good         
-  Experience   100%       Archery     Fair         
+无畏不仅能帮助你抵抗恐惧，还能提高你的近战技能和性格魄力；但会对体质和生
+命值造成负面影响。
+
+  属性                    技能
+  力量         +1         解除陷阱    糟糕         
+  智力         +0         魔法装置    尚可         
+  感知         +0         豁免        较差         
+  敏捷         -1         潜行        尚可         
+  体质         -1         搜索        良好         
+  魅力         +1         察觉        糟糕         
+  生命评级     98%        近战        良好         
+  经验值      100%        箭术        尚可         
   
-Combat
-Combative adventurers favor melee and shooting at the expense of other 
-skills such as disarming, device-skill, or saving throw; yet this 
-personality has more subtlety to it than the raw, untempered muscle of 
-Mighty.
+好战 (Combat)
 
-  Stats                   Skills
-  Strength      +1        Disarming   Poor         
-  Intelligence  -1        Device      Poor         
-  Wisdom        -1        Save        Poor         
-  Dexterity     +1        Stealth     Fair         
-  Constitution  +0        Searching   Poor         
-  Charisma      +0        Perception  Good         
-  Life Rating  100%       Melee       Good         
-  Experience   100%       Archery     Good         
+好战的冒险者偏爱近战和射击，这牺牲了其他技能，如解除陷阱、魔法装置或豁免
+判定；然而，与“强壮”那种未经锻炼的纯粹肌肉相比，这种性格更为细腻。
+
+  属性                    技能
+  力量         +1         解除陷阱    较差         
+  智力         -1         魔法装置    较差         
+  感知         -1         豁免        较差         
+  敏捷         +1         潜行        尚可         
+  体质         +0         搜索        较差         
+  魅力         +0         察觉        良好         
+  生命评级    100%        近战        良好         
+  经验值      100%        箭术        良好         
   
-Sexy
-Sexy adventurers have excellent stats and skills, but their haughty 
-attitude aggravates all monsters.
+性感 (Sexy)
+性感的冒险者拥有优秀的属性和技能，但他们傲慢的态度会激怒所有的怪物。
 
-  Stats                   Skills
-  Strength      +1        Disarming   Superb       
-  Intelligence  +1        Device      Very Good    
-  Wisdom        +1        Save        Fair         
-  Dexterity     +1        Stealth     Fair         
-  Constitution  +1        Searching   Excellent    
-  Charisma      +1        Perception  Good         
-  Life Rating  100%       Melee       Excellent    
-  Experience   100%       Archery     Very Good    
+  属性                    技能
+  力量         +1         解除陷阱    绝佳         
+  智力         +1         魔法装置    极好         
+  感知         +1         豁免        尚可         
+  敏捷         +1         潜行        尚可         
+  体质         +1         搜索        优秀         
+  魅力         +1         察觉        良好         
+  生命评级    100%        近战        优秀         
+  经验值      100%        箭术        极好         
   
-Lucky
-A Lucky adventurer has poor stats but, surprisingly, can do all things 
-well. For some reason, good things seem to happen more often to lucky 
-players.
+幸运 (Lucky)
 
-  Stats                   Skills
-  Strength      -2        Disarming   Superb       
-  Intelligence  -2        Device      Excellent    
-  Wisdom        -2        Save        Fair         
-  Dexterity     -2        Stealth     Excellent    
-  Constitution  -2        Searching   Amber[10]    
-  Charisma      -2        Perception  Heroic       
-  Life Rating   98%       Melee       Superb       
-  Experience   100%       Archery     Excellent    
+幸运的冒险者属性很差，但令人惊讶的是，他们能把所有事情都做好。出于某种原
+因，好事似乎更常发生在幸运的玩家身上。
+
+  属性                    技能
+  力量         -2         解除陷阱    绝佳         
+  智力         -2         魔法装置    优秀         
+  感知         -2         豁免        尚可         
+  敏捷         -2         潜行        优秀         
+  体质         -2         搜索        琥珀[10]     
+  魅力         -2         察觉        英勇         
+  生命评级     98%        近战        绝佳         
+  经验值      100%        箭术        优秀         
   
-Patient
-A Patient adventurer does everything with great care, but not always 
-with great speed or confident hands. Patient characters are highly 
-resilient, and their slow but measured movements make them relatively 
-stealthy.
+耐心 (Patient)
 
-  Stats                   Skills
-  Strength      +0        Disarming   Poor         
-  Intelligence  +0        Device      Poor         
-  Wisdom        +2        Save        Good         
-  Dexterity     -2        Stealth     Good         
-  Constitution  +2        Searching   Fair         
-  Charisma      +0        Perception  Fair         
-  Life Rating  102%       Melee       Poor         
-  Experience   100%       Archery     Fair         
+耐心的冒险者做事非常谨慎，但在速度或动作的自信上并不总是那么出色。耐心的
+角色韧性极高，缓慢但有节律的动作使他们相对来说更善于潜行。
+
+  属性                    技能
+  力量         +0         解除陷阱    较差         
+  智力         +0         魔法装置    较差         
+  感知         +2         豁免        良好         
+  敏捷         -2         潜行        良好         
+  体质         +2         搜索        尚可         
+  魅力         +0         察觉        尚可         
+  生命评级    102%        近战        较差         
+  经验值      100%        箭术        尚可         
   
-Craven
-A Craven person is a coward, preferring to avoid a fight at any cost. 
-Craven adventurers shoot and use devices well, their stealth is 
-impressive, and they can move fast when not fighting; but their stats 
-and other skills are somewhat wanting.
+怯懦 (Craven)
 
-  Stats                   Skills
-  Strength      -1        Disarming   Very Good    
-  Intelligence  +1        Device      Very Good    
-  Wisdom        +1        Save        Poor         
-  Dexterity     -1        Stealth     Superb       
-  Constitution  -1        Searching   Fair         
-  Charisma      -2        Perception  Fair         
-  Life Rating   99%       Melee       Very Bad     
-  Experience   100%       Archery     Very Good    
+怯懦的人是胆小鬼，喜欢不惜一切代价避免战斗。怯懦的冒险者擅长射击和使用魔
+法装置，潜行能力令人印象深刻，而且在非战斗状态下移动速度很快；但他们的属
+性和其他技能则有所欠缺。
+
+  属性                    技能
+  力量         -1         解除陷阱    极好         
+  智力         +1         魔法装置    极好         
+  感知         +1         豁免        较差         
+  敏捷         -1         潜行        绝佳         
+  体质         -1         搜索        尚可         
+  魅力         -2         察觉        尚可         
+  生命评级     99%        近战        极差         
+  经验值      100%        箭术        极好         
   
-Hasty
-A Hasty person endeavors to do all things quickly. Speed, rather than 
-skill or care, is paramount, and the Hasty adventurer moves quickly 
-through the dungeon, bungling much.
+急躁 (Hasty)
 
-  Stats                   Skills
-  Strength      +0        Disarming   Bad          
-  Intelligence  -1        Device      Bad          
-  Wisdom        -2        Save        Poor         
-  Dexterity     +2        Stealth     Poor         
-  Constitution  -1        Searching   Very Bad     
-  Charisma      +0        Perception  Bad          
-  Life Rating  100%       Melee       Poor         
-  Experience   100%       Archery     Poor         
+急躁的人力求快速地完成所有事情。对他们来说速度至高无上，而非技巧或严谨，
+急躁的冒险者在地牢中穿行得很快，但也经常搞砸很多事。
+
+  属性                    技能
+  力量         +0         解除陷阱    糟糕         
+  智力         -1         魔法装置    糟糕         
+  感知         -2         豁免        较差         
+  敏捷         +2         潜行        较差         
+  体质         -1         搜索        极差         
+  魅力         +0         察觉        糟糕         
+  生命评级    100%        近战        较差         
+  经验值      100%        箭术        较差         
   
-Lazy
-A Lazy person has no good stats and can do no action well. All fail 
-rates are negatively impacted. Yet some whisper that the less hard you 
-work, the greater the reward...
+懒惰 (Lazy)
 
-  Stats                   Skills
-  Strength      -2        Disarming   Bad          
-  Intelligence  -2        Device      Bad          
-  Wisdom        -2        Save        Poor         
-  Dexterity     -2        Stealth     Poor         
-  Constitution  -2        Searching   Very Bad     
-  Charisma      -2        Perception  Bad          
-  Life Rating   95%       Melee       Bad          
-  Experience   100%       Archery     Poor         
+懒惰的人没有任何优秀的属性，也做不好任何行动。所有的失败率都会受到负面影
+响。然而有人低语道：你工作得越少，得到的回报就越丰厚……
+
+  属性                    技能
+  力量         -2         解除陷阱    糟糕         
+  智力         -2         魔法装置    糟糕         
+  感知         -2         豁免        较差         
+  敏捷         -2         潜行        较差         
+  体质         -2         搜索        极差         
+  魅力         -2         察觉        糟糕         
+  生命评级     95%        近战        糟糕         
+  经验值      100%        箭术        较差         
   
-Unlucky
-An Unlucky adventurer looks impressive on paper and should, by rights, 
-have an easy time - but somehow their fights don't go quite so 
-smoothly, and the items they most need never seem to drop.
+倒霉 (Unlucky)
 
-  Stats                   Skills
-  Strength      +2        Disarming   Bad          
-  Intelligence  +2        Device      Good         
-  Wisdom        +2        Save        Very Bad     
-  Dexterity     +2        Stealth     Fair         
-  Constitution  +2        Searching   Fair         
-  Charisma      +2        Perception  Excellent    
-  Life Rating  104%       Melee       Fair         
-  Experience   100%       Archery     Fair         
+倒霉的冒险者纸面实力令人印象深刻，按理说应该很轻松才对——但不知为何，他们
+的战斗总是不那么顺利，他们最需要的物品也似乎永远不会掉落。
+
+  属性                    技能
+  力量         +2         解除陷阱    糟糕         
+  智力         +2         魔法装置    良好         
+  感知         +2         豁免        极差         
+  敏捷         +2         潜行        尚可         
+  体质         +2         搜索        尚可         
+  魅力         +2         察觉        优秀         
+  生命评级    104%        近战        尚可         
+  经验值      100%        箭术        尚可         
   
-Chaotic
-Chaotic adventurers are servants of the Demon Lords of Chaos, and often 
-receive a reward - or punishment - from their patrons when they gain a 
-level. Their strengths and weaknesses are unpredictable; even their 
-stat bonuses are subject to change.
+混沌 (Chaotic)
 
-  Stats                   Skills
-  Strength      +0        Disarming   Fair         
-  Intelligence  +0        Device      Fair         
-  Wisdom        +0        Save        Fair         
-  Dexterity     +0        Stealth     Fair         
-  Constitution  +0        Searching   Fair         
-  Charisma      +0        Perception  Fair         
-  Life Rating   99%       Melee       Fair         
-  Experience   100%       Archery     Fair         
+混沌的冒险者是混沌恶魔领主的仆从，在升级时经常会收到来自赞助人的奖励——或
+惩罚。他们的优势和劣势不可预测；甚至连属性加成也会发生变化。
+
+  属性                    技能
+  力量         +0         解除陷阱    尚可         
+  智力         +0         魔法装置    尚可         
+  感知         +0         豁免        尚可         
+  敏捷         +0         潜行        尚可         
+  体质         +0         搜索        尚可         
+  魅力         +0         察觉        尚可         
+  生命评级     99%        近战        尚可         
+  经验值      100%        箭术        尚可         
   
-Mundane
-Mundane adventurers have few talents to speak of, and are incapable of 
-using spells and not very good with magical devices; but their 
-anti-magic allows them to resist the effects of many dangerous curses.
+平凡 (Mundane)
 
-  Stats                   Skills
-  Strength      -1        Disarming   Fair         
-  Intelligence  -1        Device      Bad          
-  Wisdom        -1        Save        Excellent    
-  Dexterity     -1        Stealth     Fair         
-  Constitution  -1        Searching   Fair         
-  Charisma      -1        Perception  Fair         
-  Life Rating   97%       Melee       Fair         
-  Experience   100%       Archery     Fair         
+平凡的冒险者没有什么天赋可言，无法使用法术，也不太擅长使用魔法装置；但他
+们的反魔法特性使他们能够抵抗许多危险诅咒的影响。
+
+  属性                    技能
+  力量         -1         解除陷阱    尚可         
+  智力         -1         魔法装置    糟糕         
+  感知         -1         豁免        优秀         
+  敏捷         -1         潜行        尚可         
+  体质         -1         搜索        尚可         
+  魅力         -1         察觉        尚可         
+  生命评级     97%        近战        尚可         
+  经验值      100%        箭术        尚可         
   
-Munchkin
-The Munchkin personality is for players who love being overpowered. It 
-raises all your stats and skills; with this personality, you can win 
-the game easily, but gain no honor in doing so.
+龙傲天 (Munchkin)
 
-  Stats                   Skills
-  Strength      +3        Disarming   Superb       
-  Intelligence  +3        Device      Amber[10]    
-  Wisdom        +3        Save        Superb       
-  Dexterity     +3        Stealth     Heroic       
-  Constitution  +3        Searching   Amber[52]    
-  Charisma      +3        Perception  Amber[52]    
-  Life Rating  150%       Melee       Amber[25]    
-  Experience    50%       Archery     Amber[2]     
+龙傲天性格是为那些喜欢碾压一切的功利玩家准备的。它会提高你所有的属性和技
+能；拥有这种性格，你可以轻松赢得游戏，但这没有任何荣誉可言。
+
+  属性                    技能
+  力量         +3         解除陷阱    绝佳         
+  智力         +3         魔法装置    琥珀[10]     
+  感知         +3         豁免        绝佳         
+  敏捷         +3         潜行        英勇         
+  体质         +3         搜索        琥珀[52]     
+  魅力         +3         察觉        琥珀[52]     
+  生命评级    150%        近战        琥珀[25]     
+  经验值       50%        箭术        琥珀[2]      
   
-Fragile
-As a Fragile adventurer, you lack both self-confidence and physical 
-toughness. Due to your incredibly low stamina, you are quickly 
-exhausted by melee, or ranged combat, or magical combat, or any other 
-strenuous activity. (Maybe you should just stay at home, quietly 
-reading some book that isn't too heavy.)
+脆弱 (Fragile)
 
-  Stats                   Skills
-  Strength      -3        Disarming   Fair         
-  Intelligence  +0        Device      Fair         
-  Wisdom        +1        Save        Poor         
-  Dexterity     -1        Stealth     Poor         
-  Constitution  -3        Searching   Good         
-  Charisma      -2        Perception  Good         
-  Life Rating   91%       Melee       Poor         
-  Experience   100%       Archery     Poor         
+作为一名脆弱的冒险者，你缺乏自信和身体韧性。由于你的耐力低得令人发指，无
+论是近战、远程战斗、魔法战斗还是任何其他剧烈活动，都会让你迅速筋疲力尽。
+（也许你只是应该待在家里，安静地读一些不太重的书。）
+
+  属性                    技能
+  力量         -3         解除陷阱    尚可         
+  智力         +0         魔法装置    尚可         
+  感知         +1         豁免        较差         
+  敏捷         -1         潜行        较差         
+  体质         -3         搜索        良好         
+  魅力         -2         察觉        良好         
+  生命评级     91%        近战        较差         
+  经验值      100%        箭术        较差         
   
-Sneaky
-Sneaky adventurers are stealthy and at home with light stabbing 
-weapons; but face-to-face combat with heavier weapons plays against 
-their strengths.
+鬼祟 (Sneaky)
 
-  Stats                   Skills
-  Strength      -3        Disarming   Very Good    
-  Intelligence  +1        Device      Fair         
-  Wisdom        +1        Save        Fair         
-  Dexterity     +2        Stealth     Superb       
-  Constitution  -1        Searching   Excellent    
-  Charisma      +1        Perception  Fair         
-  Life Rating   97%       Melee       Fair         
-  Experience   100%       Archery     Fair         
+鬼祟的冒险者善于潜行，并且擅长使用轻型刺击武器；但使用重型武器进行面对面
+战斗则不利于发挥他们的长处。
+
+  属性                    技能
+  力量         -3         解除陷阱    极好         
+  智力         +1         魔法装置    尚可         
+  感知         +1         豁免        尚可         
+  敏捷         +2         潜行        绝佳         
+  体质         -1         搜索        优秀         
+  魅力         +1         察觉        尚可         
+  生命评级     97%        近战        尚可         
+  经验值      100%        箭术        尚可         
   
-Noble
-As a Noble person, you have the benefits of an upper-class upbringing 
-(at least, you consider them benefits). You start with extra money, and 
-seem to have a relatively easy time acquiring even more money; but 
-whether other aspects of the adventuring life will come to you as 
-naturally remains to be seen.
+贵族 (Noble)
 
-  Stats                   Skills
-  Strength      +0        Disarming   Poor         
-  Intelligence  +0        Device      Fair         
-  Wisdom        +0        Save        Fair         
-  Dexterity     -2        Stealth     Fair         
-  Constitution  -1        Searching   Fair         
-  Charisma      +2        Perception  Fair         
-  Life Rating   99%       Melee       Good         
-  Experience   110%       Archery     Poor         
+作为一个贵族，你拥有上层阶级教养带来的好处（至少，你认为这些是好处）。你
+开局带有额外的金钱，并且似乎能相对轻松地获得更多的金钱；但在冒险生活的其
+他方面，你是否也能如此自然地适应，还有待观察。
+
+  属性                    技能
+  力量         +0         解除陷阱    较差         
+  智力         +0         魔法装置    尚可         
+  感知         +0         豁免        尚可         
+  敏捷         -2         潜行        尚可         
+  体质         -1         搜索        尚可         
+  魅力         +2         察觉        尚可         
+  生命评级     99%        近战        良好         
+  经验值      110%        箭术        较差         
   
-Split
-You have multiple personalities, and inherit the upsides and downsides 
-of each. At all times, one of your personalities is dominant, and you 
-receive the full effects of that personality; the remaining 
-personalities are either partially suppressed or fully suppressed. A 
-partially suppressed personality gives reduced stat and skill bonuses, 
-and some other effects (like the walking speed bonus of Craven or the 
-aggravation from Sexy) will be absent entirely, but other parts of the 
-personality apply normally. A fully dormant personality has no effect 
-on you at the moment, but may resurface later! Level gains, and the 
-trauma of taking heavy damage, can cause previously suppressed 
-personalities to become dominant and vice versa.
+分裂 (Split)
 
-  Stats                   Skills
-  Strength      +0        Disarming   Fair         
-  Intelligence  +0        Device      Fair         
-  Wisdom        +0        Save        Fair         
-  Dexterity     +0        Stealth     Fair         
-  Constitution  +0        Searching   Fair         
-  Charisma      +0        Perception  Fair         
-  Life Rating  100%       Melee       Fair         
-  Experience   100%       Archery     Fair         
+你患有多重人格，并继承了每种人格的优缺点。在任何时候，你的某一个人格会处
+于主导地位，你将获得该人格的全部效果；其余的人格要么被部分抑制，要么被完
+全休眠。被部分抑制的人格提供的属性和技能加成会减少，其他一些效果（如“怯
+懦”的步行速度加成或“性感”的激怒怪物）将完全消失，但该人格的其他部分照常
+生效。完全休眠的人格目前对你没有影响，但可能会在以后重新浮现！等级的提升
+以及受到重创的创伤，可能会导致之前被抑制的人格占据主导地位，反之亦然。
+
+  属性                    技能
+  力量         +0         解除陷阱    尚可         
+  智力         +0         魔法装置    尚可         
+  感知         +0         豁免        尚可         
+  敏捷         +0         潜行        尚可         
+  体质         +0         搜索        尚可         
+  魅力         +0         察觉        尚可         
+  生命评级    100%        近战        尚可         
+  经验值      100%        箭术        尚可         
   
-Table 1 - Personality Statistic Bonus Table
+表 1 - 性格属性加成表
 
-               STR  INT  WIS  DEX  CON  CHR  Life  Exp
-Ordinary        +0   +0   +0   +0   +0   +0  100%  100%
-Mighty          +2   -2   -2   +0   +1   +1  102%  100%
-Shrewd          -2   +2   +0   +1   -1   -1   97%  100%
-Pious           +0   -1   +2   -1   +0   +0  100%  100%
-Nimble          -1   +1   -1   +2   -1   +0   99%  100%
-Fearless        +1   +0   +0   -1   -1   +1   98%  100%
-Combat          +1   -1   -1   +1   +0   +0  100%  100%
-Sexy            +1   +1   +1   +1   +1   +1  100%  100%
-Lucky           -2   -2   -2   -2   -2   -2   98%  100%
-Patient         +0   +0   +2   -2   +2   +0  102%  100%
-Craven          -1   +1   +1   -1   -1   -2   99%  100%
-Hasty           +0   -1   -2   +2   -1   +0  100%  100%
-Lazy            -2   -2   -2   -2   -2   -2   95%  100%
-Unlucky         +2   +2   +2   +2   +2   +2  104%  100%
-Chaotic         +0   +0   +0   +0   +0   +0   99%  100%
-Mundane         -1   -1   -1   -1   -1   -1   97%  100%
-Munchkin        +3   +3   +3   +3   +3   +3  150%   50%
-Fragile         -3   +0   +1   -1   -3   -2   91%  100%
-Sneaky          -3   +1   +1   +2   -1   +1   97%  100%
-Noble           +0   +0   +0   -2   -1   +2   99%  110%
-Split           +0   +0   +0   +0   +0   +0  100%  100%
-
-
-Table 2 - Personality Skill Bonus Table I
-
-             Disarming     Device        Save          Stealth      
-Ordinary     Fair          Fair          Fair          Fair         
-Mighty       Bad           Bad           Poor          Poor         
-Shrewd       Good          Excellent     Fair          Fair         
-Pious        Bad           Fair          Good          Poor         
-Nimble       Excellent     Fair          Poor          Good         
-Fearless     Bad           Fair          Poor          Fair         
-Combat       Poor          Poor          Poor          Fair         
-Sexy         Superb        Very Good     Fair          Fair         
-Lucky        Superb        Excellent     Fair          Excellent    
-Patient      Poor          Poor          Good          Good         
-Craven       Very Good     Very Good     Poor          Superb       
-Hasty        Bad           Bad           Poor          Poor         
-Lazy         Bad           Bad           Poor          Poor         
-Unlucky      Bad           Good          Very Bad      Fair         
-Chaotic      Fair          Fair          Fair          Fair         
-Mundane      Fair          Bad           Excellent     Fair         
-Munchkin     Superb        Amber[10]     Superb        Heroic       
-Fragile      Fair          Fair          Poor          Poor         
-Sneaky       Very Good     Fair          Fair          Superb       
-Noble        Poor          Fair          Fair          Fair         
-Split        Fair          Fair          Fair          Fair         
+                 STR  INT  WIS  DEX  CON  CHR  Life  Exp
+普通            +0   +0   +0   +0   +0   +0  100%  100%
+强壮            +2   -2   -2   +0   +1   +1  102%  100%
+精明            -2   +2   +0   +1   -1   -1   97%  100%
+虔诚            +0   -1   +2   -1   +0   +0  100%  100%
+灵巧            -1   +1   -1   +2   -1   +0   99%  100%
+无畏            +1   +0   +0   -1   -1   +1   98%  100%
+好战            +1   -1   -1   +1   +0   +0  100%  100%
+性感            +1   +1   +1   +1   +1   +1  100%  100%
+幸运            -2   -2   -2   -2   -2   -2   98%  100%
+耐心            +0   +0   +2   -2   +2   +0  102%  100%
+怯懦            -1   +1   +1   -1   -1   -2   99%  100%
+急躁            +0   -1   -2   +2   -1   +0  100%  100%
+懒惰            -2   -2   -2   -2   -2   -2   95%  100%
+倒霉            +2   +2   +2   +2   +2   +2  104%  100%
+混沌            +0   +0   +0   +0   +0   +0   99%  100%
+平凡            -1   -1   -1   -1   -1   -1   97%  100%
+龙傲天          +3   +3   +3   +3   +3   +3  150%   50%
+脆弱            -3   +0   +1   -1   -3   -2   91%  100%
+鬼祟            -3   +1   +1   +2   -1   +1   97%  100%
+贵族            +0   +0   +0   -2   -1   +2   99%  110%
+分裂            +0   +0   +0   +0   +0   +0  100%  100%
 
 
-Table 3 - Personality Skill Bonus Table II
+表 2 - 性格技能加成表 I
 
-             Searching     Perception    Melee         Archery      
-Ordinary     Fair          Fair          Fair          Fair         
-Mighty       Bad           Bad           Superb        Fair         
-Shrewd       Bad           Superb        Bad           Poor         
-Pious        Excellent     Bad           Poor          Poor         
-Nimble       Superb        Superb        Fair          Very Good    
-Fearless     Good          Bad           Good          Fair         
-Combat       Poor          Good          Good          Good         
-Sexy         Excellent     Good          Excellent     Very Good    
-Lucky        Amber[10]     Heroic        Superb        Excellent    
-Patient      Fair          Fair          Poor          Fair         
-Craven       Fair          Fair          Very Bad      Very Good    
-Hasty        Very Bad      Bad           Poor          Poor         
-Lazy         Very Bad      Bad           Bad           Poor         
-Unlucky      Fair          Excellent     Fair          Fair         
-Chaotic      Fair          Fair          Fair          Fair         
-Mundane      Fair          Fair          Fair          Fair         
-Munchkin     Amber[52]     Amber[52]     Amber[25]     Amber[2]     
-Fragile      Good          Good          Poor          Poor         
-Sneaky       Excellent     Fair          Fair          Fair         
-Noble        Fair          Fair          Good          Poor         
-Split        Fair          Fair          Fair          Fair         
+             解除陷阱      魔法装置      豁免          潜行         
+普通         尚可          尚可          尚可          尚可         
+强壮         糟糕          糟糕          较差          较差         
+精明         良好          优秀          尚可          尚可         
+虔诚         糟糕          尚可          良好          较差         
+灵巧         优秀          尚可          较差          良好         
+无畏         糟糕          尚可          较差          尚可         
+好战         较差          较差          较差          尚可         
+性感         绝佳          极好          尚可          尚可         
+幸运         绝佳          优秀          尚可          优秀         
+耐心         较差          较差          良好          良好         
+怯懦         极好          极好          较差          绝佳         
+急躁         糟糕          糟糕          较差          较差         
+懒惰         糟糕          糟糕          较差          较差         
+倒霉         糟糕          良好          极差          尚可         
+混沌         尚可          尚可          尚可          尚可         
+平凡         尚可          糟糕          优秀          尚可         
+龙傲天       绝佳          琥珀[10]      绝佳          英勇         
+脆弱         尚可          尚可          较差          较差         
+鬼祟         极好          尚可          尚可          绝佳         
+贵族         较差          尚可          尚可          尚可         
+分裂         尚可          尚可          尚可          尚可         
+
+
+表 3 - 性格技能加成表 II
+
+             搜索          察觉          近战          箭术         
+普通         尚可          尚可          尚可          尚可         
+强壮         糟糕          糟糕          绝佳          尚可         
+精明         糟糕          绝佳          糟糕          较差         
+虔诚         优秀          糟糕          较差          较差         
+灵巧         绝佳          绝佳          尚可          极好         
+无畏         良好          糟糕          良好          尚可         
+好战         较差          良好          良好          良好         
+性感         优秀          良好          优秀          极好         
+幸运         琥珀[10]      英勇          绝佳          优秀         
+耐心         尚可          尚可          较差          尚可         
+怯懦         尚可          尚可          极差          极好         
+急躁         极差          糟糕          较差          较差         
+懒惰         极差          糟糕          糟糕          较差         
+倒霉         尚可          优秀          尚可          尚可         
+混沌         尚可          尚可          尚可          尚可         
+平凡         尚可          尚可          尚可          尚可         
+龙傲天       琥珀[52]      琥珀[52]      琥珀[25]      琥珀[2]      
+脆弱         良好          良好          较差          较差         
+鬼祟         优秀          尚可          尚可          尚可         
+贵族         尚可          尚可          良好          较差         
+分裂         尚可          尚可          尚可          尚可         
 
 
 
 
 Automatically generated for RoguelikeFansBand 7.2.salmiak.
-

@@ -3755,13 +3755,8 @@ void do_cmd_note(void)
 void do_cmd_version(void)
 {
     cptr xtra = "";
-    if (VER_MINOR == 0)
-    {
-/*        if (VER_PATCH == 0) xtra = " (Alpha)"; */
-        if (VER_MAJOR != 7) xtra = " (Beta)";
-    }
-    msg_format("你正在游玩 <color:B>FrogNet</color> <color:r>%s%s</color>。",
-        VERSION_STRING, xtra);
+    msg_format("你正在游玩 <color:B>%s</color> <color:r>%s%s</color>。",
+        VERSION_NAME, VERSION_STRING, xtra);
     if (1)
     {
         rect_t r = ui_map_rect();

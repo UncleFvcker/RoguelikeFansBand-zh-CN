@@ -16,13 +16,13 @@
 #define VERSION_NAME "RoguelikeFansBand"
 
 
-#define VER_MAJOR 7
-#define VER_MINOR 4
+#define VER_MAJOR 1
+#define VER_MINOR 0
 #define VER_PATCH "0"
 #define VER_PATCH_ID 0
 #define VER_EXTRA 0
-#define VERSION_STRING "7.4"
-#define VERSION_IS_DEVELOPMENT (TRUE)
+#define VERSION_STRING "1.0.0.0"
+#define VERSION_IS_DEVELOPMENT (FALSE)
 
 #define GAME_MODE_BEGINNER  0
 #define GAME_MODE_NORMAL    1

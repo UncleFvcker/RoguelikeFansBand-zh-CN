@@ -1,1358 +1,1271 @@
-﻿The Classes
+﻿职业介绍 (The Classes)
 
-No decision is so important as which class to play. Below, the many 
-available classes are loosely grouped by their principal strength or 
-playstyle: Melee, Archery, Martial Arts, Magic, Devices, Hybrid, etc. 
-The primary spell stat for each class is highlighted.
 
-For details on the Stats, see [a]. For information about the Skills, 
-see [b]. The skill descriptions in this document are for comparison 
-purposes only; for example, your fledgling berserker will not really be 
-born with Amber[25] melee skill. In general, skills are influenced by 
-level, race, class, stats and equipment. See the tables at the bottom 
-of this file ([c]) to compare the various classes' stat and skill 
-boosts at a glance.
+没有哪个决定比选择玩什么职业更重要了。下面将按主要优势或游玩风格（如近战
+、箭术、武术、魔法、装置、混合等）将众多可用职业进行粗略分类。每个职业的
+主要施法属性已被高亮显示。
 
-Melee
-  Berserker
-  A Berserker is a fearful fighter indeed, immune to fear and 
-  paralysis. At high levels, Berserkers can reflect bolt spells with 
-  their tough flesh. Furthermore, they can remove cursed equipment by 
-  force, and their special combat techniques are not affected by 
-  anti-magic barriers. Berserkers cannot, however, use any magical 
-  devices or read any scrolls, and are hopeless at all non-combat 
-  skills. To offset these great disadvantages, they gain an important 
-  class power - 'Recall' - very early.
+有关属性 (Stats)的详细信息，请参阅 [a]。有关技能 (Skills)的信息，请参阅 
+[b]
+。本文档中的技能描述仅供比较参考；例如，你初出茅庐的狂战士并不会真的在出
+生时就拥有琥珀[25]级别的近战技能。通常，技能受等级、种族、职业、属性和装
+备的影响。请参阅本文件底部的表格（[c]
+）以直观地对比各个职业的属性和技能加成。
+
+近战 (Melee)
+  狂战士 (Berserker)
   
-    Stats                   Skills
-    Strength      +8        Disarming   Very Bad     
-    Intelligence -20        Device      Very Bad     
-    Wisdom       -20        Save        Very Bad     
-    Dexterity     +4        Stealth     Very Bad     
-    Constitution  +4        Searching   Very Bad     
-    Charisma      +4        Perception  Very Bad     
-    Life Rating  200%       Melee       Amber[25]    
-    Base HP       22        Archery     Very Bad     
-    Experience   160%
+  狂战士确实是令人畏惧的斗士，他们免疫恐惧和麻痹。在高等级时，狂战士甚至
+  可以用坚韧的肉体反射光束法术。此外，他们可以强行脱下被诅咒的装备，其特
+  殊的战斗技巧也不受反魔法屏障的影响。然而，狂战士不能使用任何魔法装置，
+  不能阅读任何卷轴，且对所有非战斗技能一窍不通。为了弥补这些巨大的劣势，
+  他们会在非常早的时候获得一个重要的职业能力——“回城 (Recall)”。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +8        解除陷阱    极差         
+    智力 (INT)   -20        魔法装置    极差         
+    感知 (WIS)   -20        豁免        极差         
+    敏捷 (DEX)    +4        潜行        极差         
+    体质 (CON)    +4        搜索        极差         
+    魅力 (CHR)    +4        察觉        极差         
+    生命乘数     200%       近战        琥珀[25]     
+    基础HP        22        箭术        极差         
+    经验系数     160%
     
-  Blood-Knight
-  Blood-Knights are fighters who have delved into the dark arts and can 
-  perform some special offensive effects using their own health. In 
-  addition to the HP cost, using such an ability causes bleeding, with 
-  an amount proportional to the cost of the ability. These special 
-  abilities rely on Constitution.
+  血骑士 (Blood-Knight)
+  
+  血骑士是钻研黑魔法的战士，能使用自己的生命值来施展一些特殊的攻击效果。
+  除了消耗生命值外，使用这种能力还会导致流血，流血量与该能力的消耗成正比
+  。这些特殊能力依赖于体质。
    
-  Blood-Knights are very unusual in that cuts and low health make them 
-  more powerful; at full health their melee is nothing special, but the 
-  more damaged and wounded they are, the faster and deadlier their 
-  attacks become. On the brink of death they are the strongest fighters 
-  imaginable, and stories of their legendary feats abound; but with 
-  great power comes great risk of death, and you don't recall ever 
-  meeting one of these heroes of legend in person!
+  
+  血骑士非常不寻常的地方在于，流血和低生命值会让他们更加强大；在满血时他
+  们的近战平平无奇，但受到的伤害和伤口越重，他们的攻击就越快、越致命。在
+  濒死边缘，他们是你所能想象的最强斗士，关于他们传奇壮举的故事比比皆是；
+  但力量越大，死亡的风险也越高，而且你似乎从来都不记得有亲眼见过这些传奇
+  英雄！
    
-  Blood-Knights, like Blood-Mages, receive reduced benefits from 
-  healing magic. Since a Blood-Knight relies on their own blood for 
-  their power, this class is restricted to certain races; no non-living 
-  race may walk the red path.
   
-    Stats                   Skills
-    Strength      +2        Disarming   Good         
-    Intelligence  -2        Device      Bad          
-    Wisdom        -2        Save        Fair         
-    Dexterity     +0        Stealth     Poor         
-    Constitution  +3        Searching   Poor         
-    Charisma      +2        Perception  Bad          
-    Life Rating  120%       Melee       Superb       
-    Base HP       20        Archery     Fair         
-    Experience   150%
+  和血法师一样，血骑士从治疗魔法中获得的收益也会减少。由于血骑士依赖自己
+  的鲜血来获取力量，因此该职业仅限于特定种族；没有哪个非生命体种族能走上
+  这条鲜血之路。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    良好         
+    智力 (INT)    -2        魔法装置    糟糕         
+    感知 (WIS)    -2        豁免        一般         
+    敏捷 (DEX)    +0        潜行        较差         
+    体质 (CON)    +3        搜索        较差         
+    魅力 (CHR)    +2        察觉        糟糕         
+    生命乘数     120%       近战        极佳         
+    基础HP        20        箭术        一般         
+    经验系数     150%
     
-  Duelist
-  The duelist is the ultimate one-on-one fighter, but finds himself at 
-  a severe disadvantage when facing numerous strong foes at once. To 
-  start a duel, the duelist first issues a challenge to his intended 
-  foe; of course, this will wake the monster up, as there is no honor 
-  in dueling a sleeping enemy! And while the duelist will honor the 
-  fight as a one-on-one affair, many monsters have no such scruples.
+  决斗者 (Duelist)
+  
+  决斗者是终极的单挑斗士，但当他们同时面对众多强敌时，会发现自己处于严重
+  的劣势。要开始决斗，决斗者首先要向他的目标敌人发出挑战；当然，这会唤醒
+  怪物，因为与沉睡的敌人决斗毫无荣誉可言！虽然决斗者会把战斗当作一对一的
+  较量来尊重，但许多怪物可没有这种顾忌。
    
-  Against a challenged foe the duelist is extremely strong, gaining 
-  bonuses to saving throws, armor class, damage reduction and combat 
-  prowess. On the other hand, due to the single-mindedness of their 
-  focus, the duelist is quite vulnerable to unchallenged opponents. 
-  Most of the special techniques of this class aim at enforcing the 
-  sanctity of the duel.
+  
+  在对抗被挑战的敌人时，决斗者异常强大，他们在豁免判定、护甲等级、伤害减
+  免和战斗能力上都能获得加成。另一方面，由于他们过度专注，决斗者对未受挑
+  战的对手相当脆弱。该职业的大多数特殊技能都旨在维护决斗的神圣性。
    
-  The duelist only ever gains a single attack in combat, but they make 
-  the most of this blow by gaining enhanced effects as they gain 
-  experience. Able to wound, stun, and even hamstring their foes, the 
-  prowess of the duelist in a one-on-one encounter is legendary!
+  
+  决斗者在战斗中永远只能获得一次攻击机会，但随着经验的增长，他们会获得强
+  化效果，从而将这仅有的一击发挥到极致。他们能够致伤、击晕甚至挑断敌人的
+  脚筋，决斗者在一对一遭遇战中的实力堪称传奇！
    
-  Duelists favor light armors and weapons, and cannot equip a shield. 
-  They gain no extra bonus for wielding a weapon with both hands. For 
-  their techniques, the duelist relies on Dexterity.
   
-    Stats                   Skills
-    Strength      +2        Disarming   Fair         
-    Intelligence  +1        Device      Fair         
-    Wisdom        -2        Save        Bad          
-    Dexterity     +2        Stealth     Fair         
-    Constitution  -3        Searching   Poor         
-    Charisma      +2        Perception  Poor         
-    Life Rating  100%       Melee       Fair         
-    Base HP        4        Archery     Very Bad     
-    Experience   150%
-    
-  Mauler
-  The Mauler favors extremely heavy weapons, and possesses powerful 
-  abilities whose effectiveness depends on the weight of the weapon. 
-  While they only gain a limited number of blows which can never be 
-  magically increased, they are capable of hitting opponents 
-  exceptionally hard to make the most of each strike. Maulers must 
-  wield a single weapon with two hands for their talents to function 
-  properly.
+  决斗者偏爱轻型盔甲和武器，且不能装备盾牌。他们用双手挥舞武器时不会获得
+  额外加成。决斗者的技巧依赖于敏捷。
   
-    Stats                   Skills
-    Strength      +5        Disarming   Good         
-    Intelligence  -2        Device      Fair         
-    Wisdom        -2        Save        Good         
-    Dexterity     -1        Stealth     Bad          
-    Constitution  +3        Searching   Poor         
-    Charisma      +2        Perception  Bad          
-    Life Rating  110%       Melee       Heroic       
-    Base HP       18        Archery     Very Bad     
-    Experience   120%
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    一般         
+    智力 (INT)    +1        魔法装置    一般         
+    感知 (WIS)    -2        豁免        糟糕         
+    敏捷 (DEX)    +2        潜行        一般         
+    体质 (CON)    -3        搜索        较差         
+    魅力 (CHR)    +2        察觉        较差         
+    生命乘数     100%       近战        一般         
+    基础HP         4        箭术        极差         
+    经验系数     150%
     
-  Rune-Knight
-  The Rune-Knight is a mythical warrior, dedicated to the discovery of 
-  ancient runes that hold immense power. They may fix mystical runes of 
-  various types to their equipment in order to gain permanent bonuses; 
-  even artifacts can be improved this way! Alternatively, they may 
-  conjure a temporary rune which allows them to attack with enhanced 
-  effects, or place one directly on their person for a one-time or 
-  temporary bonus. Finally, they may alter their surroundings with 
-  various runes of change.
+  重槌兵 (Mauler)
+  
+  重槌兵偏爱极其沉重的武器，并拥有强大的能力，这些能力的有效性取决于武器
+  的重量。虽然他们的攻击次数有限，且永远无法通过魔法增加，但他们能够异常
+  凶狠地打击对手，让每一次攻击都发挥最大的威力。重槌兵必须用双手挥舞一把
+  武器，他们的天赋才能正常发挥作用。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +5        解除陷阱    良好         
+    智力 (INT)    -2        魔法装置    一般         
+    感知 (WIS)    -2        豁免        良好         
+    敏捷 (DEX)    -1        潜行        糟糕         
+    体质 (CON)    +3        搜索        较差         
+    魅力 (CHR)    +2        察觉        糟糕         
+    生命乘数     110%       近战        英雄         
+    基础HP        18        箭术        极差         
+    经验系数     120%
+    
+  符文骑士 (Rune-Knight)
+  
+  符文骑士是一名神话战士，致力于发现蕴含巨大力量的古老符文。他们可以将各
+  种类型的神秘符文附加到装备上以获得永久加成；甚至神器也可以用这种方式进
+  行强化！或者，他们可以召唤一个临时符文，使他们能够以增强的效果进行攻击
+  ，或是直接将符文放置在自己身上以获得一次性或临时加成。最后，他们可以通
+  过各种变化符文来改变周围的环境。
    
-  All runes (except {Absorption}) require mana for creation; however, 
-  unlike ordinary spellcasters, Rune-Knights do not regenerate mana on 
-  their own. Rather, they must siphon mana from magical or elemental 
-  attacks directed against them, and doing so requires the special rune 
-  of {Absorption}. This rune should be worn at all times, or at least 
-  kept handy.
+  
+  所有符文（除了{吸收}）的创建都需要消耗法力；然而，与普通的施法者不同，
+  符文骑士不会自行恢复法力。相反，他们必须从指向他们的魔法或元素攻击中吸
+  取法力，而这样做需要特殊的{吸收}符文。这个符文应该始终穿戴在身上，或者
+  至少放在手边备用。
    
-  Despite having mana, the Rune-Knight does not play like an ordinary 
-  spellcaster; they are more like a weaponsmith but can, on occasion, 
-  cast useful spells. If you have mana available, consider using these 
-  spells; otherwise, play as a warrior and wait to absorb mana. This 
-  can take time, depending on the foes you face, but the Rune-Knight's 
-  honor should prevent them from seeking out weak, defenseless 
-  spellcasters; and in any case, weak attacks can only take your mana 
-  so high.
   
-  See [d] for more details on rune knights.
+  尽管拥有法力，但符文骑士的玩法并不像普通的施法者；他们更像是一个武器匠
+  ，但在偶尔情况下也能施放有用的法术。如果你有可用的法力，考虑使用这些法
+  术；否则，就当作战士来玩，并等待吸收法力。这可能需要时间，取决于你面对
+  的敌人，但符文骑士的荣誉应该阻止他们去寻找弱小、手无寸铁的施法者；无论
+  如何，微弱的攻击也只能让你的法力提升那么一点。
   
-    Stats                   Skills
-    Strength      +0        Disarming   Fair         
-    Intelligence  +1        Device      Poor         
-    Wisdom        -1        Save        Fair         
-    Dexterity     +1        Stealth     Poor         
-    Constitution  +0        Searching   Poor         
-    Charisma      +1        Perception  Poor         
-    Life Rating  101%       Melee       Fair         
-    Base HP        7        Archery     Poor         
-    Experience   150%
+  有关符文骑士的更多详细信息，请参阅 [d]。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +0        解除陷阱    一般         
+    智力 (INT)    +1        魔法装置    较差         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +1        潜行        较差         
+    体质 (CON)    +0        搜索        较差         
+    魅力 (CHR)    +1        察觉        较差         
+    生命乘数     101%       近战        一般         
+    基础HP         7        箭术        较差         
+    经验系数     150%
     
-  Samurai
-  Samurai, masters of the art of the blade, are among the strongest 
-  fighters and can use various special combat techniques. Samurai are 
-  not good at most non-combat skills, and many magical devices in 
-  particular may be too difficult for them to use. Wisdom determines a 
-  Samurai's ability to use the special combat techniques available.
+  武士 (Samurai)
+  
+  武士是剑术大师，属于最强大的战士之列，并能使用各种特殊的战斗技巧。武士
+  不擅长大多数非战斗技能，特别是许多魔法装置对他们来说可能太难使用了。感
+  知决定了武士使用这些特殊战斗技巧的能力。
    
-  Samurai use the art of the blade called Kendo (or Bugei). Books of 
-  Kendo are similar to spellbooks, but do not need to be carried 
-  around; they are only required for studying new combat techniques. 
-  Samurai need to wield a weapon to use Kendo, and many of their 
-  techniques will add special properties to their blows; these are 
-  often slays or brands such as flaming or poisoning, but can be much 
-  more powerful than a normal brand. The mana pool of a Samurai does 
-  not depend on their level but solely on wisdom; and they can use the 
-  class power 'Concentration' to temporarily increase their mana beyond 
-  its usual maximum value. The other Samurai class power, 'Assume a 
-  Posture', allows them to choose different postures depending on the 
-  needs of a situation.
+  武士使用一种被称为剑道 (Kendo 或 Bugei) 
+  的刀剑技艺。剑道书类似于法术书，但不需要随身携带；它们只在学习新的战斗
+  技巧时才需要。武士需要挥舞武器才能使用剑道，许多技巧会为他们的攻击添加
+  特殊属性；这些通常是斩杀或烙印（如燃烧或毒素），但其威力可以比普通烙印
+  强大得多。武士的法力池不取决于他们的等级，而完全取决于感知；并且他们可
+  以使用职业能力“全神贯注 
+  (Concentration)”暂时将法力提高到其通常的最大值之上。武士的另一个职业能
+  力“摆出架势 (Assume a Posture)”允许他们根据情况的需要选择不同的架势。
   
-    Stats                   Skills
-    Strength      +2        Disarming   Good         
-    Intelligence  -2        Device      Bad          
-    Wisdom        +1        Save        Fair         
-    Dexterity     +2        Stealth     Poor         
-    Constitution  +1        Searching   Poor         
-    Charisma      +1        Perception  Bad          
-    Life Rating  107%       Melee       Superb       
-    Base HP       12        Archery     Very Good    
-    Experience   130%
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    良好         
+    智力 (INT)    -2        魔法装置    糟糕         
+    感知 (WIS)    +1        豁免        一般         
+    敏捷 (DEX)    +2        潜行        较差         
+    体质 (CON)    +1        搜索        较差         
+    魅力 (CHR)    +1        察觉        糟糕         
+    生命乘数     107%       近战        极佳         
+    基础HP        12        箭术        很好         
+    经验系数     130%
     
-  Warrior
-  A Warrior is a hack-and-slash character, who solves most of his 
-  problems by cutting them to pieces, but will occasionally fall back 
-  on the help of a magical device. Unfortunately, many high-level 
-  devices may be forever beyond their use.
+  战士 (Warrior)
+  
+  战士是一个砍杀型的角色，他通过将问题砍成碎片来解决大部分麻烦，但偶尔也
+  会依靠魔法装置的帮助。不幸的是，许多高等级装置可能永远超出他们的使用范
+  围。
    
-  Warriors cast no spells. They hate magic. In fact, they even gain 
-  experience for destroying high level spellbooks. They have a class 
-  power - 'Sword Dancing' - which allows them to conduct a melee attack 
-  in six random directions.
   
-    Stats                   Skills
-    Strength      +4        Disarming   Good         
-    Intelligence  -2        Device      Bad          
-    Wisdom        -2        Save        Poor         
-    Dexterity     +2        Stealth     Poor         
-    Constitution  +2        Searching   Poor         
-    Charisma      +1        Perception  Bad          
-    Life Rating  115%       Melee       Heroic       
-    Base HP       18        Archery     Heroic       
-    Experience   100%
+  战士不施放法术。他们讨厌魔法。事实上，他们甚至会因为摧毁高等级的法术书
+  而获得经验。他们拥有一个职业能力——“剑舞 (Sword 
+  Dancing)”——这允许他们向六个随机方向进行近战攻击。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +4        解除陷阱    良好         
+    智力 (INT)    -2        魔法装置    糟糕         
+    感知 (WIS)    -2        豁免        较差         
+    敏捷 (DEX)    +2        潜行        较差         
+    体质 (CON)    +2        搜索        较差         
+    魅力 (CHR)    +1        察觉        糟糕         
+    生命乘数     115%       近战        英雄         
+    基础HP        18        箭术        英雄         
+    经验系数     100%
     
-  Weaponmaster
-  A Weaponmaster is exceptionally good with a single class of weapons, 
-  obtaining special combat bonuses and powers which depend on their 
-  chosen speciality. Focus is the key to success; weaponmasters are 
-  truly lousy with off-speciality weapons, but few can match the 
-  prowess they gain with something more suitable in their hands.
+  武器大师 (Weaponmaster)
   
-  See [e] for more details on weaponmasters.
+  武器大师精通某一类武器，并能根据其选择的专精获得特殊的战斗加成和力量。
+  专注是成功的关键；武器大师在使用非专精武器时确实非常糟糕，但一旦拿上顺
+  手的武器，很少有人能与他们匹敌。
   
-    Stats                   Skills
-    Strength      +3        Disarming   Poor         
-    Intelligence  -3        Device      Bad          
-    Wisdom        -2        Save        Bad          
-    Dexterity     -2        Stealth     Poor         
-    Constitution  +1        Searching   Poor         
-    Charisma      +0        Perception  Bad          
-    Life Rating  105%       Melee       Heroic       
-    Base HP       12        Archery     Poor         
-    Experience   135%
+  有关武器大师的更多详细信息，请参阅 [e]。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +3        解除陷阱    较差         
+    智力 (INT)    -3        魔法装置    糟糕         
+    感知 (WIS)    -2        豁免        糟糕         
+    敏捷 (DEX)    -2        潜行        较差         
+    体质 (CON)    +1        搜索        较差         
+    魅力 (CHR)    +0        察觉        糟糕         
+    生命乘数     105%       近战        英雄         
+    基础HP        12        箭术        较差         
+    经验系数     135%
     
-  Weaponsmith
-  A Weaponsmith can improve weapons and armors for him or herself. They 
-  are good at fighting, and they have potential ability to become even 
-  better than Warriors using improved equipment. They cannot cast 
-  spells, and are poor at skills such as stealth or magic defense.
+  武器匠人 (Weaponsmith)
+  
+  武器匠人可以为自己改良武器和盔甲。他们擅长战斗，并且有潜力在使用改良装
+  备时变得比战士还要强大。他们不能施放法术，并且在潜行或魔法防御等技能方
+  面表现较差。
    
-  A Weaponsmith extracts the essences of special effects from weapons 
-  or armors which have various special abilities, and can add these 
-  essences to another weapon or armor. Normally, each equipment can be 
-  improved only once, but they can remove a previously added essence 
-  from improved equipment to improve it with another essence. To-hit, 
-  to-damage bonus, and AC can be improved freely up to a maximum value 
-  depending on level. Weaponsmiths use class powers for Smithing 
-  commands.
   
-    Stats                   Skills
-    Strength      +3        Disarming   Fair         
-    Intelligence  -1        Device      Poor         
-    Wisdom        -1        Save        Bad          
-    Dexterity     +1        Stealth     Poor         
-    Constitution  +0        Searching   Poor         
-    Charisma      -1        Perception  Bad          
-    Life Rating  106%       Melee       Very Good    
-    Base HP       12        Archery     Good         
-    Experience   130%
+  武器匠人可以从具有各种特殊能力的武器或盔甲中提取特效的精华，并将这些精
+  华添加到另一件武器或盔甲上。通常情况下，每件装备只能被改良一次，但他们
+  可以从改良过的装备上移除先前添加的精华，以便用另一种精华重新改良。命中
+  、伤害加成和 
+  AC（护甲）可以自由提升至取决于等级的最大值。武器匠人使用职业能力来进行
+  锻造命令。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +3        解除陷阱    一般         
+    智力 (INT)    -1        魔法装置    较差         
+    感知 (WIS)    -1        豁免        糟糕         
+    敏捷 (DEX)    +1        潜行        较差         
+    体质 (CON)    +0        搜索        较差         
+    魅力 (CHR)    -1        察觉        糟糕         
+    生命乘数     106%       近战        很好         
+    基础HP        12        箭术        良好         
+    经验系数     130%
     
   
-Archery
-  Archer
-  Archers are to bows what warriors are to melee. They are the best 
-  class around with any bow, crossbow, or sling. They need a lot of 
-  ammunition, but will learn how to make it from junk found in the 
-  dungeon. An archer is better than a warrior at stealth, perception, 
-  searching and magical devices.
+箭术 (Archery)
+  弓箭手 (Archer)
+  
+  弓箭手对于弓的意义，就像战士对于近战的意义一样。他们是使用任何弓、弩或
+  投石索的最强职业。他们需要大量的弹药，但会学习如何用地下城里找到的垃圾
+  制作弹药。弓箭手在潜行、察觉、搜索和魔法装置方面比战士表现更好。
    
-  Archers have a class power - 'Create Ammo' - which creates pebbles or 
-  shots from rubble, and arrows and crossbow bolts from bones.
+  弓箭手有一个职业能力——“制造弹药 (Create 
+  Ammo)”——可以用碎石制造出石子或铅弹，用骨头制造出箭矢和弩箭。
   
-    Stats                   Skills
-    Strength      +2        Disarming   Very Good    
-    Intelligence  -1        Device      Fair         
-    Wisdom        -1        Save        Fair         
-    Dexterity     +2        Stealth     Good         
-    Constitution  +1        Searching   Fair         
-    Charisma      +0        Perception  Poor         
-    Life Rating  110%       Melee       Good         
-    Base HP       12        Archery     Amber[12]    
-    Experience   110%
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    很好         
+    智力 (INT)    -1        魔法装置    一般         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +2        潜行        良好         
+    体质 (CON)    +1        搜索        一般         
+    魅力 (CHR)    +0        察觉        较差         
+    生命乘数     110%       近战        良好         
+    基础HP        12        箭术        琥珀[12]     
+    经验系数     110%
     
-  Sniper
-  Snipers are specialists in marksmanship, but not like archers who 
-  fire off arrow after arrow in swift succession. They don't just 
-  increase accuracy and power of shots by concentration, they can use 
-  fearsome archery techniques.
+  狙击手 (Sniper)
+  
+  狙击手是神射术的专家，但他们不像弓箭手那样能够迅速连续射出一支又一支箭
+  。他们不仅仅通过集中注意力来提高射击的准确度和威力，他们还能使用令人恐
+  惧的箭术技巧。
    
-  What they require is powerful bows or crossbows, good quality 
-  ammunition and the fortitude to bear up without flinching under any 
-  situation.
+  
+  他们需要的是强大的弓或弩、高质量的弹药，以及在任何情况下都能毫不退缩的
+  坚韧毅力。
    
-  Snipers know their enemies well and can shoot them from the shadows. 
-  They have no time for magic.
   
-    Stats                   Skills
-    Strength      +2        Disarming   Good         
-    Intelligence  -1        Device      Fair         
-    Wisdom        -1        Save        Poor         
-    Dexterity     +2        Stealth     Very Good    
-    Constitution  +1        Searching   Fair         
-    Charisma      +0        Perception  Poor         
-    Life Rating  100%       Melee       Poor         
-    Base HP        4        Archery     Heroic       
-    Experience   110%
+  狙击手非常了解他们的敌人，并且可以在暗处射击他们。他们没有时间去钻研魔
+  法。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    良好         
+    智力 (INT)    -1        魔法装置    一般         
+    感知 (WIS)    -1        豁免        较差         
+    敏捷 (DEX)    +2        潜行        很好         
+    体质 (CON)    +1        搜索        一般         
+    魅力 (CHR)    +0        察觉        较差         
+    生命乘数     100%       近战        较差         
+    基础HP         4        箭术        英雄         
+    经验系数     110%
     
   
-Martial Arts
-  Force-Trainer
-  A Force-Trainer is a master of the spiritual Force. They prefer 
-  fighting with neither weapon nor armor. They are not as good fighters 
-  as are Monks, but they can use both magic and the spiritual Force. 
-  Wielding weapons or wearing heavy armor disturbs use of the Force. 
-  Wisdom is a Force-Trainer's primary stat.
+武术 (Martial Arts)
+  气功师 (Force-Trainer)
+  
+  气功师是驾驭灵魂原力（气）的大师。他们更喜欢在没有武器或盔甲的情况下战
+  斗。他们作为斗士不如武僧出色，但他们可以同时使用魔法和灵魂原力。挥舞武
+  器或穿戴重甲会干扰他们对“气”的使用。感知是气功师的主要属性。
    
-  Force-Trainers use both spellbook magic and the special spiritual 
-  power called the Force. They can select a realm from Life, Nature, 
-  Craft, Death, and Crusade. To use The Force, you select it just as if 
-  it were spellbook 'F'; which means you need to press 'm' and then 'F' 
-  to select the Force. The most important spell of the Force is 
-  'Improve Force'; each time a Force-Trainer activates it, their Force 
-  power becomes more powerful, and their attack power in bare-handed 
-  melee fighting is increased temporarily. The strengthened Force can 
-  be released at one stroke when a Force-Trainer activates some other 
-  Force spell, typically an attack spell. They have a class power - 
-  'Clear Mind' - which allows them to rapidly regenerate their mana.
+  气功师同时使用法术书魔法和被称为“气/原力 
+  (Force)”的特殊精神力量。他们可以从生命、自然、工匠、死亡和圣战中选择一
+  个领域。要使用气，你只需像选择法术书 'F' 一样选择它；这意味着你需要按 
+  'm' 然后按 'F' 来选择它。“气”最重要的法术是“提升原力 (Improve 
+  Force)”；气功师每次激活它，他们的原力就会变得更强大，并且他们在徒手近
+  战中的攻击力会暂时增加。当气功师激活其他原力法术（通常是攻击法术）时，
+  强化的力量可以被一次性释放出来。他们有一个职业能力——“清明心智 (Clear 
+  Mind)”——允许他们快速恢复法力。
   
-    Stats                   Skills
-    Strength      +0        Disarming   Fair         
-    Intelligence  -1        Device      Very Good    
-    Wisdom        +3        Save        Good         
-    Dexterity     +2        Stealth     Good         
-    Constitution  +1        Searching   Fair         
-    Charisma      +0        Perception  Fair         
-    Life Rating  100%       Melee       Fair         
-    Base HP        4        Archery     Good         
-    Experience   135%
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +0        解除陷阱    一般         
+    智力 (INT)    -1        魔法装置    很好         
+    感知 (WIS)    +3        豁免        良好         
+    敏捷 (DEX)    +2        潜行        良好         
+    体质 (CON)    +1        搜索        一般         
+    魅力 (CHR)    +0        察觉        一般         
+    生命乘数     100%       近战        一般         
+    基础HP         4        箭术        良好         
+    经验系数     135%
     
-  Monk
-  Monks are very different from most other classes in that they prefer 
-  to fight unarmed; while they can use a few select weapons reasonably 
-  well, their training in martial arts makes them more powerful with no 
-  weapons. Monks also gain bonuses from empty armor slots; to gain the 
-  resistances necessary for survival, some kind of armor will still be 
-  eventually needed, but if the armor is too heavy it will severely 
-  disturb the Monk's martial arts maneuvers. As the Monk gains levels, 
-  more powerful forms of unarmed attack will become available, and the 
-  defensive bonuses for having empty armor slots likewise increase.
+  武僧 (Monk)
   
-  The various sects of monks are devoted to different areas of magic; 
-  they select one realm from Life, Nature, Craft, Trump and Death. 
-  Wisdom determines their spellcasting ability.
+  武僧与大多数其他职业非常不同，因为他们更喜欢徒手战斗；虽然他们也能相当
+  不错地使用少数特定的武器，但他们在武术上的训练使他们在空手时更加强大。
+  武僧还会从空出的盔甲槽位中获得加成；为了获得生存必需的抗性，某种盔甲最
+  终还是需要的，但如果盔甲太重，将严重干扰武僧的武术动作。随着武僧等级的
+  提升，更强大的徒手攻击形式将变得可用，因空出盔甲槽位而获得的防御加成也
+  会随之增加。
   
-  Monks have two class powers, 'Assume a Posture' and 'Double Attack'; 
-  they can choose different postures for different situations, and use 
-  powerful combinations of attacks for the finishing blow.
   
-    Stats                   Skills
-    Strength      +1        Disarming   Excellent    
-    Intelligence  -1        Device      Good         
-    Wisdom        +1        Save        Fair         
-    Dexterity     +3        Stealth     Very Good    
-    Constitution  +2        Searching   Fair         
-    Charisma      +1        Perception  Fair         
-    Life Rating  102%       Melee       Very Good    
-    Base HP       12        Archery     Excellent    
-    Experience   130%
+  武僧的各个流派致力于不同领域的魔法；他们从生命、自然、工匠、王牌和死亡
+  中选择一个领域。感知决定了他们的施法能力。
+  
+  武僧有两个职业能力，“摆出架势 (Assume a Posture)”和“连击 (Double 
+  Attack)”；他们可以针对不同的情况选择不同的架势，并使用强大的攻击组合来
+  完成终结一击。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +1        解除陷阱    优秀         
+    智力 (INT)    -1        魔法装置    良好         
+    感知 (WIS)    +1        豁免        一般         
+    敏捷 (DEX)    +3        潜行        很好         
+    体质 (CON)    +2        搜索        一般         
+    魅力 (CHR)    +1        察觉        一般         
+    生命乘数     102%       近战        很好         
+    基础HP        12        箭术        优秀         
+    经验系数     130%
     
-  Mystic
-  Mystics are masters of bare-handed fighting, like Monks. Unlike 
-  Monks, though, they do not learn normal spells; instead, they gain 
-  mystical powers with experience, and these powers directly influence 
-  their martial arts. In this respect, Mystics are somewhat similar to 
-  Samurai; indeed, they even concentrate to boost their mana like the 
-  Samurai. Mystics eschew weapons of any kind, and require the lightest 
-  of armors in order to practice their martial arts. As with other 
-  martial artists, their attack speed depends on their level and 
-  Dexterity; their mana and fail rates, though, are influenced by 
-  Charisma. Mystics are in tune with the natural forces around them, 
-  and may even summon animals to their aid when necessary. It is 
-  whispered that mystics have discovered a way to kill an opponent with 
-  a single touch; but they do not share this knowledge with novices.
+  秘术师 (Mystic)
   
-    Stats                   Skills
-    Strength      +2        Disarming   Excellent    
-    Intelligence  -1        Device      Good         
-    Wisdom        -2        Save        Fair         
-    Dexterity     +3        Stealth     Very Good    
-    Constitution  +1        Searching   Fair         
-    Charisma      +2        Perception  Fair         
-    Life Rating  100%       Melee       Very Good    
-    Base HP        4        Archery     Excellent    
-    Experience   130%
+  秘术师和武僧一样，是徒手战斗的大师。不过，与武僧不同的是，他们不学习普
+  通的法术；相反，他们随着经验的增长获得神秘力量，这些力量直接影响他们的
+  武术。在这方面，秘术师有点类似于武士；事实上，他们甚至像武士一样集中精
+  神来提升法力。秘术师避开任何形式的武器，并要求最轻便的盔甲来进行武术修
+  行。和其他武术家一样，他们的攻击速度取决于他们的等级和敏捷；然而，他们
+  的法力和失败率受魅力影响。秘术师与周围的自然力量相协调，必要时甚至可以
+  召唤动物来协助他们。传说秘术师已经发现了一种仅需一触即可击杀对手的方法
+  ；但他们不会与新手分享这些知识。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    优秀         
+    智力 (INT)    -1        魔法装置    良好         
+    感知 (WIS)    -2        豁免        一般         
+    敏捷 (DEX)    +3        潜行        很好         
+    体质 (CON)    +1        搜索        一般         
+    魅力 (CHR)    +2        察觉        一般         
+    生命乘数     100%       近战        很好         
+    基础HP         4        箭术        优秀         
+    经验系数     130%
     
   
-Magic
-  Blood-Mage
-  A Blood-Mage is similar to a normal mage in his selection and variety 
-  of spells, but differs in that he has no separate mana pool; instead, 
-  spells are powered by hit points. Moreover, due to the Blood-Mage's 
-  abnormal constitution, all healing is much less effective than 
-  normal; indeed, Blood-Mages completely eschew healing spells to not 
-  disrupt the flow of blood that is the essence of their power. They 
-  shun the realm of Life as anathema to all they hold sacred.
+魔法 (Magic)
+  血法师 (Blood-Mage)
   
-    Stats                   Skills
-    Strength      -4        Disarming   Fair         
-    Intelligence  +3        Device      Superb       
-    Wisdom        -2        Save        Good         
-    Dexterity     +1        Stealth     Fair         
-    Constitution  +2        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating  108%       Melee       Bad          
-    Base HP       10        Archery     Bad          
-    Experience   135%
+  血法师在法术的选择和多样性上类似于普通法师，但不同之处在于他没有单独的
+  法力池；相反，他的法术由生命值驱动。此外，由于血法师异常的体质，所有的
+  治疗效果都要比平时差得多；事实上，血法师完全避开治疗法术，以免扰乱作为
+  他们力量本质的血液流动。他们将生命领域视为对所有他们神圣之物的诅咒而避
+  之不及。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -4        解除陷阱    一般         
+    智力 (INT)    +3        魔法装置    极佳         
+    感知 (WIS)    -2        豁免        良好         
+    敏捷 (DEX)    +1        潜行        一般         
+    体质 (CON)    +2        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数     108%       近战        糟糕         
+    基础HP        10        箭术        糟糕         
+    经验系数     135%
     
-  Blue-Mage
-  Blue-Mages, like all mages, rely on magic rather than muscle; but 
-  they are unique in the way they gain new spells, as they learn from 
-  monsters rather than books. Blue-Mages' primary spellcasting stat is 
-  Intelligence.
+  青魔法师 (Blue-Mage)
+  
+  青魔法师，像所有法师一样，依赖魔法而不是肌肉；但他们获得新法术的方式是
+  独一无二的，因为他们是从怪物那里学习而不是从书本上学习。青魔法师的主要
+  施法属性是智力。
    
-  A Blue-Mage can learn and cast monster spells, summons, and even 
-  ranged attacks as their own spells; this technique is called Blue 
-  magic. Blue-Mages remember their spells permanently, but to learn a 
-  spell they must be directly hit by it while their 'Learning' class 
-  power is active. Because of this requirement, Blue-Mages never learn 
-  spells like Haste or Healing that affect the monster itself.
   
-    Stats                   Skills
-    Strength      -4        Disarming   Fair         
-    Intelligence  +4        Device      Superb       
-    Wisdom        -1        Save        Good         
-    Dexterity     +1        Stealth     Fair         
-    Constitution  -2        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating   98%       Melee       Bad          
-    Base HP        4        Archery     Bad          
-    Experience   130%
+  青魔法师可以学习并施放怪物的法术、召唤术，甚至远程攻击作为自己的法术；
+  这种技巧被称为青魔法。青魔法师能永久记住他们的法术，但要学习一个法术，
+  他们必须在激活“学习 
+  (Learning)”职业能力时被该法术直接击中。由于这个要求，青魔法师永远无法
+  学习像加速或治疗这种作用于怪物自身的法术。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -4        解除陷阱    一般         
+    智力 (INT)    +4        魔法装置    极佳         
+    感知 (WIS)    -1        豁免        良好         
+    敏捷 (DEX)    +1        潜行        一般         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数      98%       近战        糟糕         
+    基础HP         4        箭术        糟糕         
+    经验系数     130%
     
-  Gray-Mage
-  The Gray-Mage casts spells from memory rather than books; a spellbook 
-  is only required for the initial learning process. However, only ten 
-  spells may be memorized at any given time; and while a Gray-Mage may 
-  replace old spells with new ones, the total number of spells they can 
-  study is limited.
+  灰法师 (Gray-Mage)
   
-  Gray-Mages do not choose specific realms like book spellcasters; 
-  instead, they choose a general bias towards either Good, Neutral or 
-  Evil magic. So while all Gray-Mages may learn spells from the Arcane, 
-  Armageddon, Chaos, Craft, Sorcery and Trump realms, only a Good Bias 
-  allows access to Life and Crusade magic; only a Neutral Bias allows 
-  access to Nature magic; and only an Evil Bias allows access to Death 
-  and Daemon magic. At any one time, a Gray-Mage has relatively few 
-  spells directly at their disposal; but their ability to pick the best 
-  spells from an extremely large pool more than compensates for this. 
-  As with most mages, the key stat is Intelligence.
+  灰法师凭记忆而不是书本来施法；只有在最初的学习过程中才需要法术书。然而
+  ，任何时候他们都最多只能记住十个法术；虽然灰法师可以用新法术替换旧法术
+  ，但他们能学习的法术总数是有限的。
   
-    Stats                   Skills
-    Strength      -4        Disarming   Fair         
-    Intelligence  +3        Device      Superb       
-    Wisdom        +0        Save        Good         
-    Dexterity     +1        Stealth     Fair         
-    Constitution  -2        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating   95%       Melee       Bad          
-    Base HP        0        Archery     Bad          
-    Experience   130%
+  
+  灰法师不像书本施法者那样选择特定的领域；相反，他们选择一个对善良、中立
+  或邪恶魔法的总体偏好。因此，虽然所有灰法师都可以学习来自奥秘、毁灭、混
+  沌、工匠、咒术和王牌领域的法术，但只有“善良偏好”允许访问生命和圣战魔法
+  ；只有“中立偏好”允许访问自然魔法；只有“邪恶偏好”允许访问死亡和恶魔魔法
+  。在任何时候，灰法师直接掌握的法术都相对较少；但他们从极大的法术池中挑
+  选最佳法术的能力足以弥补这一点。与大多数法师一样，关键属性是智力。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -4        解除陷阱    一般         
+    智力 (INT)    +3        魔法装置    极佳         
+    感知 (WIS)    +0        豁免        良好         
+    敏捷 (DEX)    +1        潜行        一般         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数      95%       近战        糟糕         
+    基础HP         0        箭术        糟糕         
+    经验系数     130%
     
-  High-Mage
-  High-Mages are mages who specialize in one particular field of magic 
-  and learn it very well - much better than an ordinary mage.
+  高阶法师 (High-Mage)
   
-  For the price of giving up a second realm of magic, High-Mages gain 
-  substantial benefits in the mana costs, power, minimum levels, and 
-  failure rates of the spells in their speciality realm. They are also 
-  the only class able to cast Hex spells. High-Mages have a class power 
-  - 'Eat Magic' - which absorbs mana from wands, staves, or rods; 
-  although this power is not available to those who choose the Hex 
-  realm. Their primary spellcasting stat is Intelligence.
+  高阶法师是专精于某一特定魔法领域的法师，并且他们学得非常透彻——远比普通
+  法师要好。
   
-    Stats                   Skills
-    Strength      -4        Disarming   Fair         
-    Intelligence  +4        Device      Superb       
-    Wisdom        +0        Save        Good         
-    Dexterity     +0        Stealth     Fair         
-    Constitution  -2        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating   94%       Melee       Bad          
-    Base HP        0        Archery     Bad          
-    Experience   130%
+  
+  作为放弃第二魔法领域的代价，高阶法师在其专精领域的法术法力消耗、威力、
+  最低等级限制以及失败率方面获得了极大的优势。他们也是唯一能够施放诅咒 
+  (Hex) 法术的职业。高阶法师有一个职业能力——“吞噬魔法 (Eat 
+  Magic)”——可以从魔杖、法杖或魔棒中吸收法力；不过，那些选择诅咒领域的人
+  无法使用这项能力。他们的主要施法属性是智力。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -4        解除陷阱    一般         
+    智力 (INT)    +4        魔法装置    极佳         
+    感知 (WIS)    +0        豁免        良好         
+    敏捷 (DEX)    +0        潜行        一般         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数      94%       近战        糟糕         
+    基础HP         0        箭术        糟糕         
+    经验系数     130%
     
-  Mage
-  A Mage is a spellcaster who must live by his wits, as he cannot hope 
-  to simply hack his way through the dungeon like a warrior. A Mage 
-  always carries his spellbooks with him, but also relies on magical 
-  devices, which he can master easily. The primary spellcasting 
-  statistic of a Mage is Intelligence.
+  法师 (Mage)
   
-  Mages have few restrictions in choosing and learning spells; they can 
-  freely choose any two realms when a character is created, although 
-  their natural inclinations make Life magic fairly hard to learn. See 
-  [f] for more information on magic, realms and book spellcasting.
+  法师是一个必须靠智慧生存的施法者，因为他不能指望像战士那样直接在地下城
+  中一路砍杀过去。法师总是随身携带着他的法术书，但同时也依赖魔法装置，因
+  为他可以轻松掌握它们。法师的主要施法属性是智力。
   
-    Stats                   Skills
-    Strength      -4        Disarming   Fair         
-    Intelligence  +3        Device      Superb       
-    Wisdom        +0        Save        Good         
-    Dexterity     +1        Stealth     Fair         
-    Constitution  -2        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating   95%       Melee       Bad          
-    Base HP        0        Archery     Bad          
-    Experience   130%
+  
+  法师在选择和学习法术方面的限制很少；在创建角色时，他们可以自由选择任何
+  两个领域，尽管他们天生的倾向使得生命魔法相当难以学习。有关魔法、领域和
+  书本施法的更多信息，请参阅 [f]。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -4        解除陷阱    一般         
+    智力 (INT)    +3        魔法装置    极佳         
+    感知 (WIS)    +0        豁免        良好         
+    敏捷 (DEX)    +1        潜行        一般         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数      95%       近战        糟糕         
+    基础HP         0        箭术        糟糕         
+    经验系数     130%
     
-  Necromancer
-  A Necromancer attempts to gain both power and knowledge through 
-  communion with the dead. They rely on the special realm of Necromancy 
-  to summon aid from the dead, whether directly in terms of undead 
-  servitude, or indirectly through otherworldly knowledge. Necromancy 
-  also offers many foul offensive spells; but all of these require 
-  direct physical contact, and so need an empty, gloveless hand to 
-  work. Yet this handicap is a cheap price to pay for the ability to 
-  kill a foe with one deadly touch!
+  死灵法师 (Necromancer)
   
-  Necromancers forever hunt for the legendary Eye and Hand of Vecna to 
-  complete their power.
+  死灵法师试图通过与死者的交流来获得力量和知识。他们依靠特殊的死灵魔法领
+  域从死者那里召唤援助，无论是直接通过对不死生物的奴役，还是间接通过来自
+  异界的知识。死灵魔法还提供了许多邪恶的攻击法术；但所有这些都需要直接的
+  身体接触，因此需要一只空着的、不戴手套的手来施放。然而，对于能够一触致
+  死的致命能力来说，这点限制简直是微不足道的代价！
   
-    Stats                   Skills
-    Strength      -2        Disarming   Fair         
-    Intelligence  +3        Device      Superb       
-    Wisdom        -4        Save        Good         
-    Dexterity     +1        Stealth     Good         
-    Constitution  -1        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating   95%       Melee       Bad          
-    Base HP        2        Archery     Bad          
-    Experience   125%
+  
+  死灵法师永远在寻觅传说中的维克那(Vecna)之眼和维克那之手以补全他们的力
+  量。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -2        解除陷阱    一般         
+    智力 (INT)    +3        魔法装置    极佳         
+    感知 (WIS)    -4        豁免        良好         
+    敏捷 (DEX)    +1        潜行        良好         
+    体质 (CON)    -1        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数      95%       近战        糟糕         
+    基础HP         2        箭术        糟糕         
+    经验系数     125%
     
-  Sorcerer
-  Sorcerers are the all-around best magicians, being able to master all 
-  spells from almost any magic realm without needing to study them or 
-  gain proficiency with them. On the downside, they have by far the 
-  fewest hit points of any class; they are also the worst fighters in 
-  the dungeon, being unable to use any weapon but a Wizardstaff.
+  咒术师 (Sorcerer)
+  
+  咒术师是全能的最佳魔法师，能够掌握几乎所有魔法领域的所有法术，而无需学
+  习或积累熟练度。不利的一面是，他们的生命值是所有职业中最少的；他们也是
+  地下城中最糟糕的斗士，除了巫师法杖之外无法使用任何武器。
    
-  Sorcerers have a class power - 'Eat Magic' - which absorbs mana from 
-  wands, staves or rods. Unlike other mages, they rely on Charisma as 
-  their spell stat.
+  咒术师有一个职业能力——“吞噬魔法 (Eat 
+  Magic)”——可以从魔杖、法杖或魔棒中吸收法力。与其他法师不同，他们依靠魅
+  力作为施法属性。
   
-    Stats                   Skills
-    Strength      -5        Disarming   Fair         
-    Intelligence  +0        Device      Amber[2]     
-    Wisdom        -2        Save        Heroic       
-    Dexterity     +2        Stealth     Poor         
-    Constitution  +0        Searching   Poor         
-    Charisma      +6        Perception  Poor         
-    Life Rating   65%       Melee       Very Bad     
-    Base HP        0        Archery     Very Bad     
-    Experience   160%
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -5        解除陷阱    一般         
+    智力 (INT)    +0        魔法装置    琥珀[2]      
+    感知 (WIS)    -2        豁免        英雄         
+    敏捷 (DEX)    +2        潜行        较差         
+    体质 (CON)    +0        搜索        较差         
+    魅力 (CHR)    +6        察觉        较差         
+    生命乘数      65%       近战        极差         
+    基础HP         0        箭术        极差         
+    经验系数     160%
     
-  Yellow-Mage
-  A Yellow-Mage is a type of Mage who focuses on rapid spell casting. 
-  The casting speed of Yellow-Mages improves with experience; low-level 
-  spells are particularly quick to use, and can eventually be cast as 
-  many as five times in one round! But even a level 50 spell requires 
-  less than half a turn for an accomplished Yellow-Mage.
+  黄魔法师 (Yellow-Mage)
   
-  In most other respects, a Yellow-Mage is similar to a Mage; they use 
-  Intelligence as their primary spell stat, and may learn spells from 
-  two spell realms of their choice. However, due to their focus on 
-  hasty casting, some of the deepest and most powerful magic will 
-  remain forever beyond their grasp.
+  黄魔法师是一种专注于快速施法的法师。黄魔法师的施法速度随着经验的增长而
+  提高；低等级法术施放起来特别快，最终甚至可以在一回合内施放多达五次！即
+  便是 50 
+  级的法术，对一位有成就的黄魔法师来说也只需不到半个回合的时间。
   
-    Stats                   Skills
-    Strength      -4        Disarming   Fair         
-    Intelligence  +3        Device      Superb       
-    Wisdom        +0        Save        Good         
-    Dexterity     +1        Stealth     Fair         
-    Constitution  -2        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating   95%       Melee       Bad          
-    Base HP        0        Archery     Bad          
-    Experience   130%
+  
+  在大多数其他方面，黄魔法师与普通法师相似；他们使用智力作为主要施法属性
+  ，并可以从自己选择的两个法术领域中学习法术。然而，由于他们专注于匆忙施
+  法，一些最深奥、最强大的魔法将永远在他们的掌握之外。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -4        解除陷阱    一般         
+    智力 (INT)    +3        魔法装置    极佳         
+    感知 (WIS)    +0        豁免        良好         
+    敏捷 (DEX)    +1        潜行        一般         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数      95%       近战        糟糕         
+    基础HP         0        箭术        糟糕         
+    经验系数     130%
     
   
-Devices
-  Alchemist
-  Alchemists are masters of tinctures, concoctions and infusions. They 
-  can prepare themselves set infusions from potions that replicate the 
-  effect - without consuming inventory space or being in danger of 
-  shattering. They are reasonably good at melee, especially with the 
-  right potions, though they cannot rival melee specialists. Even bad 
-  potions are useful in their hands, as weapons or ingredients. Their 
-  other abilities include creating copies of potions and turning items 
-  to gold. They require intelligence for some of their abilities.
+装置 (Devices)
+  炼金术士 (Alchemist)
   
+  炼金术士是酊剂、混合剂和注入剂的大师。他们可以利用药水为自己配制固定效
+  果的注入剂，从而复制药水的效果——这不仅不占用物品栏空间，也没有打碎的危
+  险。他们有相当不错的近战能力，特别是在配合合适的药水时，尽管仍无法与近
+  战专精职业抗衡。在他们手中，即使是糟糕的药水也能作为武器或配方成分发挥
+  作用。他们的其他能力包括复制药水和将物品变成金币。他们的部分能力需要智
+  力。
   
-    Stats                   Skills
-    Strength      +0        Disarming   Very Good    
-    Intelligence  +2        Device      Fair         
-    Wisdom        -1        Save        Fair         
-    Dexterity     +2        Stealth     Fair         
-    Constitution  +0        Searching   Very Good    
-    Charisma      -2        Perception  Fair         
-    Life Rating  101%       Melee       Good         
-    Base HP       12        Archery     Excellent    
-    Experience   135%
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +0        解除陷阱    很好         
+    智力 (INT)    +2        魔法装置    一般         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +2        潜行        一般         
+    体质 (CON)    +0        搜索        很好         
+    魅力 (CHR)    -2        察觉        一般         
+    生命乘数     101%       近战        良好         
+    基础HP        12        箭术        优秀         
+    经验系数     135%
     
-  Devicemaster
-  Devicemasters are excellent with magical devices, but poor in most 
-  other skills. They may shoot or use melee in a pinch, but this will 
-  never be their forte; instead, they conquer through their arsenal of 
-  magical devices.
+  装置大师 (Devicemaster)
+  
+  装置大师极其擅长使用魔法装置，但在大多数其他技能上表现不佳。他们可以在
+  紧要关头进行射击或近战，但这永远不会是他们的长项；相反，他们通过魔法装
+  置军火库来征服敌人。
    
-  Each Devicemaster chooses to specialize in a particular class of 
-  devices, and will gain extra bonuses for speciality items. These 
-  bonuses include increased damage, increased speed of activation, 
-  extra resistance to charge draining, and even the ability to 
-  occasionally power these devices without consuming charges; each of 
-  these abilities becomes stronger with experience. In addition, 
-  speciality devices are easier to use, although all Devicemasters are 
-  also good with devices of other types.
+  
+  每个装置大师都选择专注于某一特定类别的装置，并将获得该类别专精物品的额
+  外加成。这些加成包括增加伤害、加快激活速度、提升对电量消耗的抗性，甚至
+  偶尔能在不消耗充能的情况下激活这些装置；每一种能力都会随着经验的增长而
+  变强。此外，专精装置更容易使用，尽管所有装置大师在使用其他类型的装置时
+  也很熟练。
    
-  Devicemasters have several useful device-related powers; they may 
-  detect magical devices from a distance, and gain the powerful talent 
-  of Recharging very early on. At higher levels, they gain the ability 
-  to move effects from one device to another, or to move magical 
-  essences from one item to another if they specialize in Potions or 
-  Scrolls. In times of desperate need, the Devicemaster may drain a 
-  speciality item of multiple charges at once; this greatly increases 
-  the power of the effect, but may destroy the device in the process.
   
-    Stats                   Skills
-    Strength      -1        Disarming   Poor         
-    Intelligence  +2        Device      Superb       
-    Wisdom        +1        Save        Fair         
-    Dexterity     +2        Stealth     Poor         
-    Constitution  -2        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating  101%       Melee       Fair         
-    Base HP        6        Archery     Poor         
-    Experience   130%
+  装置大师有几个与装置相关的有用能力；他们可以从远处探测魔法装置，并在很
+  早的时候就获得了强大的“充能 
+  (Recharging)”天赋。在更高的等级，如果他们专精于药水或卷轴，他们将获得
+  把效果从一个装置转移到另一个装置，或将魔法精华从一件物品转移到另一件物
+  品的能力。在迫切需要时，装置大师可以一次性抽干一件专精物品的多次充能；
+  这会大大增加效果的威力，但也可能会在这个过程中毁掉该装置。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    较差         
+    智力 (INT)    +2        魔法装置    极佳         
+    感知 (WIS)    +1        豁免        一般         
+    敏捷 (DEX)    +2        潜行        较差         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数     101%       近战        一般         
+    基础HP         6        箭术        较差         
+    经验系数     130%
     
-  Magic-Eater
-  The Magic-Eater can absorb magical devices. Once absorbed, these 
-  devices will function like normal objects and can be used whenever 
-  charges are available. In effect, it is as if the Magic-Eater had 
-  extra inventory slots for devices. However, absorbed magic can not be 
-  drained the way normal devices can, nor can these objects be 
-  destroyed. The number of slots for each kind of device is limited, 
-  and the Magic-Eater will need to choose which object to replace once 
-  the slots are all used. Absorbed magic cannot be recharged through 
-  scrolls, spells, potions or activations; the Magic-Eater must rest to 
-  regain charges. The rate at which absorbed devices recharge is 
-  affected by Regeneration.
+  食魔者 (Magic-Eater)
   
-    Stats                   Skills
-    Strength      -1        Disarming   Poor         
-    Intelligence  +2        Device      Heroic       
-    Wisdom        +1        Save        Fair         
-    Dexterity     +2        Stealth     Poor         
-    Constitution  -2        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating  103%       Melee       Fair         
-    Base HP        6        Archery     Poor         
-    Experience   130%
+  食魔者可以吸收魔法装置。一旦被吸收，这些装置就会像普通物品一样起作用，
+  只要还有充能就可以随时使用。实际上，这就好像食魔者拥有用于放置装置的额
+  外物品栏位一样。不过，被吸收的魔法不能像普通装置那样被抽取充能，这些对
+  象也不会被摧毁。每种装置的空位数量有限，一旦槽位满了，食魔者就需要选择
+  替换掉哪个物品。被吸收的魔法不能通过卷轴、法术、药水或激活来重新充能；
+  食魔者必须休息才能恢复充能。被吸收的装置充能恢复的速度受生命回复 
+  (Regeneration) 的影响。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    较差         
+    智力 (INT)    +2        魔法装置    英雄         
+    感知 (WIS)    +1        豁免        一般         
+    敏捷 (DEX)    +2        潜行        较差         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数     103%       近战        一般         
+    基础HP         6        箭术        较差         
+    经验系数     130%
     
   
-Prayer
-  Priest
-  A Priest is a character devoted to serving a higher power. They 
-  explore the dungeon in the service of their God. They are fairly 
-  familiar with magical devices, which they believe act as foci for 
-  divine intervention in the natural order of things.
+祈祷 (Prayer)
+  牧师 (Priest)
+  
+  牧师是致力于侍奉更高神力的角色。他们为了侍奉神明而在地下城中探索。他们
+  对魔法装置相当熟悉，并相信这些装置是神力干预自然秩序的焦点。
    
-  There are two types of priests: Good and Evil. If the priest chooses 
-  Life or Crusade as their first realm, they will follow the path of 
-  good; as such, they may not choose an evil realm for their second 
-  realm. Good priests abhor bloodshed, and therefore are not 
-  comfortable with edged weapons, although they eventually learn to 
-  bless such weapons and then use them without disrupting their 
-  prayers. Should a priest choose Death or Daemon as their first realm, 
-  however, they will serve an evil god; evil priests actually enjoy 
-  shedding blood, and suffer no such weapon restrictions. Of course, 
-  evil priests abhor good things, and are unable to choose Life or 
-  Crusade for their second realm.
+  
+  牧师分为两种类型：善良和邪恶。如果牧师选择生命或圣战作为他们的第一个领
+  域，他们将走上善良之路；因此，他们不能选择邪恶领域作为第二个领域。善良
+  的牧师厌恶流血，因此不习惯使用带刃的武器，尽管他们最终会学会祝福这些武
+  器，然后在使用时就不会扰乱他们的祈祷。然而，如果牧师选择死亡或恶魔作为
+  第一个领域，他们将侍奉邪恶的神；邪恶的牧师实际上喜欢流血，并且不受此类
+  武器限制。当然，邪恶牧师厌恶善良的事物，并且无法选择生命或圣战作为他们
+  的第二个领域。
    
-  Good priests have a strong affinity for Life prayers, and learn them 
-  very well, even better than a High-Mage. Conversely, evil priests 
-  favor prayers of Death, and receive strong bonuses when choosing this 
-  foul realm. Otherwise, priests learn magic less efficiently than a 
-  Mage would; but their greater stamina and combat skills compensate 
-  for this. Priests, unlike Mages, cannot choose to study specific 
-  spells; rather, they are granted new prayers by the whim of their 
-  deity, presumably in accordance with some greater divine plan. The 
-  primary stat for a priest is Wisdom.
   
-    Stats                   Skills
-    Strength      -1        Disarming   Poor         
-    Intelligence  -3        Device      Good         
-    Wisdom        +3        Save        Very Good    
-    Dexterity     -1        Stealth     Poor         
-    Constitution  +0        Searching   Poor         
-    Charisma      +2        Perception  Bad          
-    Life Rating  100%       Melee       Fair         
-    Base HP        4        Archery     Poor         
-    Experience   120%
+  善良牧师对生命祈祷有着强烈的亲和力，并且学得非常好，甚至比高阶法师还要
+  好。相反，邪恶牧师偏爱死亡祈祷，并在选择这个肮脏领域时会获得强大的加成
+  。在其他方面，牧师学习魔法的效率不如法师；但他们更好的耐力和战斗技能弥
+  补了这一点。与法师不同，牧师不能主动选择研究特定的法术；相反，他们会被
+  神明的随心所欲赐予新的祈祷，大概是为了符合某种更伟大的神圣计划。牧师的
+  主要属性是感知。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    较差         
+    智力 (INT)    -3        魔法装置    良好         
+    感知 (WIS)    +3        豁免        很好         
+    敏捷 (DEX)    -1        潜行        较差         
+    体质 (CON)    +0        搜索        较差         
+    魅力 (CHR)    +2        察觉        糟糕         
+    生命乘数     100%       近战        一般         
+    基础HP         4        箭术        较差         
+    经验系数     120%
     
   
-Stealth
-  Ninja
-  A Ninja is a fearful assassin lurking in darkness. He or she can 
-  navigate effectively with no light source, catch enemies by surprise, 
-  and kill with a single blow. Ninjas can use Ninjutsu, and are good at 
-  locating hidden traps and doors, disarming traps and picking locks. 
-  Since heavy armors, heavy weapons, or shields will restrict their 
-  motion greatly, they prefer light clothes, and become faster and more 
-  stealthy as they gain levels. A Ninja knows no fear and, at high 
-  level, becomes almost immune to poison and able to see invisible 
-  things. Dexterity determines a Ninja's ability to use Ninjutsu.
+潜行 (Stealth)
+  忍者 (Ninja)
+  
+  忍者是潜伏在黑暗中可怕的刺客。他或她能在没有光源的情况下有效行进，趁敌
+  人不备发动突袭，并一击必杀。忍者可以使用忍术，擅长寻找隐藏的陷阱和门、
+  解除陷阱以及撬锁。由于重甲、重武器或盾牌会极大限制他们的活动，他们更喜
+  欢轻便的衣服，并在升级后变得更快、更隐蔽。忍者不知恐惧为何物，而且在高
+  等级时几乎能免疫毒素并能看破隐形。敏捷决定了忍者使用忍术的能力。
    
-  A Ninja can use Ninjutsu for lurking and surprise attacks. They gain 
-  more Ninjutsu techniques as they gain levels. They have a class power 
-  - 'Quick Walk' - which makes their walking speed extremely fast.
   
-    Stats                   Skills
-    Strength      +0        Disarming   Excellent    
-    Intelligence  -1        Device      Fair         
-    Wisdom        -1        Save        Fair         
-    Dexterity     +3        Stealth     Superb       
-    Constitution  +2        Searching   Very Good    
-    Charisma      +2        Perception  Fair         
-    Life Rating  100%       Melee       Superb       
-    Base HP        4        Archery     Poor         
-    Experience   120%
+  忍者可以使用忍术进行潜伏和奇袭。随着等级的提升，他们会获得更多的忍术技
+  巧。他们有一个职业能力——“疾行 (Quick 
+  Walk)”——可以让他们行走的速度极快。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +0        解除陷阱    优秀         
+    智力 (INT)    -1        魔法装置    一般         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +3        潜行        极佳         
+    体质 (CON)    +2        搜索        很好         
+    魅力 (CHR)    +2        察觉        一般         
+    生命乘数     100%       近战        极佳         
+    基础HP         4        箭术        较差         
+    经验系数     120%
     
-  Rogue
-  A Rogue is a character who prefers to live by their cunning, yet is 
-  capable of fighting their way out of a tight spot when necessary. 
-  Rogues are good at locating secret doors and hidden traps, and are 
-  masters of trap-disarming and lockpicking. Their exceptional stealth 
-  allows rogues to sneak around sleeping creatures without having to 
-  fight; they can also backstab a fleeing monster or surprise an enemy 
-  with a telling first blow. Rogues are fairly good at ranged combat, 
-  and receive special bonuses when shooting with a sling.
+  盗贼 (Rogue)
+  
+  盗贼是一个更喜欢靠狡诈谋生的角色，但在必要时也能够在困境中杀出一条血路
+  。盗贼擅长寻找暗门和隐藏陷阱，并且是解除陷阱和撬锁的大师。他们异常的潜
+  行能力使盗贼能够潜行绕过沉睡的生物而无需战斗；他们还可以背刺逃跑的怪物
+  ，或者用致命的第一击突袭敌人。盗贼相当擅长远程战斗，并且在使用投石索射
+  击时会获得特殊加成。
    
-  Rogues can select one realm - Sorcery, Death, Trump, Arcane, Craft, 
-  Law, or Burglary. Except for this last realm, rogues have certain 
-  limitations on which spells they can learn, and they do not learn new 
-  spells very quickly. The Burglary realm is unique to the rogue, and 
-  the speciality of the class; it offers spells for setting traps, 
-  picking pockets, negotiating with other thieves, and escaping from a 
-  tight spot. Burglary rogues are agents of the Black Market and 
-  receive favorable pricing from that shop. Burglary rogues use 
-  Dexterity as their spellcasting stat, and can use this special art 
-  from the beginning of their adventures; rogues of other realms, 
-  however, rely on Intelligence and cannot learn magic spells before 
-  they reach level 5.
   
-    Stats                   Skills
-    Strength      +1        Disarming   Excellent    
-    Intelligence  +1        Device      Excellent    
-    Wisdom        -1        Save        Fair         
-    Dexterity     +3        Stealth     Very Good    
-    Constitution  +0        Searching   Fair         
-    Charisma      +1        Perception  Fair         
-    Life Rating  100%       Melee       Excellent    
-    Base HP       12        Archery     Very Good    
-    Experience   125%
+  盗贼可以选择一个领域——咒术、死亡、王牌、奥秘、工匠、律法或行窃。除了这
+  最后一个领域外，盗贼在能够学习哪些法术上有一定的限制，而且他们学习新法
+  术的速度并不快。“行窃 
+  (Burglary)”领域是盗贼独有的，也是该职业的专长；它提供了用于设置陷阱、
+  偷窃、与其他小偷谈判以及逃离险境的法术。行窃盗贼是黑市的特工，并在该商
+  店享有优惠价格。行窃盗贼使用敏捷作为施法属性，并可以从冒险一开始就使用
+  这项特殊技艺；然而，其他领域的盗贼依赖智力，并且在达到 5 
+  级之前无法学习魔法。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +1        解除陷阱    优秀         
+    智力 (INT)    +1        魔法装置    优秀         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +3        潜行        很好         
+    体质 (CON)    +0        搜索        一般         
+    魅力 (CHR)    +1        察觉        一般         
+    生命乘数     100%       近战        优秀         
+    基础HP        12        箭术        很好         
+    经验系数     125%
     
-  Scout
-  The scout is the vanguard of any attack, and excels at stealth and 
-  observation skills. Scouts are not the best at one-on-one combat, but 
-  are unparalleled at ambush techniques for destroying groups of weak 
-  sentries. Scouts are lightly armored, and heavy armor disrupts their 
-  abilities. Unlike most characters, scouts are not at home in cramped 
-  corridors; in open areas they can dodge attacks effectively, but 
-  being confined severely hampers their defensive abilities.
+  斥候 (Scout)
   
-    Stats                   Skills
-    Strength      +1        Disarming   Very Good    
-    Intelligence  -1        Device      Very Good    
-    Wisdom        +2        Save        Fair         
-    Dexterity     +3        Stealth     Excellent    
-    Constitution  +0        Searching   Very Good    
-    Charisma      +0        Perception  Fair         
-    Life Rating  104%       Melee       Very Good    
-    Base HP        8        Archery     Heroic       
-    Experience   130%
+  斥候是任何袭击的先锋，并在潜行和观察技能方面表现出色。斥候不是一对一战
+  斗中的最佳人选，但在消灭成群弱小哨兵的伏击战术上无人能及。斥候穿着轻甲
+  ，重甲会破坏他们的能力。与大多数角色不同，斥候在狭窄的走廊中并不自在；
+  在开阔区域，他们可以有效地躲避攻击，但受困会严重阻碍他们的防御能力。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +1        解除陷阱    很好         
+    智力 (INT)    -1        魔法装置    很好         
+    感知 (WIS)    +2        豁免        一般         
+    敏捷 (DEX)    +3        潜行        优秀         
+    体质 (CON)    +0        搜索        很好         
+    魅力 (CHR)    +0        察觉        一般         
+    生命乘数     104%       近战        很好         
+    基础HP         8        箭术        英雄         
+    经验系数     130%
     
   
-Hybrid
-  Chaos-Warrior
-  Chaos-Warriors are the feared servants of the terrible Demon Lords of 
-  Chaos. Every Chaos-Warrior has a patron demon, who may give him a 
-  reward on level-up; the Chaos-Warrior may be healed or polymorphed, 
-  have his stats increased, or be rewarded with an awesome weapon. On 
-  the other hand, though, he might be severely punished or simply 
-  ignored by the patron; the Demon Lords of Chaos are unpredictable 
-  indeed, although rewards are thankfully more common than punishments. 
-  The exact reward will not depend on anything the player does, and is 
-  up entirely to random chance and the patron; each patron gives out 
-  different rewards and punishments.
+混合 (Hybrid)
+  混沌战士 (Chaos-Warrior)
+  
+  混沌战士是可怕的混沌恶魔领主令人畏惧的仆人。每个混沌战士都有一个庇护恶
+  魔，恶魔可能会在他们升级时给予奖励；混沌战士可能会被治疗或被变形，其属
+  性可能得到提升，或者被奖励一把令人敬畏的武器。但另一方面，他也可能会受
+  到严厉的惩罚，或者干脆被庇护者无视；混沌恶魔领主确实难以捉摸，虽然谢天
+  谢地，奖励还是比惩罚更常见。确切的奖励不取决于玩家所做的任何事，完全由
+  随机几率和庇护者决定；每个庇护者都会给出不同的奖励和惩罚。
    
-  Chaos-Warriors select one spell realm, either Chaos or Daemon; they 
-  have no interest in other forms of magic. They can learn every spell 
-  in their chosen realm. At level 40 they gain the powerful ability to 
-  emit confusing lights, with the potential to stun, scare and confuse 
-  every creature in sight.
   
-    Stats                   Skills
-    Strength      +2        Disarming   Poor         
-    Intelligence  +1        Device      Good         
-    Wisdom        -1        Save        Fair         
-    Dexterity     +0        Stealth     Poor         
-    Constitution  +1        Searching   Poor         
-    Charisma      +1        Perception  Poor         
-    Life Rating  109%       Melee       Excellent    
-    Base HP       12        Archery     Good         
-    Experience   125%
+  混沌战士可以选择混沌或恶魔作为唯一的法术领域；他们对其他形式的魔法不感
+  兴趣。他们可以学习所选领域中的每一个法术。在 40 
+  级时，他们会获得强大的能力来散发混乱之光，有可能使视线内的所有生物被震
+  慑、恐惧和混乱。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    较差         
+    智力 (INT)    +1        魔法装置    良好         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +0        潜行        较差         
+    体质 (CON)    +1        搜索        较差         
+    魅力 (CHR)    +1        察觉        较差         
+    生命乘数     109%       近战        优秀         
+    基础HP        12        箭术        良好         
+    经验系数     125%
     
-  Disciple
-  Trusted followers of mysterious ancient spirits known as the 
-  'Purples', the Disciples roam the world running errands for their 
-  masters, learning mighty spells and receiving rare items as rewards 
-  for their work. There are three main flavors of Purple Disciples - 
-  disciples of Karrot, disciples of Yeqrezh, and disciples of a group 
-  of Purples known as the Troika. Each of the Purples expects different 
-  things of their Disciples, and each helps them achieve their ends in 
-  very different ways.
+  门徒 (Disciple)
+  作为被称为“紫衣 
+  (Purples)”的神秘远古先灵的可靠追随者，门徒在世间游荡，为他们的主人跑腿
+  ，学习强大的法术，并获得稀有物品作为对他们工作的奖赏。紫衣门徒主要分为
+  三种——卡罗特 (Karrot) 的门徒、耶克雷兹 (Yeqrezh) 
+  的门徒，以及被称为三巨头 (Troika) 
+  的紫衣群体的门徒。每一个紫衣先灵对他们的门徒都有不同的期望，并以截然不
+  同的方式帮助他们实现目标。
   
-  See [g] for more details on disciples.
+  有关门徒的更多详细信息，请参阅 [g]。
   
-    Stats                   Skills
-    Strength      -1        Disarming   Fair         
-    Intelligence  +1        Device      Excellent    
-    Wisdom        -1        Save        Good         
-    Dexterity     +0        Stealth     Fair         
-    Constitution  -1        Searching   Fair         
-    Charisma      +1        Perception  Poor         
-    Life Rating   95%       Melee       Good         
-    Base HP       14        Archery     Good         
-    Experience   125%
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    一般         
+    智力 (INT)    +1        魔法装置    优秀         
+    感知 (WIS)    -1        豁免        良好         
+    敏捷 (DEX)    +0        潜行        一般         
+    体质 (CON)    -1        搜索        一般         
+    魅力 (CHR)    +1        察觉        较差         
+    生命乘数      95%       近战        良好         
+    基础HP        14        箭术        良好         
+    经验系数     125%
     
-  Ninja-Lawyer
-  The Ninja-Lawyer moves silently in the night, combining the stealth, 
-  agility and offensive power of the ninja with the subtle practical 
-  tools of the lawyer. Ninja-Lawyers, like specialist ninjas, prefer 
-  light armour and stabbing weapons and acquire the powerful 'Quick 
-  Walk' class power. A ninja-lawyer relies on both wisdom and 
-  dexterity, requiring the former for legal tricks and the latter for 
-  ninjutsu.
+  忍者律师 (Ninja-Lawyer)
   
-    Stats                   Skills
-    Strength      -1        Disarming   Excellent    
-    Intelligence  +0        Device      Good         
-    Wisdom        +0        Save        Fair         
-    Dexterity     +2        Stealth     Superb       
-    Constitution  +0        Searching   Good         
-    Charisma      +2        Perception  Fair         
-    Life Rating   99%       Melee       Excellent    
-    Base HP        8        Archery     Poor         
-    Experience   115%
+  忍者律师在黑夜中无声地移动，将忍者的潜行、敏捷和攻击力与律师那精妙而实
+  用的工具结合在一起。与专门的忍者一样，忍者律师偏爱轻甲和刺击武器，并获
+  得了强大的“疾行 (Quick 
+  Walk)”职业能力。忍者律师同时依赖感知和敏捷，前者用于法律诡计，后者用于
+  忍术。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    优秀         
+    智力 (INT)    +0        魔法装置    良好         
+    感知 (WIS)    +0        豁免        一般         
+    敏捷 (DEX)    +2        潜行        极佳         
+    体质 (CON)    +0        搜索        良好         
+    魅力 (CHR)    +2        察觉        一般         
+    生命乘数      99%       近战        优秀         
+    基础HP         8        箭术        较差         
+    经验系数     115%
     
-  Paladin
-  A Paladin is a combination of a warrior and a priest. Paladins excel 
-  as melee fighters, but are only middling in ranged combat; their 
-  stealth, perception, and device skill are likewise mediocre, though 
-  their divine alliance gives them a decent saving throw. Wisdom 
-  determines a Paladin's success at praying to his deity.
+  圣骑士 (Paladin)
+  
+  圣骑士是战士和牧师的结合体。圣骑士作为近战战士非常出色，但在远程战斗中
+  只能算中等；他们的潜行、察觉和装置技能同样平庸，不过他们与神明的联盟赋
+  予了他们不错的豁免判定。感知决定了圣骑士向其神明祈祷的成功率。
    
-  Paladins can select a realm from Life, Crusade, Daemon and Death. 
-  Like priests, they cannot select which prayers to learn, but are 
-  rewarded with new prayers by their deities. They can learn all 
-  spells, but not as fast as priests. They detest paganism so strongly 
-  that they even gain experience for destroying high-level pagan 
-  spellbooks: 'pagan' means Life or Crusade spellbooks for a 
-  Death/Daemon Paladin, and all spellbooks other than Life or Crusade 
-  for a Life/Crusade Paladin. Paladins receive one class power, 'Holy 
-  Lance' or 'Hell Lance', depending on the alignment of their realm.
   
-    Stats                   Skills
-    Strength      +2        Disarming   Poor         
-    Intelligence  -3        Device      Fair         
-    Wisdom        +1        Save        Fair         
-    Dexterity     +0        Stealth     Poor         
-    Constitution  +2        Searching   Poor         
-    Charisma      +2        Perception  Bad          
-    Life Rating  110%       Melee       Excellent    
-    Base HP       12        Archery     Very Good    
-    Experience   135%
+  圣骑士可以从生命、圣战、恶魔和死亡中选择一个领域。和牧师一样，他们无法
+  选择要学习的祈祷，而是由神明赐予新的祈祷。他们可以学习所有的法术，但速
+  度不如牧师快。他们极其厌恶异教，甚至摧毁高等级的异教法术书也能获得经验
+  ：对于死亡/恶魔圣骑士来说，“异教”意味着生命或圣战法术书；对于生命/圣战
+  圣骑士来说，这意味着除了生命或圣战之外的所有法术书。根据其领域阵营的不
+  同，圣骑士会获得一项职业能力：“神圣长矛 (Holy Lance)”或“地狱长矛 
+  (Hell Lance)”。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    较差         
+    智力 (INT)    -3        魔法装置    一般         
+    感知 (WIS)    +1        豁免        一般         
+    敏捷 (DEX)    +0        潜行        较差         
+    体质 (CON)    +2        搜索        较差         
+    魅力 (CHR)    +2        察觉        糟糕         
+    生命乘数     110%       近战        优秀         
+    基础HP        12        箭术        很好         
+    经验系数     135%
     
-  Ranger
-  A Ranger is a seasoned wanderer from the plains or woods, attuned to 
-  the natural world. Rangers have few weak points; like mages they are 
-  excellent with magic devices, yet they are also fairly good at using 
-  bows and melee weapons. Their stealth, searching and perception have 
-  been sharpened by their time in the wilderness, and their alliance 
-  with the spirits of nature even gives them a good saving throw.
+  游侠 (Ranger)
+  
+  游侠是一位来自平原或森林的经验丰富的流浪者，与自然世界融为一体。游侠几
+  乎没有弱点；像法师一样，他们非常擅长使用魔法装置，同时他们在射弓和近战
+  武器方面也相当不错。由于长时间在荒野中生活，他们的潜行、搜索和察觉能力
+  得到了磨练，而且他们与自然之灵的联盟甚至赋予了他们不错的豁免判定。
    
-  All rangers are trained in Nature magic, and all Nature spells are 
-  available to them; they even learn these spells almost as fast as 
-  mages. They can also select a secondary realm (Sorcery, Chaos, Death, 
-  Trump, Arcane, and Daemon); but they are slow learners here, and may 
-  find themselves unable to learn some of the highest level spells. 
-  Another downside is that rangers, like the priestly classes, lack the 
-  ability to choose their own spells; they will learn whatever the 
-  capricious nature gods choose to teach them.
   
-  Rangers have a class power, 'Probe Monster', which allows them to 
-  assess the strengths and weaknesses of the monsters they meet. The 
-  magical powers of a ranger depend on Wisdom.
+  所有游侠都受过自然魔法的训练，所有自然法术都向他们开放；他们学习这些法
+  术的速度甚至几乎和法师一样快。他们还可以选择一个次要领域（咒术、混沌、
+  死亡、王牌、奥秘和恶魔）；但他们在这些领域学习缓慢，可能会发现自己无法
+  学习某些最高等级的法术。另一个缺点是，游侠和神职职业一样，缺乏自主选择
+  法术的能力；变化无常的自然之神选择教给他们什么，他们就学什么。
   
-    Stats                   Skills
-    Strength      +2        Disarming   Fair         
-    Intelligence  +0        Device      Excellent    
-    Wisdom        +2        Save        Fair         
-    Dexterity     +1        Stealth     Fair         
-    Constitution  +1        Searching   Fair         
-    Charisma      +0        Perception  Poor         
-    Life Rating  106%       Melee       Good         
-    Base HP        8        Archery     Very Good    
-    Experience   140%
+  游侠有一个职业能力，“探测怪物 (Probe 
+  Monster)”，允许他们评估所遇怪物的优缺点。游侠的魔法力量取决于感知。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    一般         
+    智力 (INT)    +0        魔法装置    优秀         
+    感知 (WIS)    +2        豁免        一般         
+    敏捷 (DEX)    +1        潜行        一般         
+    体质 (CON)    +1        搜索        一般         
+    魅力 (CHR)    +0        察觉        较差         
+    生命乘数     106%       近战        良好         
+    基础HP         8        箭术        很好         
+    经验系数     140%
     
-  Red-Mage
-  Red-Mages make better fighters than most mages, and are also 
-  versatile spellcasters who can use many realms without needing to 
-  specialize in only one or two. The downside of this wide scope is 
-  that Red-Mages' magic is fairly shallow; they have high fail rates, 
-  minimum levels and mana costs, and are limited to the first two 
-  spellbooks in each realm except for Arcane.
+  赤魔法师 (Red-Mage)
   
-  Red-Mages have a class power, 'Double Magic', which allows them to 
-  cast two spells at once. As with regular mages, their spellcasting 
-  stat is Intelligence.
+  赤魔法师是比大多数法师更优秀的战士，同时也是多才多艺的施法者，可以使用
+  许多领域，而无需仅仅专精一两个领域。这种广泛涉猎的缺点是赤魔法师的魔法
+  相当浅薄；他们的失败率、最低等级要求和法力消耗都很高，而且除了奥秘领域
+  外，在每个领域中他们只能使用前两本法术书。
   
-    Stats                   Skills
-    Strength      +2        Disarming   Poor         
-    Intelligence  +2        Device      Very Good    
-    Wisdom        -1        Save        Fair         
-    Dexterity     +1        Stealth     Poor         
-    Constitution  +0        Searching   Poor         
-    Charisma      -1        Perception  Bad          
-    Life Rating  106%       Melee       Good         
-    Base HP        8        Archery     Poor         
-    Experience   140%
+  赤魔法师有一个职业能力，“双重施法 (Double 
+  Magic)”，允许他们一次施放两个法术。与普通法师一样，他们的施法属性是智
+  力。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    较差         
+    智力 (INT)    +2        魔法装置    很好         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +1        潜行        较差         
+    体质 (CON)    +0        搜索        较差         
+    魅力 (CHR)    -1        察觉        糟糕         
+    生命乘数     106%       近战        良好         
+    基础HP         8        箭术        较差         
+    经验系数     140%
     
-  Warrior-Mage
-  A Warrior-Mage is precisely what the name suggests: a cross between a 
-  warrior and a mage. To support their good-for-mages combat abilities, 
-  Warrior-Mages begin the game with Arcane magic and can freely select 
-  another spell realm. Although they do not gain new spells as fast as 
-  regular mages, they can eventually learn all or almost all spells in 
-  both realms, making them a very competitive choice for those who 
-  appreciate Arcane magic. Their class powers allow them to convert 
-  either HP to mana, or mana to HP, as needed.
+  战法师 (Warrior-Mage)
   
-    Stats                   Skills
-    Strength      +2        Disarming   Fair         
-    Intelligence  +2        Device      Good         
-    Wisdom        -1        Save        Fair         
-    Dexterity     +1        Stealth     Poor         
-    Constitution  +0        Searching   Poor         
-    Charisma      +1        Perception  Poor         
-    Life Rating  105%       Melee       Good         
-    Base HP        8        Archery     Good         
-    Experience   140%
+  战法师正如其名所示：是战士和法师的结合体。为了支撑他们优于法师的战斗能
+  力，战法师在游戏开局时就拥有奥秘魔法，并且可以自由选择另一个法术领域。
+  虽然他们学习新法术的速度不如普通法师快，但最终他们能学会这两个领域中所
+  有或几乎所有的法术，这使他们成为那些喜欢奥秘魔法玩家的非常有竞争力的选
+  择。他们的职业能力允许他们根据需要将生命值转换为法力，或将法力转换为生
+  命值。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    一般         
+    智力 (INT)    +2        魔法装置    良好         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +1        潜行        较差         
+    体质 (CON)    +0        搜索        较差         
+    魅力 (CHR)    +1        察觉        较差         
+    生命乘数     105%       近战        良好         
+    基础HP         8        箭术        良好         
+    经验系数     140%
     
+  缥缈模仿者 (Ethereal-Mimic)
   
-Riding
-  Beastmaster
-  Beastmasters see the fierce creatures of the world as opportunities 
-  rather than threats, and their riding skills are almost unparalleled. 
-  Between their class powers and access to Trump magic, they have many 
-  ways to summon or charm living creatures to serve as their hands and 
-  feet. Beastmasters are some of the best shooters outside archery 
-  specialists, and their melee skills are good enough to get by on. 
-  Charisma determines the spellcasting prowess of a Beastmaster.
+  缥缈模仿者是能够学习怪物形态的战士。他们在未变身时使用普通人形身体和装
+  备栏位；一旦变身，就会继承目标形态的身体结构、抗性、法术、吐息和天然攻
+  击，从而用敌人的形体反过来适应地下城。
   
-    Stats                   Skills
-    Strength      +1        Disarming   Poor         
-    Intelligence  -1        Device      Fair         
-    Wisdom        -1        Save        Fair         
-    Dexterity     +1        Stealth     Poor         
-    Constitution  +0        Searching   Poor         
-    Charisma      +2        Perception  Poor         
-    Life Rating  103%       Melee       Fair         
-    Base HP        6        Archery     Heroic       
-    Experience   120%
-    
-  Cavalry
-  Cavalry are masters of horsemanship and enjoy riding to battle. Being 
-  good at both melee and archery, they take pride in their overwhelming 
-  offensive strength on horseback; but spellcasting is a closed book to 
-  them, and magical devices difficult to use. High-level Cavalry learn 
-  to forcibly saddle and tame wild monsters with their 'Rodeo' class 
-  power.
   
-    Stats                   Skills
-    Strength      +2        Disarming   Fair         
-    Intelligence  -2        Device      Bad          
-    Wisdom        -2        Save        Fair         
-    Dexterity     +2        Stealth     Poor         
-    Constitution  +2        Searching   Poor         
-    Charisma      +1        Perception  Bad          
-    Life Rating  111%       Melee       Excellent    
-    Base HP       10        Archery     Heroic       
-    Experience   120%
+  缥缈模仿者通过击杀非唯一怪物来理解其形体；当击杀数量达到该怪物等级后，
+  就能永久学会该形态。使用职业能力时可以输入怪物序号来变身，怪物序号可在
+  知识菜单的怪物知识中查询。由于可学习形态数量可能很多，这种方式也便于玩
+  家为常用形态编写稳定的宏。唯一怪物不能被学习或模仿。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    良好         
+    智力 (INT)    +1        魔法装置    一般         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +1        潜行        糟糕         
+    体质 (CON)    +2        搜索        一般         
+    魅力 (CHR)    +0        察觉        较差         
+    生命乘数     105%       近战        英雄         
+    基础HP        16        箭术        极佳         
+    经验系数     175%
     
   
-Mind
-  Mindcrafter
-  Mindcrafters rely not on book magic, but on the powers of the mind. 
-  These mind powers are specific to this class, and range from 
-  extrasensory perception to psychic attacks and the mental domination 
-  of others. Most mind powers become accessible fairly early, but gain 
-  in strength with more experience. Wisdom determines a Mindcrafter's 
-  ability to use mind powers.
+骑乘 (Riding)
+  兽王 (Beastmaster)
+  
+  兽王将世界上凶猛的生物视为机会而不是威胁，他们的骑乘技巧几乎无人能及。
+  结合他们的职业能力以及对王牌魔法的使用，他们有许多方法来召唤或魅惑活体
+  生物充当他们的手足。兽王是除了箭术专精之外最好的射手之一，他们的近战技
+  能也足以应付局面。魅力决定了兽王的施法能力。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +1        解除陷阱    较差         
+    智力 (INT)    -1        魔法装置    一般         
+    感知 (WIS)    -1        豁免        一般         
+    敏捷 (DEX)    +1        潜行        较差         
+    体质 (CON)    +0        搜索        较差         
+    魅力 (CHR)    +2        察觉        较差         
+    生命乘数     103%       近战        一般         
+    基础HP         6        箭术        英雄         
+    经验系数     120%
+    
+  骑兵 (Cavalry)
+  
+  骑兵是马术大师，享受骑马作战的乐趣。他们擅长近战和箭术，并为自己在马背
+  上压倒性的进攻实力感到自豪；但施法对他们来说犹如天书，魔法装置也很难使
+  用。高等级的骑兵会通过他们的“驯服 
+  (Rodeo)”职业能力学会强行给野生怪物套上马鞍并将其驯服。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +2        解除陷阱    一般         
+    智力 (INT)    -2        魔法装置    糟糕         
+    感知 (WIS)    -2        豁免        一般         
+    敏捷 (DEX)    +2        潜行        较差         
+    体质 (CON)    +2        搜索        较差         
+    魅力 (CHR)    +1        察觉        糟糕         
+    生命乘数     111%       近战        优秀         
+    基础HP        10        箭术        英雄         
+    经验系数     120%
+    
+  
+心灵 (Mind)
+  心灵术士 (Mindcrafter)
+  
+  心灵术士不依赖书本魔法，而是依赖心灵的力量。这些心灵力量是该职业特有的
+  ，范围从超感官知觉到精神攻击以及对他人的精神控制。大多数心灵力量在相对
+  较早的时候就能使用，并随着经验的增加而变强。感知决定了心灵术士使用心灵
+  力量的能力。
    
-  Mindcrafters' combat skills are reasonably good but far from 
-  outstanding; a combination of physical and mental attacks often works 
-  better for them than either one alone. A seasoned mindcrafter is very 
-  hard to confuse, and can effortlessly detect the minds of others. 
-  Mindcrafters have a class power, 'Clear Mind', which allows them to 
-  rapidly regenerate mana.
   
-    Stats                   Skills
-    Strength      -1        Disarming   Fair         
-    Intelligence  +0        Device      Very Good    
-    Wisdom        +3        Save        Fair         
-    Dexterity     -1        Stealth     Fair         
-    Constitution  -1        Searching   Poor         
-    Charisma      +2        Perception  Poor         
-    Life Rating   99%       Melee       Fair         
-    Base HP        4        Archery     Good         
-    Experience   125%
+  心灵术士的战斗技能相当不错，但远算不上突出；物理和精神攻击的结合通常比
+  单纯使用其中任何一种效果都要好。经验丰富的心灵术士很难被混乱，并且能毫
+  不费力地察觉他人的心灵。心灵术士有一个职业能力，“清明心智 (Clear 
+  Mind)”，允许他们快速恢复法力。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    一般         
+    智力 (INT)    +0        魔法装置    很好         
+    感知 (WIS)    +3        豁免        一般         
+    敏捷 (DEX)    -1        潜行        一般         
+    体质 (CON)    -1        搜索        较差         
+    魅力 (CHR)    +2        察觉        较差         
+    生命乘数      99%       近战        一般         
+    基础HP         4        箭术        良好         
+    经验系数     125%
     
-  Mirror-Master
-  Mirror-Masters are spellcasters; like mages, they must live by their 
-  wits. They can create magical mirrors, which they use to support 
-  their special Mirror-Magic spells. Intelligence determines a 
-  Mirror-Master's spellcasting ability.
+  幻镜法师 (Mirror-Master)
+  
+  幻镜法师是施法者；就像法师一样，他们必须靠智慧生存。他们可以制造魔法镜
+  ，用来辅助其特殊的镜像魔法。智力决定了幻镜法师的施法能力。
    
-  Mirror-Masters gain more spells with experience, and their spells 
-  also become more powerful over time. Much of their magic relies on 
-  the careful placement of mirrors, which can be used for both offense 
-  and defense. Mirror-Masters' abilities are also enhanced by standing 
-  on a mirror; for example, they can perform quick teleports from there 
-  or rapidly regenerate their mana. Nevertheless, not all Mirror-Magic 
-  requires a physical mirror; many effects rely simply on light or 
-  mirror-shards, or on uncertainty, reflection and illusion. The 
-  maximum number of Mirrors which can be controlled simultaneously 
-  depends on the player's level; sometimes, unnecessary mirrors may 
-  need to be broken.
   
-    Stats                   Skills
-    Strength      -2        Disarming   Fair         
-    Intelligence  +3        Device      Very Good    
-    Wisdom        +1        Save        Very Good    
-    Dexterity     -1        Stealth     Fair         
-    Constitution  -2        Searching   Poor         
-    Charisma      -2        Perception  Poor         
-    Life Rating  100%       Melee       Bad          
-    Base HP        4        Archery     Poor         
-    Experience   130%
+  幻镜法师随着经验的积累获得更多的法术，其法术随着时间的推移也会变得更加
+  强大。他们的大部分魔法都依赖于镜子的巧妙放置，镜子既可用于进攻也可用于
+  防守。站在镜子上也会增强幻镜法师的能力；例如，他们可以从那里进行快速传
+  送或快速恢复法力。然而，并非所有镜像魔法都需要实体镜子；许多效果仅仅依
+  赖光线或镜片碎片，或者是依赖于不确定性、反射和幻象。同时可控制的镜子最
+  大数量取决于玩家的等级；有时，可能需要打破不必要的镜子。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -2        解除陷阱    一般         
+    智力 (INT)    +3        魔法装置    很好         
+    感知 (WIS)    +1        豁免        很好         
+    敏捷 (DEX)    -1        潜行        一般         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    -2        察觉        较差         
+    生命乘数     100%       近战        糟糕         
+    基础HP         4        箭术        较差         
+    经验系数     130%
     
-  Psion
-  Psions, like Mindcrafters, rely on their innate mental powers; 
-  indeed, some of these powers resemble those of Mindcrafters. Unlike 
-  Mindcrafters, though, Psions can select which powers they wish to 
-  learn; together with their natural aptitude in a fairly broad range 
-  of skills, this makes Psions one of the most versatile classes. Most 
-  psionic powers are extremely strong, but the number of powers a Psion 
-  can learn is very limited: one each at levels 1, 10, 15, 20, 30, 35, 
-  40 and 50.
+  灵能者 (Psion)
   
-  The potency of psionic powers can be scaled up or down as needed, 
-  within limits; the more mana is spent, the more powerful the effect. 
-  All psionic powers require great concentration, leaving the Psion no 
-  time for pets. Psions do not have one fixed spell stat; they can use 
-  either Intelligence, Wisdom or Charisma, whichever is the highest. In 
-  this respect they are truly unique!
+  灵能者和心灵术士一样，依赖于他们天生的心理力量；事实上，其中一些力量类
+  似于心灵术士。但与心灵术士不同的是，灵能者可以选择想要学习哪些力量；再
+  加上他们在相当广泛的技能方面的天赋，使灵能者成为最多才多艺的职业之一。
+  大多数灵能都非常强大，但灵能者能学习的力量数量是非常有限的：分别在 1, 
+  10, 15, 20, 30, 35, 40 和 50 级各学一个。
   
-    Stats                   Skills
-    Strength      -1        Disarming   Poor         
-    Intelligence  +2        Device      Very Good    
-    Wisdom        +2        Save        Very Good    
-    Dexterity     -1        Stealth     Poor         
-    Constitution  -1        Searching   Poor         
-    Charisma      +2        Perception  Bad          
-    Life Rating   96%       Melee       Fair         
-    Base HP        4        Archery     Poor         
-    Experience   150%
+  
+  在限定范围内，灵能的效力可以根据需要按比例增强或减弱；消耗的法力越多，
+  效果越强。所有的灵能都需要高度集中注意力，使得灵能者没有时间照顾宠物。
+  灵能者没有一个固定的施法属性；他们可以使用智力、感知或魅力，哪个最高就
+  用哪个。在这一点上，他们确实是独一无二的！
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    较差         
+    智力 (INT)    +2        魔法装置    很好         
+    感知 (WIS)    +2        豁免        很好         
+    敏捷 (DEX)    -1        潜行        较差         
+    体质 (CON)    -1        搜索        较差         
+    魅力 (CHR)    +2        察觉        糟糕         
+    生命乘数      96%       近战        一般         
+    基础HP         4        箭术        较差         
+    经验系数     150%
     
-  Time-Lord
-  Time-Lords are masters of temporal magic, altering the flow of time 
-  to their advantage. They gain new powers as their experience grows, 
-  and are unique in their ability to use time-based spells against 
-  monsters. Not only do these attacks damage a foe, they also inflict a 
-  wide variety of possible effects, from slowing to amnesia, from 
-  evolution to devolution, from weakening to stasis. In addition to 
-  temporal attacks, Time-Lords gain great powers of speed, and become 
-  naturally faster with experience. Legend has it that masters of time 
-  can even see into the future, avoiding attacks that would otherwise 
-  prove fatal!
+  时光领主 (Time-Lord)
+  
+  时光领主是时空魔法的大师，能够改变时间流来为自己谋取优势。随着经验的增
+  长，他们会获得新的力量，并且他们独一无二地能够对怪物使用基于时间的法术
+  。这些攻击不仅能对敌人造成伤害，还会施加各种各样可能的效果，从减速到失
+  忆，从进化到退化，从虚弱到停滞。除了时空攻击之外，时光领主还获得了关于
+  速度的强大力量，并在经验增加时自然变得更快。传说时间大师甚至能预见未来
+  ，避开那些原本会致命的攻击！
    
-  Time-Lords are fairly proficient with magical devices, but are 
-  mediocre fighters and not good at archery at all. At high levels, 
-  they become resistant to time. Time-Lords' primary stat is Wisdom.
   
-    Stats                   Skills
-    Strength      -1        Disarming   Poor         
-    Intelligence  +0        Device      Very Good    
-    Wisdom        +3        Save        Fair         
-    Dexterity     -1        Stealth     Poor         
-    Constitution  -1        Searching   Poor         
-    Charisma      +0        Perception  Bad          
-    Life Rating   96%       Melee       Fair         
-    Base HP        0        Archery     Poor         
-    Experience   125%
+  时光领主在魔法装置方面相当精通，但近战平庸，且根本不擅长箭术。在高等级
+  时，他们会对时间产生抗性。时光领主的主要属性是感知。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    较差         
+    智力 (INT)    +0        魔法装置    很好         
+    感知 (WIS)    +3        豁免        一般         
+    敏捷 (DEX)    -1        潜行        较差         
+    体质 (CON)    -1        搜索        较差         
+    魅力 (CHR)    +0        察觉        糟糕         
+    生命乘数      96%       近战        一般         
+    基础HP         0        箭术        较差         
+    经验系数     125%
     
-  Warlock
-  Warlocks are a magical class; they derive their spells and powers not 
-  from books, but from an eldritch pact made with a given class of 
-  monsters. This pact is irrevocable and is made at the outset of the 
-  Warlock's career. Depending on the class of monsters with whom they 
-  ally, the warlock will gain unique bonuses, abilities and magical 
-  powers; for example, alliance with the forces of the netherworld 
-  grants resistances to poison and nether, enhanced constitution and 
-  spells to control and conjure the unliving, as well as spells to 
-  access the damaging forces of the netherworld directly. Each such 
-  alliance has thematic bonuses and powers, and you can read the 
-  details in the respective help sections.
+  邪术师 (Warlock)
   
-  Allying with a given class of monsters dramatically reduces the 
-  warlock's ability to fight these foes. Instead, the warlock seeks 
-  cooperation with their brethren, or perhaps domination over them; 
-  direct assaults are rarely successful.
+  邪术师是一个魔法职业；他们的法术和力量不是来源于书本，而是来自与特定类
+  型的怪物签订的怪异契约 (eldritch 
+  pact)。这个契约是不可撤销的，并在邪术师职业生涯的一开始就已订立。根据
+  与他们结盟的怪物类型，邪术师将获得独特的加成、能力和魔法力量；例如，与
+  幽冥界的力量结盟会赋予毒素和幽冥抗性、增强的体质、控制和召唤亡者的法术
+  ，以及直接使用幽冥界破坏力法术的权限。每一个这样的结盟都有特定主题的加
+  成和力量，你可以在相应的帮助部分阅读细节。
+  
+  
+  与特定类型的怪物结盟会极大地降低邪术师对抗这些敌人的能力。相反，邪术师
+  寻求与这些怪物的兄弟合作，或者可能寻求对它们的支配；直接的物理攻击很少
+  能取得成功。
    
-  In addition to pact-related spells, all warlocks gain access to the 
-  unique power of the Eldritch Blast. Their primary spell stat is 
-  Charisma, since they seek dominion and alliance with their chosen 
-  kin, and these monsters tend to have a strong will of their own.
+  除了与契约相关的法术外，所有的邪术师都能获得标志性的“魔能爆 (Eldritch 
+  Blast)”能力。他们的主要施法属性是魅力，因为他们寻求在与他们选择的族类
+  建立联盟时获得统治权，而这些怪物往往有着强烈的自我意志。
   
-  See [h] for more details on warlock pacts.
+  有关邪术师契约的更多详细信息，请参阅 [h]。
   
-    Stats                   Skills
-    Strength      -1        Disarming   Poor         
-    Intelligence  +2        Device      Superb       
-    Wisdom        -3        Save        Very Good    
-    Dexterity     +0        Stealth     Good         
-    Constitution  +2        Searching   Poor         
-    Charisma      +2        Perception  Poor         
-    Life Rating  107%       Melee       Fair         
-    Base HP       15        Archery     Poor         
-    Experience   135%
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    较差         
+    智力 (INT)    +2        魔法装置    极佳         
+    感知 (WIS)    -3        豁免        很好         
+    敏捷 (DEX)    +0        潜行        良好         
+    体质 (CON)    +2        搜索        较差         
+    魅力 (CHR)    +2        察觉        较差         
+    生命乘数     107%       近战        一般         
+    基础HP        15        箭术        较差         
+    经验系数     135%
     
   
-Other
-  Archaeologist
-  The Archaeologist is an erudite treasure hunter, seeking out the most 
-  valuable prizes that the dungeon has to offer. At home in 
-  subterranean caverns and vaults, he is rarely lost or snared in 
-  traps. His powers of perception and detection are very great, as is 
-  his skill with arcane devices. At high levels he can use the dark 
-  magic of the entombed Pharaohs. The powers of the Archaeologist are 
-  enhanced by Wisdom.
+其他 (Other)
+  考古学家 (Archaeologist)
   
-    Stats                   Skills
-    Strength      -1        Disarming   Excellent    
-    Intelligence  +1        Device      Excellent    
-    Wisdom        +2        Save        Fair         
-    Dexterity     +1        Stealth     Good         
-    Constitution  -1        Searching   Very Good    
-    Charisma      +0        Perception  Fair         
-    Life Rating  106%       Melee       Good         
-    Base HP        8        Archery     Poor         
-    Experience   120%
+  考古学家是博学的寻宝者，寻找地下城中所能提供的最珍贵的奖赏。他在地下洞
+  穴和墓穴中如鱼得水，很少迷路或陷入陷阱。他的察觉和探测能力非常强，他对
+  奥秘装置的技能也同样出色。在高等级时，他可以使用被埋葬的法老们的黑暗魔
+  法。考古学家的力量通过感知得到增强。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    优秀         
+    智力 (INT)    +1        魔法装置    优秀         
+    感知 (WIS)    +2        豁免        一般         
+    敏捷 (DEX)    +1        潜行        良好         
+    体质 (CON)    -1        搜索        很好         
+    魅力 (CHR)    +0        察觉        一般         
+    生命乘数     106%       近战        良好         
+    基础HP         8        箭术        较差         
+    经验系数     120%
     
-  Bard
-  Bards are traditional musicians, and songs and sound are the 
-  foundation of their magic. Four songbooks are available to a Bard, 
-  two of them sold in towns. Some songs are over in a quick yelp, 
-  consuming no more time than a magic spell would; but most continue to 
-  be sung, with continuing effects, until the bard either chooses to 
-  stop or runs out of mental energy. A bard can only ever sing one tune 
-  at a time. The primary spell stat of a bard is Charisma.
+  吟游诗人 (Bard)
   
-    Stats                   Skills
-    Strength      -2        Disarming   Poor         
-    Intelligence  +1        Device      Excellent    
-    Wisdom        +2        Save        Fair         
-    Dexterity     -1        Stealth     Very Bad     
-    Constitution  -2        Searching   Poor         
-    Charisma      +4        Perception  Poor         
-    Life Rating  100%       Melee       Poor         
-    Base HP        4        Archery     Bad          
-    Experience   140%
+  吟游诗人是传统的音乐家，歌曲和声音是他们魔法的基础。吟游诗人有四本歌谱
+  可用，其中两本在城镇出售。有些歌曲只需要一声短促的吼叫就能完成，所花的
+  时间不超过一个魔法法术；但大多数歌曲会持续吟唱，产生持续的效果，直到诗
+  人选择停止或耗尽心力。吟游诗人一次只能唱一首歌。诗人的主要施法属性是魅
+  力。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -2        解除陷阱    较差         
+    智力 (INT)    +1        魔法装置    优秀         
+    感知 (WIS)    +2        豁免        一般         
+    敏捷 (DEX)    -1        潜行        极差         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    +4        察觉        较差         
+    生命乘数     100%       近战        较差         
+    基础HP         4        箭术        糟糕         
+    经验系数     140%
     
-  Lawyer
-  Known for his unsurpassed expertise in the mysterious realm of Law, 
-  the Lawyer has a comprehensive skillset that allows him to set and 
-  detect traps, to slow or mystify his enemies, to quietly escape or 
-  avoid dangerous fights, to acquire knowledge about the world around 
-  him, and to make friends and influence people. As he relies on his 
-  familiarity with Law and with tricks and approaches that have worked 
-  in the past, the lawyer uses Wisdom as his spellcasting stat.
+  律师 (Lawyer)
   
-    Stats                   Skills
-    Strength      -3        Disarming   Excellent    
-    Intelligence  +2        Device      Very Good    
-    Wisdom        +0        Save        Good         
-    Dexterity     +0        Stealth     Fair         
-    Constitution  -1        Searching   Good         
-    Charisma      +1        Perception  Fair         
-    Life Rating  102%       Melee       Good         
-    Base HP       12        Archery     Fair         
-    Experience   115%
+  以其在神秘的律法领域无与伦比的专业知识而闻名，律师拥有一套全面的技能，
+  使他能够设置和探测陷阱，减缓或迷惑敌人，悄然逃跑或避免危险的战斗，获取
+  关于周围世界的知识，交友并施加影响。由于他依赖于对法律的熟悉以及过去行
+  之有效的技巧和方法，律师使用感知作为他的施法属性。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -3        解除陷阱    优秀         
+    智力 (INT)    +2        魔法装置    很好         
+    感知 (WIS)    +0        豁免        良好         
+    敏捷 (DEX)    +0        潜行        一般         
+    体质 (CON)    -1        搜索        良好         
+    魅力 (CHR)    +1        察觉        一般         
+    生命乘数     102%       近战        良好         
+    基础HP        12        箭术        一般         
+    经验系数     115%
     
-  Politician
-  Politicians are masters of spinning and manipulation, seeking to 
-  convert others to their cause and to destroy those they cannot 
-  convert. They are not very good at either direct combat or at using 
-  magical devices, and rely on their savvy and special skills and on 
-  the help of their friends to win fights. They have the ability to 
-  toggle between hit points, wealth and experience as the source of 
-  their power, although the latter two only become available at higher 
-  levels. Charisma is a key stat for Politicians.
+  政客 (Politician)
   
-    Stats                   Skills
-    Strength      -2        Disarming   Excellent    
-    Intelligence  +1        Device      Poor         
-    Wisdom        +0        Save        Good         
-    Dexterity     -2        Stealth     Excellent    
-    Constitution  +0        Searching   Good         
-    Charisma      +2        Perception  Fair         
-    Life Rating  100%       Melee       Bad          
-    Base HP        9        Archery     Bad          
-    Experience   130%
+  政客是巧言粉饰和操控人心的大师，试图将他人转化为自己的事业支持者，并毁
+  灭那些无法被转化的人。他们在直接战斗或使用魔法装置方面都不是很好，而是
+  依靠自己的精明、特殊技能以及朋友的帮助来赢得战斗。他们有能力在生命值、
+  财富和经验之间切换作为自己力量的来源，尽管后两者只在更高的等级才能使用
+  。魅力是政客的关键属性。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -2        解除陷阱    优秀         
+    智力 (INT)    +1        魔法装置    较差         
+    感知 (WIS)    +0        豁免        良好         
+    敏捷 (DEX)    -2        潜行        优秀         
+    体质 (CON)    +0        搜索        良好         
+    魅力 (CHR)    +2        察觉        一般         
+    生命乘数     100%       近战        糟糕         
+    基础HP         9        箭术        糟糕         
+    经验系数     130%
     
-  Rage-Mage
-  Rage-Mages are part of a secret sect, originally founded by 
-  Barbarians in response to their natural foes, the mages. With the 
-  passing of time, other races have also begun to study these arts.
+  狂怒法师 (Rage-Mage)
   
-  Rage techniques are learned from books, but differ from normal spells 
-  in many ways. First of all, the Rage-Mage must perform a special 
-  Ritual of Anger to learn a power, and this ritual destroys the book; 
-  as a result, it may take a long time for the Rage-Mage to learn all 
-  of their high-level powers. Books are required only for learning; the 
-  powers, once learned, can be used without them.
+  狂怒法师是一个秘密教派的一部分，该教派最初由野蛮人为了对付他们的天敌法
+  师而创立。随着时间的推移，其他种族也开始研究这些技艺。
   
-  Another unique aspect of Rage-Mages concerns their mana pool. 
-  Rage-Mage mana, unlike that of normal spellcasters, does not 
-  regenerate on its own; in fact, it actually decreases rapidly each 
-  turn, meaning Rage-Mages had better use their powers quickly while 
-  they still can. A Rage-Mage gains mana whenever he is the target of a 
-  magical spell; indeed, magic makes a Rage-Mage very angry! Rage-Mages 
-  can also fuel their mana by hurting those around them, which can be 
-  quite effective in crowded situations.
   
-    Stats                   Skills
-    Strength      +3        Disarming   Poor         
-    Intelligence  -2        Device      Bad          
-    Wisdom        -2        Save        Superb       
-    Dexterity     -2        Stealth     Very Bad     
-    Constitution  +2        Searching   Poor         
-    Charisma      +1        Perception  Bad          
-    Life Rating  106%       Melee       Good         
-    Base HP        6        Archery     Fair         
-    Experience   150%
+  狂怒的技巧是从书本上学来的，但在许多方面与普通法术不同。首先，狂怒法师
+  必须执行一种特殊的“愤怒仪式”来学习一项力量，而这个仪式会毁坏书本；因此
+  ，狂怒法师可能需要很长时间才能学会他们所有的高级力量。书本仅在学习时需
+  要；这些力量一旦学会，就可以在没有书本的情况下使用。
+  
+  
+  狂怒法师的另一个独特之处在于他们的法力池。与普通施法者不同，狂怒法师的
+  法力不会自动恢复；事实上，它实际上每回合都会快速减少，这意味着狂怒法师
+  最好趁着还有法力时迅速使用他们的力量。当狂怒法师成为魔法法术的目标时，
+  他会获得法力；事实上，魔法会让狂怒法师非常生气！狂怒法师还可以通过伤害
+  周围的人来补充他们的法力，这在拥挤的情况下非常有效。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +3        解除陷阱    较差         
+    智力 (INT)    -2        魔法装置    糟糕         
+    感知 (WIS)    -2        豁免        极佳         
+    敏捷 (DEX)    -2        潜行        极差         
+    体质 (CON)    +2        搜索        较差         
+    魅力 (CHR)    +1        察觉        糟糕         
+    生命乘数     106%       近战        良好         
+    基础HP         6        箭术        一般         
+    经验系数     150%
     
-  Skillmaster
-  The Skillmaster is not your ordinary class. Instead, you may design 
-  your own class, on the fly, using a point-based skill system. Upon 
-  birth, you will get 5 points to spend; use them wisely to set the 
-  basic direction of your class. Every fifth character level, you will 
-  receive an additional point to spend, for fifteen points overall. You 
-  may use these points to learn melee, to master a spell realm, to 
-  improve your speed or stealth, to increase your magic device skills, 
-  to gain special techniques, to learn riding, dual-wielding or martial 
-  arts... no other class, even Psion or Yeqrezh Disciple, offers as 
-  much flexibility.
+  技能大师 (Skillmaster)
   
-  Most skills allow the investment of multiple points for increased 
-  proficiency, but some are abilities that you may buy with a single 
-  point (e.g. Luck). This class is not recommended for beginning 
-  players, despite being quite strong; you only have a limited amount 
-  of points to spend, and your choices are irreversible.
+  技能大师不是一个普通的职业。你可以使用基于点数的技能系统，随时设计出属
+  于你自己的职业。出生时，你将获得 5 
+  个点数用来分配；明智地使用它们来设定你职业的基本方向。角色每升 5 
+  级，你将获得 1 个额外的点数用于分配，总共 15 
+  点。你可以利用这些点数来学习近战、精通某个法术领域、提高你的速度或潜行
+  能力、增加你的魔法装置技能、获得特殊技术、学习骑乘、双持武器或武术……没
+  有其他任何职业，即便是灵能者或耶克雷兹门徒，能提供如此多的灵活性。
   
-  See [i] for more details on skillmasters.
   
-    Stats                   Skills
-    Strength      +0        Disarming   Very Bad     
-    Intelligence  +0        Device      Very Bad     
-    Wisdom        +0        Save        Very Bad     
-    Dexterity     +0        Stealth     Bad          
-    Constitution  +0        Searching   Bad          
-    Charisma      +0        Perception  Bad          
-    Life Rating  100%       Melee       Very Bad     
-    Base HP       10        Archery     Very Bad     
-    Experience   130%
+  大多数技能允许投入多个点数以提高熟练度，但有些是你只需投入一个点数就能
+  购买的能力（例如：运气 
+  Luck）。尽管这个职业非常强大，但不推荐新手玩家使用；因为你只有有限的点
+  数可花，并且你的选择是不可逆转的。
+  
+  有关技能大师的更多详细信息，请参阅 [i]。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    +0        解除陷阱    极差         
+    智力 (INT)    +0        魔法装置    极差         
+    感知 (WIS)    +0        豁免        极差         
+    敏捷 (DEX)    +0        潜行        糟糕         
+    体质 (CON)    +0        搜索        糟糕         
+    魅力 (CHR)    +0        察觉        糟糕         
+    生命乘数     100%       近战        极差         
+    基础HP        10        箭术        极差         
+    经验系数     130%
     
-  Tourist
-  Tourists have visited this world for the purpose of sightseeing. 
-  Their fighting skills are bad, and they cannot cast powerful spells. 
-  They are the most difficult class to win the game with. Intelligence 
-  determines a tourist's spellcasting ability.
+  游客 (Tourist)
+  
+  游客是为了观光而来到了这个世界。他们的战斗技能很糟糕，也不能施放强大的
+  法术。他们是所有职业中最难通关的。智力决定了游客的施法能力。
    
-  Tourists are always seeing more of the world to add to their stock of 
-  information; no other class can compete with their identification 
-  skills. They have two class powers - 'Take a Photograph' and 
-  'Identify True'. Their magic is based on Arcane, and - aside from 
-  identify - is very weak indeed.
   
-    Stats                   Skills
-    Strength      -2        Disarming   Bad          
-    Intelligence  -1        Device      Very Bad     
-    Wisdom        -1        Save        Poor         
-    Dexterity     -1        Stealth     Poor         
-    Constitution  -2        Searching   Poor         
-    Charisma      -3        Perception  Bad          
-    Life Rating   94%       Melee       Fair         
-    Base HP        0        Archery     Bad          
-    Experience    70%
+  游客总是在看这个世界的更多东西，以增加他们的见闻储备；没有其他职业能与
+  他们的鉴定技能相媲美。他们有两个职业能力——“拍照 (Take a 
+  Photograph)”和“真实鉴定 (Identify 
+  True)”。他们的魔法基于奥秘，而且——除了鉴定之外——确实非常微弱。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -2        解除陷阱    糟糕         
+    智力 (INT)    -1        魔法装置    极差         
+    感知 (WIS)    -1        豁免        较差         
+    敏捷 (DEX)    -1        潜行        较差         
+    体质 (CON)    -2        搜索        较差         
+    魅力 (CHR)    -3        察觉        糟糕         
+    生命乘数      94%       近战        一般         
+    基础HP         0        箭术        糟糕         
+    经验系数      70%
     
-  Wild-Talent
-  Wild-Talents gain random talents and abilities as they level up. They 
-  are good fighters, and decent with magical devices, but their true 
-  forte is their vast array of potential random powers. Except you 
-  never know what those might be!
+  狂野天赋者 (Wild-Talent)
+  
+  狂野天赋者在升级时会获得随机的天赋和能力。他们是不错的战士，在魔法装置
+  上也有合格的表现，但他们真正的专长是他们极其庞大且充满可能性的随机能力
+  库。只是你永远不知道接下来会学到些什么！
    
-  Wild-Talents do not have a spell stat. Instead, each ability that 
-  they gain requires its own individual stat for the purposes of fail 
-  rate calculation; for example, Tossing a Boulder requires Strength, 
-  while Magic Missile requires Intelligence. Each spell requires mana 
-  to cast, but the amount of mana available is not influenced by any 
-  particular stat and is determined simply by experience.
   
-    Stats                   Skills
-    Strength      -1        Disarming   Fair         
-    Intelligence  +1        Device      Good         
-    Wisdom        +1        Save        Poor         
-    Dexterity     +1        Stealth     Poor         
-    Constitution  -2        Searching   Fair         
-    Charisma      +1        Perception  Poor         
-    Life Rating  100%       Melee       Good         
-    Base HP        4        Archery     Excellent    
-    Experience   110%
+  狂野天赋者没有固定的施法属性。取而代之的是，他们获得的每一项能力在计算
+  失败率时都需要有它自身特定的属性；例如，投掷巨石 (Tossing a Boulder) 
+  需要力量，而魔法飞弹 (Magic Missile) 
+  需要智力。每个法术施放都需要法力，但可用法力总量不受任何特定属性的影响
+  ，只简单地由经验决定。
+  
+    属性 (Stats)            技能 (Skills)
+    力量 (STR)    -1        解除陷阱    一般         
+    智力 (INT)    +1        魔法装置    良好         
+    感知 (WIS)    +1        豁免        较差         
+    敏捷 (DEX)    +1        潜行        较差         
+    体质 (CON)    -2        搜索        一般         
+    魅力 (CHR)    +1        察觉        较差         
+    生命乘数     100%       近战        良好         
+    基础HP         4        箭术        优秀         
+    经验系数     110%
     
   
-Table 1 - Class Statistic Bonus Table
+表 1 - 职业基础属性加成汇总
 
               STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp
 Berserker      +8  -20  -20   +4   +4   +4  200%  +22  160%
@@ -1391,6 +1304,7 @@ Paladin        +2   -3   +1   +0   +2   +2  110%  +12  135%
 Ranger         +2   +0   +2   +1   +1   +0  106%   +8  140%
 Red-Mage       +2   +2   -1   +1   +0   -1  106%   +8  140%
 Warrior-Mage   +2   +2   -1   +1   +0   +1  105%   +8  140%
+Ethereal-Mimic +2   +1   -1   +1   +2   +0  105%  +16  175%
 Beastmaster    +1   -1   -1   +1   +0   +2  103%   +6  120%
 Cavalry        +2   -2   -2   +2   +2   +1  111%  +10  120%
 Mindcrafter    -1   +0   +3   -1   -1   +2   99%   +4  125%
@@ -1408,9 +1322,9 @@ Tourist        -2   -1   -1   -1   -2   -3   94%   +0   70%
 Wild-Talent    -1   +1   +1   +1   -2   +1  100%   +4  110%
 
 
-Table 2 - Class Skill Bonus Table I
+表 2 - 职业技能加成汇总 I
 
-              Disarming     Device        Save          Stealth      
+              解除陷阱      魔法装置      豁免          潜行         
 Berserker     Very Bad      Very Bad      Very Bad      Very Bad     
 Blood-Knight  Good          Bad           Fair          Poor         
 Duelist       Fair          Fair          Bad           Fair         
@@ -1447,6 +1361,7 @@ Paladin       Poor          Fair          Fair          Poor
 Ranger        Fair          Excellent     Fair          Fair         
 Red-Mage      Poor          Very Good     Fair          Poor         
 Warrior-Mage  Fair          Good          Fair          Poor         
+Ethereal-Mimic Good          Fair          Fair          Bad          
 Beastmaster   Poor          Fair          Fair          Poor         
 Cavalry       Fair          Bad           Fair          Poor         
 Mindcrafter   Fair          Very Good     Fair          Fair         
@@ -1464,9 +1379,9 @@ Tourist       Bad           Very Bad      Poor          Poor
 Wild-Talent   Fair          Good          Poor          Poor         
 
 
-Table 3 - Class Skill Bonus Table II
+表 3 - 职业技能加成汇总 II
 
-              Searching     Perception    Melee         Archery      
+              搜索          察觉          近战          箭术         
 Berserker     Very Bad      Very Bad      Amber[25]     Very Bad     
 Blood-Knight  Poor          Bad           Superb        Fair         
 Duelist       Poor          Poor          Fair          Very Bad     
@@ -1503,6 +1418,7 @@ Paladin       Poor          Bad           Excellent     Very Good
 Ranger        Fair          Poor          Good          Very Good    
 Red-Mage      Poor          Bad           Good          Poor         
 Warrior-Mage  Poor          Poor          Good          Good         
+Ethereal-Mimic Fair          Poor          Heroic        Superb       
 Beastmaster   Poor          Poor          Fair          Heroic       
 Cavalry       Poor          Bad           Excellent     Heroic       
 Mindcrafter   Poor          Poor          Fair          Good         
@@ -1522,5 +1438,5 @@ Wild-Talent   Fair          Poor          Good          Excellent
 
 
 
-Automatically generated for RoguelikeFansBand 7.2.salmiak.
+自动生成于 RoguelikeFansBand 7.2.salmiak。
 

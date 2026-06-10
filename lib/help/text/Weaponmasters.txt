@@ -1,254 +1,246 @@
-﻿Weaponmasters
+武器大师 (Weaponmasters)
 
-A Weaponmaster is exceptionally good with a single class of weapons, 
-obtaining special combat bonuses and powers which depend on their 
-chosen speciality. Focus is the key to success; weaponmasters are truly 
-lousy with off-speciality weapons, but few can match the prowess they 
-gain with something more suitable in their hands.
 
-Axes
-The mighty axe! Your blows will cleave with damage unsurpassed. 
-Specializing in axes gives great offensive prowess, especially when 
-your axe is wielded with two hands. However, this speciality offers 
-little in the way of utility. Kill quickly as your life depends on it!
+武器大师极其擅长使用单一类别的武器，并根据其选择的专精获得特殊的战斗加成
+和能力。专注是成功的关键；武器大师在使用非专精武器时极其糟糕，但当他们手
+持顺手的武器时，几乎无人能匹敌他们所获得的强大战力。
 
-  Stats                   Skills
-  Strength      +3        Disarming   Poor         
-  Intelligence  -3        Device      Bad          
-  Wisdom        -2        Save        Bad          
-  Dexterity     -2        Stealth     Poor         
-  Constitution  +1        Searching   Poor         
-  Charisma      +0        Perception  Bad          
-  Life Rating  105%       Melee       Heroic       
-  Base HP       12        Archery     Poor         
-  Experience   135%
+斧头 (Axes)
+
+威力无穷的斧头！你的劈砍将造成无与伦比的伤害。专精斧头能提供极强的进攻能
+力，特别是当你双手挥舞斧头时。然而，这种专精在功能性上几乎没有提供任何帮
+助。速战速决吧，因为你的性命全系于此！
+
+  属性                    技能
+  力量          +3        解除陷阱    较差         
+  智力          -3        魔法装置    极差         
+  感知          -2        豁免检定    极差         
+  敏捷          -2        潜行能力    较差         
+  体质          +1        搜索能力    较差         
+  魅力          +0        察觉能力    极差         
+  生命评级     105%       近战能力    英雄         
+  基础HP        12        箭术能力    较差         
+  经验修正     135%
   
-Bows
-You will shoot to kill! The bowmaster gains techniques to enhance 
-shooting, including more rapid firing, the ability to volley shots over 
-the heads of intervening monsters, reduced ammo destruction, the 
-ability to kill with a single arrow and much more. As a shooter, your 
-missile prowess will be quite formidable, though your melee will be 
-somewhat lacking.
+弓 (Bows)
 
-  Stats                   Skills
-  Strength      +0        Disarming   Poor         
-  Intelligence  -1        Device      Poor         
-  Wisdom        -1        Save        Poor         
-  Dexterity     +2        Stealth     Good         
-  Constitution  -1        Searching   Poor         
-  Charisma      +0        Perception  Poor         
-  Life Rating  102%       Melee       Fair         
-  Base HP       12        Archery     Heroic       
-  Experience   135%
+一箭毙命！弓箭大师将获得强化射击的技巧，包括更快的射速、越过前方怪物头顶
+进行抛射的能力、降低弹药损耗、一箭必杀的能力等等。作为一名射手，你的远程
+战力将极其可怕，尽管你的近战能力会有些许欠缺。
+
+  属性                    技能
+  力量          +0        解除陷阱    较差         
+  智力          -1        魔法装置    较差         
+  感知          -1        豁免检定    较差         
+  敏捷          +2        潜行能力    良好         
+  体质          -1        搜索能力    较差         
+  魅力          +0        察觉能力    较差         
+  生命评级     102%       近战能力    一般         
+  基础HP        12        箭术能力    英雄         
+  经验修正     135%
   
-Clubs
-You will seek to club your opponents senseless! This speciality gains 
-passive status effects against monsters, such as confusion, knock out 
-and stunning. Also, you will gain some limited utility techniques. At 
-high levels, your weapons will become more likely to score devastating, 
-crushing blows against your hapless enemies.
+棍棒 (Clubs)
 
-  Stats                   Skills
-  Strength      +2        Disarming   Poor         
-  Intelligence  -3        Device      Bad          
-  Wisdom        -2        Save        Bad          
-  Dexterity     -2        Stealth     Poor         
-  Constitution  +1        Searching   Poor         
-  Charisma      +0        Perception  Bad          
-  Life Rating  105%       Melee       Excellent    
-  Base HP       12        Archery     Fair         
-  Experience   135%
+你致力于将对手敲得失去知觉！这种专精在对抗怪物时能获得被动的状态效果，如
+混乱、击飞和震慑。此外，你还将获得一些有限的实用技巧。在较高等级时，你的
+武器将更有可能对倒霉的敌人造成毁灭性的粉碎打击。
+
+  属性                    技能
+  力量          +2        解除陷阱    较差         
+  智力          -3        魔法装置    极差         
+  感知          -2        豁免检定    极差         
+  敏捷          -2        潜行能力    较差         
+  体质          +1        搜索能力    较差         
+  魅力          +0        察觉能力    极差         
+  生命评级     105%       近战能力    优秀         
+  基础HP        12        箭术能力    一般         
+  经验修正     135%
   
-Crossbows
-The crossbowmaster shoots deadly bolts for great damage. Their bolts 
-may explode powerfully damaging nearby monsters. Also, they may shoot 
-so hard as to knock their opponents backwards!
+弩 (Crossbows)
 
-  Stats                   Skills
-  Strength      +1        Disarming   Poor         
-  Intelligence  -2        Device      Poor         
-  Wisdom        -3        Save        Bad          
-  Dexterity     +0        Stealth     Fair         
-  Constitution  +1        Searching   Poor         
-  Charisma      +0        Perception  Bad          
-  Life Rating  102%       Melee       Fair         
-  Base HP       12        Archery     Heroic       
-  Experience   135%
+弩兵大师能射出致命的弩箭，造成巨大伤害。他们的弩箭可能会发生威力巨大的爆
+炸，伤害附近的怪物。此外，他们的射击力度之大，甚至能将对手向后击退！
+
+  属性                    技能
+  力量          +1        解除陷阱    较差         
+  智力          -2        魔法装置    较差         
+  感知          -3        豁免检定    极差         
+  敏捷          +0        潜行能力    一般         
+  体质          +1        搜索能力    较差         
+  魅力          +0        察觉能力    极差         
+  生命评级     102%       近战能力    一般         
+  基础HP        12        箭术能力    英雄         
+  经验修正     135%
   
-Daggers
-A knife in the back! This speciality favors dual-wielding and 
-rogue-type behavior. The daggermaster can even assume the posture of 
-The Flying Dagger which greatly enhances their low level dagger toss 
-capability. Indeed, their prowess with the dagger toss is legendary and 
-appears almost magical! At high levels, you will also gain formidable 
-melee prowess with the Frenzy Stance. Finally, daggermasters have very 
-strong short ranged teleport techniques that synergize well with their 
-toss abilities.
+匕首 (Daggers)
 
-  Stats                   Skills
-  Strength      +0        Disarming   Good         
-  Intelligence  +0        Device      Poor         
-  Wisdom        -1        Save        Poor         
-  Dexterity     +3        Stealth     Very Good    
-  Constitution  -1        Searching   Fair         
-  Charisma      +0        Perception  Poor         
-  Life Rating  105%       Melee       Very Good    
-  Base HP       12        Archery     Superb       
-  Experience   135%
+背后捅刀！这种专精偏好双持和类似盗贼的行为。匕首大师甚至可以摆出“小李飞
+刀 (The Flying 
+Dagger)”的架势，这极大地增强了他们低等级时的匕首投掷能力。事实上，他们在
+投掷匕首方面的造诣是传奇级的，甚至显得有些近乎魔法！在较高等级时，你还可
+以通过狂暴架势 (Frenzy Stance) 
+获得可怕的近战战力。最后，匕首大师拥有非常强大的短距离传送技巧，能与他们
+的投掷能力产生很好的协同效应。
+
+  属性                    技能
+  力量          +0        解除陷阱    良好         
+  智力          +0        魔法装置    较差         
+  感知          -1        豁免检定    较差         
+  敏捷          +3        潜行能力    很好         
+  体质          -1        搜索能力    一般         
+  魅力          +0        察觉能力    较差         
+  生命评级     105%       近战能力    很好         
+  基础HP        12        箭术能力    出神入化     
+  经验修正     135%
   
-Polearms
-You don a grim face before setting out to reap your harvest of death. 
-You will swing your weapon wide often affecting multiple surrounding 
-opponents.
+长柄武器 (Polearms)
 
-  Stats                   Skills
-  Strength      +2        Disarming   Poor         
-  Intelligence  -2        Device      Bad          
-  Wisdom        -2        Save        Poor         
-  Dexterity     +0        Stealth     Poor         
-  Constitution  +1        Searching   Poor         
-  Charisma      +0        Perception  Bad          
-  Life Rating  105%       Melee       Superb       
-  Base HP       12        Archery     Poor         
-  Experience   135%
+在出发收割死亡之前，你板起了一副冷酷的面孔。你会大开大合地挥舞武器，通常
+能同时击中周围的多个对手。
+
+  属性                    技能
+  力量          +2        解除陷阱    较差         
+  智力          -2        魔法装置    极差         
+  感知          -2        豁免检定    较差         
+  敏捷          +0        潜行能力    较差         
+  体质          +1        搜索能力    较差         
+  魅力          +0        察觉能力    极差         
+  生命评级     105%       近战能力    出神入化     
+  基础HP        12        箭术能力    较差         
+  经验修正     135%
   
-Shields
-Specializing in shields gives excellent powers of defense and 
-retaliation. In addition, you can even choose to melee with your shield 
-rather than a normal weapon, bashing your opponents senseless. This 
-form of combat is known as Shield Bashing and is unique to this 
-speciality.
+盾牌 (Shields)
 
-  Stats                   Skills
-  Strength      +2        Disarming   Fair         
-  Intelligence  -1        Device      Poor         
-  Wisdom        +0        Save        Very Good    
-  Dexterity     +0        Stealth     Poor         
-  Constitution  +2        Searching   Poor         
-  Charisma      +0        Perception  Bad          
-  Life Rating  105%       Melee       Excellent    
-  Base HP       12        Archery     Poor         
-  Experience   135%
+专精盾牌能提供极其出色的防御和反击能力。此外，你甚至可以选择用盾牌而不是
+普通武器进行近战，将你的对手砸得失去知觉。这种战斗形式被称为“盾击 
+(Shield Bashing)”，是此专精独有的。
+
+  属性                    技能
+  力量          +2        解除陷阱    一般         
+  智力          -1        魔法装置    较差         
+  感知          +0        豁免检定    很好         
+  敏捷          +0        潜行能力    较差         
+  体质          +2        搜索能力    较差         
+  魅力          +0        察觉能力    极差         
+  生命评级     105%       近战能力    优秀         
+  基础HP        12        箭术能力    较差         
+  经验修正     135%
   
-Slings
-Watch out, Goliath! As a master of slings you will shoot pebbles with 
-uncanny speed. Your shots may even ricochet off other monsters to score 
-multiple hits. As with other archery specializations, your ammo will 
-break less often.
+投石索 (Slings)
 
-  Stats                   Skills
-  Strength      -1        Disarming   Fair         
-  Intelligence  +0        Device      Poor         
-  Wisdom        +0        Save        Poor         
-  Dexterity     +3        Stealth     Good         
-  Constitution  -1        Searching   Poor         
-  Charisma      +0        Perception  Poor         
-  Life Rating  102%       Melee       Fair         
-  Base HP       12        Archery     Heroic       
-  Experience   135%
+当心了，歌利亚！作为投石索大师，你将以不可思议的速度射出石子。你的射击甚
+至可以在其他怪物身上产生跳弹弹射，从而造成多次命中。与其他箭术专精一样，
+你的弹药不易破损。
+
+  属性                    技能
+  力量          -1        解除陷阱    一般         
+  智力          +0        魔法装置    较差         
+  感知          +0        豁免检定    较差         
+  敏捷          +3        潜行能力    良好         
+  体质          -1        搜索能力    较差         
+  魅力          +0        察觉能力    较差         
+  生命评级     102%       近战能力    一般         
+  基础HP        12        箭术能力    英雄         
+  经验修正     135%
   
-Staves
-Monkey King! You will battle opponents with a flurry of blows from your 
-mighty staff and will be prepared to counter the attacks of your 
-enemies. You can vault into battle and circle kick enemies for stunning 
-effects, attacking them with your boots! You may even eventually clone 
-yourself at great cost.
+法杖 (Staves)
 
-  Stats                   Skills
-  Strength      +0        Disarming   Poor         
-  Intelligence  -2        Device      Poor         
-  Wisdom        -1        Save        Poor         
-  Dexterity     +2        Stealth     Poor         
-  Constitution  +1        Searching   Poor         
-  Charisma      +0        Perception  Bad          
-  Life Rating  105%       Melee       Excellent    
-  Base HP       12        Archery     Poor         
-  Experience   135%
+齐天大圣！你将用威力无比的法杖（长棍）如暴风骤雨般打击对手，并随时准备反
+击敌人的攻势。你可以撑杆跃入战场，并对敌人使出回旋踢造成震慑效果，用你的
+靴子攻击他们！你甚至最终可以付出巨大代价克隆自己。
+
+  属性                    技能
+  力量          +0        解除陷阱    较差         
+  智力          -2        魔法装置    较差         
+  感知          -1        豁免检定    较差         
+  敏捷          +2        潜行能力    较差         
+  体质          +1        搜索能力    较差         
+  魅力          +0        察觉能力    极差         
+  生命评级     105%       近战能力    优秀         
+  基础HP        12        箭术能力    较差         
+  经验修正     135%
   
-Swords
-You will become a true swordmaster! Mastery of the blade will augment 
-your weapon with elemental, vorpal or vampiric powers.
+剑 (Swords)
+你将成为一名真正的剑术大师！精通剑术将为你的武器赋予元素、斩首 (vorpal) 
+或吸血的力量。
 
-  Stats                   Skills
-  Strength      +1        Disarming   Poor         
-  Intelligence  -2        Device      Bad          
-  Wisdom        -2        Save        Poor         
-  Dexterity     +1        Stealth     Poor         
-  Constitution  +1        Searching   Poor         
-  Charisma      +0        Perception  Bad          
-  Life Rating  105%       Melee       Superb       
-  Base HP       12        Archery     Poor         
-  Experience   135%
+  属性                    技能
+  力量          +1        解除陷阱    较差         
+  智力          -2        魔法装置    极差         
+  感知          -2        豁免检定    较差         
+  敏捷          +1        潜行能力    较差         
+  体质          +1        搜索能力    较差         
+  魅力          +0        察觉能力    极差         
+  生命评级     105%       近战能力    出神入化     
+  基础HP        12        箭术能力    较差         
+  经验修正     135%
   
-Diggers
-A master of digging. You prefer rocky enclosures and don't mind lugging 
-around a corpse or two, which you can bury in a pinch for a temporary 
-bonus. You can choose one of several postures which allow you to use 
-the digging bonus of your current weapon as an additional bonus, such 
-as increased strength, constitution, or even speed! So keep your eye 
-open for those +8 diggers!
+挖掘工具 (Diggers)
 
-  Stats                   Skills
-  Strength      +2        Disarming   Fair         
-  Intelligence  -2        Device      Poor         
-  Wisdom        -2        Save        Fair         
-  Dexterity     +0        Stealth     Fair         
-  Constitution  +1        Searching   Poor         
-  Charisma      +0        Perception  Bad          
-  Life Rating  105%       Melee       Superb       
-  Base HP       12        Archery     Poor         
-  Experience   135%
+挖掘大师。你偏爱岩石构成的封闭空间，且不介意随身拖着一两具尸体，在必要时
+你可以将它们埋葬以获得临时加成。你可以选择几种架势之一，使当前武器的挖掘
+加成作为额外加成生效，例如增加力量、体质，甚至速度！所以，请密切留意那些
+ +8 的挖掘工具吧！
+
+  属性                    技能
+  力量          +2        解除陷阱    一般         
+  智力          -2        魔法装置    较差         
+  感知          -2        豁免检定    一般         
+  敏捷          +0        潜行能力    一般         
+  体质          +1        搜索能力    较差         
+  魅力          +0        察觉能力    极差         
+  生命评级     105%       近战能力    出神入化     
+  基础HP        12        箭术能力    较差         
+  经验修正     135%
   
-Table 1 - Weaponmaster Statistic Bonus Table
+表 1 - 武器大师属性加成表
 
-                  STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp
-Axes               +3   -3   -2   -2   +1   +0  105%  +12  135%
-Bows               +0   -1   -1   +2   -1   +0  102%  +12  135%
-Clubs              +2   -3   -2   -2   +1   +0  105%  +12  135%
-Crossbows          +1   -2   -3   +0   +1   +0  102%  +12  135%
-Daggers            +0   +0   -1   +3   -1   +0  105%  +12  135%
-Polearms           +2   -2   -2   +0   +1   +0  105%  +12  135%
-Shields            +2   -1   +0   +0   +2   +0  105%  +12  135%
-Slings             -1   +0   +0   +3   -1   +0  102%  +12  135%
-Staves             +0   -2   -1   +2   +1   +0  105%  +12  135%
-Swords             +1   -2   -2   +1   +1   +0  105%  +12  135%
-Diggers            +2   -2   -2   +0   +1   +0  105%  +12  135%
-
-
-Table 2 - Weaponmaster Skill Bonus Table I
-
-                  Disarming     Device        Save          Stealth      
-Axes              Poor          Bad           Bad           Poor         
-Bows              Poor          Poor          Poor          Good         
-Clubs             Poor          Bad           Bad           Poor         
-Crossbows         Poor          Poor          Bad           Fair         
-Daggers           Good          Poor          Poor          Very Good    
-Polearms          Poor          Bad           Poor          Poor         
-Shields           Fair          Poor          Very Good     Poor         
-Slings            Fair          Poor          Poor          Good         
-Staves            Poor          Poor          Poor          Poor         
-Swords            Poor          Bad           Poor          Poor         
-Diggers           Fair          Poor          Fair          Fair         
+                   力量 智力 感知 敏捷 体质 魅力 生命  HP   经验
+斧头               +3   -3   -2   -2   +1   +0  105%  +12  135%
+弓                 +0   -1   -1   +2   -1   +0  102%  +12  135%
+棍棒               +2   -3   -2   -2   +1   +0  105%  +12  135%
+弩                 +1   -2   -3   +0   +1   +0  102%  +12  135%
+匕首               +0   +0   -1   +3   -1   +0  105%  +12  135%
+长柄武器           +2   -2   -2   +0   +1   +0  105%  +12  135%
+盾牌               +2   -1   +0   +0   +2   +0  105%  +12  135%
+投石索             -1   +0   +0   +3   -1   +0  102%  +12  135%
+法杖               +0   -2   -1   +2   +1   +0  105%  +12  135%
+剑                 +1   -2   -2   +1   +1   +0  105%  +12  135%
+挖掘工具           +2   -2   -2   +0   +1   +0  105%  +12  135%
 
 
-Table 3 - Weaponmaster Skill Bonus Table II
+表 2 - 武器大师技能加成表 I
 
-                  Searching     Perception    Melee         Archery      
-Axes              Poor          Bad           Heroic        Poor         
-Bows              Poor          Poor          Fair          Heroic       
-Clubs             Poor          Bad           Excellent     Fair         
-Crossbows         Poor          Bad           Fair          Heroic       
-Daggers           Fair          Poor          Very Good     Superb       
-Polearms          Poor          Bad           Superb        Poor         
-Shields           Poor          Bad           Excellent     Poor         
-Slings            Poor          Poor          Fair          Heroic       
-Staves            Poor          Bad           Excellent     Poor         
-Swords            Poor          Bad           Superb        Poor         
-Diggers           Poor          Bad           Superb        Poor         
-
-
+                  解除陷阱      魔法装置      豁免检定      潜行能力     
+斧头              较差          极差          极差          较差         
+弓                较差          较差          较差          良好         
+棍棒              较差          极差          极差          较差         
+弩                较差          较差          极差          一般         
+匕首              良好          较差          较差          很好         
+长柄武器          较差          极差          较差          较差         
+盾牌              一般          较差          很好          较差         
+投石索            一般          较差          较差          良好         
+法杖              较差          较差          较差          较差         
+剑                较差          极差          较差          较差         
+挖掘工具          一般          较差          一般          一般         
 
 
-Automatically generated for RoguelikeFansBand 7.2.salmiak.
+表 3 - 武器大师技能加成表 II
 
+                  搜索能力      察觉能力      近战能力      箭术能力     
+斧头              较差          极差          英雄          较差         
+弓                较差          较差          一般          英雄         
+棍棒              较差          极差          优秀          一般         
+弩                较差          极差          一般          英雄         
+匕首              一般          较差          很好          出神入化     
+长柄武器          较差          极差          出神入化      较差         
+盾牌              较差          极差          优秀          较差         
+投石索            较差          较差          一般          英雄         
+法杖              较差          极差          优秀          较差         
+剑                较差          极差          出神入化      较差         
+挖掘工具          较差          极差          出神入化      较差         
+
+
+
+
+为 RoguelikeFansBand 7.2.salmiak 自动生成。

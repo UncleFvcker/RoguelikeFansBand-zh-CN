@@ -1059,7 +1059,7 @@ static void crash_report_write_common(FILE *fp, cptr kind, cptr reason)
     fprintf(fp, "Reason: %s\n", reason ? reason : "(none)");
     fprintf(fp, "Time: %04d-%02d-%02d %02d:%02d:%02d\n",
         st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond);
-    fprintf(fp, "Version: %s.%d\n", VERSION_STRING, VER_EXTRA);
+    fprintf(fp, "Version: %s\n", VERSION_STRING);
     fprintf(fp, "Process: pid=%lu tid=%lu\n",
         (unsigned long)GetCurrentProcessId(), (unsigned long)GetCurrentThreadId());
     fprintf(fp, "Executable: %s\n", module);
@@ -1984,6 +1984,31 @@ static void term_sync_cjk_font(term_data *td)
         strncpy(td->cjk_lf.lfFaceName, WIN_DEFAULT_CJK_FONT_FACE, LF_FACESIZE);
 }
 
+static bool term_measure_font(HFONT font, int *wid, int *hgt)
+{
+    HDC hdc;
+    HFONT old;
+    TEXTMETRIC tm;
+    bool ok = FALSE;
+
+    if (!font) return FALSE;
+
+    hdc = GetDC(HWND_DESKTOP);
+    if (!hdc) return FALSE;
+
+    old = SelectObject(hdc, font);
+    if (GetTextMetrics(hdc, &tm))
+    {
+        if (wid) *wid = tm.tmAveCharWidth;
+        if (hgt) *hgt = tm.tmHeight;
+        ok = TRUE;
+    }
+    SelectObject(hdc, old);
+    ReleaseDC(HWND_DESKTOP, hdc);
+
+    return ok;
+}
+
 /*
  * Force the use of new fonts for a term_data.
  *
@@ -1992,7 +2017,10 @@ static void term_sync_cjk_font(term_data *td)
  */
 static errr term_force_font(term_data *td, cptr path)
 {
-    int wid, hgt;
+    int wid = td->lf.lfWidth;
+    int hgt = 0;
+    int measured_wid = 0;
+    int cjk_hgt = 0;
 
     term_delete_fonts(td);
 
@@ -2001,31 +2029,20 @@ static errr term_force_font(term_data *td, cptr path)
 
     /* Create the font (using the 'base' of the font file name!) */
     td->font_id = CreateFontIndirect(&(td->lf));
-    wid = td->lf.lfWidth;
-    hgt = td->lf.lfHeight;
     if (!td->font_id) return (1);
 
     term_sync_cjk_font(td);
     td->cjk_font_id = CreateFontIndirect(&(td->cjk_lf));
 
-    /* Hack -- Unknown size */
-    if (!wid || !hgt)
-    {
-        HDC hdcDesktop;
-        HFONT hfOld;
-        TEXTMETRIC tm;
+    term_measure_font(td->font_id, &measured_wid, &hgt);
+    term_measure_font(td->cjk_font_id, NULL, &cjk_hgt);
 
-        /* all this trouble to get the cell size */
-        hdcDesktop = GetDC(HWND_DESKTOP);
-        hfOld = SelectObject(hdcDesktop, td->font_id);
-        GetTextMetrics(hdcDesktop, &tm);
-        SelectObject(hdcDesktop, hfOld);
-        ReleaseDC(HWND_DESKTOP, hdcDesktop);
-
-        /* Font size info */
-        wid = tm.tmAveCharWidth;
-        hgt = tm.tmHeight;
-    }
+    if (wid) wid = ABS(wid);
+    else wid = measured_wid;
+    if (!hgt) hgt = ABS(td->lf.lfHeight);
+    if (cjk_hgt > hgt) hgt = cjk_hgt;
+    if (!wid) wid = 1;
+    if (!hgt) hgt = 1;
 
     /* Save the size info */
     td->font_wid = wid;
@@ -2089,7 +2106,16 @@ static void term_change_font(term_data *td, bool cjk)
         }
         else
         {
-            term_data_redraw(td);
+            if (td->tile_hgt < td->font_hgt)
+            {
+                td->tile_hgt = td->font_hgt;
+                term_getsize(td);
+                term_window_resize(td);
+            }
+            else
+            {
+                term_data_redraw(td);
+            }
         }
     }
 }
@@ -3044,8 +3070,8 @@ static errr Term_text_win(int x, int y, int n, byte a, const char *s)
             (td->tile_hgt != td->font_hgt) ||
             (td->tile_wid != td->font_wid))
         {
-            draw_left += ((td->tile_wid - td->font_wid) / 2);
-            draw_top += ((td->tile_hgt - td->font_hgt) / 2);
+            draw_left += (((int)td->tile_wid - (int)td->font_wid) / 2);
+            draw_top += (((int)td->tile_hgt - (int)td->font_hgt) / 2);
         }
 
         if (*(s+i)==127)
@@ -4169,7 +4195,8 @@ static void process_menus(WORD wCmd)
 
             td = &data[i];
 
-            td->tile_hgt -= 1;
+            if (td->tile_hgt > MAX(1, td->font_hgt))
+                td->tile_hgt -= 1;
 
             term_getsize(td);
 

@@ -937,7 +937,6 @@ static void _doc_process_var(doc_ptr doc, cptr name)
             if ((coffee_break) && (wacky_rooms) && (thrall_mode)) string_append_s(s, "<color:B> (开发版)</color>");
             else string_append_s(s, "<color:B> (开发版)</color>");
         }
-        if ((VER_MINOR == 0) && (VER_MAJOR != 7)) string_append_s(s, "<color:r> (测试版)</color>");
         doc_insert(doc, string_buffer(s));
         string_free(s);
     }

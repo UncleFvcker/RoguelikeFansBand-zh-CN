@@ -1,74 +1,70 @@
-﻿Orcs
+半兽人 (Orcs)
 
-Orcs are Morgoth's creation and the backbone of his armies. They are 
-accustomed to caves and tunnels, and resist darkness but tend to be 
-vulnerable to light. Orcs are ugly, brutish pillagers by reputation and 
-should not expect much love from shopkeepers. Morgoth's spirit lives in 
-orcs and drives them forward, making them hard to frighten. What orcs 
-lack in stealth and subtlety they make up for with their sheer brute 
-strength, and generally have little trouble brushing aside weak enemies 
-like kobolds; yet in the deep dungeons, where the strongest fighters 
-and most powerful magicians reside, orcs are rarely seen.
 
-Orc fighter
-The most common and familiar type of orc, fighter orcs are feared 
-around the world for their strength, endurance, brutality and low 
-cunning. They start their careers as a lowly Snaga, but will eventually 
-develop into Uruk-hai or even mighty warlords, capable of summoning and 
-controlling armies of lesser orcs.
+半兽人是魔苟斯的造物，也是他军队的骨干。它们习惯于洞穴和地道，对黑暗有抗
+性，但往往畏惧光明。半兽人以丑陋、野蛮的掠夺者而闻名，不要指望能从店主那
+里得到多少好脸色。魔苟斯的精神存在于半兽人体内，驱使它们前进，使它们难以
+被恐吓。半兽人在潜行和敏锐方面的不足，用纯粹的蛮力来弥补，通常可以毫不费
+力地扫除狗头人这样的弱小敌人；然而在地牢深处，也就是最强大的战士和最强大
+的魔法师居住的地方，半兽人却很罕见。
 
-  Stats                   Skills
-  Strength      -1        Disarming   Fair         
-  Intelligence  -4        Device      Very Bad     
-  Wisdom        -5        Save        Poor         
-  Dexterity     +0        Stealth     Poor         
-  Constitution  +0        Searching   Poor         
-  Charisma      -5        Perception  Bad          
-  Life Rating   99%       Melee       Excellent    
-  Base HP       30        Archery     Excellent    
-  Experience   100%       Infravision 30'
+半兽人战士 (Orc fighter)
+
+这是最常见也最令人熟悉的半兽人类型，半兽人战士因其力量、耐力、残暴和低劣
+的狡猾而让全世界感到恐惧。它们的生涯始于低贱的斯纳嘎（Snaga），但最终会
+发展成强兽人（Uruk-hai），甚至成为强大的督军，能够召唤和控制下级的半兽人
+军队。
+
+  属性                    技能
+  力量          -1        解除陷阱    尚可         
+  智力          -4        魔法装置    极差         
+  感知          -5        豁免        较差         
+  敏捷          +0        潜行        较差         
+  体质          +0        搜索        较差         
+  魅力          -5        察觉        糟糕         
+  生命评级      99%       近战        优秀         
+  基础血量      30        箭术        优秀         
+  经验值       100%       红外视觉    30'
   
-Orc shaman
-Orc shamans and warlocks are more cunning than the average orc and have 
-learned rudimentary magic from their black masters. They can detect 
-threats, blink out of dangerous situations and easily dispatch weak 
-enemies with their offensive spells, and are not quite as hopeless with 
-magic devices as their fighter kin, but like all orcs they tend to have 
-trouble when the going really gets tough.
+半兽人萨满 (Orc shaman)
 
-  Stats                   Skills
-  Strength      -1        Disarming   Fair         
-  Intelligence  -1        Device      Poor         
-  Wisdom        -5        Save        Fair         
-  Dexterity     -1        Stealth     Poor         
-  Constitution  -1        Searching   Fair         
-  Charisma      -5        Perception  Poor         
-  Life Rating   92%       Melee       Good         
-  Base HP       28        Archery     Good         
-  Experience   100%       Infravision 30'
+半兽人萨满和术士比普通的半兽人更狡猾，并且从它们的黑暗主人那里学到了基础
+的魔法。它们能探测威胁，在危险的情况下闪现逃离，并用攻击性法术轻易解决弱
+小敌人，并且它们在使用魔法装置方面不像它们的战士同胞那样无可救药，但像所
+有半兽人一样，当情况真正变得艰难时，它们往往会陷入困境。
+
+  属性                    技能
+  力量          -1        解除陷阱    尚可         
+  智力          -1        魔法装置    较差         
+  感知          -5        豁免        尚可         
+  敏捷          -1        潜行        较差         
+  体质          -1        搜索        尚可         
+  魅力          -5        察觉        较差         
+  生命评级      92%       近战        良好         
+  基础血量      28        箭术        良好         
+  经验值       100%       红外视觉    30'
   
-Table 1 - Orc Statistic Bonus Table
+表 1 - 半兽人属性加成表
 
                   STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp  Shop
-Orc fighter        -1   -4   -5   +0   +0   -5   99%  +30  100%  140%
-Orc shaman         -1   -1   -5   -1   -1   -5   92%  +28  100%  140%
+半兽人战士         -1   -4   -5   +0   +0   -5   99%  +30  100%  140%
+半兽人萨满         -1   -1   -5   -1   -1   -5   92%  +28  100%  140%
 
 
-Table 2 - Orc Skill Bonus Table I
+表 2 - 半兽人技能加成表 I
 
-                  Disarming     Device        Save          Stealth      
-Orc fighter       Fair          Very Bad      Poor          Poor         
-Orc shaman        Fair          Poor          Fair          Poor         
+                  解除陷阱      魔法装置      豁免          潜行         
+半兽人战士        尚可          极差          较差          较差         
+半兽人萨满        尚可          较差          尚可          较差         
 
 
-Table 3 - Orc Skill Bonus Table II
+表 3 - 半兽人技能加成表 II
 
-                  Searching     Perception    Melee         Archery       Infra
-Orc fighter       Poor          Bad           Excellent     Excellent       30'
-Orc shaman        Fair          Poor          Good          Good            30'
+                  搜索          察觉          近战          箭术          红外视
+半兽人战士        较差          糟糕          优秀          优秀            30'
+半兽人萨满        尚可          较差          良好          良好            30'
 
 
 
 
 Automatically generated for RoguelikeFansBand 7.2.salmiak.
-

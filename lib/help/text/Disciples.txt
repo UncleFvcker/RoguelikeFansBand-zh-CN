@@ -1,237 +1,217 @@
-﻿Disciples
+门徒 (Disciples)
 
-Trusted followers of mysterious ancient spirits known as the 'Purples', 
-the Disciples roam the world running errands for their masters, 
-learning mighty spells and receiving rare items as rewards for their 
-work. There are three main flavors of Purple Disciples - disciples of 
-Karrot, disciples of Yeqrezh, and disciples of a group of Purples known 
-as the Troika. Each of the Purples expects different things of their 
-Disciples, and each helps them achieve their ends in very different 
-ways.
+作为被称为“紫灵 
+(Purples)”的神秘古老神明的忠实追随者，门徒们在世界各地游荡，为主人们跑腿
+，学习强大的法术，并获得稀有物品作为他们工作的奖励。紫灵门徒主要分为三派
+：卡罗特 (Karrot) 的门徒，耶克雷兹 (Yeqrezh) 
+的门徒，以及一个被称为“三头同盟 
+(Troika)”的紫灵群体的门徒。每位紫灵对他们的门徒都有不同的期望，并以截然
+不同的方式帮助门徒实现目标。
 
-Karrot
-Karrot is a proud and ambitious Purple, convinced that it is his 
-destiny to one day rule the universe; but rather than getting 
-personally involved, he has assigned to his Disciples the task of 
-eliminating any potential rivals (like the Serpent of Chaos). Being so 
-sure of his greatness, Karrot sees little reason to vary his habits and 
-is the only one of the Purples to predictably teach all of his 
-Disciples the same spells. Karrot occasionally assigns side-quests to 
-his Disciples, with the dual aim of testing their mettle and removing 
-lesser threats to his supremacy. These side-quests only appear on 
-fairly challenging levels; they can be avoided by sticking to safer 
-areas, but this will not make Karrot happy...
+卡罗特 (Karrot)
 
-Karrot considers many artifacts to be his rightful personal property, 
-and will claim them immediately if you should find them. He will, 
-however, give you another artifact as a reward for your discovery. 
-These replacement artifacts tend to start out as fairly weak, but 
-eventually become very strong as you gain Karrot's respect by leveling 
-up and by successfully completing side-quests. If you're really lucky 
-and do a particularly good job, you might even receive the ultimate 
-gift - Urog, Karrot's legendary blade of shadows!
+卡罗特是一位骄傲且野心勃勃的紫灵，他坚信有朝一日统治宇宙是他的宿命；但他
+并没有亲自插手，而是将消除任何潜在竞争对手（如混沌之龙 Serpent of 
+Chaos）的任务交给了他的门徒。由于对自己的伟大深信不疑，卡罗特认为没有理
+由改变他的习惯，并且他是唯一一个总是按部就班地教授所有门徒相同法术的紫灵
+。卡罗特偶尔会给他的门徒分配支线任务，其双重目的是测试他们的勇气并消除对
+他霸权的次要威胁。这些支线任务只出现在相当具有挑战性的楼层；你可以通过待
+在较安全的区域来避开它们，但这会让卡罗特很不高兴……
 
-Disciples of Karrot tend to play as fighter-mages, relying on melee, 
-spells and devices alike. They are unique among Disciples in not having 
-a mana pool; casting a spell takes a toll on their hit points instead. 
-They are also the only Disciples to have a charming spell - but the 
-greatest of Karrot's followers are rumoured to eventually learn even 
-rarer abilities...
-Karrot's disciples depend on Intelligence to make their spells work.
 
-  Stats                   Skills
-  Strength      -1        Disarming   Fair         
-  Intelligence  +1        Device      Excellent    
-  Wisdom        -1        Save        Good         
-  Dexterity     +0        Stealth     Fair         
-  Constitution  -1        Searching   Fair         
-  Charisma      +1        Perception  Poor         
-  Life Rating   95%       Melee       Good         
-  Base HP       14        Archery     Good         
-  Experience   125%
+卡罗特认为许多神器都是他合法的个人财产，如果你找到它们，他会立即将其据为
+己有。不过，他会给你另一件神器作为你找到神器的奖励。这些替代神器起初往往
+相当弱小，但随着你通过升级和成功完成支线任务来获得卡罗特的尊重，它们最终
+会变得非常强大。如果你真的很幸运且表现特别出色，你甚至可能获得终极礼物——
+尤洛格 (Urog)，卡罗特传说中的暗影之刃！
+
+
+卡罗特的门徒倾向于扮演战法的角色，兼顾依赖近战、法术和魔法装置。他们在门
+徒中是独一无二的，因为他们没有法力池；取而代之的是，施放法术会消耗他们的
+生命值。他们也是唯一拥有魅惑法术的门徒——但据说最伟大的卡罗特追随者最终能
+学会更加罕见的能力……
+卡罗特的门徒依靠智力来维持施法的运作。
+
+  属性                    技能
+  力量          -1        解除陷阱    一般(Fair)   
+  智力          +1        魔法装置    优秀(Exclnt) 
+  感知          -1        豁免        良好(Good)   
+  敏捷          +0        潜行        一般(Fair)   
+  体质          -1        搜索        一般(Fair)   
+  魅力          +1        察觉        较差(Poor)   
+  生命加成      95%       近战        良好(Good)   
+  基础HP        14        箭术        良好(Good)   
+  经验修正     125%
   
-Yeqrezh
-Yeqrezh is the friendliest of the Purples, supportive of his Disciples 
-and willing to let them find their own way. Disciples of Yeqrezh will 
-learn 20 spells over the course of the game - one every two character 
-levels, apart from levels 10, 20, 30, 40 and 50; seventeen of these 
-spells are offered by Yeqrezh, while the other three (at levels 16, 32 
-and 48) are chosen by you. Every ten levels, Yeqrezh offers direct help 
-to his Disciples; depending on your choice, he can give you rare items 
-or a permanent mental or physical ability, or share some of his life 
-experience with you. Some of these abilities can be improved 
-repeatedly, allowing you to accumulate exceptional mastery.
+耶克雷兹 (Yeqrezh)
 
-Disciples of Yeqrezh gain many practical tools as well as solid 
-offensive options, and a useful item as a gift from their patron every 
-odd-numbered character level. They are the most mage-like of all 
-Disciples, and lack of hit points is their only true weakness. 
-Nevertheless, they are extremely versatile, and can also win through 
-melee, archery or even sneaking about silently collecting loot.
+耶克雷兹是紫灵中最友好的，他支持他的门徒并愿意让他们自己去探索道路。耶克
+雷兹的门徒在游戏过程中将学会 20 个法术——除了 10、20、30、40 和 50 
+级外，每升两级学会一个；其中 17 个法术由耶克雷兹提供，而另外 3 个（在 
+16、32 和 48 
+级时）由你选择。每隔十级，耶克雷兹会为他的门徒提供直接的帮助；根据你的选
+择，他可以给你稀有物品或一项永久的心智/肉体能力，抑或是与你分享他的一些
+人生经验。这些能力中的一部分可以被重复强化，使你能够累积非凡的专精能力。
 
-Yeqrezh is the recommended patron for new (or highly cautious) players, 
-as he is the only Purple not to actively incentivize a demanding, 
-push-the-envelope approach. Yeqrezh's disciples, like Karrot's, rely on 
-Intelligence to power their spells.
 
-  Stats                   Skills
-  Strength      +0        Disarming   Fair         
-  Intelligence  +1        Device      Fair         
-  Wisdom        +1        Save        Fair         
-  Dexterity     +0        Stealth     Fair         
-  Constitution  -3        Searching   Poor         
-  Charisma      +0        Perception  Poor         
-  Life Rating   90%       Melee       Good         
-  Base HP       12        Archery     Excellent    
-  Experience   115%
+
+耶克雷兹的门徒可以获得许多实用的工具以及可靠的进攻手段，并且在每个奇数角
+色等级时都会收到其守护神赠送的一件实用物品作为礼物。他们是所有门徒中最像
+法师的，而生命值偏低是他们唯一真正的弱点。尽管如此，他们极其全能，也可以
+通过近战、箭术甚至悄无声息地潜行收集战利品来赢得胜利。
+
+
+耶克雷兹是推荐给新手（或极度谨慎的）玩家的守护神，因为他是唯一一个不会主
+动鼓励你采取高风险、挑战极限打法的紫灵。像卡罗特的门徒一样，耶克雷兹的门
+徒依靠智力来驱动他们的法术。
+
+  属性                    技能
+  力量          +0        解除陷阱    一般(Fair)   
+  智力          +1        魔法装置    一般(Fair)   
+  感知          +1        豁免        一般(Fair)   
+  敏捷          +0        潜行        一般(Fair)   
+  体质          -3        搜索        较差(Poor)   
+  魅力          +0        察觉        较差(Poor)   
+  生命加成      90%       近战        良好(Good)   
+  基础HP        12        箭术        优秀(Exclnt) 
+  经验修正     115%
   
-Troika
-The Troika is a group of three closely related Purples working together 
-- Guntujant, Uxip and Sohoglyth. Guntujant is a capricious Purple who 
-follows the careers of his servants very closely, and rewards and 
-punishes them seemingly at random; the powers gained by his followers 
-are unpredictable, but generally quite strong. Uxip delights in combat, 
-and grants Troika disciples their prodigious endurance and skill with 
-two-handed weapons; however, a number of common items are an 
-abomination unto Uxip, and cannot be used by followers of the Troika. 
-Sohoglyth is a mysterious spirit, but a profoundly powerful one. She 
-occasionally sets bonus quests for Troika disciples; if enough of the 
-quests are completed with no failures, she will reward the questor with 
-the power of telepathy, remote object quality sensing, or even walking 
-through walls.
+三头同盟 (Troika)
+三头同盟是一个由三个密切相关的紫灵协同工作的组织——冈图扬 
+(Guntujant)、乌克西普 (Uxip) 和 索霍格利斯 
+(Sohoglyth)。冈图扬是一个变化无常的紫灵，他密切关注着仆从们的生涯，并似
+乎随机地对他们进行奖惩；他追随者获得的力量是不可预测的，但通常相当强大。
+乌克西普热衷于战斗，并赋予三头同盟门徒惊人的耐力和双手武器技巧；然而，对
+于乌克西普来说，许多普通物品都是可憎之物，因此三头同盟的追随者无法使用这
+些物品。索霍格利斯是一个神秘的灵魂，但力量极其深厚。她偶尔会给三头同盟的
+门徒设定奖励任务；如果在没有失败的情况下完成了足够的任务，她将奖励任务完
+成者心灵感应、远程物品感知、甚至穿墙的能力。
 
-Troika Disciples are in general very strong, especially in combat but 
-also sorcery, yet the limitations placed upon them by Uxip and 
-Guntujant also make them in some ways vulnerable. In particular, they 
-frequently suffer random punishments, risk being punished if they 
-teleport from a fight while not at low health, cannot wear a shield or 
-cure poison with mushrooms, and must earn the right to use a rod of 
-Detection. The spells of Troika disciples are unique in that they are 
-not learned at any particular character level; instead, Guntujant and 
-Uxip will teach them as a reward for killing dangerous enemies, 
-especially uniques. Strength determines the spellcasting ability of a 
-Troika disciple.
 
-  Stats                   Skills
-  Strength      +1        Disarming   Good         
-  Intelligence  +0        Device      Bad          
-  Wisdom        -1        Save        Bad          
-  Dexterity     +1        Stealth     Fair         
-  Constitution  +2        Searching   Poor         
-  Charisma      +0        Perception  Poor         
-  Life Rating  108%       Melee       Excellent    
-  Base HP       23        Archery     Good         
-  Experience   150%
+三头同盟门徒通常非常强大，尤其是在战斗以及法术方面，然而乌克西普和冈图扬
+对他们施加的限制也使他们在某些方面很脆弱。特别是，他们经常遭受随机的惩罚
+，如果在并非低血量时从战斗中传送逃离就有可能受到惩罚，此外他们不能装备盾
+牌或用蘑菇解毒，并且必须赢取使用探测魔棒 (rod of Detection) 
+的权利。三头同盟门徒的法术十分独特，因为它们不是在任何特定角色等级学会的
+；相反，冈图扬和乌克西普会将教授法术作为击杀危险敌人（特别是独特怪物）的
+奖励。力量决定了三头同盟门徒的施法能力。
+
+  属性                    技能
+  力量          +1        解除陷阱    良好(Good)   
+  智力          +0        魔法装置    极差(Bad)    
+  感知          -1        豁免        极差(Bad)    
+  敏捷          +1        潜行        一般(Fair)   
+  体质          +2        搜索        较差(Poor)   
+  魅力          +0        察觉        较差(Poor)   
+  生命加成     108%       近战        优秀(Exclnt) 
+  基础HP        23        箭术        良好(Good)   
+  经验修正     150%
   
-TIP: The special random quests for Karrot and Troika disciples can only 
-appear if you are sufficiently deep for the quest to be challenging. 
-Pressing CTRL+F reveals your patron's opinion of your current depth. 
-The Purples also like you to visit many different dungeons; do not 
-expect a large number of assignments in a single dungeon, unless you 
-are playing with no wilderness.
 
-Table 1 - Disciple Statistic Bonus Table
+提示：卡罗特和三头同盟门徒的特殊随机任务只有在你所处的深度足以使任务具有
+挑战性时才会出现。按下 CTRL+F 
+可以查看你的守护神对你当前所处深度的看法。紫灵们也喜欢你探索许多不同的地
+下城；不要指望在同一个地下城中接到大量任务，除非你是在没有大地图野外的模
+式下进行游戏。
 
-                  STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp
-Karrot             -1   +1   -1   +0   -1   +1   95%  +14  125%
-Yeqrezh            +0   +1   +1   +0   -3   +0   90%  +12  115%
-Troika             +1   +0   -1   +1   +2   +0  108%  +23  150%
+表 1 - 门徒属性加成表
 
-
-Table 2 - Disciple Skill Bonus Table I
-
-                  Disarming     Device        Save          Stealth      
-Karrot            Fair          Excellent     Good          Fair         
-Yeqrezh           Fair          Fair          Fair          Fair         
-Troika            Good          Bad           Bad           Fair         
+                  力量 智力 感知 敏捷 体质 魅力 生命  BHP  经验
+卡罗特             -1   +1   -1   +0   -1   +1   95%  +14  125%
+耶克雷兹           +0   +1   +1   +0   -3   +0   90%  +12  115%
+三头同盟           +1   +0   -1   +1   +2   +0  108%  +23  150%
 
 
-Table 3 - Disciple Skill Bonus Table II
+表 2 - 门徒技能加成表 I
 
-                  Searching     Perception    Melee         Archery      
-Karrot            Fair          Poor          Good          Good         
-Yeqrezh           Poor          Poor          Good          Excellent    
-Troika            Poor          Poor          Excellent     Good         
+                  解除陷阱      魔法装置      豁免          潜行         
+卡罗特            一般(Fair)    优秀(Exclnt)  良好(Good)    一般(Fair)   
+耶克雷兹          一般(Fair)    一般(Fair)    一般(Fair)    一般(Fair)   
+三头同盟          良好(Good)    极差(Bad)     极差(Bad)     一般(Fair)   
 
 
-Table 4 - Yeqrezh Talents
+表 3 - 门徒技能加成表 II
 
-Disciples of Yeqrezh can choose five special gifts, one every ten 
-levels. These gifts can take the form of new abilities, physical 
-powers, or rare items; some can be chosen repeatedly, while others can 
-only be picked once. Once you have selected a gift, you can never go 
-back on your decision, so you might want to study this list to decide 
-which gifts to choose for your character.
+                  搜索          察觉          近战          箭术         
+卡罗特            一般(Fair)    较差(Poor)    良好(Good)    良好(Good)   
+耶克雷兹          较差(Poor)    较差(Poor)    良好(Good)    优秀(Exclnt) 
+三头同盟          较差(Poor)    较差(Poor)    优秀(Exclnt)  良好(Good)   
 
-  Purple Muscles
-  Gives +2 STR and +2 DEX.
 
-  Purple Vitality
-  All healing effects will give 10% more HP than normally.
+表 4 - 耶克雷兹天赋 (Yeqrezh Talents)
 
-  Purple Speed
-  Gives +1 speed.
 
-  Purple Deadliness
-  Gives +8 melee to-dam (not applied to innate attacks).
+耶克雷兹的门徒可以选择五份特殊的礼物，每十级选择一次。这些礼物可以是新能
+力、肉体力量或稀有物品的形式；有些可以重复选择，而另一些只能选择一次。一
+旦你选择了一份礼物，你就永远无法撤回你的决定，因此你可能需要研究这个列表
+，以决定为你的角色选择哪些礼物。
 
-  Purple Stealth
-  Gives +4 stealth.
+  紫灵肌肉 (Purple Muscles)
+  赋予 +2 力量 和 +2 敏捷。
 
-  Purple Protection
-  Gives +15 AC.
+  紫灵活力 (Purple Vitality)
+  所有治疗效果将比通常多恢复 10% 的 HP。
 
-  Device Mastery
-  Gives device skills equal to +1 Md.
+  紫灵速度 (Purple Speed)
+  赋予 +1 速度。
 
-  Rapid Shooting
-  Gives a shooting speed increase equal to +1 Xs.
+  紫灵致命 (Purple Deadliness)
+  赋予 +8 近战伤害加值（不适用于天生攻击）。
 
-  Power Sorcery
-  Increases your spellpower by +15%, but decreases your life multiplier 
-  by 3 points.
+  紫灵潜行 (Purple Stealth)
+  赋予 +4 潜行。
 
-  Nervous Casting
-  Increases your spellpower by +15%, but makes you vulnerable to fear.
+  紫灵防护 (Purple Protection)
+  赋予 +15 护甲等级 (AC)。
 
-  Easy Casting
-  Lowers spell fail rates by 4 percentage points.
+  装置精通 (Device Mastery)
+  赋予相当于 +1 Md (魔法装置系数) 的魔法装置技能。
 
-  Quick Spelling
-  Casting a spell will only consume 93% of the usual time.
+  快速射击 (Rapid Shooting)
+  赋予相当于 +1 Xs (额外射击次数) 的射击速度提升。
 
-  Speedy Recovery
-  Gives +100% regeneration.
+  强效咒术 (Power Sorcery)
+  将你的法术强度提高 15%，但将你的生命值乘数降低 3 点。
 
-  Lottery Tickets
-  You will receive three scrolls of *Acquirement* from Yeqrezh.
+  神经质施法 (Nervous Casting)
+  将你的法术强度提高 15%，但使你容易受到恐惧的影响。
 
-  Notes of Death
-  You will receive five scrolls of Mass Genocide from Yeqrezh.
+  轻松施法 (Easy Casting)
+  降低 4 个百分点的法术失败率。
 
-  Essence of Life
-  You will receive three potions of Life from Yeqrezh.
+  快速咏唱 (Quick Spelling)
+  施放法术只需消耗通常 93% 的时间。
 
-  Yeqrezh's Memories
-  Immediately gives another 5 character levels.
+  加速恢复 (Speedy Recovery)
+  赋予 +100% 再生。
 
-  Strange Mind
-  Protects your mind from hallucination and Eldritch Horrors.
+  彩票 (Lottery Tickets)
+  你将从耶克雷兹那里获得 3 张 *祈愿* (*Acquirement*) 卷轴。
 
-  Strong Mind
-  Makes you immune to mana draining.
+  死亡笔记 (Notes of Death)
+  你将从耶克雷兹那里获得 5 张群体灭绝 (Mass Genocide) 卷轴。
 
-  Object Lessons
-  Allows you to sense the quality of distant objects and automatically 
-  identify all objects you walk over.
+  生命精华 (Essence of Life)
+  你将从耶克雷兹那里获得 3 瓶生命药水 (potions of Life)。
 
-  Trump Shuffling
-  Gives you access to the Shuffle spell, and automatically gives Self 
-  Knowledge if the Judgement card is drawn.
+  耶克雷兹的记忆 (Yeqrezh's Memories)
+  立即再提升 5 个角色等级。
+
+  奇异心智 (Strange Mind)
+  保护你的心智免受幻觉和不可名状的恐怖 (Eldritch Horrors) 的影响。
+
+  坚韧心智 (Strong Mind)
+  使你免疫法力吸取。
+
+  物品认知 (Object Lessons)
+  允许你感知远处物品的品质，并自动鉴定所有你踩过的物品。
+
+  王牌洗牌 (Trump Shuffling)
+  让你能够使用“洗牌 (Shuffle)”法术，且如果抽到“审判 
+  (Judgement)”牌，会自动赋予你“自我认知 (Self Knowledge)”。
 
 
 
 
 
-Automatically generated for RoguelikeFansBand 7.2.salmiak.
-
+自动生成，适用于 RoguelikeFansBand 7.2.salmiak。
