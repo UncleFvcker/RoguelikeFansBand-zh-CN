@@ -253,7 +253,7 @@ static void spoil_obj_desc(cptr fname)
 
 
     /* Header */
-    fprintf(fff, "剧透文件 -- 基础物品 (FrogComposband %d.%d.%s)\n\n\n",
+    fprintf(fff, "剧透文件 -- 基础物品 (RoguelikeFansBand %d.%d.%s)\n\n\n",
         VER_MAJOR, VER_MINOR, VER_PATCH);
 
     /* More Header */
@@ -837,7 +837,7 @@ static void spoil_mon_desc(void)
     doc_ptr doc = doc_alloc(80);
 
     doc_change_name(doc, "mon-desc.html");
-    doc_printf(doc, "<color:heading>FrogComposband 版本 %d.%d.%s 怪物表格</color>\n\n",
+    doc_printf(doc, "<color:heading>RoguelikeFansBand 版本 %d.%d.%s 怪物表格</color>\n\n",
                      VER_MAJOR, VER_MINOR, VER_PATCH);
     doc_insert(doc, "<style:table>");
 
@@ -1544,7 +1544,7 @@ static void spoil_mon_spell_dam(void)
     _spoil_mon_spell_dam_aux(doc, v);
 
     doc_insert(doc, "</style>");
-    doc_printf(doc, "\n<color:D>为 FrogComposband 版本 %d.%d.%s 生成</color>\n\n",
+    doc_printf(doc, "\n<color:D>为 RoguelikeFansBand 版本 %d.%d.%s 生成</color>\n\n",
                      VER_MAJOR, VER_MINOR, VER_PATCH);
     doc_display(doc, "怪物表格", 0);
     doc_free(doc);
@@ -1562,7 +1562,7 @@ static void spoil_mon_melee_dam(void)
     _spoil_mon_melee_dam_aux(doc, v);
 
     doc_insert(doc, "</style>");
-    doc_printf(doc, "\n<color:D>为 FrogComposband 版本 %d.%d.%s 生成</color>\n\n",
+    doc_printf(doc, "\n<color:D>为 RoguelikeFansBand 版本 %d.%d.%s 生成</color>\n\n",
                      VER_MAJOR, VER_MINOR, VER_PATCH);
     doc_display(doc, "怪物表格", 0);
     doc_free(doc);
@@ -1602,7 +1602,7 @@ static void spoil_mon_non_nice(void)
     _spoil_mon_non_nice_aux(doc, v);
 
     doc_insert(doc, "</style>");
-    doc_printf(doc, "\n<color:D>为 FrogComposband 版本 %d.%d.%s 生成</color>\n\n",
+    doc_printf(doc, "\n<color:D>为 RoguelikeFansBand 版本 %d.%d.%s 生成</color>\n\n",
                      VER_MAJOR, VER_MINOR, VER_PATCH);
     doc_display(doc, "怪物表格", 0);
     doc_free(doc);
@@ -1679,7 +1679,7 @@ static void spoil_mon_resist(void)
     _spoil_mon_resist_aux(doc, v);
 
     doc_insert(doc, "</style>");
-    doc_printf(doc, "\n<color:D>为 FrogComposband 版本 %d.%d.%s 生成</color>\n\n",
+    doc_printf(doc, "\n<color:D>为 RoguelikeFansBand 版本 %d.%d.%s 生成</color>\n\n",
                      VER_MAJOR, VER_MINOR, VER_PATCH);
     doc_display(doc, "怪物表格", 0);
     doc_free(doc);
@@ -1867,7 +1867,7 @@ static void spoil_device_fail()
         doc_newline(doc);
     }
     doc_insert(doc, "</style>");
-    doc_printf(doc, "\n<color:D>为 FrogComposband %d.%d.%s 生成</color>\n",
+    doc_printf(doc, "\n<color:D>为 RoguelikeFansBand %d.%d.%s 生成</color>\n",
                      VER_MAJOR, VER_MINOR, VER_PATCH);
     doc_display(doc, "装置失败率", 0);
     doc_free(doc);
@@ -1953,7 +1953,7 @@ static void spoil_device_tables()
     _spoil_device_table_aux(doc, rod_effect_table, "魔棒");
 
     doc_insert(doc, "</style>");
-    doc_printf(doc, "\n<color:D>为 FrogComposband %d.%d.%s 生成</color>\n",
+    doc_printf(doc, "\n<color:D>为 RoguelikeFansBand %d.%d.%s 生成</color>\n",
                      VER_MAJOR, VER_MINOR, VER_PATCH);
     doc_display(doc, "装置伤害/强度表格", 0);
     doc_free(doc);
@@ -2047,7 +2047,7 @@ static void spoil_mon_evol(void)
     doc_ptr doc = doc_alloc(80);
 
     doc_change_name(doc, "mon-evol.html");
-    doc_printf(doc, "<color:heading>FrogComposband 版本 %d.%d.%s 怪物进化列表</color>\n",
+    doc_printf(doc, "<color:heading>RoguelikeFansBand 版本 %d.%d.%s 怪物进化列表</color>\n",
                      VER_MAJOR, VER_MINOR, VER_PATCH);
     doc_insert(doc, "<style:table>");
 
@@ -2228,7 +2228,7 @@ static void spoil_skills()
     vec_free(v);
 
     doc_insert(doc, "</style>");
-    doc_printf(doc, "\n<color:D>为 FrogComposband %d.%d.%s 生成</color>\n",
+    doc_printf(doc, "\n<color:D>为 RoguelikeFansBand %d.%d.%s 生成</color>\n",
                      VER_MAJOR, VER_MINOR, VER_PATCH);
     doc_display(doc, "技能", 0);
     doc_free(doc);
