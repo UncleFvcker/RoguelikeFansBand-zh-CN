@@ -1,4 +1,4 @@
-The Races
+﻿The Races
 There are many races in the world, each, for the most part, with both 
 strengths and weaknesses. In general, the stronger a race is, the 
 higher its Experience Penalty and the longer it will take to gain 
@@ -1137,5 +1137,5 @@ Yeek         Excellent     Excellent     Poor          Fair            20'
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

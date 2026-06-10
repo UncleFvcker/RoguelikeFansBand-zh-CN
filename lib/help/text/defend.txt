@@ -1,4 +1,4 @@
-Defending and Armor
+﻿Defending and Armor
  
 There are a number of ways in which monsters can attack you: in direct 
 melee combat, by exploding next to you, by breathing on you, or by 
@@ -387,6 +387,6 @@ Updated    : (??)
 Updated    : Zangband DevTeam
 Updated    : Hengband 1.0.11
 Updated    : PosChengband 7.0.0
-Updated    : FrogComposband 7.1.liquorice
+Updated    : RoguelikeFansBand 7.1.liquorice
 
 

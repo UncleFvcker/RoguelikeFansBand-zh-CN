@@ -1,4 +1,4 @@
-Orcs
+﻿Orcs
 
 Orcs are Morgoth's creation and the backbone of his armies. They are 
 accustomed to caves and tunnels, and resist darkness but tend to be 
@@ -70,5 +70,5 @@ Orc shaman        Fair          Poor          Good          Good            30'
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

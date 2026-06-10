@@ -1,4 +1,4 @@
-Changes in FrogComposband 7.1.salmiak:
+﻿Changes in RoguelikeFansBand 7.1.salmiak:
 
 * Added new dungeons and randomized which dungeons actually appear
 
@@ -12,7 +12,7 @@ Wyrm Angel Daemon Lich as an exclusively postgame monster)
 
 * Moved to a 32-color palette and changed the colors of many monsters
 -- NOTES: If your platform does not support more than 16 colors, or 
-  FrogComposband's coloring code for your platform is faulty, compile 
+  RoguelikeFansBand's coloring code for your platform is faulty, compile 
   with --disable-xtra-colours to retain use of 16 colors only. If your 
   platform does support more than 16 colors but you wish to stick to 16 
   (from nostalgic reasons or for greater contrast between colors), load 
@@ -275,7 +275,7 @@ determining fail rates
 -------------------------------------------------------
 
 
-Changes in FrogComposband 7.1.liquorice:
+Changes in RoguelikeFansBand 7.1.liquorice:
 
 * Added a new player race (Igor)
 
@@ -592,7 +592,7 @@ monster has been specified
 -------------------------------------------------------
 
 
-Changes in FrogComposband 7.1.chocolate:
+Changes in RoguelikeFansBand 7.1.chocolate:
 
 * Added a new player class (Disciples; which are essentially three 
 classes rolled in one, because the three subclasses don't have much in 
@@ -867,7 +867,7 @@ attempt is completely futile
 -------------------------------------------------------
 
 
-Changes in FrogComposband 7.1.toffee:
+Changes in RoguelikeFansBand 7.1.toffee:
 
 * Random ring and amulet artifacts can now generate occasionally
 
@@ -1220,7 +1220,7 @@ proceeding with a reforge
 -------------------------------------------------------
 
 
-Changes in FrogComposband 7.0.cloudberry:
+Changes in RoguelikeFansBand 7.0.cloudberry:
 
 * Improved support for play on the angband.live online server (unwanted 
 auto-running on keyboards with no Num Lock, which has been a perennial 
@@ -1435,7 +1435,7 @@ xorns for users of the roguelike keyset)
 -------------------------------------------------------
 
 
-Changes in FrogComposband 7.0.nougat:
+Changes in RoguelikeFansBand 7.0.nougat:
 
 * Added two new races (Einheri and Werewolf). Einherjar are very 
 powerful but only receive partial benefits from magical healing. 
@@ -1738,7 +1738,7 @@ objects you may have left waiting outside will still be lost.)
 -------------------------------------------------------
 
 
-Changes in FrogComposband 7.0.mango:
+Changes in RoguelikeFansBand 7.0.mango:
 
 * Introduced three new personalities (Chaotic, Mundane and Unlucky) and 
 restored the removed Lazy and Munchkin personalities. (Thanks to MITZE 
@@ -2063,7 +2063,7 @@ to generate a reward that isn't cursed)
 -------------------------------------------------------
 
 
-Changes in FrogComposband 7.0.peppermint:
+Changes in RoguelikeFansBand 7.0.peppermint:
 
 * Totally revamped the no-wilderness town, and fixed quest descriptions 
 so they're accurate with both wilderness and no wilderness
@@ -2264,7 +2264,7 @@ a race they were temporarily polymorphed into or mimicking)
 -------------------------------------------------------
 
 
-Changes in FrogComposband 7.0.strawberry (compared to ComPosband 
+Changes in RoguelikeFansBand 7.0.strawberry (compared to ComPosband 
 7.0.3):
 
 * Rebalanced artifact reforging. The goal was to prevent silly-powerful 
@@ -2335,7 +2335,7 @@ every quest in the game at depth)
 
 * In ComPosband, if a quest level was buggy and didn't generate 
 properly, the game would crash and the player would be forced to fail 
-it on resuming play. In FrogComposband, while the game will still 
+it on resuming play. In RoguelikeFansBand, while the game will still 
 crash, the player can continue normally on resumption and can retake 
 the quest after it has been fixed. This should make life easier for 
 both developers and test-players
@@ -2380,8 +2380,8 @@ Ctrl+O for ]
 * Made free action stronger because Chris's system was somewhat 
 confusing and unpopular, though the change here is not as big as what 
 Gwarl did in ComPosband 7.0.4. 1 source of free action works the same 
-in FrogComposband as in ComPosband 7.0.3 (and the last versions of 
-PosChengband). 2 sources are slightly stronger in FrogComposband (and 
+in RoguelikeFansBand as in ComPosband 7.0.3 (and the last versions of 
+PosChengband). 2 sources are slightly stronger in RoguelikeFansBand (and 
 give total paralysis immunity against low-level monsters), and 3 
 sources give total immunity against all monsters, except in special 
 cases like ty_curse

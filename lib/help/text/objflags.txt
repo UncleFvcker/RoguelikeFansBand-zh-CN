@@ -1,6 +1,6 @@
-Equipment Properties
+﻿Equipment Properties
 
-Each object in FrogComposband has certain basic properties: base AC 
+Each object in RoguelikeFansBand has certain basic properties: base AC 
 (armor class), bonus AC, damage dice (or a damage multiplier on ranged 
 weapons), an accuracy (to-hit) bonus, a damage (to-dam) bonus, and a 
 pval indicating the size of various other bonuses. Some or all of these 
@@ -984,6 +984,6 @@ This curse only generates on heavily cursed items, though it may also
 appear as a normal unremovable flag attribute.
 
 
-Original   : FrogComposband 7.1.raspberry
+Original   : RoguelikeFansBand 7.1.raspberry
 
 

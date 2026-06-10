@@ -1,4 +1,4 @@
-The Speed System
+﻿The Speed System
 
 Speed is one of the most important character (and monster) attributes 
 in the game; but it works in complicated and at times unintuitive ways. 
@@ -355,6 +355,6 @@ a fixed amount of time rather than a fixed amount of player turns.)
 
 
 
-Original   : FrogComposband 7.1.salmiak
+Original   : RoguelikeFansBand 7.1.salmiak
 
 

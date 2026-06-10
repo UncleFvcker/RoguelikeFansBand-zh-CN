@@ -1,4 +1,4 @@
-Demons
+﻿Demons
 
 Demons are powerful servants of evil and come in many forms. They rely 
 on their devilish powers or their brutish strength to survive.
@@ -113,5 +113,5 @@ Cyberdemon        Poor          Bad           Heroic        Bad             50'
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

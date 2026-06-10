@@ -1,6 +1,6 @@
-The Proficiency System
+﻿The Proficiency System
 
-FrogComposband has a number of independent proficiency systems - weapon 
+RoguelikeFansBand has a number of independent proficiency systems - weapon 
 proficiency, spell proficiency, riding proficiency, martial arts 
 proficiency and dual-wielding proficiency. All of these are closely 
 related and have many similarities; in particular, your proficiency is 
@@ -117,6 +117,6 @@ rates and mana cost in other ways. See [a] for a more detailed
 explanation of the spell proficiency system.
 
 
-Original   : FrogComposband 7.1.liquorice
+Original   : RoguelikeFansBand 7.1.liquorice
 
 

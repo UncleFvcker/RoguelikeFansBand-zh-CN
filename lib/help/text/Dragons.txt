@@ -1,4 +1,4 @@
-Dragons
+﻿Dragons
 
 Dragons are powerful winged serpents. They are strong in combat, with 
 razor-sharp claws and a bone-crushing bite; but even more legendary is 
@@ -341,5 +341,5 @@ Steel Dragon      Bad           Bad           Superb        Bad             50'
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

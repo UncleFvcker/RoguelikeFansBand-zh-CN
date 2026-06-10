@@ -1,4 +1,4 @@
-The Classes
+﻿The Classes
 
 No decision is so important as which class to play. Below, the many 
 available classes are loosely grouped by their principal strength or 
@@ -1522,5 +1522,5 @@ Wild-Talent   Fair          Poor          Good          Excellent
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

@@ -1,4 +1,4 @@
-Weaponmasters
+﻿Weaponmasters
 
 A Weaponmaster is exceptionally good with a single class of weapons, 
 obtaining special combat bonuses and powers which depend on their 
@@ -250,5 +250,5 @@ Diggers           Poor          Bad           Superb        Poor
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

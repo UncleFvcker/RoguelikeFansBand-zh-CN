@@ -1,4 +1,4 @@
-Warlocks
+﻿Warlocks
 
 Warlocks are a magical class; they derive their spells and powers not 
 from books, but from an eldritch pact made with a given class of 
@@ -212,5 +212,5 @@ Giants            Poor          Bad           Heroic        Fair
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

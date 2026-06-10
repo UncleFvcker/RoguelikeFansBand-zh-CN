@@ -1,4 +1,4 @@
-The Magic System
+﻿The Magic System
 
 Just beneath the surface of the commonplace and mundane lurks the 
 unpredictable and magical. Some may access these forces, gaining great 
@@ -528,6 +528,6 @@ Updated    : (??)
 Updated    : Zangband DevTeam
 Updated    : Hengband 1.7.2
 Updated    : PosChengband 7.0.0
-Updated    : FrogComposband 7.1.liquorice
+Updated    : RoguelikeFansBand 7.1.liquorice
 
 

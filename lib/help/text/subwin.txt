@@ -1,4 +1,4 @@
-Subwindows
+﻿Subwindows
 
 In addition to the main game display terminal, which is always visible 
 (and can show anything from dungeon maps to helpfiles), the game allows 
@@ -65,19 +65,19 @@ Setting up subwindows in offline play (Linux with curses)
 Use the command line to specify subwindow size and placement as you 
 launch the game. Here are a few examples:
 
-$ ./frogcomposband -mgcu -uCrusher -- -right 57x26,*
+$ ./RoguelikeFansBand -mgcu -uCrusher -- -right 57x26,*
 
 This specifies a subwindow strip to the right of the main display that 
 is 57 columns wide; this strip will contain two subwindows, one that is 
 26 rows high and one that fills whatever space still remains.
 
-$ ./frogcomposband -mgcu -uCrusher -- -right 57x26,* -bottom *x10
+$ ./RoguelikeFansBand -mgcu -uCrusher -- -right 57x26,* -bottom *x10
 
 Specifies the same two subwindows as before plus a third subwindow 
 (Term-3) below the main display, occupying 10 rows and (TOTAL-57) 
 columns.
 
-$ ./frogcomposband -mgcu -uCrusher -- -bottom *x10 -right 57x26,*
+$ ./RoguelikeFansBand -mgcu -uCrusher -- -bottom *x10 -right 57x26,*
 
 Same as above, except that the subwindow at the bottom is now Term-1 
 and gets to occupy every column.
@@ -86,6 +86,6 @@ Type =W during play to determine what each subwindow displays.
 
 
 --
-Original   : FrogComposband 7.1.liquorice
+Original   : RoguelikeFansBand 7.1.liquorice
 
 

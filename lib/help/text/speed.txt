@@ -1,8 +1,8 @@
-Game Speed Modes
+﻿Game Speed Modes
 
-FrogComposband offers several different game-speed modes, depending on 
+RoguelikeFansBand offers several different game-speed modes, depending on 
 how long and complex you wish the game to be. Normal mode is the full 
-FrogComposband experience; it gives access to a vast wilderness, and 
+RoguelikeFansBand experience; it gives access to a vast wilderness, and 
 many towns, dungeons and side-quests not available in other modes. But 
 if you want to play a shorter game, or are just getting started and 
 don't want too many complications, there are two accelerated game modes 
@@ -17,7 +17,7 @@ will reach the endgame, depends greatly on the game speed selected.
 Normal (full game)
 
 This is the traditional game speed, and the one that offers the most 
-complete game. In a full game of FrogComposband, you will fight 
+complete game. In a full game of RoguelikeFansBand, you will fight 
 thousands of monsters, complete dozens of quests, explore more than 30 
 dungeons and eagerly inspect thousands of (potentially) magical 
 objects. It is possible to play in Normal Mode with the special 
@@ -87,6 +87,6 @@ wish to be overwhelmed! A complete game in instant-coffee mode
 typically lasts between 2 and 15 hours.
 
 
-Original   : FrogComposband 7.1.liquorice
+Original   : RoguelikeFansBand 7.1.liquorice
 
 

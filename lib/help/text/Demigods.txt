@@ -1,4 +1,4 @@
-Demigod Parentage
+﻿Demigod Parentage
 
 The term demigod is commonly used to describe mythological figures 
 whose one parent was a god and whose other parent was human; as such, 
@@ -445,5 +445,5 @@ weakness.
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

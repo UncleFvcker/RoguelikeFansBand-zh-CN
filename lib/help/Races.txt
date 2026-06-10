@@ -1,4 +1,4 @@
-<style:title>种族 (The Races)</style>
+﻿<style:title>种族 (The Races)</style>
 世界上有许多种族，大多数种族都有各自的优势和劣势。一般来说，一个种族越强大，其<color:keyword>经验惩罚 (Experience Penalty)</color>就越高，升级所需的时间也就越长。
 
 有关<color:keyword>属性 (Stats)</color>的详细信息，请参阅 <link:birth.txt#PrimaryStats>。有关<color:keyword>技能 (Skills)</color>的信息，请参阅 <link:birth.txt#PrimarySkills>。本文档中的技能描述<color:v>仅供比较参考</color>；它们能告诉你一个种族相较于其他种族有多优秀，但不应将其作为你初出茅庐的角色将拥有的确切技能等级指标。通常来说，技能受等级、种族、职业、属性和装备的共同影响。请参阅下方的种族能力表 <link:Races.txt#Tables> 以快速比较各个种族。
@@ -860,4 +860,4 @@
 </style>
 
 
-<color:s>Automatically generated for FrogComposband 7.2.salmiak.</color>
+<color:s>Automatically generated for RoguelikeFansBand 7.2.salmiak.</color>

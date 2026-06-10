@@ -1,4 +1,4 @@
-墨家明器
+﻿墨家明器
 
 墨家明器 is a rules-based system for automatic object handling, 
 which you can activate or modify with the _ command. With this system, 
@@ -727,7 +727,7 @@ and edit them in-game, which you cannot do with the global defaults.)
 Once you activate the 墨家明器, your preferences are stored in a 
 separate file in a system-dependent location. On Windows, they will be 
 stored at lib/user/pickpref-NAME.prf, while on Linux they might be 
-moved to ~/.angband/FrogComposband/pickpref-NAME.prf (outside the 
+moved to ~/.angband/RoguelikeFansBand/pickpref-NAME.prf (outside the 
 game's directory structure). Here, NAME is replaced with your player's 
 current name. So if you want to edit your character's preferences using 
 an outside text editor, this is the file you need to change. It's 
@@ -1162,6 +1162,6 @@ Table X: Conditionals: Literals
   
 --
 Original   : PosChengband 4.0.0
-Updated    : FrogComposband 7.1.liquorice
+Updated    : RoguelikeFansBand 7.1.liquorice
 
 

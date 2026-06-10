@@ -1,6 +1,6 @@
-Level Size Options
+﻿Level Size Options
 
-The size of FrogComposband levels varies from dungeon to dungeon, and 
+The size of RoguelikeFansBand levels varies from dungeon to dungeon, and 
 from depth to depth, but the same basic system applies: the width of a 
 level is always a multiple of 66 grids (no greater than 198), and the 
 height of a level is always a multiple of 22 grids (no greater than 
@@ -94,6 +94,6 @@ Tiny
    even in "big" dungeons, is guaranteed to be 1x1.
 
 
-Updated    : FrogComposband 7.1.chocolate
+Updated    : RoguelikeFansBand 7.1.chocolate
 
 

@@ -1,4 +1,4 @@
-Disciples
+﻿Disciples
 
 Trusted followers of mysterious ancient spirits known as the 'Purples', 
 the Disciples roam the world running errands for their masters, 
@@ -233,5 +233,5 @@ which gifts to choose for your character.
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

@@ -1,4 +1,4 @@
-Dragon Realms
+﻿Dragon Realms
 
 Dragons are magical creatures and may choose to learn a particular 
 branch of dragon magic. Dragons do not need spellbooks to cast spells 
@@ -224,5 +224,5 @@ Death          Poor          Poor          Good          Fair
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

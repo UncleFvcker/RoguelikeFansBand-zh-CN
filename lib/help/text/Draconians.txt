@@ -1,4 +1,4 @@
-Draconians
+﻿Draconians
 
 Draconians are a humanoid race with dragon-like attributes. There are 
 several subtypes of draconians with different resistances, breaths and 
@@ -251,5 +251,5 @@ to decide which power you will choose for your character.
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

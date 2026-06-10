@@ -1,4 +1,4 @@
-Monster Races
+﻿Monster Races
 
 So, you feel ready to play as a monster? There are many monster races 
 and subraces to choose from, and the various races are loosely grouped 
@@ -927,5 +927,5 @@ Xorn         Poor          Bad           Very Good     Bad             50'
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

@@ -1,4 +1,4 @@
-The Personalities
+﻿The Personalities
 
 Your personality is the way you see and act in the world, and has a 
 small but significant effect on your stats and skills. In general, you 
@@ -423,5 +423,5 @@ Split        Fair          Fair          Fair          Fair
 
 
 
-Automatically generated for FrogComposband 7.2.salmiak.
+Automatically generated for RoguelikeFansBand 7.2.salmiak.
 

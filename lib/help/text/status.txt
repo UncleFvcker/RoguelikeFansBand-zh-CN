@@ -1,4 +1,4 @@
-Painful Status Effects
+﻿Painful Status Effects
 
 During your adventures, you will often be afflicted with temporary 
 conditions that limit your effectiveness. These conditions are called 
@@ -376,7 +376,7 @@ As noted above, fear and paralysis follow their own rules; and
 poisoning cannot be completely prevented except through immunity.
 
 
-Original   : FrogComposband 7.1.liquorice
+Original   : RoguelikeFansBand 7.1.liquorice
 
 
 

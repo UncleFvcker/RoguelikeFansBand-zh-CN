@@ -1,4 +1,4 @@
-Command Descriptions
+﻿Command Descriptions
 
 The following command descriptions are listed as the command name plus 
 the underlying command key. This is followed by the command name and 
@@ -922,6 +922,6 @@ Message Commands
   Updated    : Zangband DevTeam
   Updated    : Hengband 1.7.0
   Updated    : PosChengband 4.0.0
-  Updated    : FrogComposband 7.1.liquorice
+  Updated    : RoguelikeFansBand 7.1.liquorice
   
   

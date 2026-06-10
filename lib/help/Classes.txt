@@ -1,4 +1,4 @@
-<style:title>职业介绍 (The Classes)</style>
+﻿<style:title>职业介绍 (The Classes)</style>
 
 没有哪个决定比选择玩什么职业更重要了。下面将按主要优势或游玩风格（如近战、箭术、武术、魔法、装置、混合等）将众多可用职业进行粗略分类。每个职业的主要施法属性已被<color:v>高亮</color>显示。
 
@@ -1029,4 +1029,4 @@ Wild-Talent   <color:o>Fair         </color> <color:R>Poor         </color> <col
 </style>
 
 
-<color:s>自动生成于 FrogComposband 7.2.salmiak。</color>
+<color:s>自动生成于 RoguelikeFansBand 7.2.salmiak。</color>
