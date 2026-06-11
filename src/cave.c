@@ -1584,6 +1584,17 @@ static bool _graph_feature_is_walllike(feature_type *f_ptr)
         (!have_flag(f_ptr->flags, FF_LOS) && !have_flag(f_ptr->flags, FF_MOVE));
 }
 
+static bool _graph_feature_is_grasslike(int feat)
+{
+    if (feat == feat_grass) return TRUE;
+    return FALSE;
+}
+
+static bool _graph_feature_is_treelike(feature_type *f_ptr)
+{
+    return have_flag(f_ptr->flags, FF_TREE);
+}
+
 typedef enum {
     GRAPH_WALL_NONE,
     GRAPH_WALL_GRANITE,
@@ -1638,8 +1649,10 @@ static u32b _graph_material_bg(feature_type *f_ptr, int feat)
         return GRAPH_RGB(28, 43, 18);
     if (have_flag(f_ptr->flags, FF_SNOW) || have_flag(f_ptr->flags, FF_SLUSH))
         return GRAPH_RGB(34, 40, 43);
-    if (have_flag(f_ptr->flags, FF_TREE) || have_flag(f_ptr->flags, FF_PLANT))
-        return GRAPH_RGB(10, 34, 17);
+    if (_graph_feature_is_treelike(f_ptr))
+        return graph_tree_rgb;
+    if (_graph_feature_is_grasslike(feat))
+        return graph_grass_rgb;
     if (have_flag(f_ptr->flags, FF_GLASS) || have_flag(f_ptr->flags, FF_MIRROR))
         return GRAPH_RGB(18, 31, 38);
     if (have_flag(f_ptr->flags, FF_PATTERN))
@@ -1694,8 +1707,10 @@ static u32b _graph_material_accent(feature_type *f_ptr, int feat)
         return GRAPH_RGB(118, 172, 54);
     if (have_flag(f_ptr->flags, FF_SNOW) || have_flag(f_ptr->flags, FF_SLUSH))
         return GRAPH_RGB(170, 185, 190);
-    if (have_flag(f_ptr->flags, FF_TREE) || have_flag(f_ptr->flags, FF_PLANT))
+    if (_graph_feature_is_treelike(f_ptr))
         return GRAPH_RGB(61, 118, 64);
+    if (_graph_feature_is_grasslike(feat))
+        return GRAPH_RGB(82, 130, 66);
     if (have_flag(f_ptr->flags, FF_GLASS) || have_flag(f_ptr->flags, FF_MIRROR))
         return GRAPH_RGB(118, 178, 190);
     if (have_flag(f_ptr->flags, FF_DOOR))
@@ -1727,7 +1742,7 @@ static u32b _graph_material_accent(feature_type *f_ptr, int feat)
     return GRAPH_RGB(120, 118, 112);
 }
 
-static bool _graph_feature_uses_solid_fill(feature_type *f_ptr)
+static bool _graph_feature_uses_solid_fill(feature_type *f_ptr, int feat)
 {
     if (have_flag(f_ptr->flags, FF_DOOR) || have_flag(f_ptr->flags, FF_TRAP) ||
         have_flag(f_ptr->flags, FF_MON_TRAP) || have_flag(f_ptr->flags, FF_GLYPH) ||
@@ -1741,6 +1756,8 @@ static bool _graph_feature_uses_solid_fill(feature_type *f_ptr)
     }
 
     if (_graph_feature_is_walllike(f_ptr)) return TRUE;
+    if (_graph_feature_is_treelike(f_ptr)) return TRUE;
+    if (_graph_feature_is_grasslike(feat)) return TRUE;
     if (have_flag(f_ptr->flags, FF_FLOOR) || have_flag(f_ptr->flags, FF_MOVE)) return TRUE;
     if (have_flag(f_ptr->flags, FF_WATER) || have_flag(f_ptr->flags, FF_LAVA)) return TRUE;
     if (have_flag(f_ptr->flags, FF_GLASS) || have_flag(f_ptr->flags, FF_MIRROR)) return TRUE;
@@ -1753,9 +1770,10 @@ static bool _graph_feature_uses_solid_fill(feature_type *f_ptr)
     return FALSE;
 }
 
-static bool _graph_feature_is_plain_floor(feature_type *f_ptr)
+static bool _graph_feature_is_plain_floor(feature_type *f_ptr, int feat)
 {
     if (_graph_feature_is_walllike(f_ptr)) return FALSE;
+    if (_graph_feature_is_grasslike(feat)) return TRUE;
     if (have_flag(f_ptr->flags, FF_WATER) || have_flag(f_ptr->flags, FF_LAVA) ||
         have_flag(f_ptr->flags, FF_ACID) || have_flag(f_ptr->flags, FF_SNOW) ||
         have_flag(f_ptr->flags, FF_SLUSH) || have_flag(f_ptr->flags, FF_GLASS) ||
@@ -1780,7 +1798,8 @@ static bool _graph_solid_fill_shows_glyph(feature_type *f_ptr, int feat)
     }
 
     if (_graph_feature_is_walllike(f_ptr)) return graph_show_wall_ascii;
-    if (_graph_feature_is_plain_floor(f_ptr)) return graph_show_floor_ascii;
+    if (_graph_feature_is_treelike(f_ptr)) return graph_show_tree_ascii;
+    if (_graph_feature_is_plain_floor(f_ptr, feat)) return graph_show_floor_ascii;
     return FALSE;
 }
 
@@ -1993,7 +2012,7 @@ static void _graph_queue_map_rgb(int cave_y, int cave_x, int ui_x, int ui_y, byt
     f_ptr = &f_info[feat];
     state = _graph_cell_state(c_ptr);
     terrain_glyph = feat_priority < 20;
-    solid_fill = terrain_glyph && _graph_feature_uses_solid_fill(f_ptr);
+    solid_fill = terrain_glyph && _graph_feature_uses_solid_fill(f_ptr, feat);
 
     bg = _graph_base_bg(c_ptr, f_ptr, feat, cave_y, cave_x, state);
     fg = _graph_attr_rgb(a);

@@ -621,6 +621,16 @@ errr process_pref_file_command(char *buf)
                 graph_floor_rgb = rgb;
                 return 0;
             }
+            if (streq(zz[0], "GRASS"))
+            {
+                graph_grass_rgb = rgb;
+                return 0;
+            }
+            if (streq(zz[0], "TREE"))
+            {
+                graph_tree_rgb = rgb;
+                return 0;
+            }
         }
         break;
 

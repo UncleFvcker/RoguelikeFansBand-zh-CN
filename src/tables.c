@@ -2257,6 +2257,9 @@ option_type option_info[] =
     { &graph_show_wall_ascii,       FALSE, OPT_PAGE_MAPSCREEN, 4, 4,
     "graph_wall_ascii",             "色块墙壁显示ASCII符号" },
 
+    { &graph_show_tree_ascii,       TRUE,  OPT_PAGE_MAPSCREEN, 4, 5,
+    "graph_tree_ascii",             "色块树木显示ASCII符号" },
+
     { &square_delays,               FALSE, OPT_PAGE_MAPSCREEN, 5, 23,
     "square_delays",                "使用平方级延迟因子" },
 

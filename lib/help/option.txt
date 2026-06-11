@@ -233,6 +233,9 @@
 <topic:graph_wall_ascii><color:U>色块墙壁显示ASCII符号</color> <color:D>(graph_wall_ascii)</color>
 如果启用此选项，地图色块渲染中的墙壁会保留原本的墙壁符号。关闭此选项时，墙壁以纯色块和轮廓显示。
 
+<topic:graph_tree_ascii><color:U>色块树木显示ASCII符号</color> <color:D>(graph_tree_ascii)</color>
+如果启用此选项，地图色块渲染中的树木会保留原本的树木符号。关闭此选项时，树木以纯色块显示。
+
 <topic:view_perma_grids><color:U>地图记住所有永久照亮的格子</color> <color:D>(view_perma_grids)</color>
 记住玩家看到的所有永久照亮的地板格子。此选项允许你跟踪已探索的哪些地板格子是永久照亮的，但不区分黑暗地板格子、未探索地板格子和未知格子。关闭此选项允许玩家始终知道哪些照亮的地板格子在视线范围内，但这最好通过“view_bright_lite”选项来实现。请注意，无论此设置如何，玩家看到的非地板格子总是会被记住。
 

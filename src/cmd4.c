@@ -2496,11 +2496,13 @@ static void _graph_visuals_reset_fill_colors(void)
     graph_quartz_wall_rgb = GRAPH_DEFAULT_QUARTZ_WALL_RGB;
     graph_treasure_wall_rgb = GRAPH_DEFAULT_TREASURE_WALL_RGB;
     graph_floor_rgb = GRAPH_DEFAULT_FLOOR_RGB;
+    graph_grass_rgb = GRAPH_DEFAULT_GRASS_RGB;
+    graph_tree_rgb = GRAPH_DEFAULT_TREE_RGB;
 }
 
-#define GRAPH_VISUALS_FILL_COUNT 6
-#define GRAPH_VISUALS_FILL_ROW 14
-#define GRAPH_VISUALS_SLIDER_ROW 20
+#define GRAPH_VISUALS_FILL_COUNT 8
+#define GRAPH_VISUALS_FILL_ROW 4
+#define GRAPH_VISUALS_SLIDER_ROW 15
 
 static cptr _graph_visuals_fill_label(int item)
 {
@@ -2512,6 +2514,8 @@ static cptr _graph_visuals_fill_label(int item)
     case 3: return "石英矿脉";
     case 4: return "宝藏墙";
     case 5: return "地面";
+    case 6: return "草地";
+    case 7: return "树木";
     }
     return "";
 }
@@ -2526,6 +2530,8 @@ static u32b *_graph_visuals_fill_rgb(int item)
     case 3: return &graph_quartz_wall_rgb;
     case 4: return &graph_treasure_wall_rgb;
     case 5: return &graph_floor_rgb;
+    case 6: return &graph_grass_rgb;
+    case 7: return &graph_tree_rgb;
     }
     return &graph_wall_rgb;
 }
@@ -2592,9 +2598,12 @@ static void _graph_visuals_print_fill_editor(int item, int channel)
 
     for (i = 0; i < GRAPH_VISUALS_FILL_COUNT; i++)
     {
-        Term_putstr(5, GRAPH_VISUALS_FILL_ROW + i, -1, TERM_WHITE,
-            format("%c %-10s", (i == item) ? '>' : ' ', _graph_visuals_fill_label(i)));
-        _graph_visuals_color_swatch(18, GRAPH_VISUALS_FILL_ROW + i, *_graph_visuals_fill_rgb(i));
+        int col = 5;
+        int row = GRAPH_VISUALS_FILL_ROW + i;
+
+        Term_putstr(col, row, -1, TERM_WHITE,
+            format("%c %s", (i == item) ? '>' : ' ', _graph_visuals_fill_label(i)));
+        _graph_visuals_color_swatch(18, row, *_graph_visuals_fill_rgb(i));
     }
 
     _graph_visuals_print_slider(GRAPH_VISUALS_SLIDER_ROW, "红", _graph_visuals_get_channel(rgb, 0), 0x00CC3333, channel == 0);
@@ -2615,10 +2624,12 @@ static void _graph_visuals_edit_fill_colors(bool *need_redraw)
         u32b *rgb = _graph_visuals_fill_rgb(item);
 
         Term_clear();
-        print_visuals_menu("修改图形色块颜色");
+        prt("外观设置 - 修改图形色块颜色", 1, 0);
+        prt("选择一个地形色块，然后调整红/绿/蓝通道。", 2, 0);
 
         _graph_visuals_print_fill_editor(item, channel);
-        prt("↑↓选色块 w/p/m/q/t/f跳转 r/g/b选通道 ←→微调 d默认 ESC确认", 23, 0);
+        prt("↑↓/jk选色块  w/p/m/q/t/f/c/e跳转  r/g/b选通道", 21, 0);
+        prt("←→/hl微调  </>大幅微调  d默认  ESC返回", 22, 0);
 
         i = inkey_special(TRUE);
         if (i == ESCAPE) break;
@@ -2658,6 +2669,14 @@ static void _graph_visuals_edit_fill_colors(bool *need_redraw)
         case 'f':
         case 'F':
             item = 5;
+            break;
+        case 'c':
+        case 'C':
+            item = 6;
+            break;
+        case 'e':
+        case 'E':
+            item = 7;
             break;
         case 'r':
         case 'R':
@@ -2968,7 +2987,9 @@ void do_cmd_visuals(void)
             auto_dump_printf("G:MAGMA:0x%06lX\n", (unsigned long)(graph_magma_wall_rgb & 0x00FFFFFF));
             auto_dump_printf("G:QUARTZ:0x%06lX\n", (unsigned long)(graph_quartz_wall_rgb & 0x00FFFFFF));
             auto_dump_printf("G:TREASURE:0x%06lX\n", (unsigned long)(graph_treasure_wall_rgb & 0x00FFFFFF));
-            auto_dump_printf("G:FLOOR:0x%06lX\n\n", (unsigned long)(graph_floor_rgb & 0x00FFFFFF));
+            auto_dump_printf("G:FLOOR:0x%06lX\n", (unsigned long)(graph_floor_rgb & 0x00FFFFFF));
+            auto_dump_printf("G:GRASS:0x%06lX\n", (unsigned long)(graph_grass_rgb & 0x00FFFFFF));
+            auto_dump_printf("G:TREE:0x%06lX\n\n", (unsigned long)(graph_tree_rgb & 0x00FFFFFF));
 
             /* Close */
             close_auto_dump();

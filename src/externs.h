@@ -138,6 +138,8 @@ extern u32b graph_magma_wall_rgb;
 extern u32b graph_quartz_wall_rgb;
 extern u32b graph_treasure_wall_rgb;
 extern u32b graph_floor_rgb;
+extern u32b graph_grass_rgb;
+extern u32b graph_tree_rgb;
 extern bool character_generated;
 extern bool character_dungeon;
 extern bool character_loaded;
@@ -304,6 +306,7 @@ extern bool hilite_player;    /* Hilite the player with the cursor */
 extern bool display_path;    /* Display actual path before shooting */
 extern bool graph_show_floor_ascii; /* Show floor glyphs over solid fill */
 extern bool graph_show_wall_ascii;  /* Show wall glyphs over solid fill */
+extern bool graph_show_tree_ascii;  /* Show tree glyphs over solid fill */
 extern bool square_delays;   /* Use delay factors based on squares */
 
 
