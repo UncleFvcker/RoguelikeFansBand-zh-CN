@@ -441,8 +441,8 @@ race_t *doppelganger_get_race(void)
 
     if (!init)
     {
-        me.name = "变形者";
-        me.desc = "变形者确实是可悲的生物。虽然实际上没有人见过它们的真实形态，但传闻它们是矮小、丑陋、可怜的生物。它们唯一的救赎就是能够模仿其他种族。";
+        me.name = "变形怪";
+        me.desc = "变形怪确实是可悲的生物。虽然实际上没有人见过它们的真实形态，但传闻它们是矮小、丑陋、可怜的生物。它们唯一的救赎就是能够模仿其他种族。";
         
         me.stats[A_STR] = -3;
         me.stats[A_INT] = -3;
@@ -472,4 +472,3 @@ race_t *doppelganger_get_race(void)
 
     return &me;
 }
-

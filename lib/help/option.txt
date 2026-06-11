@@ -86,7 +86,7 @@
 如果开启此选项，除了其中一个怪物是宠物或友好怪物的情况外，不允许怪物内斗。开启此选项后，对立阵营的敌对（或友好）怪物之间也会发生内斗。
 
 <topic:allow_pets><color:U>允许玩家召唤/魅惑怪物 (Allow player to summon/charm monsters)</color> <color:D>(allow_pets)</color>
-此选项允许玩家召唤宠物或将敌对怪物变成宠物（见 <link:monster.txt#Pets>）。通常不建议关闭此选项，这将使基于宠物的职业（如 Q兽、驯兽师和骑兵）基本上变得无法游玩。
+此选项允许玩家召唤宠物或将敌对怪物变成宠物（见 <link:monster.txt#Pets>）。通常不建议关闭此选项，这将使基于宠物的职业（如 Q兽、兽王和骑兵）基本上变得无法游玩。
 
 <topic:quest_unique><color:U>随机任务仅针对暗金怪物 (Random quests for unique monsters only)</color> <color:D>(quest_unique)</color>
 开启此选项后，安格班深坑 (Pits of Angband) 中的十个<color:keyword>随机任务</color>都将要求你杀死一个暗金 (唯一) 怪物。关闭此选项后，其中一些任务（特别是早期任务）可能会转而以非暗金怪物群体为特色，类似于固定的座狼任务 (Warg Quest)。
@@ -501,7 +501,7 @@ Auto-destroying.</indent>
 此选项保护所有垃圾物品（如断裂的棍子或陶器碎片）免受简易自动销毁器的销毁。这对像弓箭手这样的职业可能很有帮助，尽管 <color:keyword>leave_special</color> 选项也涵盖了此类特殊情况。
 
 <topic:leave_special><color:U>自动销毁器留下你的种族/职业需要的物品</color> <color:D>(leave_special)</color>
-此选项保护通常一文不值，但对特定职业或种族非常重要的特定物品。这包括弓箭手的骨头、忍者的自带黑暗的 ego 光源、驯兽师和骑兵的治疗怪物魔杖、炎魔的人形怪物尸体，以及其他具有类似利基用途的物品。
+此选项保护通常一文不值，但对特定职业或种族非常重要的特定物品。这包括弓箭手的骨头、忍者的自带黑暗的 ego 光源、兽王和骑兵的治疗怪物魔杖、炎魔的人形怪物尸体，以及其他具有类似利基用途的物品。
 </indent>
 <topic:ListDisplay><style:heading>列表显示选项 (List Display Options)</style>
   <indent>
