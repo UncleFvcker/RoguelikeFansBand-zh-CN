@@ -18,10 +18,10 @@
 
 #define VER_MAJOR 1
 #define VER_MINOR 0
-#define VER_PATCH "2"
-#define VER_PATCH_ID 2
+#define VER_PATCH "3"
+#define VER_PATCH_ID 3
 #define VER_EXTRA 0
-#define VERSION_STRING "1.0.0.2"
+#define VERSION_STRING "1.0.0.3"
 #define VERSION_IS_DEVELOPMENT (FALSE)
 
 /*
@@ -4211,6 +4211,8 @@ extern int PlayerUID;
 #define GRAPH_DEFAULT_QUARTZ_WALL_RGB 0x0031303A
 #define GRAPH_DEFAULT_TREASURE_WALL_RGB 0x004E3F24
 #define GRAPH_DEFAULT_FLOOR_RGB      0x00070C0B
+#define GRAPH_DEFAULT_GRASS_RGB      0x00102615
+#define GRAPH_DEFAULT_TREE_RGB       0x00063116
 
 /*
  * Modes for the random name generator

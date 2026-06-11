@@ -43,6 +43,8 @@ void reset_visuals(void)
     graph_quartz_wall_rgb = GRAPH_DEFAULT_QUARTZ_WALL_RGB;
     graph_treasure_wall_rgb = GRAPH_DEFAULT_TREASURE_WALL_RGB;
     graph_floor_rgb = GRAPH_DEFAULT_FLOOR_RGB;
+    graph_grass_rgb = GRAPH_DEFAULT_GRASS_RGB;
+    graph_tree_rgb = GRAPH_DEFAULT_TREE_RGB;
 
     /* Extract some info about terrain features */
     for (i = 0; i < max_f_idx; i++)

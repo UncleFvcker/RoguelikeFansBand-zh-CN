@@ -8801,3 +8801,6 @@ EDIT_08799	low	wilderness	lib/edit/w_info.txt	81	W:name	Anambar	阿南巴	W:E:5:
 EDIT_08800	low	wilderness	lib/edit/w_info.txt	84	W:name	Thalos	萨洛斯	W:E:6:6:0:6:1:Thalos	大地图城镇
 EDIT_08801	low	wilderness	lib/edit/w_info.txt	87	W:name	Zul	祖尔	W:E:7:11:20:7:0:Zul	大地图城镇
 EDIT_08802	low	wilderness	lib/edit/w_info.txt	179	W:name	Town	城镇	W:E:1:1:0:1:0:Town	大地图城镇
+EDIT_08803	low	object	lib/edit/k_info.txt	3944	N:name	[Codex]	法术抄本	N:*:[Codex]	自定义法术书名称
+EDIT_08804	low	object	lib/edit/k_info.txt	3953	N:name	[Spellbook]	法术书	N:*:[Spellbook]	自定义法术书名称
+EDIT_08805	low	object	lib/edit/k_info.txt	3962	N:name	[Grimoire]	魔导书	N:*:[Grimoire]	自定义法术书名称

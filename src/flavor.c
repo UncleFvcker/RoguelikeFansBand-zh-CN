@@ -1588,7 +1588,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
 
         case TV_CUSTOM_BOOK:
         {
-            basenm = (mode & OD_INTERNAL_NAME) ? "& Custom Spellbook~ %" : "& 自定义法术书~ %";
+            basenm = kindname;
             break;
         }
 
@@ -2676,7 +2676,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
 
             (void)object_desc_num(discount_num_buf, o_ptr->discount);
             strcat(fake_insc_buf, discount_num_buf);
-            strcat(fake_insc_buf, "% 失败率");
+            strcat(fake_insc_buf, "% 折扣");
         }
     }
 
