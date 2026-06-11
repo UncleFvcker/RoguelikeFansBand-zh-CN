@@ -9,6 +9,7 @@ typedef struct version_s {
 } version_t, *version_ptr;
 
 extern int version_compare(version_ptr left, version_ptr right);
+extern void savefile_normalize_version(version_ptr version);
 
 enum {
     SAVEFILE_READ,

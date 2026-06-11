@@ -33,9 +33,56 @@ static void note(cptr msg)
     Term_fresh();
 }
 
+static bool _valid_loaded_mon_index(int m_idx)
+{
+    return m_idx > 0 && m_idx < max_m_idx && m_list && m_list[m_idx].r_idx;
+}
+
+static void _validate_tmp_indices(void)
+{
+    if (p_ptr->duelist_target_idx && !_valid_loaded_mon_index(p_ptr->duelist_target_idx))
+    {
+        game_log_event("load-track", "cleared invalid duelist_target_idx=%d", p_ptr->duelist_target_idx);
+        p_ptr->duelist_target_idx = 0;
+    }
+    if (p_ptr->health_who && !_valid_loaded_mon_index(p_ptr->health_who))
+    {
+        game_log_event("load-track", "cleared invalid health_who=%d", p_ptr->health_who);
+        p_ptr->health_who = 0;
+    }
+    if (target_who > 0 && !_valid_loaded_mon_index(target_who))
+    {
+        game_log_event("load-track", "cleared invalid target_who=%d", target_who);
+        target_who = 0;
+    }
+    if (pet_t_m_idx && !_valid_loaded_mon_index(pet_t_m_idx))
+    {
+        game_log_event("load-track", "cleared invalid pet_t_m_idx=%d", pet_t_m_idx);
+        pet_t_m_idx = 0;
+    }
+    if (riding_t_m_idx && !_valid_loaded_mon_index(riding_t_m_idx))
+    {
+        game_log_event("load-track", "cleared invalid riding_t_m_idx=%d", riding_t_m_idx);
+        riding_t_m_idx = 0;
+    }
+}
+
 void rd_item(savefile_ptr file, object_type *o_ptr)
 {
     obj_load(o_ptr, file);
+}
+
+static bool _floor_dim_ok(void)
+{
+    return cur_hgt > 0 && cur_hgt <= MAX_HGT && cur_wid > 0 && cur_wid <= MAX_WID;
+}
+
+static bool _floor_grid_ok(int y, int x)
+{
+    if (!_floor_dim_ok()) return FALSE;
+    if (y < 0 || y >= cur_hgt || x < 0 || x >= cur_wid) return FALSE;
+    if (!cave[y]) return FALSE;
+    return TRUE;
 }
 
 void handle_tmp_indices(bool save_data, bool do_redraw)
@@ -57,6 +104,7 @@ void handle_tmp_indices(bool save_data, bool do_redraw)
         target_who = tmp_ix[2];
         pet_t_m_idx = tmp_ix[3];
         riding_t_m_idx = tmp_ix[4];
+        _validate_tmp_indices();
         if (do_redraw)
         {
             if (tmp_ix[0]) p_ptr->redraw |= PR_STATUS;
@@ -903,7 +951,29 @@ static errr rd_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
     cur_wid = savefile_read_s16b(file);
     p_ptr->feeling = savefile_read_byte(file);
 
+    if (!_floor_dim_ok())
+    {
+        game_log_event("floor-load", "bad floor dimensions floor_id=%d sf_floor_id=%d h=%d w=%d py=%d px=%d",
+            p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+            cur_hgt, cur_wid, py, px);
+        return 172;
+    }
+    if (!_floor_grid_ok(py, px))
+    {
+        game_log_event("floor-load", "bad player grid floor_id=%d sf_floor_id=%d h=%d w=%d py=%d px=%d",
+            p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+            cur_hgt, cur_wid, py, px);
+        return 173;
+    }
+
     limit = savefile_read_u16b(file);
+    if (!limit)
+    {
+        game_log_event("floor-load", "bad template count floor_id=%d sf_floor_id=%d h=%d w=%d limit=%u",
+            p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+            cur_hgt, cur_wid, (unsigned)limit);
+        return 174;
+    }
     C_MAKE(template, limit, cave_template_type);
 
     for (i = 0; i < limit; i++)
@@ -935,6 +1005,15 @@ static errr rd_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
             tmp8u = savefile_read_byte(file);
             id += tmp8u;
         } while (tmp8u == MAX_UCHAR);
+
+        if (id >= limit)
+        {
+            game_log_event("floor-load", "bad rle template id floor_id=%d sf_floor_id=%d y=%d x=%d id=%u limit=%u count=%u h=%d w=%d",
+                p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+                y, x, (unsigned)id, (unsigned)limit, (unsigned)count, cur_hgt, cur_wid);
+            C_FREE(template, limit, cave_template_type);
+            return 175;
+        }
 
         /* Apply the RLE info */
         for (i = count; i > 0; i--)
@@ -972,6 +1051,7 @@ static errr rd_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
     {
         int o_idx;
         object_type *o_ptr;
+        cave_type *c_ptr;
 
         o_idx = o_pop();
         if (i != o_idx) return 152;
@@ -979,7 +1059,15 @@ static errr rd_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
         rd_item(file, o_ptr);
         if (!o_ptr->held_m_idx) /* We will sort that out later */
         {
-            cave_type *c_ptr = &cave[o_ptr->loc.y][o_ptr->loc.x];
+            if (!_floor_grid_ok(o_ptr->loc.y, o_ptr->loc.x))
+            {
+                game_log_event("floor-load", "bad object grid floor_id=%d sf_floor_id=%d o_idx=%d k_idx=%d where=%d y=%d x=%d h=%d w=%d",
+                    p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+                    o_idx, o_ptr->k_idx, o_ptr->loc.where,
+                    o_ptr->loc.y, o_ptr->loc.x, cur_hgt, cur_wid);
+                return 153;
+            }
+            c_ptr = &cave[o_ptr->loc.y][o_ptr->loc.x];
             o_ptr->next_o_idx = c_ptr->o_idx;
             c_ptr->o_idx = o_idx;
         }
@@ -998,6 +1086,20 @@ static errr rd_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
         if (i != m_idx) return 162;
         m_ptr = &m_list[m_idx];
         rd_monster(file, m_ptr);
+        if (m_ptr->r_idx <= 0 || m_ptr->r_idx >= max_r_idx)
+        {
+            game_log_event("floor-load", "bad monster race floor_id=%d sf_floor_id=%d m_idx=%d r_idx=%d y=%d x=%d h=%d w=%d",
+                p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+                m_idx, m_ptr->r_idx, m_ptr->fy, m_ptr->fx, cur_hgt, cur_wid);
+            return 163;
+        }
+        if (!_floor_grid_ok(m_ptr->fy, m_ptr->fx))
+        {
+            game_log_event("floor-load", "bad monster grid floor_id=%d sf_floor_id=%d m_idx=%d r_idx=%d y=%d x=%d h=%d w=%d limit=%u",
+                p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+                m_idx, m_ptr->r_idx, m_ptr->fy, m_ptr->fx, cur_hgt, cur_wid, (unsigned)limit);
+            return 164;
+        }
         c_ptr = &cave[m_ptr->fy][m_ptr->fx];
         c_ptr->m_idx = m_idx;
         inc_cur_num(m_ptr, 1);
@@ -1032,17 +1134,39 @@ static errr rd_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
 
         pack_info_wipe();
         count = savefile_read_s16b(file);
+        if (count < 0 || count >= max_pack_info_idx)
+        {
+            game_log_event("floor-load", "bad pack count floor_id=%d sf_floor_id=%d count=%d max=%d",
+                p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+                count, max_pack_info_idx);
+            return 165;
+        }
         for (i = 0; i < count; ++i)
         {
             s16b new_idx = pack_info_pop();
             s16b old_idx;
-            pack_info_t *ptr = &pack_info_list[new_idx];
+            pack_info_t *ptr;
             int j;
+
+            if (!new_idx)
+            {
+                game_log_event("floor-load", "pack_info_pop failed floor_id=%d sf_floor_id=%d i=%d count=%d max=%d",
+                    p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+                    i, count, max_pack_info_idx);
+                return 166;
+            }
+            ptr = &pack_info_list[new_idx];
 
             old_idx = savefile_read_s16b(file);
             ptr->leader_idx = savefile_read_s16b(file);
-            if (ptr->leader_idx && !m_list[ptr->leader_idx].r_idx) /* XXX monster removed from r_info */
+            if (ptr->leader_idx &&
+                (ptr->leader_idx <= 0 || ptr->leader_idx >= m_max || !m_list[ptr->leader_idx].r_idx)) /* XXX monster removed from r_info */
+            {
+                game_log_event("floor-load", "cleared bad pack leader floor_id=%d sf_floor_id=%d leader_idx=%d m_max=%d",
+                    p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+                    ptr->leader_idx, m_max);
                 ptr->leader_idx = 0;
+            }
             ptr->count = savefile_read_s16b(file);
             ptr->ai = savefile_read_s16b(file);
             ptr->guard_idx = savefile_read_s16b(file);
@@ -1050,10 +1174,14 @@ static errr rd_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
             ptr->guard_y = savefile_read_s16b(file);
             ptr->distance = savefile_read_s16b(file);
 
-            if (ptr->guard_idx && !m_list[ptr->guard_idx].r_idx && ptr->ai == AI_GUARD_MON) /* XXX monster removed from r_info */
+            if (ptr->guard_idx &&
+                (ptr->guard_idx <= 0 || ptr->guard_idx >= m_max || !m_list[ptr->guard_idx].r_idx)) /* XXX monster removed from r_info */
             {
+                game_log_event("floor-load", "cleared bad pack guard floor_id=%d sf_floor_id=%d guard_idx=%d m_max=%d",
+                    p_ptr ? p_ptr->floor_id : 0, sf_ptr ? sf_ptr->floor_id : 0,
+                    ptr->guard_idx, m_max);
                 ptr->guard_idx = 0;
-                ptr->ai = AI_SEEK;
+                if (ptr->ai == AI_GUARD_MON) ptr->ai = AI_SEEK;
             }
 
             /* I make no effort to keep the same pack_info index on a reload, so
@@ -1212,9 +1340,9 @@ static errr rd_savefile_new_aux(savefile_ptr file)
              (z_major > 9) ? z_major - 10 : z_major, z_minor, z_patch));
 
     /* Savefiles break iff VER_MAJOR bumps */
-    if (savefile_is_older_than(file, VER_MAJOR, 0, 0, 0))
+    if (savefile_is_older_than(file, SAVEFILE_VER_MAJOR, 0, 0, 0))
     {
-        note(format("不支持低于 %d.0.0 版本的旧存档！", VER_MAJOR));
+        note(format("不支持低于 %d.0.0 版本的旧存档！", SAVEFILE_VER_MAJOR));
         return 1;
     }
 
@@ -1566,9 +1694,24 @@ bool load_floor(saved_floor_type *sf_ptr, u32b mode)
     char floor_savefile[1024];
     savefile_ptr file = NULL;
 
+    if (!sf_ptr)
+    {
+        game_log_event("floor-load", "load_floor null sf_ptr mode=0x%08lx floor_id=%d dun=%d dungeon=%d",
+            (unsigned long)mode, p_ptr ? p_ptr->floor_id : 0, dun_level, dungeon_type);
+        return FALSE;
+    }
+
     sprintf(floor_savefile, "%s.F%02d", savefile, (int)sf_ptr->savefile_id);
     file = savefile_open_read(floor_savefile);
-    if (!file) return FALSE;
+    if (!file)
+    {
+        game_log_event("floor-load", "open failed path=%s mode=0x%08lx sf_floor_id=%d savefile_id=%d",
+            floor_savefile, (unsigned long)mode, sf_ptr->floor_id, sf_ptr->savefile_id);
+        return FALSE;
+    }
+
+    game_log_event("floor-load", "begin path=%s mode=0x%08lx sf_floor_id=%d savefile_id=%d",
+        floor_savefile, (unsigned long)mode, sf_ptr->floor_id, sf_ptr->savefile_id);
 
     ok = load_floor_aux(file, sf_ptr);
     if (ferror(file->file)) ok = FALSE;
@@ -1584,8 +1727,15 @@ bool load_floor(saved_floor_type *sf_ptr, u32b mode)
 
     if (!ok)
     {
+        game_log_event("floor-load", "failed path=%s mode=0x%08lx sf_floor_id=%d savefile_id=%d",
+            floor_savefile, (unsigned long)mode, sf_ptr->floor_id, sf_ptr->savefile_id);
         msg_print("load_floor 中的软件错误：一切都*不*正常！");
     }
+    else
+    {
+        game_log_event("floor-load", "ok path=%s mode=0x%08lx sf_floor_id=%d savefile_id=%d",
+            floor_savefile, (unsigned long)mode, sf_ptr->floor_id, sf_ptr->savefile_id);
+    }
 
-    return TRUE;
+    return ok;
 }

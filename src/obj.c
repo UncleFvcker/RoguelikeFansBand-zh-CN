@@ -1464,6 +1464,90 @@ enum object_save_fields_e {
     OBJ_SAVE_CUSTOM_BOOK,
 };
 
+static void _obj_repair_plain_fuel_lite(obj_ptr obj)
+{
+    object_kind *k_ptr;
+    int i;
+    int max_fuel;
+    bool repaired = FALSE;
+    s16b old_pval, old_xtra4, old_to_a, old_ac;
+
+    if (!obj || !obj->k_idx) return;
+    if (obj->tval != TV_LITE) return;
+    if (obj->sval != SV_LITE_TORCH && obj->sval != SV_LITE_LANTERN) return;
+    if (obj->name1 || obj->name2 || obj->name3 || obj->art_name) return;
+
+    k_ptr = &k_info[obj->k_idx];
+    old_pval = obj->pval;
+    old_xtra4 = obj->xtra4;
+    old_to_a = obj->to_a;
+    old_ac = obj->ac;
+
+    /* Old birth torches could keep template fuel in pval, which is a bonus field when equipped. */
+    if (obj->pval)
+    {
+        if (obj->xtra4 <= 0) obj->xtra4 = obj->pval;
+        obj->pval = 0;
+        repaired = TRUE;
+    }
+
+    max_fuel = (obj->sval == SV_LITE_TORCH) ? FUEL_TORCH : FUEL_LAMP;
+    if (obj->xtra4 < 0)
+    {
+        obj->xtra4 = 0;
+        repaired = TRUE;
+    }
+    else if (obj->xtra4 > max_fuel)
+    {
+        obj->xtra4 = max_fuel;
+        repaired = TRUE;
+    }
+
+    if ( obj->to_h != k_ptr->to_h
+      || obj->to_d != k_ptr->to_d
+      || obj->to_a != k_ptr->to_a
+      || obj->ac != k_ptr->ac
+      || obj->dd != k_ptr->dd
+      || obj->ds != k_ptr->ds
+      || obj->mult != k_ptr->mult )
+    {
+        obj->to_h = k_ptr->to_h;
+        obj->to_d = k_ptr->to_d;
+        obj->to_a = k_ptr->to_a;
+        obj->ac = k_ptr->ac;
+        obj->dd = k_ptr->dd;
+        obj->ds = k_ptr->ds;
+        obj->mult = k_ptr->mult;
+        repaired = TRUE;
+    }
+
+    for (i = 0; i < OF_ARRAY_SIZE; i++)
+    {
+        if (obj->flags[i])
+        {
+            obj->flags[i] = 0;
+            repaired = TRUE;
+        }
+        if (obj->known_flags[i])
+        {
+            obj->known_flags[i] = 0;
+            repaired = TRUE;
+        }
+    }
+
+    if (repaired)
+    {
+        obj->known_xtra = 0;
+        obj->rune = 0;
+        obj->activation.type = 0;
+        obj->insured = 0;
+        game_log_event("object-repair",
+            "plain fuel lite k_idx=%d sval=%d pval=%d->%d xtra4=%d->%d to_a=%d->%d ac=%d->%d",
+            obj->k_idx, obj->sval, old_pval, obj->pval, old_xtra4, obj->xtra4,
+            old_to_a, obj->to_a, old_ac, obj->ac);
+    }
+}
+
 void obj_load(obj_ptr obj, savefile_ptr file)
 {
     object_kind *k_ptr;
@@ -1662,6 +1746,7 @@ void obj_load(obj_ptr obj, savefile_ptr file)
     }
     if (object_is_device(obj))
         add_flag(obj->flags, OF_ACTIVATE);
+    _obj_repair_plain_fuel_lite(obj);
 }
 
 void obj_save(obj_ptr obj, savefile_ptr file)

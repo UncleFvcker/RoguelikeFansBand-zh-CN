@@ -543,7 +543,15 @@ void wipe_m_list(void)
         if (!m_ptr->r_idx) continue;
 
         /* Monster is gone */
-        cave[m_ptr->fy][m_ptr->fx].m_idx = 0;
+        if (m_ptr->fy < MAX_HGT && m_ptr->fx < MAX_WID && cave[m_ptr->fy])
+        {
+            cave[m_ptr->fy][m_ptr->fx].m_idx = 0;
+        }
+        else
+        {
+            game_log_event("monster-wipe", "skipped invalid monster grid m_idx=%d r_idx=%d y=%d x=%d m_max=%d cur_hgt=%d cur_wid=%d",
+                i, m_ptr->r_idx, m_ptr->fy, m_ptr->fx, m_max, cur_hgt, cur_wid);
+        }
 
         /* Wipe the Monster */
         (void)WIPE(m_ptr, monster_type);

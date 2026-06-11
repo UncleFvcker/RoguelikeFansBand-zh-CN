@@ -348,16 +348,23 @@ static bool autopick_new_entry(autopick_type *entry, cptr str, bool allow_defaul
     cptr prev_ptr, ptr, old_ptr;
     int prev_flg;
 
+    entry->name = NULL;
+    entry->insc = NULL;
+    entry->flag[0] = entry->flag[1] = 0L;
+    entry->dice = 0;
+    entry->bonus = 0;
+    entry->level = 0;
+    entry->weight = 0;
+    entry->charges = 0;
+    entry->value = 0;
+    entry->action = 0;
+
     if (str[0] && str[1] == ':') switch (str[0])
     {
     case '?': case '%':
     case 'A': case 'P': case 'C':
         return FALSE;
     }
-
-    entry->flag[0] = entry->flag[1] = 0L;
-    entry->dice = 0;
-    entry->bonus = 0;
 
     act = DO_AUTOPICK | DO_DISPLAY;
     while (TRUE)
@@ -719,13 +726,22 @@ static void autopick_entry_from_object(autopick_type *entry, object_type *o_ptr)
 
     char name_str[MAX_NLEN];
 
+    entry->name = NULL;
+    entry->insc = NULL;
+    entry->flag[0] = entry->flag[1] = 0L;
+    entry->dice = 0;
+    entry->bonus = 0;
+    entry->level = 0;
+    entry->weight = 0;
+    entry->charges = 0;
+    entry->value = 0;
+    entry->action = 0;
+
     /* Initialize name string */
     name_str[0] = '\0';
 
     entry->insc = z_string_make(quark_str(o_ptr->inscription));
     entry->action = DO_AUTOPICK | DO_DISPLAY;
-    entry->flag[0] = entry->flag[1] = 0L;
-    entry->dice = 0;
 
     /* Unaware */
     if (!object_is_aware(o_ptr))
@@ -2821,7 +2837,7 @@ bool autopick_autoregister(object_type *o_ptr)
     char buf[1024];
     char pref_file[1024];
     FILE *pref_fff;
-    autopick_type an_entry, *entry = &an_entry;
+    autopick_type an_entry = {0}, *entry = &an_entry;
     string_ptr line = 0;
 
     int match_autopick = is_autopick(o_ptr);
@@ -6400,7 +6416,7 @@ static bool do_editor_command(text_body_type *tb, int com_id)
     {
         /* Insert choosen item name */
 
-        autopick_type an_entry, *entry = &an_entry;
+        autopick_type an_entry = {0}, *entry = &an_entry;
 
         if (!entry_from_choosed_object(entry))
         {
@@ -6733,7 +6749,7 @@ void do_cmd_edit_autopick(void)
 
     text_body_type text_body, *tb = &text_body;
 
-    autopick_type an_entry, *entry = &an_entry;
+    autopick_type an_entry = {0}, *entry = &an_entry;
     char buf[MAX_LINELEN];
 
     int i;

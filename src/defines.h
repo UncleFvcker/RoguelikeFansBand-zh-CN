@@ -18,11 +18,21 @@
 
 #define VER_MAJOR 1
 #define VER_MINOR 0
-#define VER_PATCH "0"
-#define VER_PATCH_ID 0
+#define VER_PATCH "1"
+#define VER_PATCH_ID 1
 #define VER_EXTRA 0
-#define VERSION_STRING "1.0.0.0"
+#define VERSION_STRING "1.0.0.1"
 #define VERSION_IS_DEVELOPMENT (FALSE)
+
+/*
+ * The public product version was reset when the project became
+ * RoguelikeFansBand, but the savefile format still follows the upstream
+ * FrogComposband 7.x numbering used by savefile_is_older_than().
+ */
+#define SAVEFILE_VER_MAJOR 7
+#define SAVEFILE_VER_MINOR 4
+#define SAVEFILE_VER_PATCH_ID 0
+#define SAVEFILE_VER_EXTRA 0
 
 #define GAME_MODE_BEGINNER  0
 #define GAME_MODE_NORMAL    1

@@ -18,6 +18,24 @@ static s16b new_floor_id;       /* floor_id of the destination */
 static u32b change_floor_mode;  /* Mode flags for changing floor */
 static u32b latest_visit_mark;  /* Max number of visit_mark */
 
+static void _clear_floor_ui_tracking(cptr reason)
+{
+    if (!p_ptr) return;
+
+    if (target_who || p_ptr->health_who || pet_t_m_idx || riding_t_m_idx || p_ptr->duelist_target_idx)
+        game_log_event("floor-track", "%s target=%d health=%d riding=%d pet_t=%d riding_t=%d duel=%d redraw=0x%08lx",
+            reason ? reason : "(null)",
+            target_who, p_ptr->health_who, p_ptr->riding,
+            pet_t_m_idx, riding_t_m_idx, p_ptr->duelist_target_idx,
+            (unsigned long)p_ptr->redraw);
+
+    target_who = 0;
+    pet_t_m_idx = 0;
+    riding_t_m_idx = 0;
+    p_ptr->duelist_target_idx = 0;
+    health_track(0);
+}
+
 
 /*
  * Initialize saved_floors array. Make sure that old temporal files
@@ -191,6 +209,8 @@ static void kill_saved_floor(saved_floor_type *sf_ptr)
 
     if (sf_ptr->floor_id == p_ptr->floor_id)
     {
+        game_log_event("floor-change", "kill current floor floor_id=%d savefile_id=%d", sf_ptr->floor_id, sf_ptr->savefile_id);
+
         /* Kill current floor */
         p_ptr->floor_id = 0;
 
@@ -200,6 +220,7 @@ static void kill_saved_floor(saved_floor_type *sf_ptr)
     {
         /* File name */
         sprintf(floor_savefile, "%s.F%02d", savefile, (int)sf_ptr->savefile_id);
+        game_log_event("floor-change", "kill saved floor floor_id=%d savefile_id=%d path=%s", sf_ptr->floor_id, sf_ptr->savefile_id, floor_savefile);
 
         /* Grab permissions */
         safe_setuid_grab();
@@ -911,14 +932,21 @@ void leave_floor(void)
     feature_type *f_ptr;
     saved_floor_type *sf_ptr;
 
+    game_log_event("floor-change", "leave begin mode=0x%08lx dun=%d dungeon=%d floor_id=%d pos=(%d,%d)",
+        (unsigned long)change_floor_mode, dun_level, dungeon_type, p_ptr->floor_id, py, px);
+    _clear_floor_ui_tracking("leave_floor");
+
     /* Preserve pets and prepare to take these to next floor */
     preserve_pet();
+    game_log_event("floor-change", "after preserve_pet dun=%d dungeon=%d floor_id=%d", dun_level, dungeon_type, p_ptr->floor_id);
 
     /* Preserve objects (in special cases) */
     preserve_objects();
+    game_log_event("floor-change", "after preserve_objects");
 
     /* Remove all mirrors without explosion */
     remove_all_mirrors(FALSE);
+    game_log_event("floor-change", "after remove_mirrors");
 
     if (p_ptr->special_defense & NINJA_S_STEALTH) set_superstealth(FALSE);
 
@@ -947,6 +975,8 @@ void leave_floor(void)
 
     /* Extract current floor info or NULL */
     sf_ptr = get_sf_ptr(p_ptr->floor_id);
+    game_log_event("floor-change", "current sf_ptr=%d sf_floor_id=%d floor_id=%d",
+        sf_ptr ? 1 : 0, sf_ptr ? sf_ptr->floor_id : 0, p_ptr->floor_id);
 
     /* Choose random stairs */
     if ((change_floor_mode & CFM_RAND_CONNECT) && p_ptr->floor_id)
@@ -1019,6 +1049,8 @@ void leave_floor(void)
         }
 
         dun_level += move_num;
+        game_log_event("floor-change", "after level move move_num=%d dun=%d mode=0x%08lx",
+            move_num, dun_level, (unsigned long)change_floor_mode);
     }
 
     /* Leaving the dungeon to town */
@@ -1037,7 +1069,9 @@ void leave_floor(void)
             }
             p_ptr->recall_dungeon = dungeon_type;
         }
+        game_log_event("floor-change", "before set_dungeon_type surface old_dungeon=%d", dungeon_type);
         set_dungeon_type(0);
+        game_log_event("floor-change", "after set_dungeon_type surface dungeon=%d", dungeon_type);
 
         /* Reach to the surface -- Clear all saved floors */
         change_floor_mode &= ~CFM_SAVE_FLOORS;
@@ -1066,12 +1100,15 @@ void leave_floor(void)
     {
         int i;
 
+        game_log_event("floor-change", "before kill all saved floors");
+
         /* Kill all saved floors */
         for (i = 0; i < MAX_SAVED_FLOORS; i++)
             kill_saved_floor(&saved_floors[i]);
 
         /* Reset visit_mark count */
         latest_visit_mark = 1;
+        game_log_event("floor-change", "after kill all saved floors floor_id=%d", p_ptr->floor_id);
     }
     else if (change_floor_mode & CFM_NO_RETURN)
     {
@@ -1083,6 +1120,7 @@ void leave_floor(void)
     if (!p_ptr->floor_id)
     {
         /* No longer need to save current floor */
+        game_log_event("floor-change", "leave return no current floor");
         return;
     }
 
@@ -1129,6 +1167,7 @@ void leave_floor(void)
         clear_mon_lite();
 
         /* Save current floor */
+        game_log_event("floor-change", "before save_floor floor_id=%d new_floor_id=%d", p_ptr->floor_id, new_floor_id);
         if (!save_floor(sf_ptr, 0))
         {
             /* Save failed -- No return */
@@ -1137,7 +1176,10 @@ void leave_floor(void)
             /* Kill current floor */
             kill_saved_floor(get_sf_ptr(p_ptr->floor_id));
         }
+        game_log_event("floor-change", "after save_floor floor_id=%d new_floor_id=%d", p_ptr->floor_id, new_floor_id);
     }
+    game_log_event("floor-change", "leave end floor_id=%d new_floor_id=%d dun=%d dungeon=%d",
+        p_ptr->floor_id, new_floor_id, dun_level, dungeon_type);
 }
 
 

@@ -1655,6 +1655,12 @@ void _fix_monster_list_aux(void)
     int           ct = 0, i;
 
     Term_get_size(&display_rect.cx, &display_rect.cy);
+    if (display_rect.cx <= 0 || display_rect.cy <= 0)
+    {
+        game_log_event("fix-mon-list", "invalid term size cx=%d cy=%d", display_rect.cx, display_rect.cy);
+        _mon_list_free(list);
+        return;
+    }
 
     if ((list->ct_total) && (display_rect.cx >= (use_bigtile ? 3 : 2)/* Hugo broke the game */))
         ct = _draw_monster_list(list, 0, display_rect, MON_LIST_NORMAL);
@@ -1677,7 +1683,9 @@ void fix_monster_list(void)
 
         Term_activate(angband_term[j]);
 
+        game_log_event("fix-mon-list", "begin term=%d wid=%d hgt=%d", j, Term->wid, Term->hgt);
         _fix_monster_list_aux();
+        game_log_event("fix-mon-list", "end term=%d", j);
 
         Term_fresh();
         Term_activate(old);

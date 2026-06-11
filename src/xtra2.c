@@ -908,6 +908,9 @@ void monster_death(int m_idx, bool drop_item)
 
 
     monster_desc(m_name, m_ptr, MD_TRUE_NAME);
+    game_log_event("monster-death",
+        "begin m_idx=%d r_idx=%d name=%s drop_item=%d drop_chosen=%d y=%d x=%d hp=%d level=%d",
+        m_idx, m_ptr->r_idx, m_name, drop_item, drop_chosen_item, m_ptr->fy, m_ptr->fx, m_ptr->hp, r_ptr->level);
 
     /* The caster is dead? */
     if (world_monster && world_monster == m_idx) world_monster = 0;
@@ -970,6 +973,7 @@ void monster_death(int m_idx, bool drop_item)
     }
 
     quests_on_kill_mon(m_ptr);
+    game_log_event("monster-death", "after_quests m_idx=%d r_idx=%d", m_idx, m_ptr->r_idx);
 
     /* Handle the possibility of player vanquishing arena combatant -KMW- */
     if (p_ptr->inside_arena && !is_pet(m_ptr))
@@ -1143,9 +1147,11 @@ void monster_death(int m_idx, bool drop_item)
         /* Drop it in the dungeon */
         (void)drop_near(q_ptr, -1, y, x);
     }
+    game_log_event("monster-death", "after_corpse m_idx=%d r_idx=%d", m_idx, m_ptr->r_idx);
 
     /* Drop objects being carried */
     monster_drop_carried_objects(m_ptr);
+    game_log_event("monster-death", "after_carried m_idx=%d r_idx=%d", m_idx, m_ptr->r_idx);
 
     if (r_ptr->flags1 & RF1_DROP_GOOD) mo_mode |= AM_GOOD;
     if (r_ptr->flags1 & RF1_DROP_GREAT) mo_mode |= AM_GREAT;
@@ -1666,6 +1672,7 @@ void monster_death(int m_idx, bool drop_item)
         q_ptr->origin_xtra = m_ptr->r_idx;
         drop_near(q_ptr, -1, y, x);
     }
+    game_log_event("monster-death", "after_special_drops m_idx=%d r_idx=%d", m_idx, m_ptr->r_idx);
 
     /* Mega-Hack -- drop fixed items */
     if (drop_chosen_item)
@@ -2394,6 +2401,9 @@ void monster_death(int m_idx, bool drop_item)
 
     if (visible && (dump_item || dump_gold))
         lore_treasure(m_idx, dump_item, dump_gold);
+    game_log_event("monster-death",
+        "after_random_drops m_idx=%d r_idx=%d dump_item=%d dump_gold=%d",
+        m_idx, m_ptr->r_idx, dump_item, dump_gold);
 
     if (do_vampire_servant)
     {
@@ -3258,7 +3268,9 @@ bool mon_take_hit(int m_idx, int dam, int type, bool *fear, cptr note)
         }
 
         /* Generate treasure */
+        game_log_event("mon-kill", "before_monster_death m_idx=%d r_idx=%d name=%s", m_idx, m_ptr->r_idx, m_name);
         monster_death(m_idx, TRUE);
+        game_log_event("mon-kill", "after_monster_death m_idx=%d r_idx=%d name=%s", m_idx, m_ptr->r_idx, m_name);
 
         /* Guntujant takes interest... */
         if (disciple_is_(DISCIPLE_TROIKA))
@@ -3311,14 +3323,18 @@ bool mon_take_hit(int m_idx, int dam, int type, bool *fear, cptr note)
         else
         {
             /* Delete the monster */
+            game_log_event("mon-kill", "before_delete m_idx=%d r_idx=%d name=%s", m_idx, m_ptr->r_idx, m_name);
             delete_monster_idx(m_idx);
+            game_log_event("mon-kill", "after_delete m_idx=%d name=%s", m_idx, m_name);
         }
 
         /* Prevent bug of chaos patron's reward */
+        game_log_event("mon-kill", "before_exp m_idx=%d exp_r_idx=%d name=%s", m_idx, exp_mon.r_idx, m_name);
         if (r_ptr->flags7 & RF7_KILL_EXP)
             get_exp_from_mon((long)exp_mon.max_maxhp*2, &exp_mon, TRUE);
         else
             get_exp_from_mon(((long)exp_mon.max_maxhp+1L) * 9L / 10L, &exp_mon, TRUE);
+        game_log_event("mon-kill", "after_exp m_idx=%d exp_r_idx=%d name=%s", m_idx, exp_mon.r_idx, m_name);
 
         /* Not afraid */
         (*fear) = FALSE;

@@ -1085,9 +1085,9 @@ static void crash_report_write_common(FILE *fp, cptr kind, cptr reason)
         fprintf(fp, "ids: sex=%d race=%d class=%d subclass=%d subrace=%d current_r_idx=%d\n",
             p_ptr->psex, p_ptr->prace, p_ptr->pclass,
             p_ptr->psubclass, p_ptr->psubrace, p_ptr->current_r_idx);
-        fprintf(fp, "level=%d exp=%ld gold=%ld depth=%d town=%d turn=%ld player_turn=%ld\n",
+        fprintf(fp, "level=%d exp=%ld gold=%ld depth=%d floor_id=%d town=%d turn=%ld player_turn=%ld\n",
             p_ptr->lev, (long)p_ptr->exp, (long)p_ptr->au,
-            dun_level, p_ptr->town_num, (long)game_turn, (long)player_turn);
+            dun_level, p_ptr->floor_id, p_ptr->town_num, (long)game_turn, (long)player_turn);
         fprintf(fp, "hp=%ld/%ld sp=%ld/%ld pos=(%d,%d) old_pos=(%d,%d) wild=(%ld,%ld) dead=%d panic_save=%d\n",
             (long)p_ptr->chp, (long)p_ptr->mhp,
             (long)p_ptr->csp, (long)p_ptr->msp,
@@ -1095,8 +1095,12 @@ static void crash_report_write_common(FILE *fp, cptr kind, cptr reason)
             p_ptr->oldpy, p_ptr->oldpx,
             (long)p_ptr->wilderness_x, (long)p_ptr->wilderness_y,
             p_ptr->is_dead, p_ptr->panic_save);
-        fprintf(fp, "tracking: monster_race_idx=%d object_kind_idx=%d window=0x%08lx redraw=0x%08lx update=0x%08lx\n",
+        fprintf(fp, "tracking: monster_race_idx=%d object_kind_idx=%d target_who=%d health_who=%d riding=%d pet_t=%d riding_t=%d m_max=%d max_m_idx=%u o_max=%d max_o_idx=%u cur_hgt=%d cur_wid=%d base_level=%d dungeon_type=%d character_dungeon=%d window=0x%08lx redraw=0x%08lx update=0x%08lx\n",
             p_ptr->monster_race_idx, p_ptr->object_kind_idx,
+            target_who, p_ptr->health_who, p_ptr->riding,
+            pet_t_m_idx, riding_t_m_idx, m_max, (unsigned)max_m_idx,
+            o_max, (unsigned)max_o_idx, cur_hgt, cur_wid, base_level, dungeon_type,
+            character_dungeon,
             (unsigned long)p_ptr->window,
             (unsigned long)p_ptr->redraw,
             (unsigned long)p_ptr->update);
@@ -1145,11 +1149,34 @@ static void crash_report_write_exception(FILE *fp, EXCEPTION_POINTERS *info)
     fprintf(fp, "---------\n");
     if (er)
     {
+        HMODULE image_base = GetModuleHandle(NULL);
+        MEMORY_BASIC_INFORMATION mbi;
+
         fprintf(fp, "code=0x%08lx flags=0x%08lx address=%p parameters=%lu\n",
             (unsigned long)er->ExceptionCode,
             (unsigned long)er->ExceptionFlags,
             er->ExceptionAddress,
             (unsigned long)er->NumberParameters);
+        if (image_base)
+        {
+            ULONG_PTR addr = (ULONG_PTR)er->ExceptionAddress;
+            ULONG_PTR base = (ULONG_PTR)image_base;
+
+            fprintf(fp, "image_base=%p", (void*)image_base);
+            if (addr >= base)
+                fprintf(fp, " image_rva=0x%llx", (unsigned long long)(addr - base));
+            fprintf(fp, "\n");
+        }
+        if (VirtualQuery(er->ExceptionAddress, &mbi, sizeof(mbi)))
+        {
+            fprintf(fp, "memory: allocation_base=%p base_address=%p region_size=%llu state=0x%lx protect=0x%lx type=0x%lx\n",
+                mbi.AllocationBase,
+                mbi.BaseAddress,
+                (unsigned long long)mbi.RegionSize,
+                (unsigned long)mbi.State,
+                (unsigned long)mbi.Protect,
+                (unsigned long)mbi.Type);
+        }
         for (i = 0; i < er->NumberParameters && i < EXCEPTION_MAXIMUM_PARAMETERS; i++)
             fprintf(fp, "param[%lu]=0x%p\n", (unsigned long)i, (void*)er->ExceptionInformation[i]);
     }
@@ -1250,6 +1277,49 @@ static LONG WINAPI crash_report_exception_filter(EXCEPTION_POINTERS *info)
     }
 
     return EXCEPTION_EXECUTE_HANDLER;
+}
+
+static bool crash_report_exception_is_fatalish(DWORD code)
+{
+    switch (code)
+    {
+    case EXCEPTION_ACCESS_VIOLATION:
+    case EXCEPTION_ARRAY_BOUNDS_EXCEEDED:
+    case EXCEPTION_DATATYPE_MISALIGNMENT:
+    case EXCEPTION_FLT_DENORMAL_OPERAND:
+    case EXCEPTION_FLT_DIVIDE_BY_ZERO:
+    case EXCEPTION_FLT_INEXACT_RESULT:
+    case EXCEPTION_FLT_INVALID_OPERATION:
+    case EXCEPTION_FLT_OVERFLOW:
+    case EXCEPTION_FLT_STACK_CHECK:
+    case EXCEPTION_FLT_UNDERFLOW:
+    case EXCEPTION_ILLEGAL_INSTRUCTION:
+    case EXCEPTION_IN_PAGE_ERROR:
+    case EXCEPTION_INT_DIVIDE_BY_ZERO:
+    case EXCEPTION_INT_OVERFLOW:
+    case EXCEPTION_PRIV_INSTRUCTION:
+    case EXCEPTION_STACK_OVERFLOW:
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static LONG WINAPI crash_report_vectored_exception_handler(EXCEPTION_POINTERS *info)
+{
+    char path[1024];
+    DWORD code = 0;
+
+    if (!info || !info->ExceptionRecord)
+        return EXCEPTION_CONTINUE_SEARCH;
+
+    code = info->ExceptionRecord->ExceptionCode;
+    if (!crash_report_exception_is_fatalish(code))
+        return EXCEPTION_CONTINUE_SEARCH;
+
+    if (crash_report_write("exception-firstchance", "First-chance fatal Windows exception", info, path, sizeof(path)))
+        game_log_event("exception", "firstchance code=0x%08lx path=%s", (unsigned long)code, path);
+
+    return EXCEPTION_CONTINUE_SEARCH;
 }
 
 static void crash_report_show(HWND hwnd, cptr kind, cptr str)
@@ -5527,6 +5597,7 @@ int FAR PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,
     /* Save globally */
     hInstance = hInst;
 
+    AddVectoredExceptionHandler(1, crash_report_vectored_exception_handler);
     SetUnhandledExceptionFilter(crash_report_exception_filter);
     game_log_event("winmain", "started command_line=%s", GetCommandLine());
 

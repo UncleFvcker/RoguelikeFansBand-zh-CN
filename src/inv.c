@@ -40,6 +40,34 @@ static void _grow(inv_ptr inv, slot_t slot)
     }
 }
 
+static void _fix_obj_loc(inv_ptr inv, obj_ptr obj, slot_t slot, cptr why, bool log_slot)
+{
+    if (!obj) return;
+
+    if (obj->loc.where != inv->type || (log_slot && obj->loc.slot != slot))
+    {
+        char name[MAX_NLEN];
+
+        object_desc(name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY);
+        game_log_event("inventory-loc",
+            "%s inv=%s inv_type=%d slot=%d old_where=%d old_slot=%d k_idx=%d tval=%d sval=%d number=%d name=%s",
+            why ? why : "repair",
+            inv->name ? inv->name : "(null)",
+            inv->type,
+            slot,
+            obj->loc.where,
+            obj->loc.slot,
+            obj->k_idx,
+            obj->tval,
+            obj->sval,
+            obj->number,
+            name);
+    }
+
+    obj->loc.where = inv->type;
+    obj->loc.slot = slot;
+}
+
 /* Creation */
 inv_ptr inv_alloc(cptr name, int type, int max)
 {
@@ -377,8 +405,7 @@ bool inv_sort_aux(inv_ptr inv, obj_cmp_f f)
                 obj_ptr obj = vec_get(inv->objects, slot);
                 if (obj)
                 {
-                    obj->loc.slot = slot;
-                    assert(obj->loc.where == inv->type);
+                    _fix_obj_loc(inv, obj, slot, "sort", FALSE);
                 }
             }
         }
@@ -825,6 +852,7 @@ void inv_load(inv_ptr inv, savefile_ptr file)
 
         if (slot >= vec_length(inv->objects))
             _grow(inv, slot);
+        _fix_obj_loc(inv, obj, slot, "load", TRUE);
         vec_set(inv->objects, slot, obj);
     }
 }

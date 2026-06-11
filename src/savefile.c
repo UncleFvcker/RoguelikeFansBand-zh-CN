@@ -20,6 +20,24 @@ int version_compare(version_ptr left, version_ptr right)
     return 0;
 }
 
+void savefile_normalize_version(version_ptr version)
+{
+    if (!version) return;
+
+    /*
+     * Early RoguelikeFansBand builds wrote the public 1.0.x version into the
+     * savefile header. The serialized data was still FrogComposband 7.x format,
+     * so normalize those headers before any savefile_is_older_than() checks.
+     */
+    if (version->major == 1 && version->minor == 0)
+    {
+        version->major = SAVEFILE_VER_MAJOR;
+        version->minor = SAVEFILE_VER_MINOR;
+        version->patch = SAVEFILE_VER_PATCH_ID;
+        version->extra = SAVEFILE_VER_EXTRA;
+    }
+}
+
 bool savefile_is_older_than(savefile_ptr file, byte major, byte minor, byte patch, byte extra)
 {
     version_t v;
@@ -54,6 +72,7 @@ savefile_ptr savefile_open_read(const char *name)
     result->version.minor = getc(result->file);
     result->version.patch = getc(result->file);
     result->version.extra = getc(result->file);
+    savefile_normalize_version(&result->version);
     result->xor_byte = 0;
     savefile_read_byte(result);
     result->pos = 4;
@@ -93,10 +112,10 @@ savefile_ptr savefile_open_write(const char *name)
     result->type = SAVEFILE_WRITE;
 
     /* Dump the file header */
-    putc(VER_MAJOR, result->file);
-    putc(VER_MINOR, result->file);
-    putc(versio_sovitus(), result->file);
-    putc(VER_EXTRA, result->file);
+    putc(SAVEFILE_VER_MAJOR, result->file);
+    putc(SAVEFILE_VER_MINOR, result->file);
+    putc(SAVEFILE_VER_PATCH_ID, result->file);
+    putc(SAVEFILE_VER_EXTRA, result->file);
 
     result->xor_byte = 0;
     result->pos = 3;

@@ -2282,6 +2282,13 @@ static void prt_mon_health_bar(int m_idx, int row, int col)
     monster_type *m_ptr;
     byte base_attr = TERM_WHITE;
 
+    if (m_idx <= 0 || m_idx >= max_m_idx || !m_list[m_idx].r_idx || m_list[m_idx].r_idx >= max_r_idx)
+    {
+        game_log_event("health-bar", "invalid trackee m_idx=%d target=%d health=%d riding=%d m_max=%d max_m_idx=%u",
+            m_idx, target_who, p_ptr->health_who, p_ptr->riding, m_max, (unsigned)max_m_idx);
+        return;
+    }
+
     m_ptr = &m_list[m_idx];
 
     if (m_idx == target_who)
@@ -2435,11 +2442,35 @@ static void prt_health_bars(void)
         if (display_food_bar)
             prt_food_bar(row++, col);
         if (p_ptr->riding)
-            prt_mon_health_bar(p_ptr->riding, row++, col);
+        {
+            if (p_ptr->riding > 0 && p_ptr->riding < max_m_idx && m_list[p_ptr->riding].r_idx)
+                prt_mon_health_bar(p_ptr->riding, row++, col);
+            else
+            {
+                game_log_event("health-bar", "cleared invalid riding=%d m_max=%d max_m_idx=%u", p_ptr->riding, m_max, (unsigned)max_m_idx);
+                p_ptr->riding = 0;
+            }
+        }
         if (p_ptr->health_who && p_ptr->health_who != p_ptr->riding)
-            prt_mon_health_bar(p_ptr->health_who, row++, col);
+        {
+            if (p_ptr->health_who > 0 && p_ptr->health_who < max_m_idx && m_list[p_ptr->health_who].r_idx)
+                prt_mon_health_bar(p_ptr->health_who, row++, col);
+            else
+            {
+                game_log_event("health-bar", "cleared invalid health_who=%d m_max=%d max_m_idx=%u", p_ptr->health_who, m_max, (unsigned)max_m_idx);
+                health_track(0);
+            }
+        }
         if (target_who > 0 && target_who != p_ptr->riding && target_who != p_ptr->health_who)
-            prt_mon_health_bar(target_who, row++, col);
+        {
+            if (target_who < max_m_idx && m_list[target_who].r_idx)
+                prt_mon_health_bar(target_who, row++, col);
+            else
+            {
+                game_log_event("health-bar", "cleared invalid target_who=%d m_max=%d max_m_idx=%u", target_who, m_max, (unsigned)max_m_idx);
+                target_who = 0;
+            }
+        }
         if (target_who < 0)
         {
             int dx = target_col - px;
@@ -3785,15 +3816,29 @@ int py_total_weight(void)
     return weight;
 }
 
+static int _stat_value_to_index(int value)
+{
+    int ind;
+
+    if (value <= 18) ind = value - 3;
+    else if (value <= 18 + 219) ind = 15 + (value - 18) / 10;
+    else ind = 37;
+
+    if (ind < 0) ind = 0;
+    if (ind > 37) ind = 37;
+    return ind;
+}
+
 /*
  * Computes current weight limit.
  */
 int weight_limit(void)
 {
-    int i;
+    int i, ind;
 
     /* Weight limit based only on strength */
-    i = (int)adj_str_wgt[p_ptr->stat_ind[A_STR]] * 50; /* Constant was 100 */
+    ind = _stat_value_to_index(modify_stat_value(p_ptr->stat_cur[A_STR], p_ptr->stat_add[A_STR]));
+    i = (int)adj_str_wgt[ind] * 50; /* Constant was 100 */
     if (p_ptr->pclass == CLASS_BERSERKER) i = i * 3 / 2;
 
     /* Return the result */
@@ -4590,14 +4635,7 @@ void calc_bonuses(void)
             p_ptr->redraw |= (PR_STATS);
         }
 
-        /* Values: 3, 4, ..., 17 */
-        if (use <= 18) ind = (use - 3);
-
-        /* Ranges: 18/00-18/09, ..., 18/210-18/219 */
-        else if (use <= 18+219) ind = (15 + (use - 18) / 10);
-
-        /* Range: 18/220+ */
-        else ind = (37);
+        ind = _stat_value_to_index(use);
 
         if (p_ptr->stat_ind[i] != ind)
         {
@@ -5914,7 +5952,9 @@ void window_stuff(void)
     if (p_ptr->window & (PW_MONSTER))
     {
         p_ptr->window &= ~(PW_MONSTER);
+        game_log_event("window", "before_fix_monster monster_race_idx=%d", p_ptr->monster_race_idx);
         fix_monster();
+        game_log_event("window", "after_fix_monster monster_race_idx=%d", p_ptr->monster_race_idx);
     }
 
     if (p_ptr->window & PW_OBJECT_LIST)
@@ -5926,7 +5966,9 @@ void window_stuff(void)
     if (p_ptr->window & PW_MONSTER_LIST)
     {
         p_ptr->window &= ~(PW_MONSTER_LIST);
+        game_log_note("window", "before_fix_monster_list");
         fix_monster_list();
+        game_log_note("window", "after_fix_monster_list");
     }
 
     /* Display object recall */

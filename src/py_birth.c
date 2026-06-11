@@ -183,6 +183,7 @@ void py_birth_light(void)
     {
         object_type forge = {0};
         object_prep(&forge, lookup_kind(TV_LITE, SV_LITE_TORCH));
+        forge.pval = 0;
         forge.number = rand_range(3, 7);
         forge.xtra4 = rand_range(3, 7) * 500;
         py_birth_obj(&forge);

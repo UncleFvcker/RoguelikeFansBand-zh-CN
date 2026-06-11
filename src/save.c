@@ -911,12 +911,94 @@ static void ang_sort_swap_cave_temp(vptr u, vptr v, int a, int b)
     who[b] = holder;
 }
 
+static bool _floor_dim_ok_for_save(void)
+{
+    return cur_hgt > 0 && cur_hgt <= MAX_HGT && cur_wid > 0 && cur_wid <= MAX_WID;
+}
+
+static bool _floor_grid_ok_for_save(int y, int x)
+{
+    if (!_floor_dim_ok_for_save()) return FALSE;
+    if (y < 0 || y >= cur_hgt || x < 0 || x >= cur_wid) return FALSE;
+    if (!cave[y]) return FALSE;
+    return TRUE;
+}
+
+static bool _validate_floor_for_save(cptr where, saved_floor_type *sf_ptr)
+{
+    int i;
+    int floor_id = sf_ptr ? sf_ptr->floor_id : (p_ptr ? p_ptr->floor_id : 0);
+
+    if (!_floor_dim_ok_for_save())
+    {
+        game_log_event("floor-save", "%s bad floor dimensions floor_id=%d h=%d w=%d py=%d px=%d",
+            where, floor_id, cur_hgt, cur_wid, py, px);
+        return FALSE;
+    }
+    if (!_floor_grid_ok_for_save(py, px))
+    {
+        game_log_event("floor-save", "%s bad player grid floor_id=%d h=%d w=%d py=%d px=%d",
+            where, floor_id, cur_hgt, cur_wid, py, px);
+        return FALSE;
+    }
+
+    for (i = 1; i < o_max; i++)
+    {
+        object_type *o_ptr = &o_list[i];
+
+        if (!o_ptr->k_idx) continue;
+        if (o_ptr->held_m_idx)
+        {
+            if (o_ptr->held_m_idx <= 0 || o_ptr->held_m_idx >= m_max || !m_list[o_ptr->held_m_idx].r_idx)
+            {
+                game_log_event("floor-save", "%s bad held object ref floor_id=%d o_idx=%d k_idx=%d held_m_idx=%d m_max=%d",
+                    where, floor_id, i, o_ptr->k_idx, o_ptr->held_m_idx, m_max);
+                return FALSE;
+            }
+        }
+        else if (!_floor_grid_ok_for_save(o_ptr->loc.y, o_ptr->loc.x))
+        {
+            game_log_event("floor-save", "%s bad object grid floor_id=%d o_idx=%d k_idx=%d where=%d y=%d x=%d h=%d w=%d",
+                where, floor_id, i, o_ptr->k_idx, o_ptr->loc.where,
+                o_ptr->loc.y, o_ptr->loc.x, cur_hgt, cur_wid);
+            return FALSE;
+        }
+    }
+
+    for (i = 1; i < m_max; i++)
+    {
+        monster_type *m_ptr = &m_list[i];
+
+        if (!m_ptr->r_idx) continue;
+        if (m_ptr->r_idx <= 0 || m_ptr->r_idx >= max_r_idx)
+        {
+            game_log_event("floor-save", "%s bad monster race floor_id=%d m_idx=%d r_idx=%d y=%d x=%d",
+                where, floor_id, i, m_ptr->r_idx, m_ptr->fy, m_ptr->fx);
+            return FALSE;
+        }
+        if (!_floor_grid_ok_for_save(m_ptr->fy, m_ptr->fx))
+        {
+            game_log_event("floor-save", "%s bad monster grid floor_id=%d m_idx=%d r_idx=%d y=%d x=%d h=%d w=%d",
+                where, floor_id, i, m_ptr->r_idx, m_ptr->fy, m_ptr->fx, cur_hgt, cur_wid);
+            return FALSE;
+        }
+        if (cave[m_ptr->fy][m_ptr->fx].m_idx != i)
+        {
+            game_log_event("floor-save", "%s bad monster cave link floor_id=%d m_idx=%d cave_m_idx=%d r_idx=%d y=%d x=%d",
+                where, floor_id, i, cave[m_ptr->fy][m_ptr->fx].m_idx, m_ptr->r_idx, m_ptr->fy, m_ptr->fx);
+            return FALSE;
+        }
+    }
+
+    return TRUE;
+}
+
 
 /*
  * Actually write a saved floor data
  * using effectively compressed format.
  */
-static void wr_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
+static bool wr_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
 {
     cave_template_type *template;
     u16b max_num_temp;
@@ -930,6 +1012,7 @@ static void wr_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
     byte count;
     u16b prev_u16b;
 
+    if (!_validate_floor_for_save("wr_saved_floor", sf_ptr)) return FALSE;
 
     if (!sf_ptr)
     {
@@ -1154,6 +1237,8 @@ static void wr_saved_floor(savefile_ptr file, saved_floor_type *sf_ptr)
             savefile_write_s16b(file, pack_ptr->distance);
         }
     }
+
+    return TRUE;
 }
 
 static bool wr_dungeon(savefile_ptr file)
@@ -1180,7 +1265,7 @@ static bool wr_dungeon(savefile_ptr file)
         savefile_write_byte(file, 0);
 
         /* Write the current floor data */
-        wr_saved_floor(file, NULL);
+        if (!wr_saved_floor(file, NULL)) return FALSE;
         return TRUE;
     }
 
@@ -1206,6 +1291,12 @@ static bool wr_dungeon(savefile_ptr file)
 
     /* Extract pointer to current floor */
     cur_sf_ptr = get_sf_ptr(p_ptr->floor_id);
+    if (!cur_sf_ptr)
+    {
+        game_log_event("floor-save", "wr_dungeon missing current floor floor_id=%d dun=%d dungeon=%d max_floor_id=%d",
+            p_ptr->floor_id, dun_level, dungeon_type, max_floor_id);
+        return FALSE;
+    }
 
     /* Save current floor to temporal file */
     if (!save_floor(cur_sf_ptr, (SLF_SECOND))) return FALSE;
@@ -1225,7 +1316,7 @@ static bool wr_dungeon(savefile_ptr file)
             savefile_write_byte(file, 0);
 
             /* Write saved floor data to the save file */
-            wr_saved_floor(file, sf_ptr);
+            if (!wr_saved_floor(file, sf_ptr)) return FALSE;
         }
         else
         {
@@ -1692,6 +1783,17 @@ bool load_player(void)
     /* Process file */
     if (!err)
     {
+        version_t savefile_version;
+
+        savefile_version.major = vvv[0];
+        savefile_version.minor = vvv[1];
+        savefile_version.patch = vvv[2];
+        savefile_version.extra = vvv[3];
+        savefile_normalize_version(&savefile_version);
+        vvv[0] = savefile_version.major;
+        vvv[1] = savefile_version.minor;
+        vvv[2] = savefile_version.patch;
+        vvv[3] = savefile_version.extra;
 
         /* Extract version */
         z_major = vvv[0];
@@ -1746,10 +1848,10 @@ bool load_player(void)
     if (!err)
     {
         /* Give a conversion warning */
-        if ((VER_MAJOR != z_major) ||
-            (VER_MINOR != z_minor) ||
-            (versio_sovitus() != savefile_patch) ||
-            (VER_EXTRA != sf_extra))
+        if ((SAVEFILE_VER_MAJOR != z_major) ||
+            (SAVEFILE_VER_MINOR != z_minor) ||
+            (SAVEFILE_VER_PATCH_ID != savefile_patch) ||
+            (SAVEFILE_VER_EXTRA != sf_extra))
         {
             msg_format("转换了一个 %d.%d.%s.%d 版本的存档文件。",
                 (z_major > 9) ? z_major-10 : z_major , z_minor, z_patch, sf_extra);
@@ -1864,11 +1966,13 @@ void remove_loc(void)
 
 static bool save_floor_aux(savefile_ptr file, saved_floor_type *sf_ptr)
 {
+    if (!_validate_floor_for_save("before_compact", sf_ptr)) return FALSE;
     compact_objects(0);
     compact_monsters(0);
+    if (!_validate_floor_for_save("after_compact", sf_ptr)) return FALSE;
 
     savefile_write_u32b(file, saved_floor_file_sign);
-    wr_saved_floor(file, sf_ptr);
+    if (!wr_saved_floor(file, sf_ptr)) return FALSE;
 
     savefile_write_u32b(file, file->v_check);
     savefile_write_u32b(file, file->x_check);
@@ -1887,6 +1991,13 @@ bool save_floor(saved_floor_type *sf_ptr, u32b mode)
     bool ok = FALSE;
     savefile_ptr file = NULL;
 
+    if (!sf_ptr)
+    {
+        game_log_event("floor-save", "save_floor null sf_ptr mode=0x%08lx floor_id=%d dun=%d dungeon=%d",
+            (unsigned long)mode, p_ptr ? p_ptr->floor_id : 0, dun_level, dungeon_type);
+        return FALSE;
+    }
+
     if (!(mode & SLF_SECOND))
     {
 #ifdef SET_UID
@@ -1898,6 +2009,8 @@ bool save_floor(saved_floor_type *sf_ptr, u32b mode)
     }
 
     sprintf(floor_savefile, "%s.F%02d", savefile, (int)sf_ptr->savefile_id);
+    game_log_event("floor-save", "begin path=%s mode=0x%08lx sf_floor_id=%d savefile_id=%d",
+        floor_savefile, (unsigned long)mode, sf_ptr->floor_id, sf_ptr->savefile_id);
     file = savefile_open_write(floor_savefile);
     if (file)
     {
@@ -1908,9 +2021,16 @@ bool save_floor(saved_floor_type *sf_ptr, u32b mode)
     /* Remove "broken" files */
     if (!ok)
     {
+        game_log_event("floor-save", "failed path=%s mode=0x%08lx sf_floor_id=%d savefile_id=%d",
+            floor_savefile, (unsigned long)mode, sf_ptr->floor_id, sf_ptr->savefile_id);
         safe_setuid_grab();
         (void)fd_kill(floor_savefile);
         safe_setuid_drop();
+    }
+    else
+    {
+        game_log_event("floor-save", "ok path=%s mode=0x%08lx sf_floor_id=%d savefile_id=%d",
+            floor_savefile, (unsigned long)mode, sf_ptr->floor_id, sf_ptr->savefile_id);
     }
 
     if (!(mode & SLF_SECOND))

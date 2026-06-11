@@ -4120,6 +4120,9 @@ static void handle_signal_abort(int sig)
     /* Forbid suspend */
     signals_ignore_tstp();
 
+    /* Preserve the original crash site's format diagnostic through panic-save I/O. */
+    format_diagnostic_suspend();
+
     /* Attempt to save */
     if (save_player())
     {
