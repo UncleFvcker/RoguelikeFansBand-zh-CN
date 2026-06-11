@@ -684,7 +684,7 @@ class_t *mauler_get_class(void)
     skills_t bs = { 25,  25,  35,   0,  14,   2,  70,  16 };
     skills_t xs = { 12,   9,  12,   0,   0,   0,  30,   6 };
 
-        me.name = "破坏者";
+        me.name = "重槌兵";
         me.desc = 
         "The Mauler favors extremely heavy weapons, and possesses powerful abilities whose "
             "effectiveness depends on the weight of the weapon. While they only gain a limited "

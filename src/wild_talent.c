@@ -105,7 +105,7 @@ static talent_t _talents[_MAX_TALENTS][_MAX_TALENTS_PER_GROUP] =
     },
     /* CL9: Middle Offense */
     {
-        { A_CHR, "像驯兽师一样", {1, 0, 30, dominate_living_I_spell}},
+        { A_CHR, "像兽王一样", {1, 0, 30, dominate_living_I_spell}},
         { A_INT, "像小恶魔一样", {9, 7, 50, imp_fire_spell}},
         { A_STR, "像人造人一样", {9, 7, 30, android_blaster_spell}},
         { A_DEX, "像狗头人一样", {9, 8, 50, poison_dart_spell}},
@@ -134,7 +134,7 @@ static talent_t _talents[_MAX_TALENTS][_MAX_TALENTS_PER_GROUP] =
     {
         { A_INT, "像夺心魔一样", {15, 12, 50, mind_blast_spell}},
         { A_CON, "像变异人一样", {15,  0,  40, breathe_fire_I_spell}},
-        { A_CHR, "像驯兽师一样", {15, 0, 50, dominate_living_II_spell}},
+        { A_CHR, "像兽王一样", {15, 0, 50, dominate_living_II_spell}},
         { A_WIS, "像黑骑士一样", {15, 12, 40, cause_wounds_III_spell}},
         { -1, NULL, {0, 0, 0, NULL}},
     },
@@ -185,7 +185,7 @@ static talent_t _talents[_MAX_TALENTS][_MAX_TALENTS_PER_GROUP] =
     {
         { A_DEX, "像盗贼一样", {8, 12, 50, panic_hit_spell}},
         { A_INT, "像食人魔一样", {25, 35, 40, explosive_rune_spell}},
-        { A_CHR, "像巫师一样", {25, 20, 50, magic_mapping_spell}},
+        { A_CHR, "像咒术师一样", {25, 20, 50, magic_mapping_spell}},
         { A_CHR, "像法师一样", {25, 40, 50, recharging_spell}},
         { A_INT, "像变异人一样", {10, 5, 50, alchemy_spell}},
         { A_WIS, "像心灵感应者一样", {9, 9, 40, telekinesis_spell}},
@@ -212,7 +212,7 @@ static talent_t _talents[_MAX_TALENTS][_MAX_TALENTS_PER_GROUP] =
         { A_INT, "像安珀人一样", {30, 50, 50, shadow_shifting_spell}},
         { A_INT, "像游客一样", {25, 20, 30, identify_fully_spell}},
         { A_CHR, "像土元素一样", {30, 10, 40, earthquake_spell}},
-        { A_CHR, "像巫师一样", {30, 20, 40, teleport_level_spell}},
+        { A_CHR, "像咒术师一样", {30, 20, 40, teleport_level_spell}},
         { A_WIS, "像牧师一样", {30, 30, 50, healing_I_spell}},
         { -1, NULL, {0, 0, 0, NULL}},
     },

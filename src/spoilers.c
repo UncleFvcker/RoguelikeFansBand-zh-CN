@@ -81,6 +81,17 @@ static void _csv_file(cptr name, _file_fn fn)
     if (character_dungeon) msg_format("已创建 %s", buf);
 }
 
+static void _help_topic_title(FILE *fp, cptr topic, cptr name)
+{
+    if (!topic) topic = name;
+    if (!name) name = topic;
+
+    if (topic && name && strcmp(topic, name))
+        fprintf(fp, "<topic:%s><color:o>%s (%s)</color>\n", topic, name, topic);
+    else
+        fprintf(fp, "<topic:%s><color:o>%s</color>\n", topic ? topic : "", name ? name : "");
+}
+
 /******************************************************************************
  * Skill Descriptions
  * Rather then displaying a meaningless and perhaps spoilerish number to the user,
@@ -302,7 +313,7 @@ static void _race_help(FILE *fp, int idx)
 {
     race_t *race_ptr = get_race_aux(idx, 0);
 
-    fprintf(fp, "<topic:%s><color:o>%s</color>\n", race_ptr->name, race_ptr->name);
+    _help_topic_title(fp, get_race_internal_name(idx), race_ptr->name);
     fprintf(fp, "%s\n\n", race_ptr->desc);
     switch(idx)
     {
@@ -718,7 +729,7 @@ static void _mon_race_help(FILE *fp, int idx)
 {
     race_t *race_ptr = get_race_aux(idx, 0);
 
-    fprintf(fp, "<topic:%s><color:o>%s</color>\n", race_ptr->name, race_ptr->name);
+    _help_topic_title(fp, get_race_internal_name(idx), race_ptr->name);
     fprintf(fp, "%s\n\n", race_ptr->desc);
     switch(idx)
     {
@@ -1190,7 +1201,7 @@ static void _class_help(FILE *fp, int idx)
 {
     class_t *class_ptr = get_class_aux(idx, 0);
 
-    fprintf(fp, "<topic:%s><color:o>%s</color>\n", class_ptr->name, class_ptr->name);
+    _help_topic_title(fp, get_class_internal_name(idx), class_ptr->name);
     if (idx == CLASS_ETHEREAL_MIMIC)
     {
         fputs("缥缈模仿者是能够学习怪物形态的战士。他们在未变身时使用普通人形身体和装备栏位；一旦变身，就会继承目标形态的身体结构、抗性、法术、吐息和天然攻击，从而用敌人的形体反过来适应地下城。\n\n", fp);

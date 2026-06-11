@@ -586,7 +586,7 @@ This line is a comment.
 <color:o>杂项 (Miscellaneous)</color>
 <color:G>Collecting</color>   <indent><color:G>Collecting</color> <color:R>items</color> 会匹配与你背包中已有物品完全相同且可堆叠的物品。</indent>
 
-<color:G>Special</color>      <indent><color:G>Special</color> <color:R>items</color> 是你的种族或职业所需要的特殊物品；通常在默认情况下被认为是垃圾。例如，有些角色无法从普通食物中获得足够的饱腹感，所以必须食用人形怪尸体（美味！）。恶魔施法者利用尸体来施放某些法术。弓箭手使用骨架来制作他们自己的弹药。驯兽师和骑兵非常享受怪物加速魔杖 (wands of Haste Monster)。这种特殊情况都可以用这个形容词来处理。<color:y>请注意，这与代表“神器”的物品预感 {special} 完全是两码事。</color></indent>
+<color:G>Special</color>      <indent><color:G>Special</color> <color:R>items</color> 是你的种族或职业所需要的特殊物品；通常在默认情况下被认为是垃圾。例如，有些角色无法从普通食物中获得足够的饱腹感，所以必须食用人形怪尸体（美味！）。恶魔施法者利用尸体来施放某些法术。弓箭手使用骨架来制作他们自己的弹药。兽王和骑兵非常享受怪物加速魔杖 (wands of Haste Monster)。这种特殊情况都可以用这个形容词来处理。<color:y>请注意，这与代表“神器”的物品预感 {special} 完全是两码事。</color></indent>
 
 <color:G>Unusable</color>     <indent>适用于你当前没有合适装备栏位的可穿戴物品。在怪物 (Monster) 模式下特别方便——不过还是要谨慎使用，以防你随着时间推移长出新的装备槽位……</color>
 </indent>

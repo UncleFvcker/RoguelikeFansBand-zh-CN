@@ -146,13 +146,13 @@ PosChengband 是优秀的变体 Hengband 的一个分支 (fork)。
   物品栏/装备栏子窗口在调整大小时显示乱码。
   在竞技场中，游玩记录文件里的怪物名称错误。
 
-  巫师 (Sorcerer) 和红魔道士 (Red-Mage) 没有获得来自熟练度的法力消耗减免。
+  咒术师 (Sorcerer) 和赤魔法师 (Red-Mage) 没有获得来自熟练度的法力消耗减免。
   “冲锋攻击”能够越过走廊图案 (Pattern)。
   修正了“芬国昐的挑战 (Fingolfin's Challenge)”歌曲的显示更新。
   商店中物品价值的溢出。
   在大地图上歌曲并没有真正停止。
   玩家种族改变时，日期/时间出错。
-  驯兽师技能“套马/牛仔骑术 (Rodeo)”有时判定失败却表现为成功。
+  兽王技能“套马/牛仔骑术 (Rodeo)”有时判定失败却表现为成功。
   修正了 WinNT/2000/XP 上的字体。
   宠物有时会误将玩家卷入它们的法术中。
   抵抗时间 ego 戒指的数值错误。
@@ -294,7 +294,7 @@ PosChengband 是优秀的变体 Hengband 的一个分支 (fork)。
 - 增加了新选项：destroy_feeling 和 destroy_identify，控制在伪鉴定或鉴定之后是否立刻应用自动销毁。
 - 将手动砍价 (manual_haggle) 选项从游戏选项移至开局/出生 (birth) 选项。
 - 镜魔道士制造的镜子在破碎时会变回原来的地形。
-- 增加了魔法吞噬者 (Magic-eater) 所有法术的描述。
+- 增加了食魔者 (Magic-eater) 所有法术的描述。
 - 黑暗区域法术改回与 1.1.0RC2 相同。
 - 在物品选择时，你可以使用 '(' 和 ')' 键跳转到第一个或最后一个物品。
 - 更改了爬上地表楼层时的提示信息文本。
@@ -362,7 +362,7 @@ PosChengband 是优秀的变体 Hengband 的一个分支 (fork)。
   2002年3月6日  hengband 1.0.10 发布。
 
 - 新神器、ego 弹药和新金库房间 (vault)。
-- 红魔道士的职业能力变得更实用了。
+- 赤魔法师的职业能力变得更实用了。
 - 原力武士在使用“强化原力”时，其近战能力变得越来越强大。
 - 怪物 AI 稍微得到了改善。
 - 混沌之蛇会召唤每个地下城的守卫。
@@ -504,12 +504,12 @@ PosChengband 是优秀的变体 Hengband 的一个分支 (fork)。
 - 新职业：
    游客 (Tourist)：他们能勉强施展奥秘法术。很难存活。
    模仿者 (Imitator)：模仿怪物刚使用过的法术或能力。
-   驯兽师 (BeastMaster)：支配或召唤怪物并骑乘它们。
-   巫师 (Sorcerer)：能施放所有魔法领域的法术。但物理能力毫无希望。
+   兽王 (BeastMaster)：支配或召唤怪物并骑乘它们。
+   咒术师 (Sorcerer)：能施放所有魔法领域的法术。但物理能力毫无希望。
    弓箭手 (Archer)：精通远程武器的战士。能制造弹药。
-   魔法吞噬者 (Magic-Eater)：吸收魔棒、法杖以将其作为魔法咒语使用。
+   食魔者 (Magic-Eater)：吸收魔棒、法杖以将其作为魔法咒语使用。
    吟游诗人 (Bard)：唱歌。类似 PernAngband 的竖琴手。
-   红魔道士 (Red-Mage)：双修职业，能施放所有领域低阶法术。
+   赤魔法师 (Red-Mage)：双修职业，能施放所有领域低阶法术。
    武士 (Samurai)：使用包含各种特殊攻击的武士技。
    原力武士 (ForceTrainer)：使用精神原力。倾向于徒手。
    蓝魔道士 (Blue-Mage)：学习怪物的法术。将其化为自己的法术使用。
@@ -520,7 +520,7 @@ PosChengband 是优秀的变体 Hengband 的一个分支 (fork)。
    忍者 (Ninja)：在无光环境下行动，攻击怪物可能会一击必杀。
 
 - 新种族：
-   树人 (Ent), 神圣使者 (Archon), 炎魔 (Balrog), 登丹人 (Dunadan), 暗影妖精 (Shadow-Fairy), 库塔 (Kutar), 人造人 (Android)
+   树人 (Ent), 神使 (Archon), 炎魔 (Balrog), 登丹人 (Dunadan), 暗影妖精 (Shadow-Fairy), 库塔 (Kutar), 人造人 (Android)
 - 玩家的性格 (Personality)：
    在创建角色时，你可以选择性格，包括
    普通 (Ordinary)、强壮 (Mighty)、精明 (Shrewd)、虔诚 (Pious)、敏捷 (Nimble)、无畏 (Fearless)、好战 (Combat)、慵懒 (Lazy)、

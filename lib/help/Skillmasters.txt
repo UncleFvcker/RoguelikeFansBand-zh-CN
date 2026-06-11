@@ -123,7 +123,7 @@
 
 <topic:Techniques><style:heading>战技 (Techniques)</style>
 
-战技是通常仅限于一两个职业的特殊技能。例如，只有武士才能学习<color:keyword>剑道 (Kendo)</color>；虽然<color:keyword>骑乘 (Riding)</color>相对更开放，但只有骑兵和驯兽师才真正擅长它。但是技能大师也可以学习这些战技，通常可以与其他技能进行强大的组合。你可以为这个组别中的每个战技投入最多五点；该组别的总点数对游戏玩法没有额外影响。
+战技是通常仅限于一两个职业的特殊技能。例如，只有武士才能学习<color:keyword>剑道 (Kendo)</color>；虽然<color:keyword>骑乘 (Riding)</color>相对更开放，但只有骑兵和兽王才真正擅长它。但是技能大师也可以学习这些战技，通常可以与其他技能进行强大的组合。你可以为这个组别中的每个战技投入最多五点；该组别的总点数对游戏玩法没有额外影响。
 
   <indent><topic:Burglary><color:o>行窃 (Burglary)</color>
 通常仅限于盗贼，行窃（<link:magic.txt#Burglary>）是一个使用敏捷作为主要属性的法术书领域。这个领域的运作方式非常类似于<color:keyword>魔法</color>和<color:keyword>祈祷</color>中的普通领域，你需要投入满五点才能在行窃上匹敌盗贼。行窃技能还能提高你的潜行和解除陷阱技能。</indent>
