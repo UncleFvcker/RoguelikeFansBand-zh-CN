@@ -24,19 +24,19 @@ static void _describe(menu_ptr menu, int which)
     menu->fn(MENU_HELP, which, menu->cookie, &v);
     if (!var_is_null(&v))
     {
-        char tmp[255*10];
-        int i, line;
+        doc_ptr doc;
+        int i;
+        int y = pohja + 2 + (menu->heading ? 1 : 0);
+        int width = MAX(1, MIN(80 - x - 2, Term->wid - x - 2));
+        int height = MAX(1, Term->hgt - y - 1);
 
-        for (i = 0; i < 2+10; i++)
-            Term_erase(x, pohja + i + 1 + (menu->heading ? 1 : 0), 255);
+        for (i = 0; i < height + 1; i++)
+            Term_erase(x, y - 1 + i, Term->wid - x);
 
-        roff_to_buf(var_get_string(&v), 80-15, tmp, sizeof(tmp));
-
-        for(i = 0, line = pohja + 2 + (menu->heading ? 1 : 0); tmp[i]; i += 1+strlen(&tmp[i]))
-        {
-            prt(&tmp[i], line, x + 2);
-            line++;
-        }
+        doc = doc_alloc(width);
+        doc_insert(doc, var_get_string(&v));
+        doc_sync_term(doc, doc_region_create(0, 0, width, height), doc_pos_create(x + 2, y));
+        doc_free(doc);
     }
     var_clear(&v);
 }

@@ -994,13 +994,15 @@ void gear_ui(int which)
     string_ptr   s;
 
     s = string_alloc_format(
-        "<color:w>负重 %d.%d 磅 (占上限 <color:%c>%d%%</color>)。</color>\n\n"
-        "检查哪件物品 <color:w>(<color:keypress>Esc</color> 退出)</color>？",
+        "<color:w>负重 %d.%d 磅 (占上限 <color:%c>%d%%</color>)。</color>\n",
          wgt / 10, wgt % 10, pct > 100 ? 'r' : 'G', pct);
+    equip_append_encumbrance_summary(s);
+    string_append_s(s, "检查哪件物品 <color:w>(<color:keypress>Esc</color> 退出)</color>？");
     prompt.prompt = string_buffer(s);
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
+    prompt.flags = INV_SHOW_EQUIP_ENCUMBRANCE;
     prompt.top_loc = which;
 
     prompt.cmd_handler = _inspector;

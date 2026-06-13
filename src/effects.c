@@ -50,6 +50,9 @@ void set_action(int typ)
             break;
         case ACTION_REST:
             resting = 0;
+            if (typ == ACTION_NONE && resting_resume_quick_walk)
+                typ = ACTION_QUICK_WALK;
+            resting_resume_quick_walk = FALSE;
             break;
         case ACTION_LEARN:
             msg_print("你停止了学习法术。");

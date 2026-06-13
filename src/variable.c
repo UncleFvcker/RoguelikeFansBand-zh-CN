@@ -122,6 +122,7 @@ s16b energy_use;        /* Energy use this turn */
 
 s16b running;            /* Current counter for running, if any */
 s16b resting;            /* Current counter for resting, if any */
+bool resting_resume_quick_walk; /* Restore Quick Walk after resting */
 
 s16b cur_hgt;            /* Current dungeon height */
 s16b cur_wid;            /* Current dungeon width */

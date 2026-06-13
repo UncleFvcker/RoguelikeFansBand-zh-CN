@@ -427,6 +427,259 @@ int equip_weight(obj_p p)
     return inv_weight(_inv, p);
 }
 
+static bool _equip_has_martial_armor_limit(void)
+{
+    int i;
+
+    if (prace_is_(RACE_TOMTE)) return TRUE;
+
+    if (p_ptr->pclass == CLASS_MONK
+     || p_ptr->pclass == CLASS_MYSTIC
+     || p_ptr->pclass == CLASS_FORCETRAINER
+     || p_ptr->pclass == CLASS_NINJA
+     || p_ptr->pclass == CLASS_NINJA_LAWYER
+     || p_ptr->pclass == CLASS_SCOUT)
+    {
+        return TRUE;
+    }
+
+    if (p_ptr->pclass == CLASS_SKILLMASTER)
+    {
+        for (i = 0; i < MAX_HANDS; i++)
+        {
+            if (p_ptr->weapon_info[i].bare_hands)
+                return TRUE;
+        }
+    }
+
+    return FALSE;
+}
+
+static int _equip_martial_armor_limit(void)
+{
+    if (player_is_ninja) return 125 + p_ptr->lev * 2;
+    return 100 + p_ptr->lev * 4;
+}
+
+static obj_ptr _equip_tomte_headgear(void)
+{
+    slot_t slot = equip_find_obj(TV_HELM, SV_ANY);
+    if (!slot) slot = equip_find_obj(TV_CROWN, SV_ANY);
+    return slot ? equip_obj(slot) : NULL;
+}
+
+static void _doc_weight(doc_ptr doc, int wgt)
+{
+    doc_printf(doc, "%d.%d", wgt / 10, wgt % 10);
+}
+
+static void _append_weight(string_ptr s, int wgt)
+{
+    string_printf(s, "%d.%d", wgt / 10, wgt % 10);
+}
+
+static void _doc_weight_source(doc_ptr doc, obj_p p, int pct, cptr why, int max)
+{
+    int slot;
+    int ct = 0;
+
+    for (slot = 1; slot <= equip_max(); slot++)
+    {
+        obj_ptr obj = equip_obj(slot);
+        char name[MAX_NLEN];
+        int wgt;
+
+        if (!obj || !p(obj)) continue;
+        if (ct >= max) break;
+
+        wgt = obj->weight * obj->number * pct / 100;
+        object_desc(name, obj, OD_COLOR_CODED);
+        doc_printf(doc, "  <color:D>-</color> %s：%s（", why, name);
+        _doc_weight(doc, wgt);
+        doc_insert(doc, " 磅）\n");
+        ct++;
+    }
+}
+
+static bool _equip_caster_encumbrance(caster_info **caster_ptr, int *armor_wgt, int *weapon_wgt, int *weight, int *max_wgt)
+{
+    caster_info *caster = get_caster_info();
+
+    if (!caster || !caster->encumbrance.max_wgt) return FALSE;
+
+    *caster_ptr = caster;
+    *armor_wgt = equip_weight(object_is_armour);
+    *weapon_wgt = caster->encumbrance.weapon_pct ? equip_weight(object_is_melee_weapon) : 0;
+    *weight = *armor_wgt + *weapon_wgt * caster->encumbrance.weapon_pct / 100;
+    *max_wgt = caster->encumbrance.max_wgt;
+    return TRUE;
+}
+
+void equip_append_encumbrance_summary(string_ptr s)
+{
+    caster_info *caster = NULL;
+    int armor_wgt = 0, weapon_wgt = 0, weight = 0, max_wgt = 0;
+    bool any = FALSE;
+
+    if (_equip_caster_encumbrance(&caster, &armor_wgt, &weapon_wgt, &weight, &max_wgt))
+    {
+        int pct = caster->encumbrance.weapon_pct;
+
+        string_printf(s, "<color:%c>施法负重 ", weight > max_wgt ? 'r' : 'G');
+        _append_weight(s, weight);
+        string_append_c(s, '/');
+        _append_weight(s, max_wgt);
+        string_append_s(s, " 磅</color>");
+        if (pct)
+        {
+            string_append_s(s, "（护甲 ");
+            _append_weight(s, armor_wgt);
+            string_append_s(s, " + 武器 ");
+            _append_weight(s, weapon_wgt);
+            string_printf(s, "*%d%%）", pct);
+        }
+        string_append_c(s, '\n');
+        any = TRUE;
+    }
+
+    if (prace_is_(RACE_TOMTE))
+    {
+        obj_ptr head = _equip_tomte_headgear();
+        int head_wgt = head ? head->weight * head->number : 0;
+        int max_head = 10;
+
+        string_printf(s, "<color:%c>头盔重量 ", head_wgt > max_head ? 'r' : 'G');
+        _append_weight(s, head_wgt);
+        string_append_c(s, '/');
+        _append_weight(s, max_head);
+        string_append_s(s, " 磅</color>\n");
+        any = TRUE;
+    }
+    else if (_equip_has_martial_armor_limit())
+    {
+        int wgt = equip_weight(object_is_armour);
+        int limit = _equip_martial_armor_limit();
+
+        string_printf(s, "<color:%c>身法护甲 ", wgt > limit ? 'r' : 'G');
+        _append_weight(s, wgt);
+        string_append_c(s, '/');
+        _append_weight(s, limit);
+        string_append_s(s, " 磅</color>\n");
+        any = TRUE;
+    }
+
+    if (p_ptr->pclass == CLASS_DUELIST)
+    {
+        int wgt = equip_weight(object_is_armour);
+        int limit = 120 + p_ptr->lev * 3;
+
+        string_printf(s, "<color:%c>决斗护甲 ", wgt > limit ? 'r' : 'G');
+        _append_weight(s, wgt);
+        string_append_c(s, '/');
+        _append_weight(s, limit);
+        string_append_s(s, " 磅</color>\n");
+        any = TRUE;
+    }
+
+    if (any)
+        string_append_c(s, '\n');
+}
+
+void equip_doc_encumbrance(doc_ptr doc)
+{
+    caster_info *caster = NULL;
+    int armor_wgt = 0, weapon_wgt = 0, weight = 0, max_wgt = 0;
+    bool any = FALSE;
+
+    if (_equip_caster_encumbrance(&caster, &armor_wgt, &weapon_wgt, &weight, &max_wgt))
+    {
+        int pct = caster->encumbrance.weapon_pct;
+
+        if (!any) doc_newline(doc);
+        doc_printf(doc, "<color:%c>施法负重：</color> ", weight > max_wgt ? 'r' : 'G');
+        _doc_weight(doc, weight);
+        doc_insert(doc, "/");
+        _doc_weight(doc, max_wgt);
+        doc_insert(doc, " 磅");
+        if (pct)
+        {
+            doc_insert(doc, "（护甲 ");
+            _doc_weight(doc, armor_wgt);
+            doc_insert(doc, " + 武器 ");
+            _doc_weight(doc, weapon_wgt);
+            doc_printf(doc, "*%d%%）", pct);
+        }
+        doc_newline(doc);
+
+        if (weight > max_wgt)
+        {
+            doc_insert(doc, "<color:r>原因：装备重量超过施法上限，最大法力会降低。</color>\n");
+            _doc_weight_source(doc, object_is_armour, 100, "护甲计入施法负重", 3);
+            if (pct) _doc_weight_source(doc, object_is_melee_weapon, pct, "武器按比例计入施法负重", 3);
+        }
+        any = TRUE;
+    }
+
+    if (prace_is_(RACE_TOMTE))
+    {
+        obj_ptr head = _equip_tomte_headgear();
+        int head_wgt = head ? head->weight * head->number : 0;
+        int max_head = 10;
+
+        if (!any) doc_newline(doc);
+        doc_printf(doc, "<color:%c>头盔重量：</color> ", head_wgt > max_head ? 'r' : 'G');
+        _doc_weight(doc, head_wgt);
+        doc_insert(doc, "/");
+        _doc_weight(doc, max_head);
+        doc_insert(doc, " 磅\n");
+        if (head_wgt > max_head && head)
+        {
+            char name[MAX_NLEN];
+            object_desc(name, head, OD_COLOR_CODED);
+            doc_printf(doc, "<color:r>原因：%s 超过 Tomte 可承受的 1.0 磅头盔上限。</color>\n", name);
+        }
+        any = TRUE;
+    }
+    else if (_equip_has_martial_armor_limit())
+    {
+        int wgt = equip_weight(object_is_armour);
+        int limit = _equip_martial_armor_limit();
+
+        if (!any) doc_newline(doc);
+        doc_printf(doc, "<color:%c>身法护甲：</color> ", wgt > limit ? 'r' : 'G');
+        _doc_weight(doc, wgt);
+        doc_insert(doc, "/");
+        _doc_weight(doc, limit);
+        doc_insert(doc, " 磅\n");
+        if (wgt > limit)
+        {
+            doc_insert(doc, "<color:r>原因：护甲总重超过职业身法上限，武术、忍术或斥候能力会受干扰。</color>\n");
+            _doc_weight_source(doc, object_is_armour, 100, "护甲计入身法重甲判定", 3);
+        }
+        any = TRUE;
+    }
+
+    if (p_ptr->pclass == CLASS_DUELIST)
+    {
+        int wgt = equip_weight(object_is_armour);
+        int limit = 120 + p_ptr->lev * 3;
+        cptr err = duelist_equip_error();
+
+        if (!any) doc_newline(doc);
+        doc_printf(doc, "<color:%c>决斗护甲：</color> ", wgt > limit ? 'r' : 'G');
+        _doc_weight(doc, wgt);
+        doc_insert(doc, "/");
+        _doc_weight(doc, limit);
+        doc_insert(doc, " 磅\n");
+        if (err)
+        {
+            doc_printf(doc, "<color:r>原因：%s</color>\n", err);
+            if (wgt > limit)
+                _doc_weight_source(doc, object_is_armour, 100, "护甲计入决斗者重量判定", 3);
+        }
+    }
+}
+
 int equip_count_used(void)
 {
     return inv_count_slots(_inv, obj_exists);
@@ -518,6 +771,7 @@ void equip_display(doc_ptr doc, obj_p p, int flags)
         doc,
         flags
     );
+    equip_doc_encumbrance(doc);
 }
 
 /************************************************************************

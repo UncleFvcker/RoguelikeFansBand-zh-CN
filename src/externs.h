@@ -162,6 +162,7 @@ extern s16b command_new;
 extern s16b energy_use;
 extern s16b running;
 extern s16b resting;
+extern bool resting_resume_quick_walk;
 extern s16b cur_hgt;
 extern s16b cur_wid;
 extern s16b dun_level;

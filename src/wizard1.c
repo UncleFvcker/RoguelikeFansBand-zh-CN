@@ -1885,7 +1885,7 @@ static char _effect_color(int which)
 static void _display_device_power(doc_ptr doc, effect_t *effect)
 {
     cptr s = do_effect(effect, SPELL_INFO, 0);
-    int  dd, ds, base, amt;
+    int  dd, ds, base, amt = 0;
 
     if (!s || !strlen(s))
     {
@@ -1898,15 +1898,25 @@ static void _display_device_power(doc_ptr doc, effect_t *effect)
         amt = dd*(ds+1)/2;
     else if (sscanf(s, "dam %d", &base) == 1)
         amt = base;
+    else if (sscanf(s, "伤害 %dd%d+%d", &dd, &ds, &base) == 3)
+        amt = dd*(ds+1)/2+base;
+    else if (sscanf(s, "伤害 %dd%d", &dd, &ds) == 2)
+        amt = dd*(ds+1)/2;
+    else if (sscanf(s, "伤害 %d", &base) == 1)
+        amt = base;
     else if (sscanf(s, "heal %dd%d+%d", &dd, &ds, &base) == 3)
         amt = dd*(ds+1)/2+base;
     else if (sscanf(s, "heal %dd%d", &dd, &ds) == 2)
         amt = dd*(ds+1)/2;
     else if (sscanf(s, "heal %d", &base) == 1)
         amt = base;
-    else if (sscanf(s, "pow %d", &base) == 1)
+    else if (sscanf(s, "治疗 %dd%d+%d", &dd, &ds, &base) == 3)
+        amt = dd*(ds+1)/2+base;
+    else if (sscanf(s, "治疗 %dd%d", &dd, &ds) == 2)
+        amt = dd*(ds+1)/2;
+    else if (sscanf(s, "治疗 %d", &base) == 1)
         amt = base;
-    else if (sscanf(s, "强度 %d", &base) == 1)
+    else if (sscanf(s, "pow %d", &base) == 1)
         amt = base;
     else if (sscanf(s, "强度 %d", &base) == 1)
         amt = base;

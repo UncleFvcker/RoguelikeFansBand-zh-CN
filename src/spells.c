@@ -1665,7 +1665,7 @@ static void _dump_book(doc_ptr doc, int realm, int book)
         int	    vaikeustaso;
         int         cost;
         bool        max = FALSE;
-        char        proficiency[10];
+        cptr        proficiency = "";
         char        info[80];
         cptr        comment;
         char        line[160];
@@ -1693,9 +1693,7 @@ static void _dump_book(doc_ptr doc, int realm, int book)
             else if ((increment == 32) && (exp_level >= EXP_LEVEL_EXPERT)) max = TRUE;
             else if ((p_ptr->pclass == CLASS_RED_MAGE) && (exp_level >= EXP_LEVEL_SKILLED)) max = TRUE;
 
-            strncpy(proficiency, exp_level_str[exp_level], 4);
-            proficiency[3] = ']';
-            proficiency[4] = '\0';
+            proficiency = exp_level_str[exp_level];
         }
 
         strcpy(info, do_spell(realm, s_idx, SPELL_INFO));
@@ -1761,7 +1759,7 @@ static void _dump_book(doc_ptr doc, int realm, int book)
             strcat(
                 line,
                 format(
-                    "<color:%c>%-25s%c%-4s %3d %3d %3d%% %-15.15s %5d %4d %3d%%</color>",
+                    "<color:%c>%-25s%c%-8s %3d %3d %3d%% %-15.15s %5d %4d %3d%%</color>",
                     color,
                     do_spell(realm, s_idx, SPELL_NAME),
                     (max ? '!' : ' '),

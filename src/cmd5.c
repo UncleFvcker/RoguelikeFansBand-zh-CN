@@ -767,7 +767,7 @@ void do_cmd_study(void)
             p_ptr->spell_exp[spell] = SPELL_EXP_BEGINNER + old_exp / 3;
             new_rank = EXP_LEVEL_BEGINNER;
         }
-        msg_format("你对%s的熟练度现在是 %s 级别。", name, exp_level_str[new_rank]);
+        msg_format("你现在对 %s 的熟练度达到 <color:B>%s</color>。", name, exp_level_str[new_rank]);
     }
     else
     {
@@ -1516,10 +1516,9 @@ void do_cmd_cast(void)
                 new_level = spell_exp_level(p_ptr->spell_exp[index]);
                 if (new_level > old_level)
                 {
-                    cptr desc[5] = { "未受训练", "初学者", "熟练", "专家", "大师" };
-                    msg_format("你现在对 <color:R>%s</color> 的熟练度达到了 <color:B>%s</color> 级。",
-                        desc[new_level],
-                        do_spell(use_realm, spell % 32, SPELL_NAME));
+                    msg_format("你现在对 <color:R>%s</color> 的熟练度达到 <color:B>%s</color>。",
+                        do_spell(use_realm, spell % 32, SPELL_NAME),
+                        exp_level_str[new_level]);
                 }
                 else if (p_ptr->wizard || easy_damage)
                 {

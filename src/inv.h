@@ -95,6 +95,7 @@ extern cptr    inv_name(inv_ptr inv);
 #define INV_IGNORE_INSCRIPTIONS 0x0004
 #define INV_NO_LABELS           0x0008
 #define INV_SHOW_SLOT           0x0010
+#define INV_SHOW_EQUIP_ENCUMBRANCE 0x0020
 extern void inv_display(
     /* What we display */
     inv_ptr inv,
