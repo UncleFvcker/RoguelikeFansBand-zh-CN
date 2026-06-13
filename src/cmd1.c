@@ -4646,7 +4646,6 @@ bool move_player_effect(int ny, int nx, u32b mpe_mode)
              (!p_ptr->levitation && have_flag(f_ptr->flags, FF_DEEP))))
         {
             msg_print("你不能在这里奔跑。");
-            set_action(ACTION_NONE);
 
             if (weaponmaster_get_toggle() == TOGGLE_SHADOW_STANCE)
             {

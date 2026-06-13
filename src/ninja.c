@@ -351,7 +351,7 @@ void quick_walk_spell(int cmd, variant *res)
         var_set_string(res, "缩地");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "进入或解除缩地状态。缩地时移动速度极快，但不能在无法正常奔跑的地形上移动。");
         break;
     case SPELL_CAST:
         if (p_ptr->action == ACTION_QUICK_WALK) set_action(ACTION_NONE);

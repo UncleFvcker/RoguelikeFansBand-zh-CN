@@ -44,6 +44,8 @@ enum {
 
 extern void    equip_ui(void);
 extern void    equip_display(doc_ptr doc, obj_p p, int flags);
+extern void    equip_doc_encumbrance(doc_ptr doc);
+extern void    equip_append_encumbrance_summary(string_ptr s);
 
 /* Adding and Removing Equipment */
 extern void equip_wield_ui(void); 

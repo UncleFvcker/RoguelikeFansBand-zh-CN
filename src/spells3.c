@@ -3504,7 +3504,7 @@ void print_spells(int target_spell, byte *spells, int num, rect_t display, int u
     char            out_val[160];
     byte            line_attr;
     int             need_mana;
-    char            ryakuji[15];
+    cptr            ryakuji = "";
     char            buf[256];
     bool            max = FALSE;
     caster_info    *caster_ptr = get_caster_info();
@@ -3571,9 +3571,7 @@ void print_spells(int target_spell, byte *spells, int num, rect_t display, int u
             else if (vaikeustaso >= 99) max = TRUE;
             else if ((p_ptr->pclass == CLASS_RED_MAGE) && (exp_level >= EXP_LEVEL_SKILLED)) max = TRUE;
 
-            strncpy(ryakuji, exp_level_str[exp_level], 4);
-            ryakuji[3] = ']';
-            ryakuji[4] = '\0';
+            ryakuji = exp_level_str[exp_level];
         }
 
         if (use_menu && target_spell)
@@ -3664,7 +3662,7 @@ void print_spells(int target_spell, byte *spells, int num, rect_t display, int u
         {
             Term_putstr(display.x + 5, display.y + i + 1, 23, line_attr,
                 do_spell(use_realm, spell, SPELL_NAME));
-            c_put_str(line_attr, format("%c%-4s %3d %3d %3d%% %s",
+            c_put_str(line_attr, format("%c%-8s %3d %3d %3d%% %s",
                     (max ? '!' : ' '), ryakuji,
                     vaikeustaso, need_mana, spell_chance(spell, use_realm), comment),
                 display.y + i + 1, display.x + 29);

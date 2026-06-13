@@ -1790,6 +1790,8 @@ static bool _graph_solid_fill_shows_glyph(feature_type *f_ptr, int feat)
 {
     graph_wall_material material = _graph_wall_material(f_ptr, feat);
 
+    if (have_flag(f_ptr->flags, FF_MIRROR)) return TRUE;
+
     if ((material == GRAPH_WALL_MAGMA_TREASURE) ||
         (material == GRAPH_WALL_QUARTZ_TREASURE) ||
         (material == GRAPH_WALL_TREASURE))

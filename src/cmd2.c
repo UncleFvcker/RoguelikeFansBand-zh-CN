@@ -2582,9 +2582,11 @@ void do_cmd_autoget(void)
 void do_cmd_rest(void)
 {
     int tmp;
+    bool resume_quick_walk;
     if (REPEAT_PULL(&tmp))
         command_arg = tmp;
 
+    resume_quick_walk = (p_ptr->action == ACTION_QUICK_WALK);
     set_action(ACTION_NONE);
     if (weaponmaster_get_toggle() == TOGGLE_SHADOW_STANCE)
         weaponmaster_set_toggle(TOGGLE_NONE);
@@ -2696,6 +2698,7 @@ void do_cmd_rest(void)
         virtue_add(VIRTUE_DILIGENCE, -1);
     }
     /* Save the rest code */
+    resting_resume_quick_walk = resume_quick_walk;
     resting = command_arg;
     p_ptr->action = ACTION_REST;
 

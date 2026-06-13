@@ -18,10 +18,10 @@
 
 #define VER_MAJOR 1
 #define VER_MINOR 0
-#define VER_PATCH "5"
-#define VER_PATCH_ID 5
+#define VER_PATCH "6"
+#define VER_PATCH_ID 6
 #define VER_EXTRA 0
-#define VERSION_STRING "1.0.0.5"
+#define VERSION_STRING "1.0.0.6"
 #define VERSION_IS_DEVELOPMENT (FALSE)
 
 /*

@@ -62,11 +62,11 @@ static cptr info_string_dice(cptr str, int dice, int sides, int base)
 
 
 /*
- * Generate damage-dice info string such as "dam 2d10"
+ * Generate damage-dice info string such as "伤害 2d10"
  */
 cptr info_damage(int dice, int sides, int base)
 {
-    return info_string_dice("dam ", dice, sides, base);
+    return info_string_dice("伤害 ", dice, sides, base);
 }
 
 
@@ -89,7 +89,7 @@ cptr info_range(int range)
 
 
 /*
- * Generate heal info string such as "heal 2d8"
+ * Generate heal info string such as "治疗 2d8"
  */
 cptr info_heal(int dice, int sides, int base)
 {
@@ -108,7 +108,7 @@ cptr info_heal(int dice, int sides, int base)
         base /= 2;
     }
 
-    return info_string_dice("heal ", dice, sides, base);
+    return info_string_dice("治疗 ", dice, sides, base);
 }
 
 
@@ -2760,7 +2760,7 @@ static cptr do_chaos_spell(int spell, int mode)
     bool info = (mode == SPELL_INFO) ? TRUE : FALSE;
     bool cast = (mode == SPELL_CAST) ? TRUE : FALSE;
 
-    static const char s_dam[] = "dam ";
+    static const char s_dam[] = "伤害 ";
     static const char s_random[] = "随机";
 
     int dir;
@@ -3428,7 +3428,7 @@ static cptr do_death_spell(int spell, int mode)
     bool info = (mode == SPELL_INFO) ? TRUE : FALSE;
     bool cast = (mode == SPELL_CAST) ? TRUE : FALSE;
 
-    static const char s_dam[] = "dam ";
+    static const char s_dam[] = "伤害 ";
     static const char s_random[] = "随机";
 
     int dir;
@@ -5890,7 +5890,7 @@ static cptr do_daemon_spell(int spell, int mode)
     bool info = (mode == SPELL_INFO) ? TRUE : FALSE;
     bool cast = (mode == SPELL_CAST) ? TRUE : FALSE;
 
-    static const char s_dam[] = "dam ";
+    static const char s_dam[] = "伤害 ";
 
     int dir;
     int plev = p_ptr->lev;

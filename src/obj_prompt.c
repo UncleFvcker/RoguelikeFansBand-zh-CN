@@ -349,6 +349,8 @@ static void _display(obj_prompt_context_ptr context)
         filter = obj_exists; /* Hack: null filter only shows empty slots for INV_EQUIP */
 
     inv_display(tab->inv, start, stop, filter, context->doc, context->prompt->flags);
+    if ((context->prompt->flags & INV_SHOW_EQUIP_ENCUMBRANCE) && inv_loc(tab->inv) == INV_EQUIP)
+        equip_doc_encumbrance(context->doc);
 
     if (tab->page_ct > 1)
     {
