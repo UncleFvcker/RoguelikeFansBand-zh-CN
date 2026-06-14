@@ -102,7 +102,7 @@
 此技能直接提高你的敏捷 (DEX)，并决定了角色面板上显示的职业<color:keyword>解除陷阱 (Disarming)</color>技能。（默认情况下，技能大师解陷阱的能力大约与牧师相当。）唯一影响解除陷阱的另一个技能是下面讨论的<color:keyword>行窃 (Burglary)</color>战技。</indent>
 
   <indent><topic:Awareness><color:o>洞察 (Awareness)</color>
-此技能决定了角色面板上显示的职业<color:keyword>搜索 (Searching)</color>和<color:keyword>察觉 (Perception)</color>技能。因为这是两个最不重要的主技能，所以<color:keyword>洞察</color>也提供额外的好处作为补偿。这些取决于投入的点数：拾破隐形和更快的伪鉴定 (1点)；自动鉴定 (2点)；最后是能感知附近怪物的心灵感应 (3点)。</indent>
+此技能决定了角色面板上显示的职业<color:keyword>搜索 (Searching)</color>和<color:keyword>察觉 (Perception)</color>技能。因为这是两个最不重要的主技能，所以<color:keyword>洞察</color>也提供额外的好处作为补偿。这些取决于投入的点数：识破隐形和更快的伪鉴定 (1点)；自动鉴定 (2点)；最后是能感知附近怪物的心灵感应 (3点)。</indent>
 
   <indent><topic:Devices><color:o>魔法装置 (Devices)</color>
 使用魔法装置的技能对大多数玩家来说极其重要：能否可靠地使用一根“治疗法杖”，可能是生与死的区别。默认情况下，你的<color:keyword>魔法装置</color>技能主要由你在<color:keyword>魔法</color>组投入的点数决定；投入<color:keyword>祈祷</color>技能以及学习<color:keyword>咒术 (Sorcery)</color>领域也会产生小的正面影响，但<color:keyword>近战</color>点数对魔法装置技能有小的负面影响。如果你从不学习任何魔法技能，在这里至少投入一点可能是值得的，这取决于你的种族和性格。</indent>

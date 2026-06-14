@@ -969,7 +969,7 @@ static void _character_dump(doc_ptr doc)
     _dump_flag(doc, OF_IM_COLD, "寒冰免疫", FALSE);
 
     doc_printf(doc, "\n <color:G>%-22.22s 破布 手套 靴子 加成</color>\n", "能力");
-    _dump_flag(doc, OF_FREE_ACT, "自由行动", FALSE);
+    _dump_flag(doc, OF_FREE_ACT, "行动自如", FALSE);
     _dump_flag(doc, OF_SEE_INVIS, "识破隐形", FALSE);
     _dump_flag(doc, OF_SLOW_DIGEST, "缓慢消化", FALSE);
     _dump_flag(doc, OF_REGEN, "再生", FALSE);

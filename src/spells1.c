@@ -2150,9 +2150,9 @@ static bool project_p(int who, cptr who_name, int r, int y, int x, int dam, int 
                 set_monster_slow(who, dur);
             }
             if (mon_stun(m_ptr, mon_stun_amount(dur*get_damage)))
-                msg_format("%^s 被震晕了。", m_name);
+                msg_format("%^s 被震慑了。", m_name);
             else
-                msg_format("%^s 被震得更晕了。", m_name);
+                msg_format("%^s 被震慑得更严重了。", m_name);
         }
     }
 

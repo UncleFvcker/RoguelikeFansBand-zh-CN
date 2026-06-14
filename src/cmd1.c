@@ -2541,9 +2541,9 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                             /* No message */
                         }
                         else if (set_monster_stunned(c_ptr->m_idx, cur_stun + stun_effect))
-                            msg_format("%^s被击晕了。", m_name_subject);
+                            msg_format("%^s被震慑了。", m_name_subject);
                         else
-                            msg_format("%^s被击晕得更严重了。", m_name_subject);
+                            msg_format("%^s被震慑得更严重了。", m_name_subject);
                     }
                 }
                 if (mode == MYSTIC_KNOCKOUT)
@@ -2629,7 +2629,7 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                     }
                     else
                     {
-                        msg_format("%^s被击晕了。", m_name_subject);
+                        msg_format("%^s被震慑了。", m_name_subject);
                         mon_stun(m_ptr, mon_stun_amount(k));
                     }
                 }
@@ -2642,7 +2642,7 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                     }
                     else
                     {
-                        msg_format("%^s被击晕了。", m_name_subject);
+                        msg_format("%^s被震慑了。", m_name_subject);
                         mon_stun(m_ptr, mon_stun_amount(k));
                         obj_learn_slay(o_ptr, OF_STUN, "<color:o>震慑</color>你的敌人");
                     }
@@ -2734,12 +2734,12 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                 {
                     if (MON_STUNNED(m_ptr))
                     {
-                        msg_format("%^s变得更加头晕目眩了。", m_name_subject);
+                        msg_format("%^s陷入更深的恍惚。", m_name_subject);
                         tmp /= 2;
                     }
                     else
                     {
-                        msg_format("%^s头晕目眩了。", m_name_subject);
+                        msg_format("%^s陷入恍惚。", m_name_subject);
                     }
                     (void)set_monster_stunned(c_ptr->m_idx, MON_STUNNED(m_ptr) + tmp);
                 }
@@ -2905,7 +2905,7 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                         }
                         else
                         {
-                            msg_format("%^s被击晕了。", m_name_subject);
+                            msg_format("%^s被震慑了。", m_name_subject);
                             mon_stun(m_ptr, mon_stun_amount(k));
                         }
                     }
@@ -3108,7 +3108,7 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                     }
                     else
                     {
-                        msg_format("%^s被击晕了。", m_name_subject);
+                        msg_format("%^s被震慑了。", m_name_subject);
                         mon_stun(m_ptr, mon_stun_amount(k));
                     }
                 }
@@ -3213,7 +3213,7 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                         }
                         else
                         {
-                            msg_format("%^s显得<color:U>很困惑</color>。", m_name_subject);
+                            msg_format("%^s显得<color:U>很混乱</color>。", m_name_subject);
                             set_monster_confused(c_ptr->m_idx, MON_CONFUSED(m_ptr) + 10 + randint0(p_ptr->lev) / 5);
                         }
                     }
@@ -3262,7 +3262,7 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                         }
                         else
                         {
-                            msg_format("%^s被<color:B>击晕了</color>。", m_name_subject);
+                            msg_format("%^s被<color:B>震慑了</color>。", m_name_subject);
                             mon_stun(m_ptr, mon_stun_amount(k));
                         }
                     }
@@ -3375,7 +3375,7 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                     msg_format("%^s没有受到影响。", m_name_subject);
                 else
                 {
-                    msg_format("%^s显得很困惑。", m_name_subject);
+                    msg_format("%^s显得很混乱。", m_name_subject);
                     (void)set_monster_confused(c_ptr->m_idx, MON_CONFUSED(m_ptr) + 10 + randint0(p_ptr->lev) / 5);
                 }
 
@@ -5123,7 +5123,7 @@ void move_player(int dir, bool do_pickup, bool break_trap)
         {
             char m_name[80];
             monster_desc(m_name, riding_m_ptr, 0);
-            msg_format("你无法控制被击晕的%s！",m_name);
+            msg_format("你无法控制被震慑的%s！",m_name);
             oktomove = FALSE;
             disturb(0, 0);
         }
@@ -6323,7 +6323,7 @@ void run_step(int dir)
                 ongelma = TRUE;
                 if (see_wall(uus_dir, py, px))
                 {
-                    msg_print("你很困惑。");
+                    msg_print("你很混乱。");
                     disturb(0, 0);
                     return;
                 }
@@ -6350,7 +6350,7 @@ void run_step(int dir)
 
     if (ongelma)
     {
-        msg_print("你很困惑。");
+        msg_print("你很混乱。");
         disturb(0, 0);
         return;
     }

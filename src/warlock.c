@@ -744,7 +744,7 @@ static void _dragon_upkeep_song(void)
             }
             if (MON_CONFUSED(mount))
             {
-                msg_format("%^s不再困惑了。", m_name);
+                msg_format("%^s不再混乱了。", m_name);
                 set_monster_confused(p_ptr->riding, 0);
             }
             if (MON_MONFEAR(mount))
@@ -1201,7 +1201,7 @@ static void _dispelling_blast(int cmd, variant *res)
         var_set_string(res, "魔能爆：解除");
         break;
     case SPELL_DESC:
-        var_set_string(res, "发射一发附带“解除魔法”效果的魔能爆。");
+        var_set_string(res, "发射一发附带“解除附魔”效果的魔能爆。");
         break;
     case SPELL_COST_EXTRA:
         var_set_int(res, _power_cost(1 + (p_ptr->lev / 27), 185));
@@ -1830,10 +1830,10 @@ static void _confusing_blast(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "魔能爆：困惑");
+        var_set_string(res, "魔能爆：混乱");
         break;
     case SPELL_DESC:
-        var_set_string(res, "发射一发魔能爆，同时也会使你的对手困惑。");
+        var_set_string(res, "发射一发魔能爆，同时也会使你的对手混乱。");
         break;
     case SPELL_COST_EXTRA:
         var_set_int(res, _power_cost(2 + (p_ptr->lev / 18), 125));
@@ -2118,7 +2118,7 @@ class_t *warlock_get_class(int psubclass)
     {
         me.name = "邪术师";
         me.desc =
-        "邪术师是一个魔法职业；他们的法术和力量并非源自书本，而是源自与特定怪物类别签订的邪术契约(eldritch pact)。这份契约是不可撤销的，在邪术师生涯的最初就会缔结。根据他们结盟的怪物类别，邪术师将获得独特的加成、能力和魔法力量；例如，与幽冥世界的力量结盟可以获得对毒素和幽冥的抗性，增强的体质，控制和召唤不死生物的法术，以及直接使用幽冥世界破坏力的法术。每种结盟都有主题性的加成和力量，你可以在相应的帮助章节中阅读详情。\n\n与特定的怪物类别结盟会大幅降低邪术师与这些敌人战斗的能力。作为替代，邪术师寻求与他们的同类合作，或者可能支配它们；直接攻击很少成功。\n \n除了与契约相关的法术，所有邪术师都能获得“魔能爆”这一独特力量。他们的主要施法属性是魅力，因为他们寻求统治并与选定的眷族结盟，而这些怪物通常都有很强的自我意志。";
+        "邪术师是一个魔法职业；他们的法术和力量并非源自书本，而是源自与特定怪物类别签订的邪术契约(eldritch pact)。这份契约是不可撤销的，在邪术师生涯的最初就会缔结。根据他们结盟的怪物类别，邪术师将获得独特的加成、能力和魔法力量；例如，与虚空世界的力量结盟可以获得对毒素和虚空的抗性，增强的体质，控制和召唤不死生物的法术，以及直接使用虚空世界破坏力的法术。每种结盟都有主题性的加成和力量，你可以在相应的帮助章节中阅读详情。\n\n与特定的怪物类别结盟会大幅降低邪术师与这些敌人战斗的能力。作为替代，邪术师寻求与他们的同类合作，或者可能支配它们；直接攻击很少成功。\n \n除了与契约相关的法术，所有邪术师都能获得“魔能爆”这一独特力量。他们的主要施法属性是魅力，因为他们寻求统治并与选定的眷族结盟，而这些怪物通常都有很强的自我意志。";
 
         me.birth = _birth;
         me.caster_info = _caster_info;

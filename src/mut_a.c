@@ -748,7 +748,7 @@ void draconian_resistance_mut(int cmd, variant *res)
             var_set_string(res, "你获得额外的混乱抗性。");
             break;
         case DRACONIAN_GOLD:
-            var_set_string(res, "你获得额外的声音抗性。");
+            var_set_string(res, "你获得额外的声波抗性。");
             break;
         case DRACONIAN_CRYSTAL:
             var_set_string(res, "你获得额外的碎片抗性。");
@@ -2086,7 +2086,7 @@ void motion_mut(int cmd, variant *res)
         msg_print("你走起路来没那么自信了。");
         break;
     case SPELL_MUT_DESC:
-        var_set_string(res, "你的动作精准且有力 (自由行动; +1 潜行)。");
+        var_set_string(res, "你的动作精准且有力 (行动自如; +1 潜行)。");
         break;
     case SPELL_CALC_BONUS:
         p_ptr->free_act++;

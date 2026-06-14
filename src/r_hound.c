@@ -237,7 +237,7 @@ static cptr _breath_desc(void)
     switch (p_ptr->current_r_idx)
     {
     case MON_AETHER_HOUND: return "几乎任何属性";
-    case MON_HOUND_OF_TINDALOS: return "幽冥或时间";
+    case MON_HOUND_OF_TINDALOS: return "虚空或时间";
     case MON_MULTI_HUED_HOUND: return "酸液、火焰、冰寒、闪电或毒素";
     }
     gf = gf_lookup(_breath_effect());

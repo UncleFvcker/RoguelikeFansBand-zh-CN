@@ -430,24 +430,24 @@ static void _first_aid_spell(int cmd, variant *res)
         break;
     case SPELL_DESC:
         if (p_ptr->lev < 8)
-            var_set_string(res, "治疗生命值并解除眩晕。");
+            var_set_string(res, "治疗生命值并解除震慑。");
         else if (p_ptr->lev < 12)
-            var_set_string(res, "治疗生命值并解除眩晕。治愈流血。");
+            var_set_string(res, "治疗生命值并解除震慑。治愈流血。");
         else if (p_ptr->lev < 16)
-            var_set_string(res, "治疗生命值并解除眩晕。治愈流血并减缓中毒。");
+            var_set_string(res, "治疗生命值并解除震慑。治愈流血并减缓中毒。");
         else if (p_ptr->lev < 20)
-            var_set_string(res, "治疗生命值并解除眩晕。治愈流血和中毒。");
+            var_set_string(res, "治疗生命值并解除震慑。治愈流血和中毒。");
         else if (p_ptr->lev < 30)
-            var_set_string(res, "治疗生命值并解除眩晕。治愈流血、中毒和盲目。");
+            var_set_string(res, "治疗生命值并解除震慑。治愈流血、中毒和失明。");
         else if (p_ptr->lev < 40)
-            var_set_string(res, "治疗生命值并解除眩晕。治愈流血、中毒和盲目。恢复体质。");
+            var_set_string(res, "治疗生命值并解除震慑。治愈流血、中毒和失明。恢复体质。");
         else if (p_ptr->lev < 45)
-            var_set_string(res, "治疗生命值并解除眩晕。治愈流血、中毒和盲目。恢复体质和魅力。");
+            var_set_string(res, "治疗生命值并解除震慑。治愈流血、中毒和失明。恢复体质和魅力。");
         else
-            var_set_string(res, "治疗生命值并解除眩晕。治愈流血、中毒和盲目。恢复体质、魅力和力量。");
+            var_set_string(res, "治疗生命值并解除震慑。治愈流血、中毒和失明。恢复体质、魅力和力量。");
         break;
     case SPELL_SPOIL_DESC:
-        var_set_string(res, "治疗生命值并解除眩晕。减缓中毒（L12）。治愈流血（L8）、中毒（L16）和盲目（L20）。恢复体质（L30）、魅力（L40）和力量（L45）。");
+        var_set_string(res, "治疗生命值并解除震慑。减缓中毒（L12）。治愈流血（L8）、中毒（L16）和失明（L20）。恢复体质（L30）、魅力（L40）和力量（L45）。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_heal(0, 0, spell_power(p_ptr->lev)));

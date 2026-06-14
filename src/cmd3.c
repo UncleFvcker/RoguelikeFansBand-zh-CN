@@ -1256,13 +1256,13 @@ static void _mon_display_probe(doc_ptr doc, int m_idx)
         doc_printf(doc, "       <color:b>%13.13s</color>\n", "睡眠");
 
     if (MON_STUNNED(m_ptr))
-        doc_printf(doc, "       <color:B>%13.13s</color>\n", "震晕");
+        doc_printf(doc, "       <color:B>%13.13s</color>\n", "震慑");
 
     if (MON_MONFEAR(m_ptr))
         doc_printf(doc, "       <color:v>%13.13s</color>\n", "恐惧");
 
     if (MON_CONFUSED(m_ptr))
-        doc_printf(doc, "       <color:U>%13.13s</color>\n", "困惑");
+        doc_printf(doc, "       <color:U>%13.13s</color>\n", "混乱");
 
     if (MON_INVULNER(m_ptr))
         doc_printf(doc, "       <color:W>%13.13s</color>\n", "无敌");

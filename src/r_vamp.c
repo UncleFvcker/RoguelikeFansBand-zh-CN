@@ -180,7 +180,7 @@ void _gaze_spell(int cmd, variant *res)
         var_set_string(res, "吸血鬼凝视");
         break;
     case SPELL_DESC:
-        var_set_string(res, "尝试支配一个有智能的敌人，导致其震慑、困惑、恐惧，甚至是被奴役。");
+        var_set_string(res, "尝试支配一个有智能的敌人，导致其震慑、混乱、恐惧，甚至是被奴役。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_power(_gaze_power()));

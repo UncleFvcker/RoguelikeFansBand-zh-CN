@@ -290,7 +290,7 @@ void _confuse_monster_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "困惑怪物");
+        var_set_string(res, "混乱怪物");
         break;
     case SPELL_DESC:
         var_set_string(res, "尝试使一个怪物陷入混乱。");

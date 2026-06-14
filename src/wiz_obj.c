@@ -468,7 +468,7 @@ static int _smith_flags(object_type* o_ptr, _flag_info_ptr flags)
 }
 
 static _flag_info_t _ability_flags[] = {
-    { OF_FREE_ACT, "行动自由" },
+    { OF_FREE_ACT, "行动自如" },
     { OF_SEE_INVIS, "识破隐形" },
     { OF_HOLD_LIFE, "维持生命" },
     { OF_SLOW_DIGEST, "消化缓慢" },

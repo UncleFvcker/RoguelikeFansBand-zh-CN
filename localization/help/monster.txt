@@ -244,13 +244,13 @@ Drops   : Up to 3 Objects                                           <color:G>Fas
 
 与特定元素（伤害类型）相关联的怪物通常通过颜色来标识。最常见和最可靠的关联是<color:r>红色</color>对应火焰，<color:w>白色</color>对应寒冷/冰霜——例如，红龙会喷火、通过撕咬造成燃烧，并抵抗你的火焰攻击。（这并不意味着所有红色的怪物都是基于火焰的，只是大多数基于火焰的怪物是红色的。）
 
-其他类似的关联包括<color:b>蓝色</color>对应闪电/电击，<color:D>黑色</color>和<color:s>石板色</color>对应酸液，<color:g>绿色</color>对应毒素，<color:U>青铜色</color>对应困惑，<color:y>金色</color>对应音波，以及<color:W>银色</color>对应惰性。<color:P>粉色</color>怪物通常在近战中击中你以吸取力量。<color:v>多彩颜色</color>的怪物闪烁着所有的颜色，通常与多种元素相关；多色龙和多色猎犬都能吐息并抵抗所有五种常见元素（酸、冷、火、电和毒）。
+其他类似的关联包括<color:b>蓝色</color>对应闪电/电击，<color:D>黑色</color>和<color:s>石板色</color>对应酸液，<color:g>绿色</color>对应毒素，<color:U>青铜色</color>对应混乱，<color:y>金色</color>对应声波，以及<color:W>银色</color>对应惰性。<color:P>粉色</color>怪物通常在近战中击中你以吸取力量。<color:v>多彩颜色</color>的怪物闪烁着所有的颜色，通常与多种元素相关；多色龙和多色猎犬都能吐息并抵抗所有五种常见元素（酸、冷、火、电和毒）。
 
 这些一般规则并非完全没有漏洞——例如，喷吐酸液的水猎犬是 <color:t>Z</color> 而不是预期的 <color:D>Z</color> 或 <color:s>Z</color>。（这是为了避免与其他猎犬混淆；喷吐暗影的暗影猎犬是 <color:D>Z</color>，臭名昭著的重力猎犬是 <color:s>Z</color>。）
 
 <topic:EldritchHorror><style:heading>远古恐惧 (Eldritch Horrors)</style>
 
-地下城里的一些怪物极其可怕，仅仅看着它们就会产生严重的后果。当你看到这些<color:keyword>摧毁理智的怪物 (sanity-blasting monsters)</color>之一时，几件糟糕的事情之一（或多件）可能会发生在你身上；这包括智力和感知被暂时降低，变得恐惧或困惑，以及遭受幻觉或失忆的侵袭。
+地下城里的一些怪物极其可怕，仅仅看着它们就会产生严重的后果。当你看到这些<color:keyword>摧毁理智的怪物 (sanity-blasting monsters)</color>之一时，几件糟糕的事情之一（或多件）可能会发生在你身上；这包括智力和感知被暂时降低，变得恐惧或混乱，以及遭受幻觉或失忆的侵袭。
 
 如果你能挺过第一次看到某个摧毁理智的怪物，你就可以安全地将其保持在视线内；只要它仍在视野内，就不会触发远古恐惧 (Eldritch Horror) 效果。如果怪物走出视线然后再次被看到，就有可能触发该效果，但单个怪物极少会摧毁你的理智不止一次。
 
@@ -456,7 +456,7 @@ Orc                  | Old Man Willow                                 <color:s>#
 <style:table>
       <color:u>U</color>[*********]   怪物处于无敌状态
       <color:u>U</color>[<color:b>*********</color>]   怪物被麻痹或沉睡
-      <color:u>U</color>[<color:u>*********</color>]   怪物感到困惑
+      <color:u>U</color>[<color:u>*********</color>]   怪物感到混乱
       <color:u>U</color>[<color:B>*********</color>]   怪物处于震慑状态
       <color:u>U</color>[<color:v>*********</color>]   怪物感到恐惧
       <color:u>U</color>[<color:D>*********</color>]   怪物被减速

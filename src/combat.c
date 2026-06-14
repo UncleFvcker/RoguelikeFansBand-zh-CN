@@ -1808,12 +1808,12 @@ static cptr _effect_name(int which)
     case GF_CHAOS: return "混沌";
     case GF_SHARDS: return "碎片";
     case GF_DISINTEGRATE: return "解离";
-    case GF_DISENCHANT: return "解除魔法";
+    case GF_DISENCHANT: return "解除附魔";
     case GF_TIME: return "时间";
     case GF_OLD_DRAIN: return "吸取";
-    case GF_OLD_CONF: return "困惑";
-    case GF_CONFUSION: return "困惑";
-    case GF_STUN: return "震晕";
+    case GF_OLD_CONF: return "混乱";
+    case GF_CONFUSION: return "混乱";
+    case GF_STUN: return "震慑";
     case GF_DRAIN_MANA: return "吸取法力";
     case GF_TURN_ALL: return "恐惧";
     }
@@ -1949,7 +1949,7 @@ void display_innate_attack_info(doc_ptr doc, int which)
 
     if (a->effect[0] == GF_OLD_CONF) /* Hack for Umber Hulk ... */
     {
-        doc_insert(cols[0], "<tab:10><color:B>附带困惑</color>\n");
+        doc_insert(cols[0], "<tab:10><color:B>附带混乱</color>\n");
     }
     else if (!(a->flags & INNATE_NO_DAM))
     {
@@ -1989,8 +1989,10 @@ void display_innate_attack_info(doc_ptr doc, int which)
                 doc_printf(cols[0], "<tab:10><color:W>附带减速%s</color>\n", xtra);
                 break;
             case GF_OLD_CONF:
+                doc_printf(cols[0], "<tab:10><color:u>附带混乱%s</color>\n", xtra);
+                break;
             case GF_BLIND:
-                doc_printf(cols[0], "<tab:10><color:u>附带困惑%s</color>\n", xtra);
+                doc_printf(cols[0], "<tab:10><color:D>附带失明%s</color>\n", xtra);
                 break;
             case GF_OLD_SLEEP:
                 doc_printf(cols[0], "<tab:10><color:b>附带催眠%s</color>\n", xtra);
@@ -2006,7 +2008,7 @@ void display_innate_attack_info(doc_ptr doc, int which)
                 doc_printf(cols[0], "<tab:10><color:B>偷窃法力%s</color>\n", xtra);
                 break;
             case GF_STUN:
-                doc_printf(cols[0], "<tab:10><color:B>附带震晕%s</color>\n", xtra);
+                doc_printf(cols[0], "<tab:10><color:B>附带震慑%s</color>\n", xtra);
                 break;
             case GF_AMNESIA:
                 doc_printf(cols[0], "<tab:10><color:R>导致失忆%s</color>\n", xtra);

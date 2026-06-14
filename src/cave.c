@@ -1553,10 +1553,15 @@ static bool _graph_cell_is_memory(cave_type *c_ptr)
 
 static graph_visual_state _graph_cell_state(cave_type *c_ptr)
 {
-    if (_graph_cell_is_memory(c_ptr)) return GRAPH_VIS_MEMORY;
     if (p_ptr->blind) return GRAPH_VIS_DIM;
     if (c_ptr->info & (CAVE_LITE | CAVE_MNLT)) return GRAPH_VIS_LIT;
-    if (c_ptr->info & CAVE_VIEW) return GRAPH_VIS_VISIBLE;
+    if (c_ptr->info & CAVE_VIEW)
+    {
+        if ((c_ptr->info & (CAVE_GLOW | CAVE_MNDK)) == CAVE_GLOW)
+            return GRAPH_VIS_VISIBLE;
+        return GRAPH_VIS_DIM;
+    }
+    if (_graph_cell_is_memory(c_ptr)) return GRAPH_VIS_MEMORY;
     return GRAPH_VIS_DIM;
 }
 
@@ -1827,14 +1832,32 @@ static bool _graph_neighbor_is_walllike(int y, int x)
     return _graph_feature_is_walllike(&f_info[feat]);
 }
 
+static bool _graph_cell_is_unknown_for_border(int y, int x)
+{
+    cave_type *c_ptr;
+
+    if (!in_bounds2(y, x)) return FALSE;
+
+    c_ptr = &cave[y][x];
+    if (c_ptr->info & (CAVE_MARK | CAVE_LITE | CAVE_MNLT)) return FALSE;
+    if ((c_ptr->info & CAVE_VIEW) && ((c_ptr->info & (CAVE_GLOW | CAVE_MNDK)) == CAVE_GLOW)) return FALSE;
+    return TRUE;
+}
+
 static byte _graph_wall_border_mask(int y, int x)
 {
     byte border = 0;
 
-    if (!_graph_neighbor_is_walllike(y - 1, x)) border |= TERM_RGB_BORDER_TOP;
-    if (!_graph_neighbor_is_walllike(y, x + 1)) border |= TERM_RGB_BORDER_RIGHT;
-    if (!_graph_neighbor_is_walllike(y + 1, x)) border |= TERM_RGB_BORDER_BOTTOM;
-    if (!_graph_neighbor_is_walllike(y, x - 1)) border |= TERM_RGB_BORDER_LEFT;
+    if (_graph_cell_is_unknown_for_border(y, x)) return 0;
+
+    if (!_graph_cell_is_unknown_for_border(y - 1, x) && !_graph_neighbor_is_walllike(y - 1, x))
+        border |= TERM_RGB_BORDER_TOP;
+    if (!_graph_cell_is_unknown_for_border(y, x + 1) && !_graph_neighbor_is_walllike(y, x + 1))
+        border |= TERM_RGB_BORDER_RIGHT;
+    if (!_graph_cell_is_unknown_for_border(y + 1, x) && !_graph_neighbor_is_walllike(y + 1, x))
+        border |= TERM_RGB_BORDER_BOTTOM;
+    if (!_graph_cell_is_unknown_for_border(y, x - 1) && !_graph_neighbor_is_walllike(y, x - 1))
+        border |= TERM_RGB_BORDER_LEFT;
 
     return border;
 }
@@ -5642,7 +5665,7 @@ void hit_mon_trap(int y, int x, int m_idx)
                     break;
                 case 2: /* Sound Ball */
                     if (m_ptr->ml)
-                        msg_format("%^s被一个音波球击中了。", m_name);
+                        msg_format("%^s被一个声波球击中了。", m_name);
                     project(PROJECT_WHO_TRAP, 2, y, x, 2*(damroll(10, 10) + p_ptr->lev), GF_SOUND, (PROJECT_GRID | PROJECT_ITEM | PROJECT_KILL | PROJECT_JUMP ));
                     break;
                 case 3: /* Shard Ball */
@@ -5695,7 +5718,7 @@ void hit_mon_trap(int y, int x, int m_idx)
                     break;
                 case 2: /* Sound Ball */
                     if (m_ptr->ml)
-                        msg_format("%^s被一个音波球击中了。", m_name);
+                        msg_format("%^s被一个声波球击中了。", m_name);
                     project(PROJECT_WHO_TRAP, 2, y, x, damroll(8, 7) + (p_ptr->lev / 2), GF_SOUND, (PROJECT_GRID | PROJECT_ITEM | PROJECT_KILL | PROJECT_JUMP ));
                     break;
                 case 3: /* Shard Ball */

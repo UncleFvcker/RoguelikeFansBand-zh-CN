@@ -497,22 +497,22 @@ static void _display(_ui_context_ptr context)
     if (inv_loc(context->inv) == INV_HOME)
     {
         doc_insert(doc,
-            "<color:keypress>g</color> to get an item. "
-            "<color:keypress>d</color> to drop an item. ");
+            "按 <color:keypress>g</color> 取出物品。"
+            "按 <color:keypress>d</color> 存放物品。");
 
         doc_insert(doc,
-            "<color:keypress>x</color> to begin examining items.\n"
-            "<color:keypress>r</color> to begin removing (destroying) items.\n"
-            "<color:keypress>Esc</color> to exit. "
-            "<color:keypress>?</color> for help.");
+            "按 <color:keypress>x</color> 检视物品。\n"
+            "按 <color:keypress>r</color> 移除(摧毁)物品。\n"
+            "按 <color:keypress>Esc</color> 离开。"
+            "按 <color:keypress>?</color> 查看帮助。");
         }
     else {
         doc_insert(doc, "按 <color:keypress>d</color> 捐赠物品。"
                         "按 <color:keypress>g</color> 取出物品。");
         doc_insert(doc,
-            "<color:keypress>x</color> to begin examining items.\n"
-            "<color:keypress>Esc</color> to exit. "
-            "<color:keypress>?</color> for help.");
+            "按 <color:keypress>x</color> 检视物品。\n"
+            "按 <color:keypress>Esc</color> 离开。"
+            "按 <color:keypress>?</color> 查看帮助。");
     }
 
     doc_insert(doc, "</style>");

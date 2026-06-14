@@ -2435,7 +2435,7 @@ void do_cmd_stay(bool pickup)
 
 /* Get Object(s).
  * Historically, 'g' was 'stay still (flip pickup)' which makes little sense */
-static bool _travel_next_obj(int mode)
+static bool _travel_next_obj_aux(int mode, int travel_mode)
 {
     int i, best_idx = -1, best_dist = 0;
     for (i = 0; i < max_o_idx; i++)
@@ -2493,8 +2493,22 @@ static bool _travel_next_obj(int mode)
     }
     if (best_idx == -1)
         return FALSE;
-    travel_begin(mode, o_list[best_idx].loc.x, o_list[best_idx].loc.y);
+    travel_begin(travel_mode, o_list[best_idx].loc.x, o_list[best_idx].loc.y);
     return TRUE;
+}
+
+static bool _travel_next_obj(int mode)
+{
+    return _travel_next_obj_aux(mode, mode);
+}
+
+static bool _auto_explore_next_obj(void)
+{
+    if (auto_get_objects)
+        return _travel_next_obj_aux(TRAVEL_MODE_AUTOPICK, TRAVEL_MODE_AUTOEXPLORE);
+    else if (auto_get_ammo)
+        return _travel_next_obj_aux(TRAVEL_MODE_AMMO, TRAVEL_MODE_AUTOEXPLORE);
+    return FALSE;
 }
 
 bool has_unmarked_floor(int target_x, int target_y)
@@ -2520,6 +2534,9 @@ bool _travel_continue(void)
     int ty = -1;
     update_stuff();
 
+    if (_auto_explore_next_obj())
+        return TRUE;
+
     for (int x = 0; x < cur_wid; x++) {
         for (int y = 0; y < cur_hgt; y++) {
             if (cave[y][x].info & CAVE_MARK && can_travel(x, y)) {
@@ -2544,6 +2561,11 @@ bool _travel_continue(void)
 
 void do_cmd_auto_explore(void)
 {
+    if (cave[py][px].o_idx && (auto_get_objects || auto_get_ammo))
+    {
+        if (!pack_get_floor()) return;
+    }
+
     if (!_travel_continue()) {
         msg_print("探索完毕！");
     }

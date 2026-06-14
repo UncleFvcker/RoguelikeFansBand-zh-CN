@@ -1443,10 +1443,10 @@ static void _nether_storm_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "幽冥风暴");
+        var_set_string(res, "虚空风暴");
         break;
     case SPELL_DESC:
-        var_set_string(res, "发射一颗巨大的幽冥球。");
+        var_set_string(res, "发射一颗巨大的虚空球。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(0, 0, spell_power(p_ptr->lev * 9 + 50 + p_ptr->to_d_spell)));

@@ -992,7 +992,7 @@ bool set_confused(int v, bool do_dec)
         if ((p_ptr->confused > v) && (!do_dec)) return FALSE;
         if (!p_ptr->confused)
         {
-            msg_print("你陷入了困惑！");
+            msg_print("你陷入了混乱！");
 
             if (p_ptr->action == ACTION_LEARN)
             {
@@ -1028,7 +1028,7 @@ bool set_confused(int v, bool do_dec)
     {
         if (p_ptr->confused)
         {
-            msg_print("你感觉没那么困惑了。");
+            msg_print("你感觉没那么混乱了。");
 
             p_ptr->special_attack &= ~(ATTACK_SUIKEN);
             notice = TRUE;
@@ -4996,8 +4996,8 @@ stun_info_t stun_info(int stun)
     else if (stun >= STUN_DAZE)
     {
         result.level = STUN_DAZE;
-        result.name = "眩晕";
-        result.msg = "陷入眩晕";
+        result.name = "恍惚";
+        result.msg = "陷入恍惚";
         result.attr = TERM_L_UMBER;
     }
     else
@@ -6938,7 +6938,7 @@ bool set_tim_res_disenchantment(int v, bool do_dec)
         }
         else if (!p_ptr->tim_res_disenchantment)
         {
-            msg_print("你感觉对解除魔法产生了抵抗力。");
+            msg_print("你感觉对解除附魔产生了抵抗力。");
             notice = TRUE;
         }
     }
@@ -6948,7 +6948,7 @@ bool set_tim_res_disenchantment(int v, bool do_dec)
     {
         if (p_ptr->tim_res_disenchantment)
         {
-            msg_print("你不再抵抗解除魔法了。");
+            msg_print("你不再抵抗解除附魔了。");
             notice = TRUE;
         }
     }

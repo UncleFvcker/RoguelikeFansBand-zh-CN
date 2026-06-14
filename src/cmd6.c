@@ -936,7 +936,7 @@ void do_cmd_read_scroll(void)
     if (p_ptr->confused)
     {
         flush();
-        msg_print("你太困惑了！");
+        msg_print("你太混乱了！");
         return;
     }
 

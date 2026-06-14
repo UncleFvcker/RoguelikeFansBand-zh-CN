@@ -628,7 +628,7 @@ cptr do_hissatsu_spell(int spell, int mode)
 
     case 22:
         if (name) return "战吼";
-        if (desc) return "用音波伤害视线内的所有怪物。激怒附近的怪物。";
+        if (desc) return "用声波伤害视线内的所有怪物。激怒附近的怪物。";
         if (browse) return NULL;
     
         if (cast)
@@ -753,7 +753,7 @@ cptr do_hissatsu_spell(int spell, int mode)
 
     case 25:
         if (name) return "幻月";
-        if (desc) return "尝试震慑、困惑并催眠所有清醒的怪物。";
+        if (desc) return "尝试震慑、混乱并催眠所有清醒的怪物。";
         if (browse) return NULL;
     
         if (cast)
@@ -1112,7 +1112,7 @@ static bool _choose_kata(void)
 
     if (p_ptr->confused)
     {
-        msg_print("你太困惑了。");
+        msg_print("你太混乱了。");
         return FALSE;
     }
     if (p_ptr->stun)

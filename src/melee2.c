@@ -2751,7 +2751,7 @@ static void process_monster(int m_idx)
             {
                 char m_name[80];
                 monster_desc(m_name, m_ptr, 0);
-                msg_format("%^s不再困惑了。", m_name);
+                msg_format("%^s不再混乱了。", m_name);
                 mon_lore_3(m_ptr, RF3_CLEAR_HEAD);
             }
         }
@@ -4489,7 +4489,7 @@ static void process_mon_mtimed(mon_ptr mon)
             {
                 char m_name[80];
                 monster_desc(m_name, mon, 0);
-                msg_format("%^s不再困惑了。", m_name);
+                msg_format("%^s不再混乱了。", m_name);
             }
         }
     }

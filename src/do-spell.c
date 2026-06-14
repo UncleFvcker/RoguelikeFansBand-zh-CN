@@ -1608,7 +1608,7 @@ static cptr do_sorcery_spell(int spell, int mode)
         break;
 
     case 4:
-        if (name) return "困惑单一怪物";
+        if (name) return "混乱单一怪物";
         if (desc) return "尝试使一个怪物混乱。";
 
         {
@@ -2827,7 +2827,7 @@ static cptr do_chaos_spell(int spell, int mode)
         break;
 
     case 3:
-        if (name) return "困惑之触";
+        if (name) return "混乱之触";
         if (desc) return "尝试使你下一个击中的怪物混乱。";
 
         {
@@ -2988,7 +2988,7 @@ static cptr do_chaos_spell(int spell, int mode)
 
     case 10:
         if (name) return "音爆";
-        if (desc) return "以你为中心生成一颗音波球。";
+        if (desc) return "以你为中心生成一颗声波球。";
 
         {   /* Note: Damage is high relative to say fireball, but this is
                an adjacent spell while fireball is a distance spell. So it should
@@ -5754,7 +5754,7 @@ static cptr do_craft_spell(int spell, int mode)
 
     case 23:
         if (name) return "魔法护甲";
-        if (desc) return "在一段时间内赋予魔法抗性、防御(AC)加值、免疫混乱和致盲、反射、行动自如和漂浮能力。";
+        if (desc) return "在一段时间内赋予魔法抗性、防御(AC)加值、免疫混乱和失明、反射、行动自如和漂浮能力。";
 
         {
             int base = spell_power(20);
@@ -7049,7 +7049,7 @@ static cptr do_crusade_spell(int spell, int mode)
 
     case 30:
         if (name) return "神圣干预";
-        if (desc) return "以神圣力量对所有相邻怪物造成伤害。对视线内的所有怪物造成伤害，并尝试使其减速、震慑、困惑、恐惧和冻结。同时恢复生命值。";
+        if (desc) return "以神圣力量对所有相邻怪物造成伤害。对视线内的所有怪物造成伤害，并尝试使其减速、震慑、混乱、恐惧和冻结。同时恢复生命值。";
 
         {
             int b_dam = spell_power(plev * 11);
@@ -7150,7 +7150,7 @@ static cptr do_music_spell(int spell, int mode)
 
     case 2:
         if (name) return "破坏音符";
-        if (desc) return "发射一道音波弹。";
+        if (desc) return "发射一道声波弹。";
 
         /* Stop singing before start another */
         if (cast || fail) bard_stop_singing();
@@ -7183,7 +7183,7 @@ static cptr do_music_spell(int spell, int mode)
 
         if (cast)
         {
-            msg_print("你编织出一段音符来迷惑和震晕敌人……");
+            msg_print("你编织出一段音符来迷惑和震慑敌人……");
             bard_start_singing(spell, MUSIC_STUN);
         }
 
@@ -7459,7 +7459,7 @@ static cptr do_music_spell(int spell, int mode)
 
         if (cast)
         {
-            msg_print("你编织出一段音符来欺骗和困惑敌人……");
+            msg_print("你编织出一段音符来欺骗和混乱敌人……");
             bard_start_singing(spell, MUSIC_CONF);
         }
 
@@ -7716,7 +7716,7 @@ static cptr do_music_spell(int spell, int mode)
 
     case 22:
         if (name) return "风暴之歌";
-        if (desc) return "发射一道音波射线。";
+        if (desc) return "发射一道声波射线。";
 
         {
             int dice = 15 + (plev - 1) / 2;
@@ -7932,7 +7932,7 @@ static cptr do_music_spell(int spell, int mode)
 
     case 30:
         if (name) return "索伦的巫术";
-        if (desc) return "发射一颗威力极其强大的微小音波球。";
+        if (desc) return "发射一颗威力极其强大的微小声波球。";
 
         {
             int dice = 50 + plev;
@@ -8315,7 +8315,7 @@ static cptr do_hex_spell(int spell, int mode)
         break;
 
     case 13:
-        if (name) return "困惑之触";
+        if (name) return "混乱之触";
         if (desc) return "当你攻击时使一个怪物混乱。";
         if (cast)
         {
@@ -9002,7 +9002,7 @@ static cptr do_armageddon_spell(int spell, int mode)
     /* Earth, Wind and Fire */
     case 8:
         if (name) return "碎片之矢";
-        if (desc) return "发射一道破片魔法弹或射线。";
+        if (desc) return "发射一道碎片魔法弹或射线。";
 
         {
             int dice = 7 + plev / 4;
@@ -9085,7 +9085,7 @@ static cptr do_armageddon_spell(int spell, int mode)
         break;
     case 12:
         if (name) return "雷鸣爆";
-        if (desc) return "以你为中心生成一颗音波球。";
+        if (desc) return "以你为中心生成一颗声波球。";
 
         {
             int dam = spell_power((40 + plev + p_ptr->to_d_spell)*2);
@@ -9351,7 +9351,7 @@ static cptr do_armageddon_spell(int spell, int mode)
         break;
     case 27:
         if (name) return "喷吐声波";
-        if (desc) return "向选定的目标喷吐音波锥。";
+        if (desc) return "向选定的目标喷吐声波锥。";
 
         {
             int dam = spell_power(6*plev + p_ptr->to_d_spell);
@@ -9419,7 +9419,7 @@ static cptr do_armageddon_spell(int spell, int mode)
         break;
     case 31:
         if (name) return "喷吐碎片";
-        if (desc) return "向选定的目标喷吐破片锥。";
+        if (desc) return "向选定的目标喷吐碎片锥。";
 
         {
             int dam = spell_power(10*plev + p_ptr->to_d_spell);

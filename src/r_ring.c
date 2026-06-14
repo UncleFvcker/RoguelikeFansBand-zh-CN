@@ -1283,7 +1283,7 @@ void ring_cast(void)
 
     if (p_ptr->confused)
     {
-        msg_print("你太困惑了！");
+        msg_print("你太混乱了！");
         return;
     }
 
@@ -1766,7 +1766,7 @@ static void _character_dump(doc_ptr doc)
     _dump_ability_flag(doc, OF_IM_COLD, 2, "寒冰免疫");
 
     doc_printf(doc, "\n <color:G>%-22.22s 总计 需要 加成</color>\n", "能力");
-    _dump_ability_flag(doc, OF_FREE_ACT, _free_act_needed(), "自由行动");
+    _dump_ability_flag(doc, OF_FREE_ACT, _free_act_needed(), "行动自如");
     _dump_ability_flag(doc, OF_SEE_INVIS, _see_invis_needed(), "识破隐形");
     _dump_ability_flag(doc, OF_LEVITATION, 2, "漂浮");
     _dump_ability_flag(doc, OF_SLOW_DIGEST, 2, "缓慢消化");

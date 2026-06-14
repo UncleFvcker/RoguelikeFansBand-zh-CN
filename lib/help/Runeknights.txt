@@ -73,8 +73,8 @@
 <color:R>鞋子         </color> <color:G>L25</color> +3L/50 速度
 
 <color:B>洞察 (Seeing)</color>
-<color:R>头盔         </color> <color:G>L27</color> 抗盲; 拾破隐形
-<color:R>光源         </color> <color:G>L27</color> 抗盲
+<color:R>头盔         </color> <color:G>L27</color> 抗失明; 识破隐形
+<color:R>光源         </color> <color:G>L27</color> 抗失明
 
 <color:B>生命 (Life)</color>
 <color:R>盾牌         </color> <color:G>L29</color> 维持生命
@@ -92,9 +92,9 @@
 
 <color:B>死亡 (Death)</color>
 <color:R>近战武器     </color> <color:G>L35</color> 吸血
-<color:R>盾牌         </color> <color:G>L35</color> 抗虚冥
-<color:R>身体护甲     </color> <color:G>L35</color> 抗虚冥与抗毒
-<color:R>头盔         </color> <color:G>L35</color> 抗虚冥
+<color:R>盾牌         </color> <color:G>L35</color> 抗虚空
+<color:R>身体护甲     </color> <color:G>L35</color> 抗虚空与抗毒
+<color:R>头盔         </color> <color:G>L35</color> 抗虚空
 
 <color:B>心灵 (Mind)</color>
 <color:R>头盔         </color> <color:G>L37</color> +2 智力; 维持智力; 心灵感应
@@ -139,7 +139,7 @@
 <color:B>土            </color> <color:G>L19</color> 抗碎片
 <color:B>生命          </color> <color:G>L29</color> 维持生命
 <color:B>反射          </color> <color:G>L33</color> 反射
-<color:B>死亡          </color> <color:G>L35</color> 抗虚冥
+<color:B>死亡          </color> <color:G>L35</color> 抗虚空
 <color:B>不朽          </color> <color:G>L45</color> 抗时间
 
 <color:R>身体护甲</color>
@@ -152,7 +152,7 @@
 <color:B>土            </color> <color:G>L19</color> 抗碎片; 碎片光环
 <color:B>生命          </color> <color:G>L29</color> 维持生命; +1 体质
 <color:B>稳定          </color> <color:G>L31</color> 抗时空、抗混沌与抗解除附魔
-<color:B>死亡          </color> <color:G>L35</color> 抗虚冥与抗毒
+<color:B>死亡          </color> <color:G>L35</color> 抗虚空与抗毒
 <color:B>威力          </color> <color:G>L39</color> +2 力量、敏捷、体质; 维持力量、敏捷、体质
 <color:B>不朽          </color> <color:G>L45</color> 抗时间; 维持生命; 维持所有属性
 
@@ -161,9 +161,9 @@
 <color:B>光            </color> <color:G>L15</color> 抗光
 <color:B>影            </color> <color:G>L17</color> 抗暗
 <color:B>理解          </color> <color:G>L21</color> +2 智力; 简易鉴定
-<color:B>洞察          </color> <color:G>L27</color> 抗盲; 拾破隐形
+<color:B>洞察          </color> <color:G>L27</color> 抗失明; 识破隐形
 <color:B>稳定          </color> <color:G>L31</color> 抗时空
-<color:B>死亡          </color> <color:G>L35</color> 抗虚冥
+<color:B>死亡          </color> <color:G>L35</color> 抗虚空
 <color:B>心灵          </color> <color:G>L37</color> +2 智力; 维持智力; 心灵感应
 <color:B>威力          </color> <color:G>L39</color> +2 力量、体质
 <color:B>不朽          </color> <color:G>L45</color> 抗时间
@@ -196,6 +196,6 @@
 <color:B>火            </color> <color:G>L9</color>  火焰光环
 <color:B>光            </color> <color:G>L15</color> 抗光
 <color:B>理解          </color> <color:G>L21</color> +1 智力
-<color:B>洞察          </color> <color:G>L27</color> 抗盲
+<color:B>洞察          </color> <color:G>L27</color> 抗失明
 <color:B>生命          </color> <color:G>L29</color> 维持生命
 <color:B>心灵          </color> <color:G>L37</color> 心灵感应
