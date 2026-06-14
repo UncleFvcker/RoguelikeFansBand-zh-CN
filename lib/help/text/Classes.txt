@@ -1,4 +1,4 @@
-﻿职业介绍 (The Classes)
+职业介绍 (The Classes)
 
 
 没有哪个决定比选择玩什么职业更重要了。下面将按主要优势或游玩风格（如近战
@@ -1268,172 +1268,172 @@
 表 1 - 职业基础属性加成汇总
 
               STR  INT  WIS  DEX  CON  CHR  Life  BHP  Exp
-Berserker      +8  -20  -20   +4   +4   +4  200%  +22  160%
-Blood-Knight   +2   -2   -2   +0   +3   +2  120%  +20  150%
-Duelist        +2   +1   -2   +2   -3   +2  100%   +4  150%
-Mauler         +5   -2   -2   -1   +3   +2  110%  +18  120%
-Rune-Knight    +0   +1   -1   +1   +0   +1  101%   +7  150%
-Samurai        +2   -2   +1   +2   +1   +1  107%  +12  130%
-Warrior        +4   -2   -2   +2   +2   +1  115%  +18  100%
-Weaponmaster   +3   -3   -2   -2   +1   +0  105%  +12  135%
-Weaponsmith    +3   -1   -1   +1   +0   -1  106%  +12  130%
-Archer         +2   -1   -1   +2   +1   +0  110%  +12  110%
-Sniper         +2   -1   -1   +2   +1   +0  100%   +4  110%
-Force-Trainer  +0   -1   +3   +2   +1   +0  100%   +4  135%
-Monk           +1   -1   +1   +3   +2   +1  102%  +12  130%
-Mystic         +2   -1   -2   +3   +1   +2  100%   +4  130%
-Blood-Mage     -4   +3   -2   +1   +2   -2  108%  +10  135%
-Blue-Mage      -4   +4   -1   +1   -2   -2   98%   +4  130%
-Gray-Mage      -4   +3   +0   +1   -2   -2   95%   +0  130%
-High-Mage      -4   +4   +0   +0   -2   -2   94%   +0  130%
-Mage           -4   +3   +0   +1   -2   -2   95%   +0  130%
-Necromancer    -2   +3   -4   +1   -1   -2   95%   +2  125%
-Sorcerer       -5   +0   -2   +2   +0   +6   65%   +0  160%
-Yellow-Mage    -4   +3   +0   +1   -2   -2   95%   +0  130%
-Alchemist      +0   +2   -1   +2   +0   -2  101%  +12  135%
-Devicemaster   -1   +2   +1   +2   -2   -2  101%   +6  130%
-Magic-Eater    -1   +2   +1   +2   -2   -2  103%   +6  130%
-Priest         -1   -3   +3   -1   +0   +2  100%   +4  120%
-Ninja          +0   -1   -1   +3   +2   +2  100%   +4  120%
-Rogue          +1   +1   -1   +3   +0   +1  100%  +12  125%
-Scout          +1   -1   +2   +3   +0   +0  104%   +8  130%
-Chaos-Warrior  +2   +1   -1   +0   +1   +1  109%  +12  125%
-Disciple       -1   +1   -1   +0   -1   +1   95%  +14  125%
-Ninja-Lawyer   -1   +0   +0   +2   +0   +2   99%   +8  115%
-Paladin        +2   -3   +1   +0   +2   +2  110%  +12  135%
-Ranger         +2   +0   +2   +1   +1   +0  106%   +8  140%
-Red-Mage       +2   +2   -1   +1   +0   -1  106%   +8  140%
-Warrior-Mage   +2   +2   -1   +1   +0   +1  105%   +8  140%
-Ethereal-Mimic +2   +1   -1   +1   +2   +0  105%  +16  175%
-Beastmaster    +1   -1   -1   +1   +0   +2  103%   +6  120%
-Cavalry        +2   -2   -2   +2   +2   +1  111%  +10  120%
-Mindcrafter    -1   +0   +3   -1   -1   +2   99%   +4  125%
-Mirror-Master  -2   +3   +1   -1   -2   -2  100%   +4  130%
-Psion          -1   +2   +2   -1   -1   +2   96%   +4  150%
-Time-Lord      -1   +0   +3   -1   -1   +0   96%   +0  125%
-Warlock        -1   +2   -3   +0   +2   +2  107%  +15  135%
-Archaeologist  -1   +1   +2   +1   -1   +0  106%   +8  120%
-Bard           -2   +1   +2   -1   -2   +4  100%   +4  140%
-Lawyer         -3   +2   +0   +0   -1   +1  102%  +12  115%
-Politician     -2   +1   +0   -2   +0   +2  100%   +9  130%
-Rage-Mage      +3   -2   -2   -2   +2   +1  106%   +6  150%
-Skillmaster    +0   +0   +0   +0   +0   +0  100%  +10  130%
-Tourist        -2   -1   -1   -1   -2   -3   94%   +0   70%
-Wild-Talent    -1   +1   +1   +1   -2   +1  100%   +4  110%
+狂战士      +8  -20  -20   +4   +4   +4  200%  +22  160%
+血骑士   +2   -2   -2   +0   +3   +2  120%  +20  150%
+决斗者        +2   +1   -2   +2   -3   +2  100%   +4  150%
+重槌兵         +5   -2   -2   -1   +3   +2  110%  +18  120%
+符文骑士    +0   +1   -1   +1   +0   +1  101%   +7  150%
+武士        +2   -2   +1   +2   +1   +1  107%  +12  130%
+战士        +4   -2   -2   +2   +2   +1  115%  +18  100%
+武器大师   +3   -3   -2   -2   +1   +0  105%  +12  135%
+武器匠人    +3   -1   -1   +1   +0   -1  106%  +12  130%
+弓箭手         +2   -1   -1   +2   +1   +0  110%  +12  110%
+狙击手         +2   -1   -1   +2   +1   +0  100%   +4  110%
+气功师  +0   -1   +3   +2   +1   +0  100%   +4  135%
+武僧           +1   -1   +1   +3   +2   +1  102%  +12  130%
+秘术师         +2   -1   -2   +3   +1   +2  100%   +4  130%
+血法师     -4   +3   -2   +1   +2   -2  108%  +10  135%
+青魔法师      -4   +4   -1   +1   -2   -2   98%   +4  130%
+灰法师      -4   +3   +0   +1   -2   -2   95%   +0  130%
+高阶法师      -4   +4   +0   +0   -2   -2   94%   +0  130%
+法师           -4   +3   +0   +1   -2   -2   95%   +0  130%
+死灵法师    -2   +3   -4   +1   -1   -2   95%   +2  125%
+咒术师       -5   +0   -2   +2   +0   +6   65%   +0  160%
+黄魔法师    -4   +3   +0   +1   -2   -2   95%   +0  130%
+炼金术士      +0   +2   -1   +2   +0   -2  101%  +12  135%
+装置大师   -1   +2   +1   +2   -2   -2  101%   +6  130%
+食魔者    -1   +2   +1   +2   -2   -2  103%   +6  130%
+牧师         -1   -3   +3   -1   +0   +2  100%   +4  120%
+忍者          +0   -1   -1   +3   +2   +2  100%   +4  120%
+盗贼          +1   +1   -1   +3   +0   +1  100%  +12  125%
+斥候          +1   -1   +2   +3   +0   +0  104%   +8  130%
+混沌战士  +2   +1   -1   +0   +1   +1  109%  +12  125%
+门徒       -1   +1   -1   +0   -1   +1   95%  +14  125%
+忍者律师   -1   +0   +0   +2   +0   +2   99%   +8  115%
+圣骑士        +2   -3   +1   +0   +2   +2  110%  +12  135%
+游侠         +2   +0   +2   +1   +1   +0  106%   +8  140%
+赤魔法师       +2   +2   -1   +1   +0   -1  106%   +8  140%
+战法师   +2   +2   -1   +1   +0   +1  105%   +8  140%
+缥缈模仿者 +2   +1   -1   +1   +2   +0  105%  +16  175%
+兽王    +1   -1   -1   +1   +0   +2  103%   +6  120%
+骑兵        +2   -2   -2   +2   +2   +1  111%  +10  120%
+心灵术士    -1   +0   +3   -1   -1   +2   99%   +4  125%
+幻镜法师  -2   +3   +1   -1   -2   -2  100%   +4  130%
+灵能者          -1   +2   +2   -1   -1   +2   96%   +4  150%
+时光领主      -1   +0   +3   -1   -1   +0   96%   +0  125%
+邪术师        -1   +2   -3   +0   +2   +2  107%  +15  135%
+考古学家  -1   +1   +2   +1   -1   +0  106%   +8  120%
+吟游诗人           -2   +1   +2   -1   -2   +4  100%   +4  140%
+律师         -3   +2   +0   +0   -1   +1  102%  +12  115%
+政客     -2   +1   +0   -2   +0   +2  100%   +9  130%
+狂怒法师      +3   -2   -2   -2   +2   +1  106%   +6  150%
+技能大师    +0   +0   +0   +0   +0   +0  100%  +10  130%
+游客        -2   -1   -1   -1   -2   -3   94%   +0   70%
+狂野天赋者    -1   +1   +1   +1   -2   +1  100%   +4  110%
 
 
 表 2 - 职业技能加成汇总 I
 
               解除陷阱      魔法装置      豁免          潜行         
-Berserker     Very Bad      Very Bad      Very Bad      Very Bad     
-Blood-Knight  Good          Bad           Fair          Poor         
-Duelist       Fair          Fair          Bad           Fair         
-Mauler        Good          Fair          Good          Bad          
-Rune-Knight   Fair          Poor          Fair          Poor         
-Samurai       Good          Bad           Fair          Poor         
-Warrior       Good          Bad           Poor          Poor         
-Weaponmaster  Poor          Bad           Bad           Poor         
-Weaponsmith   Fair          Poor          Bad           Poor         
-Archer        Very Good     Fair          Fair          Good         
-Sniper        Good          Fair          Poor          Very Good    
-Force-Trainer Fair          Very Good     Good          Good         
-Monk          Excellent     Good          Fair          Very Good    
-Mystic        Excellent     Good          Fair          Very Good    
-Blood-Mage    Fair          Superb        Good          Fair         
-Blue-Mage     Fair          Superb        Good          Fair         
-Gray-Mage     Fair          Superb        Good          Fair         
-High-Mage     Fair          Superb        Good          Fair         
-Mage          Fair          Superb        Good          Fair         
-Necromancer   Fair          Superb        Good          Good         
-Sorcerer      Fair          Amber[2]      Heroic        Poor         
-Yellow-Mage   Fair          Superb        Good          Fair         
-Alchemist     Very Good     Fair          Fair          Fair         
-Devicemaster  Poor          Superb        Fair          Poor         
-Magic-Eater   Poor          Heroic        Fair          Poor         
-Priest        Poor          Good          Very Good     Poor         
-Ninja         Excellent     Fair          Fair          Superb       
-Rogue         Excellent     Excellent     Fair          Very Good    
-Scout         Very Good     Very Good     Fair          Excellent    
-Chaos-Warrior Poor          Good          Fair          Poor         
-Disciple      Fair          Excellent     Good          Fair         
-Ninja-Lawyer  Excellent     Good          Fair          Superb       
-Paladin       Poor          Fair          Fair          Poor         
-Ranger        Fair          Excellent     Fair          Fair         
-Red-Mage      Poor          Very Good     Fair          Poor         
-Warrior-Mage  Fair          Good          Fair          Poor         
-Ethereal-Mimic Good          Fair          Fair          Bad          
-Beastmaster   Poor          Fair          Fair          Poor         
-Cavalry       Fair          Bad           Fair          Poor         
-Mindcrafter   Fair          Very Good     Fair          Fair         
-Mirror-Master Fair          Very Good     Very Good     Fair         
-Psion         Poor          Very Good     Very Good     Poor         
-Time-Lord     Poor          Very Good     Fair          Poor         
-Warlock       Poor          Superb        Very Good     Good         
-Archaeologist Excellent     Excellent     Fair          Good         
-Bard          Poor          Excellent     Fair          Very Bad     
-Lawyer        Excellent     Very Good     Good          Fair         
-Politician    Excellent     Poor          Good          Excellent    
-Rage-Mage     Poor          Bad           Superb        Very Bad     
-Skillmaster   Very Bad      Very Bad      Very Bad      Bad          
-Tourist       Bad           Very Bad      Poor          Poor         
-Wild-Talent   Fair          Good          Poor          Poor         
+狂战士     Very Bad      Very Bad      Very Bad      Very Bad     
+血骑士  Good          Bad           Fair          Poor         
+决斗者       Fair          Fair          Bad           Fair         
+重槌兵        Good          Fair          Good          Bad          
+符文骑士   Fair          Poor          Fair          Poor         
+武士       Good          Bad           Fair          Poor         
+战士       Good          Bad           Poor          Poor         
+武器大师  Poor          Bad           Bad           Poor         
+武器匠人   Fair          Poor          Bad           Poor         
+弓箭手        Very Good     Fair          Fair          Good         
+狙击手        Good          Fair          Poor          Very Good    
+气功师 Fair          Very Good     Good          Good         
+武僧          Excellent     Good          Fair          Very Good    
+秘术师        Excellent     Good          Fair          Very Good    
+血法师    Fair          Superb        Good          Fair         
+青魔法师     Fair          Superb        Good          Fair         
+灰法师     Fair          Superb        Good          Fair         
+高阶法师     Fair          Superb        Good          Fair         
+法师          Fair          Superb        Good          Fair         
+死灵法师   Fair          Superb        Good          Good         
+咒术师      Fair          Amber[2]      Heroic        Poor         
+黄魔法师   Fair          Superb        Good          Fair         
+炼金术士     Very Good     Fair          Fair          Fair         
+装置大师  Poor          Superb        Fair          Poor         
+食魔者   Poor          Heroic        Fair          Poor         
+牧师        Poor          Good          Very Good     Poor         
+忍者         Excellent     Fair          Fair          Superb       
+盗贼         Excellent     Excellent     Fair          Very Good    
+斥候         Very Good     Very Good     Fair          Excellent    
+混沌战士 Poor          Good          Fair          Poor         
+门徒      Fair          Excellent     Good          Fair         
+忍者律师  Excellent     Good          Fair          Superb       
+圣骑士       Poor          Fair          Fair          Poor         
+游侠        Fair          Excellent     Fair          Fair         
+赤魔法师      Poor          Very Good     Fair          Poor         
+战法师  Fair          Good          Fair          Poor         
+缥缈模仿者 Good          Fair          Fair          Bad          
+兽王   Poor          Fair          Fair          Poor         
+骑兵       Fair          Bad           Fair          Poor         
+心灵术士   Fair          Very Good     Fair          Fair         
+幻镜法师 Fair          Very Good     Very Good     Fair         
+灵能者         Poor          Very Good     Very Good     Poor         
+时光领主     Poor          Very Good     Fair          Poor         
+邪术师       Poor          Superb        Very Good     Good         
+考古学家 Excellent     Excellent     Fair          Good         
+吟游诗人          Poor          Excellent     Fair          Very Bad     
+律师        Excellent     Very Good     Good          Fair         
+政客    Excellent     Poor          Good          Excellent    
+狂怒法师     Poor          Bad           Superb        Very Bad     
+技能大师   Very Bad      Very Bad      Very Bad      Bad          
+游客       Bad           Very Bad      Poor          Poor         
+狂野天赋者   Fair          Good          Poor          Poor         
 
 
 表 3 - 职业技能加成汇总 II
 
               搜索          察觉          近战          箭术         
-Berserker     Very Bad      Very Bad      Amber[25]     Very Bad     
-Blood-Knight  Poor          Bad           Superb        Fair         
-Duelist       Poor          Poor          Fair          Very Bad     
-Mauler        Poor          Bad           Heroic        Very Bad     
-Rune-Knight   Poor          Poor          Fair          Poor         
-Samurai       Poor          Bad           Superb        Very Good    
-Warrior       Poor          Bad           Heroic        Heroic       
-Weaponmaster  Poor          Bad           Heroic        Poor         
-Weaponsmith   Poor          Bad           Very Good     Good         
-Archer        Fair          Poor          Good          Amber[12]    
-Sniper        Fair          Poor          Poor          Heroic       
-Force-Trainer Fair          Fair          Fair          Good         
-Monk          Fair          Fair          Very Good     Excellent    
-Mystic        Fair          Fair          Very Good     Excellent    
-Blood-Mage    Poor          Poor          Bad           Bad          
-Blue-Mage     Poor          Poor          Bad           Bad          
-Gray-Mage     Poor          Poor          Bad           Bad          
-High-Mage     Poor          Poor          Bad           Bad          
-Mage          Poor          Poor          Bad           Bad          
-Necromancer   Poor          Poor          Bad           Bad          
-Sorcerer      Poor          Poor          Very Bad      Very Bad     
-Yellow-Mage   Poor          Poor          Bad           Bad          
-Alchemist     Very Good     Fair          Good          Excellent    
-Devicemaster  Poor          Poor          Fair          Poor         
-Magic-Eater   Poor          Poor          Fair          Poor         
-Priest        Poor          Bad           Fair          Poor         
-Ninja         Very Good     Fair          Superb        Poor         
-Rogue         Fair          Fair          Excellent     Very Good    
-Scout         Very Good     Fair          Very Good     Heroic       
-Chaos-Warrior Poor          Poor          Excellent     Good         
-Disciple      Fair          Poor          Good          Good         
-Ninja-Lawyer  Good          Fair          Excellent     Poor         
-Paladin       Poor          Bad           Excellent     Very Good    
-Ranger        Fair          Poor          Good          Very Good    
-Red-Mage      Poor          Bad           Good          Poor         
-Warrior-Mage  Poor          Poor          Good          Good         
-Ethereal-Mimic Fair          Poor          Heroic        Superb       
-Beastmaster   Poor          Poor          Fair          Heroic       
-Cavalry       Poor          Bad           Excellent     Heroic       
-Mindcrafter   Poor          Poor          Fair          Good         
-Mirror-Master Poor          Poor          Bad           Poor         
-Psion         Poor          Bad           Fair          Poor         
-Time-Lord     Poor          Bad           Fair          Poor         
-Warlock       Poor          Poor          Fair          Poor         
-Archaeologist Very Good     Fair          Good          Poor         
-Bard          Poor          Poor          Poor          Bad          
-Lawyer        Good          Fair          Good          Fair         
-Politician    Good          Fair          Bad           Bad          
-Rage-Mage     Poor          Bad           Good          Fair         
-Skillmaster   Bad           Bad           Very Bad      Very Bad     
-Tourist       Poor          Bad           Fair          Bad          
-Wild-Talent   Fair          Poor          Good          Excellent    
+狂战士     Very Bad      Very Bad      Amber[25]     Very Bad     
+血骑士  Poor          Bad           Superb        Fair         
+决斗者       Poor          Poor          Fair          Very Bad     
+重槌兵        Poor          Bad           Heroic        Very Bad     
+符文骑士   Poor          Poor          Fair          Poor         
+武士       Poor          Bad           Superb        Very Good    
+战士       Poor          Bad           Heroic        Heroic       
+武器大师  Poor          Bad           Heroic        Poor         
+武器匠人   Poor          Bad           Very Good     Good         
+弓箭手        Fair          Poor          Good          Amber[12]    
+狙击手        Fair          Poor          Poor          Heroic       
+气功师 Fair          Fair          Fair          Good         
+武僧          Fair          Fair          Very Good     Excellent    
+秘术师        Fair          Fair          Very Good     Excellent    
+血法师    Poor          Poor          Bad           Bad          
+青魔法师     Poor          Poor          Bad           Bad          
+灰法师     Poor          Poor          Bad           Bad          
+高阶法师     Poor          Poor          Bad           Bad          
+法师          Poor          Poor          Bad           Bad          
+死灵法师   Poor          Poor          Bad           Bad          
+咒术师      Poor          Poor          Very Bad      Very Bad     
+黄魔法师   Poor          Poor          Bad           Bad          
+炼金术士     Very Good     Fair          Good          Excellent    
+装置大师  Poor          Poor          Fair          Poor         
+食魔者   Poor          Poor          Fair          Poor         
+牧师        Poor          Bad           Fair          Poor         
+忍者         Very Good     Fair          Superb        Poor         
+盗贼         Fair          Fair          Excellent     Very Good    
+斥候         Very Good     Fair          Very Good     Heroic       
+混沌战士 Poor          Poor          Excellent     Good         
+门徒      Fair          Poor          Good          Good         
+忍者律师  Good          Fair          Excellent     Poor         
+圣骑士       Poor          Bad           Excellent     Very Good    
+游侠        Fair          Poor          Good          Very Good    
+赤魔法师      Poor          Bad           Good          Poor         
+战法师  Poor          Poor          Good          Good         
+缥缈模仿者 Fair          Poor          Heroic        Superb       
+兽王   Poor          Poor          Fair          Heroic       
+骑兵       Poor          Bad           Excellent     Heroic       
+心灵术士   Poor          Poor          Fair          Good         
+幻镜法师 Poor          Poor          Bad           Poor         
+灵能者         Poor          Bad           Fair          Poor         
+时光领主     Poor          Bad           Fair          Poor         
+邪术师       Poor          Poor          Fair          Poor         
+考古学家 Very Good     Fair          Good          Poor         
+吟游诗人          Poor          Poor          Poor          Bad          
+律师        Good          Fair          Good          Fair         
+政客    Good          Fair          Bad           Bad          
+狂怒法师     Poor          Bad           Good          Fair         
+技能大师   Bad           Bad           Very Bad      Very Bad     
+游客       Poor          Bad           Fair          Bad          
+狂野天赋者   Fair          Poor          Good          Excellent    
 
 
 

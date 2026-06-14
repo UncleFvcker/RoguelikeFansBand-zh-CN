@@ -582,7 +582,7 @@ cloaks)
   =   戒指 (Rings)                       [   硬甲 (Hard armor)
   "   护身符 (Amulets)                   ]   杂项护甲 (Misc. armor)
   $   金币或宝石 (Gold or gems)          )   盾牌 (Shields)
-  ~   灯笼、铁蒺藜、箭袋                 &   宝箱 (Chests)
+  ~   灯笼、铁蒺藜、箭袋、包裹             &   宝箱 (Chests)
   ~   垃圾、木棍、骷髅骨架等             *   不寻常的物品 (Unusual 
 objects)
   `   雕像、手办模型                     
@@ -608,8 +608,8 @@ objects)
 ([]) 盔甲 (Armor)           wear (穿戴), t/Take off (脱下)
   =  戒指 (Ring)            wear (穿戴), t/Take off (脱下)
   "  护身符 (Amulet)        wear (穿戴), t/Take off (脱下)
-  ~  箭袋 (Quiver)          wear (穿戴), drop (丢下弹药), t/Take off 
-(脱下)
+  ~  箭袋/包裹 (Quiver/Package) wear (穿戴), Put in (放入包裹), drop 
+(丢下), t/Take off (取出/脱下)
   ~  灯笼 (Lantern)         wear (穿戴), t/Take off (脱下), Fuel 
 (添加燃料)
 
@@ -660,6 +660,14 @@ objects)
 wear (穿戴) 命令装备物品以供使用。你可以用 take off (脱下) 
 命令卸下已装备的物品，用 drop (丢下) 命令将物品放在地上，或者用 kill 
 (摧毁) 命令来销毁物品。
+
+包裹 (Packages)
+
+
+包裹是一种装备在箭袋栏位的储物道具，可用于额外存放随身物品。装备包裹后，
+使用 P 命令可以把物品放入包裹；需要取出时，使用 t 
+命令切换到箭袋/包裹栏位，再选择要取出的物品。包裹适合携带暂时不需要频繁
+使用、但又不想留在家里的物品；取用时请留意重量和背包空间。
 
 伪鉴定 (Pseudo-ID)
 
@@ -816,4 +824,5 @@ Updated    : Hengband 1.3.0
 Updated    : PosChengband 4.0.0
 Updated    : RoguelikeFansBand 7.1.chocolate
 Updated    : RoguelikeFansBand 7.1.liquorice
+
 
