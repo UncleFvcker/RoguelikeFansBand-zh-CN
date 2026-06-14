@@ -79,7 +79,7 @@ void on_p_hit_m(int m_idx)
         }
         else
         {
-            msg_format("%^s看起来很困惑。", m_name);
+            msg_format("%^s看起来很混乱。", m_name);
             (void)set_monster_confused(m_idx, MON_CONFUSED(m_ptr) + 10 + randint0(p_ptr->lev) / 5);
         }
     }
@@ -438,7 +438,7 @@ cptr do_necromancy_spell(int spell, int mode)
     {
         int base = spell_power(20);
         if (name) return "亡者之盾";
-        if (desc) return "暂时提供护甲(AC)加成，以及对冰寒、毒素和幽冥的抗性。";
+        if (desc) return "暂时提供护甲(AC)加成，以及对冰寒、毒素和虚空的抗性。";
         if (info) return info_duration(base, base);
         if (cast)
         {

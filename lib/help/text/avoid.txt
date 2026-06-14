@@ -81,9 +81,9 @@ Booze)也能混乱怪物！
 
 务必定期进行探测。确保你知道怪物都在哪里。
 
-务必拥有至少一级的行动自由 (Free 
-Action)，最好是两级（在游戏末期甚至三级）。行动自由在游戏前期不是绝对必
-需的，但在游戏中期就变得必不可少了。如果没有行动自由，不要进入“旧兵营 
+务必拥有至少一级的行动自如 (Free 
+Action)，最好是两级（在游戏末期甚至三级）。行动自如在游戏前期不是绝对必
+需的，但在游戏中期就变得必不可少了。如果没有行动自如，不要进入“旧兵营 
 (Old Barracks)”任务或“老柳头 (Old Man Willow)”任务。
 
 务必拥有识破隐形 (See Invisible) 或心灵感应 (Telepathy) 的来源。
@@ -121,7 +121,7 @@ Cold)，但在去打史矛革 (Smaug) 和乌特加德-洛基 (Utgard-Loke)
 任务中将极其珍贵，而星光法杖 (Staves of Starlight)在旧瞭望塔 (Old 
 Watchtower) 中会派上大用场。
 
-不要低估蘑菇，特别是治疗毒素蘑菇 (Mushrooms of Cure 
+不要低估蘑菇，特别是解毒蘑菇 (Mushrooms of Cure 
 Poison)（游戏中中和毒素最有效的手段）以及总是很方便的快速恢复蘑菇 
 (Mushrooms of Fast Recovery)。
 

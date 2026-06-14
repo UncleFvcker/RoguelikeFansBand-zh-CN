@@ -504,7 +504,7 @@ static void _cunning_strike_spell(int cmd, variant *res)
         var_set_string(res, "狡诈打击");
         break;
     case SPELL_DESC:
-        var_set_string(res, "攻击次数减半，但打击更有可能让你的对手困惑、震慑或昏迷。");
+        var_set_string(res, "攻击次数减半，但打击更有可能让你的对手混乱、震慑或昏迷。");
         break;
     case SPELL_CAST:
         var_set_bool(res, _do_blow(WEAPONMASTER_CUNNING_STRIKE));
@@ -614,7 +614,7 @@ static void _toss_hit_mon(py_throw_ptr context, int m_idx)
         }
         else
         {
-            msg_format("%^s看起来<color:U>困惑</color>了。", m_name);
+            msg_format("%^s看起来<color:U>混乱</color>了。", m_name);
             set_monster_confused(m_idx, MON_CONFUSED(m_ptr) + 10 + randint0(p_ptr->lev) / 5);
         }
     }
@@ -3715,10 +3715,10 @@ static void _character_dump(doc_ptr doc)
     }
     else if (p_ptr->psubclass == WEAPONMASTER_CLUBS)
     {
-        doc_printf(doc, "* 当装备棍棒时，你的攻击有几率使目标困惑。\n");
+        doc_printf(doc, "* 当装备棍棒时，你的攻击有几率使目标混乱。\n");
 
         if (p_ptr->lev >= 20)
-            doc_printf(doc, "* 当装备棍棒时，你的攻击有几率将目标击晕。\n");
+            doc_printf(doc, "* 当装备棍棒时，你的攻击有几率将目标震慑。\n");
 
         if (p_ptr->lev >= 45)
             doc_printf(doc, "* 当装备棍棒时，你的攻击有几率使目标震慑。\n");

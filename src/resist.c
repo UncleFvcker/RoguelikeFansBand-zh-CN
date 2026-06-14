@@ -67,7 +67,7 @@ static _res_info_t _resist_map[RES_MAX] = {
     { "毒素",         TERM_L_GREEN, OF_RES_POIS,    OF_VULN_POIS,   OF_IM_POIS },
     { "光照",          TERM_YELLOW,  OF_RES_LITE,    OF_VULN_LITE,   OF_IM_LITE },
     { "黑暗",           TERM_L_DARK,  OF_RES_DARK,    OF_VULN_DARK,   OF_IM_DARK },
-    { "困惑",      TERM_L_RED,   OF_RES_CONF,    OF_VULN_CONF,   OF_INVALID },
+    { "混乱",      TERM_L_RED,   OF_RES_CONF,    OF_VULN_CONF,   OF_INVALID },
     { "虚空",         TERM_L_DARK,  OF_RES_NETHER,  OF_VULN_NETHER, OF_IM_NETHER },
     { "时空",          TERM_VIOLET,  OF_RES_NEXUS,   OF_VULN_NEXUS,  OF_INVALID },
     { "声波",          TERM_ORANGE,  OF_RES_SOUND,   OF_VULN_SOUND,  OF_INVALID },
@@ -75,7 +75,7 @@ static _res_info_t _resist_map[RES_MAX] = {
     { "混沌",          TERM_VIOLET,  OF_RES_CHAOS,   OF_VULN_CHAOS,  OF_INVALID },
     { "解除附魔", TERM_VIOLET,  OF_RES_DISEN,   OF_VULN_DISEN,  OF_INVALID },
     { "时间",           TERM_L_BLUE,  OF_RES_TIME,    OF_INVALID,     OF_INVALID },
-    { "致盲",      TERM_L_DARK,  OF_RES_BLIND,   OF_VULN_BLIND,  OF_IM_BLIND },
+    { "失明",      TERM_L_DARK,  OF_RES_BLIND,   OF_VULN_BLIND,  OF_IM_BLIND },
     { "恐惧",           TERM_L_RED,   OF_RES_FEAR,    OF_VULN_FEAR,   OF_IM_FEAR },
     { "传送",  TERM_ORANGE,  OF_NO_TELE,     OF_INVALID,     OF_INVALID }
 };

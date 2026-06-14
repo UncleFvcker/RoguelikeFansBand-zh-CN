@@ -4744,7 +4744,7 @@ static void process_player(void)
                 monster_desc(m_name, m_ptr, 0);
 
                 /* Dump a message */
-                msg_format("%^s不再困惑了。", m_name);
+                msg_format("%^s不再混乱了。", m_name);
             }
         }
 

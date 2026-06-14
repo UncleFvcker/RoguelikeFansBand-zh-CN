@@ -188,10 +188,10 @@ void confuse_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "困惑术");
+        var_set_string(res, "混乱术");
         break;
     case SPELL_DESC:
-        var_set_string(res, "试图使一只或多只怪物陷入困惑。");
+        var_set_string(res, "试图使一只或多只怪物陷入混乱。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_power(p_ptr->lev * 2));
@@ -275,7 +275,7 @@ void confusing_lights_spell(int cmd, variant *res)
         var_set_string(res, "混乱之光");
         break;
     case SPELL_DESC:
-        var_set_string(res, "散发出令人困惑的光芒，使附近的怪物减速、震慑、困惑、恐惧并冻结。");
+        var_set_string(res, "散发出令人混乱的光芒，使附近的怪物减速、震慑、混乱、恐惧并冻结。");
         break;
     case SPELL_CAST:
         msg_print("你用令人眼花缭乱的混乱之光照射附近的怪物！");
@@ -672,7 +672,7 @@ void curing_spell(int cmd, variant *res)
         var_set_string(res, "恢复术");
         break;
     case SPELL_DESC:
-        var_set_string(res, "它能治疗你一些生命值，并治愈失明、中毒、困惑、震慑、割伤和幻觉状态。");
+        var_set_string(res, "它能治疗你一些生命值，并治愈失明、中毒、混乱、震慑、割伤和幻觉状态。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_heal(0, 0, spell_power(50)));
@@ -803,7 +803,7 @@ void dazzle_spell(int cmd, variant *res)
         var_set_string(res, "目眩术");
         break;
     case SPELL_DESC:
-        var_set_string(res, "散发出令人目眩的光芒，震慑、困惑并恐吓附近的怪物。");
+        var_set_string(res, "散发出令人目眩的光芒，震慑、混乱并恐吓附近的怪物。");
         break;
     case SPELL_GAIN_MUT:
         msg_print("你获得了散发目眩之光的能力。");
@@ -812,7 +812,7 @@ void dazzle_spell(int cmd, variant *res)
         msg_print("你失去了散发目眩之光的能力。");
         break;
     case SPELL_MUT_DESC:
-        var_set_string(res, "你可以散发出令人困惑的致盲辐射。");
+        var_set_string(res, "你可以散发出令人混乱的致盲辐射。");
         break;
     case SPELL_CAST:
         stun_monsters(5 + p_ptr->lev/5);
@@ -872,10 +872,10 @@ void demon_breath_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "喷吐火焰/幽冥");
+        var_set_string(res, "喷吐火焰/虚空");
         break;
     case SPELL_DESC:
-        var_set_string(res, "向你的对手喷吐出强大的火焰或幽冥冲击。");
+        var_set_string(res, "向你的对手喷吐出强大的火焰或虚空冲击。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(0, 0, spell_power(p_ptr->lev * 3)));
@@ -889,7 +889,7 @@ void demon_breath_spell(int cmd, variant *res)
 
         stop_mouth();
 
-        msg_format("你喷吐出%s。", (type == GF_NETHER) ? "幽冥" : "火焰");
+        msg_format("你喷吐出%s。", (type == GF_NETHER) ? "虚空" : "火焰");
 
         fire_ball(type, dir, spell_power(p_ptr->lev * 3), -(p_ptr->lev / 15) - 1);
         var_set_bool(res, TRUE);
@@ -1580,7 +1580,7 @@ void evocation_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "退魔敕令");
+        var_set_string(res, "驱散敕令");
         break;
     case SPELL_DESC:
         var_set_string(res, "驱散、恐吓并放逐视线内的所有怪物。");

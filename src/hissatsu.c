@@ -408,7 +408,7 @@ void do_cmd_hissatsu(void)
     /* not if confused */
     if (p_ptr->confused)
     {
-        msg_print("你太困惑了！");
+        msg_print("你太混乱了！");
         return;
     }
     if (!equip_find_first(object_is_melee_weapon))
@@ -490,7 +490,7 @@ void do_cmd_gain_hissatsu(void)
 
     if (p_ptr->confused)
     {
-        msg_print("你太困惑了！");
+        msg_print("你太混乱了！");
         return;
     }
 

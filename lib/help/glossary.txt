@@ -62,13 +62,13 @@
 
 <color:keyword>coffee-break mode</color>: 茶歇模式；加速游戏节奏并关闭大地图的出生选项。如果选择了新手模式，则会自动开启。
 
-<color:keyword>confusion</color>: 困惑/混乱；1) 一种状态效果，影响玩家和怪物。参见 <link:status.txt#Confusion>。2) 一种元素伤害，如果不被抵抗就会引起混乱状态。
+<color:keyword>confusion</color>: 混乱；1) 一种状态效果，影响玩家和怪物。参见 <link:status.txt#Confusion>。2) 一种元素伤害，如果不被抵抗就会引起混乱状态。
 
 <color:keyword>critical hit</color>: 暴击/致命一击；极具破坏力的击中；武器或弹药的伤害骰子翻倍。
 
 <color:keyword>curse</color>: 诅咒；1) 物品诅咒；一种负面的、通常可移除的物品属性，在被诅咒期间会阻止你脱下该物品。2) 一种怪物或玩家怪物的法术攻击，特别是那种允许进行豁免检定、造成非元素伤害且可能引起物品被诅咒的法术；包括创伤诅咒、邪恶诅咒、强效诅咒、死亡诅咒或毁灭之手。3) 许多与物品诅咒相似的特殊效果之一，比如安珀人血统诅咒。
 
-<color:keyword>dazed</color>: 昏沉；即 Stunned (眩晕)；遭受眩晕状态效果的影响。
+<color:keyword>dazed</color>: 恍惚；轻度 Stunned (震慑) 状态。
 
 <color:keyword>demigod powers</color>: 半神力量 / 半神天赋；半神、人类和一些类人种族可用的特殊永久突变。参见 <link:Demigods.txt#Powers>。
 
@@ -78,7 +78,7 @@
 
 <color:keyword>disarming</color>: 解除陷阱；1) 移除或尝试移除地板或宝箱陷阱的动作。2) 解除陷阱技能；影响你安全移除陷阱能力的技能。
 
-<color:keyword>disenchantment</color>: 祛魔/解除魔法；1) 一种元素名称。2) 因该元素引起的，装备物品上命中、伤害和护甲加成的降低（极少数情况下也会降低 pval 修正值）。
+<color:keyword>disenchantment</color>: 解除附魔；1) 一种元素名称。2) 因该元素引起的，装备物品上命中、伤害和护甲加成的降低（极少数情况下也会降低 pval 修正值）。
 
 <color:keyword>DL</color>: 地下城等级 (Dungeon level)；深度的指示器。“拆解者 (Unmakers) 原生于 DL 77”。更危险的怪物和更有价值的物品会出现在更高的地下城等级。引申为危险等级 (danger level)；通常这与地下城等级相同，但荒野区域有危险等级却没有地下城深度等级。
 
@@ -96,7 +96,7 @@
 
 <color:keyword>eldritch horror</color>: 远古骇物；摧毁理智的怪物。参见 <link:monster.txt#EldritchHorror>。
 
-<color:keyword>element</color>: 元素；1) 一种伤害类型，如火、酸、混沌、祛魔或枢纽 (nexus)。2) 狭义指代基础元素之一：火、冷、酸、电或毒。元素防护 (Elemental protection)：对元素的暂时抗性。
+<color:keyword>element</color>: 元素；1) 一种伤害类型，如火、酸、混沌、解除附魔或时空 (nexus)。2) 狭义指代基础元素之一：火、冷、酸、电或毒。元素防护 (Elemental protection)：对元素的暂时抗性。
 
 <color:keyword>elemental</color>: 1) 基于元素或与元素有关的。2) 元素生物；字母符号为 E 的怪物；每只元素生物都与单一元素强烈相关。在怪物模式中可作为玩家怪物种族，具有几个亚种。
 
@@ -112,7 +112,7 @@
 
 <color:keyword>EXP</color>: 也作 <color:keyword>XP</color>: 经验值 (experience)。游戏中计分的最基本方式，经验值决定了你的角色等级。<color:o>Monster experience (怪物经验)</color>：由怪物（通常是宠物）收集的经验。
 
-<color:keyword>FA</color>: 自由行动 (Free Action)；防止麻痹的物品属性。
+<color:keyword>FA</color>: 行动自如 (Free Action)；防止麻痹的物品属性。
 
 <color:keyword>fail rate</color>: 失败率；施放法术或使用特定物品失败的概率，通常以百分比表示。
 
@@ -218,7 +218,7 @@
 
 <color:keyword>nameless</color>: 无名物品；墨家明器 (自动捡拾器) 的关键词，指代一件没有武器匠 (Weaponsmith) 精华，且不是词缀或神器的物品。
 
-<color:keyword>nexus</color>: 枢纽/时空碎裂；一种元素伤害，很少致命，但因为其副作用（打乱属性/随机传送）通常非常惹人厌。
+<color:keyword>nexus</color>: 时空；一种元素伤害，很少致命，但因为其副作用（打乱属性/随机传送）通常非常惹人厌。
 
 <color:keyword>nice</color>: 乖巧状态；怪物的一种状态；乖巧的怪物不会使用吐息或法术攻击，且受到极高近战伤害时会被减伤。乖巧怪物也从不抵抗毁灭效果。几乎所有高级怪物在最初被召唤时都是乖巧的；主要例外是奥林匹斯神，以及在噩梦模式下游玩。当玩家有机会对怪物的存在做出反应时，乖巧状态结束。
 
@@ -284,7 +284,7 @@
 
 <color:keyword>sanity blast</color>: 理智冲击；远古骇物的效果；可以由看到远古骇物，或阅读死灵之书 (Necronomicon) 触发。
 
-<color:keyword>scrambling</color>: 打乱 / 属性重组；1) 属性打乱 (Stat scrambling)。2) 某些基于枢纽 (nexus) 元素的怪物光环和近战攻击的风味文本信息；这些攻击不会触发真正的属性打乱，但与枢纽有关联。
+<color:keyword>scrambling</color>: 打乱 / 属性重组；1) 属性打乱 (Stat scrambling)。2) 某些基于时空 (nexus) 元素的怪物光环和近战攻击的风味文本信息；这些攻击不会触发真正的属性打乱，但与时空有关联。
 
 <color:keyword>searching</color>: 搜索；1) 搜索技能；决定你定位陷阱和隐藏门能力的技能。2) 搜索动作，使用 's' 命令搜索陷阱和隐藏门。<color:o>搜索模式 (Searching mode)</color>：通过 'S'/'#' 命令切换的模式，让你每隔一回合自动搜索一次。3) 在帮助文件中使用 '/' 和 '\' 命令进行搜索。
 
@@ -314,13 +314,13 @@
 
 <color:keyword>stat drain</color>: 属性流失；属性的降低，通常由怪物攻击导致，在面板上通过该属性变黄来指示。流失的属性可以被恢复。
 
-<color:keyword>stat scrambling</color>: 属性打乱；由于未能抵抗枢纽攻击而导致的两个属性当前基础值的永久互换，可以作为出生选项来避免（代价是受到一个诅咒效果）。
+<color:keyword>stat scrambling</color>: 属性打乱；由于未能抵抗时空攻击而导致的两个属性当前基础值的永久互换，可以作为出生选项来避免（代价是受到一个诅咒效果）。
 
 <color:keyword>stat-up</color>: 属性提升；一次提高某项选定属性的机会。
 
 <color:keyword>status bar</color>: 状态条；参见 <color:keyword>health bar (血条)</color>。
 
-<color:keyword>status effect</color>: 状态效果；一种暂时的状况，特别是负面状况，如混乱、致盲、中毒、眩晕或幻觉。玩家和怪物都会受到状态效果的影响。参见 <link:status.txt>。
+<color:keyword>status effect</color>: 状态效果；一种暂时的状况，特别是负面状况，如混乱、失明、中毒、震慑或幻觉。玩家和怪物都会受到状态效果的影响。参见 <link:status.txt>。
 
 <color:keyword>subwindow</color>: 子窗口；主游戏窗口 (Term-0) 以外的窗口，被一些玩家用于方便地显示怪物和物品列表、装备、最近消息或其他信息。
 
@@ -336,7 +336,7 @@
 
 <color:keyword>terrible</color>: 可怕的；对被诅咒的神器的伪鉴定感觉。
 
-<color:keyword>to-AC</color>: 护甲加值；[+Y] 或 [X,+Y] 中的 Y，通常是魔法附魔。经常容易被祛魔或酸液伤害损坏。与 <color:keypress>基础 AC (base AC)</color> 区分开来，后者是 [X,+Y] 中的 X，并且不会被祛魔或酸液损坏。
+<color:keyword>to-AC</color>: 护甲加值；[+Y] 或 [X,+Y] 中的 Y，通常是魔法附魔。经常容易被解除附魔或酸液伤害损坏。与 <color:keypress>基础 AC (base AC)</color> 区分开来，后者是 [X,+Y] 中的 X，并且不会被解除附魔或酸液损坏。
 
 <color:keyword>to-dam</color>: 伤害加值；提高你的伤害输出的物品属性；物品描述 (+X,+Y) 中的 Y。你的角色对近战、远程战斗和法术有不同的伤害加值，一件物品可能影响其中一项或多项。
 

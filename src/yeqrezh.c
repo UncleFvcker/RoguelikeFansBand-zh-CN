@@ -569,7 +569,7 @@ static void _wrecking_yelp_spell(int cmd, variant *res)
         var_set_string(res, info_damage(spell_power(dice), sides, spell_power(p_ptr->to_d_spell)));
         break;
     case SPELL_DESC:
-        var_set_string(res, "发射一束音波。");
+        var_set_string(res, "发射一束声波。");
         break;
     case SPELL_CAST:
     {

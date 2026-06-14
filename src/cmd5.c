@@ -500,7 +500,7 @@ void custom_book_transcribe(obj_ptr book)
     }
     if (p_ptr->confused)
     {
-        msg_print("你太困惑了！");
+        msg_print("你太混乱了！");
         return;
     }
 
@@ -627,7 +627,7 @@ void do_cmd_study(void)
 
     if (p_ptr->confused)
     {
-        msg_print("你太困惑了！");
+        msg_print("你太混乱了！");
         return;
     }
 
@@ -1140,7 +1140,7 @@ void do_cmd_cast(void)
     /* Not when confused */
     if (p_ptr->confused)
     {
-        msg_print("你太困惑了！");
+        msg_print("你太混乱了！");
         flush();
         return;
     }
@@ -2162,7 +2162,7 @@ bool do_riding(bool force)
     {
         if (p_ptr->confused)
         {
-            msg_print("你太困惑了！");
+            msg_print("你太混乱了！");
             return FALSE;
         }
 

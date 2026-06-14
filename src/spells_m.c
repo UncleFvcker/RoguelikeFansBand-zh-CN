@@ -323,10 +323,10 @@ void nether_ball_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "幽冥球");
+        var_set_string(res, "虚空球");
         break;
     case SPELL_DESC:
-        var_set_string(res, "发射一个巨大的幽冥法球。");
+        var_set_string(res, "发射一个巨大的虚空法球。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(0, 0, dam));
@@ -353,10 +353,10 @@ void nether_bolt_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "幽冥箭");
+        var_set_string(res, "虚空箭");
         break;
     case SPELL_DESC:
-        var_set_string(res, "发射一发幽冥箭或幽冥射线。");
+        var_set_string(res, "发射一发虚空箭或虚空射线。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(dd, spell_power(ds), spell_power(p_ptr->to_d_spell)));

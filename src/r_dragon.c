@@ -251,15 +251,15 @@ static cptr _breath_desc(void)
     case DRAGON_BLACK: return "酸液";
     case DRAGON_GREEN: return "毒素";
     case DRAGON_BRONZE: return "混乱";
-    case DRAGON_GOLD: return "音波";
+    case DRAGON_GOLD: return "声波";
     case DRAGON_NETHER: 
-        if (p_ptr->lev >= 40) return "幽冥、时空或除魔";
-        return "幽冥";
-    case DRAGON_LAW: return "音波或碎片";
-    case DRAGON_CHAOS: return "混沌或除魔";
+        if (p_ptr->lev >= 40) return "虚空、时空或解除附魔";
+        return "虚空";
+    case DRAGON_LAW: return "声波或碎片";
+    case DRAGON_CHAOS: return "混沌或解除附魔";
     case DRAGON_ETHEREAL: return "光明、黑暗或混乱";
     case DRAGON_CRYSTAL: return "碎片";
-    case DRAGON_BALANCE: return "音波、碎片、混沌或除魔";
+    case DRAGON_BALANCE: return "声波、碎片、混沌或解除附魔";
     }
     return 0;
 }

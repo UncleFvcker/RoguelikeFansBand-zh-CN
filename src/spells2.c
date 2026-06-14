@@ -754,7 +754,7 @@ void report_magics(void)
     if (p_ptr->confused)
     {
         info2[i]  = report_magics_aux(p_ptr->confused);
-        info[i++] = "你很困惑";
+        info[i++] = "你很混乱";
 
     }
     if (p_ptr->afraid)

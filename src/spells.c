@@ -1259,7 +1259,7 @@ void do_cmd_spell(void)
         ct = _puhdista(spells, ct, spell_problem);
         if (ct == 0)
         {
-            if (spell_problem & PWR_CONFUSED) msg_print("你太困惑了！");
+            if (spell_problem & PWR_CONFUSED) msg_print("你太混乱了！");
             else if (spell_problem & PWR_AFRAID) msg_print("你太害怕了！");
             return;
         }
@@ -1472,7 +1472,7 @@ byte do_cmd_power(void)
         if (ct == 0)
         {
              if (ongelma & PWR_AFRAID) msg_print("你太害怕了！");
-             else if (ongelma & PWR_CONFUSED) msg_print("你太困惑了！");
+             else if (ongelma & PWR_CONFUSED) msg_print("你太混乱了！");
              if (flush_failure) flush();
              return ongelma;
         }

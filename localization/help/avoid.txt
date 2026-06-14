@@ -31,7 +31,7 @@
 
 <color:G>务必</color>定期进行探测。确保你知道怪物都在哪里。
 
-<color:G>务必</color>拥有至少一级的<color:r>行动自由 (Free Action)</color>，最好是两级（在游戏末期甚至三级）。行动自由在游戏前期不是绝对必需的，但在游戏中期就变得必不可少了。如果没有行动自由，<color:r>不要</color>进入“旧兵营 (Old Barracks)”任务或“老柳头 (Old Man Willow)”任务。
+<color:G>务必</color>拥有至少一级的<color:r>行动自如 (Free Action)</color>，最好是两级（在游戏末期甚至三级）。行动自如在游戏前期不是绝对必需的，但在游戏中期就变得必不可少了。如果没有行动自如，<color:r>不要</color>进入“旧兵营 (Old Barracks)”任务或“老柳头 (Old Man Willow)”任务。
 
 <color:G>务必</color>拥有识破隐形 (See Invisible) 或心灵感应 (Telepathy) 的来源。
 
@@ -47,7 +47,7 @@
 
 <color:r>不要</color>完全忽视在特定小众情况下有用的物品，尤其是当你明确知道这些情况会发生时。你可能不会一直带着<color:B>抵抗冷热药水 (Potions of Resist Heat and Cold)</color>，但在去打史矛革 (Smaug) 和乌特加德-洛基 (Utgard-Loke) 时带上一些仍然是个好主意。同样，<color:B>活力药水 (Potions of Vigor)</color>在 Micro$oft 任务中将极其珍贵，而<color:U>星光法杖 (Staves of Starlight)</color>在旧瞭望塔 (Old Watchtower) 中会派上大用场。
 
-<color:r>不要</color>低估蘑菇，特别是<color:U>治疗毒素蘑菇 (Mushrooms of Cure Poison)</color>（游戏中中和毒素最有效的手段）以及总是很方便的<color:U>快速恢复蘑菇 (Mushrooms of Fast Recovery)</color>。
+<color:r>不要</color>低估蘑菇，特别是<color:U>解毒蘑菇 (Mushrooms of Cure Poison)</color>（游戏中中和毒素最有效的手段）以及总是很方便的<color:U>快速恢复蘑菇 (Mushrooms of Fast Recovery)</color>。
 
 <color:r>仍然不要</color>低估能造成混乱的物品。在游戏中期，这通常意味着一根<color:U>混乱怪物法杖 (Staff of Confuse Monsters)</color>，当然，如果你运气足够好，可能会在早期找到一根<color:U>混乱之光法杖 (Staff of Confusing Lights)</color>！
 

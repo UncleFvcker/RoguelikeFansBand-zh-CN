@@ -2217,7 +2217,7 @@ P:40:2d4:-2:0:10
 F:RES_SOUND |
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 E:BREATHE_SOUND:30:40:130
-E:你喷吐出音波。
+E:你喷吐出声波。
 D:一套如镜面般金亮的鳞甲。当你穿上这件盔甲时，听不到任何异常的声音，
 D:但你的耳朵却隐隐作痛，就好像置身于
 D:刺耳的噪音之中。

@@ -79,7 +79,7 @@ static _parse_t _annoy_tbl[] = {
     { "CONFUSE", { MST_ANNOY, ANNOY_CONFUSE },
         { "混乱", TERM_L_UMBER,
           "$CASTER 制造了令人着迷的幻象。",
-          "$CASTER 喃喃自语着，你听到了令人困惑的声音。"}, MSF_TARGET | MSF_DIRECT},
+          "$CASTER 喃喃自语着，你听到了令人混乱的声音。"}, MSF_TARGET | MSF_DIRECT},
     { "DARKNESS", { MST_ANNOY, ANNOY_DARKNESS },
         { "制造黑暗", TERM_L_DARK }},
     { "PARALYZE", { MST_ANNOY, ANNOY_PARALYZE },

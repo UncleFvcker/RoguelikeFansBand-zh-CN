@@ -1718,10 +1718,10 @@ void touch_of_confusion_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "困惑之触");
+        var_set_string(res, "混乱之触");
         break;
     case SPELL_DESC:
-        var_set_string(res, "试图让你击中的下一个怪物陷入困惑。");
+        var_set_string(res, "试图让你击中的下一个怪物陷入混乱。");
         break;
     case SPELL_CAST:
         if (!(p_ptr->special_attack & ATTACK_CONFUSE))

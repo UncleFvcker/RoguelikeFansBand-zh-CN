@@ -15,12 +15,12 @@ static gf_info_t _gf_tbl[GF_COUNT] = {
     { GF_LITE, "闪光", TERM_YELLOW, RES_LITE, "LITE", GFF_ATTACK },
     { GF_DARK, "黑暗", TERM_L_DARK, RES_DARK, "DARK", GFF_ATTACK },
     { GF_CONFUSION, "混乱", TERM_L_UMBER, RES_CONF, "CONFUSION", GFF_ATTACK | GFF_STATUS },
-    { GF_NETHER, "地狱", TERM_L_DARK, RES_NETHER, "NETHER", GFF_ATTACK },
+    { GF_NETHER, "虚空", TERM_L_DARK, RES_NETHER, "NETHER", GFF_ATTACK },
     { GF_NEXUS, "时空", TERM_VIOLET, RES_NEXUS, "NEXUS", GFF_ATTACK },
-    { GF_SOUND, "音波", TERM_ORANGE, RES_SOUND, "SOUND", GFF_ATTACK },
+    { GF_SOUND, "声波", TERM_ORANGE, RES_SOUND, "SOUND", GFF_ATTACK },
     { GF_SHARDS, "碎片", TERM_L_UMBER, RES_SHARDS, "SHARDS", GFF_ATTACK },
     { GF_CHAOS, "混沌", TERM_VIOLET, RES_CHAOS, "CHAOS", GFF_ATTACK | GFF_STATUS },
-    { GF_DISENCHANT, "解除魔法", TERM_VIOLET, RES_DISEN, "DISENCHANT", GFF_ATTACK },
+    { GF_DISENCHANT, "解除附魔", TERM_VIOLET, RES_DISEN, "DISENCHANT", GFF_ATTACK },
     { GF_TIME, "时间", TERM_L_BLUE, RES_TIME, "TIME", GFF_ATTACK | GFF_STATUS },
 
     { GF_MANA, "法力", TERM_L_BLUE, RES_INVALID, "MANA", GFF_ATTACK },
@@ -65,7 +65,7 @@ static gf_info_t _gf_tbl[GF_COUNT] = {
     { GF_AMNESIA, "失忆", TERM_L_DARK, RES_INVALID, "AMNESIA", GFF_STATUS },
 
     /* Status Effects */
-    { GF_BLIND, "致盲", TERM_L_DARK, RES_INVALID, "BLIND", GFF_STATUS },
+    { GF_BLIND, "失明", TERM_L_DARK, RES_INVALID, "BLIND", GFF_STATUS },
     { GF_OLD_CLONE, "克隆", TERM_RED, RES_INVALID, "OLD_CLONE", 0 },
     { GF_OLD_POLY, "变形", TERM_RED, RES_INVALID, "OLD_POLY", GFF_STATUS },
     { GF_OLD_HEAL, "治疗", TERM_WHITE, RES_INVALID, "OLD_HEAL", GFF_STATUS },
@@ -702,7 +702,7 @@ int gf_affect_p(int who, int type, int dam, int flags)
         break;
     }
     case GF_CONFUSION:
-        if (!touch && fuzzy) msg_print("你被令人困惑的东西击中了！");
+        if (!touch && fuzzy) msg_print("你被令人混乱的东西击中了！");
         /*if (touch) ... */
         dam = res_calc_dam(RES_CONF, dam);
         if (!res_save_default(RES_CONF) && !bunshin_save)
@@ -711,7 +711,7 @@ int gf_affect_p(int who, int type, int dam, int flags)
         update_smart_learn(who, RES_CONF);
         break;
     case GF_DISENCHANT:
-        if (touch) msg_print("你被<color:v>解除魔法</color>了！");
+        if (touch) msg_print("你被<color:v>解除附魔</color>了！");
         else if (fuzzy) msg_print("你被静止能量击中了！");
         dam = res_calc_dam(RES_DISEN, dam);
         if (!(flags & GF_AFFECT_SPELL) && !one_in_(5) && !bunshin_save)
@@ -762,7 +762,7 @@ int gf_affect_p(int who, int type, int dam, int flags)
         break;
     case GF_INERT:
         if (touch) msg_print("你被<color:W>减速</color>了！");
-        else if (fuzzy) msg_print("你被缓慢的物体击中了！");
+        else if (fuzzy) msg_print("你被减速能量击中了！");
         /*if (touch) ... */
         if (!bunshin_save)
         {
@@ -781,7 +781,7 @@ int gf_affect_p(int who, int type, int dam, int flags)
         if (type != GF_BABY_SLOW) result = take_hit(damage_type, dam, m_name_real);
         break;
     case GF_LITE:
-        if (touch) msg_print("你被<color:y>致盲</color>了！");
+        if (touch) msg_print("你<color:y>失明</color>了！");
         else if (fuzzy) msg_print("你被某物击中了！");
         dam = res_calc_dam(RES_LITE, dam);
         if (!p_ptr->blind && !res_save_default(RES_LITE) && !res_save_default(RES_BLIND) && !bunshin_save)
@@ -968,7 +968,7 @@ int gf_affect_p(int who, int type, int dam, int flags)
             msg_print("攻击击中了暗影。你毫发无伤！");
             break;
         }
-        if (fuzzy) msg_print("你被缓慢的物体击中了！");
+        if (fuzzy) msg_print("你被减速能量击中了！");
         if (!free_act_save_p(MAX(rlev, dam)))
             set_slow(p_ptr->slow + randint0(4) + 4, FALSE);
         break;
@@ -1982,7 +1982,7 @@ bool gf_affect_m(int who, mon_ptr mon, int type, int dam, int flags)
         }
         break;
     case GF_CONFUSION:
-        if (touch && seen_msg) msg_format("%^s被<color:U>困惑</color>了！", m_name);
+        if (touch && seen_msg) msg_format("%^s被<color:U>混乱</color>了！", m_name);
         if (seen) obvious = TRUE;
         _BABBLE_HACK()
         if (race->flags3 & RF3_NO_CONF)
@@ -2001,7 +2001,7 @@ bool gf_affect_m(int who, mon_ptr mon, int type, int dam, int flags)
         else do_conf = _gf_distance_mod(10 + randint1(15));
         break;
     case GF_DISENCHANT:
-        if (touch && seen_msg) msg_format("%^s被<color:v>解除魔法</color>了！", m_name);
+        if (touch && seen_msg) msg_format("%^s被<color:v>解除附魔</color>了！", m_name);
         if (seen) obvious = TRUE;
         _BABBLE_HACK()
         if (race->flagsr & RFR_RES_DISE)
@@ -2804,7 +2804,7 @@ bool gf_affect_m(int who, mon_ptr mon, int type, int dam, int flags)
         }
         if (MON_CONFUSED(mon))
         {
-            if (seen_msg) msg_format("%^s不再困惑了。", m_name);
+            if (seen_msg) msg_format("%^s不再混乱了。", m_name);
             (void)set_monster_confused(mon->id, 0);
         }
         if (MON_MONFEAR(mon))
@@ -2905,7 +2905,7 @@ bool gf_affect_m(int who, mon_ptr mon, int type, int dam, int flags)
             }
             if (MON_CONFUSED(mon))
             {
-                if (seen_msg) msg_format("%^s不再困惑了。", m_name);
+                if (seen_msg) msg_format("%^s不再混乱了。", m_name);
                 set_monster_confused(mon->id, 0);
             }
             if (MON_MONFEAR(mon))
@@ -4385,9 +4385,9 @@ bool gf_affect_m(int who, mon_ptr mon, int type, int dam, int flags)
           && !(race->flags3 & RF3_NO_STUN) )
         {
             if (mon_stun(mon, do_stun))
-                note = " is <color:B>dazed</color>.";
+                note = "陷入<color:B>恍惚</color>。";
             else
-                note = " is <color:B>more dazed</color>.";
+                note = "变得<color:B>更加恍惚</color>。";
 
             if (seen) obvious = TRUE;
             get_angry = TRUE;

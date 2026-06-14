@@ -81,7 +81,7 @@
 经验修正     250%       红外视力    50'
 </style></indent>
 <topic:Shadow Drake><color:o>暗影飞龙 (Shadow Drake)</color>
-暗影飞龙是潜行能力最强的龙之一。它们是虚冥 (nether) 生物，并最终会进化成死亡飞龙 (Death Drakes) 和幽灵太古龙 (Spectral Wyrms)。它们的近战在龙族中最弱，吐息也有所欠缺，但依然是可怕的对手。随着等级的提升，这些飞龙会获得穿墙的能力，并获得几种抗性，包括对虚冥的免疫。
+暗影飞龙是潜行能力最强的龙之一。它们是虚空 (nether) 生物，并最终会进化成死亡飞龙 (Death Drakes) 和幽灵太古龙 (Spectral Wyrms)。它们的近战在龙族中最弱，吐息也有所欠缺，但依然是可怕的对手。随着等级的提升，这些飞龙会获得穿墙的能力，并获得几种抗性，包括对虚空的免疫。
 
   <indent><style:table><color:G>属性                    技能</color>
 力量         <color:w> +2</color>        解除陷阱    <color:o>一般(Fair)   </color>
@@ -95,7 +95,7 @@
 经验修正     300%       红外视力    50'
 </style></indent>
 <topic:Law Drake><color:o>秩序飞龙 (Law Drake)</color>
-秩序飞龙是强大的秩序之龙。它们能够喷吐声波或破片，并最终进化成秩序太古龙 (Great Wyrms of Law)——尽管进化速度可能没有你期望的那么快。它们的吐息比元素巨龙弱得多，但能抵抗声波或破片的怪物也要少得多。以龙的标准来看，它们的近战也偏弱，不过对于大多数低级生物来说，这点力量已经足够它们消受了！
+秩序飞龙是强大的秩序之龙。它们能够喷吐声波或碎片，并最终进化成秩序太古龙 (Great Wyrms of Law)——尽管进化速度可能没有你期望的那么快。它们的吐息比元素巨龙弱得多，但能抵抗声波或碎片的怪物也要少得多。以龙的标准来看，它们的近战也偏弱，不过对于大多数低级生物来说，这点力量已经足够它们消受了！
 
   <indent><style:table><color:G>属性                    技能</color>
 力量         <color:w> +0</color>        解除陷阱    <color:o>一般(Fair)   </color>
@@ -109,7 +109,7 @@
 经验修正     280%       红外视力    50'
 </style></indent>
 <topic:Chaos Drake><color:o>混沌飞龙 (Chaos Drake)</color>
-混沌飞龙是强大的混沌之龙。它们能够喷吐混沌或祛魔 (disenchantment)，并最终进化成混沌太古龙 (Great Wyrms of Chaos)——尽管进化速度可能没有你期望的那么快。它们的吐息比元素巨龙弱得多，但能抵抗混沌或祛魔的怪物也要少得多；并且虽然以龙的标准来看它们的近战很弱，但按更普遍的标准来衡量，它们其实非常善战。
+混沌飞龙是强大的混沌之龙。它们能够喷吐混沌或解除附魔 (disenchantment)，并最终进化成混沌太古龙 (Great Wyrms of Chaos)——尽管进化速度可能没有你期望的那么快。它们的吐息比元素巨龙弱得多，但能抵抗混沌或解除附魔的怪物也要少得多；并且虽然以龙的标准来看它们的近战很弱，但按更普遍的标准来衡量，它们其实非常善战。
 
   <indent><style:table><color:G>属性                    技能</color>
 力量         <color:w> +0</color>        解除陷阱    <color:o>一般(Fair)   </color>
@@ -123,7 +123,7 @@
 经验修正     280%       红外视力    50'
 </style></indent>
 <topic:Balance Drake><color:o>平衡飞龙 (Balance Drake)</color>
-平衡飞龙是混沌飞龙与秩序飞龙的混合体。它们能够喷吐声波、破片、混沌或祛魔，并最终进化成平衡太古龙 (Great Wyrms of Balance)。它们的吐息和攻击比混沌飞龙及秩序飞龙要弱，但也弱不了太多。
+平衡飞龙是混沌飞龙与秩序飞龙的混合体。它们能够喷吐声波、碎片、混沌或解除附魔，并最终进化成平衡太古龙 (Great Wyrms of Balance)。它们的吐息和攻击比混沌飞龙及秩序飞龙要弱，但也弱不了太多。
 
   <indent><style:table><color:G>属性                    技能</color>
 力量         <color:w> +0</color>        解除陷阱    <color:o>一般(Fair)   </color>
@@ -137,7 +137,7 @@
 经验修正     300%       红外视力    50'
 </style></indent>
 <topic:Ethereal Drake><color:o>以太飞龙 (Ethereal Drake)</color>
-以太飞龙是光与暗之龙。它们生命的起点是普通的伪龙 (Pseudo Dragons)，但会很快进化成以太飞龙，然后成为以太巨龙。随着它们的成熟，它们将获得穿墙能力，并且对光明、黑暗和困惑的抗性越来越强。它们是相对较弱的斗士，并拥有整个龙族中最弱的吐息——除了根本无法吐息的钢铁龙之外。
+以太飞龙是光与暗之龙。它们生命的起点是普通的伪龙 (Pseudo Dragons)，但会很快进化成以太飞龙，然后成为以太巨龙。随着它们的成熟，它们将获得穿墙能力，并且对光明、黑暗和混乱的抗性越来越强。它们是相对较弱的斗士，并拥有整个龙族中最弱的吐息——除了根本无法吐息的钢铁龙之外。
 
   <indent><style:table><color:G>属性                    技能</color>
 力量         <color:w> +2</color>        解除陷阱    <color:o>一般(Fair)   </color>
@@ -151,7 +151,7 @@
 经验修正     250%       红外视力    50'
 </style></indent>
 <topic:Crystal Drake><color:o>水晶飞龙 (Crystal Drake)</color>
-水晶飞龙是一种形态奇异的结晶体巨龙。它们喷吐破片，并利用其锋利的爪牙进行猛烈的战斗。在高等级时，它们会获得反射的法力。
+水晶飞龙是一种形态奇异的结晶体巨龙。它们喷吐碎片，并利用其锋利的爪牙进行猛烈的战斗。在高等级时，它们会获得反射的法力。
 
   <indent><style:table><color:G>属性                    技能</color>
 力量         <color:w> +1</color>        解除陷阱    <color:o>一般(Fair)   </color>
@@ -165,7 +165,7 @@
 经验修正     275%       红外视力    50'
 </style></indent>
 <topic:Bronze Dragon><color:o>青铜龙 (Bronze Dragon)</color>
-青铜龙是令人困惑的太古巨龙。虽然它们不如多数其他巨龙强壮，但它们最终能够通过咬噬攻击使怪物陷入困惑；而且随着他们的成熟，它们对困惑的抗性也会越来越高。
+青铜龙是令人混乱的太古巨龙。虽然它们不如多数其他巨龙强壮，但它们最终能够通过咬噬攻击使怪物陷入混乱；而且随着他们的成熟，它们对混乱的抗性也会越来越高。
 
   <indent><style:table><color:G>属性                    技能</color>
 力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>
@@ -179,7 +179,7 @@
 经验修正     250%       红外视力    50'
 </style></indent>
 <topic:Gold Dragon><color:o>金龙 (Gold Dragon)</color>
-金龙是掌控声波的太古巨龙。虽然它们不如多数其他巨龙强壮，但它们能够随心所欲地喷吐声波击晕敌人；而且随着他们的成熟，它们对声波的抗性也会越来越高。
+金龙是掌控声波的太古巨龙。虽然它们不如多数其他巨龙强壮，但它们能够随心所欲地喷吐声波震慑敌人；而且随着他们的成熟，它们对声波的抗性也会越来越高。
 
   <indent><style:table><color:G>属性                    技能</color>
 力量         <color:w> +4</color>        解除陷阱    <color:o>一般(Fair)   </color>

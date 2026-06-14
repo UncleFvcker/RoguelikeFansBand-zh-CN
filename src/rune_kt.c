@@ -1706,13 +1706,13 @@ void _blow_confusion_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "困惑");
+        var_set_string(res, "混乱");
         break;
     case SPELL_STAT_NAME:
         var_set_string(res, "_blow_confusion");
         break;
     case SPELL_DESC:
-        var_set_string(res, "这个临时符文会强化你的近战攻击，使你的敌人感到困惑。");
+        var_set_string(res, "这个临时符文会强化你的近战攻击，使你的敌人感到混乱。");
         break;
     case SPELL_CAST:
         var_set_bool(res, do_blow(HISSATSU_CONF));

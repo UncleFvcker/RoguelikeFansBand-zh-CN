@@ -706,7 +706,7 @@ static cptr _do_potion(int sval, int mode)
         }
         break;
     case SV_POTION_SIGHT:
-        if (desc) return "饮用它会使你暂时获得识破隐形和红外视力，并治愈致盲。";
+        if (desc) return "饮用它会使你暂时获得识破隐形和红外视力，并解除失明。";
         if (info) return info_duration(_potion_power(100), _potion_power(100));
         if (cast)
         {
@@ -857,7 +857,7 @@ static cptr _do_potion(int sval, int mode)
         }
         break;
     case SV_POTION_BLOOD:
-        if (desc) return "一场急需的输液！饮用它能治愈你部分生命值，并解除致盲、混乱和震慑状态。";
+        if (desc) return "一场急需的输液！饮用它能治愈你部分生命值，并解除失明、混乱和震慑状态。";
         if (info) return info_heal(0, 0, _potion_power(200));
         if (cast)
         {
@@ -869,7 +869,7 @@ static cptr _do_potion(int sval, int mode)
         break;
     case SV_POTION_HEALING: {
         int amt = 300;
-        if (desc) return "饮用它能治愈你的生命值，并解除致盲、混乱、震慑、割伤和狂暴状态。";
+        if (desc) return "饮用它能治愈你的生命值，并解除失明、混乱、震慑、割伤和狂暴状态。";
         if (info) return info_heal(0, 0, _potion_power(amt));
         if (cast)
         {
@@ -883,7 +883,7 @@ static cptr _do_potion(int sval, int mode)
         }
         break; }
     case SV_POTION_STAR_HEALING:
-        if (desc) return "饮用它能治愈你的生命值，并解除致盲、混乱、中毒、震慑、割伤、疾病和狂暴状态。";
+        if (desc) return "饮用它能治愈你的生命值，并解除失明、混乱、中毒、震慑、割伤、疾病和狂暴状态。";
         if (info) return info_heal(0, 0, _potion_power(1000));
         if (cast)
         {
@@ -900,7 +900,7 @@ static cptr _do_potion(int sval, int mode)
         }
         break;
     case SV_POTION_LIFE:
-        if (desc) return "饮用它能完全治愈你的生命值，恢复你的生命力、经验值及所有属性，并解除致盲、混乱、中毒、幻觉、震慑、割伤、减速、疾病和狂暴状态。";
+        if (desc) return "饮用它能完全治愈你的生命值，恢复你的生命力、经验值及所有属性，并解除失明、混乱、中毒、幻觉、震慑、割伤、减速、疾病和狂暴状态。";
         if (info) return info_heal(0, 0, _potion_power(5000));
         if (cast)
         {
@@ -1167,7 +1167,7 @@ static cptr _do_potion(int sval, int mode)
         }
         break;
     case SV_POTION_CURING: {
-        if (desc) return "饮用它能治愈致盲、混乱、震慑、割伤和幻觉状态，并减轻中毒程度。";
+        if (desc) return "饮用它能解除失明、混乱、震慑、割伤和幻觉状态，并减轻中毒程度。";
         if (cast)
         {
             if (set_blind(0, TRUE)) device_noticed = TRUE;
@@ -4874,7 +4874,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_CURING:
     {
         if (name) return "治愈";
-        if (desc) return "它能治愈致盲、混乱、震慑、割伤和幻觉状态，并减轻中毒程度。";
+        if (desc) return "它能解除失明、混乱、震慑、割伤和幻觉状态，并减轻中毒程度。";
         if (value) return format("%d", 1000);
         if (color) return format("%d", TERM_L_GREEN);
         if (cast)
@@ -4896,7 +4896,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
         if (amt < 100)
         {
             if (name) return "治疗伤势";
-            if (desc) return "它能治愈你的生命值并消除致盲和割伤。";
+            if (desc) return "它能治愈你的生命值并消除失明和割伤。";
         }
         else
         {
@@ -5212,7 +5212,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
         int dd = _extra(effect, 5 + effect->power/8);
         int ds = 8;
-        if (name) return "困惑之矢";
+        if (name) return "混乱之矢";
         if (desc) return "它会发射一道混乱弹。";
         if (info) return info_damage(_BOOST(dd), ds, 0);
         if (value) return format("%d", 25*_avg_damroll(dd, ds));
@@ -5263,8 +5263,8 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
         int dd = _extra(effect, 7 + effect->power/6);
         int ds = 8;
-        if (name) return "音波之矢";
-        if (desc) return "它会发射一道音波弹。";
+        if (name) return "声波之矢";
+        if (desc) return "它会发射一道声波弹。";
         if (info) return info_damage(_BOOST(dd), ds, 0);
         if (value) return format("%d", 45*_avg_damroll(dd, ds));
         if (color) return format("%d", res_color(RES_SOUND));
@@ -5281,7 +5281,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
         int dd = _extra(effect, 7 + effect->power/5);
         int ds = 8;
         if (name) return "碎片之矢";
-        if (desc) return "它会发射一道破片弹。";
+        if (desc) return "它会发射一道碎片弹。";
         if (info) return info_damage(_BOOST(dd), ds, 0);
         if (value) return format("%d", 45*_avg_damroll(dd, ds));
         if (color) return format("%d", res_color(RES_SHARDS));
@@ -5314,8 +5314,8 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
         int dd = _extra(effect, 7 + effect->power/6);
         int ds = 8;
-        if (name) return "解除魔法之矢";
-        if (desc) return "它会发射一道解除魔法弹。";
+        if (name) return "解除附魔之矢";
+        if (desc) return "它会发射一道解除附魔弹。";
         if (info) return info_damage(_BOOST(dd), ds, 0);
         if (value) return format("%d", 35*_avg_damroll(dd, ds));
         if (color) return format("%d", res_color(RES_DISEN));
@@ -5565,8 +5565,8 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
         int dd = _extra(effect, 7 + effect->power/6);
         int ds = 8;
-        if (name) return "音波打击";
-        if (desc) return "它会发射一道音波射线。";
+        if (name) return "声波打击";
+        if (desc) return "它会发射一道声波射线。";
         if (info) return info_damage(_BOOST(dd), ds, 0);
         if (value) return format("%d", 50*_avg_damroll(dd, ds));
         if (color) return format("%d", res_color(RES_SOUND));
@@ -5720,7 +5720,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_BALL_CONF:
     {
         int dam = _extra(effect, 30 + effect->power);
-        if (name) return "困惑球";
+        if (name) return "混乱球";
         if (desc) return "它会发射一颗混乱球。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 30*dam);
@@ -5770,8 +5770,8 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_BALL_SOUND:
     {
         int dam = _extra(effect, 70 + _power_curve_offset(280, effect->power, 40));
-        if (name) return "音波球";
-        if (desc) return "它会发射一颗音波球。";
+        if (name) return "声波球";
+        if (desc) return "它会发射一颗声波球。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 50*dam);
         if (color) return format("%d", res_color(RES_SOUND));
@@ -5788,7 +5788,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
         int dam = _extra(effect, 175 + _power_curve_offset(325, effect->power, 75));
         if (name) return "碎片球";
-        if (desc) return "它会发射一颗破片球。";
+        if (desc) return "它会发射一颗碎片球。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 50*dam);
         if (color) return format("%d", res_color(RES_SHARDS));
@@ -5821,8 +5821,8 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_BALL_DISEN:
     {
         int dam = _extra(effect, 90 + _power_curve_offset(250, effect->power, 40));
-        if (name) return "解除魔法球";
-        if (desc) return "它会发射一颗解除魔法球。";
+        if (name) return "解除附魔球";
+        if (desc) return "它会发射一颗解除附魔球。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 40*dam);
         if (color) return format("%d", res_color(RES_DISEN));
@@ -6021,7 +6021,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_BREATHE_CONF:
     {
         int dam = _extra(effect, 50 + effect->power*2);
-        if (name) return "喷吐困惑气体";
+        if (name) return "喷吐混乱气体";
         if (desc) return "它能喷吐混乱。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 35*dam);
@@ -6069,8 +6069,8 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_BREATHE_SOUND:
     {
         int dam = _extra(effect, 50 + effect->power*2);
-        if (name) return "喷吐音波";
-        if (desc) return "它能喷吐音波。";
+        if (name) return "喷吐声波";
+        if (desc) return "它能喷吐声波。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 55*dam);
         if (color) return format("%d", res_color(RES_SOUND));
@@ -6086,7 +6086,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
         int dam = _extra(effect, 100 + effect->power*2);
         if (name) return "喷吐碎片";
-        if (desc) return "它能喷吐破片。";
+        if (desc) return "它能喷吐碎片。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 55*dam);
         if (color) return format("%d", res_color(RES_SHARDS));
@@ -6117,8 +6117,8 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_BREATHE_DISEN:
     {
         int dam = _extra(effect, 50 + effect->power*2);
-        if (name) return "喷吐解除魔法能量";
-        if (desc) return "它能喷吐解除魔法能量。";
+        if (name) return "喷吐解除附魔能量";
+        if (desc) return "它能喷吐解除附魔能量。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 45*dam);
         if (color) return format("%d", res_color(RES_DISEN));
@@ -6208,7 +6208,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
         int dam = _extra(effect, 75 + effect->power*2);
         if (name) return "喷吐";
-        if (desc) return "它能随机喷吐混沌或解除魔法能量。";
+        if (desc) return "它能随机喷吐混沌或解除附魔能量。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 45*dam);
         if (color) return format("%d", res_color(RES_CHAOS));
@@ -6216,7 +6216,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
         {
             struct { int  type; cptr desc; } _choices[2] = {
                 { GF_CHAOS, "混沌"},
-                { GF_DISENCHANT, "解除魔法"},
+                { GF_DISENCHANT, "解除附魔"},
             };
             int which = randint0(2);
 
@@ -6231,15 +6231,15 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
         int dam = _extra(effect, 100 + effect->power*2);
         if (name) return "喷吐";
-        if (desc) return "它能随机喷吐音波或破片。";
+        if (desc) return "它能随机喷吐声波或碎片。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 55*dam);
         if (color) return format("%d", res_color(RES_SOUND));
         if (cast)
         {
             struct { int  type; cptr desc; } _choices[2] = {
-                { GF_SOUND, "音波"},
-                { GF_SHARDS, "破片"},
+                { GF_SOUND, "声波"},
+                { GF_SHARDS, "碎片"},
             };
             int which = randint0(2);
 
@@ -6254,17 +6254,17 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
         int dam = _extra(effect, 100 + effect->power*2);
         if (name) return "喷吐";
-        if (desc) return "它能随机喷吐音波、破片、混沌或解除魔法能量。";
+        if (desc) return "它能随机喷吐声波、碎片、混沌或解除附魔能量。";
         if (info) return info_damage(0, 0, _BOOST(dam));
         if (value) return format("%d", 55*dam);
         if (color) return format("%d", res_color(RES_DISEN));
         if (cast)
         {
             struct { int  type; cptr desc; } _choices[4] = {
-                { GF_SOUND, "音波"},
-                { GF_SHARDS, "破片"},
+                { GF_SOUND, "声波"},
+                { GF_SHARDS, "碎片"},
                 { GF_CHAOS, "混沌"},
-                { GF_DISENCHANT, "解除魔法"},
+                { GF_DISENCHANT, "解除附魔"},
             };
             int which = randint0(4);
 
@@ -6548,14 +6548,14 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_CONFUSING_LITE:
     {
         int pow = _extra(effect, effect->power*2);
-        if (name) return "困惑之光";
+        if (name) return "混乱之光";
         if (desc) return "它会发出耀眼的光芒，能使附近的怪物减速、震慑、混乱、恐惧甚至被冻结。";
         if (info) return format("强度 %d", pow);
         if (value) return format("%d", 60*pow);
         if (color) return format("%d", res_color(RES_CONF));
         if (cast)
         {
-            msg_print("你用令人目眩的困惑之光照射附近的怪物！");
+            msg_print("你用令人目眩的混乱之光照射附近的怪物！");
             pow = _BOOST(pow);
             slow_monsters(pow);
             stun_monsters(5 + pow/10);
@@ -6763,7 +6763,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_CONFUSE_MONSTERS:
     {
         int pow = _extra(effect, effect->power*3);
-        if (name) return "困惑怪物";
+        if (name) return "混乱怪物";
         if (desc) return "它会尝试使附近所有的可见怪物陷入混乱。";
         if (info) return format("强度 %d", pow);
         if (value) return format("%d", 15*pow);
@@ -6914,7 +6914,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     {
 //        int power = _extra(effect, MIN(98, MAX(21, effect->power * 7 - 52)));
         int power = _extra(effect, MIN(105, 25 + _power_curve_offset(75, effect->power + 75, 80)));
-        if (name) return "困惑单一怪物";
+        if (name) return "混乱单一怪物";
         if (desc) return "当你使用它时，它会使一个怪物混乱。";
         if (info) return format("强度 %d", _BOOST(power));
         if (value) return format("%d", 15*power);
@@ -7400,7 +7400,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
     case EFFECT_STUNNING_KICK:
     {
         int pow = effect->power * 2;
-        if (name) return "致晕践踏";
+        if (name) return "震慑践踏";
         if (desc) return "用一次强力践踏强行震慑一个相邻的怪物。";
         if (info) return format("强度 %d", pow);
         if (value) return format("%d", 125*MAX(0, pow - 25));

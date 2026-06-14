@@ -578,7 +578,7 @@ void possessor_cast(void)
     }
     if (p_ptr->confused)
     {
-        msg_print("你太困惑了。");
+        msg_print("你太混乱了。");
         return;
     }
     if (pelko()) return;

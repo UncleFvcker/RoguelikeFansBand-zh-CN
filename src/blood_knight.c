@@ -270,7 +270,7 @@ void _blood_pool_spell(int cmd, variant *res)
         var_set_string(res, "用你自己的鲜血制造一瓶令人毛骨悚然的治疗药水。");
         break;
     case SPELL_SPOIL_DESC:
-        var_set_string(res, "制造一瓶鲜血药水。玩家最多只能拥有30瓶此类药水，并且不能丢弃、投掷或出售它们。喝下鲜血药水可恢复100点生命值，并治愈盲目、困惑、中毒和眩晕。");
+        var_set_string(res, "制造一瓶鲜血药水。玩家最多只能拥有30瓶此类药水，并且不能丢弃、投掷或出售它们。喝下鲜血药水可恢复100点生命值，并治愈失明、混乱、中毒和震慑。");
         break;
     case SPELL_CAST:
     {

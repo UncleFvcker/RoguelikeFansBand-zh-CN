@@ -394,7 +394,7 @@ cptr do_law_spell(int spell, int mode)
 
     case 21:
         if (name) return "扭曲事实";
-        if (desc) return "提供暂时的地狱 (nether) 抗性，并使魅惑效果更强大。";
+        if (desc) return "提供暂时的虚空 (nether) 抗性，并使魅惑效果更强大。";
 
         {
             int base = spell_power(20);
@@ -590,7 +590,7 @@ cptr do_law_spell(int spell, int mode)
 
     case 31:
         if (name) return "致盲";
-        if (desc) return "尝试减速、击晕、使混乱、惊吓并冻结附近的怪物。";
+        if (desc) return "尝试减速、震慑、使混乱、惊吓并冻结附近的怪物。";
 
         {
             int power = spell_power(60 + plev);

@@ -562,7 +562,7 @@ void brain_smash_spell(int cmd, variant *res)
         var_set_string(res, "碎脑术");
         break;
     case SPELL_DESC:
-        var_set_string(res, "凝视单个敌人，造成伤害、困惑和震慑效果。");
+        var_set_string(res, "凝视单个敌人，造成伤害、混乱和震慑效果。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(12, spell_power(12), spell_power(p_ptr->to_d_spell)));

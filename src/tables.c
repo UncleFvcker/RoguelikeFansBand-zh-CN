@@ -2286,7 +2286,7 @@ option_type option_info[] =
     { &display_food_bar,            FALSE,  OPT_PAGE_TEXT, 1, 13,
     "display_food_bar",             "显示详细的饱食度状态" },
 
-    { &decimal_stats,               FALSE,  OPT_PAGE_TEXT, 2, 25,
+    { &decimal_stats,               TRUE,   OPT_PAGE_TEXT, 2, 25,
     "decimal_stats",                "以小数形式显示属性(Stats)" },
 
     { &percentage_life,             FALSE,  OPT_PAGE_TEXT, 4, 2,
@@ -2761,7 +2761,7 @@ kamae kamae_shurui[MAX_KAMAE] =
 kamae kata_shurui[MAX_KATA] =
 {
     {"居合", 25, "在受到近战攻击时，提供一次命中率加成的单次反击，代价是受到的所有伤害增加20%。你的任何近战攻击都会解除该架势。"},
-    {"风神", 30, "除非处于盲目状态，否则提供反射能力，代价是每回合攻击次数 -1.00。"},
+    {"风神", 30, "除非处于失明状态，否则提供反射能力，代价是每回合攻击次数 -1.00。"},
     {"光气", 35, "所有属性 +5，且近战命中 +50，代价是 -50 护甲等级(AC)，对基础元素变得脆弱，并且生命回复降为零。使用大多数物品栏物品都会解除该架势。"},
     {"无双", 40, "提供完全的心灵感应和终极抗性，使大多数类型的伤害减半，并在受到近战攻击时提供一整轮的反击，代价是每回合消耗 2 点法力(SP)。除了反击之外的几乎任何动作都会解除该架势。"},
 };
