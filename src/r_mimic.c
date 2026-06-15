@@ -322,7 +322,13 @@ static void _list(_choice_array_t *choices)
                             _prt_equippy(r, c, TV_CAPTURE, 0);
                             break;
                         case EQUIP_SLOT_QUIVER:
-                            _prt_equippy(r, c, TV_QUIVER, 0);
+                            _prt_equippy(r, c, TV_QUIVER, SV_QUIVER);
+                            break;
+                        case EQUIP_SLOT_PACK:
+                            _prt_equippy(r, c, TV_QUIVER, SV_BAG);
+                            break;
+                        case EQUIP_SLOT_TOOL:
+                            _prt_equippy(r, c, TV_DIGGING, SV_PICK);
                             break;
                         }
                     }

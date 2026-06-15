@@ -8,6 +8,7 @@
 extern void    quiver_init(void);
 
 extern void    quiver_display(doc_ptr doc, obj_p p, int flags);
+extern void    bag_display(doc_ptr doc, obj_p p, int flags);
 
 /* Adding and removing: Quivers allow a large number of slots
  * (QUIVER_MAX) but restrict the number arrows, etc. The capacity 
@@ -16,21 +17,31 @@ extern void    quiver_display(doc_ptr doc, obj_p p, int flags);
  * other code to ensure that the user has equipped a quiver. */
 extern bool    quiver_likes(obj_ptr obj);
 extern bool    quiver_tolerates(obj_ptr obj);
+extern bool    quiver_has_quiver(void);
+extern bool    bag_has_pack(void);
 extern int     quiver_capacity(void);
-extern int     quiver_slots(void);
+extern int     bag_capacity(void);
 extern void    bag_carry(obj_ptr obj);
 extern void    quiver_carry(obj_ptr obj); /* combines quiver, then carries pack, then overflows */
 extern void    quiver_remove(slot_t slot);
+extern void    bag_remove(slot_t slot);
 extern void    quiver_remove_all(void); /* player lost quiver due to shapeshifting ... */
+extern void    bag_remove_all(void);
 extern void    quiver_drop(obj_ptr obj);
+extern void    bag_drop(obj_ptr obj);
 
 /* Accessing, Iterating, Searching */
 extern obj_ptr quiver_obj(slot_t slot);
+extern obj_ptr bag_obj(slot_t slot);
 extern int     quiver_max(void); /* for (slot = 1; slot <= quiver_max(); slot++) ... */
+extern int     bag_max(void);
 
 extern inv_ptr quiver_filter(obj_p p);
+extern inv_ptr bag_filter(obj_p p);
 extern void    quiver_for_each(obj_f f);
+extern void    bag_for_each(obj_f f);
 extern void    quiver_for_each_that(obj_f f, obj_p p);
+extern void    bag_for_each_that(obj_f f, obj_p p);
 extern slot_t  quiver_find_first(obj_p p);
 extern slot_t  quiver_find_next(obj_p p, slot_t prev_match);
 extern slot_t  quiver_find_art(int which);
@@ -50,6 +61,10 @@ extern int     quiver_weight(obj_p p);
 extern int     quiver_count(obj_p p);
 extern int     quiver_count_slots(obj_p p);
 extern int     quiver_used_slots(void);
+extern int     bag_weight(obj_p p);
+extern int     bag_count(obj_p p);
+extern int     bag_count_slots(obj_p p);
+extern int     bag_used_slots(void);
 
 /* Savefiles */
 extern void    quiver_load(savefile_ptr file);

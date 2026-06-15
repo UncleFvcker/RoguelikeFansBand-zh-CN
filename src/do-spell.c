@@ -5328,7 +5328,8 @@ bool craft_enchant(int max, int inc)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
 
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;

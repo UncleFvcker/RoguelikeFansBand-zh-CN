@@ -6061,6 +6061,7 @@ bool lose_all_info(void)
         pack_for_each(_forget);
         equip_for_each(_forget);
         quiver_for_each(_forget);
+        bag_for_each(_forget);
 
         p_ptr->update |= PU_BONUS;
         p_ptr->notice |= PN_OPTIMIZE_PACK;
@@ -6669,6 +6670,12 @@ void gain_exp_64(s32b amount, u32b amount_frac)
       && !possessor_can_gain_exp() )
     {
         return;
+    }
+
+    if ((amount > 0 || amount_frac) && p_ptr->food >= PY_FOOD_FULL && p_ptr->food < PY_FOOD_MAX)
+    {
+        s64b_mul(&amount, &amount_frac, 0, 11);
+        s64b_div(&amount, &amount_frac, 0, 10);
     }
 
     /* Gain some experience */

@@ -5164,6 +5164,17 @@ static cptr _prof_weapon_heading(int tval)
     return "";
 }
 
+static void _prof_insert_name(doc_ptr doc, char color, cptr name)
+{
+    int w, i;
+
+    doc_printf(doc, "<color:%c>%s</color>", color, name);
+    w = _cmd4_utf8_text_width(name);
+    for (i = w; i < 19; i++)
+        doc_insert_text(doc, TERM_WHITE, " ");
+    doc_insert_text(doc, TERM_WHITE, " ");
+}
+
 static void _prof_weapon_doc(doc_ptr doc, int tval, int mode)
 {
     vec_ptr v = _prof_weapon_alloc(tval);
@@ -5180,9 +5191,11 @@ static void _prof_weapon_doc(doc_ptr doc, int tval, int mode)
         int          max_lvl = weapon_exp_level(max);
         int          exp_lvl = weapon_exp_level(exp);
         char         name[MAX_NLEN];
+        object_type  forge = {0};
 
-        strip_name(name, k_ptr->idx);
-        doc_printf(doc, "<color:%c>%-19s</color> ", equip_find_obj(k_ptr->tval, k_ptr->sval) ? 'B' : 'w', name);
+        object_prep(&forge, k_ptr->idx);
+        object_desc(name, &forge, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_NO_FLAVOR);
+        _prof_insert_name(doc, equip_find_obj(k_ptr->tval, k_ptr->sval) ? 'B' : 'w', name);
         switch (mode)
         {
             case 1:
@@ -5252,7 +5265,7 @@ static void _prof_skill_aux(doc_ptr doc, int skill, int mode)
         exp_lvl = weapon_exp_level(exp);
         break;
     }
-    doc_printf(doc, "<color:%c>%-19s</color> ", color, name);
+    _prof_insert_name(doc, color, name);
     switch (mode)
     {
         case 1:
@@ -6200,6 +6213,15 @@ static void display_monster_list(int col, int row, int per_page, s16b mon_idx[],
                                 break;
                             case EQUIP_SLOT_CAPTURE_BALL:
                                 _prt_equippy(c, r, TV_CAPTURE, 0);
+                                break;
+                            case EQUIP_SLOT_QUIVER:
+                                _prt_equippy(c, r, TV_QUIVER, SV_QUIVER);
+                                break;
+                            case EQUIP_SLOT_PACK:
+                                _prt_equippy(c, r, TV_QUIVER, SV_BAG);
+                                break;
+                            case EQUIP_SLOT_TOOL:
+                                _prt_equippy(c, r, TV_DIGGING, SV_PICK);
                                 break;
                             }
                         }

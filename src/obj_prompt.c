@@ -279,6 +279,11 @@ static void _context_make(obj_prompt_context_ptr context)
             if (!use_pack_slots) /* quiver might contain non-matching ammo */
                 inv_sort(inv);
             break;
+        case INV_BAG:
+            inv = bag_filter(filter);
+            if (!use_pack_slots)
+                inv_sort(inv);
+            break;
         case INV_SPECIAL1:
             inv = _racial_pack_filter(filter);
             break;
@@ -446,6 +451,11 @@ static int _basic_cmd(obj_prompt_context_ptr context, int cmd)
         return OP_CMD_HANDLED; }
     case KTRL('Q'): {
         int tab = _find_tab(context->tabs, INV_QUIVER);
+        if (tab >= 0)
+            context->tab = tab;
+        return OP_CMD_HANDLED; }
+    case KTRL('B'): {
+        int tab = _find_tab(context->tabs, INV_BAG);
         if (tab >= 0)
             context->tab = tab;
         return OP_CMD_HANDLED; }

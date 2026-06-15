@@ -27,6 +27,7 @@ static void _build_pets(doc_ptr doc);
 static void _build_allies(doc_ptr doc);
 static void _build_inventory(doc_ptr doc);
 static void _build_quiver(doc_ptr doc);
+static void _build_bag(doc_ptr doc);
 static void _build_home(doc_ptr doc);
 static void _build_museum(doc_ptr doc);
 static void _build_statistics(doc_ptr doc);
@@ -1642,6 +1643,27 @@ static void _build_quiver(doc_ptr doc)
     }
 }
 
+static void _build_bag(doc_ptr doc)
+{
+    if (bag_count(NULL))
+    {
+        slot_t slot;
+        char o_name[MAX_NLEN];
+
+        doc_printf(doc, "<topic:Bag>=============================== 角色包裹(<color:keypress>P</color>) ===============================\n\n");
+
+        for (slot = 1; slot <= bag_max(); slot++)
+        {
+            obj_ptr obj = bag_obj(slot);
+            if (!obj) continue;
+            object_desc(o_name, obj, OD_COLOR_CODED);
+            doc_printf(doc, "<indent><style:indent>%s</style></indent>\n", o_name);
+        }
+
+        doc_newline(doc);
+    }
+}
+
 static void _build_home(doc_ptr doc)
 {
     if (home_count(NULL))
@@ -2820,6 +2842,7 @@ void py_display_character_sheet(doc_ptr doc)
     _build_allies(doc);
     _build_inventory(doc);
     _build_quiver(doc);
+    _build_bag(doc);
     _build_home(doc);
     _build_museum(doc);
     _build_statistics(doc);

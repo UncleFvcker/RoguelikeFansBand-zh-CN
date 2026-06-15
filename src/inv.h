@@ -32,6 +32,7 @@ typedef struct inv_s inv_t, *inv_ptr; /* Hidden/Abstract */
 #define INV_EQUIP     1
 #define INV_PACK      2
 #define INV_QUIVER    3
+#define INV_BAG       12
 #define INV_SHOP      4
 #define INV_FLOOR     5
 #define INV_HOME      6

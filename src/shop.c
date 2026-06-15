@@ -500,30 +500,6 @@ static bool _create(obj_ptr obj, int k_idx, int lvl, u32b mode)
  ***********************************************************************/
 static bool _general_will_buy(obj_ptr obj)
 {
-    switch (obj->tval)
-    {
-    case TV_POTION:
-        if (obj->sval != SV_POTION_WATER) return FALSE;
-    case TV_WHISTLE:
-    case TV_FOOD:
-    case TV_LITE:
-    case TV_FLASK:
-    case TV_SPIKE:
-    case TV_SHOT:
-    case TV_ARROW:
-    case TV_QUIVER:
-    case TV_BOLT:
-    case TV_DIGGING:
-    case TV_CLOAK:
-    case TV_BOTTLE: /* 'Green', recycling Angband */
-    case TV_FIGURINE:
-    case TV_STATUE:
-    case TV_CAPTURE:
-    case TV_CARD:
-        break;
-    default:
-        return FALSE;
-    }
     return _will_buy(obj);
 }
 
@@ -597,7 +573,7 @@ static bool _general_create(obj_ptr obj, u32b mode)
  ***********************************************************************/
 static bool _armory_will_buy(obj_ptr obj)
 {
-    return obj_is_armor(obj) && _will_buy(obj);
+    return _will_buy(obj);
 }
 
 static bool _armory_stock_p(int k_idx)
@@ -630,25 +606,6 @@ static bool _armory_create(obj_ptr obj, u32b mode)
  ***********************************************************************/
 static bool _weapon_will_buy(obj_ptr obj)
 {
-    switch (obj->tval)
-    {
-    case TV_SHOT:
-    case TV_BOLT:
-    case TV_ARROW:
-    case TV_BOW:
-    case TV_QUIVER:
-    case TV_DIGGING:
-    case TV_POLEARM:
-    case TV_SWORD:
-    case TV_HISSATSU_BOOK:
-    case TV_RAGE_BOOK:
-        break;
-    case TV_HAFTED:
-        if(obj->sval == SV_WIZSTAFF) return FALSE;
-        break;
-    default:
-        return FALSE;
-    }
     return _will_buy(obj);
 }
 
@@ -746,32 +703,6 @@ static bool _weapon_create(obj_ptr obj, u32b mode)
  ***********************************************************************/
 static bool _temple_will_buy(obj_ptr obj)
 {
-    switch (obj->tval)
-    {
-    case TV_LIFE_BOOK:
-    case TV_CRUSADE_BOOK:
-    case TV_SCROLL:
-    case TV_POTION:
-    case TV_HAFTED:
-        break;
-    case TV_FIGURINE:
-    case TV_STATUE: {
-        monster_race *r_ptr = &r_info[obj->pval];
-
-        if (!(r_ptr->flags3 & RF3_EVIL))
-        {
-            if (r_ptr->flags3 & RF3_GOOD) break;
-            if (r_ptr->flags3 & RF3_ANIMAL) break;
-            if (strchr("?!", r_ptr->d_char)) break; /* mimics?? */
-        }
-        return FALSE; }
-    case TV_POLEARM:
-    case TV_SWORD:
-        if (obj_is_blessed(obj)) break;
-        return FALSE;
-    default:
-        return FALSE;
-    }
     return _will_buy(obj);
 }
 
@@ -852,14 +783,6 @@ static bool _temple_create(obj_ptr obj, u32b mode)
  ***********************************************************************/
 static bool _alchemist_will_buy(obj_ptr obj)
 {
-    switch (obj->tval)
-    {
-    case TV_POTION:
-    case TV_SCROLL:
-        break;
-    default:
-        return FALSE;
-    }
     return _will_buy(obj);
 }
 
@@ -899,36 +822,6 @@ static bool _alchemist_create(obj_ptr obj, u32b mode)
  ***********************************************************************/
 static bool _magic_will_buy(obj_ptr obj)
 {
-    switch (obj->tval)
-    {
-    case TV_SORCERY_BOOK:
-    case TV_NATURE_BOOK:
-    case TV_CHAOS_BOOK:
-    case TV_ARMAGEDDON_BOOK:
-    case TV_DEATH_BOOK:
-    case TV_TRUMP_BOOK:
-    case TV_ARCANE_BOOK:
-    case TV_CRAFT_BOOK:
-    case TV_DAEMON_BOOK:
-    case TV_MUSIC_BOOK:
-    case TV_HEX_BOOK:
-    case TV_AMULET:
-    case TV_RING:
-    case TV_STAFF:
-    case TV_WAND:
-    case TV_ROD:
-    case TV_SCROLL:
-    case TV_POTION:
-    case TV_FIGURINE:
-        break;
-    case TV_HAFTED:
-        if(obj->sval == SV_WIZSTAFF) break;
-        else return FALSE;
-    case TV_LITE:
-        return obj->name1 == ART_STONE_OF_SORCERY;
-    default:
-        return FALSE;
-    }
     return _will_buy(obj);
 }
 
@@ -1051,28 +944,6 @@ static bool _black_market_create(obj_ptr obj, u32b mode)
  ***********************************************************************/
 static bool _book_will_buy(obj_ptr obj)
 {
-    switch (obj->tval)
-    {
-    case TV_SORCERY_BOOK:
-    case TV_NATURE_BOOK:
-    case TV_CHAOS_BOOK:
-    case TV_DEATH_BOOK:
-    case TV_LIFE_BOOK:
-    case TV_TRUMP_BOOK:
-    case TV_ARCANE_BOOK:
-    case TV_CRAFT_BOOK:
-    case TV_DAEMON_BOOK:
-    case TV_CRUSADE_BOOK:
-    case TV_NECROMANCY_BOOK:
-    case TV_ARMAGEDDON_BOOK:
-    case TV_LAW_BOOK:
-    case TV_MUSIC_BOOK:
-    case TV_HEX_BOOK:
-    case TV_CUSTOM_BOOK:
-        break;
-    default:
-        return FALSE;
-    }
     return _will_buy(obj);
 }
 
@@ -1112,7 +983,6 @@ static bool _book_create(obj_ptr obj, u32b mode)
  ***********************************************************************/
 static bool _jeweler_will_buy(obj_ptr obj)
 {
-    if (obj->tval != TV_RING && obj->tval != TV_AMULET) return FALSE;
     return _will_buy(obj);
 }
 
@@ -1146,7 +1016,6 @@ static bool _jeweler_create(obj_ptr obj, u32b mode)
 
 static bool _shroomery_will_buy(obj_ptr obj)
 {
-	if (obj->tval != TV_FOOD) return FALSE;
 	return _will_buy(obj);
 }
 
@@ -1175,7 +1044,7 @@ static bool _shroomery_create(obj_ptr obj, u32b mode)
 
 static bool _dragon_will_buy(obj_ptr obj)
 {
-	return obj_is_armor(obj) && _will_buy(obj);
+	return _will_buy(obj);
 }
 
 static bool _dragon_stock_p(int k_idx)
@@ -1742,6 +1611,7 @@ static void _buy(_ui_context_ptr context)
     prompt.filter = context->shop->type->buy_p;
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_QUIVER;
+    prompt.where[2] = INV_BAG;
 
     command_cmd = 's'; /* Hack for !s inscriptions */
     obj_prompt(&prompt);
@@ -1773,7 +1643,7 @@ static void _buy(_ui_context_ptr context)
             if (vakuutettu) obj_dec_insured(prompt.obj, vakuutettu);
             prompt.obj->marked |= OM_DELAYED_MSG;
             p_ptr->notice |= PN_CARRY;
-            if (prompt.obj->loc.where == INV_QUIVER)
+            if (prompt.obj->loc.where == INV_QUIVER || prompt.obj->loc.where == INV_BAG)
                 p_ptr->notice |= PN_OPTIMIZE_QUIVER;
             else if (prompt.obj->loc.where == INV_PACK)
                 p_ptr->notice |= PN_OPTIMIZE_PACK;

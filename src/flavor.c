@@ -1182,7 +1182,9 @@ char attr_to_attr_char(byte a)
 
 char tval_to_attr_char(int tval)
 {
-    return attr_to_attr_char(tval_to_attr[tval % 128]);
+    byte attr = tval_to_attr[tval % 128];
+    if (!attr) attr = TERM_WHITE;
+    return attr_to_attr_char(attr);
 }
 
 /*
@@ -1588,7 +1590,18 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
 
         case TV_CUSTOM_BOOK:
         {
-            basenm = kindname;
+            if (mode & OD_INTERNAL_NAME)
+                basenm = kindname;
+            else
+            {
+                switch (o_ptr->sval)
+                {
+                case SV_CUSTOM_CODEX: basenm = "法术抄本"; break;
+                case SV_CUSTOM_SPELLBOOK: basenm = "法术书"; break;
+                case SV_CUSTOM_GRIMOIRE: basenm = "魔导书"; break;
+                default: basenm = kindname; break;
+                }
+            }
             break;
         }
 
@@ -2224,7 +2237,7 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
             if (o_ptr->sval == SV_QUIVER)
                 t = object_desc_str(t, format(" [%d of %d]", quiver_count(NULL), o_ptr->xtra4));
             else
-                t = object_desc_str(t, format(" [%d of %d]", quiver_used_slots(), o_ptr->xtra4));
+                t = object_desc_str(t, format(" [%d of %d]", bag_used_slots(), o_ptr->xtra4));
         }
         else
             t = object_desc_str(t, format(" [%d]", o_ptr->xtra4));

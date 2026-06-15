@@ -2177,6 +2177,12 @@ static bool is_autopick_aux(object_type *o_ptr, autopick_type *entry, cptr o_nam
         if (obj && obj_can_combine(obj, o_ptr, 0))
             return TRUE;
     }
+    for (j = 1; j <= bag_max(); j++)
+    {
+        obj_ptr obj = bag_obj(j);
+        if (obj && obj_can_combine(obj, o_ptr, 0))
+            return TRUE;
+    }
 
     /* Not collecting */
     return FALSE;
@@ -4063,7 +4069,8 @@ static bool entry_from_choosed_object(autopick_type *entry)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
 
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
@@ -4086,7 +4093,8 @@ static byte get_object_for_search(object_type **o_handle, cptr *search_strp)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
 
     obj_prompt(&prompt);
     if (!prompt.obj) return 0;

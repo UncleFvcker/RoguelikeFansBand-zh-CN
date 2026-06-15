@@ -628,6 +628,7 @@ static void _drop(_ui_context_ptr context)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
+    prompt.where[3] = INV_BAG;
     obj_prompt_add_special_packs(&prompt);
 
     obj_prompt(&prompt);
@@ -641,9 +642,14 @@ static void _drop(_ui_context_ptr context)
 
     if (prompt.obj->loc.where == INV_EQUIP)
     {
-        if (prompt.obj->tval == TV_QUIVER && quiver_count(NULL))
+        if (prompt.obj->tval == TV_QUIVER && prompt.obj->sval == SV_QUIVER && quiver_count(NULL))
         {
             msg_print("你的箭袋里还有弹药。请先取出箭袋里的所有弹药。");
+            return;
+        }
+        if (prompt.obj->tval == TV_QUIVER && prompt.obj->sval == SV_BAG && bag_count(NULL))
+        {
+            msg_print("你的包裹里还有东西。请先取出包裹里的所有物品。");
             return;
         }
         if (!equip_can_takeoff(prompt.obj)) return;

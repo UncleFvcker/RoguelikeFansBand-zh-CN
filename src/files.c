@@ -3342,6 +3342,7 @@ static void show_info(void)
     pack_for_each(obj_identify);
     equip_for_each(obj_identify);
     quiver_for_each(obj_identify);
+    bag_for_each(obj_identify);
     home_for_each(obj_identify);
 
     pack_optimize();

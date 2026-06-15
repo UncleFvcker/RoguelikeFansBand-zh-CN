@@ -208,10 +208,7 @@ void obj_release(obj_ptr obj, int options)
         break;
     case INV_QUIVER:
         if (!quiet && !delayed)
-            if(equip_find_obj(TV_QUIVER, SV_QUIVER))
-                msg_format("你的箭袋里有%s。", name);
-            else
-                msg_format("你的包里有%s。", name);
+            msg_format("你的箭袋里有%s。", name);
         if (obj->number <= 0)
             quiver_remove(obj->loc.slot);
         else if (delayed)
@@ -220,6 +217,18 @@ void obj_release(obj_ptr obj, int options)
             p_ptr->notice |= PN_CARRY;
         }
         p_ptr->window |= PW_EQUIP; /* a Quiver [32 of 110] */
+        break;
+    case INV_BAG:
+        if (!quiet && !delayed)
+            msg_format("你的包裹里有%s。", name);
+        if (obj->number <= 0)
+            bag_remove(obj->loc.slot);
+        else if (delayed)
+        {
+            obj->marked |= OM_DELAYED_MSG;
+            p_ptr->notice |= PN_CARRY;
+        }
+        p_ptr->window |= PW_EQUIP;
         break;
     case INV_TMP_ALLOC:
         obj_free(obj);
@@ -276,6 +285,7 @@ void gear_notice_id(obj_ptr obj)
         p_ptr->window |= PW_INVEN;
         break;
     case INV_QUIVER:
+    case INV_BAG:
         p_ptr->notice |= PN_OPTIMIZE_QUIVER;
         p_ptr->window |= PW_EQUIP; /* a Quiver [32 of 110] */
         break;
@@ -296,6 +306,7 @@ void gear_notice_enchant(obj_ptr obj)
         p_ptr->window |= PW_INVEN;
         break;
     case INV_QUIVER:
+    case INV_BAG:
         p_ptr->notice |= PN_OPTIMIZE_QUIVER;
         p_ptr->window |= PW_EQUIP; /* a Quiver [32 of 110] */
         break;
@@ -909,11 +920,14 @@ void obj_delayed_describe(obj_ptr obj)
             string_append_s(msg, "你拥有");
         string_printf(msg, " %s", name);
         if (obj->loc.where == INV_QUIVER)
-            string_append_s(msg, " in your quiver");
+            string_append_s(msg, "，在箭袋中");
+        else if (obj->loc.where == INV_BAG)
+            string_append_s(msg, "，在包裹中");
 
         switch (obj->loc.where)
         {
         case INV_QUIVER:
+        case INV_BAG:
         case INV_PACK:
             show_slot = use_pack_slots;
             break;
@@ -973,7 +987,8 @@ void obj_inspect_ui(void)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
     prompt.cmd_handler = _inspector;
     allow_special3_hack = TRUE;
     obj_prompt_add_special_packs(&prompt);
@@ -1002,6 +1017,7 @@ void gear_ui(int which)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
+    prompt.where[3] = INV_BAG;
     prompt.flags = INV_SHOW_EQUIP_ENCUMBRANCE;
     prompt.top_loc = which;
 
@@ -1013,18 +1029,18 @@ void gear_ui(int which)
 
 void bag_drop_ui(int which)
 {
-    if(equip_find_obj(TV_QUIVER, SV_ANY) == 0)
+    obj_prompt_t prompt = {0};
+
+    if(!quiver_has_quiver() && !bag_has_pack())
     {
         msg_print("你没有箭袋或包来丢弃物品。");
         return;
     }
 
-    obj_prompt_t prompt = {0};
-
     if (p_ptr->special_defense & KATA_MUSOU)
         set_action(ACTION_NONE);
 
-    if(equip_find_obj(TV_QUIVER, SV_QUIVER))
+    if (quiver_has_quiver() && !bag_has_pack())
         prompt.filter = obj_is_ammo;
 
     prompt.prompt = "要把哪件物品放进包里？";
@@ -1037,10 +1053,15 @@ void bag_drop_ui(int which)
 
     energy_use = 50;
 
-    if(equip_find_obj(TV_QUIVER, SV_QUIVER))
+    if(obj_is_ammo(prompt.obj) && quiver_has_quiver())
         quiver_carry(prompt.obj);
-    else
+    else if (!obj_is_ammo(prompt.obj) && bag_has_pack())
         bag_carry(prompt.obj);
+    else
+    {
+        msg_print(obj_is_ammo(prompt.obj) ? "你没有可用的箭袋。" : "你没有可用的包裹。");
+        return;
+    }
     if (prompt.obj->number <= 0)
     {
         prompt.obj->marked |= OM_DELAYED_MSG;
@@ -1093,7 +1114,8 @@ void obj_inscribe_ui(void)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
     prompt.cmd_handler = _inscriber;
 
     obj_prompt(&prompt);
@@ -1125,7 +1147,8 @@ void obj_uninscribe_ui(void)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
     prompt.cmd_handler = _uninscriber;
 
     obj_prompt(&prompt);
@@ -1143,6 +1166,8 @@ static void _drop(obj_ptr obj)
     p_ptr->update |= PU_BONUS; /* Weight changed */
     if (obj->loc.where == INV_PACK)
         p_ptr->window |= PW_INVEN;
+    else if (obj->loc.where == INV_BAG)
+        p_ptr->window |= PW_EQUIP;
 }
 
 void obj_drop(obj_ptr obj, int amt)
@@ -1167,7 +1192,7 @@ void obj_drop(obj_ptr obj, int amt)
         p_ptr->notice |= PN_CARRY;
         if (obj->loc.where == INV_PACK)
             p_ptr->notice |= PN_OPTIMIZE_PACK;
-        else if (obj->loc.where == INV_QUIVER)
+        else if (obj->loc.where == INV_QUIVER || obj->loc.where == INV_BAG)
             p_ptr->notice |= PN_OPTIMIZE_QUIVER;
 
         copy.marked &= ~OM_WORN;
@@ -1249,6 +1274,7 @@ void obj_destroy_ui(void)
     if (p_ptr->pclass == CLASS_RUNE_KNIGHT)
         prompt.where[pos++] = INV_EQUIP;
     prompt.where[pos++] = INV_QUIVER;
+    prompt.where[pos++] = INV_BAG;
     prompt.where[pos++] = INV_FLOOR;
 
     obj_prompt(&prompt);

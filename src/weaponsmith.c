@@ -2326,6 +2326,7 @@ static bool _smithing(void)
     prompt.where[1] = INV_FLOOR;
     prompt.where[2] = INV_EQUIP;
     prompt.where[3] = INV_QUIVER;
+    prompt.where[4] = INV_BAG;
 
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;

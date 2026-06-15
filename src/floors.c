@@ -972,6 +972,7 @@ void leave_floor(void)
     equip_for_each(_fix_art_hack);
     pack_for_each(_fix_art_hack);
     quiver_for_each(_fix_art_hack);
+    bag_for_each(_fix_art_hack);
 
     /* Extract current floor info or NULL */
     sf_ptr = get_sf_ptr(p_ptr->floor_id);

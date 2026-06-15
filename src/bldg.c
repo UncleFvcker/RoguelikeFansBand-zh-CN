@@ -3302,6 +3302,7 @@ static bool enchant_item(obj_p filter, int cost, int to_hit, int to_dam, int to_
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
+    prompt.where[3] = INV_BAG;
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
 
@@ -3890,6 +3891,7 @@ static void _sell_photo(void)
     prompt.filter = _object_is_photograph;
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_QUIVER;
+    prompt.where[2] = INV_BAG;
 
     obj_prompt(&prompt);
     if (!prompt.obj) return;

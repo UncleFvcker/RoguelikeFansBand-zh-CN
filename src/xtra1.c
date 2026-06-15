@@ -3808,6 +3808,7 @@ int py_total_weight(void)
     weight += equip_weight(NULL);
     weight += pack_weight(NULL);
     weight += quiver_weight(NULL);
+    weight += bag_weight(NULL);
 
     if (race_ptr->calc_extra_weight)
         weight += race_ptr->calc_extra_weight(NULL);
@@ -3855,6 +3856,56 @@ static bool _is_martial_arts(void)
             return TRUE;
     }
     return FALSE;
+}
+
+static int _obj_digging_bonus(obj_ptr obj)
+{
+    u32b flgs[OF_ARRAY_SIZE];
+    int bonus;
+
+    if (!obj) return 0;
+
+    bonus = obj->weight / 10;
+    obj_flags_effective(obj, flgs);
+    if (have_flag(flgs, OF_TUNNEL))
+        bonus += obj->pval * 20;
+
+    return bonus;
+}
+
+static int _equipment_digging_bonus(void)
+{
+    equip_template_ptr body = equip_current_template();
+    int weapon_bonus = 0;
+    int tool_bonus = 0;
+    slot_t slot;
+
+    if (!body) return 0;
+
+    for (slot = 1; slot <= equip_max(); slot++)
+    {
+        obj_ptr obj = equip_obj(slot);
+        int type;
+        int bonus;
+
+        if (!obj) continue;
+
+        type = body->slots[slot].type;
+        if (type != EQUIP_SLOT_WEAPON_SHIELD
+         && type != EQUIP_SLOT_WEAPON
+         && type != EQUIP_SLOT_TOOL)
+        {
+            continue;
+        }
+
+        bonus = _obj_digging_bonus(obj);
+        if (type == EQUIP_SLOT_TOOL)
+            tool_bonus = MAX(tool_bonus, bonus);
+        else
+            weapon_bonus = MAX(weapon_bonus, bonus);
+    }
+
+    return MAX(weapon_bonus, tool_bonus);
 }
 
 /*
@@ -5090,7 +5141,6 @@ void calc_bonuses(void)
                 info_ptr->xtra_blow = 0;
             }
 
-            p_ptr->skill_dig += o_ptr->weight / 10;
         }
 
         /* Two Handed wielding bonus */
@@ -5360,6 +5410,7 @@ void calc_bonuses(void)
 
     /* Affect Skill -- digging (STR) */
     p_ptr->skill_dig += adj_str_dig[p_ptr->stat_ind[A_STR]];
+    p_ptr->skill_dig += _equipment_digging_bonus();
 
     if ( p_ptr->fairy_stealth
       && p_ptr->personality != PERS_SEXY

@@ -316,7 +316,8 @@ void crafting_spell(int cmd, variant *res)
         prompt.where[0] = INV_PACK;
         prompt.where[1] = INV_EQUIP;
         prompt.where[2] = INV_QUIVER;
-        prompt.where[3] = INV_FLOOR;
+        prompt.where[3] = INV_BAG;
+        prompt.where[4] = INV_FLOOR;
 
         obj_prompt(&prompt);
         if (!prompt.obj || !prompt.obj->number) return;
@@ -958,6 +959,7 @@ void detect_curses_spell(int cmd, variant *res)
         pack_for_each(_detect_curses);
         equip_for_each(_detect_curses);
         quiver_for_each(_detect_curses);
+        bag_for_each(_detect_curses);
         var_set_bool(res, TRUE);
         break;
     }
