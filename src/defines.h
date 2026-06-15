@@ -21,7 +21,7 @@
 #define VER_PATCH "7"
 #define VER_PATCH_ID 7
 #define VER_EXTRA 0
-#define VERSION_STRING "1.1.0.0"
+#define VERSION_STRING "1.1.0.1"
 #define VERSION_IS_DEVELOPMENT (FALSE)
 
 /*
