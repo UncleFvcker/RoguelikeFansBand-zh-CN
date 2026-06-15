@@ -21,7 +21,7 @@
  * by code that creates fixed size arrays at compile time, such as 
  * _flagzilla_t in py_display.c or b_info's equip_template_t. *YOU* should
  * not be using this, however. */
-#define EQUIP_MAX 15
+#define EQUIP_MAX 17
 
 enum {
     EQUIP_SLOT_NONE,
@@ -39,6 +39,8 @@ enum {
     EQUIP_SLOT_WEAPON,
     EQUIP_SLOT_CAPTURE_BALL,
     EQUIP_SLOT_QUIVER,
+    EQUIP_SLOT_PACK,
+    EQUIP_SLOT_TOOL,
     EQUIP_SLOT_MAX
 };
 

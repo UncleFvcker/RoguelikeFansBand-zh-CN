@@ -248,6 +248,7 @@ static void _do_identify_aux(obj_ptr obj)
         break;*/
     case INV_PACK:
     case INV_QUIVER:
+    case INV_BAG:
         obj->marked |= OM_DELAYED_MSG;
         p_ptr->notice |= PN_CARRY;
         break;
@@ -269,6 +270,7 @@ void mass_identify(bool use_charges) /* shared with Sorcery spell */
     pack_for_each_that(_do_identify_aux, obj_is_unknown);
     equip_for_each_that(_do_identify_aux, obj_is_unknown);
     quiver_for_each_that(_do_identify_aux, obj_is_unknown);
+    bag_for_each_that(_do_identify_aux, obj_is_unknown);
     inv_for_each_that(floor, _do_identify_aux, obj_is_unknown);
     _multi_charge_lock = FALSE;
 
@@ -294,7 +296,8 @@ static bool _do_identify(void)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
     prompt.cmd_handler = _cmd_handler;
     obj_prompt_add_special_packs(&prompt);
 

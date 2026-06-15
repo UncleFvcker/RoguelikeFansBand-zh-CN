@@ -38,6 +38,7 @@ void do_cmd_drop(void)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
+    prompt.where[3] = INV_BAG;
     obj_prompt_add_special_packs(&prompt);
 
     obj_prompt(&prompt);
@@ -55,6 +56,9 @@ void do_cmd_drop(void)
         break;
     case INV_QUIVER:
         quiver_drop(prompt.obj);
+        break;
+    case INV_BAG:
+        bag_drop(prompt.obj);
         break;
     case INV_SPECIAL1:
         special1_drop(prompt.obj);

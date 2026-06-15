@@ -31,7 +31,13 @@ static bool _object_is_bow(obj_ptr obj)
     { return obj->tval == TV_BOW; }
 
 static bool _object_is_quiver(obj_ptr obj)
-    { return obj->tval == TV_QUIVER; }
+    { return obj->tval == TV_QUIVER && obj->sval == SV_QUIVER; }
+
+static bool _object_is_pack(obj_ptr obj)
+    { return obj->tval == TV_QUIVER && obj->sval == SV_BAG; }
+
+static bool _object_is_tool(obj_ptr obj)
+    { return obj->tval == TV_DIGGING; }
 
 static bool _object_is_cloak(obj_ptr obj)
     { return obj->tval == TV_CLOAK; }
@@ -113,6 +119,8 @@ static obj_p _accept[EQUIP_SLOT_MAX] = {
     _object_is_weapon,
     _object_is_capture_ball,
     _object_is_quiver,
+    _object_is_pack,
+    _object_is_tool,
 };
 
 static int _slot_count(obj_ptr obj)
@@ -155,6 +163,8 @@ static cptr _slot_tag_display_name(cptr tag)
     if (streq(tag, "Left Hand")) return "左手";
     if (streq(tag, "Shooting")) return "射击";
     if (streq(tag, "Quiver")) return "箭袋";
+    if (streq(tag, "Pack")) return "包裹";
+    if (streq(tag, "Tool")) return "工具";
     if (streq(tag, "Back")) return "背部";
     if (streq(tag, "Right Ring")) return "右戒指";
     if (streq(tag, "Left Ring")) return "左戒指";
@@ -813,8 +823,8 @@ void equip_wield_ui(void)
     if (obj_is_ammo(obj))
     {
         int amt = obj->number;
-        assert(equip_find_obj(TV_QUIVER, SV_ANY));
-        if (equip_find_obj(TV_QUIVER, SV_QUIVER) && quiver_capacity() <= quiver_count(NULL))
+        assert(equip_find_obj(TV_QUIVER, SV_QUIVER));
+        if (quiver_capacity() <= quiver_count(NULL))
         {
             msg_print("你的箭袋满了。");
             return;
@@ -882,15 +892,27 @@ static bool _wield_verify(obj_ptr obj)
     if (!psion_can_wield(obj)) return FALSE;
     /* We'll confirm cursed gear later (_wield_confirm)
      * since the user might cancle the slot prompt */
-    if (obj->tval == TV_QUIVER && quiver_count(NULL) > obj->xtra4)
+    if (obj->tval == TV_QUIVER && obj->sval == SV_QUIVER && quiver_count(NULL) > obj->xtra4)
     {
         msg_format("失败！你当前的箭袋装有 %d 发弹药，但这个箭袋的容量只有 %d 发弹药。", quiver_count(NULL), obj->xtra4);
         return FALSE;
     }
 
-    if (quiver_count(NULL) >0 && obj->tval == TV_QUIVER && equip_find_obj(TV_QUIVER, SV_ANY) > 0 && equip_find_obj(TV_QUIVER, obj->sval) == 0)
+    if (obj->tval == TV_QUIVER && obj->sval == SV_BAG && bag_used_slots() > obj->xtra4)
     {
-        msg_format("失败！在装备新的包裹之前，请先清空你当前的包裹。");
+        msg_format("失败！你当前的包裹装有 %d 件物品，但这个包裹只有 %d 个格子。", bag_used_slots(), obj->xtra4);
+        return FALSE;
+    }
+
+    if (obj->tval == TV_QUIVER && obj->sval == SV_QUIVER && quiver_count(NULL) > 0 && equip_find_obj(TV_QUIVER, SV_QUIVER) > 0)
+    {
+        msg_print("失败！在装备新的箭袋之前，请先清空你当前的箭袋。");
+        return FALSE;
+    }
+
+    if (obj->tval == TV_QUIVER && obj->sval == SV_BAG && bag_count(NULL) > 0 && equip_find_obj(TV_QUIVER, SV_BAG) > 0)
+    {
+        msg_print("失败！在装备新的包裹之前，请先清空你当前的包裹。");
         return FALSE;
     }
 
@@ -912,6 +934,18 @@ static bool _wield_confirm(obj_ptr obj, slot_t slot)
     if (old_obj && have_flag(old_obj->flags, OF_NO_REMOVE)) /* Hack!!!! */
     {
         msg_print("你不能用那东西替换你自己！");
+        return FALSE;
+    }
+
+    if (old_obj && old_obj->tval == TV_QUIVER && old_obj->sval == SV_QUIVER && quiver_count(NULL))
+    {
+        msg_print("你的箭袋里还有弹药。请先移除箭袋里的所有弹药。");
+        return FALSE;
+    }
+
+    if (old_obj && old_obj->tval == TV_QUIVER && old_obj->sval == SV_BAG && bag_count(NULL))
+    {
+        msg_print("你的包裹里还有东西。请先移除包裹里的所有物品。");
         return FALSE;
     }
 
@@ -1090,7 +1124,12 @@ void equip_takeoff_ui(void)
     obj_ptr obj = _unwield_get_obj();
 
     if (!obj) return;
-    if (obj->tval == TV_QUIVER && quiver_count(NULL) && obj->loc.where == INV_EQUIP)
+    if (obj->tval == TV_QUIVER && obj->sval == SV_QUIVER && quiver_count(NULL) && obj->loc.where == INV_EQUIP)
+    {
+        msg_print("你的箭袋里还有弹药。请先移除箭袋里的所有弹药。");
+        return;
+    }
+    if (obj->tval == TV_QUIVER && obj->sval == SV_BAG && bag_count(NULL) && obj->loc.where == INV_EQUIP)
     {
         msg_print("你的包裹里还有东西。请先移除包裹里的所有物品。");
         return;
@@ -1127,9 +1166,14 @@ void equip_drop(obj_ptr obj)
     assert(obj->loc.where == INV_EQUIP);
     assert(obj->number == 1);
 
-    if (obj->tval == TV_QUIVER && quiver_count(NULL))
+    if (obj->tval == TV_QUIVER && obj->sval == SV_QUIVER && quiver_count(NULL))
     {
         msg_print("你的箭袋里还有弹药。请先移除箭袋里的所有弹药。");
+        return;
+    }
+    if (obj->tval == TV_QUIVER && obj->sval == SV_BAG && bag_count(NULL))
+    {
+        msg_print("你的包裹里还有东西。请先移除包裹里的所有物品。");
         return;
     }
     if (!_unwield_verify(obj)) return;
@@ -1146,7 +1190,8 @@ static obj_ptr _unwield_get_obj(void)
     prompt.error = "你没有穿戴任何可卸下的物品。";
     prompt.where[0] = INV_EQUIP;
     prompt.where[1] = INV_QUIVER;
-    if (get_race()->bonus_pack) prompt.where[2] = INV_SPECIAL1;
+    prompt.where[2] = INV_BAG;
+    if (get_race()->bonus_pack) prompt.where[3] = INV_SPECIAL1;
 
     if (black_curses) od_xtra_context = OD_BLACK_CURSES;
     obj_prompt(&prompt);
@@ -1224,10 +1269,11 @@ void _unwield_before(obj_ptr obj)
 void _unwield(obj_ptr obj, bool drop)
 {
     obj->marked &= ~OM_SLIPPING;
-    if (obj->loc.where == INV_QUIVER)
+    if (obj->loc.where == INV_QUIVER || obj->loc.where == INV_BAG)
     {
         int amt = obj->number;
-        assert(equip_find_obj(TV_QUIVER, SV_ANY));
+        assert((obj->loc.where == INV_QUIVER && obj_is_ammo(obj) && equip_find_obj(TV_QUIVER, SV_QUIVER))
+            || (obj->loc.where == INV_BAG && !obj_is_ammo(obj) && equip_find_obj(TV_QUIVER, SV_BAG)));
         assert(!drop); /* quiver_drop ... not us. cf do_cmd_drop */
         if (obj->number == 1 || msg_input_num("数量", &amt, 1, obj->number))
         {
@@ -1484,6 +1530,9 @@ void object_calc_bonuses(obj_ptr obj, slot_t slot)
         }
     }
 
+    if (_template->slots[slot].type == EQUIP_SLOT_TOOL)
+        return;
+
     obj_flags_effective(obj, flgs);
     obj_flags_known(obj, known_flgs);
 
@@ -1550,7 +1599,12 @@ void object_calc_bonuses(obj_ptr obj, slot_t slot)
         p_ptr->skills.fos += (obj->pval * 5);
     }
     if (have_flag(flgs, OF_INFRA)) p_ptr->see_infra += obj->pval;
-    if (have_flag(flgs, OF_TUNNEL)) p_ptr->skill_dig += (obj->pval * 20);
+    if (have_flag(flgs, OF_TUNNEL)
+     && _template->slots[slot].type != EQUIP_SLOT_WEAPON_SHIELD
+     && _template->slots[slot].type != EQUIP_SLOT_WEAPON)
+    {
+        p_ptr->skill_dig += (obj->pval * 20);
+    }
     if (have_flag(flgs, OF_SPEED)) p_ptr->pspeed += obj->pval;
     if (have_flag(flgs, OF_DEC_SPEED)) p_ptr->pspeed -= obj->pval;
 
@@ -2214,8 +2268,10 @@ void equip_on_change_race(void)
         inv_free(temp);
         temp = NULL;
 
-        if (!equip_find_obj(TV_QUIVER, SV_ANY))
+        if (!quiver_has_quiver())
             quiver_remove_all();
+        if (!bag_has_pack())
+            bag_remove_all();
 
         pack_overflow();
         for (slot = 1; slot <= pack_max(); slot++)
@@ -2228,7 +2284,7 @@ void equip_on_change_race(void)
 
             if (obj_is_ammo(obj))
             {
-                if (equip_find_obj(TV_QUIVER, SV_ANY))
+                if (quiver_has_quiver())
                 {
                     obj->marked &= ~OM_WORN;
                     quiver_carry(obj);

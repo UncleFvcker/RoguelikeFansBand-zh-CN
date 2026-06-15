@@ -5284,11 +5284,11 @@ bool get_aim_dir_aux(int *dp, int target_mode)
         /* Choose a prompt */
         else if (!target_okay_aux(target_mode))
         {
-            p = "Direction ('*' to choose a target, Escape to cancel)? ";
+            p = "方向（'*'=选择目标，Esc=取消）？ ";
         }
         else
         {
-            p = "Direction ('5' for target, '*' to re-target, Escape to cancel)? ";
+            p = "方向（'5'=当前目标，'*'=重新瞄准，Esc=取消）？ ";
         }
 
         /* Get a command (or Cancel) */
@@ -5905,12 +5905,12 @@ bool get_hack_dir(int *dp)
         /* Choose a prompt */
         if (!target_okay())
         {
-            p = "Direction ('*' to choose a target, Escape to cancel)? ";
+            p = "方向（'*'=选择目标，Esc=取消）？ ";
 
         }
         else
         {
-            p = "Direction ('5' for target, '*' to re-target, Escape to cancel)? ";
+            p = "方向（'5'=当前目标，'*'=重新瞄准，Esc=取消）？ ";
 
         }
 

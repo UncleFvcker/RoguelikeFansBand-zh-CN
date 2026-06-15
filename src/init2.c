@@ -581,8 +581,12 @@ static errr init_e_info(void)
              (void*)&e_info, &e_name, &e_text, NULL);
 }
 
+extern errr finalize_b_info(header *head);
+
 static errr init_b_info(void)
 {
+    errr err;
+
     /* Init the header */
     init_header(&b_head, max_b_idx, sizeof(equip_template_t));
 
@@ -593,8 +597,11 @@ static errr init_b_info(void)
 
 #endif /* ALLOW_TEMPLATES */
 
-    return init_info("b_info", &b_head,
+    err = init_info("b_info", &b_head,
              (void*)&b_info, &b_name, NULL, &b_tag);
+    if (err) return err;
+
+    return finalize_b_info(&b_head);
 }
 
 /*

@@ -3559,7 +3559,47 @@ static cptr b_info_slots[] =
     "WEAPON",
     "CAPTURE_BALL",
     "QUIVER",
+    "PACK",
+    "TOOL",
 };
+
+static errr _b_info_add_global_slot(header *head, equip_template_ptr b_ptr, int type, cptr tag)
+{
+    int i;
+
+    for (i = 1; i <= b_ptr->max; i++)
+    {
+        if (b_ptr->slots[i].type == type) return 0;
+    }
+
+    if (b_ptr->max >= EQUIP_MAX) return PARSE_ERROR_OUT_OF_BOUNDS;
+
+    i = ++b_ptr->max;
+    b_ptr->slots[i].type = type;
+    if (!add_tag(&b_ptr->slots[i].tag, head, tag)) return 7;
+
+    return 0;
+}
+
+errr finalize_b_info(header *head)
+{
+    int i;
+
+    for (i = 0; i < head->info_num; i++)
+    {
+        errr err;
+        equip_template_ptr b_ptr = &b_info[i];
+
+        if (!b_ptr->name) continue;
+
+        err = _b_info_add_global_slot(head, b_ptr, EQUIP_SLOT_PACK, "Pack");
+        if (err) return err;
+        err = _b_info_add_global_slot(head, b_ptr, EQUIP_SLOT_TOOL, "Tool");
+        if (err) return err;
+    }
+
+    return 0;
+}
 
 errr parse_b_info(char *buf, header *head)
 {

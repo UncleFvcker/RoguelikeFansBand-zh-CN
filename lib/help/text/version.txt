@@ -280,7 +280,7 @@ auto-destroyer)；这已被修复
 * 修复了外围 makefiles 中的错别字，这些错别字在通过 "make install" 
 安装游戏时会导致问题（感谢 isnok 和 Kreutzer 报告）
 
-* 在开启 ironman_downward（只能下楼梯）时，可能会被时空传送 
+* 在开启 ironman_downward（只能下楼梯）时，可能会被时空扭曲 
 (nexus-warped) 到封闭的地下城中；这已被修复
 
 * 投射物在放入箭袋时没有失去“已装备 (Worn)”标签；这已被修复

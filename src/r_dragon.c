@@ -887,7 +887,8 @@ static obj_ptr _get_reforge_dest(int max_power)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
     prompt.flags = INV_SHOW_VALUE;
 
     obj_prompt(&prompt);

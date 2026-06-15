@@ -133,7 +133,7 @@ static void _sense_obj(obj_ptr obj)
     else
     {
         msg_format("你感觉你%s里的 %s (%c) 是%s……",
-               obj->loc.where == INV_QUIVER ? "箭袋" : "背包",
+               obj->loc.where == INV_QUIVER ? "箭袋" : obj->loc.where == INV_BAG ? "包裹" : "背包",
                name, slot_label(obj->loc.slot),
                game_inscriptions[feel]);
     }
@@ -219,6 +219,7 @@ static void sense_inventory1(void)
     pack_for_each_that(_sense_obj, obj_can_sense1);
     equip_for_each_that(_sense_obj, obj_can_sense1);
     quiver_for_each_that(_sense_obj, obj_can_sense1);
+    bag_for_each_that(_sense_obj, obj_can_sense1);
 }
 
 
@@ -1077,7 +1078,8 @@ bool psychometry(void)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
 
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;

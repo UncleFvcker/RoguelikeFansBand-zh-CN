@@ -1,2 +1,2 @@
 ### Version marker for automatic help file updates ###
-V:1.0.6.0
+V:1.0.7.0

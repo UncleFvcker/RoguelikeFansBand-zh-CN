@@ -1368,7 +1368,8 @@ bool brand_weapon(int brand_type)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
 
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
@@ -1920,6 +1921,7 @@ void identify_pack(void)
     pack_for_each(_identify_obj);
     equip_for_each(_identify_obj);
     quiver_for_each(_identify_obj);
+    bag_for_each(_identify_obj);
 }
 
 
@@ -2283,7 +2285,8 @@ bool enchant_spell(int num_hit, int num_dam, int num_ac)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
     obj_prompt_add_special_packs(&prompt);
 
     obj_prompt(&prompt);
@@ -2351,7 +2354,8 @@ bool artifact_scroll(void)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
 
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
@@ -2495,7 +2499,8 @@ bool ident_spell(object_p p)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
     obj_prompt_add_special_packs(&prompt); 
 
     obj_prompt(&prompt);
@@ -2530,7 +2535,8 @@ bool mundane_spell(bool only_equip)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
     obj_prompt_add_special_packs(&prompt); 
 
     obj_prompt(&prompt);
@@ -2631,7 +2637,8 @@ bool identify_fully(object_p p)
     prompt.where[0] = INV_PACK;
     prompt.where[1] = INV_EQUIP;
     prompt.where[2] = INV_QUIVER;
-    prompt.where[3] = INV_FLOOR;
+    prompt.where[3] = INV_BAG;
+    prompt.where[4] = INV_FLOOR;
     obj_prompt_add_special_packs(&prompt); 
 
     obj_prompt(&prompt);
@@ -3963,11 +3970,11 @@ void inven_damage(int who, inven_func typ, int p1, int which)
     }
 
     /* Quiver */
-    slot = equip_find_obj(TV_QUIVER, SV_ANY);
+    slot = equip_find_obj(TV_QUIVER, SV_QUIVER);
     if (slot)
     {
         obj_ptr quiver = equip_obj(slot);
-        if (quiver->name2 != EGO_QUIVER_PROTECTION)
+        if (quiver->sval == SV_QUIVER && quiver->name2 != EGO_QUIVER_PROTECTION)
         {
             for (slot = 1; slot <= quiver_max(); slot++)
             {
@@ -3979,6 +3986,20 @@ void inven_damage(int who, inven_func typ, int p1, int which)
 
                 (void)_damage_obj(obj, p1, p2, which, (who > 0));
             }
+        }
+    }
+
+    if (bag_has_pack())
+    {
+        for (slot = 1; slot <= bag_max(); slot++)
+        {
+            obj_ptr obj = bag_obj(slot);
+
+            if (!obj) continue;
+            if (object_is_artifact(obj)) continue;
+            if (!typ(obj)) continue;
+
+            (void)_damage_obj(obj, p1, p2, which, (who > 0));
         }
     }
 

@@ -2977,7 +2977,9 @@ static bool _kind_is_lance(int k_idx) {
     return FALSE;
 }
 static bool _kind_is_bow_quiver(int k_idx) {
-    if (k_info[k_idx].tval == TV_BOW || k_info[k_idx].tval == TV_QUIVER)
+    if (k_info[k_idx].tval == TV_BOW)
+        return TRUE;
+    if (k_info[k_idx].tval == TV_QUIVER && k_info[k_idx].sval == SV_QUIVER)
         return TRUE;
     return FALSE;
 }
@@ -3046,7 +3048,7 @@ static _kind_alloc_entry _kind_alloc_table[] = {
     { _kind_is_potion_scroll,  100,  -50,  -90, EQUIP_SLOT_NONE },
     { _kind_is_ammo,            80,    0,    0, EQUIP_SLOT_BOW },
     { kind_is_book,             25,   10,   15, EQUIP_SLOT_NONE }, /* R_DROP_MAGE is covering this ... */
-    { _kind_is_bag,             30,    0,    0, EQUIP_SLOT_QUIVER },
+    { _kind_is_bag,             30,    0,    0, EQUIP_SLOT_PACK },
     { kind_is_misc,             50,  -50,  -50, EQUIP_SLOT_NONE },
     /*                         380              */
     { NULL, 0}
