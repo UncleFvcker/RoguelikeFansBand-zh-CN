@@ -99,6 +99,7 @@
 #              - NO_GROUP: Suppress normal group code for certain monsters
 #              - NO_SLEEP: Monster is always awake
 #              - NO_UNIQUE: Prevent unique monsters from being chosen.
+#              - NO_MULTIPLY: Prevent multiplying monsters from being chosen.
 #              - FRIENDLY: Force monster to be friendly to the player.
 #              - HASTE: Monster is generated with extra speed.
 #              - DEPTH+NN: Monster is generated up to NN levels out of depth (e.g. DEPTH+40 or DEPTH+7)

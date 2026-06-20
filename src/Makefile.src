@@ -5,7 +5,7 @@
 # across a range of different makefiles, to cut down on maintenance.
 #
 
-VERSION = 1.1.0.1
+VERSION = 1.1.0.3
 COPYRIGHT = (c) 1995-2020 Angband contributors
 PROGNAME = RoguelikeFansBand
 
@@ -43,7 +43,7 @@ ANGFILES = \
     ego.o effects.o equip.o ethereal_mimic.o fear.o files.o flavor.o floors.o force_trainer.o generate.o gf.o graymage.o \
     grid.o hex.o highmage.o hissatsu.o home.o http.o igor.o init1.o init2.o int-map.o inv.o karrot.o lawyer.o \
     load.o mage.o magic_eater.o mauler.o melee1.o melee2.o menu.o message.o mindcrafter.o mirror_master.o \
-    mon.o mon_info.o monk.o monspell.o monster.o monster1.o monster2.o mspells1.o mspells2.o mut.o \
+    materials.o mon.o mon_info.o monk.o monspell.o monster.o monster1.o monster2.o mspells1.o mspells2.o mut.o \
     mut_a.o mystic.o necromancer.o ninja.o ninjalaw.o obj.o obj_info.o obj_prompt.o \
 	object1.o object2.o object3.o obj_kind.o pack.o paladin.o personality.o \
     polly.o priest.o psion.o py_birth.o py_info.o py_throw.o quest.o quiver.o \

@@ -1766,6 +1766,12 @@ static bool _room_grid_mon_hook(int r_idx)
             return FALSE;
     }
 
+    if (_room_grid_hack->flags & ROOM_GRID_MON_NO_MULTIPLY)
+    {
+        if (r_info[r_idx].flags2 & RF2_MULTIPLY)
+            return FALSE;
+    }
+
     if (_room_grid_hack->flags & ROOM_GRID_MON_TYPE)
     {
         if (!mon_is_type(r_idx, _room_grid_hack->monster))
@@ -1880,6 +1886,9 @@ static void _apply_room_grid_mon(point_t p, room_grid_ptr grid, room_ptr room)
     else if (grid->monster)
     {
         int old_cur_num, old_max_num;
+
+        if ((grid->flags & ROOM_GRID_MON_NO_MULTIPLY) && (r_info[grid->monster].flags2 & RF2_MULTIPLY))
+            return;
 
         /* Letters in quest files need extra handling for cloned uniques,
            as well as resurrecting uniques already slain. */
@@ -2358,6 +2367,7 @@ static bool _init_formation(room_ptr room, point_t p)
             if (monster_has_hostile_align(&align, 0, 0, &r_info[r_idx])) continue;
             if (r_info[r_idx].flags1 & RF1_UNIQUE) continue;
             if (r_info[r_idx].flags7 & RF7_UNIQUE2) continue;
+            if ((grid->flags & ROOM_GRID_MON_NO_MULTIPLY) && (r_info[r_idx].flags2 & RF2_MULTIPLY)) continue;
             if (r_idx == MON_NAZGUL) continue;
             break;
         }

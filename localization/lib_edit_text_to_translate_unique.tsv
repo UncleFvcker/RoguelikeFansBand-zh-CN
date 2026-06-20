@@ -7849,3 +7849,5 @@ EDITU_07847	1	lib/edit/r_info.txt	15931	monster_name	N:name	Zombified Serpent of
 EDITU_07848	1	lib/edit/r_info.txt	22214	monster_name	N:name	Zoopi, the Cube King	
 EDITU_07849	1	lib/edit/r_info.txt	11624	monster_name	N:name	Zoth-Ommog	
 EDITU_07850	1	lib/edit/w_info.txt	87	wilderness_name	W:name	Zul	
+EDITU_07851	1	lib/edit/k_info.txt	4667	object_name	N:name	& Cooking Kit~	& 套~烹饪工具~
+EDITU_07852	1	lib/edit/k_info.txt	4675	object_name	N:name	& Alchemy Kit~	& 套~炼金器具~

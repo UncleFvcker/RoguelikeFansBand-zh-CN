@@ -19,7 +19,7 @@
   <color:U>a</color>   蚂蚁 (Ant)                      <color:U>A</color>   天使 (Angel)
   <color:U>b</color>   蝙蝠 (Bat)                      <color:U>B</color>   鸟类 (Bird)
   <color:U>c</color>   蜈蚣 (Centipede)                <color:U>C</color>   犬类 (Canine)
-  <color:U>d</color>   龙类 (Dragon)                   <color:U>D</color>   远古龙/巨龙 (Ancient Dragon/Wyrm)
+  <color:U>d</color>   龙类 (Dragon)                   <color:U>D</color>   上古龙/巨龙 (Ancient Dragon/Wyrm)
   <color:U>e</color>   漂浮眼 (Eye)                    <color:U>E</color>   元素 (Elemental)
   <color:U>f</color>   猫科/狐狸 (Feline/Fox)          <color:U>F</color>   蜻蜓/龙蝇 (Dragon Fly)
   <color:U>g</color>   魔像 (Golem)                    <color:U>G</color>   幽灵 (Ghost)
@@ -442,7 +442,7 @@ Orc                  | Old Man Willow                                 <color:s>#
 
 另外两个法术效果与此密切相关，并遵循与灭绝相同的基本规则。<color:keyword>湮灭术 (Annihilation)</color> 针对单个怪物（即使只有这点也足以使它变得非常有价值！），而<color:keyword>群体灭绝术 (Mass Genocide)</color> 影响所有非唯一怪物而无论其品类，但仅限于你周围的环境（你周围 20 个方格内的怪物），而不是影响整个楼层。
 
-灭绝是基于怪物潜在的“真实”字母符号，并忽略玩家对怪物视觉外观所做的任何更改。例如，即使你开启了 easy_mimics 选项，对符号 <color:o>x</color> 施放灭绝术也不会对模仿者产生任何影响，因为 <color:o>x</color> 不是这些模仿者的真实符号。类似地，灭绝 <color:o>D</color> 依然会影响远古龙，即使你已将它们的视觉外观更改为其它东西。
+灭绝是基于怪物潜在的“真实”字母符号，并忽略玩家对怪物视觉外观所做的任何更改。例如，即使你开启了 easy_mimics 选项，对符号 <color:o>x</color> 施放灭绝术也不会对模仿者产生任何影响，因为 <color:o>x</color> 不是这些模仿者的真实符号。类似地，灭绝 <color:o>D</color> 依然会影响上古龙，即使你已将它们的视觉外观更改为其它东西。
 
 变色龙被灭绝的方式如同它们真的属于它们当前表现出来的种族。另一方面，狸猫和暗影者则是通过其底层品类被灭绝的，对于狸猫是四足兽 (<color:U>q</color>)，对于暗影者是该暗影者实际上所属种族的品类。
 

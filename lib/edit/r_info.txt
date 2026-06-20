@@ -3577,7 +3577,7 @@ F:DROP_CORPSE | POS_GAIN_AC
 P:Copy:Human:Sniper
 P:Life:80
 P:Body:Bat
-D:恶魔蝙蝠，以难以杀死而臭名昭著。
+D:猴蝠，以难以杀死而臭名昭著。
 
 N:236:Killer brown beetle
 G:K:u
@@ -8016,7 +8016,7 @@ P:Copy:Demigod:Beastmaster
 P:Body:Dragon
 S:FREQ_10 | BR_SOUND | BR_SHARDS | BR_DISENCHANT | BR_CHAOS
 S:SLOW | CONFUSE | SCARE | DETECT_OBJECTS 
-D:一头强大的巨龙，平衡幼龙试图维持宇宙的平衡，
+D:一头强大的巨龙，平衡飞龙试图维持宇宙的平衡，
 D:并鄙视你摧毁邪恶的无力尝试。
 
 N:504:Ethereal drake
@@ -8034,7 +8034,7 @@ F:POS_GAIN_AC
 S:FREQ_10 | BR_LITE | BR_DARK | SLOW | CONFUSE | SCARE | DETECT_OBJECTS
 P:Copy:Demigod:Beastmaster
 P:Body:Dragon
-D:一头拥有元素力量、掌控光与暗的巨龙，虚灵幼龙
+D:一头拥有元素力量、掌控光与暗的巨龙，以太飞龙
 D:的眼睛在阴影中闪耀着白色的仇恨光芒。
 
 N:505:Ishikawa Goemon
@@ -8451,7 +8451,7 @@ F:DROP_CORPSE | POS_GAIN_AC
 P:Copy:Barbarian:Beastmaster
 P:Body:Dragon
 S:FREQ_10 | BR_FIRE | DETECT_OBJECTS 
-D:末日幼龙是受过训练的火龙，它们总是成对出没，寻找
+D:末日飞龙是受过训练的火龙，它们总是成对出没，寻找
 D:战斗的机会。
 
 N:528:Gargoyle

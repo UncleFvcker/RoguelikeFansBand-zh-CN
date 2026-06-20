@@ -229,15 +229,7 @@ bool display_origin(object_type *o_ptr, doc_ptr doc)
         if ((o_ptr->origin_xtra) && (o_ptr->origin_xtra < max_r_idx) && (r_ptr) && (r_ptr->name))
         {
             cptr mon_name = monster_race_display_name(o_ptr->origin_xtra);
-            if (r_ptr->flags1 & RF1_UNIQUE)
-            {
-                strcpy(pudottaja, mon_name);
-            }
-            else
-            {
-                strcpy(pudottaja, is_a_vowel(mon_name[0]) ? "an " : "a ");
-                strcat(pudottaja, mon_name);
-            }
+            strcpy(pudottaja, mon_name);
         }
         else strcpy(pudottaja, "一个奇异的怪物");
     }
@@ -253,7 +245,7 @@ bool display_origin(object_type *o_ptr, doc_ptr doc)
         case ORIGIN_DROP:
         case ORIGIN_QUEST_DROP:
         {
-            doc_printf(doc, "%s时由 %s 掉落。", paikka_text, pudottaja);
+            doc_printf(doc, "%s时由%s掉落。", paikka_text, pudottaja);
             break;
         }
         case ORIGIN_CHEST:
@@ -347,7 +339,7 @@ bool display_origin(object_type *o_ptr, doc_ptr doc)
         }
         case ORIGIN_STOLEN:
         {
-            doc_printf(doc, "%s时从 %s 处偷来的。", paikka_text, pudottaja);
+            doc_printf(doc, "%s时从%s处偷来的。", paikka_text, pudottaja);
             break;
         }
         case ORIGIN_REFORGE:
@@ -424,7 +416,7 @@ bool display_origin(object_type *o_ptr, doc_ptr doc)
         }
         case ORIGIN_MYSTERY:
         {
-            doc_printf(doc, "%s时神秘地由 %s 掉落。", paikka_text, pudottaja);
+            doc_printf(doc, "%s时神秘地由%s掉落。", paikka_text, pudottaja);
             break;
         }
     }

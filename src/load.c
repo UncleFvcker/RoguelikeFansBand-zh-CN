@@ -114,6 +114,59 @@ void handle_tmp_indices(bool save_data, bool do_redraw)
     }
 }
 
+static bool _rd_materials_aux(savefile_ptr file, bool legacy_1102)
+{
+    byte old_xor = file->xor_byte;
+    u32b old_v_check = file->v_check;
+    u32b old_x_check = file->x_check;
+    int old_pos = file->pos;
+    fpos_t old_file_pos;
+    s32b tmp[MATERIAL_MAX];
+    u32b marker;
+    int i;
+
+    fgetpos(file->file, &old_file_pos);
+
+    if (!legacy_1102)
+    {
+        marker = savefile_read_u32b(file);
+        if (marker != MATERIAL_SAVE_MAGIC)
+        {
+            fsetpos(file->file, &old_file_pos);
+            file->xor_byte = old_xor;
+            file->v_check = old_v_check;
+            file->x_check = old_x_check;
+            file->pos = old_pos;
+            return FALSE;
+        }
+    }
+
+    for (i = 0; i < MATERIAL_MAX; i++)
+        tmp[i] = savefile_read_s32b(file);
+
+    for (i = 0; i < MATERIAL_MAX; i++)
+        p_ptr->materials[i] = tmp[i];
+
+    return TRUE;
+}
+
+static void _rd_materials(savefile_ptr file)
+{
+    int i;
+    bool loaded = FALSE;
+
+    if (!savefile_is_older_than(file, 1,1,0,3))
+        loaded = _rd_materials_aux(file, FALSE);
+    else if (!savefile_is_older_than(file, 1,1,0,2))
+        loaded = _rd_materials_aux(file, TRUE);
+
+    if (!loaded)
+    {
+        for (i = 0; i < MATERIAL_MAX; i++)
+            p_ptr->materials[i] = 0;
+    }
+}
+
 
 static void rd_monster(savefile_ptr file, monster_type *m_ptr)
 {
@@ -809,6 +862,7 @@ static void rd_extra(savefile_ptr file)
     p_ptr->ele_immune = savefile_read_s16b(file);
     p_ptr->special_defense = savefile_read_u32b(file);
     p_ptr->knowledge = savefile_read_byte(file);
+    _rd_materials(file);
 
     p_ptr->autopick_autoregister = savefile_read_byte(file) ? TRUE: FALSE;
     p_ptr->action = savefile_read_byte(file);

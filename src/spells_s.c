@@ -1135,14 +1135,14 @@ void summon_manes_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "召唤劣魔");
+        var_set_string(res, "召唤原魔");
         break;
     case SPELL_DESC:
         var_set_string(res, "试图召唤一些恶魔朋友。");
         break;
     case SPELL_CAST:
         if (!summon_specific(-1, py, px, (p_ptr->lev * 3) / 2, SUMMON_MANES, (PM_ALLOW_GROUP | PM_FORCE_PET)))
-            msg_print("没有劣魔响应召唤。");
+            msg_print("没有原魔响应召唤。");
 
         var_set_bool(res, TRUE);
         break;

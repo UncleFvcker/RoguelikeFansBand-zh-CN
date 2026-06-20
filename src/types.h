@@ -1301,6 +1301,7 @@ struct player_type
 
     s16b riding;              /* Riding on a monster of this index */
     byte knowledge;           /* Knowledge about yourself */
+    s32b materials[MATERIAL_MAX]; /* Independent crafting materials */
 
     byte start_race;          /* Race at birth */
     byte start_sex;           /* Sex at birth */

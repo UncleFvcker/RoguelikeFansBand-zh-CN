@@ -1168,7 +1168,7 @@ static parse_tbl_t _summon_type_tbl[] = {
     { SUMMON_BIRD, "鸟类", TERM_WHITE, "", "BIRD", 20 },
     { SUMMON_KAMIKAZE, "狂热者", TERM_WHITE, "", "KAMIKAZE", 10 },
     { SUMMON_KAMIKAZE_LIVING, "狂热者", TERM_WHITE, "", "KAMIKAZE_LIVING", 15 },
-    { SUMMON_MANES, "劣魔", TERM_WHITE, "", "MANES", 5 },
+    { SUMMON_MANES, "原魔", TERM_WHITE, "", "MANES", 5 },
     { SUMMON_LOUSE, "虱子", TERM_WHITE, "", "LOUSE", 1 },
     { SUMMON_GUARDIAN, "地下城守卫", TERM_VIOLET, "", "GUARDIAN", 150 },
     { SUMMON_KNIGHT, "骑士", TERM_WHITE, "", "KNIGHT", 20 },
@@ -1384,6 +1384,10 @@ static errr _parse_room_grid_monster(char **args, int arg_ct, room_grid_ptr grid
             else if (streq(flag, "NO_UNIQUE"))
             {
                 grid->flags |= ROOM_GRID_MON_NO_UNIQUE;
+            }
+            else if (streq(flag, "NO_MULTIPLY"))
+            {
+                grid->flags |= ROOM_GRID_MON_NO_MULTIPLY;
             }
             else if (streq(flag, "FRIENDLY"))
             {

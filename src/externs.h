@@ -937,12 +937,20 @@ extern void do_cmd_save_screen_html(void);
 extern void do_cmd_save_screen_txt(void);
 extern void save_screen_aux(cptr file, int format);
 extern void do_cmd_knowledge(void);
+extern void do_cmd_knowledge_materials(void);
 extern void display_weapon_info_aux(int mode);
 extern void plural_aux(char * Name);
 extern void do_cmd_time(void);
 extern string_ptr get_tiny_screenshot(int cx, int cy);
 extern string_ptr get_screenshot(void);
 extern void msg_add_tiny_screenshot(int cx, int cy);
+
+/* materials.c */
+extern cptr material_name(int id);
+extern void materials_add(int id, int amount);
+extern int materials_count(int id);
+extern void materials_on_mined(feature_type *old_f_ptr);
+extern void materials_on_monster_death(monster_type *m_ptr, bool eligible);
 
 /* cmd5.c */
 extern cptr spell_category_name(int tval);

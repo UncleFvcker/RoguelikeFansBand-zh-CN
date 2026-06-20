@@ -121,10 +121,10 @@ void _summon_ancient_dragon_spell(int cmd, variant *res)
     switch (cmd)
     {
     case SPELL_NAME:
-        var_set_string(res, "召唤远古龙");
+        var_set_string(res, "召唤上古龙");
         break;
     case SPELL_DESC:
-        var_set_string(res, "尝试召唤一条远古龙来协助。");
+        var_set_string(res, "尝试召唤一条上古龙来协助。");
         break;
     case SPELL_FAIL:
     case SPELL_CAST:

@@ -6,7 +6,7 @@
 
 大多数怪物种族拥有自定义的体型，这可能会严重限制你能穿戴的装备数量和种类。例如，<color:keyword>眼魔 (Beholder)</color>无法穿戴盔甲或挥舞剑……那景象确实会很奇怪！但为了弥补这一点，它们可以在其眼柄上戴最多八枚戒指。通常，这类细节在下面会有所描述。
 
-最后，所有怪物都会<color:keyword>进化 (evolve)</color>。当它们获得足够的经验时，它们将呈现出更强大的形态。继续以龙为例，你可能会从幼龙 (Baby) 进化到青年龙 (Young)，再到成年龙 (Mature)，接着是远古龙 (Ancient)，最后成为巨龙 (Great Wyrm)，在这个过程中变得无比强大。下面列出的属性和技能假设角色为 35 级。
+最后，所有怪物都会<color:keyword>进化 (evolve)</color>。当它们获得足够的经验时，它们将呈现出更强大的形态。继续以龙为例，你可能会从幼龙 (Baby) 进化到青年龙 (Young)，再到成年龙 (Mature)，接着是上古龙 (Ancient)，最后成为巨龙 (Great Wyrm)，在这个过程中变得无比强大。下面列出的属性和技能假设角色为 35 级。
 
 有关<color:keyword>属性 (Stats)</color>的详细信息，请参见 <link:birth.txt#PrimaryStats>。有关<color:keyword>技能 (Skills)</color>的信息，请参见 <link:birth.txt#PrimarySkills>。要一目了然地比较各种族，请查看下方的种族表格 (<link:MonsterRaces.txt#Tables>)。
 

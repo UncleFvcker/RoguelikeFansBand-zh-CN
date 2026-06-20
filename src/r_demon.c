@@ -563,7 +563,7 @@ static race_t *_marilith_get_race_t(void)
 {
     static race_t me = {0};
     static bool   init = FALSE;
-    static cptr   titles[5] =  {"劣魔", "夸塞魔", "伯达克魔", "死亡夸塞魔", "六臂蛇魔"};
+    static cptr   titles[5] =  {"原魔", "夸塞魔", "伯达克魔", "死亡夸塞魔", "六臂蛇魔"};
     int           rank = 0;
 
     if (p_ptr->lev >= 10) rank++;

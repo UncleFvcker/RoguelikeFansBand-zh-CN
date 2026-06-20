@@ -100,6 +100,7 @@ struct room_info_type
 #define ROOM_GRID_MON_FRIENDLY  0x00000040
 #define ROOM_GRID_MON_HASTE     0x00000080
 #define ROOM_GRID_MON_CLONED    0x00000100  /* hack for The Cloning Pits */
+#define ROOM_GRID_MON_NO_MULTIPLY 0x00000200
 
 #define ROOM_GRID_OBJ_TYPE      0x00010000  /* object is TV_* or OBJ_TYPE_* rather than a specific k_idx */
 #define ROOM_GRID_OBJ_ARTIFACT  0x00020000  /* object is a_idx (which implies k_idx) */

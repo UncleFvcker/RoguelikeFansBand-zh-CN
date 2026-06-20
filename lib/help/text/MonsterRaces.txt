@@ -20,7 +20,7 @@
 最后，所有怪物都会进化 
 (evolve)。当它们获得足够的经验时，它们将呈现出更强大的形态。继续以龙为例
 ，你可能会从幼龙 (Baby) 进化到青年龙 (Young)，再到成年龙 
-(Mature)，接着是远古龙 (Ancient)，最后成为巨龙 (Great 
+(Mature)，接着是上古龙 (Ancient)，最后成为巨龙 (Great 
 Wyrm)，在这个过程中变得无比强大。下面列出的属性和技能假设角色为 35 级。
 
 有关属性 (Stats)的详细信息，请参见 [a]。有关技能 (Skills)的信息，请参见 
@@ -855,3 +855,4 @@ Wyrm)，在这个过程中变得无比强大。下面列出的属性和技能假
 
 
 Automatically generated for RoguelikeFansBand 7.2.salmiak.
+

@@ -974,6 +974,7 @@ void monster_death(int m_idx, bool drop_item)
 
     quests_on_kill_mon(m_ptr);
     game_log_event("monster-death", "after_quests m_idx=%d r_idx=%d", m_idx, m_ptr->r_idx);
+    materials_on_monster_death(m_ptr, drop_chosen_item);
 
     /* Handle the possibility of player vanquishing arena combatant -KMW- */
     if (p_ptr->inside_arena && !is_pet(m_ptr))

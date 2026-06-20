@@ -1525,14 +1525,7 @@ static _spell_t __spells[] =
         { 13, 120, _energy_blast3_spell },
         { 25, 155, _energy_blast4_spell },
         { 40, 180, _energy_blast5_spell }},
-        "Energy Blast grants you an offensive ranged attack. "
-          "With this power, you will have good early offense as well as the "
-          "ability to scale the damage of the blast quite considerably. "
-          "The blast will produce an elemental ball whose type is of your "
-          "choosing, although the range of choices will depend on how "
-          "much focus you invest in the blast. Unlike most ball spells, "
-          "this spell deals full damage to all monsters in its area of effect "
-          "unless resisted, without any reduction away from the epicenter."
+        "能量爆破赋予你一种远程攻击能力。它既能提供可靠的早期火力，也能随着你投入更多专注而大幅提升伤害。爆破会形成一个元素球体，元素类型可由你选择，但可选范围取决于投入的专注强度。不同于大多数球形法术，除非目标抵抗成功，否则区域内所有怪物都会受到完整伤害，不会因远离中心而衰减。"
     },
     { "灵能视界", _PSION_SEEING, 1, {  
         {  1,  20, _psionic_seeing1_spell },
@@ -1540,11 +1533,7 @@ static _spell_t __spells[] =
         { 15, 100, _psionic_seeing3_spell },
         { 25, 130, _psionic_seeing4_spell },
         { 50, 180, _psionic_seeing5_spell }},
-        "Psionic Seeing grants you considerable powers of detection. "
-          "Depending on how hard you focus, you may detect monsters, traps, "
-          "doors, stairs, and objects; with enough concentration you can "
-          "map your surroundings, gain temporary powers of telepathy, or even "
-          "map the entire level!"
+        "灵能视界赋予你强大的侦测能力。根据你投入的专注强度，你可以侦测怪物、陷阱、门、楼梯和物品；专注足够时，还能探明周围地形，暂时获得心灵感应，甚至映照整个楼层。"
     },
     { "武器嫁接", _PSION_GRAFT_WEAPON, 1, {  
         {  5,  20, _graft_weapon1_spell },
@@ -1560,11 +1549,7 @@ static _spell_t __spells[] =
         { 36, 120, _psionic_clarity3_spell },
         { 60, 160, _psionic_clarity4_spell },
         { 90, 200, _psionic_clarity5_spell }},
-        "Psionic Clarity focuses the mind of the psion. While only active for "
-        "a short while, this power lowers the casting costs of all other psionic "
-        "powers, which can be quite useful later in the game; take it as an early "
-        "option if you already have an eye on the endgame and have no need for more "
-        "immediate returns."
+        "精神澄明能让灵能者的心智高度集中。它持续时间较短，但会降低所有其他灵能能力的施放消耗，在游戏后期非常有用；如果你从一开始就着眼于终局，并不急需即时收益，可以较早选择它。"
     },
     { "环境融合", _PSION_BLENDING, 10, {  
         {  4,  40, _psionic_blending1_spell },
@@ -1572,10 +1557,7 @@ static _spell_t __spells[] =
         { 24,  70, _psionic_blending3_spell },
         { 40,  85, _psionic_blending4_spell },
         { 60, 100, _psionic_blending5_spell }},
-        "Psionic Blending grants great powers of stealth. While active, you "
-        "will be able to blend in with your surroundings and sneak up on many foes. "
-        "With maximal focus, you may even suppress aggravation (from your equipment), "
-        "though your stealth will still be somewhat disrupted."
+        "环境融合赋予你强大的潜行能力。激活时，你可以融入周围环境，悄然接近许多敌人。专注达到最高时，甚至可以压制装备带来的激怒效果，不过你的潜行仍会受到一定干扰。"
     },
     { "灵能护盾", _PSION_SHIELDING, 10, {  
         {  7,  40, _psionic_shielding1_spell },
@@ -1591,9 +1573,7 @@ static _spell_t __spells[] =
         { 10,  50, _psionic_travel3_spell },
         { 42, 128, _psionic_travel4_spell },
         { 54, 170, _psionic_travel5_spell }},
-        "Psionic Travel grants a wide array of teleportation powers. From inexpensive short-range "
-          "'blinking' to long-range escapes, you will have it all. Indeed, with great "
-          "focus you will even be able to control your teleportation and choose where you land!"
+        "灵能旅行提供多种传送能力。从低消耗的短距离闪现到长距离逃脱都包括在内。投入足够专注时，你甚至能控制传送落点，选择自己抵达的位置。"
     },
     { "灵能保护", _PSION_PROTECTION, 20, {  
         {  5,  25, _psionic_protection1_spell },
@@ -1633,9 +1613,7 @@ static _spell_t __spells[] =
         { 36,  80, _psionic_speed3_spell },
         { 60,  95, _psionic_speed4_spell },
         { 90, 110, _psionic_speed5_spell }},
-        "Psionic Speed channels your mental energy into speed of motion, granting great "
-          "powers of haste. With increased focus comes increased speed, and the total "
-          "amount of haste can greatly exceed what is possible for other classes."
+        "灵能加速将你的精神能量转化为行动速度，赋予强大的加速效果。投入的专注越高，速度提升越大；最终可达到许多其他职业难以企及的加速幅度。"
     },
     { "灵能治疗", _PSION_HEALING, 30, {  
         {  7,  40, _psionic_healing1_spell }, /*  70hp */
@@ -1659,11 +1637,7 @@ static _spell_t __spells[] =
         { 40,  90, _psionic_wave3_spell }, /* 126hp */
         { 70, 105, _psionic_wave4_spell }, /* 168hp */
         {100, 125, _psionic_wave5_spell }},/* 210hp */
-        "Mind Wave unleashes the effects of your mental focus on all visible monsters as psionic energy, "
-        "dealing unresistable raw damage and potentially stunning, confusing, frightening and paralysing "
-        "monsters; as the attack operates directly against monsters' minds, these side effects can sometimes bypass "
-        "normal resistances, but mindless monsters are not affected at all. This spell does not pack quite as "
-        "much raw power as Psionic Storm, but the lower cost and ability to affect more monsters compensate for this."
+        "心灵震波将你的精神专注化作灵能，冲击所有可见怪物，造成无法抵抗的原始伤害，并可能使其震慑、混乱、恐惧或麻痹。由于它直接作用于怪物心智，这些附加效果有时可以绕过通常抗性；但无心智的怪物完全不受影响。它的纯粹威力不如灵能风暴，但消耗更低，且能影响更多目标。"
     },
     { "灵能附魔", _PSION_CRAFTING, 40, {  
         { 10,  50, _psionic_crafting1_spell },
@@ -1671,8 +1645,7 @@ static _spell_t __spells[] =
         { 60,  80, _psionic_crafting3_spell },
         {100,  95, _psionic_crafting4_spell },
         {150, 110, _psionic_crafting5_spell }},
-        "Psionic Crafting channels your mental focus into an object, enchanting it in the "
-          "process. With maximal focus, you can even craft excellent items!"
+        "灵能附魔会将你的精神专注注入物品，在过程中对其进行强化。专注达到最高时，你甚至可以制作出优秀品质的物品。"
     },
     { "灵能风暴", _PSION_STORM, 40, {  
         { 12,  50, _psionic_storm1_spell }, /* 100hp */
@@ -1680,10 +1653,7 @@ static _spell_t __spells[] =
         { 65,  80, _psionic_storm3_spell }, /* 292hp */
         {100,  95, _psionic_storm4_spell }, /* 388hp */
         {135, 110, _psionic_storm5_spell }},/* 484hp */
-        "Psionic Storm unleashes your mental focus in a large, powerful ball of energy; "
-        "this psionic energy not only deals unresistable damage, but can stun, confuse, "
-        "frighten and even paralyze monsters, with a chance to bypass normal resistances. "
-        "Mindless monsters are not affected."
+        "灵能风暴将你的精神专注释放为一个巨大而强力的能量球；这种灵能不仅造成无法抵抗的伤害，还可能震慑、混乱、恐惧甚至麻痹怪物，并有机会绕过通常抗性。无心智的怪物不受影响。"
     },
     { "精神反噬", _PSION_BACKLASH, 40, {  
         { 24,  50, _psionic_backlash1_spell },
@@ -1699,9 +1669,7 @@ static _spell_t __spells[] =
         { 60,  80, _psionic_drain3_spell },
         { 90,  95, _psionic_drain4_spell },
         {130, 110, _psionic_drain5_spell }},
-        "Psychic Drain allows you to draw mental energy and focus from the magic around you. "
-        "Whenever you are hit by a magic spell you will convert some of the damage into mana. This "
-        "power has no effect on non-magical damage like breaths, rockets or melee."
+        "心灵汲取使你能够从周围魔法中抽取精神能量与专注。每当你被魔法法术击中时，都会将部分伤害转化为法力。它对吐息、火箭或近战等非魔法伤害没有效果。"
     },
     { "精神干扰", _PSION_DISRUPTION, 50, {  
         { 40,  40, _psionic_disruption1_spell },
@@ -1709,9 +1677,7 @@ static _spell_t __spells[] =
         {240,  70, _psionic_disruption3_spell },
         {400,  85, _psionic_disruption4_spell },
         {600, 100, _psionic_disruption5_spell }},
-        "Psionic Disruption allows you to block the minds of others, hindering their ability "
-        "to cast spells. But be warned: innate monster attacks (such as breaths, rockets and "
-        "boulder throws) will not be affected!"
+        "精神干扰使你能够封锁他人的心智，妨碍其施放法术。但要注意：怪物的天生攻击，例如吐息、火箭和投掷巨石，不会受到影响。"
     },
     { "精神堡垒", _PSION_FORTRESS, 50, {  
         { 40,  40, _mental_fortress1_spell },
@@ -1719,8 +1685,7 @@ static _spell_t __spells[] =
         {240,  70, _mental_fortress3_spell },
         {400,  85, _mental_fortress4_spell },
         {600, 100, _mental_fortress5_spell }},
-        "Mental Fortress grants immunity to Dispel Magic and Anti-Magic. In addition, it "
-          "increases the power of your spells."
+        "精神堡垒使你免疫驱散魔法和反魔法效果，并提升你的法术威力。"
     },
     { "心灵源泉", _PSION_MINDSPRING, 50, {  
         { 40,  40, _mindspring1_spell },
@@ -1736,9 +1701,7 @@ static _spell_t __spells[] =
         {240,  70, _psionic_foresight3_spell },
         {400,  85, _psionic_foresight4_spell },
         {600, 100, _psionic_foresight5_spell }},
-        "Psionic Foresight allows you to see into the future. With knowledge "
-          "of events before they take place, you will be able to avoid many attacks "
-          "altogether!"
+        "预知未来使你能够窥见即将发生的事。凭借对未来事件的预判，你可以完全避开许多攻击。"
     },
     { 0 }
 };
@@ -2110,17 +2073,17 @@ void psion_decrement_counters(void)
 {
     if (p_ptr->pclass != CLASS_PSION) return;
 
-    _decrement_counter(_WEAPON_GRAFT, "Your melee weapon is no longer fused to your arm.");    
-    _decrement_counter(_CLARITY, "You lose your mental focus.");    
-    _decrement_counter(_BLENDING, "You no longer blend into your surroundings.");    
-    _decrement_counter(_SHIELDING, "Your psionic shield disappears.");    
-    _decrement_counter(_COMBAT, "Your combat transformation expires.");    
-    _decrement_counter(_ARCHERY, "Your archery transformation expires.");    
-    _decrement_counter(_SPEED, "Your psionic speed fades.");    
-    _decrement_counter(_BACKLASH, "Your mental revenge abates.");    
-    _decrement_counter(_FORTRESS, "Your mental fortress collapses.");    
-    _decrement_counter(_MINDSPRING, "你的心灵源泉枯竭了。");    
-    _decrement_counter(_FORESIGHT, "Your foresight fades.");    
+    _decrement_counter(_WEAPON_GRAFT, "你的近战武器不再与你的手臂融合。");
+    _decrement_counter(_CLARITY, "你失去了精神专注。");
+    _decrement_counter(_BLENDING, "你不再融入周围环境。");
+    _decrement_counter(_SHIELDING, "你的灵能护盾消失了。");
+    _decrement_counter(_COMBAT, "你的战斗形态结束了。");
+    _decrement_counter(_ARCHERY, "你的箭术形态结束了。");
+    _decrement_counter(_SPEED, "你的灵能加速消退了。");
+    _decrement_counter(_BACKLASH, "你的精神反噬平息了。");
+    _decrement_counter(_FORTRESS, "你的精神堡垒崩塌了。");
+    _decrement_counter(_MINDSPRING, "你的心灵源泉枯竭了。");
+    _decrement_counter(_FORESIGHT, "你的预知消退了。");
     _decrement_counter(_DISRUPTION, "你的心灵干扰消失了。");
     _decrement_counter(_DRAIN, "你不再从周围的魔法中吸取力量。");
 }
@@ -2141,18 +2104,18 @@ void psion_dispel_player(void)
 {
     if (p_ptr->pclass != CLASS_PSION) return;
 
-    _clear_counter(_WEAPON_GRAFT, "Your melee weapon is no longer fused to your arm.");    
-    _clear_counter(_CLARITY, "You lose your mental focus.");    
-    _clear_counter(_BLENDING, "You no longer blend into your surroundings.");    
-    _clear_counter(_SHIELDING, "Your psionic shield disappears.");    
-    _clear_counter(_COMBAT, "Your combat transformation expires.");    
-    _clear_counter(_ARCHERY, "Your archery transformation expires.");    
-    _clear_counter(_SPEED, "Your psionic speed fades.");    
-    _clear_counter(_BACKLASH, "Your mental revenge abates.");    
-    _clear_counter(_FORTRESS, "Your mental fortress collapses.");    
-    /*_clear_counter(_MINDSPRING, "Your mindspring dries up.");    */
-    _clear_counter(_FORESIGHT, "Your foresight fades.");    
-    _clear_counter(_DISRUPTION, "你的心灵干扰平息了。");    
+    _clear_counter(_WEAPON_GRAFT, "你的近战武器不再与你的手臂融合。");
+    _clear_counter(_CLARITY, "你失去了精神专注。");
+    _clear_counter(_BLENDING, "你不再融入周围环境。");
+    _clear_counter(_SHIELDING, "你的灵能护盾消失了。");
+    _clear_counter(_COMBAT, "你的战斗形态结束了。");
+    _clear_counter(_ARCHERY, "你的箭术形态结束了。");
+    _clear_counter(_SPEED, "你的灵能加速消退了。");
+    _clear_counter(_BACKLASH, "你的精神反噬平息了。");
+    _clear_counter(_FORTRESS, "你的精神堡垒崩塌了。");
+    /*_clear_counter(_MINDSPRING, "Your mindspring dries up.");*/
+    _clear_counter(_FORESIGHT, "你的预知消退了。");
+    _clear_counter(_DISRUPTION, "你的心灵干扰平息了。");
     _clear_counter(_DRAIN, "你不再从周围的魔法中吸取力量。");
 }
 

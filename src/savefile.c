@@ -24,13 +24,13 @@ void savefile_normalize_version(version_ptr version)
 {
     if (!version) return;
 
-    /* Treat early 1.0.x headers as the new RoguelikeFansBand baseline. */
+    /* Treat early 1.0.x headers as the original RoguelikeFansBand baseline. */
     if (version->major == 1 && version->minor == 0)
     {
-        version->major = SAVEFILE_VER_MAJOR;
-        version->minor = SAVEFILE_VER_MINOR;
-        version->patch = SAVEFILE_VER_PATCH_ID;
-        version->extra = SAVEFILE_VER_EXTRA;
+        version->major = 1;
+        version->minor = 0;
+        version->patch = 0;
+        version->extra = 0;
     }
 }
 

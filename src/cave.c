@@ -5486,7 +5486,10 @@ void cave_alter_feat(int y, int x, int action)
         bool found = FALSE;
 
         if (mined_vein)
+        {
             _mining_gain_for_feat(old_f_ptr);
+            materials_on_mined(old_f_ptr);
+        }
 
         /* Handle gold */
         if (have_flag(old_f_ptr->flags, FF_HAS_GOLD) && !have_flag(f_ptr->flags, FF_HAS_GOLD))

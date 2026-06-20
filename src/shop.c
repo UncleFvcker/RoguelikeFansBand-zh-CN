@@ -522,6 +522,10 @@ static bool _general_stock_p(int k_idx)
     case TV_FOOD:
     case TV_DIGGING:
         return TRUE;
+    case TV_JUNK:
+        if (k_info[k_idx].sval == SV_JUNK_COOKING_KIT) return TRUE;
+        if (k_info[k_idx].sval == SV_JUNK_ALCHEMY_KIT) return TRUE;
+        return FALSE;
     }
     return FALSE;
 }
@@ -561,6 +565,10 @@ static bool _general_create(obj_ptr obj, u32b mode)
         k_idx = lookup_kind(TV_DIGGING, SV_SHOVEL);
     else if (one_in_(3))
         k_idx = lookup_kind(TV_QUIVER, 1);
+    else if (one_in_(6))
+        k_idx = lookup_kind(TV_JUNK, SV_JUNK_COOKING_KIT);
+    else if (one_in_(6))
+        k_idx = lookup_kind(TV_JUNK, SV_JUNK_ALCHEMY_KIT);
     else if (one_in_(5))
         k_idx = lookup_kind(TV_DIGGING, SV_PICK);
     else

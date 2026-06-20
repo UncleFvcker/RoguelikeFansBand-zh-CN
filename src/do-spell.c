@@ -4727,8 +4727,8 @@ static cptr do_trump_spell(int spell, int mode)
         break;
 
     case 31:
-        if (name) return "王牌远古龙";
-        if (desc) return "召唤一只远古龙。";
+        if (name) return "王牌上古龙";
+        if (desc) return "召唤一只上古龙。";
 
         {
             if (cast)
@@ -4740,14 +4740,14 @@ static cptr do_trump_spell(int spell, int mode)
                 else
                     type = SUMMON_HI_DRAGON;
 
-                msg_print("你集中精神在一张远古龙王牌上……");
+                msg_print("你集中精神在一张上古龙王牌上……");
 
                 /* May allow unique depend on level and dice roll */
                 if (trump_summoning(1, !fail, y, x, 0, type, PM_ALLOW_UNIQUE))
                 {
                     if (fail)
                     {
-                        msg_print("被召唤的远古龙发怒了！");
+                        msg_print("被召唤的上古龙发怒了！");
                     }
                 }
             }
@@ -6014,15 +6014,15 @@ static cptr do_daemon_spell(int spell, int mode)
         break;
 
     case 6:
-        if (name) return "召唤劣魔";
-        if (desc) return "召唤一只亡魂(manes)。";
+        if (name) return "召唤原魔";
+        if (desc) return "召唤一只原魔(manes)。";
 
         {
             if (cast)
             {
                 if (!summon_specific(SUMMON_WHO_PLAYER, py, px, spell_power(plev * 3 / 2), SUMMON_MANES, (PM_ALLOW_GROUP | PM_FORCE_PET)))
                 {
-                    msg_print("没有劣魔降临。");
+                    msg_print("没有原魔降临。");
                 }
             }
         }

@@ -17,20 +17,20 @@
 
 
 #define VER_MAJOR 1
-#define VER_MINOR 0
-#define VER_PATCH "7"
-#define VER_PATCH_ID 7
-#define VER_EXTRA 0
-#define VERSION_STRING "1.1.0.1"
+#define VER_MINOR 1
+#define VER_PATCH "0"
+#define VER_PATCH_ID 0
+#define VER_EXTRA 3
+#define VERSION_STRING "1.1.0.3"
 #define VERSION_IS_DEVELOPMENT (FALSE)
 
 /*
  * RoguelikeFansBand starts its own savefile format line at 1.0.0.0.
  */
 #define SAVEFILE_VER_MAJOR 1
-#define SAVEFILE_VER_MINOR 0
+#define SAVEFILE_VER_MINOR 1
 #define SAVEFILE_VER_PATCH_ID 0
-#define SAVEFILE_VER_EXTRA 0
+#define SAVEFILE_VER_EXTRA 3
 
 #define GAME_MODE_BEGINNER  0
 #define GAME_MODE_NORMAL    1
@@ -2176,6 +2176,16 @@ enum {
 
 /* The "sval" codes for TV_FLASK */
 #define SV_FLASK_OIL                   0
+
+/* The "sval" codes for TV_JUNK */
+#define SV_JUNK_SHARD_POTTERY          3
+#define SV_JUNK_BROKEN_STICK           6
+#define SV_JUNK_COOKING_KIT           20
+#define SV_JUNK_ALCHEMY_KIT           21
+
+/* Independent material pouch */
+#define MATERIAL_MAX                   10
+#define MATERIAL_SAVE_MAGIC      0x4D415431 /* MAT1 */
 
 /* The "sval" codes for TV_FOOD */
 #define SV_FOOD_POISON                   0

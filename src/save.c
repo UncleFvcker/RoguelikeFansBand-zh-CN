@@ -815,6 +815,9 @@ static void wr_extra(savefile_ptr file)
     savefile_write_s16b(file, p_ptr->ele_immune);
     savefile_write_u32b(file, p_ptr->special_defense);
     savefile_write_byte(file, p_ptr->knowledge);
+    savefile_write_u32b(file, MATERIAL_SAVE_MAGIC);
+    for (i = 0; i < MATERIAL_MAX; i++)
+        savefile_write_s32b(file, p_ptr->materials[i]);
     savefile_write_byte(file, p_ptr->autopick_autoregister);
     savefile_write_byte(file, p_ptr->action);
     savefile_write_byte(file, preserve_mode);

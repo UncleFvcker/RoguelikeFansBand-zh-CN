@@ -5446,7 +5446,7 @@ void plural_aux(char *Name)
         strcpy(Name, dummy);
         return;
     }
-    else if (my_strstr(Name, "亡魂"))
+    else if (my_strstr(Name, "原魔"))
     {
         return;
     }
@@ -7899,6 +7899,7 @@ void do_cmd_knowledge(void)
         prt("(o) 物品", row++, col);
         prt("(e) Ego物品", row++, col);
         prt("(_) 自动拾取/破坏", row++, col);
+        prt("(c) 材料与制作", row++, col);
         row++;
 
         c_prt(TERM_RED, "怪物知识", row++, col - 2);
@@ -7962,6 +7963,10 @@ void do_cmd_knowledge(void)
             break;
         case '_':
             do_cmd_knowledge_autopick();
+            break;
+        case 'c':
+            do_cmd_knowledge_materials();
+            need_redraw = TRUE;
             break;
 
         /* Monster Knowledge */
