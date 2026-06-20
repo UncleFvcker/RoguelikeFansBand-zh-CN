@@ -2460,7 +2460,6 @@ static void display_shortened_item_name(object_type *o_ptr, int y)
 {
     char buf[MAX_NLEN];
     char *c = buf;
-    int len = 0;
     byte attr;
 
 /*  object_desc(buf, o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NAME_AND_DICE)); */
@@ -2515,17 +2514,6 @@ static void display_shortened_item_name(object_type *o_ptr, int y)
         }
     }
 
-    c = buf;
-    len = 0;
-    while(*c)
-    {
-        {
-            if(len + 1 > 12) break;
-            c++;
-            len++;
-        }
-    }
-    *c='\0';
     Term_putstr(0, y, 12, attr, buf);
 }
 

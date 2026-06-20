@@ -548,7 +548,15 @@ static char *_strip_zh_object_measure(char *start, char *t)
     {
         size_t len = strlen(measures[i]);
         if (t - start >= (ptrdiff_t)len && memcmp(t - len, measures[i], len) == 0)
-            return t - len;
+        {
+            char *measure = t - len;
+
+            /* Only strip classifier markers such as "& 套~工具".
+             * A trailing '~' after a Chinese noun must not eat the noun's
+             * final character, e.g. "烹饪工具~" or "炼金器具~". */
+            if (measure == start || *(measure - 1) == ' ' || *(measure - 1) == '\t')
+                return measure;
+        }
     }
 
     return t;
