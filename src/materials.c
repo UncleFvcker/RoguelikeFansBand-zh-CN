@@ -231,6 +231,7 @@ static void _run_recipes(cptr title, material_recipe_t *recipes, int tool_sval)
     if (!_has_tool(tool_sval))
     {
         msg_format("你需要%s。", tool_sval == SV_JUNK_COOKING_KIT ? "烹饪工具" : "炼金器具");
+        msg_print(NULL);
         return;
     }
 
