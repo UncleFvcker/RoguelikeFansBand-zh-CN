@@ -2498,10 +2498,12 @@ static bool kind_is_tailored(int k_idx)
         if (p_ptr->prace == RACE_MON_RING) return TRUE;
         else return equip_can_wield_kind(k_ptr->tval, k_ptr->sval);
 
+    case TV_DIGGING:
+        return FALSE;
+
     case TV_SWORD:
     case TV_HAFTED:
     case TV_POLEARM:
-    case TV_DIGGING:
         return ((equip_can_wield_kind(k_ptr->tval, k_ptr->sval))
             && (!prace_is_(RACE_MON_MUMMY))
             && (_is_favorite_weapon(k_ptr->tval, k_ptr->sval)));
@@ -2962,8 +2964,13 @@ bool kind_is_armor(int k_idx) {
     return FALSE;
 }
 bool kind_is_weapon(int k_idx) {
-    if (TV_DIGGING <= k_info[k_idx].tval && k_info[k_idx].tval <= TV_WEAPON_END)
+    switch (k_info[k_idx].tval)
+    {
+    case TV_HAFTED:
+    case TV_POLEARM:
+    case TV_SWORD:
         return TRUE;
+    }
     return FALSE;
 }
 static bool _kind_is_whip(int k_idx) {

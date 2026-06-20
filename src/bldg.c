@@ -2068,6 +2068,46 @@ static bool _bounty_create(void)
     return TRUE;
 }
 
+static bool _bounty_reward_kind(int k_idx)
+{
+    if (k_info[k_idx].tval == TV_DIGGING) return FALSE;
+    return kind_is_great(k_idx);
+}
+
+static bool _bounty_drop_reward(void)
+{
+    int attempt;
+
+    for (attempt = 0; attempt < 1000; attempt++)
+    {
+        object_type forge;
+
+        object_wipe(&forge);
+        get_obj_num_hook = _bounty_reward_kind;
+        if (!make_object(&forge, AM_GOOD | AM_GREAT, ORIGIN_BOUNTY_REWARD))
+        {
+            get_obj_num_hook = NULL;
+            continue;
+        }
+
+        get_obj_num_hook = NULL;
+        if (forge.tval == TV_DIGGING)
+        {
+            if (object_is_fixed_artifact(&forge) && forge.name1)
+                a_info[forge.name1].generated = FALSE;
+            if (forge.name3)
+                a_info[forge.name3].generated = FALSE;
+            object_wipe(&forge);
+            continue;
+        }
+
+        drop_near(&forge, -1, py, px);
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 static bool _bounty_claim_reward(void)
 {
     int old_object_level;
@@ -2084,7 +2124,8 @@ static bool _bounty_claim_reward(void)
     reward_level = MAX(bounty_level + 5, r_info[bounty_r_idx].level + 5);
     old_object_level = object_level;
     object_level = reward_level;
-    acquirement(py, px, 1, TRUE, FALSE, ORIGIN_BOUNTY_REWARD);
+    if (!_bounty_drop_reward())
+        msg_print("软件漏洞……你错过了你的悬赏奖励！");
     object_level = old_object_level;
 
     msg_print("你领取了悬赏奖励。");
