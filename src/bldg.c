@@ -1895,6 +1895,284 @@ static bool kankin(void)
     return TRUE;
 }
 
+static bool _bounty_valid(void)
+{
+    if (bounty_status == BOUNTY_STATUS_NONE) return FALSE;
+    if (bounty_dungeon <= 0 || bounty_dungeon >= max_d_idx) return FALSE;
+    if (bounty_r_idx <= 0 || bounty_r_idx >= max_r_idx) return FALSE;
+    if (bounty_level <= 0) return FALSE;
+    if (bounty_total <= 0) return FALSE;
+    return TRUE;
+}
+
+static void _bounty_clear(void)
+{
+    bounty_status = BOUNTY_STATUS_NONE;
+    bounty_dungeon = 0;
+    bounty_level = 0;
+    bounty_r_idx = 0;
+    bounty_total = 0;
+    bounty_remaining = 0;
+}
+
+static int _bounty_choose_dungeon(void)
+{
+    int choices[64];
+    int ct = 0;
+    int i;
+
+    for (i = 1; i < max_d_idx && ct < 64; i++)
+    {
+        dungeon_info_type *d_ptr = &d_info[i];
+        if (d_ptr->flags1 & DF1_SUPPRESSED) continue;
+        if (d_ptr->maxdepth <= 0) continue;
+        if (d_ptr->mindepth <= 0) continue;
+        if (max_dlv[i] < d_ptr->mindepth) continue;
+        choices[ct++] = i;
+    }
+
+    if (ct) return choices[randint0(ct)];
+    if (p_ptr->recall_dungeon > 0 && p_ptr->recall_dungeon < max_d_idx)
+        return p_ptr->recall_dungeon;
+    return DUNGEON_ANGBAND;
+}
+
+static int _bounty_choose_level(int dungeon)
+{
+    dungeon_info_type *d_ptr = &d_info[dungeon];
+    int base = max_dlv[dungeon];
+    int level = 0;
+    int i;
+
+    if (base < d_ptr->mindepth) base = d_ptr->mindepth;
+
+    for (i = 0; i < 20; i++)
+    {
+        level = base + randint0(7) - 3;
+        if (one_in_(5)) level += randint1(2);
+        if (level < d_ptr->mindepth) level = d_ptr->mindepth;
+        if (level > d_ptr->maxdepth) level = d_ptr->maxdepth;
+        if (!level_is_questlike(dungeon, level)) return level;
+    }
+
+    if (level < d_ptr->mindepth) level = d_ptr->mindepth;
+    if (level > d_ptr->maxdepth) level = d_ptr->maxdepth;
+    return level;
+}
+
+static bool _bounty_mon_ok(int r_idx, int level)
+{
+    monster_race *r_ptr;
+
+    if (r_idx <= 0 || r_idx >= max_r_idx) return FALSE;
+    r_ptr = &r_info[r_idx];
+    if (!r_ptr->name) return FALSE;
+    if (r_ptr->flags1 & RF1_UNIQUE) return FALSE;
+    if (r_ptr->flags1 & RF1_NO_QUEST) return FALSE;
+    if (r_ptr->flags2 & RF2_MULTIPLY) return FALSE;
+    if (r_ptr->flags7 & RF7_UNIQUE2) return FALSE;
+    if (r_ptr->flags7 & RF7_AQUATIC) return FALSE;
+    if (r_ptr->level < MAX(1, level - 8)) return FALSE;
+    if (r_ptr->level > level + 7) return FALSE;
+    return TRUE;
+}
+
+static bool _bounty_mon_ok_loose(int r_idx, int level)
+{
+    monster_race *r_ptr;
+
+    if (r_idx <= 0 || r_idx >= max_r_idx) return FALSE;
+    r_ptr = &r_info[r_idx];
+    if (!r_ptr->name) return FALSE;
+    if (r_ptr->flags1 & RF1_UNIQUE) return FALSE;
+    if (r_ptr->flags1 & RF1_NO_QUEST) return FALSE;
+    if (r_ptr->flags2 & RF2_MULTIPLY) return FALSE;
+    if (r_ptr->flags7 & RF7_UNIQUE2) return FALSE;
+    if (r_ptr->flags7 & RF7_AQUATIC) return FALSE;
+    if (r_ptr->level < MAX(1, level - 15)) return FALSE;
+    if (r_ptr->level > level + 15) return FALSE;
+    return TRUE;
+}
+
+static int _bounty_choose_monster(int level)
+{
+    int choices[256];
+    int ct = 0;
+    int i;
+
+    for (i = 1; i < max_r_idx && ct < 256; i++)
+    {
+        if (_bounty_mon_ok(i, level))
+            choices[ct++] = i;
+    }
+
+    if (!ct)
+    {
+        for (i = 1; i < max_r_idx && ct < 256; i++)
+        {
+            if (_bounty_mon_ok_loose(i, level))
+                choices[ct++] = i;
+        }
+    }
+
+    if (!ct) return 0;
+    return choices[randint0(ct)];
+}
+
+static int _bounty_choose_count(int level, int r_idx)
+{
+    int ct = 1 + level / 25;
+    monster_race *r_ptr = &r_info[r_idx];
+
+    if (r_ptr->level + 5 < level) ct++;
+    if (ct < 1) ct = 1;
+    if (ct > 5) ct = 5;
+    return ct;
+}
+
+static void _bounty_describe(void)
+{
+    clear_bldg(4, 18);
+    c_put_str(TERM_YELLOW, "悬赏任务", 5, 10);
+    c_put_str(TERM_WHITE, format("目标：%s x%d",
+        monster_race_display_name(bounty_r_idx), bounty_total), 7, 10);
+    c_put_str(TERM_WHITE, format("地点：%s 第%d层",
+        dungeon_display_name(bounty_dungeon), bounty_level), 8, 10);
+    if (bounty_status == BOUNTY_STATUS_ACTIVE)
+        c_put_str(TERM_WHITE, format("剩余：%d", bounty_remaining), 10, 10);
+    else if (bounty_status == BOUNTY_STATUS_DONE)
+        c_put_str(TERM_L_GREEN, "目标已经清除。回来领取奖励。", 10, 10);
+}
+
+static bool _bounty_create(void)
+{
+    int dungeon = _bounty_choose_dungeon();
+    int level = _bounty_choose_level(dungeon);
+    int r_idx = _bounty_choose_monster(level);
+    int ct;
+
+    if (!r_idx)
+    {
+        msg_print("现在没有合适的悬赏任务。");
+        return FALSE;
+    }
+
+    ct = _bounty_choose_count(level, r_idx);
+    bounty_status = BOUNTY_STATUS_ACTIVE;
+    bounty_dungeon = dungeon;
+    bounty_level = level;
+    bounty_r_idx = r_idx;
+    bounty_total = ct;
+    bounty_remaining = ct;
+    _bounty_describe();
+    return TRUE;
+}
+
+static bool _bounty_claim_reward(void)
+{
+    int old_object_level;
+    int reward_level;
+
+    if (!_bounty_valid())
+    {
+        _bounty_clear();
+        return FALSE;
+    }
+
+    if (bounty_status != BOUNTY_STATUS_DONE) return FALSE;
+
+    reward_level = MAX(bounty_level + 5, r_info[bounty_r_idx].level + 5);
+    old_object_level = object_level;
+    object_level = reward_level;
+    acquirement(py, px, 1, TRUE, FALSE, ORIGIN_BOUNTY_REWARD);
+    object_level = old_object_level;
+
+    msg_print("你领取了悬赏奖励。");
+    virtue_add(VIRTUE_JUSTICE, 3);
+    gain_fame(1);
+    _bounty_clear();
+    return TRUE;
+}
+
+static void bounty_mission(void)
+{
+    if (!_bounty_valid())
+    {
+        _bounty_clear();
+        if (_bounty_create())
+            msg_print("前往指定地点，清除目标后回来领取奖励。");
+        return;
+    }
+
+    if (bounty_status == BOUNTY_STATUS_DONE)
+    {
+        _bounty_describe();
+        if (get_check("领取悬赏奖励？"))
+            _bounty_claim_reward();
+        return;
+    }
+
+    _bounty_describe();
+    if (get_check("放弃当前悬赏任务？"))
+    {
+        _bounty_clear();
+        msg_print("你放弃了当前悬赏任务。");
+    }
+    else
+        msg_print("悬赏仍在进行中。");
+}
+
+void bounty_on_generate(int dungeon, int level)
+{
+    int i, attempts, placed = 0;
+
+    if (!_bounty_valid()) return;
+    if (bounty_status != BOUNTY_STATUS_ACTIVE) return;
+    if (bounty_dungeon != dungeon || bounty_level != level) return;
+
+    for (i = 0; i < bounty_remaining; i++)
+    {
+        for (attempts = 0; attempts < 500; attempts++)
+        {
+            int y = randint1(cur_hgt - 2);
+            int x = randint1(cur_wid - 2);
+
+            if (!cave_empty_bold(y, x)) continue;
+            if (!place_monster_aux(0, y, x, bounty_r_idx, PM_ALLOW_SLEEP | PM_NO_KAGE | PM_NO_PET)) continue;
+
+            m_list[hack_m_idx_ii].mflag2 |= MFLAG2_BOUNTY | MFLAG2_NOPET;
+            placed++;
+            break;
+        }
+    }
+
+    if (placed)
+        msg_print("你感觉到附近有悬赏目标的踪迹。");
+}
+
+void bounty_on_kill_mon(monster_type *m_ptr)
+{
+    if (!_bounty_valid()) return;
+    if (bounty_status != BOUNTY_STATUS_ACTIVE) return;
+    if (!(m_ptr->mflag2 & MFLAG2_BOUNTY)) return;
+    if (m_ptr->r_idx != bounty_r_idx) return;
+    if (dungeon_type != bounty_dungeon || dun_level != bounty_level) return;
+
+    if (bounty_remaining > 0)
+        bounty_remaining--;
+
+    if (bounty_remaining <= 0)
+    {
+        bounty_remaining = 0;
+        bounty_status = BOUNTY_STATUS_DONE;
+        msg_print("悬赏目标已经全部清除。回警察局或猎人局领取奖励吧。");
+    }
+    else
+    {
+        msg_format("悬赏目标剩余%d只。", bounty_remaining);
+    }
+}
+
 bool get_nightmare(int r_idx)
 {
     monster_race *r_ptr = &r_info[r_idx];
@@ -4101,6 +4379,9 @@ static void bldg_process_command(building_type *bldg, int i)
         break;
     case BACT_KANKIN:
         kankin();
+        break;
+    case BACT_BOUNTY_MISSION:
+        bounty_mission();
         break;
     case BACT_HEIKOUKA:
         msg_print("你接受了平衡仪式。");

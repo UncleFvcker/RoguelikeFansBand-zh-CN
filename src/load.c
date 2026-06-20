@@ -923,7 +923,16 @@ static void rd_extra(savefile_ptr file)
     else p_ptr->lv_kills = savefile_read_s16b(file);
     if (savefile_is_older_than(file, 1,0,0,0)) p_ptr->pet_lv_kills = 0;
     else p_ptr->pet_lv_kills = savefile_read_s16b(file);
-    for (i = 0; i < 16; i++) (void)savefile_read_s32b(file);
+    {
+        s32b future[16];
+        for (i = 0; i < 16; i++) future[i] = savefile_read_s32b(file);
+        bounty_status = future[0];
+        bounty_dungeon = future[1];
+        bounty_level = future[2];
+        bounty_r_idx = future[3];
+        bounty_total = future[4];
+        bounty_remaining = future[5];
+    }
     wipe_labels();
     if (!savefile_is_older_than(file, 1,0,0,0))
     {

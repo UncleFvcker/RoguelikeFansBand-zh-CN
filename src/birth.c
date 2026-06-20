@@ -181,6 +181,12 @@ static void player_wipe(void)
     (void)WIPE(p_ptr, player_type);
     p_ptr->mimic_form = MIMIC_NONE;
 
+    bounty_status = 0;
+    bounty_dungeon = 0;
+    bounty_level = 0;
+    bounty_r_idx = 0;
+    bounty_total = 0;
+    bounty_remaining = 0;
 
     /* Reset the objects */
     a_info_reset(FALSE);

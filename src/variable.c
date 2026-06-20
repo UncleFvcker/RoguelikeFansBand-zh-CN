@@ -134,6 +134,12 @@ s16b num_repro_kill;
 s16b object_level;        /* Current object creation level */
 s16b monster_level;        /* Current monster creation level */
 s16b base_level;        /* Base dungeon level */
+s16b bounty_status = 0;      /* 0 none, 1 active, 2 ready to claim */
+s16b bounty_dungeon = 0;
+s16b bounty_level = 0;
+s16b bounty_r_idx = 0;
+s16b bounty_total = 0;
+s16b bounty_remaining = 0;
 
 s32b game_turn;                /* Current game turn */
 s32b game_turn_limit;        /* Limit of game turn */

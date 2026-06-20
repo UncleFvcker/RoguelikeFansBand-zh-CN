@@ -1951,6 +1951,8 @@ void generate_cave(void)
                 if (okay && q)
                     okay = quest_post_generate(q);
             }
+            if (okay)
+                bounty_on_generate(dungeon_type, dun_level);
         }
 
 

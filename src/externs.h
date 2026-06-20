@@ -173,6 +173,12 @@ extern s16b num_repro_kill;
 extern s16b object_level;
 extern s16b monster_level;
 extern s16b base_level;
+extern s16b bounty_status;
+extern s16b bounty_dungeon;
+extern s16b bounty_level;
+extern s16b bounty_r_idx;
+extern s16b bounty_total;
+extern s16b bounty_remaining;
 extern s32b game_turn;
 extern s32b game_turn_limit;
 extern s32b player_turn;
@@ -951,6 +957,8 @@ extern void materials_add(int id, int amount);
 extern int materials_count(int id);
 extern void materials_on_mined(feature_type *old_f_ptr);
 extern void materials_on_monster_death(monster_type *m_ptr, bool eligible);
+extern void bounty_on_generate(int dungeon, int level);
+extern void bounty_on_kill_mon(monster_type *m_ptr);
 
 /* cmd5.c */
 extern cptr spell_category_name(int tval);

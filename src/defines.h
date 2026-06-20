@@ -2850,6 +2850,7 @@ enum summon_specific_e {
 #define MFLAG2_SPAWN            0x00400000   /* Monster was randomly spawned mid-level */
 #define MFLAG2_NATIVE           0x00800000   /* Monster is a quest native */
 #define MFLAG2_KNOWN            0x01000000   /* Player is or has been aware of monster's identity */
+#define MFLAG2_BOUNTY           0x02000000   /* Monster counts for the active bounty mission */
 
 /*
  * Object Flags (OF_*)
@@ -4197,6 +4198,14 @@ extern int PlayerUID;
 #define BACT_CORNY_CASH_IN          62
 #define BACT_VIEW_POLICY            63
 #define BACT_VIEW_POSTER            64
+#define BACT_BOUNTY_MISSION         65
+
+/*
+ * Bounty mission status
+ */
+#define BOUNTY_STATUS_NONE          0
+#define BOUNTY_STATUS_ACTIVE        1
+#define BOUNTY_STATUS_DONE          2
 
 /*
  * Initialization flags
@@ -6144,6 +6153,7 @@ enum {
     ORIGIN_CRAFTING,            /* created by crafting */
     ORIGIN_MUNDANITY,           /* created by mundanity */
     ORIGIN_MYSTERY,             /* created in a mysterious way */
+    ORIGIN_BOUNTY_REWARD,       /* reward for a bounty mission */
 
     ORIGIN_MAX
 };

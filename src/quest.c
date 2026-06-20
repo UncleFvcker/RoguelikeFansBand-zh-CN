@@ -1685,6 +1685,26 @@ bool quests_allow_feeling(void)
 /************************************************************************
  * Quests: Display
  ***********************************************************************/
+static void _bounty_doc(doc_ptr doc)
+{
+    if (bounty_status == BOUNTY_STATUS_NONE) return;
+    if (bounty_dungeon <= 0 || bounty_dungeon >= max_d_idx) return;
+    if (bounty_r_idx <= 0 || bounty_r_idx >= max_r_idx) return;
+    if (bounty_level <= 0 || bounty_total <= 0) return;
+
+    doc_insert(doc, "<color:B>当前悬赏任务</color>\n");
+    doc_printf(doc, "<color:%c>悬赏：%s x%d</color>\n",
+        (bounty_status == BOUNTY_STATUS_DONE) ? 'G' : 'y',
+        monster_race_display_name(bounty_r_idx), bounty_total);
+    doc_printf(doc, "    地点：%s 第%d层\n",
+        dungeon_display_name(bounty_dungeon), bounty_level);
+    if (bounty_status == BOUNTY_STATUS_DONE)
+        doc_insert(doc, "    目标已经清除，请回警察局或猎人局领取奖励。\n");
+    else
+        doc_printf(doc, "    剩余：%d\n", bounty_remaining);
+    doc_newline(doc);
+}
+
 void quests_display(void)
 {
     doc_ptr doc = doc_alloc(80);
@@ -1732,6 +1752,8 @@ void quests_display(void)
         doc_newline(doc);
     }
     vec_free(v);
+
+    _bounty_doc(doc);
 
     quests_doc(doc);
 

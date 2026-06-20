@@ -306,6 +306,11 @@ bool display_origin(object_type *o_ptr, doc_ptr doc)
             doc_printf(doc, "作为完成%s的奖励获得。", paikka_text);
             break;
         }
+        case ORIGIN_BOUNTY_REWARD:
+        {
+            doc_insert(doc, "来源于悬赏任务的奖励。");
+            break;
+        }
         case ORIGIN_ANGBAND_REWARD:
         {
             doc_printf(doc, "%s时由楼层守卫掉落。", paikka_text);
