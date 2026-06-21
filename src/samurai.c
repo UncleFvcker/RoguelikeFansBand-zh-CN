@@ -1190,7 +1190,7 @@ void samurai_concentration_spell(int cmd, variant *res)
         var_set_string(res, "气合");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "集中精神，回复一部分法力。若你正在照看宠物或维持架势，则无法使用。");
         break;
     case SPELL_CAST:
     {
@@ -1224,7 +1224,7 @@ void samurai_posture_spell(int cmd, variant *res)
         var_set_string(res, "采取守备架势");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "选择并采取一种武士守备架势。你必须装备近战武器才能使用。");
         break;
     case SPELL_CAST:
         var_set_bool(res, FALSE);

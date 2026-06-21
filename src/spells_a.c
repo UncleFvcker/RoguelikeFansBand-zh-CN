@@ -190,7 +190,7 @@ void android_blaster_spell(int cmd, variant *res)
         var_set_string(res, "爆能枪");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "向选定方向发射一束导弹能量。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(0, 0, spell_power(5 + p_ptr->lev)));
@@ -252,7 +252,7 @@ void android_beam_cannon_spell(int cmd, variant *res)
         var_set_string(res, "光束炮");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "向选定方向发射一束威力更强的导弹光束。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(0, 0, spell_power(25 + p_ptr->lev * 3)));

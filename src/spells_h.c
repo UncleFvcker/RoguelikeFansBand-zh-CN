@@ -539,7 +539,7 @@ void kiss_of_succubus_spell(int cmd, variant *res)
         var_set_string(res, "魅魔之吻");
         break;
     case SPELL_DESC:
-        var_set_string(res, "发射一个时空(Nexus)法球。");
+        var_set_string(res, "发射一个时空法球。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(0, 0, dam));

@@ -662,38 +662,51 @@ doc_pos_t doc_find_bookmark_by_display_text(doc_ptr doc, cptr text)
     return doc_pos_invalid();
 }
 
-static bool _line_test_str(doc_char_ptr cell, int ncell, cptr what, int nwhat)
+static bool _doc_line_find_utf8(doc_ptr doc, int y, int x, int ncell, cptr what, int *start, int *stop)
 {
-    int i;
+    char buf[4096];
+    int byte_to_x[4096];
+    int byte_after_x[4096];
+    int cx;
+    int pos = 0;
+    int nwhat = (int)strlen(what);
+    char *hit;
+    int off;
 
-    if (ncell < nwhat)
-        return FALSE;
+    if (!what || !what[0]) return FALSE;
+    if (y < 0 || y > doc->cursor.y) return FALSE;
 
-    for (i = 0; i < nwhat; i++, cell++)
+    for (cx = x; cx < x + ncell && cx < doc->width && pos < (int)sizeof(buf) - 5; cx++)
     {
-        char c = cell->c ? cell->c : ' ';
-        assert(i < ncell);
-        if (c != what[i]) break;
+        doc_char_ptr cell = doc_char(doc, doc_pos_create(cx, y));
+        u32b cp = cell->uc ? cell->uc : (byte)cell->c;
+        char tmp[4];
+        int len, wid, i;
+
+        if (cp == _DOC_UC_WIDE_TRAIL) continue;
+        if (!cp) cp = ' ';
+
+        len = _doc_utf8_encode(cp, tmp);
+        wid = _doc_utf8_width(cp);
+        if (pos + len >= (int)sizeof(buf)) break;
+
+        for (i = 0; i < len; i++)
+        {
+            byte_to_x[pos + i] = cx;
+            byte_after_x[pos + i] = cx + wid;
+        }
+        memcpy(buf + pos, tmp, len);
+        pos += len;
     }
+    buf[pos] = '\0';
 
-    if (i == nwhat)
-        return TRUE;
+    hit = strstr(buf, what);
+    if (!hit) return FALSE;
 
-    return FALSE;
-}
-
-static int _line_find_str(doc_char_ptr cell, int ncell, cptr what)
-{
-    int i;
-    int nwhat = strlen(what);
-
-    for (i = 0; i < ncell - nwhat; i++)
-    {
-        if (_line_test_str(cell + i, ncell - i, what, nwhat))
-            return i;
-    }
-
-    return -1;
+    off = (int)(hit - buf);
+    *start = byte_to_x[off];
+    *stop = byte_after_x[off + nwhat - 1];
+    return TRUE;
 }
 
 doc_pos_t doc_find_next(doc_ptr doc, cptr text, doc_pos_t start)
@@ -704,15 +717,14 @@ doc_pos_t doc_find_next(doc_ptr doc, cptr text, doc_pos_t start)
     {
         int          x = (y == start.y) ? start.x : 0;
         int          ncell = doc->width - x;
-        doc_char_ptr cell = doc_char(doc, doc_pos_create(x, y));
-        int          i = _line_find_str(cell, ncell, text);
+        int          hit_start, hit_stop;
 
-        if (i >= 0)
+        if (_doc_line_find_utf8(doc, y, x, ncell, text, &hit_start, &hit_stop))
         {
-            doc->selection.start.x = x + i;
+            doc->selection.start.x = hit_start;
             doc->selection.start.y = y;
 
-            doc->selection.stop.x = x + i + strlen(text);
+            doc->selection.stop.x = hit_stop;
             doc->selection.stop.y = y;
 
             return doc->selection.start;
@@ -730,15 +742,14 @@ doc_pos_t doc_find_prev(doc_ptr doc, cptr text, doc_pos_t start)
     for (y = start.y; y >= 0; y--)
     {
         int          ncell = (y == start.y) ? start.x - 1 : doc->width;
-        doc_char_ptr cell = doc_char(doc, doc_pos_create(0, y));
-        int          i = _line_find_str(cell, ncell, text);
+        int          hit_start, hit_stop;
 
-        if (i >= 0)
+        if (_doc_line_find_utf8(doc, y, 0, ncell, text, &hit_start, &hit_stop))
         {
-            doc->selection.start.x = i;
+            doc->selection.start.x = hit_start;
             doc->selection.start.y = y;
 
-            doc->selection.stop.x = i + strlen(text);
+            doc->selection.stop.x = hit_stop;
             doc->selection.stop.y = y;
 
             return doc->selection.start;

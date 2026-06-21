@@ -1637,7 +1637,7 @@ static void _nexus_ball_spell(int cmd, variant *res)
         var_set_string(res, "时空球");
         break;
     case SPELL_DESC:
-        var_set_string(res, "在选定目标上生成一颗时空(Nexus)球。");
+        var_set_string(res, "在选定目标上生成一颗时空球。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(0, 0, spell_power(p_ptr->lev + 20 + p_ptr->to_d_spell)));
@@ -1699,7 +1699,7 @@ static void _nexus_jump_spell(int cmd, variant *res)
         var_set_string(res, "时空跳跃");
         break;
     case SPELL_DESC:
-        var_set_string(res, "当你跳跃到安全地带时，生成一颗时空(Nexus)球。");
+        var_set_string(res, "当你跳跃到安全地带时，生成一颗时空球。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(0, 0, _nexus_jump_dam()));
@@ -1724,7 +1724,7 @@ static void _greater_nexus_jump_spell(int cmd, variant *res)
         var_set_string(res, "高等时空跳跃");
         break;
     case SPELL_DESC:
-        var_set_string(res, "当你跳跃到安全地带时，生成一颗巨大的时空(Nexus)球。");
+        var_set_string(res, "当你跳跃到安全地带时，生成一颗巨大的时空球。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(0, 0, _greater_nexus_jump_dam()));

@@ -299,7 +299,7 @@ void hex_stop_spelling_spell(int cmd, variant *res)
         var_set_string(res, "停止施法");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "停止当前正在持续施放的咒术。");
         break;
     case SPELL_ENERGY:
         var_set_int(res, 10);

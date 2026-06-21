@@ -2891,6 +2891,158 @@ void clear_from(int row)
 }
 
 
+static int _askfor_utf8_decode(cptr s, int max, u32b *cp)
+{
+    byte b0 = (byte)s[0];
+
+    if (b0 < 0x80)
+    {
+        *cp = b0;
+        return 1;
+    }
+    if ((b0 & 0xE0) == 0xC0 && max >= 2)
+    {
+        byte b1 = (byte)s[1];
+        if ((b1 & 0xC0) == 0x80)
+        {
+            u32b c = ((u32b)(b0 & 0x1F) << 6) | (u32b)(b1 & 0x3F);
+            if (c >= 0x80)
+            {
+                *cp = c;
+                return 2;
+            }
+        }
+    }
+    if ((b0 & 0xF0) == 0xE0 && max >= 3)
+    {
+        byte b1 = (byte)s[1];
+        byte b2 = (byte)s[2];
+        if ((b1 & 0xC0) == 0x80 && (b2 & 0xC0) == 0x80)
+        {
+            u32b c = ((u32b)(b0 & 0x0F) << 12) | ((u32b)(b1 & 0x3F) << 6) | (u32b)(b2 & 0x3F);
+            if (c >= 0x800 && !(0xD800 <= c && c <= 0xDFFF))
+            {
+                *cp = c;
+                return 3;
+            }
+        }
+    }
+    if ((b0 & 0xF8) == 0xF0 && max >= 4)
+    {
+        byte b1 = (byte)s[1];
+        byte b2 = (byte)s[2];
+        byte b3 = (byte)s[3];
+        if ((b1 & 0xC0) == 0x80 && (b2 & 0xC0) == 0x80 && (b3 & 0xC0) == 0x80)
+        {
+            u32b c = ((u32b)(b0 & 0x07) << 18) | ((u32b)(b1 & 0x3F) << 12) | ((u32b)(b2 & 0x3F) << 6) | (u32b)(b3 & 0x3F);
+            if (0x10000 <= c && c <= 0x10FFFF)
+            {
+                *cp = c;
+                return 4;
+            }
+        }
+    }
+
+    *cp = b0;
+    return 1;
+}
+
+static int _askfor_utf8_width(u32b cp)
+{
+    if ( (0x1100 <= cp && cp <= 0x115F)
+      || (0x2E80 <= cp && cp <= 0xA4CF)
+      || (0xAC00 <= cp && cp <= 0xD7A3)
+      || (0xF900 <= cp && cp <= 0xFAFF)
+      || (0xFE10 <= cp && cp <= 0xFE19)
+      || (0xFE30 <= cp && cp <= 0xFE6F)
+      || (0xFF00 <= cp && cp <= 0xFF60)
+      || (0xFFE0 <= cp && cp <= 0xFFE6)
+      || (0x20000 <= cp && cp <= 0x3FFFD) )
+    {
+        return 2;
+    }
+    return 1;
+}
+
+static int _askfor_utf8_text_width(cptr s, int bytes)
+{
+    int i = 0;
+    int w = 0;
+
+    while (s[i] && (bytes < 0 || i < bytes))
+    {
+        u32b cp;
+        int max = (bytes < 0) ? (int)strlen(s + i) : bytes - i;
+        int len = _askfor_utf8_decode(s + i, max, &cp);
+
+        w += _askfor_utf8_width(cp);
+        i += len;
+    }
+
+    return w;
+}
+
+static int _askfor_utf8_next(cptr s, int pos)
+{
+    u32b cp;
+    int len;
+
+    if (!s[pos]) return pos;
+    len = _askfor_utf8_decode(s + pos, (int)strlen(s + pos), &cp);
+    return pos + len;
+}
+
+static int _askfor_utf8_prev(cptr s, int pos)
+{
+    int i = 0;
+    int prev = 0;
+
+    while (s[i] && i < pos)
+    {
+        prev = i;
+        i = _askfor_utf8_next(s, i);
+    }
+
+    return prev;
+}
+
+static bool _askfor_read_utf8_char(int first, bool numpad_cursor, char *out, int *out_len, int *out_width)
+{
+    int need = 1;
+    int i;
+    u32b cp;
+
+    out[0] = (char)first;
+    out[1] = '\0';
+    *out_len = 1;
+    *out_width = 1;
+
+    if (first < 0x80)
+    {
+        if (!isprint(first)) return FALSE;
+        return TRUE;
+    }
+
+    if ((first & 0xE0) == 0xC0) need = 2;
+    else if ((first & 0xF0) == 0xE0) need = 3;
+    else if ((first & 0xF8) == 0xF0) need = 4;
+    else return FALSE;
+
+    for (i = 1; i < need; i++)
+    {
+        int skey = inkey_special(numpad_cursor);
+        if ((skey & SKEY_MASK) || (skey & 0xC0) != 0x80) return FALSE;
+        out[i] = (char)(skey & 0xFF);
+    }
+    out[need] = '\0';
+
+    if (_askfor_utf8_decode(out, need, &cp) != need) return FALSE;
+    *out_len = need;
+    *out_width = _askfor_utf8_width(cp);
+    return TRUE;
+}
+
+
 
 
 /*
@@ -2915,6 +3067,7 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
 {
     int y, x;
     int pos = 0;
+    int display_len;
 
     /*
      * Text color
@@ -2935,8 +3088,10 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
     /* Paranoia -- check column */
     if ((x < 0) || (x >= Term->wid - 2)) x = 0;
 
-    /* Restrict the length */
-    if (x + len > Term->wid - 2) len = Term->wid - 2 - x;
+    /* Restrict the displayed width */
+    display_len = len;
+    if (x + display_len > Term->wid - 2) display_len = Term->wid - 2 - x;
+    if (display_len < 1) display_len = 1;
 
     /* Paranoia -- Clip the default entry */
     buf[len] = '\0';
@@ -2948,11 +3103,11 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
         int skey;
 
         /* Display the string */
-        Term_erase(x, y, len);
-        Term_putstr(x, y, -1, color, buf);
+        Term_erase(x, y, display_len);
+        Term_putstr(x, y, display_len, color, buf);
 
         /* Place cursor */
-        Term_gotoxy(x + pos, y);
+        Term_gotoxy(x + _askfor_utf8_text_width(buf, pos), y);
 
         /* Get a special key code */
         skey = inkey_special(numpad_cursor);
@@ -2963,28 +3118,14 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
         case SKEY_LEFT:
         case KTRL('b'):
         {
-            int i = 0;
-
             /* Now on insert mode */
             color = TERM_WHITE;
 
             /* No move at beginning of line */
             if (0 == pos) break;
 
-            while (TRUE)
-            {
-                int next_pos = i + 1;
-
-
-                /* Is there the cursor at next position? */ 
-                if (next_pos >= pos) break;
-
-                /* Move to next */
-                i = next_pos;
-            }
-
             /* Get previous position */
-            pos = i;
+            pos = _askfor_utf8_prev(buf, pos);
 
             break;
         }
@@ -2997,7 +3138,7 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
             /* No move at end of line */
             if ('\0' == buf[pos]) break;
 
-            pos++;
+            pos = _askfor_utf8_next(buf, pos);
 
             break;
 
@@ -3014,37 +3155,23 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
         case '\010':
             /* Backspace */
         {
-            int i = 0;
-
             /* Now on insert mode */
             color = TERM_WHITE;
 
             /* No move at beginning of line */
             if (0 == pos) break;
 
-            while (TRUE)
-            {
-                int next_pos = i + 1;
-
-
-                /* Is there the cursor at next position? */ 
-                if (next_pos >= pos) break;
-
-                /* Move to next */
-                i = next_pos;
-            }
-
             /* Get previous position */
-            pos = i;
+            pos = _askfor_utf8_prev(buf, pos);
 
-            /* Fall through to 'Delete key' */
         }
 
+        /* fall through */
         case 0x7F:
         case KTRL('d'):
             /* Delete key */
         {
-            int dst, src;
+            int src;
 
             /* Now on insert mode */
             color = TERM_WHITE;
@@ -3053,14 +3180,10 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
             if ('\0' == buf[pos]) break;
 
             /* Position of next character */
-            src = pos + 1;
-
-
-            dst = pos;
+            src = _askfor_utf8_next(buf, pos);
 
             /* Move characters at src to dst */
-            while ('\0' != (buf[dst++] = buf[src++]))
-                /* loop */;
+            memmove(buf + pos, buf + src, strlen(buf + src) + 1);
 
             break;
         }
@@ -3069,14 +3192,13 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
         {
             /* Insert a character */
 
-            char tmp[100];
-            char c;
+            char tmp[5];
+            int c_len, c_width;
+            int cur_width;
+            int used;
 
             /* Ignore special keys */
             if (skey & SKEY_MASK) break;
-
-            /* Get a character code */
-            c = (char)skey;
 
             if (color == TERM_YELLOW)
             {
@@ -3087,22 +3209,24 @@ bool askfor_aux(char *buf, int len, bool numpad_cursor)
                 color = TERM_WHITE;
             }
 
-            /* Save right part of string */
-            strcpy(tmp, buf + pos);
-            if (pos < len && isprint(c))
+            if (!_askfor_read_utf8_char(skey & 0xFF, numpad_cursor, tmp, &c_len, &c_width))
             {
-                buf[pos++] = c;
+                bell();
+                break;
+            }
+
+            used = strlen(buf);
+            cur_width = _askfor_utf8_text_width(buf, -1);
+            if (used + c_len <= len && cur_width + c_width <= display_len)
+            {
+                memmove(buf + pos + c_len, buf + pos, strlen(buf + pos) + 1);
+                memcpy(buf + pos, tmp, c_len);
+                pos += c_len;
             }
             else
             {
                 bell();
             }
-
-            /* Terminate */
-            buf[pos] = '\0';
-
-            /* Write back the left part of string */
-            my_strcat(buf, tmp, len + 1);
 
             break;
         } /* default: */

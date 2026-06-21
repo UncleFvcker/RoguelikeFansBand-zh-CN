@@ -247,7 +247,7 @@ void sleeping_dust_spell(int cmd, variant *res)
         var_set_string(res, "睡眠粉");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "撒出魔法粉尘，试图使附近怪物陷入沉睡。");
         break;
     case SPELL_CAST:
         msg_print("你撒出一些魔法粉尘……");
@@ -630,7 +630,7 @@ void stone_skin_spell(int cmd, variant *res)
         var_set_string(res, "石肤术");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "暂时硬化皮肤，提升护甲等级。");
         break;
     case SPELL_CAST:
         set_shield(randint1(30) + 20, FALSE);

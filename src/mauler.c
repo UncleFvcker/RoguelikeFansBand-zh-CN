@@ -271,7 +271,7 @@ static void _detect_ferocity_spell(int cmd, variant *res)
         var_set_string(res, "探测凶暴");
         break;
     case SPELL_DESC:
-        var_set_string(res, "探测你附近除无心智(mindless)以外的所有怪物。");
+        var_set_string(res, "探测你附近除无心智者以外的所有怪物。");
         break;
     case SPELL_CAST:
         detect_monsters_mind(DETECT_RAD_DEFAULT);

@@ -264,7 +264,7 @@ static void _mirror_concentration_spell(int cmd, variant *res)
         var_set_string(res, "镜之专注");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "站在镜子上集中精神，回复少量法力。若你有宠物需要照看，则无法专注。");
         break;
     case SPELL_CAST:
         var_set_bool(res, FALSE);

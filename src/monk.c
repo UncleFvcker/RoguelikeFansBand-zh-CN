@@ -449,7 +449,7 @@ void monk_posture_spell(int cmd, variant *res)
         var_set_string(res, "摆出架势");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "选择并摆出一种武僧架势。不同架势会改变你的战斗能力。");
         break;
     case SPELL_CAST:
         var_set_bool(res, FALSE);

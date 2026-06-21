@@ -255,7 +255,7 @@ void mind_blast_spell(int cmd, variant *res)
         var_set_string(res, "心灵震爆");
         break;
     case SPELL_DESC:
-        var_set_string(res, "试图用幽能(psionic energy)轰击你的对手。");
+        var_set_string(res, "试图用心灵能量轰击你的对手。");
         break;
     case SPELL_INFO:
         var_set_string(res, info_damage(spell_power(dice), sides, spell_power(p_ptr->to_d_spell)));
@@ -1163,7 +1163,7 @@ void remove_fear_spell(int cmd, variant *res)
         var_set_string(res, "消除恐惧");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "消除你的恐惧。");
         break;
     case SPELL_CAST:
         fear_clear_p();

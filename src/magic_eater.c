@@ -526,7 +526,7 @@ static void _absorb_magic_spell(int cmd, variant *res)
         var_set_string(res, "吸收魔法");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "吸收一件魔法装置，将其力量储存在体内供日后使用。");
         break;
     case SPELL_CAST:
         var_set_bool(res, gain_magic());

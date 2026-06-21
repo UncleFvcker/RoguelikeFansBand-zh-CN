@@ -8,7 +8,7 @@ void _double_magic_spell(int cmd, variant *res)
         var_set_string(res, "双重施法");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "连续尝试施放两次法术。若第一次施法后你被麻痹或无法继续施法，第二次施法不会发生。");
         break;
     case SPELL_CAST:
         var_set_bool(res, FALSE);

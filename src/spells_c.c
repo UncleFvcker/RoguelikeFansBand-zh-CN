@@ -147,7 +147,7 @@ void clear_mind_spell(int cmd, variant *res)
         var_set_string(res, "头脑清明");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "清空杂念，回复少量法力。若你有宠物需要照看，则无法使用。");
         break;
     case SPELL_SPOIL_DESC:
         var_set_string(res, "玩家回复 2+(L/30) 点法力值(SP)。如果玩家有任何宠物，此技能将无效。");
@@ -300,7 +300,7 @@ void crafting_spell(int cmd, variant *res)
         var_set_string(res, "工匠技艺");
         break;
     case SPELL_DESC:
-        var_set_string(res, "使选定的武器、护甲或弹药成为高级(ego)物品。");
+        var_set_string(res, "使选定的武器、护甲或弹药成为高级物品。");
         break;
     case SPELL_CAST:
     {
@@ -1319,7 +1319,7 @@ void dominate_living_I_spell(int cmd, variant *res)
         var_set_string(res, "支配活物");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "尝试支配选定方向上的一个活物。");
         break;
     case SPELL_CAST:
     {
@@ -1347,7 +1347,7 @@ void dominate_living_II_spell(int cmd, variant *res)
         var_set_string(res, "群体支配活物");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "尝试支配视线内的所有活物。");
         break;
     case SPELL_CAST:
         project_hack(GF_CONTROL_LIVING, p_ptr->lev);

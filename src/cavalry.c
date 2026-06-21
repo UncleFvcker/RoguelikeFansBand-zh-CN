@@ -8,7 +8,7 @@ void rodeo_spell(int cmd, variant *res)
         var_set_string(res, "套马");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "尝试骑上一只相邻的怪物，并在成功后将其驯服。守护者、任务怪物以及过于强大的怪物无法被驯服；失败时你会被甩下来。");
         break;
     case SPELL_CAST:
     {

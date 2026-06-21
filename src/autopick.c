@@ -18,6 +18,157 @@
 
 bool autopick_auto_id(object_type *o_ptr);
 
+static int _autopick_utf8_decode(cptr s, int max, u32b *cp)
+{
+    byte b0 = (byte)s[0];
+
+    if (b0 < 0x80)
+    {
+        *cp = b0;
+        return 1;
+    }
+    if ((b0 & 0xE0) == 0xC0 && max >= 2)
+    {
+        byte b1 = (byte)s[1];
+        if ((b1 & 0xC0) == 0x80)
+        {
+            u32b c = ((u32b)(b0 & 0x1F) << 6) | (u32b)(b1 & 0x3F);
+            if (c >= 0x80)
+            {
+                *cp = c;
+                return 2;
+            }
+        }
+    }
+    if ((b0 & 0xF0) == 0xE0 && max >= 3)
+    {
+        byte b1 = (byte)s[1];
+        byte b2 = (byte)s[2];
+        if ((b1 & 0xC0) == 0x80 && (b2 & 0xC0) == 0x80)
+        {
+            u32b c = ((u32b)(b0 & 0x0F) << 12) | ((u32b)(b1 & 0x3F) << 6) | (u32b)(b2 & 0x3F);
+            if (c >= 0x800 && !(0xD800 <= c && c <= 0xDFFF))
+            {
+                *cp = c;
+                return 3;
+            }
+        }
+    }
+    if ((b0 & 0xF8) == 0xF0 && max >= 4)
+    {
+        byte b1 = (byte)s[1];
+        byte b2 = (byte)s[2];
+        byte b3 = (byte)s[3];
+        if ((b1 & 0xC0) == 0x80 && (b2 & 0xC0) == 0x80 && (b3 & 0xC0) == 0x80)
+        {
+            u32b c = ((u32b)(b0 & 0x07) << 18) | ((u32b)(b1 & 0x3F) << 12) | ((u32b)(b2 & 0x3F) << 6) | (u32b)(b3 & 0x3F);
+            if (0x10000 <= c && c <= 0x10FFFF)
+            {
+                *cp = c;
+                return 4;
+            }
+        }
+    }
+
+    *cp = b0;
+    return 1;
+}
+
+static int _autopick_utf8_width(u32b cp)
+{
+    if ( (0x1100 <= cp && cp <= 0x115F)
+      || (0x2E80 <= cp && cp <= 0xA4CF)
+      || (0xAC00 <= cp && cp <= 0xD7A3)
+      || (0xF900 <= cp && cp <= 0xFAFF)
+      || (0xFE10 <= cp && cp <= 0xFE19)
+      || (0xFE30 <= cp && cp <= 0xFE6F)
+      || (0xFF00 <= cp && cp <= 0xFF60)
+      || (0xFFE0 <= cp && cp <= 0xFFE6)
+      || (0x20000 <= cp && cp <= 0x3FFFD) )
+    {
+        return 2;
+    }
+    return 1;
+}
+
+static int _autopick_utf8_text_width(cptr s, int bytes)
+{
+    int i = 0;
+    int w = 0;
+
+    while (s[i] && (bytes < 0 || i < bytes))
+    {
+        u32b cp;
+        int max = (bytes < 0) ? (int)strlen(s + i) : bytes - i;
+        int len = _autopick_utf8_decode(s + i, max, &cp);
+
+        w += _autopick_utf8_width(cp);
+        i += len;
+    }
+
+    return w;
+}
+
+static int _autopick_utf8_next(cptr s, int pos)
+{
+    u32b cp;
+    int len;
+
+    if (!s[pos]) return pos;
+    len = _autopick_utf8_decode(s + pos, (int)strlen(s + pos), &cp);
+    return pos + len;
+}
+
+static int _autopick_utf8_prev(cptr s, int pos)
+{
+    int i = 0;
+    int prev = 0;
+
+    while (s[i] && i < pos)
+    {
+        prev = i;
+        i = _autopick_utf8_next(s, i);
+    }
+
+    return prev;
+}
+
+static bool _autopick_read_utf8_char(int first, bool numpad_cursor, char *out, int *out_len, int *out_width)
+{
+    int need = 1;
+    int i;
+    u32b cp;
+
+    out[0] = (char)first;
+    out[1] = '\0';
+    *out_len = 1;
+    *out_width = 1;
+
+    if (first < 0x80)
+    {
+        if (!isprint(first)) return FALSE;
+        return TRUE;
+    }
+
+    if ((first & 0xE0) == 0xC0) need = 2;
+    else if ((first & 0xF0) == 0xE0) need = 3;
+    else if ((first & 0xF8) == 0xF0) need = 4;
+    else return FALSE;
+
+    for (i = 1; i < need; i++)
+    {
+        int skey = inkey_special(numpad_cursor);
+        if ((skey & SKEY_MASK) || (skey & 0xC0) != 0x80) return FALSE;
+        out[i] = (char)(skey & 0xFF);
+    }
+    out[need] = '\0';
+
+    if (_autopick_utf8_decode(out, need, &cp) != need) return FALSE;
+    *out_len = need;
+    *out_width = _autopick_utf8_width(cp);
+    return TRUE;
+}
+
 /*
   Rules have one of the following two syntactic forms:
   [Commands] Adjective* Noun [Special-Clause] [:Search-String] [#Inscription-String]
@@ -4170,7 +4321,7 @@ static byte get_string_for_search(object_type **o_handle, cptr *search_strp)
         Term_putstr(col, 0, -1, color, buf);
 
         /* Place cursor */
-        Term_gotoxy(col + pos, 0);
+        Term_gotoxy(col + _autopick_utf8_text_width(buf, pos), 0);
 
         /* Get a special key code */
         skey = inkey_special(TRUE);
@@ -4181,28 +4332,14 @@ static byte get_string_for_search(object_type **o_handle, cptr *search_strp)
         case SKEY_LEFT:
         case KTRL('b'):
         {
-            int i = 0;
-
             /* Now on insert mode */
             color = TERM_WHITE;
 
             /* No move at beginning of line */
             if (0 == pos) break;
 
-            while (TRUE)
-            {
-                int next_pos = i + 1;
-
-
-                /* Is there the cursor at next position? */
-                if (next_pos >= pos) break;
-
-                /* Move to next */
-                i = next_pos;
-            }
-
             /* Get previous position */
-            pos = i;
+            pos = _autopick_utf8_prev(buf, pos);
 
             break;
         }
@@ -4215,7 +4352,7 @@ static byte get_string_for_search(object_type **o_handle, cptr *search_strp)
             /* No move at end of line */
             if ('\0' == buf[pos]) break;
 
-            pos++;
+            pos = _autopick_utf8_next(buf, pos);
 
             break;
 
@@ -4249,37 +4386,23 @@ static byte get_string_for_search(object_type **o_handle, cptr *search_strp)
         {
             /* Backspace */
 
-            int i = 0;
-
             /* Now on insert mode */
             color = TERM_WHITE;
 
             /* No move at beginning of line */
             if (0 == pos) break;
 
-            while (TRUE)
-            {
-                int next_pos = i + 1;
-
-
-                /* Is there the cursor at next position? */
-                if (next_pos >= pos) break;
-
-                /* Move to next */
-                i = next_pos;
-            }
-
             /* Get previous position */
-            pos = i;
+            pos = _autopick_utf8_prev(buf, pos);
 
-            /* Fall through to 'Delete key' */
         }
 
+        /* fall through */
         case 0x7F:
         case KTRL('d'):
             /* Delete key */
         {
-            int dst, src;
+            int src;
 
             /* Now on insert mode */
             color = TERM_WHITE;
@@ -4288,14 +4411,10 @@ static byte get_string_for_search(object_type **o_handle, cptr *search_strp)
             if ('\0' == buf[pos]) break;
 
             /* Position of next character */
-            src = pos + 1;
-
-
-            dst = pos;
+            src = _autopick_utf8_next(buf, pos);
 
             /* Move characters at src to dst */
-            while ('\0' != (buf[dst++] = buf[src++]))
-                /* loop */;
+            memmove(buf + pos, buf + src, strlen(buf + src) + 1);
 
             break;
         }
@@ -4304,14 +4423,13 @@ static byte get_string_for_search(object_type **o_handle, cptr *search_strp)
         {
             /* Insert a character */
 
-            char tmp[100];
-            char c;
+            char tmp[5];
+            int c_len, c_width;
+            int cur_width;
+            int used;
 
             /* Ignore special keys */
             if (skey & SKEY_MASK) break;
-
-            /* Get a character code */
-            c = (char)skey;
 
             /* Was non insert mode? */
             if (color != TERM_WHITE)
@@ -4334,22 +4452,24 @@ static byte get_string_for_search(object_type **o_handle, cptr *search_strp)
                 color = TERM_WHITE;
             }
 
-            /* Save right part of string */
-            strcpy(tmp, buf + pos);
-            if (pos < len && isprint(c))
+            if (!_autopick_read_utf8_char(skey & 0xFF, TRUE, tmp, &c_len, &c_width))
             {
-                buf[pos++] = c;
+                bell();
+                break;
+            }
+
+            used = strlen(buf);
+            cur_width = _autopick_utf8_text_width(buf, -1);
+            if (used + c_len <= len && cur_width + c_width <= len)
+            {
+                memmove(buf + pos + c_len, buf + pos, strlen(buf + pos) + 1);
+                memcpy(buf + pos, tmp, c_len);
+                pos += c_len;
             }
             else
             {
                 bell();
             }
-
-            /* Terminate */
-            buf[pos] = '\0';
-
-            /* Write back the left part of string */
-            my_strcat(buf, tmp, len + 1);
 
             break;
         } /* default: */
@@ -5827,7 +5947,7 @@ static bool do_editor_command(text_body_type *tb, int com_id)
         {
             int len;
 
-            tb->cx--;
+            tb->cx = _autopick_utf8_prev(tb->lines_list[tb->cy], tb->cx);
             len = strlen(tb->lines_list[tb->cy]);
             if (len < tb->cx) tb->cx = len;
 
@@ -5869,7 +5989,7 @@ static bool do_editor_command(text_body_type *tb, int com_id)
         /* Forward */
 
         int len;
-        tb->cx++;
+        tb->cx = _autopick_utf8_next(tb->lines_list[tb->cy], tb->cx);
         len = strlen(tb->lines_list[tb->cy]);
         if (len < tb->cx)
         {
@@ -6254,7 +6374,7 @@ static bool do_editor_command(text_body_type *tb, int com_id)
             tb->dirty_flags |= DIRTY_ALL;
         }
 
-        tb->cx++;
+        tb->cx = _autopick_utf8_next(tb->lines_list[tb->cy], tb->cx);
 
         /* Pass through the end of line to next line */
         len = strlen(tb->lines_list[tb->cy]);
@@ -6325,16 +6445,11 @@ static bool do_editor_command(text_body_type *tb, int com_id)
             break;
         }
 
-        for (i = j = k = 0; tb->lines_list[tb->cy][i] && i < tb->cx; i++)
-        {
-            k = j;
+        k = _autopick_utf8_prev(tb->lines_list[tb->cy], tb->cx);
+        for (i = j = 0; tb->lines_list[tb->cy][i] && i < k; i++)
             buf[j++] = tb->lines_list[tb->cy][i];
-        }
-        while (j > k)
-        {
-            tb->cx--;
-            j--;
-        }
+        i = tb->cx;
+        tb->cx = k;
         for (; tb->lines_list[tb->cy][i]; i++)
             buf[j++] = tb->lines_list[tb->cy][i];
         buf[j] = '\0';
@@ -6633,9 +6748,9 @@ static bool do_editor_command(text_body_type *tb, int com_id)
 
 
 /*
- * Insert single letter at cursor position.
+ * Insert UTF-8 text at cursor position.
  */
-static void insert_single_letter(text_body_type *tb, int key)
+static void insert_text_fragment(text_body_type *tb, cptr text, int text_len)
 {
     int i, j, len;
     char buf[MAX_LINELEN];
@@ -6644,10 +6759,13 @@ static void insert_single_letter(text_body_type *tb, int key)
     for (i = j = 0; tb->lines_list[tb->cy][i] && i < tb->cx; i++)
         buf[j++] = tb->lines_list[tb->cy][i];
 
-    /* Add a character */
-    if (j+1 < MAX_LINELEN)
-        buf[j++] = key;
-    tb->cx++;
+    /* Add text */
+    if (j + text_len < MAX_LINELEN)
+    {
+        memcpy(buf + j, text, text_len);
+        j += text_len;
+        tb->cx += text_len;
+    }
 
     /* Add following */
     for (; tb->lines_list[tb->cy][i] && j + 1 < MAX_LINELEN; i++)
@@ -6851,7 +6969,16 @@ void do_cmd_edit_autopick(void)
         }
 
         /* Place cursor */
-        Term_gotoxy(tb->cx - tb->left, tb->cy - tb->upper + 1);
+        if (tb->cx >= tb->left)
+        {
+            cptr line = tb->lines_list[tb->cy];
+            int cur_x = _autopick_utf8_text_width(line, tb->cx) - _autopick_utf8_text_width(line, tb->left);
+            Term_gotoxy(cur_x, tb->cy - tb->upper + 1);
+        }
+        else
+        {
+            Term_gotoxy(0, tb->cy - tb->upper + 1);
+        }
 
         /* Now clean */
         tb->dirty_flags = 0;
@@ -6888,6 +7015,9 @@ void do_cmd_edit_autopick(void)
         /* Insert a character */
         else if (!iscntrl((unsigned char)key))
         {
+            char input[5];
+            int input_len, input_width;
+
             /* Ignore selection */
             if (tb->mark)
             {
@@ -6897,7 +7027,13 @@ void do_cmd_edit_autopick(void)
                 tb->dirty_flags |= DIRTY_ALL;
             }
 
-            insert_single_letter(tb, key);
+            if (!_autopick_read_utf8_char(key & 0xFF, TRUE, input, &input_len, &input_width))
+            {
+                bell();
+                continue;
+            }
+
+            insert_text_fragment(tb, input, input_len);
 
             /* Next loop */
             continue;

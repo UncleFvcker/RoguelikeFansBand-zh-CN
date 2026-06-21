@@ -684,6 +684,7 @@ static COLORREF win_clr[256];
  * Flag for macro trigger with dump ASCII
  */
 static bool Term_no_press = FALSE;
+static bool Term_suppress_oem2_char = FALSE;
 
 /*
  * Copy and paste
@@ -4513,6 +4514,13 @@ static bool process_keydown(WPARAM wParam, LPARAM lParam)
     if (GetKeyState(VK_SHIFT)   & 0x8000) ms = TRUE;
     if (GetKeyState(VK_MENU)    & 0x8000) ma = TRUE;
 
+    if (wParam == VK_OEM_2 && !mc && !ma)
+    {
+        Term_keypress(ms ? '?' : '/');
+        Term_suppress_oem2_char = TRUE;
+        return TRUE;
+    }
+
     /* Handle "special" keys */
     Term_no_press = FALSE;
     if (special_key[(byte)(wParam)])
@@ -4588,6 +4596,45 @@ static bool process_keydown(WPARAM wParam, LPARAM lParam)
     }
 
     return 0;
+}
+
+static void term_keypress_wchar(WPARAM wParam)
+{
+    static WCHAR high_surrogate = 0;
+    WCHAR wbuf[3];
+    char utf8[8];
+    int wlen = 0;
+    int len, i;
+
+    if (wParam < 0x80)
+    {
+        high_surrogate = 0;
+        Term_keypress((int)wParam);
+        return;
+    }
+
+    if (0xD800 <= wParam && wParam <= 0xDBFF)
+    {
+        high_surrogate = (WCHAR)wParam;
+        return;
+    }
+
+    if (0xDC00 <= wParam && wParam <= 0xDFFF)
+    {
+        if (!high_surrogate) return;
+        wbuf[wlen++] = high_surrogate;
+        wbuf[wlen++] = (WCHAR)wParam;
+        high_surrogate = 0;
+    }
+    else
+    {
+        high_surrogate = 0;
+        wbuf[wlen++] = (WCHAR)wParam;
+    }
+
+    len = WideCharToMultiByte(CP_UTF8, 0, wbuf, wlen, utf8, sizeof(utf8), NULL, NULL);
+    for (i = 0; i < len; i++)
+        Term_keypress((unsigned char)utf8[i]);
 }
 
 
@@ -4673,10 +4720,19 @@ LRESULT FAR PASCAL AngbandWndProc(HWND hWnd, UINT uMsg,
             break;
         }
 
+        case WM_SYSKEYUP:
+        case WM_KEYUP:
+        {
+            if (wParam == VK_OEM_2)
+                Term_suppress_oem2_char = FALSE;
+            break;
+        }
+
         case WM_CHAR:
         {
-            if (Term_no_press) Term_no_press = FALSE;
-            else Term_keypress(wParam);
+            if (Term_suppress_oem2_char) Term_suppress_oem2_char = FALSE;
+            else if (Term_no_press) Term_no_press = FALSE;
+            else term_keypress_wchar(wParam);
             return 0;
         }
 
@@ -5151,10 +5207,19 @@ LRESULT FAR PASCAL AngbandListProc(HWND hWnd, UINT uMsg,
             break;
         }
 
+        case WM_SYSKEYUP:
+        case WM_KEYUP:
+        {
+            if (wParam == VK_OEM_2)
+                Term_suppress_oem2_char = FALSE;
+            break;
+        }
+
         case WM_CHAR:
         {
-            if (Term_no_press) Term_no_press = FALSE;
-            else Term_keypress(wParam);
+            if (Term_suppress_oem2_char) Term_suppress_oem2_char = FALSE;
+            else if (Term_no_press) Term_no_press = FALSE;
+            else term_keypress_wchar(wParam);
             return 0;
         }
 

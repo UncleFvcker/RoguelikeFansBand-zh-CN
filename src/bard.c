@@ -111,7 +111,7 @@ static void _stop_singing_spell(int cmd, variant *res)
         var_set_string(res, "停止唱歌");
         break;
     case SPELL_DESC:
-        var_set_string(res, "");
+        var_set_string(res, "停止当前正在演唱的歌曲。");
         break;
     case SPELL_FLAGS:
         var_set_int(res, PWR_AFRAID | PWR_CONFUSED);
