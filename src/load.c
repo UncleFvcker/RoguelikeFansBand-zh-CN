@@ -861,6 +861,8 @@ static void rd_extra(savefile_ptr file)
 
     p_ptr->ele_immune = savefile_read_s16b(file);
     p_ptr->special_defense = savefile_read_u32b(file);
+    if (!p_ptr->ele_immune)
+        p_ptr->special_defense &= ~(DEFENSE_ACID | DEFENSE_ELEC | DEFENSE_FIRE | DEFENSE_COLD | DEFENSE_POIS);
     p_ptr->knowledge = savefile_read_byte(file);
     _rd_materials(file);
 
@@ -932,6 +934,7 @@ static void rd_extra(savefile_ptr file)
         bounty_r_idx = future[3];
         bounty_total = future[4];
         bounty_remaining = future[5];
+        cooking_sustain = (s16b)MAX(0, MIN(32767, future[6]));
     }
     wipe_labels();
     if (!savefile_is_older_than(file, 1,0,0,0))

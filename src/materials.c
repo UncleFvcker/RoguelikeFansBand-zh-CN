@@ -133,9 +133,19 @@ static int _longer_dur(void)
     return 1200 + p_ptr->lev * 40;
 }
 
+static void _apply_cooking_sustain(int dur)
+{
+    if (cooking_sustain < dur)
+        cooking_sustain = dur;
+    if (p_ptr->food < PY_FOOD_FULL)
+        set_food(PY_FOOD_FULL);
+    p_ptr->redraw |= PR_STATUS;
+}
+
 static void _cook_hearty_stew(void)
 {
     int dur = _longer_dur();
+    _apply_cooking_sustain(dur);
     set_hero(MAX(p_ptr->hero, dur), FALSE);
     set_tim_regen(MAX(p_ptr->tim_regen, dur), FALSE);
     msg_print("这份热汤让你精神振奋。");
@@ -144,6 +154,7 @@ static void _cook_hearty_stew(void)
 static void _cook_miner_meal(void)
 {
     int dur = _long_dur();
+    _apply_cooking_sustain(dur);
     set_blessed(MAX(p_ptr->blessed, dur), FALSE);
     set_tim_infra(MAX(p_ptr->tim_infra, dur), FALSE);
     msg_print("矿工餐让你的感官更加敏锐。");
@@ -152,6 +163,7 @@ static void _cook_miner_meal(void)
 static void _cook_dragon_roast(void)
 {
     int dur = _long_dur();
+    _apply_cooking_sustain(dur);
     set_oppose_base(MAX(p_ptr->oppose_acid, dur), FALSE);
     set_shield(MAX(p_ptr->shield, dur), FALSE);
     msg_print("龙鳞烤肉在你体内留下了炽热的守护感。");
@@ -160,6 +172,7 @@ static void _cook_dragon_roast(void)
 static void _cook_arcane_broth(void)
 {
     int dur = 600 + p_ptr->lev * 20;
+    _apply_cooking_sustain(dur);
     set_fast(MAX(p_ptr->fast, dur), FALSE);
     set_tim_regen(MAX(p_ptr->tim_regen, dur), FALSE);
     msg_print("灵质羹让你的动作变得轻快。");

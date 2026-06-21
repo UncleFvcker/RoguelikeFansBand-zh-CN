@@ -140,6 +140,7 @@ s16b bounty_level = 0;
 s16b bounty_r_idx = 0;
 s16b bounty_total = 0;
 s16b bounty_remaining = 0;
+s16b cooking_sustain = 0;
 
 s32b game_turn;                /* Current game turn */
 s32b game_turn_limit;        /* Limit of game turn */

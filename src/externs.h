@@ -179,6 +179,7 @@ extern s16b bounty_level;
 extern s16b bounty_r_idx;
 extern s16b bounty_total;
 extern s16b bounty_remaining;
+extern s16b cooking_sustain;
 extern s32b game_turn;
 extern s32b game_turn_limit;
 extern s32b player_turn;

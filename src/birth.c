@@ -187,6 +187,7 @@ static void player_wipe(void)
     bounty_r_idx = 0;
     bounty_total = 0;
     bounty_remaining = 0;
+    cooking_sustain = 0;
 
     /* Reset the objects */
     a_info_reset(FALSE);

@@ -654,6 +654,7 @@ static void prt_stat(int stat)
 #define BAR_POET 192
 #define BAR_UNDERSTAND 193
 #define BAR_NO_AIR 194
+#define BAR_COOKING_SUSTAIN 195
 
 static struct {
     byte attr;
@@ -857,6 +858,7 @@ static struct {
     {TERM_L_ORANGE, "诗人", "诗人"},
     {TERM_YELLOW, "自鉴", "自动鉴定"},
     {TERM_VIOLET, "无气", "无气"},
+    {TERM_L_GREEN, "滋养", "滋养"},
     {0, NULL, NULL}
 };
 
@@ -953,19 +955,19 @@ static void prt_status(void)
     }
 
     /* Oppose Acid */
-    if (p_ptr->special_defense & DEFENSE_ACID) ADD_FLG(BAR_IMMACID);
+    if (p_ptr->ele_immune && (p_ptr->special_defense & DEFENSE_ACID)) ADD_FLG(BAR_IMMACID);
     if (IS_OPPOSE_ACID()) ADD_FLG(BAR_RESACID);
 
     /* Oppose Lightning */
-    if (p_ptr->special_defense & DEFENSE_ELEC) ADD_FLG(BAR_IMMELEC);
+    if (p_ptr->ele_immune && (p_ptr->special_defense & DEFENSE_ELEC)) ADD_FLG(BAR_IMMELEC);
     if (IS_OPPOSE_ELEC()) ADD_FLG(BAR_RESELEC);
 
     /* Oppose Fire */
-    if (p_ptr->special_defense & DEFENSE_FIRE) ADD_FLG(BAR_IMMFIRE);
+    if (p_ptr->ele_immune && (p_ptr->special_defense & DEFENSE_FIRE)) ADD_FLG(BAR_IMMFIRE);
     if (IS_OPPOSE_FIRE()) ADD_FLG(BAR_RESFIRE);
 
     /* Oppose Cold */
-    if (p_ptr->special_defense & DEFENSE_COLD) ADD_FLG(BAR_IMMCOLD);
+    if (p_ptr->ele_immune && (p_ptr->special_defense & DEFENSE_COLD)) ADD_FLG(BAR_IMMCOLD);
     if (IS_OPPOSE_COLD()) ADD_FLG(BAR_RESCOLD);
 
     /* Oppose Poison */
@@ -1313,6 +1315,7 @@ static void prt_status(void)
 
     if (p_ptr->tim_poet) ADD_FLG(BAR_POET);
     if (p_ptr->tim_understanding) ADD_FLG(BAR_UNDERSTAND);
+    if (cooking_sustain) ADD_FLG(BAR_COOKING_SUSTAIN);
     if (p_ptr->tim_building_up) ADD_FLG(BAR_BUILD);
     if (p_ptr->tim_vicious_strike) ADD_FLG(BAR_VICIOUS_STRIKE);
     if (p_ptr->tim_enlarge_weapon) ADD_FLG(BAR_ENLARGE_WEAPON);
@@ -2013,9 +2016,9 @@ static void prt_effects(void)
     {
         byte a = TERM_L_DARK;
         if (p_ptr->cursed & OFC_PERMA_CURSE)
-            c_put_str(a, "*被诅咒*", row++, col);
+            c_put_str(a, "*永诅咒*", row++, col);
         else if (p_ptr->cursed & OFC_HEAVY_CURSE)
-            c_put_str(a, "受诅咒", row++, col);
+            c_put_str(a, "重诅咒", row++, col);
         else
             c_put_str(a, "被诅咒", row++, col);
     }

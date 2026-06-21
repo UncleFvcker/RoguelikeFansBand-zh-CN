@@ -172,6 +172,7 @@ void reset_tim_flags(void)
     p_ptr->tim_poet = 0;        /* Timed -- Poet */
     p_ptr->tim_understanding = 0; /* Timed -- Auto-ID */
     p_ptr->tim_regen = 0;       /* Timed -- Regeneration */
+    cooking_sustain = 0;       /* Timed -- Cooking sustenance */
     p_ptr->tim_stealth = 0;     /* Timed -- Stealth */
     p_ptr->tim_esp = 0;
     p_ptr->wraith_form = 0;     /* Timed -- Wraith Form */

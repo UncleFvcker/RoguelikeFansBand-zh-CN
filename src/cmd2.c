@@ -3008,9 +3008,6 @@ void do_cmd_fire_aux2(obj_ptr bow, obj_ptr arrows, int sx, int sy, int tx, int t
     if ((shoot_hack == SP_DOUBLE) && (arrows->number < 2)) shoot_hack = SP_NONE;
     if (shoot_hack == SP_DOUBLE) num_shots = 2;
 
-    /* Describe the object */
-    object_desc(o_name, arrows, OD_OMIT_PREFIX | OD_NO_PLURAL | OD_OMIT_INSCRIPTION);
-
     /* Base damage from thrown object plus launcher bonus */
     dd = arrows->dd;
     ds = arrows->ds;
@@ -3136,6 +3133,7 @@ void do_cmd_fire_aux2(obj_ptr bow, obj_ptr arrows, int sx, int sy, int tx, int t
 
         arrow = *arrows;
         arrow.number = 1;
+        object_desc(o_name, &arrow, OD_OMIT_PREFIX | OD_NO_PLURAL | OD_OMIT_INSCRIPTION);
         if (!return_ammo)
             arrows->number--;
 

@@ -2635,7 +2635,17 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
     /* Use the game-generated "feeling" otherwise, if available */
     if (o_ptr->feeling)
     {
-        strcpy(fake_insc_buf, game_inscriptions[o_ptr->feeling]);
+        if (o_ptr->feeling == FEEL_CURSED && object_is_cursed(o_ptr) && (known || (o_ptr->ident & IDENT_SENSE)))
+        {
+            if (o_ptr->curse_flags & OFC_PERMA_CURSE)
+                strcpy(fake_insc_buf, "永诅");
+            else if (o_ptr->curse_flags & OFC_HEAVY_CURSE)
+                strcpy(fake_insc_buf, "重诅");
+            else
+                strcpy(fake_insc_buf, "诅咒");
+        }
+        else
+            strcpy(fake_insc_buf, game_inscriptions[o_ptr->feeling]);
     }
 
     else if ((p_ptr->munchkin_pseudo_id) && ((obj_can_sense1(o_ptr)) || (obj_can_sense2(o_ptr))) &&
@@ -2654,7 +2664,14 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
             /* Hide cursed status of devices until *Identified* */
         }
         else
-            strcpy(fake_insc_buf, "被诅咒的");
+        {
+            if (o_ptr->curse_flags & OFC_PERMA_CURSE)
+                strcpy(fake_insc_buf, "永诅");
+            else if (o_ptr->curse_flags & OFC_HEAVY_CURSE)
+                strcpy(fake_insc_buf, "重诅");
+            else
+                strcpy(fake_insc_buf, "诅咒");
+        }
     }
 
     /* Note "unidentified" if the item is unidentified */

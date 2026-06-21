@@ -1799,6 +1799,13 @@ static void process_world_aux_timeout(void)
         (void)set_tim_regen(p_ptr->tim_regen - 1, TRUE);
     }
 
+    if (cooking_sustain)
+    {
+        cooking_sustain--;
+        if (!cooking_sustain)
+            p_ptr->redraw |= PR_STATUS;
+    }
+
     /* Timed no-air */
     if (p_ptr->no_air)
     {
@@ -2988,6 +2995,17 @@ static void update_dungeon_feeling(void)
     if ((p_ptr->feeling == 1) || ((disturb_minor) && (feeling_was_special))) disturb(0, 0);
 }
 
+static void _cooking_sustain_food(void)
+{
+    if (p_ptr->food < PY_FOOD_FULL)
+    {
+        p_ptr->food = PY_FOOD_FULL;
+        p_ptr->redraw |= PR_EFFECTS;
+        if (display_food_bar)
+            p_ptr->redraw |= PR_HEALTH_BARS;
+    }
+}
+
 
 /*
  * Handle certain things once every 10 game turns
@@ -3335,6 +3353,10 @@ static void process_world(void)
             if (p_ptr->food != PY_FOOD_FULL)
                 (void)set_food(PY_FOOD_FULL);
         }
+        else if (cooking_sustain && p_ptr->food < PY_FOOD_FULL)
+        {
+            _cooking_sustain_food();
+        }
         /* Digest quickly when gorged */
         else if (p_ptr->food >= PY_FOOD_MAX)
         {
@@ -3369,7 +3391,10 @@ static void process_world(void)
             if (digestion > 100) digestion = 100;
 
             /* Digest some food */
-            (void)set_food(p_ptr->food - digestion);
+            if (cooking_sustain)
+                (void)set_food(MAX(PY_FOOD_FULL, p_ptr->food - digestion));
+            else
+                (void)set_food(p_ptr->food - digestion);
         }
 
 

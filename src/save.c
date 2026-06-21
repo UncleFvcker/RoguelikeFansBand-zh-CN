@@ -868,7 +868,8 @@ static void wr_extra(savefile_ptr file)
     savefile_write_s32b(file, bounty_r_idx);
     savefile_write_s32b(file, bounty_total);
     savefile_write_s32b(file, bounty_remaining);
-    for (i = 6; i < 16; i++)
+    savefile_write_s32b(file, cooking_sustain);
+    for (i = 7; i < 16; i++)
         savefile_write_s32b(file, 0); /* Future use */
 
     for (i = 0; i < MAX_POWER_LABEL; i++)

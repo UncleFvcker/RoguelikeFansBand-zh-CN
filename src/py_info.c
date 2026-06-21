@@ -841,7 +841,7 @@ static void _build_flags2(doc_ptr doc, _flagzilla_ptr flagzilla)
     doc_newline(doc);
     _equippy_chars(doc, 14);
     _equippy_heading(doc, "诅咒", 14);
-    _build_curse_flags(doc, "被诅咒");
+    _build_curse_flags(doc, "诅咒+/重+/永*");
     _build_flags(doc, "随机传送", OF_TELEPORT, OF_INVALID, flagzilla);
     _build_flags(doc, "无法传送", OF_NO_TELE, OF_INVALID, flagzilla);
     _build_flags(doc, "吸取经验", OF_DRAIN_EXP, OF_INVALID, flagzilla);
