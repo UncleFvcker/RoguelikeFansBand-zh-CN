@@ -2667,6 +2667,22 @@ void update_mon(int m_idx, bool full)
 
     /* Non-Ninja player in the darkness */
     bool in_darkness = (d_info[dungeon_type].flags1 & DF1_DARKNESS) && !p_ptr->see_nocto;
+    int sight_limit = in_darkness ? MAX_SIGHT / 2 : MAX_SIGHT;
+    bool player_has_esp = p_ptr->telepathy
+        || p_ptr->esp_animal
+        || p_ptr->esp_undead
+        || p_ptr->esp_demon
+        || p_ptr->esp_orc
+        || p_ptr->esp_troll
+        || p_ptr->esp_giant
+        || p_ptr->esp_dragon
+        || p_ptr->esp_human
+        || p_ptr->esp_evil
+        || p_ptr->esp_good
+        || p_ptr->esp_nonliving
+        || p_ptr->esp_living
+        || p_ptr->esp_unique
+        || p_ptr->esp_magical;
 
     /* Do disturb? */
     if (disturb_high)
@@ -2711,11 +2727,11 @@ void update_mon(int m_idx, bool full)
     if (m_ptr->mflag2 & (MFLAG2_MARK)) flag = TRUE;
 
     /* Nearby */
-    if (d <= (in_darkness ? MAX_SIGHT / 2 : MAX_SIGHT))
+    if (d <= sight_limit || player_has_esp)
     {
-        if (!in_darkness || (d <= MAX_SIGHT / 4))
+        if (!in_darkness || (d <= MAX_SIGHT / 4) || player_has_esp)
         {
-            if (p_ptr->special_defense & KATA_MUSOU)
+            if ((d <= sight_limit) && (!in_darkness || (d <= MAX_SIGHT / 4)) && (p_ptr->special_defense & KATA_MUSOU))
             {
                 /* Detectable */
                 flag = TRUE;
@@ -2758,7 +2774,7 @@ void update_mon(int m_idx, bool full)
             }
 
             /* Magical sensing */
-            if ((p_ptr->tim_blood_sight) && monster_living(r_ptr))
+            if ((d <= sight_limit) && (!in_darkness || (d <= MAX_SIGHT / 4)) && (p_ptr->tim_blood_sight) && monster_living(r_ptr))
             {
                 flag = TRUE;
                 /* There is no RF3_LIVING flag, so you won't gain any monster memory here ... */
@@ -2767,6 +2783,8 @@ void update_mon(int m_idx, bool full)
             /* Warlock Pacts: Warlocks sense pact monsters at CL25 */
             if ( p_ptr->pclass == CLASS_WARLOCK
               && p_ptr->lev >= 25
+              && d <= sight_limit
+              && (!in_darkness || (d <= MAX_SIGHT / 4))
               && warlock_is_pact_monster(r_ptr) )
             {
                 flag = TRUE;
@@ -2883,7 +2901,7 @@ void update_mon(int m_idx, bool full)
         }
 
         /* Normal line of sight, and not blind */
-        if (!p_ptr->blind && (player_has_los_bold(fy, fx)/* || projectable(py, px, fy, fx)*/))
+        if ((d <= sight_limit) && !p_ptr->blind && (player_has_los_bold(fy, fx)/* || projectable(py, px, fy, fx)*/))
         {
             bool do_invisible = FALSE;
             bool do_cold_blood = FALSE;

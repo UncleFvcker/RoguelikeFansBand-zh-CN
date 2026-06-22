@@ -1512,12 +1512,9 @@ static _spell_t __spells[] =
         { 13, 120, _mana_thrust3_spell },
         { 25, 155, _mana_thrust4_spell },
         { 40, 180, _mana_thrust5_spell }},
-        "Mana Thrust grants you an offensive ranged attack. "
-          "With this power, you will have good early offense as well as the "
-          "ability to scale the damage of the mana thrust quite considerably. "
-          "No monster can resist the Mana Thrust; but unlike Energy Blast this "
-          "attack is a bolt, so it only affects a single monster at a time and "
-          "some monsters might reflect the spell back."
+        "法力冲击赋予你远程攻击能力。借此能力，你在游戏前期能有不错的输出，"
+          "且其伤害成长相当可观。没有怪物能抵抗法力冲击；但与能量爆破不同，"
+          "它是射线类攻击，每次只能影响单个怪物，且部分怪物可能反射该法术。"
     },
     { "能量爆破", _PSION_ENERGY_BLAST, 1, {  
         {  1,  20, _energy_blast1_spell },
