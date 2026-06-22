@@ -1895,13 +1895,62 @@ static bool kankin(void)
     return TRUE;
 }
 
+static bool _bounty_level_reachable(int dungeon, int level)
+{
+    dungeon_info_type *d_ptr;
+
+    if (dungeon <= 0 || dungeon >= max_d_idx) return FALSE;
+    d_ptr = &d_info[dungeon];
+
+    if (level < d_ptr->mindepth || level > d_ptr->maxdepth) return FALSE;
+    if (level_is_questlike(dungeon, level)) return FALSE;
+
+    /* In all-shaft dungeons, ordinary stair travel skips some depths. */
+    if (!(d_ptr->flags1 & DF1_ALL_SHAFTS) && !coffee_break) return TRUE;
+
+    if ((dungeon == DUNGEON_MOUND) || (dungeon == DUNGEON_ASGARD))
+    {
+        if (level < 80)
+            return ((level - d_ptr->mindepth) % 4) == 0;
+    }
+
+    return ((level - d_ptr->mindepth) % 2) == 0;
+}
+
+static int _bounty_nearest_reachable_level(int dungeon, int level)
+{
+    dungeon_info_type *d_ptr = &d_info[dungeon];
+    int min = d_ptr->mindepth;
+    int max = d_ptr->maxdepth;
+    int delta;
+
+    if (level < min) level = min;
+    if (level > max) level = max;
+
+    for (delta = 0; delta <= max - min; delta++)
+    {
+        int down = level - delta;
+        int up = level + delta;
+
+        if (down >= min && _bounty_level_reachable(dungeon, down)) return down;
+        if (up <= max && _bounty_level_reachable(dungeon, up)) return up;
+    }
+
+    return 0;
+}
+
 static bool _bounty_valid(void)
 {
+    int reachable_level;
+
     if (bounty_status == BOUNTY_STATUS_NONE) return FALSE;
     if (bounty_dungeon <= 0 || bounty_dungeon >= max_d_idx) return FALSE;
     if (bounty_r_idx <= 0 || bounty_r_idx >= max_r_idx) return FALSE;
     if (bounty_level <= 0) return FALSE;
     if (bounty_total <= 0) return FALSE;
+    reachable_level = _bounty_nearest_reachable_level(bounty_dungeon, bounty_level);
+    if (!reachable_level) return FALSE;
+    bounty_level = reachable_level;
     return TRUE;
 }
 
@@ -1952,12 +2001,13 @@ static int _bounty_choose_level(int dungeon)
         if (one_in_(5)) level += randint1(2);
         if (level < d_ptr->mindepth) level = d_ptr->mindepth;
         if (level > d_ptr->maxdepth) level = d_ptr->maxdepth;
-        if (!level_is_questlike(dungeon, level)) return level;
+        level = _bounty_nearest_reachable_level(dungeon, level);
+        if (level) return level;
     }
 
     if (level < d_ptr->mindepth) level = d_ptr->mindepth;
     if (level > d_ptr->maxdepth) level = d_ptr->maxdepth;
-    return level;
+    return _bounty_nearest_reachable_level(dungeon, level);
 }
 
 static bool _bounty_mon_ok(int r_idx, int level)
