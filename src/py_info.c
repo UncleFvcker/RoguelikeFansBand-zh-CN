@@ -419,6 +419,23 @@ static void _equippy_heading(doc_ptr doc, cptr heading, int col)
     doc_newline(doc);
 }
 
+static void _stat_equippy_heading(doc_ptr doc, int col)
+{
+    int i;
+    doc_printf(doc, " <color:G>属性</color><tab:%d>", col);
+    for (i = 1; i <= equip_max(); i++)
+        doc_insert_char(doc, TERM_WHITE, 'a' + i - 1);
+    doc_insert_char(doc, TERM_WHITE, '@');
+    doc_insert(doc,
+        "<tab:32><color:G>基础</color>"
+        "<tab:42><color:G>种族</color>"
+        "<tab:48><color:G>职业</color>"
+        "<tab:54><color:G>性格</color>"
+        "<tab:60><color:G>装备</color>"
+        "<tab:66><color:G>总计</color>"
+        "<tab:73><color:G>当前</color>\n");
+}
+
 typedef struct {
     u32b py_flgs[OF_ARRAY_SIZE];
     u32b tim_py_flgs[OF_ARRAY_SIZE];
@@ -868,8 +885,7 @@ static void _build_stats(doc_ptr doc, _flagzilla_ptr flagzilla)
     tim_player_stats(tim_stats);
 
     _equippy_chars(doc, 14);
-    _equippy_heading_aux(doc, "", 14);
-    doc_insert(doc, "基础 种 职 性 装 总计\n");
+    _stat_equippy_heading(doc, 14);
 
     for (i = 0; i < MAX_STATS; i++)
     {
@@ -996,18 +1012,21 @@ static void _build_stats(doc_ptr doc, _flagzilla_ptr flagzilla)
 
         /* Base R C P E */
         cnv_stat(p_ptr->stat_max[i], buf);
-        doc_printf(doc, " <color:B>%6.6s%3d%3d%3d%3d</color>",
-                    buf, race_ptr->stats[i], class_ptr->stats[i], pers_ptr->stats[i], e_adj);
+        doc_printf(doc, "<tab:31><color:B>%6.6s</color>", buf);
+        doc_printf(doc, "<tab:42><color:B>%3d</color>", race_ptr->stats[i]);
+        doc_printf(doc, "<tab:48><color:B>%3d</color>", class_ptr->stats[i]);
+        doc_printf(doc, "<tab:54><color:B>%3d</color>", pers_ptr->stats[i]);
+        doc_printf(doc, "<tab:60><color:B>%3d</color>", e_adj);
 
         /* Total */
         cnv_stat(p_ptr->stat_top[i], buf);
-        doc_printf(doc, " <color:%c>%6.6s</color>", _stat_color(i, 1), buf);
+        doc_printf(doc, "<tab:65><color:%c>%6.6s</color>", _stat_color(i, 1), buf);
 
         /* Current */
         if (p_ptr->stat_use[i] < p_ptr->stat_top[i])
         {
             cnv_stat(p_ptr->stat_use[i], buf);
-            doc_printf(doc, " <color:%c>%6.6s</color>", _stat_color(i, 2), buf);
+            doc_printf(doc, "<tab:72><color:%c>%6.6s</color>", _stat_color(i, 2), buf);
         }
 
         doc_newline(doc);
