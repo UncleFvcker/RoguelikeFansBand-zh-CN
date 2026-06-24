@@ -2,90 +2,56 @@
 #include "shop.h"
 
 #include <assert.h>
+#include <stddef.h>
 
 static inv_ptr _home = NULL;
 static inv_ptr _museum = NULL;
 
 #define MUSEUM_SHARED_FILE "museum.txt"
 
-/* Function to convert a hex string representation back to an object
-   This is useful for debugging or object deserialization */
-bool hex_to_obj(cptr hex_str, obj_ptr obj)
+static int _hex_digit(char c)
 {
-    byte *p = (byte *)obj;
-    size_t i, len;
-    
-    /* Check for NULL pointers */
-    if (!hex_str || !obj) return FALSE;
-    
-    /* Get the string length */
-    len = strlen(hex_str);
-    
-    /* Ensure the string is valid (even length, contains only hex chars) */
-    if (len % 2 != 0) return FALSE;
-    
-    /* Clear the object first */
-    object_wipe(obj);
-    
-    /* Convert hex pairs back to bytes */
-    for (i = 0; i < len / 2 && i < sizeof(obj_t); i++) 
-    {
-        byte hi, lo;
-        
-        /* Extract hex digits */
-        if (hex_str[i*2] >= '0' && hex_str[i*2] <= '9')
-            hi = hex_str[i*2] - '0';
-        else if (hex_str[i*2] >= 'A' && hex_str[i*2] <= 'F')
-            hi = hex_str[i*2] - 'A' + 10;
-        else if (hex_str[i*2] >= 'a' && hex_str[i*2] <= 'f')
-            hi = hex_str[i*2] - 'a' + 10;
-        else
-            return FALSE;
+    if (c >= '0' && c <= '9') return c - '0';
+    if (c >= 'A' && c <= 'F') return c - 'A' + 10;
+    if (c >= 'a' && c <= 'f') return c - 'a' + 10;
+    return -1;
+}
 
-        if (hex_str[i*2+1] >= '0' && hex_str[i*2+1] <= '9')
-            lo = hex_str[i*2+1] - '0';
-        else if (hex_str[i*2+1] >= 'A' && hex_str[i*2+1] <= 'F')
-            lo = hex_str[i*2+1] - 'A' + 10;
-        else if (hex_str[i*2+1] >= 'a' && hex_str[i*2+1] <= 'f')
-            lo = hex_str[i*2+1] - 'a' + 10;
-        else
-            return FALSE;
-            
-        /* Combine the nibbles */
-        p[i] = (hi << 4) | lo;
+static bool _hex_to_bytes(cptr hex_str, byte *buf, size_t max, size_t *len)
+{
+    size_t i, hex_len;
+
+    if (!hex_str || !buf || !len) return FALSE;
+
+    hex_len = strlen(hex_str);
+    if (hex_len % 2 != 0) return FALSE;
+    if (hex_len / 2 > max) return FALSE;
+
+    for (i = 0; i < hex_len / 2; i++)
+    {
+        int hi = _hex_digit(hex_str[i*2]);
+        int lo = _hex_digit(hex_str[i*2 + 1]);
+        if (hi < 0 || lo < 0) return FALSE;
+        buf[i] = (byte)((hi << 4) | lo);
     }
-    
-    /* Success */
+
+    *len = hex_len / 2;
     return TRUE;
 }
 
-/* Function to dump an object to a hex string representation
-   This is useful for debugging or object serialization */
-void obj_dump_hex(obj_ptr obj, char *buf, size_t max)
+/* Function to convert a hex string representation back to an object.
+   This only exists for migrating the old local museum v1 raw-struct format. */
+bool hex_to_obj(cptr hex_str, obj_ptr obj)
 {
-    byte *p = (byte *)obj;
-    size_t i, size = sizeof(obj_t);
-    char *q = buf;
-    
-    /* Ensure we have at least some space */
-    if (max < 3) {
-        if (max > 0) *buf = '\0';
-        return;
-    }
-    
-    /* Cap at maximum available buffer space, allowing for null termination */
-    if (size * 2 >= max) size = (max - 1) / 2;
-    
-    /* Convert each byte to a 2-digit hex representation */
-    for (i = 0; i < size; i++)
-    {
-        byte b = *p++;
-        *q++ = hexsym[(b & 0xF0) >> 4];
-        *q++ = hexsym[b & 0x0F];
-    }
-    
-    /* Null terminate the string */
-    *q = '\0';
+    byte bytes[sizeof(obj_t)];
+    size_t len = 0;
+
+    if (!hex_str || !obj) return FALSE;
+    if (!_hex_to_bytes(hex_str, bytes, sizeof(bytes), &len)) return FALSE;
+
+    object_wipe(obj);
+    memcpy(obj, bytes, len);
+    return TRUE;
 }
 
 void home_init(void)
@@ -162,51 +128,143 @@ static void _strip_newline(char *buf)
 static bool _save_museum_data(void)
 {
     char path[1024];
-    FILE *fp;
-    slot_t slot;
-    slot_t max;
-    bool success = TRUE;
+    savefile_ptr file;
+    bool success;
 
     _museum_path(path, sizeof(path));
 
-    safe_setuid_grab();
-    fp = my_fopen(path, "w");
-    safe_setuid_drop();
+    file = savefile_open_write(path);
+    if (!file) return FALSE;
 
-    if (!fp) return FALSE;
-
-    fprintf(fp, "# RoguelikeFansBand local shared museum v1\n");
-
-    max = inv_last(_museum, obj_exists);
-    for (slot = 1; slot <= max; slot++)
-    {
-        obj_ptr obj = inv_obj(_museum, slot);
-        char hex_buf[2048];
-        cptr art_name = "";
-
-        if (!obj) continue;
-
-        obj_dump_hex(obj, hex_buf, sizeof(hex_buf));
-        if (obj->art_name) art_name = quark_str(obj->art_name);
-        if (fprintf(fp, "%s|%d|%s\n", hex_buf, obj->number, art_name ? art_name : "") < 0)
-        {
-            success = FALSE;
-            break;
-        }
-    }
-
-    if (my_fclose(fp)) success = FALSE;
+    inv_save(_museum, file);
+    success = !savefile_is_error(file);
+    if (!savefile_close(file)) success = FALSE;
     return success;
 }
 
-bool _fetch_museum_data(void)
+static void _museum_backup_legacy(cptr path)
 {
-    char path[1024];
+    char bak[1024];
+    FILE *src, *dst;
+    int c;
+
+    strnfmt(bak, sizeof(bak), "%s.v1.bak", path);
+
+    safe_setuid_grab();
+    dst = my_fopen(bak, "rb");
+    safe_setuid_drop();
+    if (dst)
+    {
+        my_fclose(dst);
+        return;
+    }
+
+    safe_setuid_grab();
+    src = my_fopen(path, "rb");
+    safe_setuid_drop();
+    if (!src) return;
+
+    safe_setuid_grab();
+    dst = my_fopen(bak, "wb");
+    safe_setuid_drop();
+    if (!dst)
+    {
+        my_fclose(src);
+        return;
+    }
+
+    while ((c = fgetc(src)) != EOF)
+        fputc(c, dst);
+
+    my_fclose(src);
+    my_fclose(dst);
+}
+
+static bool _museum_obj_kind_ok(obj_ptr obj)
+{
+    if (!obj) return FALSE;
+    if (obj->k_idx <= 0 || obj->k_idx >= max_k_idx) return FALSE;
+    if (!k_info[obj->k_idx].name) return FALSE;
+    return TRUE;
+}
+
+static int _museum_obj_score(obj_ptr obj)
+{
+    object_kind *k_ptr;
+    int score = 0;
+
+    if (!_museum_obj_kind_ok(obj)) return 1000000;
+
+    k_ptr = &k_info[obj->k_idx];
+    if (obj->tval != k_ptr->tval) score += 10000;
+    if (obj->sval != k_ptr->sval) score += 10000;
+    if (obj->number <= 0 || obj->number > OBJ_STACK_MAX) score += 5000;
+    if (obj->weight < 0 || obj->weight > 5000) score += 1000;
+
+    if (obj->inscription < 0 || obj->inscription >= QUARK_MAX) score += 500;
+    if (obj->art_name < 0 || obj->art_name >= QUARK_MAX) score += 500;
+    if (obj->capture_exp && obj->tval != TV_CAPTURE) score += 500;
+
+    if (ABS(obj->to_h) > 100) score += 500;
+    if (ABS(obj->to_d) > 100) score += 500;
+    if (ABS(obj->to_a) > 100) score += 500;
+    if (obj->ac < 0 || obj->ac > 300) score += 500;
+    if (obj->dd > 50 || obj->ds > 100) score += 500;
+    if (obj->mult < 0 || obj->mult > 1000) score += 500;
+
+    if ( obj->tval == TV_POTION
+      || obj->tval == TV_SCROLL
+      || obj->tval == TV_FOOD
+      || obj->tval == TV_FLASK )
+    {
+        if (obj->to_h || obj->to_d || obj->to_a || obj->ac) score += 5000;
+        if (obj->dd || obj->ds || obj->mult) score += 5000;
+        if (obj->name1 || obj->name2 || obj->name3 || obj->art_name) score += 2000;
+    }
+
+    return score;
+}
+
+static bool _hex_to_obj_legacy_pre_capture(cptr hex_str, obj_ptr obj)
+{
+    byte bytes[sizeof(obj_t)];
+    size_t len = 0;
+    size_t old_size = sizeof(obj_t) - sizeof(u32b);
+    size_t off = offsetof(object_type, capture_exp);
+
+    if (!_hex_to_bytes(hex_str, bytes, sizeof(bytes), &len)) return FALSE;
+    if (len < old_size) return FALSE;
+
+    object_wipe(obj);
+    memcpy((byte *)obj, bytes, off);
+    memcpy((byte *)obj + off + sizeof(u32b), bytes + off, old_size - off);
+    obj->capture_exp = 0;
+    return TRUE;
+}
+
+static bool _museum_legacy_hex_to_obj(cptr hex_str, obj_ptr obj)
+{
+    obj_t current;
+    obj_t legacy;
+    bool current_ok = hex_to_obj(hex_str, &current);
+    bool legacy_ok = _hex_to_obj_legacy_pre_capture(hex_str, &legacy);
+    int current_score = current_ok ? _museum_obj_score(&current) : 1000000;
+    int legacy_score = legacy_ok ? _museum_obj_score(&legacy) : 1000000;
+
+    if (!current_ok && !legacy_ok) return FALSE;
+
+    if (legacy_ok && legacy_score < current_score)
+        COPY(obj, &legacy, obj_t);
+    else
+        COPY(obj, &current, obj_t);
+
+    return _museum_obj_kind_ok(obj);
+}
+
+static bool _fetch_museum_legacy_text(cptr path)
+{
     char line[4096];
     FILE *fp;
-
-    _museum_reset();
-    _museum_path(path, sizeof(path));
 
     safe_setuid_grab();
     fp = my_fopen(path, "r");
@@ -237,7 +295,7 @@ bool _fetch_museum_data(void)
         if (number <= 0) continue;
 
         obj = obj_alloc();
-        if (hex_to_obj(hex_buf, obj))
+        if (_museum_legacy_hex_to_obj(hex_buf, obj))
         {
             if (obj->art_name)
                 obj->art_name = (art_name_buf && art_name_buf[0]) ? quark_add(art_name_buf) : 0;
@@ -253,6 +311,51 @@ bool _fetch_museum_data(void)
     my_fclose(fp);
     inv_sort(_museum);
     return TRUE;
+}
+
+static bool _fetch_museum_binary(cptr path)
+{
+    savefile_ptr file = savefile_open_read(path);
+    bool success;
+
+    if (!file) return FALSE;
+    inv_load(_museum, file);
+    success = !savefile_is_error(file);
+    if (!savefile_close(file)) success = FALSE;
+    if (!success) _museum_reset();
+    return success;
+}
+
+bool _fetch_museum_data(void)
+{
+    char path[1024];
+    FILE *fp;
+    int first;
+
+    _museum_reset();
+    _museum_path(path, sizeof(path));
+
+    safe_setuid_grab();
+    fp = my_fopen(path, "rb");
+    safe_setuid_drop();
+
+    if (!fp) return TRUE;
+    first = fgetc(fp);
+    my_fclose(fp);
+    if (first == EOF) return TRUE;
+
+    if (first == '#')
+    {
+        bool success;
+
+        _museum_backup_legacy(path);
+        success = _fetch_museum_legacy_text(path);
+        if (success)
+            _save_museum_data();
+        return success;
+    }
+
+    return _fetch_museum_binary(path);
 }
 
 /************************************************************************
