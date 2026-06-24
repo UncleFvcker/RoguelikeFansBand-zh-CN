@@ -2505,7 +2505,7 @@ bool destroy_area(int y1, int x1, int r, int power)
                         if (in_generate && cheat_peek)
                         {
                             char o_name[MAX_NLEN];
-                            object_desc(o_name, o_ptr, (OD_NAME_ONLY | OD_STORE));
+                            object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_NAME_ONLY | OD_STORE));
                             msg_format("神器 (%s) 在生成时被 *摧毁* 了。", o_name);
                         }
                     }
@@ -2517,7 +2517,7 @@ bool destroy_area(int y1, int x1, int r, int power)
                         if (in_generate && cheat_peek)
                         {
                             char o_name[MAX_NLEN];
-                            object_desc(o_name, o_ptr, (OD_NAME_ONLY | OD_STORE));
+                            object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_NAME_ONLY | OD_STORE));
                             msg_format("神器 (%s) 在生成时被 *摧毁* 了。", o_name);
                         }
                     }

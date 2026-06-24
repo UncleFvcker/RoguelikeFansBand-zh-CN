@@ -3661,7 +3661,7 @@ static void process_monster(int m_idx)
                     obj_flags(o_ptr, flgs);
 
                     /* Acquire the object name */
-                    object_desc(o_name, o_ptr, 0);
+                    object_desc_s(o_name, sizeof(o_name), o_ptr, 0);
 
                     /* Acquire the monster name */
                     monster_desc(m_name, m_ptr, MD_INDEF_HIDDEN);

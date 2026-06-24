@@ -1759,7 +1759,7 @@ static void _process_tsuchinoko(obj_ptr obj)
 {
     char name[MAX_NLEN];
     char buf[MAX_NLEN+30];
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     sprintf(buf, "Convert %s into money? ", name);
     if (get_check(buf))
         _obj_reward(obj, _tsuchinoko_amt(obj));
@@ -1779,7 +1779,7 @@ static void _process_todays_prize(obj_ptr obj)
 {
     char name[MAX_NLEN];
     char buf[MAX_NLEN+30];
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     sprintf(buf, "Convert %s into money? ", name);
     if (get_check(buf))
     {
@@ -1839,7 +1839,7 @@ static void _process_wanted_corpse(obj_ptr obj)
 
     ++_prize_count;
 
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     sprintf(buf, "Hand %s over? ", name);
     if (!get_check(buf)) return;
 
@@ -1873,7 +1873,7 @@ static void _process_wanted_corpse(obj_ptr obj)
         msg_format("你上交了%d只通缉怪物%s。", num, num > 1 ? "s" : "");
     }
 
-    object_desc(name, &prize, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), &prize, OD_COLOR_CODED);
     /*msg_format("You get %s.", name);*/
     pack_carry(&prize);
 }
@@ -2955,7 +2955,7 @@ static bool _gamble_shop_aux(object_type *o_ptr)
 
     obj_identify_fully(o_ptr);
     stats_on_identify(o_ptr);
-    object_desc(buf, o_ptr, OD_COLOR_CODED);
+    object_desc_s(buf, sizeof(buf), o_ptr, OD_COLOR_CODED);
     msg_format("你赢得了%s。", buf);
 
     auto_pick_idx = is_autopick(o_ptr);
@@ -3202,7 +3202,7 @@ static bool _reforge_artifact(void)
         paivitys_no_inkey_hack = TRUE;
     }
 
-    object_desc(o_name, src, OD_NAME_ONLY | OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), src, OD_NAME_ONLY | OD_COLOR_CODED);
     if (!get_check(format("真的要使用%s吗？(它将会被摧毁！)", o_name))) 
         return FALSE;
 
@@ -3282,8 +3282,8 @@ static bool _reforge_artifact(void)
         if ((object_is_gloves(dest)) && (arvo < 2000)) arvo = arvo / 3 + 1333;
 
         get_reforge_powers(TRUE, src, dest, &src_weight, &dest_weight, &min_power, &max_power, &avg_bp, p_ptr->fame);
-        object_desc(src_name, src, (OD_NAME_ONLY));
-        object_desc(dest_name, dest, (OD_NAME_ONLY));
+        object_desc_s(src_name, sizeof(src_name), src, (OD_NAME_ONLY));
+        object_desc_s(dest_name, sizeof(dest_name), dest, (OD_NAME_ONLY));
         prt("源物品:", 3, 1);
         c_put_str(tval_to_attr[src->tval], format("%-30.30s", src_name), 3, 9);
         put_str(format("能量: %-5d 类型强度: %d", MIN(value, MAX(src_weight, dest_weight) * 1125L), src_weight), 3, 41);
@@ -3513,7 +3513,7 @@ static bool _reforge_artifact(void)
         int     total = 0;
         char    buf[MAX_NLEN];
 
-        object_desc(buf, src, OD_COLOR_CODED);
+        object_desc_s(buf, sizeof(buf), src, OD_COLOR_CODED);
         doc_printf(doc, "重铸 %s (%d):\n", buf, base);
         if (strpos("test", player_name)) ct = 1000;
         for (i = 0; i < ct; i++)
@@ -3524,7 +3524,7 @@ static bool _reforge_artifact(void)
             obj_identify_fully(&forge);
             score = obj_value_real(&forge);
             total += score;
-            object_desc(buf, &forge, OD_COLOR_CODED | OD_SINGULAR);
+            object_desc_s(buf, sizeof(buf), &forge, OD_COLOR_CODED | OD_SINGULAR);
             doc_printf(doc, "%d) <indent><style:indent>%s (%d%%)</style></indent>\n",
                 i + 1, buf, score * 100 / base);
         }
@@ -3762,7 +3762,7 @@ static bool enchant_item(obj_p filter, int cost, int to_hit, int to_dam, int to_
         }
         if (!i)
         {
-            object_desc(tmp_str, prompt.obj, OD_COLOR_CODED);
+            object_desc_s(tmp_str, sizeof(tmp_str), prompt.obj, OD_COLOR_CODED);
             msg_format("%^s无法进一步改良了。", tmp_str);
             return FALSE;
         }
@@ -3780,7 +3780,7 @@ static bool enchant_item(obj_p filter, int cost, int to_hit, int to_dam, int to_
     /* Check if the player has enough money */
     if (p_ptr->au < cost)
     {
-        object_desc(tmp_str, prompt.obj, OD_NAME_ONLY | OD_COLOR_CODED);
+        object_desc_s(tmp_str, sizeof(tmp_str), prompt.obj, OD_NAME_ONLY | OD_COLOR_CODED);
         msg_format("你没有足够的金币来改良%s！", tmp_str);
         return FALSE;
     }
@@ -3823,7 +3823,7 @@ static bool enchant_item(obj_p filter, int cost, int to_hit, int to_dam, int to_
     }
     else
     {
-        object_desc(tmp_str, prompt.obj, OD_NAME_AND_ENCHANT | OD_COLOR_CODED);
+        object_desc_s(tmp_str, sizeof(tmp_str), prompt.obj, OD_NAME_AND_ENCHANT | OD_COLOR_CODED);
         msg_format("花费%d金币改良了%s。", cost, tmp_str);
 
         p_ptr->au -= cost;
@@ -4210,7 +4210,7 @@ static void _sell_photo_local_aux(object_type *o_ptr)
     if (!myy) tarjous = 0;
     jaljella = o_ptr->number - amt;
     o_ptr->number = amt;
-    object_desc(name, o_ptr, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), o_ptr, OD_COLOR_CODED);
     if (!tarjous)
     {
         if (!get_check(format("真的要给予%s吗？", name)))
@@ -4233,7 +4233,7 @@ static void _sell_photo_local_aux(object_type *o_ptr)
             p_ptr->update |= (PU_BONUS | PU_HP | PU_MANA);
     }
 
-    object_desc(name, o_ptr, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), o_ptr, OD_COLOR_CODED);
     if (!tarjous)
         msg_format("你给予了%s。", name);
     else

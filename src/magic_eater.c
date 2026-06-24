@@ -135,7 +135,7 @@ static void _display(object_type *list, rect_t display)
         if (o_ptr->k_idx)
         {
             int len;
-            object_desc(buf, o_ptr, 0);
+            object_desc_s(buf, sizeof(buf), o_ptr, 0);
             len = strlen(buf);
             if (len > max_o_len)
                 max_o_len = len;
@@ -158,7 +158,7 @@ static void _display(object_type *list, rect_t display)
         {
             int  fail = device_calc_fail_rate(o_ptr);
 
-            object_desc(buf, o_ptr, OD_COLOR_CODED);
+            object_desc_s(buf, sizeof(buf), o_ptr, OD_COLOR_CODED);
             doc_insert(doc, buf);
 
             if (fail == 1000)
@@ -309,7 +309,7 @@ static object_type *_choose(cptr verb, int tval, int options)
                 char    name[MAX_NLEN];
                 char    insc[80];
 
-                object_desc(name, o_ptr, OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
+                object_desc_s(name, sizeof(name), o_ptr, OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
                 if (o_ptr->inscription)
                     strcpy(insc, quark_str(o_ptr->inscription));
                 else
@@ -491,7 +491,7 @@ static bool gain_magic(void)
     if (dest_ptr->k_idx)
     {
         char prompt[255];
-        object_desc(o_name, dest_ptr, OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), dest_ptr, OD_COLOR_CODED);
         sprintf(prompt, "真的要替换 %s 吗？<color:y>[y/n]</color>", o_name);
         if (msg_prompt(prompt, "ny", PROMPT_DEFAULT) == 'n')
             return FALSE;
@@ -502,7 +502,7 @@ static bool gain_magic(void)
         }
     }
 
-    object_desc(o_name, prompt.obj, OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_COLOR_CODED);
     msg_format("你吸收了%s的魔法。", o_name);
 
     *dest_ptr = *prompt.obj;
@@ -734,7 +734,7 @@ static void _dump_list(doc_ptr doc, object_type *which_list)
         object_type *o_ptr = which_list + i;
         if (o_ptr->k_idx)
         {
-            object_desc(o_name, o_ptr, OD_COLOR_CODED | OD_SHOW_DEVICE_INFO);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED | OD_SHOW_DEVICE_INFO);
             doc_printf(doc, "%c) %s\n", I2A(i), o_name);
         }
         else

@@ -189,7 +189,7 @@ int obj_prompt(obj_prompt_ptr prompt)
                 if (object_is_flavor(obj) && !object_is_known(obj))
                 {
                     char name[MAX_NLEN];
-                    object_desc(name, obj, OD_COLOR_CODED);
+                    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
                     doc_insert(context.doc, name);
                     doc_insert(context.doc, "\n\n你对这件物品没有特殊的了解。\n");
                     doc_insert(context.doc, "<color:B>[按<color:y>任意键</color>继续]</color>\n\n");

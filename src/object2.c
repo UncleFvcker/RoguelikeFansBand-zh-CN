@@ -1544,7 +1544,7 @@ void object_mention(object_type *o_ptr)
     char o_name[MAX_NLEN];
 
     /* Describe */
-    object_desc(o_name, o_ptr, (OD_NAME_ONLY | OD_STORE));
+    object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_NAME_ONLY | OD_STORE));
 
     /* Artifact */
     if (object_is_fixed_artifact(o_ptr))
@@ -4095,7 +4095,7 @@ s16b drop_near(object_type *j_ptr, int chance, int y, int x)
     bool plural = object_plural(j_ptr);
 
     /* Describe object */
-    object_desc(o_name, j_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+    object_desc_s(o_name, sizeof(o_name), j_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
     if (object_is_(j_ptr, TV_POTION, SV_POTION_BLOOD))
     {
@@ -4689,7 +4689,7 @@ void display_koff(int k_idx)
     object_prep(q_ptr, k_idx);
 
     /* Describe */
-    object_desc(o_name, q_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY | OD_STORE));
+    object_desc_s(o_name, sizeof(o_name), q_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY | OD_STORE));
 
     /* Mention the object name */
     Term_putstr(0, 0, -1, TERM_WHITE, o_name);
@@ -4758,7 +4758,7 @@ bool process_warning(int xx, int yy)
     {
         object_type *o_ptr = choose_warning_item();
 
-        if (o_ptr) object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+        if (o_ptr) object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
         else strcpy(o_name, "身体"); /* Warning ability without item */
         msg_format("你的%s正在脉动！", o_name);
         if (o_ptr) obj_learn_flag(o_ptr, OF_WARNING);

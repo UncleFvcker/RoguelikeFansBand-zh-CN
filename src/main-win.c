@@ -3887,7 +3887,8 @@ static void check_for_save_file(LPSTR cmd_line)
     if (!*s) return;
 
     /* Extract filename */
-    strcat(savefile, s);
+    if (my_strcat(savefile, s, sizeof(savefile)) >= sizeof(savefile))
+        quit_fmt("Savefile path is too long:\n%s", s);
     if (!check_file(savefile))
     {
         path_build(savefile, sizeof(savefile), ANGBAND_DIR_SAVE, s);
@@ -4488,7 +4489,7 @@ static void process_menus(WORD wCmd)
             path_build(tmp, sizeof(tmp), ANGBAND_DIR_XTRA_HELP, "zangband.hlp");
             if (check_file(tmp))
             {
-                sprintf(buf, "winhelp.exe %s", tmp);
+                strnfmt(buf, sizeof(buf), "winhelp.exe %s", tmp);
                 WinExec(buf, SW_NORMAL);
             }
             else

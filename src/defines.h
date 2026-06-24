@@ -2872,9 +2872,9 @@ enum summon_specific_e {
  *  which is just a byte. See A.7.4.7 in K&R.)
  */
 
-#define have_flag(ARRAY, INDEX) !!((ARRAY)[(INDEX)/32] & (1L << ((INDEX)%32)))
-#define add_flag(ARRAY, INDEX) ((ARRAY)[(INDEX)/32] |= (1L << ((INDEX)%32)))
-#define remove_flag(ARRAY, INDEX) ((ARRAY)[(INDEX)/32] &= ~(1L << ((INDEX)%32)))
+#define have_flag(ARRAY, INDEX) !!((ARRAY)[(INDEX)/32] & (1U << ((INDEX)%32)))
+#define add_flag(ARRAY, INDEX) ((ARRAY)[(INDEX)/32] |= (1U << ((INDEX)%32)))
+#define remove_flag(ARRAY, INDEX) ((ARRAY)[(INDEX)/32] &= ~(1U << ((INDEX)%32)))
 
 /*
  * Object Flags (OF_*)
@@ -5347,7 +5347,7 @@ enum mon_save_fields_e {
 #define hex_spelling_any() \
     ((p_ptr->realm1 == REALM_HEX) && (p_ptr->magic_num1[0]))
 #define hex_spelling(X) \
-    ((p_ptr->realm1 == REALM_HEX) && (p_ptr->magic_num1[0] & (1L << (X))))
+    ((p_ptr->realm1 == REALM_HEX) && (p_ptr->magic_num1[0] & (1U << (X))))
 /* 1st book */
 #define HEX_BLESS             0
 #define HEX_CURE_LIGHT        1

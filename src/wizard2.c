@@ -1157,7 +1157,7 @@ static void _wiz_stats_log_android(int level, object_type *o_ptr)
     if (!_wiz_doc) return;
     if (!exp) return;
 
-    object_desc(name, o_ptr, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), o_ptr, OD_COLOR_CODED);
 
     big_num_display(score, buf);
     doc_printf(_wiz_doc, "<color:%c>%s</color> ", _score_color(score), buf);
@@ -1173,7 +1173,7 @@ static void _wiz_stats_log_device(int level, object_type *o_ptr)
 {
     char buf[MAX_NLEN];
     if (!_wiz_doc) return;
-    object_desc(buf, o_ptr, OD_COLOR_CODED);
+    object_desc_s(buf, sizeof(buf), o_ptr, OD_COLOR_CODED);
     _wiz_obj_count++;
     doc_printf(_wiz_doc, "C%2d D%2d O%2d P%2d D%2d: <indent><style:indent>%s</style></indent>\n",
         p_ptr->lev, level, o_ptr->level, o_ptr->activation.power, o_ptr->activation.difficulty, buf);
@@ -1182,7 +1182,7 @@ static void _wiz_stats_log_obj(int level, object_type *o_ptr)
 {
     char buf[MAX_NLEN];
     if (!_wiz_doc) return;
-    object_desc(buf, o_ptr, OD_COLOR_CODED);
+    object_desc_s(buf, sizeof(buf), o_ptr, OD_COLOR_CODED);
     _wiz_obj_count++;
     if (_wiz_show_scores)
     {
@@ -1725,7 +1725,7 @@ void do_cmd_debug(void)
             obj_identify_fully(&o_list[i]);
             if (o_list[i].name1 || o_list[i].name2)
             {
-                object_desc(buf, &o_list[i], 0);
+                object_desc_s(buf, sizeof(buf), &o_list[i], 0);
                 msg_print(buf);
             }
         }
@@ -1867,7 +1867,7 @@ void do_cmd_debug(void)
                 #if 0
                 if (o_list[i].name1 || o_list[i].name2)
                 {
-                    object_desc(buf, &o_list[i], 0);
+                    object_desc_s(buf, sizeof(buf), &o_list[i], 0);
                     msg_print(buf);
                 }
                 #endif

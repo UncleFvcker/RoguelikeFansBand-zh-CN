@@ -1995,7 +1995,7 @@ void generate_cave(void)
             o_list[i].ident |= IDENT_MENTAL;
             if (o_list[i].name1 || o_list[i].name2)
             {
-                object_desc(buf, &o_list[i], 0);
+                object_desc_s(buf, sizeof(buf), &o_list[i], 0);
                 msg_print(buf);
             }
         }
@@ -2029,7 +2029,7 @@ void generate_cave(void)
             {
                 identify_item(&forge);
                 forge.ident |= IDENT_MENTAL;
-                object_desc(buf, &forge, 0);
+                object_desc_s(buf, sizeof(buf), &forge, 0);
                 msg_print(buf);
             }
         }

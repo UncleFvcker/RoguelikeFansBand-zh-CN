@@ -604,7 +604,7 @@ static bool _on_destroy_object(object_type *o_ptr)
     if (object_is_weapon_armour_ammo(o_ptr))
     {
         char o_name[MAX_NLEN];
-        object_desc(o_name, o_ptr, OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
         msg_format("你试图从%s中汲取力量。", o_name);
         _absorb_all(o_ptr, _absorb_one);
         return TRUE;

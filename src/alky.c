@@ -189,7 +189,7 @@ static void _displayInfusions(rect_t display)
 		if (o_ptr->k_idx)
 		{
 			int len;
-			object_desc(buf, o_ptr, 0);
+			object_desc_s(buf, sizeof(buf), o_ptr, 0);
 			len = strlen(buf);
 			if (len > max_o_len)
 				max_o_len = len;
@@ -212,7 +212,7 @@ static void _displayInfusions(rect_t display)
 		{
 			DC = _FindFormula(o_ptr->sval)->minLv;
 			tier = _FindFormula(o_ptr->sval)->ctier;
-			object_desc(buf, o_ptr, OD_COLOR_CODED);
+			object_desc_s(buf, sizeof(buf), o_ptr, OD_COLOR_CODED);
 			doc_insert(doc, buf);
 
 			if (DC <= alcskil){ // can do
@@ -364,7 +364,7 @@ object_type *_chooseInfusion(cptr verb, int tval, int options)
 		{ /* Inform player */
 			char o_name[MAX_NLEN];
 			result->number--;
-			object_desc(o_name, result, OD_COLOR_CODED);
+			object_desc_s(o_name, sizeof(o_name), result, OD_COLOR_CODED);
 			msg_format("你有%s。", o_name);
 			result->number++;
 		}
@@ -397,12 +397,12 @@ void _use_infusion(object_type* o_ptr, int overdose)
 
 		char prompt[255];
 		char o_name[255];
-		object_desc(o_name, o_ptr, OD_COLOR_CODED | OD_NO_PLURAL | OD_OMIT_PREFIX);
-		sprintf(prompt, "真的要使用%s吗？<color:y>[y/n]</color>", o_name);
+		object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED | OD_NO_PLURAL | OD_OMIT_PREFIX);
+		strnfmt(prompt, sizeof(prompt), "真的要使用%s吗？<color:y>[y/n]</color>", o_name);
 		if (msg_prompt(prompt, "ny", PROMPT_DEFAULT) == 'n')
 			return;
 		else{
-			sprintf(prompt, "真的、真的要使用%s吗？<color:y>[y/n]</color>", o_name);
+			strnfmt(prompt, sizeof(prompt), "真的、真的要使用%s吗？<color:y>[y/n]</color>", o_name);
 			if (msg_prompt(prompt, "ny", PROMPT_DEFAULT) == 'n') return;
 		}
 	}
@@ -487,7 +487,7 @@ static bool create_infusion(void)
 		return FALSE;
 
 	if ((dest_ptr->k_idx) && (dest_ptr->number >= _INFUSION_CAP) && (dest_ptr->sval == prompt.obj->sval)) {
-		object_desc(o_name, dest_ptr, OD_OMIT_PREFIX);
+		object_desc_s(o_name, sizeof(o_name), dest_ptr, OD_OMIT_PREFIX);
 		msg_format("这个槽位已经装满了%s。", o_name);
 		return FALSE;
 	}
@@ -495,8 +495,8 @@ static bool create_infusion(void)
 	if (dest_ptr->k_idx && dest_ptr->sval != prompt.obj->sval)
 	{
 		char prompt[255];
-		object_desc(o_name, dest_ptr, OD_COLOR_CODED);
-		sprintf(prompt, "真的要替换%s吗？<color:y>[y/n]</color>", o_name);
+		object_desc_s(o_name, sizeof(o_name), dest_ptr, OD_COLOR_CODED);
+		strnfmt(prompt, sizeof(prompt), "真的要替换%s吗？<color:y>[y/n]</color>", o_name);
 		if (msg_prompt(prompt, "ny", PROMPT_DEFAULT) == 'n')
 			return FALSE;
 	}
@@ -529,7 +529,7 @@ static bool create_infusion(void)
 	else {
 		int oldct = prompt.obj->number;
 		prompt.obj->number = infct;
-		object_desc(o_name, prompt.obj, OD_COLOR_CODED);
+		object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_COLOR_CODED);
 		msg_format("你制造了%s，提取自%s。", infct == 1 ? "一份萃取液" : "多份萃取液", o_name);
 		prompt.obj->number = oldct;
 
@@ -664,7 +664,7 @@ bool _evaporate_aux(object_type *o_ptr){
 	power = spell_power(dam);
 
 	o_ptr->number = 1;
-	object_desc(o_name, o_ptr, OD_COLOR_CODED);
+	object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
 	msg_format("你挥发了%s。%s", o_name, desc);
 	o_ptr->number = oldct;
 
@@ -766,8 +766,8 @@ bool alchemist_break_down_aux(object_type *o_ptr, int ct){
 	bool singular = (o_ptr->number == 1);
 	if (_CHEM[tier] + cost > _MAX_CHEM){
 		char prompt[255];
-		object_desc(o_name, o_ptr, OD_OMIT_PREFIX);
-		sprintf(prompt, "真的要分解%s吗？由于空间不足，%s化学物质将会丢失。<color:y>[y/n]</color>", o_name, _CHEM[tier] == _MAX_CHEM ? "全部" : "部分");
+		object_desc_s(o_name, sizeof(o_name), o_ptr, OD_OMIT_PREFIX);
+		strnfmt(prompt, sizeof(prompt), "真的要分解%s吗？由于空间不足，%s化学物质将会丢失。<color:y>[y/n]</color>", o_name, _CHEM[tier] == _MAX_CHEM ? "全部" : "部分");
 		if (msg_prompt(prompt, "ny", PROMPT_DEFAULT) == 'n')
 			return FALSE;
 	}
@@ -842,17 +842,18 @@ void _reproduceInf(object_type* o_ptr){
 
 	energy_use = 100;
 
+	if (!o_ptr){
+		if (flush_failure) flush();
+		msg_print("没有什么可复制的。");
+		return;
+	}
+
 	obj_flags(o_ptr, flgs);
 
 	if (o_ptr->number >= _INFUSION_CAP)
 	{
 		if (flush_failure) flush();
 		msg_print("这个槽位已经满了。"); // perhaps make it sound more flavourful...
-		return;
-	}
-	else if (!o_ptr){
-		if (flush_failure) flush();
-		msg_print("没有什么可复制的。"); 
 		return;
 	}
 
@@ -876,7 +877,7 @@ void _reproduceInf(object_type* o_ptr){
 		return;
 	}
 
-	object_desc(o_name, o_ptr, OD_COLOR_CODED);
+	object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
 	sprintf(prompt, "复制将消耗 %d 个化学物质。你确定吗？<color:y>[y/n]</color>", cost);
 	if (msg_prompt(prompt, "ny", PROMPT_DEFAULT) == 'n')
 		return;
@@ -1002,7 +1003,7 @@ static bool _on_destroy_object(object_type *o_ptr)
 	if (object_is_potion(o_ptr))
 	{
 		char o_name[MAX_NLEN];
-		object_desc(o_name, o_ptr, OD_COLOR_CODED);
+		object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
 		msg_format("你尝试分解%s。", o_name);
 		alchemist_break_down_aux(o_ptr, o_ptr->number);
 		return TRUE;
@@ -1089,7 +1090,7 @@ static void _dump_list(doc_ptr doc)
 		object_type *o_ptr = _infusions + i;
 		if (o_ptr->k_idx)
 		{
-			object_desc(o_name, o_ptr, OD_COLOR_CODED);
+			object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
 			doc_printf(doc, "%c) %s\n", I2A(i), o_name);
 		}
 		else

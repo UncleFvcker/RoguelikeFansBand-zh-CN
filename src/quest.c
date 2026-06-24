@@ -307,7 +307,7 @@ void quest_reward(quest_ptr q)
     {
         /*char name[MAX_NLEN];*/
         obj_identify_fully(reward);
-        /*object_desc(name, reward, OD_COLOR_CODED);
+        /*object_desc_s(name, sizeof(name), reward, OD_COLOR_CODED);
         msg_format("You receive %s as a reward.", name);*/
         pack_carry(reward);
         obj_free(reward);
@@ -2358,7 +2358,7 @@ static void _reward_cmd(_ui_context_ptr context)
                     {
                         char name[MAX_NLEN];
                         obj_identify_fully(&forge);
-                        object_desc(name, &forge, OD_COLOR_CODED);
+                        object_desc_s(name, sizeof(name), &forge, OD_COLOR_CODED);
                         msg_boundary();
                         msg_format("%s", name);
                     }
@@ -2378,7 +2378,7 @@ static void _reward_cmd(_ui_context_ptr context)
                 {
                     char name[MAX_NLEN];
                     obj_identify_fully(reward);
-                    object_desc(name, reward, OD_COLOR_CODED);
+                    object_desc_s(name, sizeof(name), reward, OD_COLOR_CODED);
                     msg_format("<color:R>%s</color> 的奖励是 %s。", kayttonimi(quest), name);
                     if (reward->name1)
                     {

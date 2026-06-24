@@ -1095,7 +1095,7 @@ void rage_mage_gain_spell(void)
     {
         char o_name[MAX_NLEN];
 
-        object_desc(o_name, prompt.obj, OD_SINGULAR);
+        object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_SINGULAR);
 
         msg_format("<color:%c>%^s</color> 被摧毁了。", tval_to_attr_char(prompt.obj->tval), o_name);
         prompt.obj->number--;

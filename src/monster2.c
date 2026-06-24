@@ -3867,7 +3867,7 @@ int place_monster_one(int who, int y, int x, int r_idx, int pack_idx, u32b mode)
             o_ptr = choose_warning_item();
             if (o_ptr)
             {
-                object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+                object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
                 msg_format("%s发出%s的光芒。", o_name, color);
                 obj_learn_flag(o_ptr, OF_WARNING);
             }

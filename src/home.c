@@ -272,7 +272,7 @@ void home_display(doc_ptr doc, obj_p p, int flags)
     {
         obj_ptr obj = inv_obj(inv, slot);
         if (!obj) continue; /* bug */
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
         if (!obj->scratch) obj->scratch = obj_value(obj);
         doc_printf(doc, "<color:R>%6d</color> <indent><style:indent>%s</style></indent>\n", obj->scratch, name);
     }
@@ -299,7 +299,7 @@ void museum_display(doc_ptr doc, obj_p p, int flags)
     {
         obj_ptr obj = inv_obj(_museum, slot);
         if (!obj) continue; /* bug */
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
         doc_printf(doc, "<indent><style:indent>%s</style></indent>\n", name);
     }
 
@@ -526,7 +526,7 @@ static void _display(_ui_context_ptr context)
 static void _get_aux(obj_ptr obj)
 {
     /*char name[MAX_NLEN];
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     msg_format("You get %s.", name);*/
     pack_carry(obj);
 }
@@ -592,7 +592,7 @@ static void _drop_aux(obj_ptr obj, _ui_context_ptr context)
         object_origins(obj, ORIGIN_BLOOD);
         obj->mitze_type = 0;
     }
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     if (inv_loc(context->inv) == INV_MUSEUM)
     {
         msg_format("你捐赠了%s。", name);
@@ -661,7 +661,7 @@ static void _drop(_ui_context_ptr context)
         string_ptr s = string_copy_s("<color:v>Warning:</color> All donations are final! ");
         char       c;
 
-        object_desc(name, prompt.obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), prompt.obj, OD_COLOR_CODED);
         string_printf(s, "确定要将 %s 捐献给博物馆吗？<color:y>[y/n]</color>", name);
         c = msg_prompt(string_buffer(s), "ny", PROMPT_YES_NO);
         string_free(s);
@@ -678,7 +678,7 @@ static void _drop(_ui_context_ptr context)
     if (prompt.obj->loc.where == INV_EQUIP)
     {
         char name[MAX_NLEN];
-        object_desc(name, prompt.obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), prompt.obj, OD_COLOR_CODED);
         msg_format("你不再穿戴%s。", name);
         p_ptr->update |= PU_BONUS | PU_TORCH | PU_MANA;
         p_ptr->redraw |= PR_EQUIPPY;
@@ -754,13 +754,13 @@ static void _remove(_ui_context_ptr context)
         obj = inv_obj(context->inv, slot);
         if (!obj) continue;
 
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
         cmd = msg_prompt(format("<color:y>Really remove %s?</color> <color:v>It will "
             "be permanently destroyed!</color> <color:y>[Y,n]</color>", name), "ny", PROMPT_YES_NO);
         if (cmd == 'n') continue;
         if (!can_player_destroy_object(obj))
         {
-            object_desc(name, obj, OD_COLOR_CODED);
+            object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
             msg_format("你不能破坏%s。", name);
             continue;
         }

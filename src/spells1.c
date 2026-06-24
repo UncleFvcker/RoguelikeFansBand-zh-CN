@@ -1779,7 +1779,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
             if (known && (o_ptr->marked & OM_FOUND))
             {
                 obvious = TRUE;
-                object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED));
+                object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED));
             }
 
             /* Artifacts, and other objects, get to resist */

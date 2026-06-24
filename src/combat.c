@@ -884,7 +884,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr, s16b hand, i
     if (have_flag(flgs, OF_BRAND_CHAOS))
     {
         chaos_slay = _chaos_slays[randint0(_MAX_CHAOS_SLAYS)];
-        object_desc(o_name, o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_COLOR_CODED);
     }
 
     /* Hex swords slay good (make this not be weirdly separate from normal slay good) */
@@ -1644,7 +1644,7 @@ void display_weapon_info(doc_ptr doc, int hand)
     cols[1] = doc_alloc(10);
 
     /* Column #1 */
-    object_desc(o_name, o_ptr, OD_COLOR_CODED | OD_NAME_AND_ENCHANT);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED | OD_NAME_AND_ENCHANT);
     if (prace_is_(RACE_MON_SWORD))
         doc_printf(cols[0], "<color:y> 你自己 :</color> <indent><style:indent>%s</style></indent>\n", o_name);
     else
@@ -2205,7 +2205,7 @@ static void _shooter_info_aux(doc_ptr doc, object_type *bow, object_type *arrow,
     }
 
     /* First Column */
-    object_desc(o_name, arrow, OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), arrow, OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
     doc_printf(cols[0], "<color:u> 弹药 #%-2d</color>: <indent><style:indent>%s</style></indent>\n", ct, o_name);
 
     real_snipe = shoot_hack;
@@ -2325,7 +2325,7 @@ void display_shooter_info(doc_ptr doc)
     to_h += skills_bow_calc_bonus(bow_ptr->sval);
 
     /* Shooter */
-    object_desc(o_name, bow_ptr, OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), bow_ptr, OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
     doc_printf(doc, "<color:y>射击武器</color>: <indent><style:indent>%s</style></indent>\n", o_name);
 
     doc_printf(doc, "射程<tab:10>: %d'\n", (bow_range(bow_ptr) + 1) * 10);

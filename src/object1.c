@@ -745,7 +745,7 @@ void obj_learn_slay(object_type *o_ptr, int which, cptr msg)
     if (obj_learn_flag(o_ptr, which))
     {
         char buf[MAX_NLEN];
-        object_desc(buf, o_ptr, OD_LORE);
+        object_desc_s(buf, sizeof(buf), o_ptr, OD_LORE);
         msg_format("<color:B>你了解到你的%s%s。</color>", buf, msg);
     }
 
@@ -792,7 +792,7 @@ void obj_learn_equipped(object_type *o_ptr)
     if (learned) /* TODO: Give messages for each learned flag? */
     {
         char buf[MAX_NLEN];
-        object_desc(buf, o_ptr, OD_LORE);
+        object_desc_s(buf, sizeof(buf), o_ptr, OD_LORE);
         msg_format("<color:B>你了解了关于你%s的更多信息。</color>", buf);
     }
 }

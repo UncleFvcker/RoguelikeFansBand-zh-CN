@@ -468,7 +468,7 @@ int main(int argc, char *argv[])
 			case 'U':
 			{
 				if (!argv[i][2]) goto usage;
-				strcpy(player_name, &argv[i][2]);
+				if (my_strcpy(player_name, &argv[i][2], sizeof(player_name)) >= sizeof(player_name)) goto usage;
 				break;
 			}
 

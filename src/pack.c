@@ -90,7 +90,7 @@ void pack_get(obj_ptr obj)
     char     name[MAX_NLEN];
     class_t *class_ptr = get_class();
 
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
 
     if (obj->tval == TV_GOLD)
     {
@@ -262,7 +262,7 @@ void pack_describe(obj_ptr obj)
     assert(obj->loc.where == INV_PACK);
     assert(1 <= obj->loc.slot && obj->loc.slot <= 26);
 
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     msg_format("你获得了%s (%c)。", name, slot_label(obj->loc.slot));
 }
 
@@ -415,7 +415,7 @@ bool pack_overflow(void)
             cmsg_print(TERM_VIOLET, "你的背包满了：");
             result = TRUE;
         }
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
         msg_format("你丢下了%s。", name);
         drop_near(obj, 0, py, px);
         free(obj);

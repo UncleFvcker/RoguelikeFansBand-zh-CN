@@ -595,7 +595,7 @@ static bool _destroy_object(obj_ptr obj)
         }
 
         sp_player(sp);
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
         msg_format("你兴高采烈地摧毁了%s！", name);
         if (p_ptr->csp > osp)
             msg_print("你觉得头脑清醒了。");

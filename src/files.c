@@ -658,13 +658,13 @@ errr process_pref_file_command(char *buf)
                 if (buf[0] == 'X')
                 {
                     /* Clear */
-                    option_flag[os] &= ~(1L << ob);
+                    option_flag[os] &= ~(1U << ob);
                     (*option_info[i].o_var) = FALSE;
                 }
                 else
                 {
                     /* Set */
-                    option_flag[os] |= (1L << ob);
+                    option_flag[os] |= (1U << ob);
                     (*option_info[i].o_var) = TRUE;
                 }
                 return 0;
@@ -1014,7 +1014,7 @@ cptr process_pref_file_expr(char **sp, char *fp)
                 {
                     unsigned int paikka = strpos(" ", v);
                     if (!paikka) break;
-                    sprintf(tmp, v);
+                    strnfmt(tmp, sizeof(tmp), "%s", v);
                     tmp[paikka - 1] = '-';
                     v = tmp;
                 }
@@ -1504,7 +1504,7 @@ errr check_load_init(void)
         if (!buf[0] || (buf[0] == '#')) continue;
 
         /* Parse, or ignore */
-        if (sscanf(buf, "%s%d", temphost, &value) != 2) continue;
+        if (sscanf(buf, "%64s%d", temphost, &value) != 2) continue;
 
         /* Skip other hosts */
         if (!streq(temphost, thishost) &&
@@ -2689,8 +2689,9 @@ void process_player_name(bool sf)
 {
     int i, k = 0;
     char old_player_base[32] = "";
+    int player_base_max = sizeof(player_base) - 1;
 
-    if (character_generated) strcpy(old_player_base, player_base);
+    if (character_generated) my_strcpy(old_player_base, player_base, sizeof(old_player_base));
 
     /* Cannot be too long */
 #if defined(MACINTOSH) || defined(MSDOS) || defined(USE_EMX) || defined(AMIGA) || defined(ACORN) || defined(VM)
@@ -2732,7 +2733,7 @@ void process_player_name(bool sf)
         if (c == '.') c = '_';
 
         /* Accept all the letters */
-        player_base[k++] = c;
+        if (k < player_base_max) player_base[k++] = c;
     }
 
 #else
@@ -2745,16 +2746,25 @@ void process_player_name(bool sf)
         /* Accept some letters */
         /* Convert path separator to underscore */
         if (!strncmp(PATH_SEP, player_name+i, strlen(PATH_SEP))){
-            player_base[k++] = '_';
+            if (k < player_base_max) player_base[k++] = '_';
             i += strlen(PATH_SEP);
         }
         /* Convert some characters to underscore */
 #ifdef MSDOS
-        else if (my_strchr(" \"*+,./:;<=>?[\\]|", c)) player_base[k++] = '_';
+        else if (my_strchr(" \"*+,./:;<=>?[\\]|", c))
+        {
+            if (k < player_base_max) player_base[k++] = '_';
+        }
 #elif defined(WINDOWS)
-        else if (my_strchr("\"*,/:;<>?\\|", c)) player_base[k++] = '_';
+        else if (my_strchr("\"*,/:;<>?\\|", c))
+        {
+            if (k < player_base_max) player_base[k++] = '_';
+        }
 #endif
-        else if (isprint(c)) player_base[k++] = c;
+        else if (isprint(c))
+        {
+            if (k < player_base_max) player_base[k++] = c;
+        }
     }
 
 #endif
@@ -2771,7 +2781,7 @@ void process_player_name(bool sf)
     player_base[k] = '\0';
 
     /* Require a "base" name */
-    if (!player_base[0]) strcpy(player_base, "PLAYER");
+    if (!player_base[0]) my_strcpy(player_base, "PLAYER", sizeof(player_base));
 
 
 #ifdef SAVEFILE_MUTABLE
@@ -2792,7 +2802,7 @@ void process_player_name(bool sf)
                 break;
             s = t+1;
         }
-        strcpy(savefile_base, s);
+        my_strcpy(savefile_base, s, sizeof(savefile_base));
     }
 
     if (!savefile_base[0] || !savefile[0])
@@ -2803,19 +2813,19 @@ void process_player_name(bool sf)
     {
         char temp[128];
 
-        strcpy(savefile_base, player_base);
+        my_strcpy(savefile_base, player_base, sizeof(savefile_base));
 
 #ifdef SAVEFILE_USE_UID
         /* Rename the savefile, using the player_uid and player_base */
-        (void)sprintf(temp, "%d.%s", player_uid, player_base);
+        (void)strnfmt(temp, sizeof(temp), "%d.%s", player_uid, player_base);
 #else
         /* Rename the savefile, using the player_base */
-        (void)sprintf(temp, "%s", player_base);
+        (void)strnfmt(temp, sizeof(temp), "%s", player_base);
 #endif
 
 #ifdef VM
         /* Hack -- support "flat directory" usage on VM/ESA */
-        (void)sprintf(temp, "%s.sv", player_base);
+        (void)strnfmt(temp, sizeof(temp), "%s.sv", player_base);
 #endif /* VM */
 
         /* Build the filename */
@@ -2829,7 +2839,7 @@ void process_player_name(bool sf)
     }
 
     /* Paranoia - create a default pref save base */
-    if (!strlen(pref_save_base)) strcpy(pref_save_base, player_base);
+    if (!strlen(pref_save_base)) my_strcpy(pref_save_base, player_base, sizeof(pref_save_base));
 }
 
 
@@ -2839,7 +2849,7 @@ bool py_get_name(void)
     char tmp[64];
 
     /* Save the player name */
-    strcpy(tmp, player_name);
+    my_strcpy(tmp, player_name, sizeof(tmp));
 
     /* Check to see if this is for server play. If so, lock the player name. (--phantom) */
     if(!arg_lock_name)
@@ -2847,14 +2857,14 @@ bool py_get_name(void)
         if (get_string("输入你的角色名称：", tmp, PY_NAME_LEN + 1))
         {
             /* Use the name */
-            strcpy(player_name, tmp);
+            my_strcpy(player_name, tmp, sizeof(player_name));
             result = TRUE;
         }
 
         if (0 == strlen(player_name))
         {
             /* Use default name */
-            strcpy(player_name, "PLAYER");
+            my_strcpy(player_name, "PLAYER", sizeof(player_name));
             result = TRUE;
         }
     }
@@ -3011,7 +3021,7 @@ s32b score_mult(void)
     if (!smart_learn) mult -= 1500;
     if (easy_id) mult -= 1000;
     if (power_tele) mult -= 500;
-    if ((p_ptr->pclass == CLASS_BERSERKER) && ((p_ptr->prace == RACE_SPECTRE) || (p_ptr->start_race == RACE_SPECTRE) || (p_ptr->old_race1 & (1L << RACE_SPECTRE))))
+    if ((p_ptr->pclass == CLASS_BERSERKER) && ((p_ptr->prace == RACE_SPECTRE) || (p_ptr->start_race == RACE_SPECTRE) || (p_ptr->old_race1 & (1U << RACE_SPECTRE))))
         mult -= 2000;
     if (!preserve_mode) mult += 500;
     if (smart_cheat) mult += 500;
@@ -3783,9 +3793,9 @@ static errr counts_seek(int fd, u32b where, bool flag)
     int i;
 
 #ifdef SAVEFILE_USE_UID
-    (void)sprintf(temp1, "%d.%s.%d%d%d", player_uid, savefile_base, p_ptr->pclass, p_ptr->personality, 0);
+    (void)strnfmt(temp1, sizeof(temp1), "%d.%s.%d%d%d", player_uid, savefile_base, p_ptr->pclass, p_ptr->personality, 0);
 #else
-    (void)sprintf(temp1, "%s.%d%d%d", savefile_base, p_ptr->pclass, p_ptr->personality, 0);
+    (void)strnfmt(temp1, sizeof(temp1), "%s.%d%d%d", savefile_base, p_ptr->pclass, p_ptr->personality, 0);
 #endif
     for (i = 0; temp1[i]; i++)
         temp1[i] ^= (i+1) * 63;

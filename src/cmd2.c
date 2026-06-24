@@ -3133,7 +3133,7 @@ void do_cmd_fire_aux2(obj_ptr bow, obj_ptr arrows, int sx, int sy, int tx, int t
 
         arrow = *arrows;
         arrow.number = 1;
-        object_desc(o_name, &arrow, OD_OMIT_PREFIX | OD_NO_PLURAL | OD_OMIT_INSCRIPTION);
+        object_desc_s(o_name, sizeof(o_name), &arrow, OD_OMIT_PREFIX | OD_NO_PLURAL | OD_OMIT_INSCRIPTION);
         if (!return_ammo)
             arrows->number--;
 

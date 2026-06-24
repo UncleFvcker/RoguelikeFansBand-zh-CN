@@ -1089,7 +1089,7 @@ static void _bury_dead_spell(int cmd, variant *res)
         else
             turns = 15;
 
-        object_desc(o_name, prompt.obj, OD_NAME_ONLY | OD_COLOR_CODED | OD_SINGULAR);
+        object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_NAME_ONLY | OD_COLOR_CODED | OD_SINGULAR);
         msg_format("你匆忙挖了一个坟墓并把%s扔了进去。", o_name);
 
         prompt.obj->number--;
@@ -1399,7 +1399,7 @@ static void _desperation_spell(int cmd, variant *res)
         }
         o_ptr = equip_obj(slot);
         ds = o_ptr->to_h + o_ptr->to_d;
-        object_desc(o_name, o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX);
 
         if (ds > 0)
         {

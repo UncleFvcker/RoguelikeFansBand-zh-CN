@@ -481,10 +481,10 @@ static bool _match_keyword2(cptr *ptr_p, cptr *prev_ptr_p, cptr key)
 #define MATCH_KEY(KEY) _match_keyword(&ptr, KEY)
 #define MATCH_KEY2(KEY) _match_keyword2(&ptr, &prev_ptr, KEY)
 
-#define ADD_FLG(FLG) (entry->flag[FLG / 32] |= (1L << (FLG % 32)))
-#define REM_FLG(FLG) (entry->flag[FLG / 32] &= ~(1L << (FLG % 32)))
+#define ADD_FLG(FLG) (entry->flag[FLG / 32] |= (1U << (FLG % 32)))
+#define REM_FLG(FLG) (entry->flag[FLG / 32] &= ~(1U << (FLG % 32)))
 #define ADD_FLG_NOUN(FLG) (ADD_FLG(FLG), prev_flg = FLG)
-#define IS_FLG(FLG) (entry->flag[FLG / 32] & (1L << (FLG % 32)))
+#define IS_FLG(FLG) (entry->flag[FLG / 32] & (1U << (FLG % 32)))
 
 
 /*
@@ -977,7 +977,7 @@ static void autopick_entry_from_object(autopick_type *entry, object_type *o_ptr)
                  */
                 ego_type *e_ptr = &e_info[o_ptr->name2];
                 /* We ommit the basename and cannot use the ^ mark */
-                strcpy(name_str, e_name + e_ptr->name);
+                my_strcpy(name_str, e_name + e_ptr->name, sizeof(name_str));
 
                 /* Don't use the object description */
                 name = FALSE;
@@ -1012,8 +1012,8 @@ static void autopick_entry_from_object(autopick_type *entry, object_type *o_ptr)
         /*Devices work better if we just use the effect name */
         if (object_is_device(o_ptr) && o_ptr->activation.type != EFFECT_NONE)
         {
-            strcpy(name_str, effect_internal_name(o_ptr->activation.type));
-            strcat(name_str, "$");
+            my_strcpy(name_str, effect_internal_name(o_ptr->activation.type), sizeof(name_str));
+            my_strcat(name_str, "$", sizeof(name_str));
             name = FALSE;
         }
     }
@@ -1131,8 +1131,8 @@ static void autopick_entry_from_object(autopick_type *entry, object_type *o_ptr)
     {
         char o_name[MAX_NLEN];
 
-        object_desc(o_name, o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_NAME_ONLY | OD_INTERNAL_NAME));
-        sprintf(name_str, "^%s$", o_name);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_NAME_ONLY | OD_INTERNAL_NAME));
+        strnfmt(name_str, sizeof(name_str), "^%s$", o_name);
     }
 
     /* Register the name in lowercase */
@@ -1207,7 +1207,7 @@ static cptr pickpref_filename(int filename_mode, char *other_base)
         return format("%s-UserDefault.prf", namebase);
 
     case PT_WITH_PREFNAME:
-        if (!strlen(pref_save_base)) strcpy(pref_save_base, player_base); /* paranoia */
+    if (!strlen(pref_save_base)) my_strcpy(pref_save_base, player_base, sizeof(pref_save_base)); /* paranoia */
         return format("%s-%s.prf", namebase, pref_save_base);
 
     case PT_WITH_PNAME:
@@ -1254,7 +1254,7 @@ static void free_text_lines(cptr *lines_list);
 void autopick_load_pref(byte mode)
 {
     char buf[80];
-    errr err;
+    errr err = 0;
     bool disp_mes = (mode & ALP_DISP_MES) ? TRUE : FALSE;
     bool new_game = (mode & ALP_NEW_GAME) ? TRUE : FALSE;
 
@@ -1301,7 +1301,7 @@ void autopick_load_pref(byte mode)
     if ((err) && (mode & ALP_CHECK_NUMERALS) && (name_is_numbered(player_name)))
     {
         char old_py_name[32];
-        strcpy(old_py_name, player_name);
+        my_strcpy(old_py_name, player_name, sizeof(old_py_name));
         temporary_name_hack = TRUE;
 
         while (err != 0)
@@ -1319,10 +1319,10 @@ void autopick_load_pref(byte mode)
                 /* Success */
                 msg_format("已加载 '%s'。", buf);
             }
-            if (!err) strcpy(pref_save_base, player_base); /* reduce file proliferation */
+            if (!err) my_strcpy(pref_save_base, player_base, sizeof(pref_save_base)); /* reduce file proliferation */
             if (!name_is_numbered(player_name)) break;
         }
-        strcpy(player_name, old_py_name);
+        my_strcpy(player_name, old_py_name, sizeof(player_name));
         process_player_name(FALSE);
         temporary_name_hack = FALSE;
     }
@@ -2365,8 +2365,8 @@ int is_autopick(object_type *o_ptr)
     }
 
     /* Prepare object name string first */
-    object_desc(o_name, o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
-    object_desc(o_name_internal, o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_INTERNAL_NAME));
+    object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
+    object_desc_s(o_name_internal, sizeof(o_name_internal), o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_INTERNAL_NAME));
 
     /* Convert the string to lower case */
     str_tolower(o_name);
@@ -2588,7 +2588,7 @@ static void auto_destroy_obj(object_type *o_ptr, int autopick_idx)
     if (!can_player_destroy_object(o_ptr))
     {
         /* Describe the object (with {terrible/special}) */
-        object_desc(name, o_ptr, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), o_ptr, OD_COLOR_CODED);
 
         /* Message */
         msg_format("你不能自动摧毁%s。", name);
@@ -2607,7 +2607,7 @@ static void auto_destroy_obj(object_type *o_ptr, int autopick_idx)
     }
     if (o_ptr->k_idx)
     {
-        object_desc(name, o_ptr, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), o_ptr, OD_COLOR_CODED);
         msg_format("自动摧毁%s。", name);
     }
     /* Note: It turns out to be convenient to delay destruction after
@@ -2809,7 +2809,7 @@ static void _get_obj(obj_ptr obj)
             }
 
             /* Describe the object */
-            object_desc(o_name, obj, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), obj, OD_COLOR_CODED);
 
             sprintf(out_val, "Pick up %s? ", o_name);
 
@@ -3031,7 +3031,7 @@ bool autopick_autoregister(object_type *o_ptr)
         char o_name[MAX_NLEN];
 
         /* Describe the object (with {terrible/special}) */
-        object_desc(o_name, o_ptr, 0);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, 0);
 
         /* Message */
         msg_format("你不能自动摧毁%s。", o_name);
@@ -3344,48 +3344,46 @@ static void describe_autopick(char *buff, autopick_type *entry)
     /*** Weapons whose dd*ds is more than nn ***/
     if (IS_FLG(FLG_MORE_DICE))
     {
-        static char more_than_desc_str[] =
-            "其伤害骰最大值大于 __";
+        static char more_than_desc_str[80];
         body_str = "武器";
 
-        sprintf(more_than_desc_str + sizeof(more_than_desc_str) - 3,
-            "%d", entry->dice);
+        strnfmt(more_than_desc_str, sizeof(more_than_desc_str),
+            "其伤害骰最大值大于 %d", entry->dice);
         whose_str[whose_n++] = more_than_desc_str;
     }
 
     /*** Items whose magical bonus is more than nn ***/
     if (IS_FLG(FLG_MORE_BONUS))
     {
-        static char more_bonus_desc_str[] =
-            "其魔法加成大于 (+__)";
+        static char more_bonus_desc_str[80];
 
-        sprintf(more_bonus_desc_str + sizeof(more_bonus_desc_str) - 4,
-            "%d)", entry->bonus);
+        strnfmt(more_bonus_desc_str, sizeof(more_bonus_desc_str),
+            "其魔法加成大于 (+%d)", entry->bonus);
         whose_str[whose_n++] = more_bonus_desc_str;
     }
 
     if (IS_FLG(FLG_MORE_LEVEL))
     {
         static char more_level_desc_str[50];
-        sprintf(more_level_desc_str, "其等级高于 %d", entry->level);
+        strnfmt(more_level_desc_str, sizeof(more_level_desc_str), "其等级高于 %d", entry->level);
         whose_str[whose_n++] = more_level_desc_str;
     }
     if (IS_FLG(FLG_MORE_WEIGHT))
     {
         static char more_weight_desc_str[50];
-        sprintf(more_weight_desc_str, "其重量大于 %d 磅", entry->weight);
+        strnfmt(more_weight_desc_str, sizeof(more_weight_desc_str), "其重量大于 %d 磅", entry->weight);
         whose_str[whose_n++] = more_weight_desc_str;
     }
     if (IS_FLG(FLG_MORE_CHARGES))
     {
         static char more_charges_desc_str[50];
-        sprintf(more_charges_desc_str, "其充能次数多于 %d", entry->charges);
+        strnfmt(more_charges_desc_str, sizeof(more_charges_desc_str), "其充能次数多于 %d", entry->charges);
         whose_str[whose_n++] = more_charges_desc_str;
     }
     if (IS_FLG(FLG_MORE_VALUE))
     {
         static char more_value_desc_str[50];
-        sprintf(more_value_desc_str, "其已知价值大于 %d", entry->value);
+        strnfmt(more_value_desc_str, sizeof(more_value_desc_str), "其已知价值大于 %d", entry->value);
         whose_str[whose_n++] = more_value_desc_str;
     }
 
@@ -4253,7 +4251,7 @@ static byte get_object_for_search(object_type **o_handle, cptr *search_strp)
     *o_handle = prompt.obj;
 
     z_string_free(*search_strp);
-    object_desc(buf, *o_handle, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
+    object_desc_s(buf, sizeof(buf), *o_handle, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
     *search_strp = z_string_make(format("<%s>", buf));
     return 1;
 }
@@ -4271,7 +4269,7 @@ static byte get_destroyed_object_for_search(object_type **o_handle, cptr *search
     *o_handle = &autopick_last_destroyed_object;
 
     z_string_free(*search_strp);
-    object_desc(buf, *o_handle, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
+    object_desc_s(buf, sizeof(buf), *o_handle, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
     *search_strp = z_string_make(format("<%s>", buf));
     return 1;
 }
@@ -4508,8 +4506,8 @@ static void search_for_object(text_body_type *tb, object_type *o_ptr, bool forwa
     int i = tb->cy;
 
     /* Prepare object name string first */
-    object_desc(o_name, o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
-    object_desc(o_name_internal, o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_INTERNAL_NAME));
+    object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL));
+    object_desc_s(o_name_internal, sizeof(o_name_internal), o_ptr, (OD_NAME_ONLY | OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_INTERNAL_NAME));
 
     /* Convert the string to lower case */
     str_tolower(o_name);

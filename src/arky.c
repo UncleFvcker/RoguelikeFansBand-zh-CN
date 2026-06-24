@@ -102,7 +102,7 @@ static bool _whip_fetch(int dir, int rng)
         return TRUE; /* didn't work, but charge the player energy anyway */
     }
 
-    object_desc(o_name, o_ptr, OD_NAME_ONLY | OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY | OD_COLOR_CODED);
 
     /* Get the object */
     msg_format("你熟练地挥出皮鞭，抓取了%s。", o_name);
@@ -792,7 +792,7 @@ void _get_object(obj_ptr obj)
         {
             char name[MAX_NLEN];
 
-            object_desc(name, obj, OD_COLOR_CODED);
+            object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
             cmsg_format(TERM_L_BLUE, "你感觉%s是%s……", name, game_inscriptions[FEEL_SPECIAL]);
 
             obj->ident |= IDENT_SENSE;

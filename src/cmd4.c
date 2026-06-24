@@ -1013,11 +1013,10 @@ void do_cmd_options_aux(int page, cptr info)
         /* Notice options on this "page" */
         if (option_info[i].o_page == page)
         {
-            if (n >= MAX_OPTIONS_PER_PAGE)
-            {
+            if (n < MAX_OPTIONS_PER_PAGE)
+                opt[n++] = i;
+            else
                 quit_fmt("Too many options on option page %d", page);
-            }
-            opt[n++] = i;
         }
     }
 
@@ -1509,7 +1508,7 @@ static void do_cmd_options_win(void)
                 if ((i == y) && (j == x)) a = TERM_L_BLUE;
 
                 /* Active flag */
-                if (window_flag[j] & (1L << i)) c = 'X';
+                if (window_flag[j] & (1U << i)) c = 'X';
 
                 /* Flag value */
                 Term_putch(35 + j * 5, i + 5, a, c);
@@ -1537,13 +1536,13 @@ static void do_cmd_options_win(void)
                 /* Clear windows */
                 for (j = 0; j < 8; j++)
                 {
-                    window_flag[j] &= ~(1L << y);
+                    window_flag[j] &= ~(1U << y);
                 }
 
                 /* Clear flags */
                 for (i = 0; i < 16; i++)
                 {
-                    window_flag[x] &= ~(1L << i);
+                    window_flag[x] &= ~(1U << i);
                 }
             }   /* Fall through */
             case 'y':
@@ -1553,7 +1552,7 @@ static void do_cmd_options_win(void)
                 if (x == 0) break;
 
                 /* Set flag */
-                window_flag[x] |= (1L << y);
+                window_flag[x] |= (1U << y);
                 break;
             }
 
@@ -1561,7 +1560,7 @@ static void do_cmd_options_win(void)
             case 'N':
             {
                 /* Clear flag */
-                window_flag[x] &= ~(1L << y);
+                window_flag[x] &= ~(1U << y);
                 break;
             }
 
@@ -2289,7 +2288,7 @@ void do_cmd_macros(void)
 
 
             /* Default filename */
-            sprintf(tmp, "%s.prf", pref_save_base);
+            strnfmt(tmp, sizeof(tmp), "%s.prf", pref_save_base);
 
             /* Ask for a file */
             if (!askfor(tmp, 80)) continue;
@@ -2325,7 +2324,7 @@ void do_cmd_macros(void)
 
 
             /* Default filename */
-            sprintf(tmp, "%s.prf", pref_save_base);
+            strnfmt(tmp, sizeof(tmp), "%s.prf", pref_save_base);
 
             /* Ask for a file */
             if (!askfor(tmp, 80)) continue;
@@ -2976,7 +2975,7 @@ void do_cmd_visuals(void)
             prt("文件: ", 17, 0);
 
             /* Default filename */
-            sprintf(tmp, "%s.prf", pref_save_base);
+            strnfmt(tmp, sizeof(tmp), "%s.prf", pref_save_base);
 
             /* Query */
             if (!askfor(tmp, 70)) continue;
@@ -3001,7 +3000,7 @@ void do_cmd_visuals(void)
             prt("文件: ", 17, 0);
 
             /* Default filename */
-            sprintf(tmp, "%s.prf", pref_save_base);
+            strnfmt(tmp, sizeof(tmp), "%s.prf", pref_save_base);
 
             /* Get a filename */
             if (!askfor(tmp, 70)) continue;
@@ -3052,7 +3051,7 @@ void do_cmd_visuals(void)
             prt("文件: ", 17, 0);
 
             /* Default filename */
-            sprintf(tmp, "%s.prf", pref_save_base);
+            strnfmt(tmp, sizeof(tmp), "%s.prf", pref_save_base);
 
             /* Get a filename */
             if (!askfor(tmp, 70)) continue;
@@ -3088,7 +3087,7 @@ void do_cmd_visuals(void)
                     object_prep(&forge, i);
 
                     /* Get un-shuffled flavor name */
-                    object_desc(o_name, &forge, OD_FORCE_FLAVOR);
+                    object_desc_s(o_name, sizeof(o_name), &forge, OD_FORCE_FLAVOR);
                 }
 
                 /* Dump a comment */
@@ -3121,7 +3120,7 @@ void do_cmd_visuals(void)
             prt("文件: ", 17, 0);
 
             /* Default filename */
-            sprintf(tmp, "%s.prf", pref_save_base);
+            strnfmt(tmp, sizeof(tmp), "%s.prf", pref_save_base);
 
             /* Get a filename */
             if (!askfor(tmp, 70)) continue;
@@ -3591,7 +3590,7 @@ void do_cmd_colors(void)
 
 
             /* Default file */
-            sprintf(tmp, "%s.prf", pref_save_base);
+            strnfmt(tmp, sizeof(tmp), "%s.prf", pref_save_base);
 
             /* Query */
             if (!askfor(tmp, 70)) continue;
@@ -3622,7 +3621,7 @@ void do_cmd_colors(void)
 
 
             /* Default filename */
-            sprintf(tmp, "%s.prf", pref_save_base);
+            strnfmt(tmp, sizeof(tmp), "%s.prf", pref_save_base);
 
             /* Get a filename */
             if (!askfor(tmp, 70)) continue;
@@ -4908,7 +4907,7 @@ static void do_cmd_knowledge_artifacts(void)
 
             create_named_art_aux_aux(idx, &forge);
             forge.ident = IDENT_KNOWN;
-            object_desc(name, &forge, OD_OMIT_INSCRIPTION);
+            object_desc_s(name, sizeof(name), &forge, OD_OMIT_INSCRIPTION);
 
             if (i + art_top == art_cur)
                 attr = TERM_L_BLUE;
@@ -5261,7 +5260,7 @@ static void _prof_weapon_doc(doc_ptr doc, int tval, int mode)
         object_type  forge = {0};
 
         object_prep(&forge, k_ptr->idx);
-        object_desc(name, &forge, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_NO_FLAVOR);
+        object_desc_s(name, sizeof(name), &forge, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_NO_FLAVOR);
         _prof_insert_name(doc, equip_find_obj(k_ptr->tval, k_ptr->sval) ? 'B' : 'w', name);
         switch (mode)
         {

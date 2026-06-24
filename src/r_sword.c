@@ -203,9 +203,9 @@ static bool _absorb_object(object_type *o_ptr)
         if (!tunnettu)
         {
             obj_identify_fully(o_ptr);
-            object_desc(o_name, o_ptr, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
         }
-        else object_desc(o_name, o_ptr, OD_NAME_ONLY | OD_COLOR_CODED);
+        else object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY | OD_COLOR_CODED);
         msg_format("你尝试从 %s 中吸取力量。", o_name);
 
         _absorb(o_ptr);
@@ -705,7 +705,7 @@ static void _absorb_spell(int cmd, variant *res)
 
         tunnettu = (((obj_is_identified(prompt.obj)) || (prompt.obj->feeling == FEEL_AVERAGE)) && (obj_is_identified_fully(prompt.obj)));
         if (!tunnettu) obj_identify_fully(prompt.obj);
-        object_desc(o_name, prompt.obj, OD_NAME_ONLY);
+        object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_NAME_ONLY);
         msg_format("你吸收了 %s 的力量！", o_name);
 
         _absorb(prompt.obj);

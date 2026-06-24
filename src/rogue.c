@@ -69,7 +69,7 @@ static cptr _rogue_pick_pocket(int power)
         }
         else
         {
-            object_desc(o_name, &loot, 0);
+            object_desc_s(o_name, sizeof(o_name), &loot, 0);
             if (mon_save_aux(m_ptr->r_idx, power))
             {
                 msg_format("哎呀！你掉了 %s。", o_name);

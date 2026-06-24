@@ -451,7 +451,11 @@ static errr init_info(cptr filename, header *head,
     fp = my_fopen(buf, "r");
 
     /* Parse it */
-    if (!fp) quit(format("无法打开 '%s.txt' 文件。", filename));
+    if (!fp)
+    {
+        quit(format("无法打开 '%s.txt' 文件。", filename));
+        return PARSE_ERROR_GENERIC;
+    }
 
 
     /* Parse the file */
@@ -1047,20 +1051,20 @@ static errr init_other(void)
         if (option_info[i].o_var)
         {
             /* Accept */
-            option_mask[os] |= (1L << ob);
+            option_mask[os] |= (1U << ob);
 
             /* Set */
             if (option_info[i].o_norm)
             {
                 /* Set */
-                option_flag[os] |= (1L << ob);
+                option_flag[os] |= (1U << ob);
             }
 
             /* Clear */
             else
             {
                 /* Clear */
-                option_flag[os] &= ~(1L << ob);
+                option_flag[os] &= ~(1U << ob);
             }
         }
     }
@@ -1075,7 +1079,7 @@ static errr init_other(void)
             if (window_flag_desc[i])
             {
                 /* Accept */
-                window_mask[n] |= (1L << i);
+                window_mask[n] |= (1U << i);
             }
         }
     }

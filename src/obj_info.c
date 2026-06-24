@@ -127,8 +127,8 @@ static void _display_name(object_type *o_ptr, doc_ptr doc)
     char o_name2[MAX_NLEN];
     int leveys = MIN(72, doc->width);
 
-    object_desc(o_name, o_ptr, OD_COLOR_CODED | OD_NAME_AND_ENCHANT | OD_NO_FLAVOR);
-    object_desc(o_name2, o_ptr, OD_NAME_AND_ENCHANT | OD_NO_FLAVOR);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED | OD_NAME_AND_ENCHANT | OD_NO_FLAVOR);
+    object_desc_s(o_name2, sizeof(o_name2), o_ptr, OD_NAME_AND_ENCHANT | OD_NO_FLAVOR);
     if ((int)strlen(o_name2) > leveys - 10)
     {
         doc_printf(doc, "%s\n", o_name);

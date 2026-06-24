@@ -5334,7 +5334,7 @@ bool craft_enchant(int max, int inc)
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
 
-    object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+    object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
     /* Some objects cannot be enchanted */
     obj_flags(prompt.obj, flgs);
@@ -8127,7 +8127,7 @@ static cptr do_hex_spell(int spell, int mode)
             obj_prompt(&prompt);
             if (!prompt.obj) return FALSE;
 
-            object_desc(o_name, prompt.obj, OD_NAME_ONLY);
+            object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_NAME_ONLY);
             obj_flags(prompt.obj, f);
 
             if (!get_check(format("你真的要诅咒%s吗？", o_name))) return FALSE;
@@ -8427,7 +8427,7 @@ static cptr do_hex_spell(int spell, int mode)
             obj_prompt(&prompt);
             if (!prompt.obj) return FALSE;
 
-            object_desc(o_name, prompt.obj, OD_NAME_ONLY);
+            object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_NAME_ONLY);
             obj_flags(prompt.obj, f);
 
             if (!get_check(format("你真的要诅咒%s吗？", o_name))) return FALSE;

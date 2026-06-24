@@ -413,7 +413,7 @@ static void _dump_satchel(doc_ptr doc)
             object_type *o_ptr = inv_obj(_beorning_pack, slot);
             if (!o_ptr) continue;
 
-            object_desc(o_name, o_ptr, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
             doc_printf(doc, " %c) <indent><style:indent>%s</style></indent>\n", slot - 1 + 'a', o_name);
             if (((always_dump_origins) || ((final_dump_origins) && ((p_ptr->total_winner) || (p_ptr->is_dead))))
               && (o_ptr->origin_type != ORIGIN_NONE) && (o_ptr->origin_type != ORIGIN_MIXED))

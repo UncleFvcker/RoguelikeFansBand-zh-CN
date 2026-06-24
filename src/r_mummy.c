@@ -155,7 +155,7 @@ static bool _purge_curse_which(object_type *o_ptr)
 {
     char o_name[MAX_NLEN];
 
-    object_desc(o_name, o_ptr, OD_COLOR_CODED | OD_NAME_ONLY | OD_OMIT_PREFIX);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED | OD_NAME_ONLY | OD_OMIT_PREFIX);
 
     if ((o_ptr->curse_flags & OFC_PERMA_CURSE) && (p_ptr->lev >= 25))
     {
@@ -308,7 +308,7 @@ static bool _mummy_pick_curse(object_type *o_ptr)
             c = msg_prompt(buf, "ny", PROMPT_NEW_LINE | PROMPT_ESCAPE_DEFAULT);
             if (c == 'n') continue;
 
-            object_desc(o_name, o_ptr, OD_COLOR_CODED | OD_OMIT_PREFIX | OD_NAME_ONLY);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED | OD_OMIT_PREFIX | OD_NAME_ONLY);
             o_ptr->curse_flags |= _curse->flag;
             o_ptr->known_curse_flags |= _curse->flag;
 

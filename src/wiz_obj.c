@@ -661,7 +661,7 @@ void wiz_create_objects(obj_create_f creator, u32b mode)
 
         if (!obj) continue;
         score = obj_value_real(obj);
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
 
         doc_printf(doc, "%3d <color:%c>%5d</color>) <indent><style:indent>%s</style></indent>\n",
             i, _score_color(score), score, name);

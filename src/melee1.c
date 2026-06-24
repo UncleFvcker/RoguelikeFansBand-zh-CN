@@ -162,7 +162,7 @@ bool drain_random_object(int who, int drain_amt, bool *drained)
             }
         }
 
-        object_desc(buf, obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
+        object_desc_s(buf, sizeof(buf), obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
               msg_format("能量从你的%s中流失了！", buf);
         device_decrease_sp(obj, drain_amt);
         *drained = TRUE;
@@ -643,7 +643,7 @@ bool make_attack_normal(int m_idx)
                         if (object_is_artifact(obj)) continue;
                         if ((obj->tval == TV_CAPTURE) && (obj->pval > 0) && (r_info[obj->pval].ball_num)) continue;
 
-                        object_desc(o_name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
+                        object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
 
                         msg_format("【物品被偷】你的%s被偷走了！", o_name);
 
@@ -696,7 +696,7 @@ bool make_attack_normal(int m_idx)
                         if (obj->tval != TV_FOOD && !(obj->tval == TV_CORPSE && obj->sval)) continue;
                         if (object_is_artifact(obj)) continue;
 
-                        object_desc(o_name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
+                        object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
                         msg_format("你的%s被吃掉了！", o_name);
 
                         obj->number--;

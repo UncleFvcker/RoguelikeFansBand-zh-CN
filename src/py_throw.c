@@ -138,7 +138,7 @@ bool _init_context(py_throw_ptr context)
         }
     }
     obj_flags(context->obj, context->flags);
-    object_desc(context->obj_name, context->obj, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_OMIT_INSCRIPTION);
+    object_desc_s(context->obj_name, sizeof(context->obj_name), context->obj, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_NO_PLURAL | OD_OMIT_INSCRIPTION);
 
     /* checks before taking a turn */
     if (p_ptr->inside_arena && !(context->type & THROW_BOOMERANG))
@@ -609,7 +609,7 @@ void py_throw_doc(py_throw_ptr context, doc_ptr doc)
     cols[1] = doc_alloc(10);
 
     /* Column #1 */
-    object_desc(context->obj_name, context->obj, OD_COLOR_CODED | OD_NAME_AND_ENCHANT | OD_THROWING);
+    object_desc_s(context->obj_name, sizeof(context->obj_name), context->obj, OD_COLOR_CODED | OD_NAME_AND_ENCHANT | OD_THROWING);
     doc_printf(cols[0], "<color:y> 投掷物:</color> <indent><style:indent>%s</style></indent>\n", context->obj_name);
 
     doc_printf(cols[0], "重量<tab:10>: %d.%d 磅\n", context->obj->weight/10, context->obj->weight%10);

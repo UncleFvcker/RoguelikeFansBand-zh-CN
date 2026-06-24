@@ -952,10 +952,7 @@ errr fd_move(cptr file, cptr what)
     if (path_parse(aux, 1024, what)) return (-1);
 
     /* Rename */
-    (void)rename(buf, aux);
-
-    /* XXX XXX XXX */
-    return (0);
+    return rename(buf, aux) ? -1 : 0;
 }
 
 

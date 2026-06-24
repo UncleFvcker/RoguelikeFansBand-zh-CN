@@ -26,6 +26,7 @@ void updatecharinfoS(void)
 
 	path_build(tmp_Path, sizeof(tmp_Path), ANGBAND_DIR_USER, "CharOutput.txt");
 	oFile = fopen(tmp_Path, "w");
+	if (!oFile) return;
 	fprintf(oFile, "{\n");
 	fprintf(oFile, "race: \"%s\",\n", race_->name);
 	if (race_->subname)
@@ -45,9 +46,9 @@ void updatecharinfoS(void)
             char nimi[17];
             int paikka;
             bool ok_name = FALSE;
-            if ((prace_is_(RACE_MON_MIMIC)) && (p_ptr->current_r_idx == MON_MIMIC)) strncpy(nimi, "nothing", sizeof(nimi));
-            else if (strpos("索伦之口", race_->subname)) strncpy(nimi, "索伦之口", sizeof(nimi));
-            else strncpy(nimi, race_->subname, sizeof(nimi));
+            if ((prace_is_(RACE_MON_MIMIC)) && (p_ptr->current_r_idx == MON_MIMIC)) my_strcpy(nimi, "nothing", sizeof(nimi));
+            else if (strpos("索伦之口", race_->subname)) my_strcpy(nimi, "索伦之口", sizeof(nimi));
+            else my_strcpy(nimi, race_->subname, sizeof(nimi));
             if (strlen(nimi) < 16) ok_name = TRUE;
             while (!ok_name)
             {
@@ -480,9 +481,9 @@ static void wr_options(savefile_ptr file)
         if (option_info[i].o_var)
         {
             if (*option_info[i].o_var)
-                option_flag[os] |= (1L << ob);
+                option_flag[os] |= (1U << ob);
             else
-                option_flag[os] &= ~(1L << ob);
+                option_flag[os] &= ~(1U << ob);
         }
     }
 
@@ -1511,13 +1512,13 @@ bool save_player(void)
 
 
     /* New savefile */
-    strcpy(safe, savefile);
-    strcat(safe, ".new");
+    if (my_strcpy(safe, savefile, sizeof(safe)) >= sizeof(safe)) goto cleanup;
+    if (my_strcat(safe, ".new", sizeof(safe)) >= sizeof(safe)) goto cleanup;
 
 #ifdef VM
     /* Hack -- support "flat directory" usage on VM/ESA */
-    strcpy(safe, savefile);
-    strcat(safe, "n");
+    if (my_strcpy(safe, savefile, sizeof(safe)) >= sizeof(safe)) goto cleanup;
+    if (my_strcat(safe, "n", sizeof(safe)) >= sizeof(safe)) goto cleanup;
 #endif /* VM */
 
     /* Grab permissions */
@@ -1535,15 +1536,17 @@ bool save_player(void)
     if (save_player_aux(safe))
     {
         char temp[1024];
+        bool ok = TRUE;
+        bool old_exists;
 
         /* Old savefile */
-        strcpy(temp, savefile);
-        strcat(temp, ".old");
+        if (my_strcpy(temp, savefile, sizeof(temp)) >= sizeof(temp)) goto cleanup;
+        if (my_strcat(temp, ".old", sizeof(temp)) >= sizeof(temp)) goto cleanup;
 
 #ifdef VM
         /* Hack -- support "flat directory" usage on VM/ESA */
-        strcpy(temp, savefile);
-        strcat(temp, "o");
+        if (my_strcpy(temp, savefile, sizeof(temp)) >= sizeof(temp)) goto cleanup;
+        if (my_strcat(temp, "o", sizeof(temp)) >= sizeof(temp)) goto cleanup;
 #endif /* VM */
 
         /* Grab permissions */
@@ -1552,43 +1555,61 @@ bool save_player(void)
         /* Remove it */
         fd_kill(temp);
 
+        old_exists = (access(savefile, 0) == 0);
+
         /* Preserve old savefile */
-        fd_move(savefile, temp);
+        if (old_exists && fd_move(savefile, temp))
+        {
+            game_log_event("save", "failed to preserve old savefile path=%s backup=%s", savefile, temp);
+            ok = FALSE;
+        }
 
         /* Activate new savefile */
-        fd_move(safe, savefile);
+        if (ok && fd_move(safe, savefile))
+        {
+            game_log_event("save", "failed to activate new savefile path=%s new=%s", savefile, safe);
+            if (old_exists && fd_move(temp, savefile))
+                game_log_event("save", "failed to restore old savefile path=%s backup=%s", savefile, temp);
+            ok = FALSE;
+        }
 
         /* Remove preserved savefile */
-        fd_kill(temp);
+        if (ok) fd_kill(temp);
 
         /* Drop permissions */
         safe_setuid_drop();
 
-        /* Hack -- Pretend the character was loaded */
-        character_loaded = TRUE;
+        if (ok)
+        {
+            /* Hack -- Pretend the character was loaded */
+            character_loaded = TRUE;
 
 #ifdef VERIFY_SAVEFILE
 
-        /* Lock on savefile */
-        strcpy(temp, savefile);
-        strcat(temp, ".lok");
+            /* Lock on savefile */
+            if (my_strcpy(temp, savefile, sizeof(temp)) < sizeof(temp) &&
+                my_strcat(temp, ".lok", sizeof(temp)) < sizeof(temp))
+            {
 
-        /* Grab permissions */
-        safe_setuid_grab();
+                /* Grab permissions */
+                safe_setuid_grab();
 
-        /* Remove lock file */
-        fd_kill(temp);
+                /* Remove lock file */
+                fd_kill(temp);
 
-        /* Drop permissions */
-        safe_setuid_drop();
+                /* Drop permissions */
+                safe_setuid_drop();
+            }
 
 #endif
 
-        /* Success */
-        result = TRUE;
+            /* Success */
+            result = TRUE;
+        }
     }
 
 
+cleanup:
 #ifdef SET_UID
 
 # ifdef SECURE
@@ -1726,8 +1747,13 @@ bool load_player(void)
         char temp[1024];
 
         /* Extract name of lock file */
-        strcpy(temp, savefile);
-        strcat(temp, ".lok");
+        if (my_strcpy(temp, savefile, sizeof(temp)) >= sizeof(temp) ||
+            my_strcat(temp, ".lok", sizeof(temp)) >= sizeof(temp))
+        {
+            msg_print("存档文件路径过长。");
+            msg_print(NULL);
+            return (FALSE);
+        }
 
         /* Check for lock */
         fkk = my_fopen(temp, "r");
@@ -1749,6 +1775,12 @@ bool load_player(void)
 
         /* Create a lock file */
         fkk = my_fopen(temp, "w");
+        if (!fkk)
+        {
+            msg_print("无法创建存档锁定文件。");
+            msg_print(NULL);
+            return (FALSE);
+        }
 
         /* Dump a line of info */
         fprintf(fkk, "存档文件 '%s' 的锁定文件\n", savefile);
@@ -1920,11 +1952,13 @@ bool load_player(void)
         char temp[1024];
 
         /* Extract name of lock file */
-        strcpy(temp, savefile);
-        strcat(temp, ".lok");
+        if (my_strcpy(temp, savefile, sizeof(temp)) < sizeof(temp) &&
+            my_strcat(temp, ".lok", sizeof(temp)) < sizeof(temp))
+        {
 
-        /* Remove lock */
-        fd_kill(temp);
+            /* Remove lock */
+            fd_kill(temp);
+        }
     }
 
 #endif
@@ -1958,11 +1992,13 @@ void remove_loc(void)
 #ifdef VERIFY_SAVEFILE
 
     /* Lock on savefile */
-    strcpy(temp, savefile);
-    strcat(temp, ".lok");
+    if (my_strcpy(temp, savefile, sizeof(temp)) < sizeof(temp) &&
+        my_strcat(temp, ".lok", sizeof(temp)) < sizeof(temp))
+    {
 
-    /* Remove lock file */
-    fd_kill(temp);
+        /* Remove lock file */
+        fd_kill(temp);
+    }
 
 #endif /* VERIFY_SAVEFILE */
 
@@ -2022,7 +2058,7 @@ bool save_floor(saved_floor_type *sf_ptr, u32b mode)
 #endif
     }
 
-    sprintf(floor_savefile, "%s.F%02d", savefile, (int)sf_ptr->savefile_id);
+    strnfmt(floor_savefile, sizeof(floor_savefile), "%s.F%02d", savefile, (int)sf_ptr->savefile_id);
     game_log_event("floor-save", "begin path=%s mode=0x%08lx sf_floor_id=%d savefile_id=%d",
         floor_savefile, (unsigned long)mode, sf_ptr->floor_id, sf_ptr->savefile_id);
     file = savefile_open_write(floor_savefile);

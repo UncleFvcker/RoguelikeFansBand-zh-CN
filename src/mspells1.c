@@ -224,7 +224,7 @@ void curse_equipment(int chance, int heavy_chance)
         if (p_ptr->prace == RACE_MON_ARMOR) return;
 
         obj_flags(o_ptr, oflgs);
-        object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+        object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
         if (have_flag(oflgs, OF_BLESSED) && (randint1(888) > chance))
         {

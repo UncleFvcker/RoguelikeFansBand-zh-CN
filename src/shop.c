@@ -1542,7 +1542,7 @@ static bool _buy_aux(shop_ptr shop, obj_ptr obj)
     price = _buy_price(shop, price);
     price *= obj->number;
 
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     if (no_selling)
         string_printf(s, "确定赠送 %s？<color:y>[y/n]</color>", name);
     else
@@ -1571,7 +1571,7 @@ static bool _buy_aux(shop_ptr shop, obj_ptr obj)
 
     /* This message may seem like spam, but it is not. Selling an
      * un-identified potion of augmentation, for example. */
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
 
     if (no_selling)
         msg_format("你赠送了 %s。", name);
@@ -1707,13 +1707,13 @@ static void _reserve_aux(shop_ptr shop, obj_ptr obj)
     {
         int mode = (OD_OMIT_PREFIX | OD_COLOR_CODED);
         if (amt == 1) mode |= OD_SINGULAR;
-        object_desc(name, obj, mode);
+        object_desc_s(name, sizeof(name), obj, mode);
         cost *= amt;
         s = string_alloc_format("预订 <color:%c>%d</color> 个 %s，价格 <color:R>%d</color> 金币？<color:y>[y/n]</color>", tval_to_attr_char(obj->tval), amt, name, cost);
     }
     else if (maks < 0)
     {
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
         s = string_alloc_format("预订 %s，价格 <color:R>%d</color> 金币？<color:y>[y/n]</color>", name, cost);
     }
     else
@@ -1737,7 +1737,7 @@ static void _reserve_aux(shop_ptr shop, obj_ptr obj)
         p_ptr->update |= (PU_BONUS | PU_HP | PU_MANA);
 
     obj->number = amt;
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     obj->marked |= OM_RESERVED;
 
     msg_format("好了！我会替你保留 %s，你可以随时回来购买。", name);
@@ -1778,7 +1778,7 @@ static bool _sell_aux(shop_ptr shop, obj_ptr obj)
     price = _sell_price(shop, price);
     price *= obj->number;
 
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     string_printf(s, "确定购买 %s，价格 <color:R>%d</color> 金币？<color:y>[y/n]</color>", name, price);
     c = msg_prompt(string_buffer(s), "ny", PROMPT_YES_NO);
     string_free(s);
@@ -2288,7 +2288,7 @@ static void _display_inv(doc_ptr doc, shop_ptr shop, slot_t top, int page_size)
             if (next && obj_cmp(obj, next) > 0)
                 label_color = 'r';
 
-            object_desc(name, obj, OD_COLOR_CODED);
+            object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
 
             doc_printf(doc, " <color:%c>%c</color>) ", label_color, slot_label(slot - top + 1));
             if (show_item_graph)

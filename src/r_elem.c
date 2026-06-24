@@ -140,7 +140,7 @@ static void _destroy_aux(obj_ptr obj, cptr fmt)
 {
     char o_name[MAX_NLEN];
 
-    object_desc(o_name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED | OD_SINGULAR);
+    object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED | OD_SINGULAR);
     msg_format(fmt, o_name);
 
     stats_on_p_destroy(obj, 1);
@@ -760,7 +760,7 @@ void water_mana_action(byte check_hurt_mode, int mana)
             object_type *o_ptr = equip_obj(slot);
             char o_name[MAX_NLEN];
             if (o_ptr->marked & OM_SLIPPING) return;
-            object_desc(o_name, o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
             o_ptr->marked |= OM_SLIPPING;
             msg_format("你流动得太快了！你的%s被水流卷入并滑落了！", o_name);
             if ((object_is_(o_ptr, TV_SOFT_ARMOR, SV_ABUNAI_MIZUGI)) && (personality_is_(PERS_SEXY)))
@@ -832,7 +832,7 @@ static bool _adjust_armor_aux(void)
             return FALSE;
         }
         o_ptr->marked &= ~OM_SLIPPING;
-//        object_desc(o_name, o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
+//        object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
         obj_release(o_ptr, 0);
     }
     p_ptr->update |= (PU_BONUS | PU_HP | PU_SPELLS);
@@ -1033,7 +1033,7 @@ static void _water_damage(obj_ptr obj)
 //    if (have_flag(flgs, OF_IGNORE_ACID) && !(one_in_(10))) return;
 //    if (object_is_artifact(obj) && !(one_in_(2))) return;
 
-    object_desc(o_name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
     msg_format("你那水状的身体腐蚀了你的%s！", o_name);
     obj->to_a--;
 

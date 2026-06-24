@@ -162,7 +162,7 @@ void obj_release(obj_ptr obj, int options)
 
     if (!obj) return;
     if (!quiet)
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
 
     if ((obj->marked & OM_AUTODESTROY) && obj->number)
     {
@@ -624,7 +624,7 @@ bool obj_confirm_choice(obj_ptr obj)
             {
                 if (!ct++)
                 {
-                    object_desc(name, obj, OD_COLOR_CODED);
+                    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
                     sprintf(prompt, "Really choose %s? ", name);
                 }
                 if (!get_check(prompt)) return FALSE;
@@ -913,7 +913,7 @@ void obj_delayed_describe(obj_ptr obj)
         char       name[MAX_NLEN];
         bool       show_slot = FALSE;
 
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
         if (obj->loc.where == INV_EQUIP) /* paranoia */
             string_append_s(msg, "你正穿着");
         else
@@ -962,7 +962,7 @@ static int _inspector(obj_prompt_context_ptr context, int cmd)
         if (object_is_flavor(obj) && !object_is_known(obj))
         {
             char name[MAX_NLEN];
-            object_desc(name, obj, OD_COLOR_CODED);
+            object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
             doc_insert(context->doc, name);
             doc_insert(context->doc, "\n\n你对这件物品没有特殊的了解。\n");
         }
@@ -1086,7 +1086,7 @@ static int _inscriber(obj_prompt_context_ptr context, int cmd)
         char    name[MAX_NLEN];
         char    insc[80];
 
-        object_desc(name, obj, OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
         if (obj->inscription)
             strcpy(insc, quark_str(obj->inscription));
         else
@@ -1160,7 +1160,7 @@ void obj_uninscribe_ui(void)
 static void _drop(obj_ptr obj)
 {
     char name[MAX_NLEN];
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     if (!silent_drop_hack) msg_format("你丢下了%s。", name);
     drop_near(obj, 0, py, px);
     p_ptr->update |= PU_BONUS; /* Weight changed */
@@ -1289,7 +1289,7 @@ void obj_destroy_ui(void)
 
         if (prompt.obj->number > 1)
             options |= OD_OMIT_PREFIX;
-        object_desc(name, prompt.obj, options);
+        object_desc_s(name, sizeof(name), prompt.obj, options);
         sprintf(msg, "真的要摧毁 %s 吗？ <color:y>[y/n/Auto(自动)]</color>", name);
 
         ch = msg_prompt(msg, "nyA", PROMPT_DEFAULT);
@@ -1315,7 +1315,7 @@ void obj_destroy_ui(void)
     /* Artifacts cannot be destroyed */
     if (!can_player_destroy_object(prompt.obj)) /* side effect: obj->sense = FEEL_SPECIAL */
     {
-        object_desc(name, prompt.obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), prompt.obj, OD_COLOR_CODED);
         msg_format("你无法摧毁%s。", name);
         return;
     }
@@ -1358,7 +1358,7 @@ static void _destroy(obj_ptr obj)
             else  /* Destroying part of a pile */
             {
                 char name[MAX_NLEN];
-                object_desc(name, obj, OD_COLOR_CODED);
+                object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
                 msg_format("你摧毁了%s。", name);
             }
         }
@@ -2069,7 +2069,7 @@ void special1_drop(obj_ptr obj)
         char i_name[80];
         inv_ptr special_pack = get_race()->bonus_pack;
         assert(special_pack);
-        object_desc(o_name, obj, OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), obj, OD_COLOR_CODED);
         strcpy(i_name, inv_name(special_pack));
         i_name[0] = tolower(i_name[0]);
         if (streq("ice Bag", i_name)) i_name[4] = tolower(i_name[4]);
@@ -2103,7 +2103,7 @@ void special2_drop(obj_ptr obj)
         char i_name[80];
         inv_ptr special_pack = get_class()->bonus_pack;
         assert(special_pack);
-        object_desc(o_name, obj, OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), obj, OD_COLOR_CODED);
         strcpy(i_name, inv_name(special_pack));
         i_name[0] = tolower(i_name[0]);
         msg_format("你的%s里不再有%s了。", i_name, o_name);

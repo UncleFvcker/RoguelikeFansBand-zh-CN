@@ -520,7 +520,7 @@ s32b jewelry_cost(object_type *o_ptr, int options)
     if (cost_calc_hook)
     {
         char buf[MAX_NLEN];
-        object_desc(buf, o_ptr, 0);
+        object_desc_s(buf, sizeof(buf), o_ptr, 0);
         sprintf(dbg_msg, "Scoring `%s` ...", buf);
         cost_calc_hook(dbg_msg);
     }
@@ -1014,7 +1014,7 @@ s32b armor_cost(object_type *o_ptr, int options)
     if (cost_calc_hook)
     {
         char buf[MAX_NLEN];
-        object_desc(buf, o_ptr, 0);
+        object_desc_s(buf, sizeof(buf), o_ptr, 0);
         sprintf(dbg_msg, "Scoring `%s` ...", buf);
         cost_calc_hook(dbg_msg);
     }
@@ -1254,7 +1254,7 @@ s32b weapon_cost(object_type *o_ptr, int options)
     if (cost_calc_hook)
     {
         char buf[MAX_NLEN];
-        object_desc(buf, o_ptr, 0);
+        object_desc_s(buf, sizeof(buf), o_ptr, 0);
         sprintf(dbg_msg, "Scoring `%s` ...", buf);
         cost_calc_hook(dbg_msg);
     }
@@ -1582,7 +1582,7 @@ s32b bow_cost(object_type *o_ptr, int options)
     if (cost_calc_hook)
     {
         char buf[MAX_NLEN];
-        object_desc(buf, o_ptr, 0);
+        object_desc_s(buf, sizeof(buf), o_ptr, 0);
         sprintf(dbg_msg, "Scoring `%s` ...", buf);
         cost_calc_hook(dbg_msg);
     }

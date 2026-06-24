@@ -638,7 +638,7 @@ static void _possess_spell(int cmd, variant *res)
         if (!prompt.obj) return;
         r_ptr = &r_info[prompt.obj->pval];
 
-        object_desc(name, prompt.obj, OD_NAME_ONLY | OD_SINGULAR);
+        object_desc_s(name, sizeof(name), prompt.obj, OD_NAME_ONLY | OD_SINGULAR);
         if (r_ptr->level > _calc_level(p_ptr->max_plv) + 5)
         {
             msg_format("你不够强大，无法附身 %s (等级 %d)。",

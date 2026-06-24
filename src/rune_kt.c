@@ -216,7 +216,7 @@ bool rune_add(object_type *o_ptr, int which, bool prompt)    /* Birthing needs a
     char o_name[MAX_NLEN];
 
     if (!which) return FALSE;
-    object_desc(o_name, o_ptr, 0);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, 0);
 
     if (o_ptr->rune)
     {

@@ -934,7 +934,7 @@ static void _reforging_spell(int cmd, variant *res)
         if (dest_max_power < 1000) /* Reforging won't try to power match weak stuff ... */
             dest_max_power = 1000;
 
-        object_desc(o_name, src, OD_NAME_ONLY);    
+        object_desc_s(o_name, sizeof(o_name), src, OD_NAME_ONLY);
         if (!get_check(format("确认要使用 %s 吗？(它将被摧毁！)", o_name))) 
             return;
 

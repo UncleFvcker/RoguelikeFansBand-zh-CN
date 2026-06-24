@@ -1648,7 +1648,7 @@ static errr _parse_room_grid_object(char **args, int arg_ct, room_grid_ptr grid,
                 grid->extra2 = -1;
 //                grid->flags |= ROOM_GRID_EGO_RANDOM;
             }
-            else if (sscanf(flag, "TYPE=%s", tyyppi) == 1)
+            else if (sscanf(flag, "TYPE=%79s", tyyppi) == 1)
             {
                 unsigned int j;
                 for (j = 0; j < strlen(tyyppi); j++)
@@ -2129,6 +2129,7 @@ static errr parse_v_info(char *buf, int options)
     {
         int rc;
         room_grid_ptr letter = malloc(sizeof(room_grid_t));
+        if (!letter) return PARSE_ERROR_OUT_OF_MEMORY;
         memset(letter, 0, sizeof(room_grid_t));
         letter->letter = buf[2];
         rc = parse_room_grid(buf + 4, letter, options);
@@ -4106,7 +4107,6 @@ errr parse_r_info(char *buf, header *head)
         if (strcmp(zz[0], "Copy") == 0)
         {
             int idx, i;
-            if (num < 2) return PARSE_ERROR_TOO_FEW_ARGUMENTS;
 
             /* P:Copy:<r_idx> */
             if (num == 2)
@@ -4781,6 +4781,7 @@ errr parse_room_line(room_ptr room, char *line, int options)
     {
         int rc;
         room_grid_ptr letter = malloc(sizeof(room_grid_t));
+        if (!letter) return PARSE_ERROR_OUT_OF_MEMORY;
         memset(letter, 0, sizeof(room_grid_t));
         letter->letter = line[2];
         rc = parse_room_grid(line + 4, letter, options);
@@ -5161,7 +5162,7 @@ static cptr process_dungeon_file_expr(char **sp, char *fp)
                 {
                     unsigned int paikka = strpos(" ", v);
                     if (!paikka) break;
-                    sprintf(tmp, v);
+                    strnfmt(tmp, sizeof(tmp), "%s", v);
                     tmp[paikka - 1] = '-';
                     v = tmp;
                 }
@@ -5247,8 +5248,8 @@ static cptr process_dungeon_file_expr(char **sp, char *fp)
             {
                 int q_idx = atoi(b+7);
                 /* "RANDOM" uses a special parameter to determine the number of the quest */
-                if (q_idx == 0) sprintf(tmp, "%d", p_ptr->quest_seed);
-                else sprintf(tmp, "%d", quests_get(q_idx)->seed);
+                if (q_idx == 0) strnfmt(tmp, sizeof(tmp), "%u", p_ptr->quest_seed);
+                else strnfmt(tmp, sizeof(tmp), "%u", quests_get(q_idx)->seed);
                 v = tmp;
             }
 

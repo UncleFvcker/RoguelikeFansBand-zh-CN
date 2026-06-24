@@ -379,7 +379,7 @@ race_t *mon_jelly_get_race(void)
 bool jelly_eat_object(object_type *o_ptr)
 {
     char o_name[MAX_NLEN];
-    object_desc(o_name, o_ptr, OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
     /* Confirm eating artifacts */
     if ((object_is_artifact(o_ptr)) && ((obj_is_identified(o_ptr)) || (o_ptr->feeling == FEEL_SPECIAL) || (o_ptr->feeling == FEEL_TERRIBLE)))
     {

@@ -416,7 +416,7 @@ static void do_cmd_eat_food_aux(obj_ptr obj)
         /* Drain vitality of humanoids */
         char o_name[MAX_NLEN];
 
-        object_desc(o_name, obj, (OD_OMIT_PREFIX | OD_NAME_ONLY | OD_SINGULAR));
+        object_desc_s(o_name, sizeof(o_name), obj, (OD_OMIT_PREFIX | OD_NAME_ONLY | OD_SINGULAR));
 
         msg_format("<color:%c>%^s</color> 被烧成了灰烬。你吸收了它的生命力！", tval_to_attr_char(obj->tval), o_name);
         set_food(PY_FOOD_MAX - 1);
@@ -967,7 +967,7 @@ static void do_cmd_read_scroll_aux(obj_ptr o_ptr)
 
         screen_save();
         q=format("book-%d_jp.txt",o_ptr->sval);
-        object_desc(o_name, o_ptr, OD_NAME_ONLY);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY);
         path_build(buf, sizeof(buf), ANGBAND_DIR_FILE, q);
         (void)show_file(TRUE, buf, o_name, 0, 0);
         screen_load();
@@ -1143,7 +1143,7 @@ static void do_cmd_device_aux(obj_ptr obj)
           && !(obj->known_xtra & OFL_DEVICE_FAIL))
         {
             char buf[MAX_NLEN];
-            object_desc(buf, obj, OD_LORE);
+            object_desc_s(buf, sizeof(buf), obj, OD_LORE);
             msg_format("<color:B>你对你的%s了解得更多了。</color>", buf);
             obj->known_xtra |= OFL_DEVICE_FAIL;
             if (obj->known_xtra & OFL_DEVICE_POWER)
@@ -1197,7 +1197,7 @@ static void do_cmd_device_aux(obj_ptr obj)
       && !(obj->known_xtra & OFL_DEVICE_POWER) )
     {
         char buf[MAX_NLEN];
-        object_desc(buf, obj, OD_LORE);
+        object_desc_s(buf, sizeof(buf), obj, OD_LORE);
         msg_format("<color:B>你对你的%s了解得更多了。</color>", buf);
         obj->known_xtra |= OFL_DEVICE_POWER;
         if (obj->known_xtra & OFL_DEVICE_FAIL)
@@ -1224,7 +1224,7 @@ static void do_cmd_device_aux(obj_ptr obj)
             if (is_devicemaster && devicemaster_desperation && randint0(p_ptr->lev*7) < k_info[obj->k_idx].level)
             {
                 char o_name[MAX_NLEN];
-                object_desc(o_name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
+                object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
                 msg_format("绝境魔法消耗了你的%s！", o_name);
                 obj_zero(obj);
             }

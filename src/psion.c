@@ -879,7 +879,7 @@ void _psionic_crafting_spell(int power, int cmd, variant *res)
         obj_prompt(&prompt);
         if (!prompt.obj) return;
 
-        object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+        object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
         _enchant_power = power; /* Hack for enchant(), which I'm too lazy to rewrite ... */
         if (power == 5 && object_is_nameless(prompt.obj) && prompt.obj->number == 1)

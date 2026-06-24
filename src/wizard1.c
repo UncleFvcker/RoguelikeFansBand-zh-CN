@@ -164,7 +164,7 @@ static void kind_info(char *buf, char *dam, char *wgt, int *lev, s32b *val, int 
 
 
     /* Description (too brief) */
-    object_desc(buf, q_ptr, (OD_NAME_ONLY | OD_STORE));
+    object_desc_s(buf, sizeof(buf), q_ptr, (OD_NAME_ONLY | OD_STORE));
 
 
     /* Misc info */
@@ -531,7 +531,7 @@ static void _spoil_table_aux(doc_ptr doc, cptr title, _obj_p pred, int options)
             }
             else
                 entry->score = obj_value_real(&forge);
-            object_desc(entry->name, &forge, OD_COLOR_CODED);
+            object_desc_s(entry->name, sizeof(entry->name), &forge, OD_COLOR_CODED);
             entry->k_idx = forge.k_idx;
             entry->level = a_info[i].level;
             vec_add(entries, entry);
@@ -565,7 +565,7 @@ static void _spoil_table_aux(doc_ptr doc, cptr title, _obj_p pred, int options)
             }
             else
                 entry->score = obj_value_real(o_ptr);
-            object_desc(entry->name, o_ptr, OD_COLOR_CODED);
+            object_desc_s(entry->name, sizeof(entry->name), o_ptr, OD_COLOR_CODED);
             entry->k_idx = o_ptr->k_idx;
             entry->level = o_ptr->level;
             entry->pct = 0;
@@ -616,7 +616,7 @@ static void _spoil_table_aux(doc_ptr doc, cptr title, _obj_p pred, int options)
             }
             else
                 entry->score = obj_value_real(o_ptr);
-            object_desc(entry->name, o_ptr, OD_COLOR_CODED);
+            object_desc_s(entry->name, sizeof(entry->name), o_ptr, OD_COLOR_CODED);
             entry->k_idx = o_ptr->k_idx;
             entry->level = o_ptr->level;
             vec_add(entries, entry);

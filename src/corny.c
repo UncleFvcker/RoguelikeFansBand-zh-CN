@@ -409,7 +409,7 @@ static void _process_implorington(obj_ptr obj)
     char name[MAX_NLEN];
     char buf[MAX_NLEN+30];
     int amt = 25000L;
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     sprintf(buf, "Convert %s into money? ", name);
     if (get_check(buf))
     {
@@ -863,7 +863,7 @@ static int _disen_insure_item(object_type *o_ptr, building_type *bldg)
         else msg_print("这件物品太没有价值，无法投保。");
         return 0;
     }
-    object_desc(o_name, o_ptr, OD_SINGULAR);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_SINGULAR);
     _clear_bldg(4,18);
     c_put_str(tval_to_attr[o_ptr->tval], format("%-72.72s", o_name), 9, 5);
     put_str("损坏赔偿项: 护甲 命中 伤害加成 Pval(附加属性)", 13, 5);
@@ -929,7 +929,7 @@ static int _destroy_insure_item(object_type *o_ptr, building_type *bldg)
     int vari;
     int komento;
     if (!o_ptr) return 0; /* paranoia */
-    object_desc(o_name, o_ptr, 0);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, 0);
     if (!allow_full) valinta = 1; /* What other options do we have? */
     if (object_is_ego(o_ptr)) replacement_mult *= 2;
     if (o_ptr->insured)
@@ -982,7 +982,7 @@ static int _destroy_insure_item(object_type *o_ptr, building_type *bldg)
         }
         if (update_bitflag & 0x10)
         {
-            object_desc(o_name, o_ptr, (qty == 1) ? OD_SINGULAR : 0);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, (qty == 1) ? OD_SINGULAR : 0);
             c_prt(tval_to_attr[o_ptr->tval], format("%-69.69s", o_name), 8, ((o_ptr->number >= 10) && (qty == 1)) ? 9 : 8);
             c_put_str(tval_to_attr[o_ptr->tval], format(o_ptr->number >= 10 ? "%2d" : "%d", qty), 8, 8);
             update_bitflag &= ~0x11;
@@ -1184,7 +1184,7 @@ static void _policy_blurb(int i, int *rivi)
         {
             char o_name[MAX_NLEN];
             _my_policies[i].o_ptr->number = _my_policies[i].num_insured - _my_policies[i].num_destroyed;
-            object_desc(o_name, _my_policies[i].o_ptr, 0);
+            object_desc_s(o_name, sizeof(o_name), _my_policies[i].o_ptr, 0);
             c_prt(tval_to_attr[_my_policies[i].o_ptr->tval], format("%d) %-66.66s", i + 1, o_name), (*rivi)++, 5);
             if (_my_policies[i].num_destroyed)
             {

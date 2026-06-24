@@ -3160,7 +3160,7 @@ s32b create_artifact(object_type *o_ptr, u32b mode)
             get_random_name(new_name, o_ptr, power_level);
         }
         else
-            sprintf(new_name, "'%s'", dummy_name);
+            strnfmt(new_name, sizeof(new_name), "'%s'", dummy_name);
 
         virtue_add(VIRTUE_INDIVIDUALISM, 2);
         virtue_add(VIRTUE_ENCHANTMENT, 5);
@@ -3540,13 +3540,13 @@ bool reforge_artifact(object_type *src, object_type *dest, int fame)
             cptr oldname = a_name + a_info[src->name1].name;
             if (strpos(" '", oldname)) /* The Pendant 'Efki', etc. */
             {
-                sprintf(buf, oldname + strpos(" '", oldname));
+                strnfmt(buf, sizeof(buf), "%s", oldname + strpos(" '", oldname));
             }
             else
             {
-                sprintf(buf, minibuf);
-                strcat(buf, ((oldname[0] == '&') && (strlen(oldname) > 2)) ? oldname + 2 : oldname);
-                strcat(buf, minibuf);
+                strnfmt(buf, sizeof(buf), "%s%s%s", minibuf,
+                    ((oldname[0] == '&') && (strlen(oldname) > 2)) ? oldname + 2 : oldname,
+                    minibuf);
             }
             (void)clip_and_locate("~", buf);
             dest->art_name = quark_add(buf);

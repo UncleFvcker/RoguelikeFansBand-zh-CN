@@ -4383,7 +4383,7 @@ static int target_set_aux(int y, int x, int mode, cptr info)
             next_o_idx = o_ptr->next_o_idx;
 
             /* Obtain an object description */
-            object_desc(o_name, o_ptr, 0);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, 0);
 
             /* Describe the object */
             sprintf(out_val, "%s%s%s%s [%s]", s1, s2, s3, o_name, info);
@@ -4421,7 +4421,7 @@ static int target_set_aux(int y, int x, int mode, cptr info)
         obj_ptr obj = inv_obj(inv, 1);
         char name[MAX_NLEN];
 
-        object_desc(name, obj, 0);
+        object_desc_s(name, sizeof(name), obj, 0);
 
         sprintf(out_val, "%s%s%s%s [%s]",
             s1, s2, s3, name, info);

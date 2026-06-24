@@ -1150,7 +1150,7 @@ static void hit_trap(bool break_trap, bool do_jump)
                     if (!slot) break;
                     obj = pack_obj(slot);
                     if ((!obj) || (!obj->number)) break;
-                    object_desc(o_name, obj, OD_OMIT_PREFIX | OD_NO_PLURAL | OD_COLOR_CODED);
+                    object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_NO_PLURAL | OD_COLOR_CODED);
                     if (obj->number > 1)
                     {
                         msg_format("%^s从你的背包里飞了出去！", o_name);
@@ -2066,7 +2066,7 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
     weapon_flags(hand, flgs);
     if (o_ptr)
     {
-        object_desc(o_name, o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX);
         if (weaponmaster_get_toggle() == TOGGLE_SHIELD_BASH)
         {
             assert(o_ptr->tval == TV_SHIELD);
@@ -3448,7 +3448,7 @@ static bool py_attack_aux(int y, int x, bool *fear, bool *mdeath, s16b hand, int
                     object_type *q_ptr = &o_list[m_ptr->hold_o_idx];
                     char stolen_name[MAX_NLEN];
 
-                    object_desc(stolen_name, q_ptr, OD_NAME_ONLY);
+                    object_desc_s(stolen_name, sizeof(stolen_name), q_ptr, OD_NAME_ONLY);
                     q_ptr->held_m_idx = 0;
                     q_ptr->marked = OM_TOUCHED;
                     m_ptr->hold_o_idx = q_ptr->next_o_idx;
@@ -4698,7 +4698,7 @@ bool move_player_effect(int ny, int nx, u32b mpe_mode)
             {
                 obj_ptr obj = &o_list[this_o_idx];
                 next_o_idx = obj->next_o_idx;
-                object_desc(name, obj, OD_COLOR_CODED);
+                object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
                 msg_format("你看到了%s。", name);
                 disturb(0, 0);
             }

@@ -2699,21 +2699,21 @@ static void display_shortened_item_name(object_type *o_ptr, int y)
     char *c = buf;
     byte attr;
 
-/*  object_desc(buf, o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NAME_AND_DICE)); */
+/*  object_desc_s(buf, sizeof(buf), o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NAME_AND_DICE)); */
     if (object_is_melee_weapon(o_ptr) && _is_dice_boosted(o_ptr))
     {
         char tmp[MAX_NLEN];
-        object_desc(tmp, o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NAME_ONLY));
-        sprintf(buf, "%dd%d %s", o_ptr->dd, o_ptr->ds, tmp);
+        object_desc_s(tmp, sizeof(tmp), o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NAME_ONLY));
+        strnfmt(buf, sizeof(buf), "%dd%d %s", o_ptr->dd, o_ptr->ds, tmp);
     }
     else if (o_ptr->tval == TV_BOW && _is_dice_boosted(o_ptr))
     {
         char tmp[MAX_NLEN];
-        object_desc(tmp, o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NAME_ONLY));
-        sprintf(buf, "x%d.%2.2d %s", o_ptr->mult / 100, o_ptr->mult % 100, tmp);
+        object_desc_s(tmp, sizeof(tmp), o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NAME_ONLY));
+        strnfmt(buf, sizeof(buf), "x%d.%2.2d %s", o_ptr->mult / 100, o_ptr->mult % 100, tmp);
     }
     else
-        object_desc(buf, o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NAME_ONLY));
+        object_desc_s(buf, sizeof(buf), o_ptr, (OD_NO_FLAVOR | OD_OMIT_PREFIX | OD_NAME_ONLY));
     attr = tval_to_attr[o_ptr->tval % 128];
 
     if (p_ptr->image)
@@ -3653,7 +3653,7 @@ static s16b mon_fy, mon_fx;
 static void mon_lite_hack(int y, int x)
 {
     cave_type *c_ptr;
-    int       midpoint, dpf, d;
+    int       midpoint, dpf, d, span;
 
     if (!in_bounds2(y, x)) return;
 
@@ -3671,7 +3671,9 @@ static void mon_lite_hack(int y, int x)
         {
             dpf = py - mon_fy;
             d = y - mon_fy;
-            midpoint = mon_fx + ((px - mon_fx) * ABS(d)) / ABS(dpf);
+            span = ABS(dpf);
+            if (!span) return;
+            midpoint = mon_fx + ((px - mon_fx) * ABS(d)) / span;
 
             /* Only first wall viewed from mid-x is lit */
             if (x < midpoint)
@@ -3692,7 +3694,9 @@ static void mon_lite_hack(int y, int x)
         {
             dpf = px - mon_fx;
             d = x - mon_fx;
-            midpoint = mon_fy + ((py - mon_fy) * ABS(d)) / ABS(dpf);
+            span = ABS(dpf);
+            if (!span) return;
+            midpoint = mon_fy + ((py - mon_fy) * ABS(d)) / span;
 
             /* Only first wall viewed from mid-y is lit */
             if (y < midpoint)
@@ -3738,7 +3742,7 @@ static void mon_lite_hack(int y, int x)
 static void mon_dark_hack(int y, int x)
 {
     cave_type *c_ptr;
-    int       midpoint, dpf, d;
+    int       midpoint, dpf, d, span;
 
     if (!in_bounds2(y, x)) return;
 
@@ -3756,7 +3760,9 @@ static void mon_dark_hack(int y, int x)
         {
             dpf = py - mon_fy;
             d = y - mon_fy;
-            midpoint = mon_fx + ((px - mon_fx) * ABS(d)) / ABS(dpf);
+            span = ABS(dpf);
+            if (!span) return;
+            midpoint = mon_fx + ((px - mon_fx) * ABS(d)) / span;
 
             /* Only first wall viewed from mid-x is lit */
             if (x < midpoint)
@@ -3777,7 +3783,9 @@ static void mon_dark_hack(int y, int x)
         {
             dpf = px - mon_fx;
             d = x - mon_fx;
-            midpoint = mon_fy + ((py - mon_fy) * ABS(d)) / ABS(dpf);
+            span = ABS(dpf);
+            if (!span) return;
+            midpoint = mon_fy + ((py - mon_fy) * ABS(d)) / span;
 
             /* Only first wall viewed from mid-y is lit */
             if (y < midpoint)

@@ -354,7 +354,7 @@ bool leprechaun_steal(int m_idx)
             char o_name[MAX_NLEN];
 
             result = TRUE;
-            object_desc(o_name, &loot, 0);
+            object_desc_s(o_name, sizeof(o_name), &loot, 0);
             if (mon_save_p(m_ptr->r_idx, A_DEX))
             {
                 msg_format("哎呀！你掉了%s。", o_name);
@@ -390,7 +390,7 @@ bool _destroy_object(object_type *o_ptr)
         {
             char o_name[MAX_NLEN];
 
-            object_desc(o_name, o_ptr, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
             msg_format("你将%s变成了价值 %d 枚金币的黄金。", o_name, amt);
 
             p_ptr->au += amt;

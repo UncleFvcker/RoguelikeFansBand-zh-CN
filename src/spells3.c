@@ -1049,7 +1049,7 @@ bool apply_disenchant(int mode)
             return FALSE;
         }
 
-        object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+        object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
         if (demigod_is_(DEMIGOD_HEPHAESTUS))
         {
@@ -1756,7 +1756,7 @@ void fetch(int dir, int wgt, bool require_los)
     o_ptr->loc.y = (byte)py;
     o_ptr->loc.x = (byte)px;
 
-    object_desc(o_name, o_ptr, OD_NAME_ONLY);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY);
     msg_format("%^s 飞到了你的脚边%s。", o_name, (o_ptr->number == 1) ? "``" : "``");
 
     note_spot(py, px);
@@ -2010,7 +2010,7 @@ static bool _alchemy_aux(obj_ptr obj, bool force)
     char out_val[MAX_NLEN+40];
     int price;
 
-    object_desc(o_name, obj, OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), obj, OD_COLOR_CODED);
 
     if (object_is_shoukinkubi(obj))
     {
@@ -2292,7 +2292,7 @@ bool enchant_spell(int num_hit, int num_dam, int num_ac)
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
 
-    object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+    object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
     msg_format("%s%s发出了明亮的光芒%s！",
            (prompt.obj->loc.where != INV_FLOOR) ? "你的" : "地上的",
@@ -2360,7 +2360,7 @@ bool artifact_scroll(void)
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
 
-    object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+    object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
     /* Describe */
     msg_format("%s 散发出耀眼的光芒%s！", o_name,
@@ -2510,7 +2510,7 @@ bool ident_spell(object_p p)
 
     if ((!prompt.obj) || (!prompt.obj->k_idx)) return TRUE;
 
-    object_desc(o_name, prompt.obj, OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_COLOR_CODED);
 
     msg_format("你鉴定了 %s。", o_name);
     autopick_alter_obj(prompt.obj, destroy_identify && !old_known);
@@ -2545,7 +2545,7 @@ bool mundane_spell(bool only_equip)
     if ((prompt.obj->discount == 99) && (object_is_ego(prompt.obj)) && (!(prompt.obj->curse_flags & OFC_PERMA_CURSE)))
     {
         char o_name[MAX_NLEN];
-        object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY | OD_SINGULAR));
+        object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY | OD_SINGULAR));
         
         msg_format("%s 精湛的工艺抵抗了平凡化！", o_name);
         return FALSE;
@@ -2856,7 +2856,7 @@ bool recharge_from_device(int power)
         {
             char name[MAX_NLEN];
 
-            object_desc(name, src_ptr, OD_OMIT_PREFIX | OD_COLOR_CODED);
+            object_desc_s(name, sizeof(name), src_ptr, OD_OMIT_PREFIX | OD_COLOR_CODED);
             msg_format("充能消耗了你的 %s！", name);
 
             obj_zero(src_ptr);
@@ -2887,7 +2887,7 @@ bool bless_weapon(void)
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
 
-    object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+    object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
     obj_flags(prompt.obj, flgs);
 
     if (object_is_cursed(prompt.obj))
@@ -3027,7 +3027,7 @@ bool polish_shield(void)
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
 
-    object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+    object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
     obj_flags(prompt.obj, flgs);
 
     if (!object_is_artifact(prompt.obj) && !object_is_ego(prompt.obj) &&
@@ -3919,7 +3919,7 @@ static bool _damage_obj(obj_ptr obj, int p1, int p2, int which_res, bool mon_att
     if (amt)
     {
         char o_name[MAX_NLEN];
-        object_desc(o_name, obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
 
         if (amt < obj->number)
             msg_format("你的 %d 件 %s 被摧毁了%s！",
@@ -4027,7 +4027,7 @@ int minus_ac(void)
 
         if (o_ptr->ac + o_ptr->to_a <= 0) return FALSE;
 
-        object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+        object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
         obj_flags(o_ptr, flgs);
 
         if (demigod_is_(DEMIGOD_HEPHAESTUS))
@@ -4068,7 +4068,7 @@ bool rustproof(void)
     obj_prompt(&prompt);
     if (!prompt.obj) return FALSE;
 
-    object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+    object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
     add_flag(prompt.obj->flags, OF_IGNORE_ACID);
     add_flag(prompt.obj->known_flags, OF_IGNORE_ACID);
@@ -4150,7 +4150,7 @@ bool curse_armor(int slot)
     o_ptr = equip_obj(slot);
     if (!o_ptr) return FALSE;
 
-    object_desc(o_name, o_ptr, OD_OMIT_PREFIX);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_OMIT_PREFIX);
 
     if (object_is_artifact(o_ptr) && (randint0(100) < 50))
     {
@@ -4182,7 +4182,7 @@ bool curse_weapon(bool force, int slot)
     o_ptr = equip_obj(slot);
     if (!o_ptr) return FALSE;
 
-    object_desc(o_name, o_ptr, OD_OMIT_PREFIX);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_OMIT_PREFIX);
 
     /* Attempt a saving throw */
     if (object_is_artifact(o_ptr) && (randint0(100) < 50) && !force)
@@ -4369,7 +4369,7 @@ bool eat_magic(int power)
         char name[MAX_NLEN];
         bool drain = FALSE;
 
-        object_desc(name, prompt.obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), prompt.obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
 
         if (object_is_fixed_artifact(prompt.obj) || !one_in_(10))
             drain = TRUE;

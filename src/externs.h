@@ -1209,6 +1209,7 @@ extern cptr kind_flavor_display_name(int k_idx);
 extern cptr monster_race_display_name(int r_idx);
 extern char *object_desc_kosuu(char *t, object_type *o_ptr);
 extern void object_desc(char *buf, object_type *o_ptr, u32b mode);
+extern void object_desc_s(char *buf, size_t max, object_type *o_ptr, u32b mode);
 extern int resist_opposite_flag(int i);
 
 /* floors.c */

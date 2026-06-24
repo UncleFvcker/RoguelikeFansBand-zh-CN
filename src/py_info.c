@@ -1057,7 +1057,7 @@ static void _build_equipment(doc_ptr doc)
             object_type *o_ptr = equip_obj(slot);
             if (!o_ptr) continue;
 
-            object_desc(o_name, o_ptr, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
             doc_printf(doc, " %c) <indent><style:indent>%s</style></indent>\n", slot - 1 + 'a', o_name);
             if (((always_dump_origins) || ((final_dump_origins) && ((p_ptr->total_winner) || (p_ptr->is_dead))))
               && (o_ptr->origin_type != ORIGIN_NONE) && (o_ptr->origin_type != ORIGIN_MIXED)
@@ -1663,7 +1663,7 @@ static void _build_inventory(doc_ptr doc)
     {
         obj_ptr obj = pack_obj(slot);
         if (!obj) continue;
-        object_desc(o_name, obj, OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), obj, OD_COLOR_CODED);
         doc_printf(doc, "<indent><style:indent>%s</style></indent>\n", o_name);
     }
 
@@ -1683,7 +1683,7 @@ static void _build_quiver(doc_ptr doc)
         {
             obj_ptr obj = quiver_obj(slot);
             if (!obj) continue;
-            object_desc(o_name, obj, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), obj, OD_COLOR_CODED);
             doc_printf(doc, "<indent><style:indent>%s</style></indent>\n", o_name);
         }
 
@@ -1704,7 +1704,7 @@ static void _build_bag(doc_ptr doc)
         {
             obj_ptr obj = bag_obj(slot);
             if (!obj) continue;
-            object_desc(o_name, obj, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), obj, OD_COLOR_CODED);
             doc_printf(doc, "<indent><style:indent>%s</style></indent>\n", o_name);
         }
 

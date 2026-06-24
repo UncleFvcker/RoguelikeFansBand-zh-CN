@@ -19,6 +19,7 @@ enum {
 typedef struct savefile_s {
     FILE     *file;
     int       type;     /* READ or WRITE */
+    bool      error;
     byte      xor_byte;
     u32b      v_check;
     u32b      x_check;
@@ -31,6 +32,7 @@ extern savefile_ptr savefile_open_write(const char *name);
 extern bool         savefile_close(savefile_ptr file);
 
 extern bool         savefile_is_older_than(savefile_ptr file, byte major, byte minor, byte patch, byte extra);
+extern bool         savefile_is_error(savefile_ptr file);
 
 extern byte         savefile_read_byte(savefile_ptr file);
 extern bool         savefile_read_bool(savefile_ptr file);

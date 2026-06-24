@@ -52,6 +52,8 @@ savefile_ptr savefile_open_read(const char *name)
 {
     savefile_ptr result = NULL;
     FILE *fff;
+    int version[4];
+    int i;
     
     safe_setuid_grab();
     fff = my_fopen(name, "rb");
@@ -59,18 +61,39 @@ savefile_ptr savefile_open_read(const char *name)
 
     if (!fff) return NULL;
 
+    for (i = 0; i < 4; i++)
+    {
+        version[i] = getc(fff);
+        if (version[i] == EOF)
+        {
+            my_fclose(fff);
+            return NULL;
+        }
+    }
+
     result = malloc(sizeof(savefile_t));
+    if (!result)
+    {
+        my_fclose(fff);
+        return NULL;
+    }
     memset(result, 0, sizeof(savefile_t));
     result->file = fff;
     result->type = SAVEFILE_READ;
 
-    result->version.major = getc(result->file);
-    result->version.minor = getc(result->file);
-    result->version.patch = getc(result->file);
-    result->version.extra = getc(result->file);
+    result->version.major = (byte)version[0];
+    result->version.minor = (byte)version[1];
+    result->version.patch = (byte)version[2];
+    result->version.extra = (byte)version[3];
     savefile_normalize_version(&result->version);
     result->xor_byte = 0;
+    result->pos = 3;
     savefile_read_byte(result);
+    if (savefile_is_error(result))
+    {
+        savefile_close(result);
+        return NULL;
+    }
     result->pos = 4;
     result->v_check = 0;
     result->x_check = 0;
@@ -103,6 +126,11 @@ savefile_ptr savefile_open_write(const char *name)
     if (!fff) return NULL;
 
     result = malloc(sizeof(savefile_t));
+    if (!result)
+    {
+        my_fclose(fff);
+        return NULL;
+    }
     memset(result, 0, sizeof(savefile_t));
     result->file = fff;
     result->type = SAVEFILE_WRITE;
@@ -134,16 +162,28 @@ bool savefile_close(savefile_ptr file)
     return err ? FALSE : TRUE;
 }
 
+bool savefile_is_error(savefile_ptr file)
+{
+    return file && file->error;
+}
+
 byte savefile_read_byte(savefile_ptr file)
 {
-    byte c, v;
+    int c;
+    byte b, v;
 
     assert(file->type == SAVEFILE_READ);
 
     c = getc(file->file);
-    c = c & 0xFF;
-    v = c ^ file->xor_byte;
-    file->xor_byte = c;
+    if (c == EOF)
+    {
+        file->error = TRUE;
+        return 0;
+    }
+
+    b = (byte)(c & 0xFF);
+    v = b ^ file->xor_byte;
+    file->xor_byte = b;
     file->v_check += v;
     file->x_check += file->xor_byte;
     file->pos++;
@@ -230,20 +270,27 @@ void savefile_write_s32b(savefile_ptr file, s32b v)
 
 void savefile_read_cptr(savefile_ptr file, char *buf, int max)
 {
-    int i;
-    for (i = 0; ; i++)
+    int i = 0;
+
+    if (max <= 0)
+    {
+        while (!savefile_is_error(file) && savefile_read_byte(file)) ;
+        return;
+    }
+
+    for (i = 0; !savefile_is_error(file); i++)
     {
         byte c = savefile_read_byte(file);
-        if (i < max) buf[i] = c;
+        if (i < max - 1) buf[i] = c;
         if (!c) break;
     }
-    buf[max-1] = '\0';
+    buf[MIN(i, max - 1)] = '\0';
 }
 
 string_ptr savefile_read_string(savefile_ptr file)
 {
     string_ptr s = string_alloc();
-    for (;;)
+    while (!savefile_is_error(file))
     {
         byte c = savefile_read_byte(file);
         if (!c) break;

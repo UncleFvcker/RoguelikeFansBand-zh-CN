@@ -491,7 +491,7 @@ void custom_book_transcribe(obj_ptr book)
     char book_name[MAX_NLEN];
 
     if (!obj_is_custom_book(book)) return;
-    object_desc(book_name, book, OD_NAME_ONLY);
+    object_desc_s(book_name, sizeof(book_name), book, OD_NAME_ONLY);
 
     if (p_ptr->blind || no_lite())
     {

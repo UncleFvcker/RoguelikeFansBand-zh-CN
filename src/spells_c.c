@@ -322,7 +322,7 @@ void crafting_spell(int cmd, variant *res)
         obj_prompt(&prompt);
         if (!prompt.obj || !prompt.obj->number) return;
 
-        object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+        object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
         if (!object_is_nameless(prompt.obj))
         {

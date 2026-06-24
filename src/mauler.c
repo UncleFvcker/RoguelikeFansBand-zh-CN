@@ -54,7 +54,7 @@ int mauler_get_toggle(void)
 static void _blast_obj(obj_ptr obj)
 {
     char o_name[MAX_NLEN];
-    object_desc(o_name, obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
     msg_format("可怕的黑色光环冲击了你的%s！", o_name);
     blast_object(obj);
     disturb(1, 0);

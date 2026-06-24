@@ -232,7 +232,7 @@ static void _slot_menu_fn(int cmd, int which, vptr cookie, variant *res)
         {
             char buf[MAX_NLEN+50];
             char o_name[MAX_NLEN];
-            object_desc(o_name, obj, 0);
+            object_desc_s(o_name, sizeof(o_name), obj, 0);
             sprintf(buf, "%s: %s", _slot_tag_display_name(b_tag + _template->slots[slot].tag), o_name);
             var_set_string(res, buf);
         }
@@ -503,7 +503,7 @@ static void _doc_weight_source(doc_ptr doc, obj_p p, int pct, cptr why, int max)
         if (ct >= max) break;
 
         wgt = obj->weight * obj->number * pct / 100;
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
         doc_printf(doc, "  <color:D>-</color> %s：%s（", why, name);
         _doc_weight(doc, wgt);
         doc_insert(doc, " 磅）\n");
@@ -645,7 +645,7 @@ void equip_doc_encumbrance(doc_ptr doc)
         if (head_wgt > max_head && head)
         {
             char name[MAX_NLEN];
-            object_desc(name, head, OD_COLOR_CODED);
+            object_desc_s(name, sizeof(name), head, OD_COLOR_CODED);
             doc_printf(doc, "<color:r>原因：%s 超过 Tomte 可承受的 1.0 磅头盔上限。</color>\n", name);
         }
         any = TRUE;
@@ -951,7 +951,7 @@ static bool _wield_confirm(obj_ptr obj, slot_t slot)
 
     if (old_obj && object_is_cursed(old_obj) && !mummy_can_remove(old_obj))
     {
-        object_desc(o_name, old_obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), old_obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
         msg_format("你穿着的 %s 似乎被诅咒了。", o_name);
         return FALSE;
     }
@@ -987,7 +987,7 @@ static bool _wield_confirm(obj_ptr obj, slot_t slot)
         if (do_prompt)
         {
             char dummy[MAX_NLEN+80];
-            object_desc(o_name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
             sprintf(dummy, "Really use the %s {cursed}? ", o_name);
             if (!get_check(dummy)) return FALSE;
         }
@@ -1004,7 +1004,7 @@ static bool _wield_confirm(obj_ptr obj, slot_t slot)
       && !comp_mode)
     {
         char dummy[MAX_NLEN+80];
-        object_desc(o_name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY);
+        object_desc_s(o_name, sizeof(o_name), obj, OD_OMIT_PREFIX | OD_NAME_ONLY);
         msg_format("装备后，%s将把你永久变成吸血鬼。", o_name);
         sprintf(dummy, "你要变成吸血鬼吗？");
         if (!get_check(dummy)) return FALSE;
@@ -1051,7 +1051,7 @@ static void _wield_after(slot_t slot)
     p_ptr->update |= PU_BONUS;
     handle_stuff();
 
-    object_desc(o_name, obj, OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), obj, OD_COLOR_CODED);
     if ((p_ptr->prace == RACE_MON_SWORD || p_ptr->prace == RACE_MON_RING) || 
         ((p_ptr->prace == RACE_MON_ARMOR) && (obj->tval == TV_SOFT_ARMOR)))
         msg_format("你是 %s。", o_name);
@@ -1290,7 +1290,7 @@ void _unwield(obj_ptr obj, bool drop)
     else
     {
         char name[MAX_NLEN];
-        object_desc(name, obj, OD_COLOR_CODED);
+        object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
         if (obj->loc.where == INV_EQUIP) msg_format("你不再穿戴 %s。", name);
         if (object_is_cursed(obj))
         {
@@ -2203,7 +2203,7 @@ void equip_on_load(void)
         else
         {
             char name[MAX_NLEN];
-            object_desc(name, obj, OD_COLOR_CODED);
+            object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
             msg_format("你无法再装备 %s 了。", name);
             pack_carry(obj);
         }
@@ -2243,7 +2243,7 @@ void equip_on_change_race(void)
             {
                 char name[MAX_NLEN];
 
-                object_desc(name, src, 0);
+                object_desc_s(name, sizeof(name), src, 0);
                 msg_format("你无法再装备 %s 了。", name);
 
                 /* Mark the object as previously worn. Next time we shift bodies,
@@ -2320,7 +2320,7 @@ void equip_learn_curse(int flag)
         if (obj && obj_learn_curse(obj, flag))
         {
             char buf[MAX_NLEN];
-            object_desc(buf, obj, OD_LORE);
+            object_desc_s(buf, sizeof(buf), obj, OD_LORE);
             msg_format("<color:B>你感觉你的 %s 被 <color:r>诅咒</color> 了。</color>", buf);
         }
     }
@@ -2335,7 +2335,7 @@ void _learn_resist_aux(int obj_flag, cptr desc)
         if (obj && obj_learn_flag(obj, obj_flag))
         {
             char buf[MAX_NLEN];
-            object_desc(buf, obj, OD_LORE);
+            object_desc_s(buf, sizeof(buf), obj, OD_LORE);
             msg_format("<color:B>你感觉你的 %s 正在%s你。</color>", buf, desc);
         }
     }
@@ -2360,7 +2360,7 @@ void equip_learn_flag(int obj_flag)
         if (obj && obj_learn_flag(obj, obj_flag))
         {
             char buf[MAX_NLEN];
-            object_desc(buf, obj, OD_LORE);
+            object_desc_s(buf, sizeof(buf), obj, OD_LORE);
             msg_format("<color:B>你对你的 %s 了解得更多了。</color>", buf);
         }
     }
@@ -2378,7 +2378,7 @@ void equip_learn_slay(int slay_flag, cptr msg)
           && obj_learn_flag(obj, slay_flag) )
         {
             char buf[MAX_NLEN];
-            object_desc(buf, obj, OD_LORE);
+            object_desc_s(buf, sizeof(buf), obj, OD_LORE);
             msg_format("<color:B>你了解到你的 %s 会%s。</color>", buf, msg);
             /* We need to update p_ptr->weapon_info[].known_flags (cf equip_calc_bonuses()) */
             p_ptr->update |= PU_BONUS;

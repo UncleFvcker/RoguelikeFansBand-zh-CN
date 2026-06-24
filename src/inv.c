@@ -48,7 +48,7 @@ static void _fix_obj_loc(inv_ptr inv, obj_ptr obj, slot_t slot, cptr why, bool l
     {
         char name[MAX_NLEN];
 
-        object_desc(name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY);
+        object_desc_s(name, sizeof(name), obj, OD_OMIT_PREFIX | OD_NAME_ONLY);
         game_log_event("inventory-loc",
             "%s inv=%s inv_type=%d slot=%d old_where=%d old_slot=%d k_idx=%d tval=%d sval=%d number=%d name=%s",
             why ? why : "repair",
@@ -691,11 +691,11 @@ void inv_display(inv_ptr inv, slot_t start, slot_t stop, obj_p p, doc_ptr doc, i
 
             if ((flags & INV_SHOW_FAIL_RATES) && !obj_is_device(obj) && obj->timeout)
             {
-                object_desc(name, obj, 0);
+                object_desc_s(name, sizeof(name), obj, 0);
                 charging = TRUE;
             }
             else
-                object_desc(name, obj, OD_COLOR_CODED);
+                object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
             if (flags & INV_SHOW_SLOT)
                 doc_printf(doc, " %d)", slot);
             else if (!(flags & INV_NO_LABELS))

@@ -30,7 +30,7 @@ static bool _create_arrows(void)
     object_origins(&forge, ORIGIN_PLAYER_MADE);
     forge.discount = 99;
 
-    object_desc(name, &forge, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), &forge, OD_COLOR_CODED);
     msg_format("你制造了%s。", name);
     pack_carry(&forge);
 
@@ -63,7 +63,7 @@ static bool _create_bolts(void)
     object_origins(&forge, ORIGIN_PLAYER_MADE);
     forge.discount = 99;
 
-    object_desc(name, &forge, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), &forge, OD_COLOR_CODED);
     msg_format("你制造了%s。", name);
     pack_carry(&forge);
 
@@ -106,7 +106,7 @@ static bool _create_shots(void)
     object_origins(&forge, ORIGIN_PLAYER_MADE);
     forge.discount = 99;
 
-    object_desc(name, &forge, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), &forge, OD_COLOR_CODED);
     msg_format("你制造了%s。", name);
     pack_carry(&forge);
 

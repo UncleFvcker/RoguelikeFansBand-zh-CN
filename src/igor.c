@@ -95,7 +95,7 @@ static bool _freeze_carry(object_type *o_ptr, bool selita)
 {
     slot_t slot;
     char o_name[MAX_NLEN];
-    object_desc(o_name, o_ptr, OD_COLOR_CODED);
+    object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
     slot = inv_add(_igor_cold_pack, o_ptr);
     if (slot)
         msg_format("你冷冻了%s。", o_name);
@@ -134,7 +134,7 @@ static bool _igor_carry(object_type *o_ptr)
         if (object_is_cursed(ulos))
         {
             char o_name[MAX_NLEN];
-            object_desc(o_name, ulos, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), ulos, OD_COLOR_CODED);
             msg_format("你无法替换你被诅咒的%s！", o_name);
             return FALSE;
         }
@@ -145,7 +145,7 @@ static bool _igor_carry(object_type *o_ptr)
     {
         static const char *kuvaukset[_IB_MAX_ACTIVE] = {"head", "eyes", "ears", "stomach", "heart", "hands", "legs"};
         char o_name[MAX_NLEN];
-        object_desc(o_name, o_ptr, OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
         msg_format("你将你的%s替换为%s！", kuvaukset[slot - 1], o_name);
     }
     inv_add_at(_igor_body, o_ptr, slot);
@@ -319,7 +319,7 @@ bool igor_dissect_corpse(object_type *w_ptr)
         char o_name[MAX_NLEN];
         int _pval = prompt.obj->pval;
         if (_wizard) return TRUE;
-        object_desc(o_name, prompt.obj, OD_OMIT_PREFIX | OD_COLOR_CODED | OD_SINGULAR);
+        object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_OMIT_PREFIX | OD_COLOR_CODED | OD_SINGULAR);
 
         if ((_wanted) && (!unique)) _wanted = FALSE;
 
@@ -1550,7 +1550,7 @@ static void _dump_body(doc_ptr doc)
         object_type *o_ptr = inv_obj(_igor_body, slot);
         if ((!o_ptr) || (!o_ptr->k_idx)) continue;
 
-        object_desc(o_name, o_ptr, OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
         doc_printf(doc, " %c) <indent><style:indent>%s</style></indent>\n", slot - 1 + 'a', o_name);
         if (((always_dump_origins) || ((final_dump_origins) && ((p_ptr->total_winner) || (p_ptr->is_dead))))
          && (o_ptr->origin_type != ORIGIN_NONE) && (o_ptr->origin_type != ORIGIN_MIXED))
@@ -1588,7 +1588,7 @@ static void _dump_cold_pack(doc_ptr doc)
             object_type *o_ptr = inv_obj(_igor_cold_pack, slot);
             if (!o_ptr) continue;
 
-            object_desc(o_name, o_ptr, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
             doc_printf(doc, " %c) <indent><style:indent>%s</style></indent>\n", slot - 1 + 'a', o_name);
             if (((always_dump_origins) || ((final_dump_origins) && ((p_ptr->total_winner) || (p_ptr->is_dead))))
               && (o_ptr->origin_type != ORIGIN_NONE) && (o_ptr->origin_type != ORIGIN_MIXED))

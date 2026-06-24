@@ -122,7 +122,7 @@ static void _sense_obj(obj_ptr obj)
 
     /*if (disturb_minor) disturb(0, 0);*/
 
-    object_desc(name, obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_OMIT_PREFIX | OD_NAME_ONLY | OD_COLOR_CODED);
     msg_boundary();
     if (obj->loc.where == INV_EQUIP)
     {
@@ -1096,7 +1096,7 @@ bool psychometry(void)
     feel = value_check_aux1(prompt.obj, FALSE);
 
     /* Get an object description */
-    object_desc(o_name, prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+    object_desc_s(o_name, sizeof(o_name), prompt.obj, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
     /* Skip non-feelings */
     if (!feel)
@@ -1183,7 +1183,7 @@ void recharged_notice(object_type *o_ptr, unsigned char neula)
         if (s[1] == neula)
         {
             /* Describe (briefly) */
-            object_desc(o_name, o_ptr, OD_OMIT_PREFIX | OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_OMIT_PREFIX | OD_OMIT_INSCRIPTION | OD_COLOR_CODED);
 
             /* Notify the player */
             if (o_ptr->number > 1)
@@ -1354,10 +1354,10 @@ static void process_world_aux_hp_and_sp(void)
                 char o_name [MAX_NLEN];
                 char ouch [MAX_NLEN+40];
 
-                object_desc(o_name, lite, OD_OMIT_PREFIX | OD_NAME_ONLY);
+                object_desc_s(o_name, sizeof(o_name), lite, OD_OMIT_PREFIX | OD_NAME_ONLY);
                 msg_format("%s灼伤了你亡灵的肉体！", o_name);
                 cave_no_regen = TRUE;
-                object_desc(o_name, lite, OD_NAME_ONLY);
+                object_desc_s(o_name, sizeof(o_name), lite, OD_NAME_ONLY);
                 sprintf(ouch, "挥舞 %s", o_name);
                 if (!IS_INVULN()) take_hit(DAMAGE_NOESCAPE, 1, ouch);
             }
@@ -2253,7 +2253,7 @@ static void process_world_aux_curse(void)
             if (i_keep)
             {
                 o_ptr = equip_obj(i_keep);
-                object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+                object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
                 msg_format("你的 %s %s激活传送。", o_name, object_plural(o_ptr) ? "正在" : "正在");
                 if (get_check_strict("Teleport? ", CHECK_OKAY_CANCEL))
                 {
@@ -2350,7 +2350,7 @@ static void process_world_aux_curse(void)
             {
                 char o_name[MAX_NLEN];
 
-                object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+                object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
                 o_ptr->curse_flags |= new_curse;
                 msg_format("你的 %s 周围环绕着一圈恶毒的黑色光环……", o_name);
@@ -2374,7 +2374,7 @@ static void process_world_aux_curse(void)
             {
                 char o_name[MAX_NLEN];
 
-                object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+                object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
 
                 o_ptr->curse_flags |= new_curse;
                 msg_format("你的 %s 周围环绕着一圈恶毒的黑色光环……", o_name);
@@ -2394,7 +2394,7 @@ static void process_world_aux_curse(void)
                 char o_name[MAX_NLEN];
                 object_type *o_ptr = choose_cursed_obj_name(OFC_CALL_ANIMAL);
 
-                object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+                object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
                 msg_format("你的 %s 吸引了一只动物！", o_name, object_plural(o_ptr) ? "刚刚" : "刚刚");
 
                 disturb(0, 0);
@@ -2409,7 +2409,7 @@ static void process_world_aux_curse(void)
                 char o_name[MAX_NLEN];
                 object_type *o_ptr = choose_cursed_obj_name(OFC_CALL_DEMON);
 
-                object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+                object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
                 msg_format("你的 %s 吸引了一只恶魔！", o_name, object_plural(o_ptr) ? "刚刚" : "刚刚");
 
                 disturb(0, 0);
@@ -2425,7 +2425,7 @@ static void process_world_aux_curse(void)
                 char o_name[MAX_NLEN];
                 object_type *o_ptr = choose_cursed_obj_name(OFC_CALL_DRAGON);
 
-                object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+                object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
                 msg_format("你的 %s 吸引了一条龙！", o_name, object_plural(o_ptr) ? "刚刚" : "刚刚");
 
                 disturb(0, 0);
@@ -2459,7 +2459,7 @@ static void process_world_aux_curse(void)
             char o_name[MAX_NLEN];
             object_type *o_ptr = choose_cursed_obj_name(OFC_DRAIN_HP);
 
-            object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+            object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
             msg_format("你的 %s 吸取了你的生命值！", o_name, object_plural(o_ptr) ? "刚刚" : "刚刚");
             take_hit(DAMAGE_LOSELIFE, MIN(p_ptr->lev*2, 100), "装备诅咒");
             obj_learn_curse(o_ptr, OFC_DRAIN_HP);
@@ -2470,7 +2470,7 @@ static void process_world_aux_curse(void)
             char o_name[MAX_NLEN];
             object_type *o_ptr = choose_cursed_obj_name(OFC_DRAIN_MANA);
 
-            object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+            object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
             msg_format("你的 %s 吸取了你的法力！", o_name, object_plural(o_ptr) ? "刚刚" : "刚刚");
             p_ptr->csp -= MIN(p_ptr->lev, 50);
             if (p_ptr->csp < 0)
@@ -2491,7 +2491,7 @@ static void process_world_aux_curse(void)
                 char o_name[MAX_NLEN];
                 object_type *o_ptr = choose_cursed_obj_name(OFC_DRAIN_PACK);
 
-                object_desc(o_name, o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
+                object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_OMIT_PREFIX | OD_NAME_ONLY));
                 msg_format("你的 %s 发出了奇怪的嘶嘶声……", o_name, object_plural(o_ptr) ? "刚刚" : "刚刚");
                 obj_learn_curse(o_ptr, OFC_DRAIN_PACK);
             }
@@ -5653,13 +5653,13 @@ static void load_all_pref_files(bool new_game)
     /* Access the "character" pref file */
     sprintf(buf, "%s.prf", player_base);
 
-    strcpy(pref_save_base, player_base);
+    my_strcpy(pref_save_base, player_base, sizeof(pref_save_base));
 
     /* Process that file, look for old files */
     if ((process_pref_file(buf) < 0) && (name_is_numbered(player_name)))
     {
         char old_py_name[32];
-        strcpy(old_py_name, player_name);
+        my_strcpy(old_py_name, player_name, sizeof(old_py_name));
         temporary_name_hack = TRUE;
 
         while (1)
@@ -5671,12 +5671,12 @@ static void load_all_pref_files(bool new_game)
 
             if (process_pref_file(buf) >= 0)
             {
-                strcpy(pref_save_base, player_base);
+                my_strcpy(pref_save_base, player_base, sizeof(pref_save_base));
                 break;
             }
             if (!name_is_numbered(player_name)) break;
         }
-        strcpy(player_name, old_py_name);
+        my_strcpy(player_name, old_py_name, sizeof(player_name));
         process_player_name(FALSE);
         temporary_name_hack = FALSE;
     }

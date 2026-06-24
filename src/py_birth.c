@@ -77,7 +77,7 @@ int py_birth(void)
 
     /* Windows is not setting a player name for new files */
     if (0 == strlen(player_name))
-        strcpy(player_name, "PLAYER");
+        my_strcpy(player_name, "PLAYER", sizeof(player_name));
 
     assert(!_doc);
     _doc = doc_alloc(80);
@@ -3131,12 +3131,12 @@ static void _change_name(void)
     if (!arg_lock_name)
     {
         char tmp[64];
-        strcpy(tmp, player_name);
+        my_strcpy(tmp, player_name, sizeof(tmp));
         Term_gotoxy(7, 0); /* Hack */
         if (askfor(tmp, PY_NAME_LEN + 1))
-            strcpy(player_name, tmp);
+            my_strcpy(player_name, tmp, sizeof(player_name));
         if (0 == strlen(player_name))
-            strcpy(player_name, "PLAYER");
+            my_strcpy(player_name, "PLAYER", sizeof(player_name));
     }
 }
 

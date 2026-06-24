@@ -323,7 +323,7 @@ void do_cmd_locate(void)
         }
 
         /* Prepare to ask which way to look */
-        sprintf(out_val,
+        strnfmt(out_val, sizeof(out_val),
             "地图扇区 [%d(%02d),%d(%02d)]，这里%s你所在的扇区。方向？",
 
             y2 / (map_rect.cy / 2), y2 % (map_rect.cy / 2),
@@ -774,6 +774,11 @@ typedef struct _mon_list_info_s _mon_list_info_t, *_mon_list_info_ptr;
 static _mon_list_info_ptr _mon_list_info_alloc(void)
 {
     _mon_list_info_ptr result = malloc(sizeof(_mon_list_info_t));
+    if (!result)
+    {
+        quit("Out of memory");
+        return NULL;
+    }
     memset(result, 0, sizeof(_mon_list_info_t));
     return result;
 }
@@ -792,6 +797,11 @@ typedef struct _mon_list_s _mon_list_t, *_mon_list_ptr;
 static _mon_list_ptr _mon_list_alloc(void)
 {
     _mon_list_ptr result = malloc(sizeof(_mon_list_t));
+    if (!result)
+    {
+        quit("Out of memory");
+        return NULL;
+    }
     result->list = vec_alloc(free);
     result->ct_total = 0;
     result->ct_los = 0;
@@ -1714,6 +1724,11 @@ typedef struct _obj_list_info_s _obj_list_info_t, *_obj_list_info_ptr;
 static _obj_list_info_ptr _obj_list_info_alloc(void)
 {
     _obj_list_info_ptr result = malloc(sizeof(_obj_list_info_t));
+    if (!result)
+    {
+        quit("Out of memory");
+        return NULL;
+    }
     memset(result, 0, sizeof(_obj_list_info_t));
     return result;
 }
@@ -1731,6 +1746,11 @@ typedef struct _obj_list_s _obj_list_t, *_obj_list_ptr;
 static _obj_list_ptr _obj_list_alloc(void)
 {
     _obj_list_ptr result = malloc(sizeof(_obj_list_t));
+    if (!result)
+    {
+        quit("Out of memory");
+        return NULL;
+    }
     result->list = vec_alloc(free);
     result->ct_autopick = 0;
     result->ct_total = 0;
@@ -1991,7 +2011,7 @@ static int _draw_obj_list(_obj_list_ptr list, int top, rect_t rect)
             byte         a = object_attr(o_ptr);
             char         c = object_char(o_ptr);
 
-            object_desc(o_name, o_ptr, 0);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, 0);
             sprintf(loc, "%c%3d %c%3d",
                     (info_ptr->dy > 0) ? 'S' : 'N', abs(info_ptr->dy),
                     (info_ptr->dx > 0) ? 'E' : 'W', abs(info_ptr->dx));
@@ -2242,7 +2262,7 @@ void do_cmd_list_objects(void)
                                 char         name[MAX_NLEN];
                                 char         c;
 
-                                object_desc(name, o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_OMIT_INSCRIPTION | OD_NO_FLAVOR | OD_NO_PLURAL);
+                                object_desc_s(name, sizeof(name), o_ptr, OD_NAME_ONLY | OD_OMIT_PREFIX | OD_OMIT_INSCRIPTION | OD_NO_FLAVOR | OD_NO_PLURAL);
                                 c = name[0];
                                 if (isalpha(c))
                                     c = tolower(c);

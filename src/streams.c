@@ -289,7 +289,7 @@ void build_streamer(int feat, int chance)
                         if (cheat_peek)
                         {
                             char o_name[MAX_NLEN];
-                            object_desc(o_name, o_ptr, (OD_NAME_ONLY | OD_STORE));
+                            object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_NAME_ONLY | OD_STORE));
                             msg_format("神器（%s）被地形流覆盖而消失。", o_name);
                         }
                     }
@@ -301,7 +301,7 @@ void build_streamer(int feat, int chance)
                         if (cheat_peek)
                         {
                             char o_name[MAX_NLEN];
-                            object_desc(o_name, o_ptr, (OD_NAME_ONLY | OD_STORE));
+                            object_desc_s(o_name, sizeof(o_name), o_ptr, (OD_NAME_ONLY | OD_STORE));
                             msg_format("神器（%s）被地形流覆盖而消失。", o_name);
                         }
                     }

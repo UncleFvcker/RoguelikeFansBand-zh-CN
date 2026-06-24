@@ -233,7 +233,7 @@ static void _do_identify_aux(obj_ptr obj)
     if ((_use_charges) && (device_used_charges >= device_available_charges)) return;
 
     old_known = identify_item(obj);
-    object_desc(name, obj, OD_COLOR_CODED);
+    object_desc_s(name, sizeof(name), obj, OD_COLOR_CODED);
     switch (obj->loc.where)
     {
     case INV_EQUIP:
@@ -7158,7 +7158,7 @@ cptr do_effect(effect_t *effect, int mode, int boost)
             
             forge.discount = 99;
 
-            object_desc(o_name, &forge, 0);
+            object_desc_s(o_name, sizeof(o_name), &forge, 0);
             msg_format("它制造出了%s。", o_name);
 
             pack_carry(&forge);

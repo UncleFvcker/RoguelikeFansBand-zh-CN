@@ -306,7 +306,7 @@ static void _device_focus_spell(int cmd, variant *res)
         if (randint1(106) >= p_ptr->lev + adj_mag_mana[p_ptr->stat_ind[A_INT]])
         {
             char o_name[MAX_NLEN];
-            object_desc(o_name, prompt.obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), prompt.obj, OD_OMIT_PREFIX | OD_COLOR_CODED);
             msg_format("你的%s爆炸了！", o_name);
             obj_zero(prompt.obj);
             obj_release(prompt.obj, OBJ_RELEASE_QUIET);
@@ -936,7 +936,7 @@ bool karrot_replace_art(object_type *o_ptr)
             msg_format("卡罗特的声音如雷鸣般响起：<color:v>吾甚悦，吾%s；汝成功寻回了吾之%s%s，干得好！</color>", p_ptr->psex == SEX_FEMALE ? "女" : "儿", kuvaus, o_name);
             no_karrot_hack = TRUE;
             obj_identify_fully(o_ptr);
-            object_desc(o_name, o_ptr, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
             if (forge.name1 == ART_UROG)
             {
                 cmsg_print(TERM_VIOLET, "汝乃吾最受恩宠之仆，众门徒之首；即刻领受命运之剑吧，无人比汝更配挥舞此剑。");
@@ -1047,7 +1047,7 @@ static void _dump_satchel(doc_ptr doc)
             object_type *o_ptr = inv_obj(_dragon_pack, slot);
             if (!o_ptr) continue;
 
-            object_desc(o_name, o_ptr, OD_COLOR_CODED);
+            object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
             doc_printf(doc, " %c) <indent><style:indent>%s</style></indent>\n", slot - 1 + 'a', o_name);
             if (((always_dump_origins) || ((final_dump_origins) && ((p_ptr->total_winner) || (p_ptr->is_dead))))
               && (o_ptr->origin_type != ORIGIN_NONE) && (o_ptr->origin_type != ORIGIN_MIXED))

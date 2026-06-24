@@ -1242,7 +1242,7 @@ char tval_to_attr_char(int tval)
  *   OD_FORCE_FLAVOR     : Get un-shuffled flavor name
  *   OD_SINGULAR         : Pretend o_ptr->number == 1.
  */
-void object_desc(char *buf, object_type *o_ptr, u32b mode)
+void object_desc_s(char *buf, size_t max, object_type *o_ptr, u32b mode)
 {
     cptr            kindname;
 
@@ -1278,6 +1278,8 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
 
     object_kind    *k_ptr = &k_info[o_ptr->k_idx];
     int             number;
+
+    if (!buf || !max) return;
 
     mode |= (od_xtra_context);
     kindname = _kind_desc_name(o_ptr->k_idx, mode);
@@ -1760,16 +1762,16 @@ void object_desc(char *buf, object_type *o_ptr, u32b mode)
         case TV_GOLD:
         {
             if (mode & OD_COLOR_CODED)
-                sprintf(buf, "<color:%c>%s</color>", tval_to_attr_char(o_ptr->tval), basenm);
+                strnfmt(buf, max, "<color:%c>%s</color>", tval_to_attr_char(o_ptr->tval), basenm);
             else
-                strcpy(buf, basenm);
+                my_strcpy(buf, basenm, max);
             return;
         }
 
         /* Used in the "inventory" routine */
         default:
         {
-            strcpy(buf, "(无)");
+            my_strcpy(buf, "(无)", max);
             return;
         }
     }
@@ -2752,10 +2754,15 @@ object_desc_done:
     if (mode & OD_COLOR_CODED)
     {
         char attr = ((mode & OD_BLACK_CURSES) && (object_is_cursed(o_ptr))) ? 'D' : tval_to_attr_char(o_ptr->tval);
-        sprintf(buf, "<color:%c>%s</color>", attr, tmp_val);
+        strnfmt(buf, max, "<color:%c>%s</color>", attr, tmp_val);
     }
     else
-        my_strcpy(buf, tmp_val, MAX_NLEN);
+        my_strcpy(buf, tmp_val, max);
+}
+
+void object_desc(char *buf, object_type *o_ptr, u32b mode)
+{
+    object_desc_s(buf, MAX_NLEN, o_ptr, mode);
 }
 
 

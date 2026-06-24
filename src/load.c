@@ -402,14 +402,14 @@ static void rd_options(savefile_ptr file)
     {
         for (i = 0; i < 32; i++)
         {
-            if (mask[n] & (1L << i))
+            if (mask[n] & (1U << i))
             {
-                if (option_mask[n] & (1L << i))
+                if (option_mask[n] & (1U << i))
                 {
-                    if (flag[n] & (1L << i))
-                        option_flag[n] |= (1L << i);
+                    if (flag[n] & (1U << i))
+                        option_flag[n] |= (1U << i);
                     else
-                        option_flag[n] &= ~(1L << i);
+                        option_flag[n] &= ~(1U << i);
                 }
             }
         }
@@ -470,14 +470,14 @@ static void rd_options(savefile_ptr file)
     {
         for (i = 0; i < 32; i++)
         {
-            if (mask[n] & (1L << i))
+            if (mask[n] & (1U << i))
             {
-                if (window_mask[n] & (1L << i))
+                if (window_mask[n] & (1U << i))
                 {
-                    if (flag[n] & (1L << i))
-                        window_flag[n] |= (1L << i);
+                    if (flag[n] & (1U << i))
+                        window_flag[n] |= (1U << i);
                     else
-                        window_flag[n] &= ~(1L << i);
+                        window_flag[n] &= ~(1U << i);
                 }
             }
         }
@@ -1702,6 +1702,12 @@ static errr rd_savefile_new_aux(savefile_ptr file)
 
 #endif
 
+    if (savefile_is_error(file))
+    {
+        note("存档文件被截断或无法读取");
+        return (12);
+    }
+
     return 0;
 }
 
@@ -1717,7 +1723,7 @@ errr rd_savefile_new(void)
     if (!file) return -1;
 
     err = rd_savefile_new_aux(file);
-    if (ferror(file->file)) err = -1;
+    if (ferror(file->file) || savefile_is_error(file)) err = -1;
 
     savefile_close(file);
     return err;
@@ -1753,7 +1759,7 @@ static bool load_floor_aux(savefile_ptr file, saved_floor_type *sf_ptr)
     if (o_x_check != n_x_check) return FALSE;
 #endif
 
-    return TRUE;
+    return !savefile_is_error(file);
 }
 
 
@@ -1773,7 +1779,7 @@ bool load_floor(saved_floor_type *sf_ptr, u32b mode)
         return FALSE;
     }
 
-    sprintf(floor_savefile, "%s.F%02d", savefile, (int)sf_ptr->savefile_id);
+    strnfmt(floor_savefile, sizeof(floor_savefile), "%s.F%02d", savefile, (int)sf_ptr->savefile_id);
     file = savefile_open_read(floor_savefile);
     if (!file)
     {
@@ -1786,7 +1792,7 @@ bool load_floor(saved_floor_type *sf_ptr, u32b mode)
         floor_savefile, (unsigned long)mode, sf_ptr->floor_id, sf_ptr->savefile_id);
 
     ok = load_floor_aux(file, sf_ptr);
-    if (ferror(file->file)) ok = FALSE;
+    if (ferror(file->file) || savefile_is_error(file)) ok = FALSE;
 
     savefile_close(file);
 

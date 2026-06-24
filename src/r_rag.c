@@ -154,9 +154,9 @@ static bool _absorb(object_type *o_ptr)
     if (!tunnettu)
     {
         obj_identify_fully(o_ptr);
-        object_desc(o_name, o_ptr, OD_COLOR_CODED);
+        object_desc_s(o_name, sizeof(o_name), o_ptr, OD_COLOR_CODED);
     }
-    else object_desc(o_name, o_ptr, OD_NAME_ONLY | OD_COLOR_CODED);
+    else object_desc_s(o_name, sizeof(o_name), o_ptr, OD_NAME_ONLY | OD_COLOR_CODED);
     msg_format("你尝试从 %s 中吸取力量。", o_name);
 
     /* No absorbing the same artifact repeatedly... */
