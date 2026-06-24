@@ -280,6 +280,10 @@ bool fresh_after;    /* Flush output after monster's move */
 bool fresh_message;    /* Flush output after every message */
 bool hilite_player;    /* Hilite the player with the cursor */
 bool display_path;    /* Display actual path before shooting */
+bool danger_monster_border; /* Highlight dangerous monsters with a border */
+byte danger_monster_border_mode; /* DANGER_MONSTER_BORDER_* */
+bool dangerous_attack_monster_border; /* Highlight monsters with dangerous attacks */
+bool dangerous_attack_ignore_lore; /* Ignore monster lore for dangerous attack highlights */
 bool graph_show_floor_ascii; /* Show floor glyphs over solid fill */
 bool graph_show_wall_ascii;  /* Show wall glyphs over solid fill */
 bool graph_show_tree_ascii;  /* Show tree glyphs over solid fill */

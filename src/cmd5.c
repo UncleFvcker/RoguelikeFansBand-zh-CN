@@ -2118,6 +2118,133 @@ bool rakuba(int dam, bool force)
     return fall_dam;
 }
 
+#define RIDING_BOND_MAX        10000
+#define RIDING_BOND_HEAL_MIN    2500
+#define RIDING_BOND_HASTE_MIN   5000
+
+static bool _riding_bond_mon_ok(int m_idx)
+{
+    if (m_idx <= 0 || m_idx >= m_max) return FALSE;
+    if (!m_list[m_idx].r_idx) return FALSE;
+    if (!is_pet(&m_list[m_idx])) return FALSE;
+    return TRUE;
+}
+
+void riding_bond_validate(void)
+{
+    if (!p_ptr->riding_bond_m_idx) return;
+    if (!_riding_bond_mon_ok(p_ptr->riding_bond_m_idx) ||
+        m_list[p_ptr->riding_bond_m_idx].r_idx != p_ptr->riding_bond_r_idx)
+    {
+        p_ptr->riding_bond_m_idx = 0;
+        p_ptr->riding_bond_r_idx = 0;
+        p_ptr->riding_bond = 0;
+    }
+    else
+        p_ptr->riding_bond = MAX(0, MIN(RIDING_BOND_MAX, p_ptr->riding_bond));
+}
+
+bool riding_bond_is_active(void)
+{
+    if (!p_ptr->riding) return FALSE;
+    riding_bond_validate();
+    return p_ptr->riding == p_ptr->riding_bond_m_idx;
+}
+
+int riding_bond_pct(void)
+{
+    riding_bond_validate();
+    return MAX(0, MIN(100, p_ptr->riding_bond / 100));
+}
+
+bool riding_bond_is_full(void)
+{
+    return riding_bond_is_active() && p_ptr->riding_bond >= RIDING_BOND_MAX;
+}
+
+int riding_bond_exp_multiplier(void)
+{
+    return 100 + riding_bond_pct();
+}
+
+bool riding_bond_can_heal_pet(void)
+{
+    return riding_bond_is_active() && p_ptr->riding_bond >= RIDING_BOND_HEAL_MIN;
+}
+
+bool riding_bond_can_haste_pet(void)
+{
+    return riding_bond_is_active() && p_ptr->riding_bond >= RIDING_BOND_HASTE_MIN;
+}
+
+void riding_bond_on_mount(int m_idx)
+{
+    monster_type *m_ptr;
+
+    if (!_riding_bond_mon_ok(m_idx)) return;
+    m_ptr = &m_list[m_idx];
+
+    if (p_ptr->riding_bond_m_idx != m_idx || p_ptr->riding_bond_r_idx != m_ptr->r_idx)
+    {
+        p_ptr->riding_bond_m_idx = m_idx;
+        p_ptr->riding_bond_r_idx = m_ptr->r_idx;
+        p_ptr->riding_bond = 0;
+    }
+}
+
+void riding_bond_gain(int amt)
+{
+    int old_pct;
+
+    if (amt <= 0) return;
+    if (!riding_bond_is_active()) return;
+
+    old_pct = riding_bond_pct();
+    p_ptr->riding_bond = MIN(RIDING_BOND_MAX, p_ptr->riding_bond + amt);
+    if (old_pct < 100 && p_ptr->riding_bond >= RIDING_BOND_MAX)
+    {
+        char m_name[MAX_NLEN];
+        monster_desc(m_name, &m_list[p_ptr->riding], MD_ASSUME_VISIBLE);
+        msg_format("你与%s的骑乘羁绊已达到顶点。", m_name);
+    }
+}
+
+int riding_bond_pet_exp_for(monster_type *pet, monster_type *killed)
+{
+    monster_race *r_ptr;
+    monster_race *s_ptr;
+    s32b new_exp;
+
+    if (!pet || !killed) return 0;
+    if (!pet->r_idx || !killed->r_idx) return 0;
+
+    r_ptr = &r_info[pet->r_idx];
+    s_ptr = &r_info[killed->r_idx];
+
+    new_exp = s_ptr->mexp * s_ptr->level / (r_ptr->level + 2);
+    if (!dun_level) new_exp /= 5;
+    return MAX(0, new_exp);
+}
+
+void riding_bond_player_kill(monster_type *killed)
+{
+    monster_type *pet;
+    int exp;
+
+    if (!riding_bond_is_active()) return;
+    if (!killed || !killed->r_idx) return;
+    if (is_pet(killed) || p_ptr->inside_battle || (killed->mflag2 & MFLAG2_WASPET)) return;
+
+    riding_bond_gain(r_info[killed->r_idx].level);
+
+    if (!riding_bond_is_full()) return;
+
+    pet = &m_list[p_ptr->riding];
+    exp = riding_bond_pet_exp_for(pet, killed);
+    if (exp > 0)
+        mon_gain_exp(pet, exp);
+}
+
 bool do_riding(bool force)
 {
     int x, y, dir = 0;
@@ -2279,6 +2406,7 @@ bool do_riding(bool force)
         if (p_ptr->action == ACTION_GLITTER) set_action(ACTION_NONE);
 
         p_ptr->riding = c_ptr->m_idx;
+        riding_bond_on_mount(p_ptr->riding);
 
         /* Hack -- remove tracked monster */
         if (p_ptr->riding == p_ptr->health_who) health_track(0);

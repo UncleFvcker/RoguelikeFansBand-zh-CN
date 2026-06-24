@@ -1301,6 +1301,9 @@ struct player_type
     bool wizard;          /* Player is in wizard mode */
 
     s16b riding;              /* Riding on a monster of this index */
+    s16b riding_bond_m_idx;   /* Bonded riding pet monster index */
+    s16b riding_bond_r_idx;   /* Bonded riding pet race */
+    s32b riding_bond;         /* Riding pet bond, 0..10000 */
     byte knowledge;           /* Knowledge about yourself */
     s32b materials[MATERIAL_MAX]; /* Independent crafting materials */
 

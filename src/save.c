@@ -869,7 +869,11 @@ static void wr_extra(savefile_ptr file)
     savefile_write_s32b(file, bounty_total);
     savefile_write_s32b(file, bounty_remaining);
     savefile_write_s32b(file, cooking_sustain);
-    for (i = 7; i < 16; i++)
+    savefile_write_s32b(file, p_ptr->riding_bond_m_idx);
+    savefile_write_s32b(file, p_ptr->riding_bond_r_idx);
+    savefile_write_s32b(file, p_ptr->riding_bond);
+    savefile_write_s32b(file, danger_monster_border ? danger_monster_border_mode : DANGER_MONSTER_BORDER_OFF);
+    for (i = 11; i < 16; i++)
         savefile_write_s32b(file, 0); /* Future use */
 
     for (i = 0; i < MAX_POWER_LABEL; i++)

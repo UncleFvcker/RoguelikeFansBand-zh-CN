@@ -17,20 +17,20 @@
 
 
 #define VER_MAJOR 1
-#define VER_MINOR 2
+#define VER_MINOR 3
 #define VER_PATCH "0"
 #define VER_PATCH_ID 0
-#define VER_EXTRA 6
-#define VERSION_STRING "1.2.0.6"
+#define VER_EXTRA 0
+#define VERSION_STRING "1.3.0.0"
 #define VERSION_IS_DEVELOPMENT (FALSE)
 
 /*
  * RoguelikeFansBand starts its own savefile format line at 1.0.0.0.
  */
 #define SAVEFILE_VER_MAJOR 1
-#define SAVEFILE_VER_MINOR 2
+#define SAVEFILE_VER_MINOR 3
 #define SAVEFILE_VER_PATCH_ID 0
-#define SAVEFILE_VER_EXTRA 6
+#define SAVEFILE_VER_EXTRA 0
 
 #define GAME_MODE_BEGINNER  0
 #define GAME_MODE_NORMAL    1
@@ -2186,6 +2186,11 @@ enum {
 /* Independent material pouch */
 #define MATERIAL_MAX                   10
 #define MATERIAL_SAVE_MAGIC      0x4D415431 /* MAT1 */
+
+/* Map danger highlight modes */
+#define DANGER_MONSTER_BORDER_OFF       0
+#define DANGER_MONSTER_BORDER_BOTH      1
+#define DANGER_MONSTER_BORDER_RED       2
 
 /* The "sval" codes for TV_FOOD */
 #define SV_FOOD_POISON                   0

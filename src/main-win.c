@@ -558,6 +558,7 @@ static void unregister_private_font(void)
  * Yellow brush for the cursor
  */
 static HBRUSH hbrYellow;
+static HBRUSH hbrWhite;
 
 /*
  * An icon
@@ -2849,9 +2850,9 @@ static errr Term_curs_win(int x, int y)
     rc.bottom = rc.top + tile_hgt;
     if (!td->map_active && y == (int)td->rows - 1) rc.bottom += WIN_TERM_BOTTOM_PAD;
 
-    /* Cursor is done as a yellow "box" */
+    /* Cursor is done as a box */
     hdc = td->hDC;
-    FrameRect(hdc, &rc, hbrYellow);
+    FrameRect(hdc, &rc, td->map_active ? hbrWhite : hbrYellow);
     _update_rect_enlarge(td, &rc);
 
     /* Success */
@@ -3624,6 +3625,7 @@ static void init_windows(void)
 
     /* Create a "brush" for drawing the "cursor" */
     hbrYellow = CreateSolidBrush(win_clr[TERM_YELLOW]);
+    hbrWhite = CreateSolidBrush(win_clr[TERM_WHITE]);
 
 
     /* Process pending messages */
@@ -5491,6 +5493,7 @@ static void hook_quit(cptr str)
     /*** Free some other stuff ***/
 
     DeleteObject(hbrYellow);
+    DeleteObject(hbrWhite);
 
     if (hPal) DeleteObject(hPal);
 

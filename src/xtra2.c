@@ -3336,6 +3336,7 @@ bool mon_take_hit(int m_idx, int dam, int type, bool *fear, cptr note)
             get_exp_from_mon((long)exp_mon.max_maxhp*2, &exp_mon, TRUE);
         else
             get_exp_from_mon(((long)exp_mon.max_maxhp+1L) * 9L / 10L, &exp_mon, TRUE);
+        riding_bond_player_kill(&exp_mon);
         game_log_event("mon-kill", "after_exp m_idx=%d exp_r_idx=%d name=%s", m_idx, exp_mon.r_idx, m_name);
 
         /* Not afraid */

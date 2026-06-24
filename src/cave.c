@@ -25,6 +25,9 @@ static int match_autopick;
 static object_type *autopick_obj;
 static int feat_priority;
 static int graph_display_feat;
+static bool map_cursor_visual_active;
+static int map_cursor_visual_y = -1;
+static int map_cursor_visual_x = -1;
 
 /*
  * Distance between two points via Newton-Raphson technique
@@ -1880,6 +1883,218 @@ static void _graph_queue_border(int ui_x, int ui_y, bool bigchar, byte border, u
     }
 }
 
+static bool _graph_cell_is_map_cursor(int y, int x)
+{
+    return map_cursor_visual_active
+        && y == map_cursor_visual_y
+        && x == map_cursor_visual_x;
+}
+
+static void _queue_map_cursor_border(int cave_y, int cave_x, int ui_x, int ui_y, bool bigchar)
+{
+    if (!_graph_cell_is_map_cursor(cave_y, cave_x)) return;
+
+    _graph_queue_border(
+        ui_x,
+        ui_y,
+        bigchar,
+        TERM_RGB_BORDER_TOP | TERM_RGB_BORDER_RIGHT | TERM_RGB_BORDER_BOTTOM | TERM_RGB_BORDER_LEFT,
+        GRAPH_RGB(255, 255, 255));
+}
+
+static int _danger_lerp(int danger, int d0, int d1, int l0, int l1)
+{
+    if (danger <= d0) return l0;
+    if (danger >= d1) return l1;
+    return l0 + (danger - d0) * (l1 - l0) / (d1 - d0);
+}
+
+static int _danger_recommended_player_level(int danger)
+{
+    if (danger <= 30) return MAX(1, danger);
+    if (danger < 50) return _danger_lerp(danger, 30, 50, 30, 40);
+    if (danger < 80) return _danger_lerp(danger, 50, 80, 40, PY_MAX_LEVEL);
+
+    return PY_MAX_LEVEL;
+}
+
+static int _danger_yellow_margin(int danger)
+{
+    if (danger < 23) return 2;
+    if (danger < 34) return 4;
+    if (danger < 46) return 5;
+    return 6;
+}
+
+static int _danger_effective_monster_level(int level, int speed_adv, bool unique)
+{
+    int danger = level;
+
+    if (unique) danger += 4;
+    if (speed_adv >= 30) danger += 18;
+    else if (speed_adv >= 20) danger += 12;
+    else if (speed_adv >= 10) danger += 6;
+    else if (speed_adv >= 5) danger += 3;
+
+    return danger;
+}
+
+static bool _monster_blow_effect_is_dangerous(int effect)
+{
+    switch (effect)
+    {
+    case GF_CONFUSION:
+    case GF_OLD_CONF:
+    case GF_BLIND:
+    case GF_OLD_SLEEP:
+    case GF_PARALYSIS:
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static bool _monster_has_dangerous_blow(monster_race *r_ptr)
+{
+    int i, j;
+
+    for (i = 0; i < MAX_MON_BLOWS; i++)
+    {
+        mon_blow_ptr blow = &r_ptr->blows[i];
+
+        if (!blow->method) continue;
+
+        for (j = 0; j < MAX_MON_BLOW_EFFECTS; j++)
+        {
+            mon_effect_ptr effect = &blow->effects[j];
+
+            if (!effect->effect) continue;
+            if (!dangerous_attack_ignore_lore && !effect->lore) continue;
+            if (_monster_blow_effect_is_dangerous(effect->effect)) return TRUE;
+        }
+    }
+
+    return FALSE;
+}
+
+static bool _monster_has_dangerous_spell(monster_race *r_ptr)
+{
+    int i, j;
+
+    if (!r_ptr->spells) return FALSE;
+
+    for (i = 0; i < MST_COUNT; i++)
+    {
+        mon_spell_group_ptr group = r_ptr->spells->groups[i];
+
+        if (!group) continue;
+
+        for (j = 0; j < group->count; j++)
+        {
+            mon_spell_ptr spell = &group->spells[j];
+
+            if (!dangerous_attack_ignore_lore && !spell->lore) continue;
+            if (mon_spell_is_dangerous_attack(spell)) return TRUE;
+        }
+    }
+
+    return FALSE;
+}
+
+static bool _monster_has_dangerous_attack(int cave_y, int cave_x)
+{
+    cave_type *c_ptr;
+    monster_type *m_ptr;
+    monster_race *r_ptr;
+    int r_idx;
+
+    if (!dangerous_attack_monster_border) return FALSE;
+    if (!in_bounds2(cave_y, cave_x)) return FALSE;
+
+    c_ptr = &cave[cave_y][cave_x];
+    if (!c_ptr->m_idx) return FALSE;
+
+    m_ptr = &m_list[c_ptr->m_idx];
+    if (!m_ptr->r_idx || !m_ptr->ml) return FALSE;
+    if (is_pet(m_ptr) || !is_hostile(m_ptr)) return FALSE;
+
+    r_idx = m_ptr->ap_r_idx;
+    if (r_idx <= 0 || r_idx >= max_r_idx) r_idx = m_ptr->r_idx;
+    r_ptr = &r_info[r_idx];
+
+    return _monster_has_dangerous_blow(r_ptr)
+        || _monster_has_dangerous_spell(r_ptr);
+}
+
+static int _danger_monster_border_level(int cave_y, int cave_x)
+{
+    cave_type *c_ptr;
+    monster_type *m_ptr;
+    monster_race *r_ptr;
+    int r_idx;
+    int level;
+    int speed_adv;
+    int danger;
+    int recommended;
+    int yellow_level;
+    bool unique;
+    bool red;
+    bool yellow;
+
+    if (!danger_monster_border || danger_monster_border_mode == DANGER_MONSTER_BORDER_OFF) return 0;
+    if (!in_bounds2(cave_y, cave_x)) return 0;
+
+    c_ptr = &cave[cave_y][cave_x];
+    if (!c_ptr->m_idx) return 0;
+
+    m_ptr = &m_list[c_ptr->m_idx];
+    if (!m_ptr->r_idx || !m_ptr->ml) return 0;
+    if (is_pet(m_ptr) || !is_hostile(m_ptr)) return 0;
+
+    r_idx = m_ptr->ap_r_idx;
+    if (r_idx <= 0 || r_idx >= max_r_idx) r_idx = m_ptr->r_idx;
+    r_ptr = &r_info[r_idx];
+
+    level = r_ptr->level;
+    speed_adv = m_ptr->mspeed - p_ptr->pspeed;
+    unique = (r_ptr->flags1 & RF1_UNIQUE) != 0;
+    danger = _danger_effective_monster_level(level, speed_adv, unique);
+    recommended = _danger_recommended_player_level(danger);
+    yellow_level = MIN(PY_MAX_LEVEL, recommended + _danger_yellow_margin(danger));
+
+    red = p_ptr->lev < recommended;
+
+    if (red) return 2;
+
+    yellow = p_ptr->lev < yellow_level
+          || (recommended >= PY_MAX_LEVEL && p_ptr->lev >= PY_MAX_LEVEL);
+
+    if (yellow && danger_monster_border_mode == DANGER_MONSTER_BORDER_BOTH) return 1;
+    return 0;
+}
+
+static void _queue_danger_monster_border(int cave_y, int cave_x, int ui_x, int ui_y, bool bigchar)
+{
+    int danger = _danger_monster_border_level(cave_y, cave_x);
+    bool dangerous_attack = _monster_has_dangerous_attack(cave_y, cave_x);
+    u32b rgb;
+
+    if (!danger && !dangerous_attack) return;
+
+    if (danger >= 2)
+        rgb = GRAPH_RGB(255, 74, 74);
+    else if (dangerous_attack)
+        rgb = GRAPH_RGB(190, 92, 255);
+    else
+        rgb = GRAPH_RGB(255, 215, 90);
+
+    _graph_queue_border(
+        ui_x,
+        ui_y,
+        bigchar,
+        TERM_RGB_BORDER_TOP | TERM_RGB_BORDER_RIGHT | TERM_RGB_BORDER_BOTTOM | TERM_RGB_BORDER_LEFT,
+        rgb);
+}
+
 static u32b _graph_wall_border_rgb(u32b bg, feature_type *f_ptr, int feat, graph_visual_state state)
 {
     u32b accent = _graph_material_accent(f_ptr, feat);
@@ -2042,6 +2257,9 @@ static void _graph_queue_map_rgb(int cave_y, int cave_x, int ui_x, int ui_y, byt
     bg = _graph_base_bg(c_ptr, f_ptr, feat, cave_y, cave_x, state);
     fg = _graph_attr_rgb(a);
 
+    if (_graph_cell_is_map_cursor(cave_y, cave_x))
+        bg = _graph_rgb_blend(bg, GRAPH_RGB(255, 214, 64), 48);
+
     if (terrain_glyph)
         fg = _graph_apply_fg_material(fg, f_ptr, feat);
     else
@@ -2066,12 +2284,16 @@ static void _graph_queue_map_bigchar(int cave_y, int cave_x, int ui_x, int ui_y,
 {
     Term_queue_bigchar(ui_x, ui_y, a, c, ta, tc);
     _graph_queue_map_rgb(cave_y, cave_x, ui_x, ui_y, a, TRUE);
+    _queue_danger_monster_border(cave_y, cave_x, ui_x, ui_y, TRUE);
+    _queue_map_cursor_border(cave_y, cave_x, ui_x, ui_y, TRUE);
 }
 
 static void _graph_queue_map_char(int cave_y, int cave_x, int ui_x, int ui_y, byte a, char c, byte ta, char tc)
 {
     Term_queue_char(ui_x, ui_y, a, c, ta, tc);
     _graph_queue_map_rgb(cave_y, cave_x, ui_x, ui_y, a, FALSE);
+    _queue_danger_monster_border(cave_y, cave_x, ui_x, ui_y, FALSE);
+    _queue_map_cursor_border(cave_y, cave_x, ui_x, ui_y, FALSE);
 }
 
 /*
@@ -2080,6 +2302,21 @@ static void _graph_queue_map_char(int cave_y, int cave_x, int ui_x, int ui_y, by
 void move_cursor_relative(int row, int col)
 {
     point_t ui = cave_xy_to_ui_pt(col, row);
+
+    if (map_cursor_visual_active && ((row != map_cursor_visual_y) || (col != map_cursor_visual_x)))
+    {
+        int old_y = map_cursor_visual_y;
+        int old_x = map_cursor_visual_x;
+
+        map_cursor_visual_active = FALSE;
+        if (in_bounds2(old_y, old_x)) lite_spot(old_y, old_x);
+    }
+
+    map_cursor_visual_active = cave_xy_is_visible(col, row) && in_bounds2(row, col);
+    map_cursor_visual_y = row;
+    map_cursor_visual_x = col;
+    if (map_cursor_visual_active) lite_spot(row, col);
+
     Term_gotoxy(ui.x, ui.y);
 }
 

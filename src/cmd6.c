@@ -701,6 +701,108 @@ static bool _can_quaff(object_type *o_ptr)
     return FALSE;
 }
 
+static bool _riding_pet_potion_is_heal(obj_ptr obj)
+{
+    if (obj->tval != TV_POTION) return FALSE;
+    switch (obj->sval)
+    {
+    case SV_POTION_CURE_LIGHT:
+    case SV_POTION_CURE_SERIOUS:
+    case SV_POTION_CURE_CRITICAL:
+    case SV_POTION_HEALING:
+    case SV_POTION_STAR_HEALING:
+    case SV_POTION_LIFE:
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static int _riding_pet_potion_heal(obj_ptr obj)
+{
+    switch (obj->sval)
+    {
+    case SV_POTION_CURE_LIGHT: return damroll(4, 8);
+    case SV_POTION_CURE_SERIOUS: return damroll(8, 8);
+    case SV_POTION_CURE_CRITICAL: return damroll(12, 8);
+    case SV_POTION_HEALING: return 300;
+    case SV_POTION_STAR_HEALING: return 1000;
+    case SV_POTION_LIFE: return 5000;
+    }
+    return 0;
+}
+
+static void _riding_pet_consume_potion(obj_ptr obj)
+{
+    object_tried(obj);
+    if (!object_is_aware(obj))
+    {
+        object_aware(obj);
+        p_ptr->notice |= PN_OPTIMIZE_PACK;
+    }
+
+    stats_on_use(obj, 1);
+    if (obj->loc.where == INV_FLOOR)
+        stats_on_pickup(obj);
+
+    obj_dec_number(obj, 1, TRUE);
+    obj_release(obj, OBJ_RELEASE_DELAYED_MSG);
+}
+
+static bool _riding_pet_use_potion(obj_ptr obj)
+{
+    monster_type *m_ptr;
+    char m_name[MAX_NLEN];
+    bool heal = _riding_pet_potion_is_heal(obj);
+    bool haste = obj->tval == TV_POTION && obj->sval == SV_POTION_SPEED;
+    bool noticed = FALSE;
+
+    if (!riding_bond_is_active()) return FALSE;
+    if (heal && !riding_bond_can_heal_pet()) return FALSE;
+    if (haste && !riding_bond_can_haste_pet()) return FALSE;
+    if (!heal && !haste) return FALSE;
+    if (!get_check("要把这瓶药水喂给当前坐骑吗？")) return FALSE;
+
+    m_ptr = &m_list[p_ptr->riding];
+    monster_desc(m_name, m_ptr, MD_ASSUME_VISIBLE);
+
+    energy_use = 100;
+    sound(SOUND_QUAFF);
+
+    if (heal)
+    {
+        int amt = _riding_pet_potion_heal(obj);
+        int old_hp = m_ptr->hp;
+
+        if (obj->sval == SV_POTION_LIFE)
+            m_ptr->hp = m_ptr->maxhp;
+        else
+            m_ptr->hp = MIN(m_ptr->maxhp, m_ptr->hp + amt);
+
+        if (m_ptr->hp != old_hp) noticed = TRUE;
+        if (obj->sval >= SV_POTION_CURE_CRITICAL)
+        {
+            if (set_monster_stunned(p_ptr->riding, 0)) noticed = TRUE;
+            if (set_monster_monfear(p_ptr->riding, 0)) noticed = TRUE;
+        }
+        if (obj->sval >= SV_POTION_HEALING)
+        {
+            if (set_monster_confused(p_ptr->riding, 0)) noticed = TRUE;
+        }
+        check_mon_health_redraw(p_ptr->riding);
+        msg_format("你把药水喂给了%s。", m_name);
+    }
+    else if (haste)
+    {
+        int dur = MON_FAST(m_ptr) ? MON_FAST(m_ptr) + 5 : randint1(25) + 15;
+        if (set_monster_fast(p_ptr->riding, dur)) noticed = TRUE;
+        msg_format("你把加速药水喂给了%s。", m_name);
+    }
+
+    if (noticed) p_ptr->window |= PW_MONSTER_LIST;
+    _riding_pet_consume_potion(obj);
+    return TRUE;
+}
+
 
 /*
  * Quaff some potion (from the pack or floor)
@@ -720,6 +822,8 @@ void do_cmd_quaff_potion(void)
 
     obj_prompt(&prompt);
     if (!prompt.obj) return;
+
+    if (_riding_pet_use_potion(prompt.obj)) return;
 
     do_cmd_quaff_potion_aux(prompt.obj);
 }

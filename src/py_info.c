@@ -1484,21 +1484,28 @@ static void _build_mutations(doc_ptr doc)
 static void _pet_exp_doc(doc_ptr doc, monster_type *m_ptr)
 {
     monster_race *r_ptr = &r_info[m_ptr->r_idx];
+    char bond[40] = "";
+
+    riding_bond_validate();
+    if (m_ptr->id == p_ptr->riding_bond_m_idx)
+        strnfmt(bond, sizeof(bond), ", 羁绊 %d.%02d%%", p_ptr->riding_bond / 100, p_ptr->riding_bond % 100);
 
     if (r_ptr->next_exp && r_ptr->next_r_idx > 0 && r_ptr->next_r_idx < max_r_idx)
     {
         monster_race *next_r_ptr = &r_info[r_ptr->next_r_idx];
-        doc_printf(doc, "    等级 %d, 经验 %lu/%lu, 下次进化 L%d\n",
+        doc_printf(doc, "    等级 %d, 经验 %lu/%lu, 下次进化 L%d%s\n",
             r_ptr->level,
             (unsigned long)m_ptr->exp,
             (unsigned long)r_ptr->next_exp,
-            next_r_ptr->level);
+            next_r_ptr->level,
+            bond);
     }
     else
     {
-        doc_printf(doc, "    等级 %d, 经验 %lu/-\n",
+        doc_printf(doc, "    等级 %d, 经验 %lu/-%s\n",
             r_ptr->level,
-            (unsigned long)m_ptr->exp);
+            (unsigned long)m_ptr->exp,
+            bond);
     }
 }
 

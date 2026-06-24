@@ -549,6 +549,42 @@ int mon_spell_hash(mon_spell_id_t id)
     return hash;
 }
 
+static bool _spell_effect_is_dangerous(int effect)
+{
+    switch (effect)
+    {
+    case GF_CONFUSION:
+    case GF_OLD_CONF:
+    case GF_BLIND:
+    case GF_OLD_SLEEP:
+    case GF_PARALYSIS:
+        return TRUE;
+    }
+    return FALSE;
+}
+
+bool mon_spell_is_dangerous_attack(mon_spell_ptr spell)
+{
+    if (!spell) return FALSE;
+
+    if (_spell_effect_is_dangerous(spell->id.effect)) return TRUE;
+
+    switch (spell->id.type)
+    {
+    case MST_ANNOY:
+        switch (spell->id.effect)
+        {
+        case ANNOY_BLIND:
+        case ANNOY_CONFUSE:
+        case ANNOY_PARALYZE:
+            return TRUE;
+        }
+        break;
+    }
+
+    return FALSE;
+}
+
 /*************************************************************************
  * Parm
  ************************************************************************/

@@ -312,6 +312,10 @@ extern bool fresh_after;    /* Flush output after monster's move */
 extern bool fresh_message;    /* Flush output after every message */
 extern bool hilite_player;    /* Hilite the player with the cursor */
 extern bool display_path;    /* Display actual path before shooting */
+extern bool danger_monster_border; /* Highlight dangerous monsters with a border */
+extern byte danger_monster_border_mode; /* DANGER_MONSTER_BORDER_* */
+extern bool dangerous_attack_monster_border; /* Highlight monsters with dangerous attacks */
+extern bool dangerous_attack_ignore_lore; /* Ignore monster lore for dangerous attack highlights */
 extern bool graph_show_floor_ascii; /* Show floor glyphs over solid fill */
 extern bool graph_show_wall_ascii;  /* Show wall glyphs over solid fill */
 extern bool graph_show_tree_ascii;  /* Show tree glyphs over solid fill */
@@ -972,6 +976,16 @@ extern void do_cmd_study(void);
 extern void do_cmd_cast(void);
 extern bool rakuba(int dam, bool force);
 extern bool do_riding(bool force);
+extern void riding_bond_validate(void);
+extern bool riding_bond_is_active(void);
+extern bool riding_bond_is_full(void);
+extern int riding_bond_pct(void);
+extern int riding_bond_exp_multiplier(void);
+extern bool riding_bond_can_heal_pet(void);
+extern bool riding_bond_can_haste_pet(void);
+extern void riding_bond_gain(int amt);
+extern int riding_bond_pet_exp_for(monster_type *pet, monster_type *killed);
+extern void riding_bond_player_kill(monster_type *killed);
 extern void check_pets_num_and_align(monster_type *m_ptr, bool inc);
 extern int calculate_upkeep(void);
 extern void do_cmd_pet_dismiss(void);

@@ -4626,7 +4626,6 @@ void monster_gain_exp(int m_idx, int s_idx)
 {
     monster_type *m_ptr;
     monster_type *sm_ptr;
-    monster_race *r_ptr;
     monster_race *s_ptr;
     int new_exp;
 
@@ -4643,7 +4642,6 @@ void monster_gain_exp(int m_idx, int s_idx)
     sm_ptr = &m_list[s_idx];
     if (!sm_ptr->r_idx) return;
 
-    r_ptr = &r_info[m_ptr->r_idx];
     s_ptr = &r_info[sm_ptr->r_idx];
 
     if (p_ptr->inside_battle) return;
@@ -4657,9 +4655,12 @@ void monster_gain_exp(int m_idx, int s_idx)
     /* No XP for killing a fellow friendly */
     if ((!is_hostile(m_ptr)) && (!is_hostile(sm_ptr))) return;
 
-    new_exp = s_ptr->mexp * s_ptr->level / (r_ptr->level + 2);
-    if (m_idx == p_ptr->riding) new_exp = (new_exp + 1) / 2;
-    if (!dun_level) new_exp /= 5;
+    new_exp = riding_bond_pet_exp_for(m_ptr, sm_ptr);
+    if (m_idx == p_ptr->riding && riding_bond_is_active())
+    {
+        riding_bond_gain(s_ptr->level);
+        new_exp = new_exp * riding_bond_exp_multiplier() / 100;
+    }
 
     /* Experimental: Share the xp with the player */
     if (is_pet(m_ptr))
@@ -4683,11 +4684,19 @@ void monster_gain_exp(int m_idx, int s_idx)
               || (prace_is_(RACE_MON_RING) && p_ptr->riding == m_idx)) pmult += (py_in_dungeon() ? 2 : (coffee_break - 1));
         }
 
-        exp = new_exp / div;
-        gain_exp(exp * pmult);
-        p_ptr->pet_lv_kills++;
-        if (penalty)
-            new_exp -= exp;
+        if (m_idx == p_ptr->riding && riding_bond_is_full())
+        {
+            gain_exp(new_exp * pmult);
+            p_ptr->pet_lv_kills++;
+        }
+        else
+        {
+            exp = new_exp / div;
+            gain_exp(exp * pmult);
+            p_ptr->pet_lv_kills++;
+            if (penalty)
+                new_exp -= exp;
+        }
         if (pmult > 1) new_exp *= 2;
         if (new_exp < 0) new_exp = 0;
     }

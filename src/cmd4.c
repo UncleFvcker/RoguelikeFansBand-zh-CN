@@ -146,6 +146,49 @@ static void _cmd4_display_option_row(byte attr, int row, cptr desc, cptr value, 
     }
 }
 
+static cptr _danger_monster_border_desc(void)
+{
+    if (!danger_monster_border || danger_monster_border_mode == DANGER_MONSTER_BORDER_OFF)
+        return "关闭";
+    if (danger_monster_border_mode == DANGER_MONSTER_BORDER_RED)
+        return "仅红色";
+    return "黄色+红色";
+}
+
+static void _danger_monster_border_sync(void)
+{
+    if (!danger_monster_border)
+        danger_monster_border_mode = DANGER_MONSTER_BORDER_OFF;
+    else if (danger_monster_border_mode == DANGER_MONSTER_BORDER_OFF)
+        danger_monster_border_mode = DANGER_MONSTER_BORDER_BOTH;
+    else if (danger_monster_border_mode > DANGER_MONSTER_BORDER_RED)
+        danger_monster_border_mode = DANGER_MONSTER_BORDER_BOTH;
+}
+
+static void _danger_monster_border_next(void)
+{
+    _danger_monster_border_sync();
+    if (danger_monster_border_mode == DANGER_MONSTER_BORDER_OFF)
+        danger_monster_border_mode = DANGER_MONSTER_BORDER_BOTH;
+    else if (danger_monster_border_mode == DANGER_MONSTER_BORDER_BOTH)
+        danger_monster_border_mode = DANGER_MONSTER_BORDER_RED;
+    else
+        danger_monster_border_mode = DANGER_MONSTER_BORDER_OFF;
+    danger_monster_border = danger_monster_border_mode != DANGER_MONSTER_BORDER_OFF;
+}
+
+static void _danger_monster_border_prev(void)
+{
+    _danger_monster_border_sync();
+    if (danger_monster_border_mode == DANGER_MONSTER_BORDER_OFF)
+        danger_monster_border_mode = DANGER_MONSTER_BORDER_RED;
+    else if (danger_monster_border_mode == DANGER_MONSTER_BORDER_RED)
+        danger_monster_border_mode = DANGER_MONSTER_BORDER_BOTH;
+    else
+        danger_monster_border_mode = DANGER_MONSTER_BORDER_OFF;
+    danger_monster_border = danger_monster_border_mode != DANGER_MONSTER_BORDER_OFF;
+}
+
 /*
  * A set of functions to maintain automatic dumps of various kinds.
  * -Mogami-
@@ -1039,6 +1082,11 @@ void do_cmd_options_aux(int page, cptr info)
                 strnfmt(buf, sizeof(buf), "%d", monster_list_width);
                 value = buf;
             }
+            else if (option_info[opt[i]].o_var == &danger_monster_border)
+            {
+                _danger_monster_border_sync();
+                value = _danger_monster_border_desc();
+            }
             else if (option_info[opt[i]].o_var == &single_pantheon)
             {
                 strnfmt(buf, sizeof(buf), "%d / %d", pantheon_count, PANTHEON_MAX - 1);
@@ -1194,6 +1242,11 @@ void do_cmd_options_aux(int page, cptr info)
                     monster_list_width += 2;
                     if (monster_list_width > maksi) monster_list_width = maksi;
                 }
+                else if (option_info[opt[k]].o_var == &danger_monster_border)
+                {
+                    _danger_monster_border_next();
+                    p_ptr->redraw |= PR_MAP;
+                }
                 else if (option_info[opt[k]].o_var == &reduce_uniques)
                 {
                     if (!reduce_uniques)
@@ -1299,6 +1352,11 @@ void do_cmd_options_aux(int page, cptr info)
                     monster_list_width -= 2;
                     if (monster_list_width < 24) monster_list_width = 24;
                 }
+                else if (option_info[opt[k]].o_var == &danger_monster_border)
+                {
+                    _danger_monster_border_prev();
+                    p_ptr->redraw |= PR_MAP;
+                }
                 else if (option_info[opt[k]].o_var == &ironman_empty_levels)
                 {
                     if (generate_empty == 0) generate_empty = EMPTY_MAX - 1;
@@ -1344,7 +1402,16 @@ void do_cmd_options_aux(int page, cptr info)
             case 't':
             case 'T':
             {
-                if (!browse_only) (*option_info[opt[k]].o_var) = !(*option_info[opt[k]].o_var);
+                if (!browse_only)
+                {
+                    if (option_info[opt[k]].o_var == &danger_monster_border)
+                    {
+                        _danger_monster_border_next();
+                        p_ptr->redraw |= PR_MAP;
+                    }
+                    else
+                        (*option_info[opt[k]].o_var) = !(*option_info[opt[k]].o_var);
+                }
                 break;
             }
 
@@ -5506,21 +5573,28 @@ void plural_aux(char *Name)
 static void _pet_exp_info(char *buf, int max, monster_type *m_ptr)
 {
     monster_race *r_ptr = &r_info[m_ptr->r_idx];
+    char bond[40] = "";
+
+    riding_bond_validate();
+    if (m_ptr->id == p_ptr->riding_bond_m_idx)
+        strnfmt(bond, sizeof(bond), ", 羁绊 %d.%02d%%", p_ptr->riding_bond / 100, p_ptr->riding_bond % 100);
 
     if (r_ptr->next_exp && r_ptr->next_r_idx > 0 && r_ptr->next_r_idx < max_r_idx)
     {
         monster_race *next_r_ptr = &r_info[r_ptr->next_r_idx];
-        strnfmt(buf, max, "等级 %d, 经验 %lu/%lu, 下次进化 L%d",
+        strnfmt(buf, max, "等级 %d, 经验 %lu/%lu, 下次进化 L%d%s",
             r_ptr->level,
             (unsigned long)m_ptr->exp,
             (unsigned long)r_ptr->next_exp,
-            next_r_ptr->level);
+            next_r_ptr->level,
+            bond);
     }
     else
     {
-        strnfmt(buf, max, "等级 %d, 经验 %lu/-",
+        strnfmt(buf, max, "等级 %d, 经验 %lu/-%s",
             r_ptr->level,
-            (unsigned long)m_ptr->exp);
+            (unsigned long)m_ptr->exp,
+            bond);
     }
 }
 
@@ -5530,7 +5604,7 @@ static void do_cmd_knowledge_pets(void)
     FILE            *fff;
     monster_type    *m_ptr;
     char            pet_name[80];
-    char            pet_info[120];
+    char            pet_info[180];
     int             t_friends = 0;
     int             show_upkeep = 0;
     char            file_name[1024];

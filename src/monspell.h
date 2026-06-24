@@ -97,6 +97,7 @@ extern errr mon_spell_parse(mon_spell_ptr spell, int rlev, char *token);
 extern void mon_spell_print(mon_spell_ptr spell, string_ptr s);
 extern void mon_spell_display(mon_spell_ptr spell, string_ptr s); /* helper for mon_display */
 extern void mon_spell_doc(mon_spell_ptr spell, doc_ptr doc);
+extern bool mon_spell_is_dangerous_attack(mon_spell_ptr spell);
 extern int  mon_spell_avg_dam(mon_spell_ptr spell, mon_race_ptr race, bool apply_resist);
 extern void mon_spell_dam_range(string_ptr s, mon_spell_ptr spell, mon_race_ptr race, bool apply_resist);
 

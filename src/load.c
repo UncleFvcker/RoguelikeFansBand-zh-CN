@@ -65,6 +65,7 @@ static void _validate_tmp_indices(void)
         game_log_event("load-track", "cleared invalid riding_t_m_idx=%d", riding_t_m_idx);
         riding_t_m_idx = 0;
     }
+    riding_bond_validate();
 }
 
 void rd_item(savefile_ptr file, object_type *o_ptr)
@@ -935,6 +936,11 @@ static void rd_extra(savefile_ptr file)
         bounty_total = future[4];
         bounty_remaining = future[5];
         cooking_sustain = (s16b)MAX(0, MIN(32767, future[6]));
+        p_ptr->riding_bond_m_idx = (s16b)future[7];
+        p_ptr->riding_bond_r_idx = (s16b)future[8];
+        p_ptr->riding_bond = MAX(0, MIN(10000, future[9]));
+        danger_monster_border_mode = (byte)MAX(0, MIN(DANGER_MONSTER_BORDER_RED, future[10]));
+        danger_monster_border = danger_monster_border_mode != DANGER_MONSTER_BORDER_OFF;
     }
     wipe_labels();
     if (!savefile_is_older_than(file, 1,0,0,0))
