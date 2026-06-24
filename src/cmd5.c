@@ -2192,6 +2192,20 @@ void riding_bond_on_mount(int m_idx)
     }
 }
 
+void riding_bond_rebind_mount(int m_idx)
+{
+    monster_type *m_ptr;
+
+    if (p_ptr->riding_bond <= 0) return;
+    if (!_riding_bond_mon_ok(m_idx)) return;
+
+    m_ptr = &m_list[m_idx];
+    if (p_ptr->riding_bond_r_idx != m_ptr->r_idx) return;
+
+    p_ptr->riding_bond_m_idx = m_idx;
+    p_ptr->riding_bond = MAX(0, MIN(RIDING_BOND_MAX, p_ptr->riding_bond));
+}
+
 void riding_bond_gain(int amt)
 {
     int old_pct;

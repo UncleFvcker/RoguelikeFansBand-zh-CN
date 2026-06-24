@@ -584,6 +584,9 @@ static void place_pet(void)
             m_ptr->ml = TRUE;
             m_ptr->mtimed[MTIMED_CSLEEP] = 0;
 
+            if (i == 0)
+                riding_bond_rebind_mount(m_idx);
+
             /* Paranoia */
             m_ptr->hold_o_idx = 0;
             m_ptr->target_y = 0;

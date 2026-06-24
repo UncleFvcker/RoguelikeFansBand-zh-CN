@@ -367,6 +367,7 @@ static void compact_monsters_aux(int i1, int i2)
 
     /* Hack -- Update the riding */
     if (p_ptr->riding == i1) p_ptr->riding = i2;
+    if (p_ptr->riding_bond_m_idx == i1) p_ptr->riding_bond_m_idx = i2;
 
     /* Hack -- Update the health bar */
     if (p_ptr->health_who == i1) health_track(i2);

@@ -984,6 +984,7 @@ extern int riding_bond_exp_multiplier(void);
 extern bool riding_bond_can_heal_pet(void);
 extern bool riding_bond_can_haste_pet(void);
 extern void riding_bond_gain(int amt);
+extern void riding_bond_rebind_mount(int m_idx);
 extern int riding_bond_pet_exp_for(monster_type *pet, monster_type *killed);
 extern void riding_bond_player_kill(monster_type *killed);
 extern void check_pets_num_and_align(monster_type *m_ptr, bool inc);
