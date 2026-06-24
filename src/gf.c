@@ -4081,6 +4081,7 @@ bool gf_affect_m(int who, mon_ptr mon, int type, int dam, int flags)
             cap_mspeed = mon->mspeed;
             cap_hp = mon->hp;
             cap_maxhp = mon->max_maxhp;
+            cap_exp = mon->exp;
             cap_nickname = mon->nickname;
             if (mon->id == p_ptr->riding)
             {

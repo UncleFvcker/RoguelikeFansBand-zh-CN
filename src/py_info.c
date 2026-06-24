@@ -1481,6 +1481,27 @@ static void _build_mutations(doc_ptr doc)
     }
 }
 
+static void _pet_exp_doc(doc_ptr doc, monster_type *m_ptr)
+{
+    monster_race *r_ptr = &r_info[m_ptr->r_idx];
+
+    if (r_ptr->next_exp && r_ptr->next_r_idx > 0 && r_ptr->next_r_idx < max_r_idx)
+    {
+        monster_race *next_r_ptr = &r_info[r_ptr->next_r_idx];
+        doc_printf(doc, "    等级 %d, 经验 %lu/%lu, 下次进化 L%d\n",
+            r_ptr->level,
+            (unsigned long)m_ptr->exp,
+            (unsigned long)r_ptr->next_exp,
+            next_r_ptr->level);
+    }
+    else
+    {
+        doc_printf(doc, "    等级 %d, 经验 %lu/-\n",
+            r_ptr->level,
+            (unsigned long)m_ptr->exp);
+    }
+}
+
 static void _build_pets(doc_ptr doc)
 {
     int i;
@@ -1505,6 +1526,7 @@ static void _build_pets(doc_ptr doc)
         }
         monster_desc(pet_name, m_ptr, MD_ASSUME_VISIBLE | MD_INDEF_VISIBLE | MD_NO_PET_ABBREV);
         doc_printf(doc, "  <indent><style:indent>%s</style></indent>\n", pet_name);
+        _pet_exp_doc(doc, m_ptr);
     }
 
     if (pet_settings)

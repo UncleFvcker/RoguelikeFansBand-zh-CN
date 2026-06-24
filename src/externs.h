@@ -634,6 +634,7 @@ extern int cap_mon;
 extern int cap_mspeed;
 extern int cap_hp;
 extern int cap_maxhp;
+extern u32b cap_exp;
 extern u16b cap_nickname;
 extern s16b battle_mon[4];
 extern int sel_monster;

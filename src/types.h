@@ -344,6 +344,7 @@ struct object_type
     byte xtra3;            /* Extra info: Chests and Weaponsmith. Device Power. */
     s16b xtra4;            /* Extra info: Lights, Capture, Quiver Capacity, Device MaxSP. */
     s32b xtra5;            /* Extra info: Device CSP */
+    u32b capture_exp;      /* Extra info: Capture ball monster exp */
     byte custom_book_realm[CUSTOM_BOOK_MAX_SPELLS];
     byte custom_book_spell[CUSTOM_BOOK_MAX_SPELLS];
 

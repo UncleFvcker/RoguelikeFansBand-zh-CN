@@ -1162,6 +1162,7 @@ int cap_mon;
 int cap_mspeed;
 int cap_hp;
 int cap_maxhp;
+u32b cap_exp;
 u16b cap_nickname;
 
 s16b battle_mon[4];

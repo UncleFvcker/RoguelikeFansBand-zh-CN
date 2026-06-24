@@ -1490,6 +1490,7 @@ enum object_save_fields_e {
     OBJ_SAVE_MITZE,
     OBJ_SAVE_INSURED,
     OBJ_SAVE_CUSTOM_BOOK,
+    OBJ_SAVE_CAPTURE_EXP,
 };
 
 static void _obj_repair_plain_fuel_lite(obj_ptr obj)
@@ -1768,6 +1769,9 @@ void obj_load(obj_ptr obj, savefile_ptr file)
             }
             break;
         }
+        case OBJ_SAVE_CAPTURE_EXP:
+            obj->capture_exp = savefile_read_u32b(file);
+            break;
         /* default:
             TODO: Report an error back to the load routine!!*/
         }
@@ -2021,6 +2025,11 @@ void obj_save(obj_ptr obj, savefile_ptr file)
             savefile_write_byte(file, obj->custom_book_realm[i]);
             savefile_write_byte(file, obj->custom_book_spell[i]);
         }
+    }
+    if (obj->capture_exp)
+    {
+        savefile_write_byte(file, OBJ_SAVE_CAPTURE_EXP);
+        savefile_write_u32b(file, obj->capture_exp);
     }
 
     savefile_write_byte(file, OBJ_SAVE_DONE);

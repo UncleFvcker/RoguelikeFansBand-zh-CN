@@ -5503,13 +5503,34 @@ void plural_aux(char *Name)
 /*
  * Display current pets
  */
+static void _pet_exp_info(char *buf, int max, monster_type *m_ptr)
+{
+    monster_race *r_ptr = &r_info[m_ptr->r_idx];
+
+    if (r_ptr->next_exp && r_ptr->next_r_idx > 0 && r_ptr->next_r_idx < max_r_idx)
+    {
+        monster_race *next_r_ptr = &r_info[r_ptr->next_r_idx];
+        strnfmt(buf, max, "等级 %d, 经验 %lu/%lu, 下次进化 L%d",
+            r_ptr->level,
+            (unsigned long)m_ptr->exp,
+            (unsigned long)r_ptr->next_exp,
+            next_r_ptr->level);
+    }
+    else
+    {
+        strnfmt(buf, max, "等级 %d, 经验 %lu/-",
+            r_ptr->level,
+            (unsigned long)m_ptr->exp);
+    }
+}
+
 static void do_cmd_knowledge_pets(void)
 {
     int             i;
     FILE            *fff;
     monster_type    *m_ptr;
-    monster_race    *r_ptr;
     char            pet_name[80];
+    char            pet_info[120];
     int             t_friends = 0;
     int             show_upkeep = 0;
     char            file_name[1024];
@@ -5528,7 +5549,6 @@ static void do_cmd_knowledge_pets(void)
     {
         /* Access the monster */
         m_ptr = &m_list[i];
-        r_ptr = &r_info[m_ptr->r_idx];
 
         /* Ignore "dead" monsters */
         if (!m_ptr->r_idx) continue;
@@ -5538,10 +5558,8 @@ static void do_cmd_knowledge_pets(void)
         {
             t_friends++;
             monster_desc(pet_name, m_ptr, MD_ASSUME_VISIBLE | MD_INDEF_VISIBLE);
-            fprintf(fff, "%s (", pet_name);
-            if (r_ptr->r_tkills)
-                fprintf(fff, "L%d, ", r_ptr->level);
-            fprintf(fff, "%s)\n", mon_health_desc(m_ptr));
+            _pet_exp_info(pet_info, sizeof(pet_info), m_ptr);
+            fprintf(fff, "%s (%s, %s)\n", pet_name, pet_info, mon_health_desc(m_ptr));
         }
     }
 

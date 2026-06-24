@@ -1317,6 +1317,7 @@ void empty_capture_ball(object_type *o_ptr)
     o_ptr->xtra3 = 0;
     o_ptr->xtra4 = 0;
     o_ptr->xtra5 = 0;
+    o_ptr->capture_exp = 0;
 }
 
 void capture_ball_opening(object_type *j_ptr, int y, int x, bool from_drop)
@@ -1375,6 +1376,7 @@ bool capture_ball_release(object_type *o_ptr, int y, int x, int mode)
         if (o_ptr->xtra3) m_list[hack_m_idx_ii].mspeed = o_ptr->xtra3;
         if (o_ptr->xtra5) m_list[hack_m_idx_ii].max_maxhp = o_ptr->xtra5;
         if (o_ptr->xtra4) m_list[hack_m_idx_ii].hp = o_ptr->xtra4;
+        if (o_ptr->capture_exp) m_list[hack_m_idx_ii].exp = o_ptr->capture_exp;
         m_list[hack_m_idx_ii].maxhp = m_list[hack_m_idx_ii].max_maxhp;
         if ((mode & CAPTURE_BALL_ALLOW_HOSTILE) && (one_in_(4)))
         {
@@ -1460,6 +1462,7 @@ static void _do_capture_ball(object_type *o_ptr)
             o_ptr->xtra3 = cap_mspeed;
             o_ptr->xtra4 = cap_hp;
             o_ptr->xtra5 = cap_maxhp;
+            o_ptr->capture_exp = cap_exp;
             increase_ball_num(cap_mon);
             if (cap_nickname)
             {
