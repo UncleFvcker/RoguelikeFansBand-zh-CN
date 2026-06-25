@@ -3516,25 +3516,41 @@ void print_spells(int target_spell, byte *spells, int num, rect_t display, int u
     bool            max = FALSE;
     caster_info    *caster_ptr = get_caster_info();
     int             vaikeustaso;
+    int             name_col = display.x + 5;
+    int             prof_col = display.x + 34;
+    int             level_col = display.x + 43;
+    int             cost_col = display.x + 49;
+    int             fail_col = display.x + 55;
+    int             desc_col = display.x + 62;
+    int             name_w = prof_col - name_col - 1;
+    bool            use_hp_cost = FALSE;
 
     if (((use_realm <= REALM_NONE) || (use_realm > MAX_REALM)) && p_ptr->wizard)
         msg_print("警告！在领域为空时调用了 print_spells");
 
 
     /* Title the list */
+    use_hp_cost = (caster_ptr && ((caster_ptr->options & CASTER_USE_HP) || ((p_ptr->pclass == CLASS_NINJA_LAWYER) && (use_realm != REALM_LAW))));
     if (use_realm == REALM_HISSATSU)
-        strcpy(buf,"等级 消耗");
+        strcpy(buf, "消耗");
     else
-    {
-        if (caster_ptr && ((caster_ptr->options & CASTER_USE_HP) || ((p_ptr->pclass == CLASS_NINJA_LAWYER) && (use_realm != REALM_LAW))))
-            strcpy(buf,"熟练 等级 生命 失败 描述");
-        else
-            strcpy(buf,"熟练 等级 消耗 失败 描述");
-    }
+        strcpy(buf, use_hp_cost ? "生命" : "消耗");
 
     Term_erase(display.x, display.y, display.cx);
-    put_str("名称", display.y, display.x + 5);
-    put_str(buf, display.y, display.x + 29);
+    put_str("名称", display.y, name_col);
+    if (use_realm == REALM_HISSATSU)
+    {
+        put_str("等级", display.y, level_col);
+        put_str(buf, display.y, cost_col);
+    }
+    else
+    {
+        put_str("熟练", display.y, prof_col);
+        put_str("等级", display.y, level_col);
+        put_str(buf, display.y, cost_col);
+        put_str("失败", display.y, fail_col);
+        put_str("描述", display.y, desc_col);
+    }
 
     if ((p_ptr->pclass == CLASS_SORCERER) || (p_ptr->pclass == CLASS_RED_MAGE)) increment = 0;
     else if (use_realm == p_ptr->realm1) increment = 0;
@@ -3592,9 +3608,10 @@ void print_spells(int target_spell, byte *spells, int num, rect_t display, int u
         /* Skip illegible spells */
         if (vaikeustaso >= 99)
         {
-                strcat(out_val, format("%-30s", "(难以辨认)"));
-                c_put_str(TERM_L_DARK, out_val, display.y + i + 1, display.x);
-                continue;
+            int row = display.y + i + 1;
+            c_put_str(TERM_L_DARK, out_val, row, display.x);
+            Term_putstr(name_col, row, name_w, TERM_L_DARK, "(难以辨认)");
+            continue;
         }
 
         /* XXX XXX Could label spells above the players level */
@@ -3660,19 +3677,22 @@ void print_spells(int target_spell, byte *spells, int num, rect_t display, int u
         /* Draw columns directly so UTF-8 spell names don't disturb alignment. */
         if (use_realm == REALM_HISSATSU)
         {
-            Term_putstr(display.x + 5, display.y + i + 1, 23, line_attr,
+            Term_putstr(name_col, display.y + i + 1, name_w, line_attr,
                 do_spell(use_realm, spell, SPELL_NAME));
-            c_put_str(line_attr, format("%3d %3d", vaikeustaso, need_mana),
-                display.y + i + 1, display.x + 29);
+            c_put_str(line_attr, format("%3d", vaikeustaso), display.y + i + 1, level_col);
+            c_put_str(line_attr, format("%3d", need_mana), display.y + i + 1, cost_col);
         }
         else
         {
-            Term_putstr(display.x + 5, display.y + i + 1, 23, line_attr,
+            if (max)
+                c_put_str(line_attr, "!", display.y + i + 1, prof_col - 1);
+            Term_putstr(name_col, display.y + i + 1, name_w, line_attr,
                 do_spell(use_realm, spell, SPELL_NAME));
-            c_put_str(line_attr, format("%c%-8s %3d %3d %3d%% %s",
-                    (max ? '!' : ' '), ryakuji,
-                    vaikeustaso, need_mana, spell_chance(spell, use_realm), comment),
-                display.y + i + 1, display.x + 29);
+            Term_putstr(prof_col, display.y + i + 1, level_col - prof_col - 1, line_attr, ryakuji);
+            c_put_str(line_attr, format("%3d", vaikeustaso), display.y + i + 1, level_col);
+            c_put_str(line_attr, format("%3d", need_mana), display.y + i + 1, cost_col);
+            c_put_str(line_attr, format("%3d%%", spell_chance(spell, use_realm)), display.y + i + 1, fail_col);
+            Term_putstr(desc_col, display.y + i + 1, MAX(0, display.x + display.cx - desc_col), line_attr, comment);
         }
     }
 

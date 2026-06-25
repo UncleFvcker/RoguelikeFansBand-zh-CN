@@ -4659,7 +4659,6 @@ void monster_gain_exp(int m_idx, int s_idx)
     if (m_idx == p_ptr->riding && riding_bond_is_active())
     {
         riding_bond_gain(s_ptr->level);
-        new_exp = new_exp * riding_bond_exp_multiplier() / 100;
     }
 
     /* Experimental: Share the xp with the player */

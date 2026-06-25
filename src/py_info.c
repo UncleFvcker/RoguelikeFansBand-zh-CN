@@ -1493,7 +1493,7 @@ static void _pet_exp_doc(doc_ptr doc, monster_type *m_ptr)
     if (r_ptr->next_exp && r_ptr->next_r_idx > 0 && r_ptr->next_r_idx < max_r_idx)
     {
         monster_race *next_r_ptr = &r_info[r_ptr->next_r_idx];
-        doc_printf(doc, "    等级 %d, 经验 %lu/%lu, 下次进化 L%d%s\n",
+        doc_printf(doc, "    等级 %d, 经验 %lu, 下一次进化所需经验 %lu (L%d)%s\n",
             r_ptr->level,
             (unsigned long)m_ptr->exp,
             (unsigned long)r_ptr->next_exp,
@@ -1502,7 +1502,7 @@ static void _pet_exp_doc(doc_ptr doc, monster_type *m_ptr)
     }
     else
     {
-        doc_printf(doc, "    等级 %d, 经验 %lu/-%s\n",
+        doc_printf(doc, "    等级 %d, 经验 %lu, 无进化%s\n",
             r_ptr->level,
             (unsigned long)m_ptr->exp,
             bond);

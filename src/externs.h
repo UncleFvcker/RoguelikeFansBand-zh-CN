@@ -980,7 +980,6 @@ extern void riding_bond_validate(void);
 extern bool riding_bond_is_active(void);
 extern bool riding_bond_is_full(void);
 extern int riding_bond_pct(void);
-extern int riding_bond_exp_multiplier(void);
 extern bool riding_bond_can_heal_pet(void);
 extern bool riding_bond_can_haste_pet(void);
 extern void riding_bond_gain(int amt);

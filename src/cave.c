@@ -2302,8 +2302,12 @@ static void _graph_queue_map_char(int cave_y, int cave_x, int ui_x, int ui_y, by
 void move_cursor_relative(int row, int col)
 {
     point_t ui = cave_xy_to_ui_pt(col, row);
+    bool new_active = cave_xy_is_visible(col, row) && in_bounds2(row, col);
 
-    if (map_cursor_visual_active && ((row != map_cursor_visual_y) || (col != map_cursor_visual_x)))
+    if ((row == py) && (col == px) && !hilite_player)
+        new_active = FALSE;
+
+    if (map_cursor_visual_active && (((row != map_cursor_visual_y) || (col != map_cursor_visual_x)) || !new_active))
     {
         int old_y = map_cursor_visual_y;
         int old_x = map_cursor_visual_x;
@@ -2312,7 +2316,7 @@ void move_cursor_relative(int row, int col)
         if (in_bounds2(old_y, old_x)) lite_spot(old_y, old_x);
     }
 
-    map_cursor_visual_active = cave_xy_is_visible(col, row) && in_bounds2(row, col);
+    map_cursor_visual_active = new_active;
     map_cursor_visual_y = row;
     map_cursor_visual_x = col;
     if (map_cursor_visual_active) lite_spot(row, col);

@@ -2162,11 +2162,6 @@ bool riding_bond_is_full(void)
     return riding_bond_is_active() && p_ptr->riding_bond >= RIDING_BOND_MAX;
 }
 
-int riding_bond_exp_multiplier(void)
-{
-    return 100 + riding_bond_pct();
-}
-
 bool riding_bond_can_heal_pet(void)
 {
     return riding_bond_is_active() && p_ptr->riding_bond >= RIDING_BOND_HEAL_MIN;
@@ -2255,6 +2250,7 @@ void riding_bond_player_kill(monster_type *killed)
 
     pet = &m_list[p_ptr->riding];
     exp = riding_bond_pet_exp_for(pet, killed);
+    exp /= 10;
     if (exp > 0)
         mon_gain_exp(pet, exp);
 }
