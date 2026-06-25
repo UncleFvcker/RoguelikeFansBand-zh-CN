@@ -1610,7 +1610,460 @@ static void do_cmd_options_win(void)
 
 
 
-#define OPT_NUM 15
+#define KEYBIND_PREF_FILE "keybind.prf"
+#define KEYBIND_IGNORE_ACTION " "
+
+typedef struct {
+    cptr group;
+    cptr name;
+    cptr action;
+    byte orig_key;
+    byte rogue_key;
+} keybind_info_t;
+
+static keybind_info_t _keybinds[] = {
+    { "移动", "向左下移动", ";1", '1', 'b' },
+    { "移动", "向下移动", ";2", '2', 'j' },
+    { "移动", "向右下移动", ";3", '3', 'n' },
+    { "移动", "向左移动", ";4", '4', 'h' },
+    { "移动", "向右移动", ";6", '6', 'l' },
+    { "移动", "向左上移动", ";7", '7', 'y' },
+    { "移动", "向上移动", ";8", '8', 'k' },
+    { "移动", "向右上移动", ";9", '9', 'u' },
+    { "移动", "休息一回合/拾取", ",", '5', '5' },
+    { "移动", "跑步", ".", '.', ',' },
+    { "移动", "自动探索", "Z", 'Z', 'Z' },
+    { "移动", "拾取脚下物品", "g", 'g', 'g' },
+    { "移动", "拾取附近物品", "\007", KTRL('G'), KTRL('G') },
+    { "移动", "休息", "R", 'R', 'R' },
+    { "移动", "搜索", "s", 's', 's' },
+    { "移动", "切换搜索", "S", 'S', '#' },
+    { "地形", "上楼/离开", "<", '<', '<' },
+    { "地形", "下楼/进入", ">", '>', '>' },
+    { "地形", "打开", "o", 'o', 'o' },
+    { "地形", "关闭", "c", 'c', 'c' },
+    { "地形", "挖掘", "T", 'T', KTRL('T') },
+    { "地形", "解除陷阱", "D", 'D', 'D' },
+    { "地形", "改变地形", "+", '+', '+' },
+    { "地形", "撞开", "B", 'B', 'f' },
+    { "地形", "堵门", "j", 'j', 'S' },
+    { "物品", "物品栏", "i", 'i', 'i' },
+    { "物品", "装备栏", "e", 'e', 'e' },
+    { "物品", "穿戴/装备", "w", 'w', 'w' },
+    { "物品", "脱下装备", "t", 't', 'T' },
+    { "物品", "丢弃", "d", 'd', 'd' },
+    { "物品", "摧毁", "k", 'k', KTRL('D') },
+    { "物品", "检查物品", "I", 'I', 'I' },
+    { "物品", "包裹", "P", 'P', 'P' },
+    { "物品", "铭刻", "{", '{', '{' },
+    { "物品", "取消铭刻", "}", '}', '}' },
+    { "使用", "施法/技能", "m", 'm', 'm' },
+    { "使用", "浏览法术", "b", 'b', 'b' },
+    { "使用", "学习法术", "G", 'G', 'G' },
+    { "使用", "种族/职业能力", "U", 'U', 'O' },
+    { "使用", "吃食物", "E", 'E', 'E' },
+    { "使用", "喝药水", "q", 'q', 'q' },
+    { "使用", "阅读卷轴", "r", 'r', 'r' },
+    { "使用", "使用法杖", "u", 'u', 'u' },
+    { "使用", "瞄准魔杖", "a", 'a', 'z' },
+    { "使用", "使用魔棒", "z", 'z', 'a' },
+    { "使用", "激活物品", "A", 'A', 'A' },
+    { "使用", "射击", "f", 'f', 't' },
+    { "使用", "投掷", "v", 'v', 'v' },
+    { "使用", "填充光源", "F", 'F', 'F' },
+    { "信息", "观察", "l", 'l', 'x' },
+    { "信息", "指定目标", "*", '*', '*' },
+    { "信息", "地图", "M", 'M', 'M' },
+    { "信息", "定位", "L", 'L', 'W' },
+    { "信息", "怪物列表", "[", '[', '[' },
+    { "信息", "物品列表", "]", ']', ']' },
+    { "信息", "知识菜单", "~", '~', '~' },
+    { "信息", "帮助", "?", '?', '?' },
+    { "系统", "选项", "=", '=', '=' },
+    { "系统", "视觉设置", "%", '%', '%' },
+    { "系统", "颜色设置", "&", '&', '&' },
+    { "系统", "墨家明器", "_", '_', '_' },
+    { "系统", "消息记录", "\020", KTRL('P'), KTRL('P') },
+    { "系统", "重绘屏幕", "\022", KTRL('R'), KTRL('R') },
+    { "系统", "保存", "\023", KTRL('S'), KTRL('S') },
+    { "系统", "保存并退出", "\030", KTRL('X'), KTRL('X') },
+};
+
+static int _keybind_count(void)
+{
+    return sizeof(_keybinds) / sizeof(_keybinds[0]);
+}
+
+static int _keybind_mode(void)
+{
+    return rogue_like_commands ? KEYMAP_MODE_ROGUE : KEYMAP_MODE_ORIG;
+}
+
+static byte _keybind_default_key(const keybind_info_t *info, int mode)
+{
+    return (mode == KEYMAP_MODE_ROGUE) ? info->rogue_key : info->orig_key;
+}
+
+static bool _keybind_is_action(cptr act, cptr action)
+{
+    return act && streq(act, action);
+}
+
+static void _keybind_set_action(int mode, byte key, cptr action)
+{
+    z_string_free(keymap_act[mode][key]);
+    keymap_act[mode][key] = action ? z_string_make(action) : NULL;
+}
+
+static void _keybind_key_name(char *buf, size_t len, byte key)
+{
+    char raw[2];
+    char tmp[80];
+
+    if (!key)
+    {
+        my_strcpy(buf, "未设置", len);
+        return;
+    }
+
+    raw[0] = key;
+    raw[1] = '\0';
+    ascii_to_text(tmp, raw);
+    if (streq(tmp, "\\s")) my_strcpy(buf, "Space", len);
+    else if (streq(tmp, "\\e")) my_strcpy(buf, "ESC", len);
+    else my_strcpy(buf, tmp, len);
+}
+
+static int _keybind_default_owner(int mode, byte key)
+{
+    int i;
+
+    for (i = 0; i < _keybind_count(); i++)
+    {
+        if (_keybind_default_key(&_keybinds[i], mode) == key) return i;
+    }
+    return -1;
+}
+
+static void _keybind_restore_key_default(int mode, byte key)
+{
+    int owner = _keybind_default_owner(mode, key);
+
+    if (owner >= 0)
+    {
+        cptr action = _keybinds[owner].action;
+
+        if (action[0] == key && !action[1]) _keybind_set_action(mode, key, NULL);
+        else _keybind_set_action(mode, key, action);
+    }
+    else _keybind_set_action(mode, key, NULL);
+}
+
+static byte _keybind_current_key(const keybind_info_t *info, int mode)
+{
+    int i;
+    byte def = _keybind_default_key(info, mode);
+    cptr def_act = keymap_act[mode][def];
+    bool def_blocked = (def_act && !streq(def_act, info->action));
+
+    if (def_blocked)
+    {
+        for (i = 1; i < 256; i++)
+        {
+            if ((byte)i == def) continue;
+            if (_keybind_is_action(keymap_act[mode][i], info->action)) return (byte)i;
+        }
+    }
+
+    for (i = 1; i < 256; i++)
+    {
+        if ((byte)i == def) continue;
+        if (_keybind_is_action(keymap_act[mode][i], info->action))
+        {
+            int owner = _keybind_default_owner(mode, (byte)i);
+            if (owner < 0 || !streq(_keybinds[owner].action, info->action)) return (byte)i;
+        }
+    }
+
+    if (def_blocked) return 0;
+
+    return def;
+}
+
+static int _keybind_action_owner(int mode, byte key, int except)
+{
+    int i;
+
+    for (i = 0; i < _keybind_count(); i++)
+    {
+        byte cur;
+
+        if (i == except) continue;
+        cur = _keybind_current_key(&_keybinds[i], mode);
+        if (!cur) continue;
+        if (cur == key) return i;
+    }
+    return -1;
+}
+
+static void _keybind_reset_one(int idx, int mode)
+{
+    keybind_info_t *info = &_keybinds[idx];
+    byte cur = _keybind_current_key(info, mode);
+    byte def = _keybind_default_key(info, mode);
+
+    if (cur && cur != def) _keybind_restore_key_default(mode, cur);
+    _keybind_restore_key_default(mode, def);
+}
+
+static void _keybind_reset_all(int mode)
+{
+    int i;
+
+    for (i = 0; i < _keybind_count(); i++)
+        _keybind_reset_one(i, mode);
+}
+
+static bool _keybind_bind_one(int idx, int mode, byte key)
+{
+    keybind_info_t *info = &_keybinds[idx];
+    byte cur = _keybind_current_key(info, mode);
+    byte def = _keybind_default_key(info, mode);
+    int conflict = _keybind_action_owner(mode, key, idx);
+
+    if (!key) return FALSE;
+    if (key == ESCAPE) return FALSE;
+
+    if (conflict >= 0)
+    {
+        if (!get_check(format("该按键正在用于「%s」，要覆盖吗？", _keybinds[conflict].name)))
+            return FALSE;
+        _keybind_restore_key_default(mode, key);
+    }
+    else if (keymap_act[mode][key] && !streq(keymap_act[mode][key], info->action))
+    {
+        if (!get_check("该按键已有自定义映射，要覆盖吗？")) return FALSE;
+    }
+
+    if (key == def)
+    {
+        _keybind_reset_one(idx, mode);
+        return TRUE;
+    }
+
+    if (cur && cur != key) _keybind_set_action(mode, cur, KEYBIND_IGNORE_ACTION);
+    _keybind_set_action(mode, key, info->action);
+    return TRUE;
+}
+
+static bool _keybind_should_dump(int mode, int idx, byte *key, bool *dump_ignore)
+{
+    keybind_info_t *info = &_keybinds[idx];
+    byte cur = _keybind_current_key(info, mode);
+    byte def = _keybind_default_key(info, mode);
+
+    *key = cur;
+    *dump_ignore = FALSE;
+
+    if (!cur) return FALSE;
+
+    if (cur != def)
+    {
+        *dump_ignore = TRUE;
+        return TRUE;
+    }
+
+    if (keymap_act[mode][def] && !streq(keymap_act[mode][def], info->action))
+        return TRUE;
+
+    return FALSE;
+}
+
+static errr _keybind_dump(void)
+{
+    FILE *fff;
+    char path[1024];
+    int mode, i;
+    bool wrote[KEYMAP_MODES][256];
+
+    path_build(path, sizeof(path), ANGBAND_DIR_USER, KEYBIND_PREF_FILE);
+    FILE_TYPE(FILE_TYPE_TEXT);
+    fff = my_fopen(path, "w");
+    if (!fff) return -1;
+
+    C_WIPE(wrote, KEYMAP_MODES * 256, bool);
+
+    fprintf(fff, "# RoguelikeFansBand keybindings\n");
+    fprintf(fff, "# This file is generated by the in-game keybinding menu.\n\n");
+
+    for (mode = 0; mode < KEYMAP_MODES; mode++)
+    {
+        fprintf(fff, "# %s mode\n", mode == KEYMAP_MODE_ROGUE ? "Rogue-like" : "Original");
+
+        for (i = 0; i < _keybind_count(); i++)
+        {
+            char key_text[80];
+            char act_text[80];
+            char raw[2];
+            byte key;
+            bool dump_ignore;
+            byte def = _keybind_default_key(&_keybinds[i], mode);
+
+            if (!_keybind_should_dump(mode, i, &key, &dump_ignore)) continue;
+
+            if (dump_ignore && !wrote[mode][def])
+            {
+                raw[0] = def;
+                raw[1] = '\0';
+                ascii_to_text(key_text, raw);
+                ascii_to_text(act_text, KEYBIND_IGNORE_ACTION);
+                fprintf(fff, "A:%s\n", act_text);
+                fprintf(fff, "C:%d:%s\n", mode, key_text);
+                wrote[mode][def] = TRUE;
+            }
+
+            if (!wrote[mode][key])
+            {
+                raw[0] = key;
+                raw[1] = '\0';
+                ascii_to_text(key_text, raw);
+                ascii_to_text(act_text, _keybinds[i].action);
+                fprintf(fff, "A:%s\n", act_text);
+                fprintf(fff, "C:%d:%s\n", mode, key_text);
+                wrote[mode][key] = TRUE;
+            }
+        }
+
+        fprintf(fff, "\n");
+    }
+
+    my_fclose(fff);
+    return 0;
+}
+
+static void _keybind_draw(int sel, int top, int mode)
+{
+    int i;
+    int wid, hgt;
+    int rows;
+    char cur[80];
+    char def[80];
+
+    Term_get_size(&wid, &hgt);
+    rows = hgt - 8;
+
+    Term_clear();
+    prt(format("按键设置 (%s模式)", mode == KEYMAP_MODE_ROGUE ? "Rogue" : "原始"), 1, 0);
+    prt("方向键移动  Enter改键  d恢复当前  D恢复全部  s保存  ESC返回", 2, 0);
+    c_put_str(TERM_L_BLUE, "分类", 4, 2);
+    c_put_str(TERM_L_BLUE, "操作", 4, 12);
+    c_put_str(TERM_L_BLUE, "当前按键", 4, 38);
+    c_put_str(TERM_L_BLUE, "默认按键", 4, 52);
+
+    for (i = 0; i < rows && top + i < _keybind_count(); i++)
+    {
+        int idx = top + i;
+        byte a = (idx == sel) ? TERM_YELLOW : TERM_WHITE;
+
+        _keybind_key_name(cur, sizeof(cur), _keybind_current_key(&_keybinds[idx], mode));
+        _keybind_key_name(def, sizeof(def), _keybind_default_key(&_keybinds[idx], mode));
+
+        Term_erase(0, 5 + i, 255);
+        c_put_str(a, _keybinds[idx].group, 5 + i, 2);
+        c_put_str(a, _keybinds[idx].name, 5 + i, 12);
+        c_put_str(a, cur, 5 + i, 38);
+        c_put_str(TERM_SLATE, def, 5 + i, 52);
+    }
+}
+
+static void do_cmd_options_keybinds(void)
+{
+    int sel = 0;
+    int top = 0;
+    int mode = _keybind_mode();
+
+    screen_save();
+
+    while (1)
+    {
+        int ch;
+        int wid, hgt;
+        int rows;
+
+        Term_get_size(&wid, &hgt);
+        rows = hgt - 8;
+        if (rows < 1) rows = 1;
+        if (sel < top) top = sel;
+        if (sel >= top + rows) top = sel - rows + 1;
+
+        _keybind_draw(sel, top, mode);
+        ch = inkey_special(TRUE);
+
+        if (ch == ESCAPE) break;
+        else if (ch == SKEY_UP || ch == '8')
+        {
+            if (sel > 0) sel--;
+            else bell();
+        }
+        else if (ch == SKEY_DOWN || ch == '2')
+        {
+            if (sel < _keybind_count() - 1) sel++;
+            else bell();
+        }
+        else if (ch == SKEY_PGUP)
+        {
+            sel -= rows;
+            if (sel < 0) sel = 0;
+        }
+        else if (ch == SKEY_PGDOWN || ch == ' ')
+        {
+            sel += rows;
+            if (sel >= _keybind_count()) sel = _keybind_count() - 1;
+        }
+        else if (ch == '\r' || ch == '\n')
+        {
+            char name[80];
+            byte key;
+
+            clear_from(hgt - 3);
+            _keybind_key_name(name, sizeof(name), _keybind_current_key(&_keybinds[sel], mode));
+            prt(format("为「%s」输入新按键(当前:%s，ESC取消): ", _keybinds[sel].name, name), hgt - 3, 0);
+            flush();
+            inkey_base = TRUE;
+            key = (byte)inkey();
+            flush();
+
+            if (key == ESCAPE) continue;
+            if (_keybind_bind_one(sel, mode, key))
+                msg_print("按键已修改。按 s 保存后会在以后启动时生效。");
+        }
+        else if (ch == 'd')
+        {
+            _keybind_reset_one(sel, mode);
+            msg_print("当前操作已恢复默认。按 s 保存后会在以后启动时生效。");
+        }
+        else if (ch == 'D')
+        {
+            if (get_check("恢复当前模式下所有按键为默认？"))
+            {
+                _keybind_reset_all(mode);
+                msg_print("所有按键已恢复默认。按 s 保存后会在以后启动时生效。");
+            }
+        }
+        else if (ch == 's' || ch == 'S')
+        {
+            if (_keybind_dump()) msg_print("保存按键设置失败。");
+            else msg_format("按键设置已保存到 %s。", KEYBIND_PREF_FILE);
+        }
+        else bell();
+    }
+
+    screen_load();
+}
+
+
+
+#define OPT_NUM 16
 
 static struct opts
 {
@@ -1628,15 +2081,16 @@ option_fields[OPT_NUM] =
     { '6', "自动销毁选项", 8 },
     { '7', "列表显示选项", 9 },
 
-    { 'p', "墨家明器偏好", 11 },
-    { 'd', "基础延迟系数", 12 },
-    { 'h', "生命警告阈值", 13 },
-    { 'm', "法力颜色阈值", 14 },
-    { 'a', "自动保存选项", 15 },
-    { 'w', "窗口标记", 16 },
+    { 'k', "按键设置", 11 },
+    { 'p', "墨家明器偏好", 12 },
+    { 'd', "基础延迟系数", 13 },
+    { 'h', "生命警告阈值", 14 },
+    { 'm', "法力颜色阈值", 15 },
+    { 'a', "自动保存选项", 16 },
+    { 'w', "窗口标记", 17 },
 
-    { 'b', "出生选项(仅浏览)", 18 },
-    { 'c', "作弊选项", 19 },
+    { 'b', "出生选项(仅浏览)", 19 },
+    { 'c', "作弊选项", 20 },
 };
 
 
@@ -1771,6 +2225,13 @@ void do_cmd_options(void)
             {
                 /* Spawn */
                 do_cmd_options_aux(OPT_PAGE_LIST, "列表显示选项");
+                break;
+            }
+
+            case 'K':
+            case 'k':
+            {
+                do_cmd_options_keybinds();
                 break;
             }
 

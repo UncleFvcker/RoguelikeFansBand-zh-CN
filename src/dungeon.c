@@ -5699,6 +5699,9 @@ static void load_all_pref_files(bool new_game)
         process_pref_file(buf);
     }
 
+    /* Load global keybindings last so the in-game keybinding menu wins. */
+    process_pref_file("keybind.prf");
+
     if (new_game) alp_mode |= ALP_NEW_GAME;
 
     /* Load an autopick preference file */
