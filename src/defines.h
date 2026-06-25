@@ -20,8 +20,8 @@
 #define VER_MINOR 3
 #define VER_PATCH "0"
 #define VER_PATCH_ID 0
-#define VER_EXTRA 3
-#define VERSION_STRING "1.3.0.3"
+#define VER_EXTRA 4
+#define VERSION_STRING "1.3.0.4"
 #define VERSION_IS_DEVELOPMENT (FALSE)
 
 /*
@@ -30,7 +30,7 @@
 #define SAVEFILE_VER_MAJOR 1
 #define SAVEFILE_VER_MINOR 3
 #define SAVEFILE_VER_PATCH_ID 0
-#define SAVEFILE_VER_EXTRA 3
+#define SAVEFILE_VER_EXTRA 4
 
 #define GAME_MODE_BEGINNER  0
 #define GAME_MODE_NORMAL    1
