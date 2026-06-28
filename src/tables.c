@@ -2254,10 +2254,10 @@ option_type option_info[] =
     { &danger_monster_border,       FALSE, OPT_PAGE_MAPSCREEN, 2, 9,
     "danger_monster_border",        "危险怪物边框" },
 
-    { &dangerous_attack_monster_border, FALSE, OPT_PAGE_MAPSCREEN, 2, 10,
+    { &dangerous_attack_monster_border, FALSE, OPT_PAGE_MAPSCREEN, 3, 0,
     "dangerous_attack_border",      "危险招式怪物边框" },
 
-    { &dangerous_attack_ignore_lore, FALSE, OPT_PAGE_MAPSCREEN, 2, 11,
+    { &dangerous_attack_ignore_lore, FALSE, OPT_PAGE_MAPSCREEN, 3, 1,
     "dangerous_attack_no_lore",     "忽略怪物回忆限制" },
 
     { &graph_show_floor_ascii,      FALSE, OPT_PAGE_MAPSCREEN, 4, 3,
